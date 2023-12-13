@@ -68,16 +68,16 @@ const config = {
       navbar: {
         title: '',
         logo: {
-          alt: 'Defactor',
+          alt: 'Defactor logo',
           src: 'img/Defactor-Logo-Dark.svg',
           srcDark: 'img/Defactor-Logo-Light.svg'
         },
         items: [
           {
             type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
+            sidebarId: 'docSidebar',
             position: 'left',
-            label: 'Tutorial',
+            label: 'Docs',
           },
           {to: '/blog', label: 'Blog', position: 'left'},
           {
