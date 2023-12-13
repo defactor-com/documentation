@@ -33,9 +33,8 @@ export default function Home() {
   const { siteConfig } = useDocusaurusContext();
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />"
-    >
+      title={`${siteConfig.title}: Smart Contracts, APIs, and Use Cases for RWA Blockchain Platform`}
+      description="Explore the comprehensive technical documentation for Defactor's blockchain platform. Dive into detailed guides on smart contracts, backend architecture, APIs, and real-world use cases. Ideal for developers and stakeholders in decentralized finance and tokenized assets.">
       <HomepageHeader />
       <div className={styles.homeBody}>
         <HomepageFeatures />
