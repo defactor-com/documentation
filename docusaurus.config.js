@@ -68,7 +68,7 @@ const config = {
       navbar: {
         title: 'Defactor Documentation Hub',
         logo: {
-          alt: 'Defactor',
+          alt: 'Defactor logo',
           src: 'img/logo.svg',
         },
         items: [
