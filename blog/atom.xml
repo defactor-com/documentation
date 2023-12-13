@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://docs.defactor.com/documentation/blog</id>
-    <title>Defactor Documentation Hub Blog</title>
+    <title>Defactor Developer Docs Blog</title>
     <updated>2021-08-26T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://docs.defactor.com/documentation/blog"/>
-    <subtitle>Defactor Documentation Hub Blog</subtitle>
+    <subtitle>Defactor Developer Docs Blog</subtitle>
     <icon>https://docs.defactor.com/documentation/img/Defactor_Favicon-32x32.png</icon>
     <entry>
         <title type="html"><![CDATA[Welcome]]></title>
