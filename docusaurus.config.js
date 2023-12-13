@@ -8,8 +8,8 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Defactor Documentation Hub',
-  tagline: 'Technical Documentation for the Defactor Platform',
+  title: 'Defactor Developer Docs',
+  tagline: 'Technical Documentation for Defactor Developers',
   favicon: 'img/Defactor_Favicon-32x32.png',
 
   // Set the production url of your site here
