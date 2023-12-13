@@ -6,7 +6,7 @@
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://docs.defactor.com/documentation/blog"/>
     <subtitle>Defactor Documentation Hub Blog</subtitle>
-    <icon>https://docs.defactor.com/documentation/img/favicon.ico</icon>
+    <icon>https://docs.defactor.com/documentation/img/Defactor_Favicon-32x32.png</icon>
     <entry>
         <title type="html"><![CDATA[Welcome]]></title>
         <id>https://docs.defactor.com/documentation/blog/welcome</id>
