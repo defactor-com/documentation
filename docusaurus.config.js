@@ -10,13 +10,13 @@ import {themes as prismThemes} from 'prism-react-renderer';
 const config = {
   title: 'Defactor Documentation Hub',
   tagline: 'Technical Documentation for the Defactor Platform',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/Defactor_Favicon-32x32.png',
 
   // Set the production url of your site here
   url: 'https://docs.defactor.com',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: '/documentation/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -44,14 +44,14 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/defactor-com/documentation/tree/main',
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/defactor-com/documentation/tree/main',
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -64,23 +64,24 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
+      image: 'img/defactor-social-card.jpeg',
       navbar: {
-        title: 'Defactor Documentation Hub',
+        title: '',
         logo: {
           alt: 'Defactor logo',
-          src: 'img/logo.svg',
+          src: 'img/Defactor-Logo-Dark.svg',
+          srcDark: 'img/Defactor-Logo-Light.svg'
         },
         items: [
           {
             type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
+            sidebarId: 'docSidebar',
             position: 'left',
-            label: 'Tutorial',
+            label: 'Docs',
           },
           {to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: 'https://github.com/facebook/docusaurus',
+            href: 'https://github.com/defactor-com',
             label: 'GitHub',
             position: 'right',
           },
@@ -102,16 +103,16 @@ const config = {
             title: 'Community',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                label: 'Telegram',
+                href: 'https://t.me/defactor_official',
               },
               {
                 label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
+                href: 'https://discord.gg/S2SCMTPMUt',
               },
               {
                 label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
+                href: 'https://twitter.com/defactor_',
               },
             ],
           },
@@ -124,12 +125,12 @@ const config = {
               },
               {
                 label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                href: 'https://github.com/defactor-com',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Defactor. All Rights Reserved`,
       },
       prism: {
         theme: prismThemes.github,
