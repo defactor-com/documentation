@@ -10,7 +10,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 const config = {
   title: 'Defactor Documentation Hub',
   tagline: 'Technical Documentation for the Defactor Platform',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/Defactor_Favicon-32x32.png',
 
   // Set the production url of your site here
   url: 'https://docs.defactor.com',
@@ -64,12 +64,13 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
+      image: 'img/defactor-social-card.jpeg',
       navbar: {
-        title: 'Defactor Documentation Hub',
+        title: '',
         logo: {
           alt: 'Defactor',
-          src: 'img/logo.svg',
+          src: 'img/Defactor-Logo-Dark.svg',
+          srcDark: 'img/Defactor-Logo-Light.svg'
         },
         items: [
           {
