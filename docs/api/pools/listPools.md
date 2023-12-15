@@ -1,5 +1,5 @@
 ---
-sidebar_position: 5
+sidebar_position: 1
 ---
 
 # List Pools
@@ -9,7 +9,7 @@ sidebar_position: 5
 **HTTP Method**: `GET`
 
 **Params**:
-- `poolIds=pool id`
+- `poolIds=10,7`
 - `chain=Ethereum`
 
 ## Description

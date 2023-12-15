@@ -96,6 +96,10 @@ const config = {
                 label: 'API',
                 to: '/docs/category/api',
               },
+              {
+                label: 'Smart Contracts',
+                to: '/docs/category/smart-contracts',
+              }
             ],
           },
           {
