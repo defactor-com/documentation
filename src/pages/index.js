@@ -19,9 +19,9 @@ function HomepageHeader() {
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
-            to="/docs/category/api"
+            to="https://defactor.com"
           >
-            Defactor Docs
+            Not a Developer? Visit our Website 
           </Link>
         </div>
       </div>

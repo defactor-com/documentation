@@ -8,8 +8,8 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Defactor Documentation Hub',
-  tagline: 'Technical Documentation for the Defactor Platform',
+  title: 'Defactor Developer Docs',
+  tagline: 'Technical Documentation for Defactor Developers',
   favicon: 'img/Defactor_Favicon-32x32.png',
 
   // Set the production url of your site here
@@ -79,7 +79,6 @@ const config = {
             position: 'left',
             label: 'Docs',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
           {
             href: 'https://github.com/defactor-com',
             label: 'GitHub',
@@ -119,10 +118,6 @@ const config = {
           {
             title: 'More',
             items: [
-              {
-                label: 'Blog',
-                to: '/blog',
-              },
               {
                 label: 'GitHub',
                 href: 'https://github.com/defactor-com',
