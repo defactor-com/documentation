@@ -9,6 +9,7 @@ sidebar_position: 1
 **HTTP Method**: `GET`
 
 **Params**:
+
 - `poolIds=10,7`
 - `chain=Ethereum`
 

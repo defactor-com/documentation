@@ -8,10 +8,11 @@ sidebar_position: 3
 
 **HTTP Method**: `POST`
 
-**Params**: 
-``` json
+**Params**:
+
+```json
 {
-    "format": "mp3"
+  "format": "mp3"
 }
 ```
 

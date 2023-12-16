@@ -9,9 +9,10 @@ sidebar_position: 5
 **HTTP Method**: `POST`
 
 **Params**:
-``` json
+
+```json
 {
-    "wallet": "0xd198...ce351"
+  "wallet": "0xd198...ce351"
 }
 ```
 

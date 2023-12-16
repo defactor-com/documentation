@@ -8,8 +8,9 @@ sidebar_position: 2
 
 **HTTP Method**: `POST`
 
-**Params**: 
-``` json
+**Params**:
+
+```json
 {
   "poolId": 1,
   "name": "test pool",
