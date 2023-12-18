@@ -17,17 +17,17 @@ The request does not require a request body.
 
 The response will have a status code of 200 and will include the details of the proposal in the following format:
 
-``` json
+```json
 {
-    "proposal": {
-        "id": "",
-        "index": 0,
-        "title": "",
-        "description": "",
-        "closedDate": "",
-        "votesFor": 0,
-        "votesAgainst": 0,
-        "status": ""
-    }
+  "proposal": {
+    "id": "",
+    "index": 0,
+    "title": "",
+    "description": "",
+    "closedDate": "",
+    "votesFor": 0,
+    "votesAgainst": 0,
+    "status": ""
+  }
 }
 ```
