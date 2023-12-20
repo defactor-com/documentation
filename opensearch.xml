@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/"
+                       xmlns:moz="http://www.mozilla.org/2006/browser/search/">
+  <ShortName>Defactor Developer Docs</ShortName>
+  <Description>Search Defactor Developer Docs</Description>
+  <InputEncoding>UTF-8</InputEncoding>
+  <Image width="16" height="16" type="image/x-icon">https://docs.defactor.com/documentation/img/Defactor_Favicon-32x32.png</Image>
+  <Url type="text/html" method="get" template="https://docs.defactor.com/documentation/search?q={searchTerms}"/>
+  <Url type="application/opensearchdescription+xml" rel="self" template="https://docs.defactor.com/documentation/opensearch.xml" />
+  <moz:SearchForm>https://docs.defactor.com/documentation/</moz:SearchForm>
+</OpenSearchDescription>
