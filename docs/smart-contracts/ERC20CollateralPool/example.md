@@ -9,7 +9,7 @@ tags:
 
 ## In-depth Actions
 
-The happy path for this Smart Contract begins with the initialization of a pool and then a lender engages with the contract to lend money to the pool to allow a borrower interacts with the contract by borrowing according to the amount of money they need from the pool. A question that may arise in this point is what happen if the borrower decide to steal the loan (do not repay it), to avoid this scenario the borrower must provide collateral tokens that support the loan they are taking.
+The happy path for this Smart Contract begins with the initialization of a pool and the lender engages with the contract to lend money to the pool to allow the borrower interact with the contract by borrowing according to the amount of money they need from the pool. A question that may arise in this point is what happen if the borrower decide to steal the loan (do not repay it), to avoid this scenario the borrower must provide collateral tokens that support the loan they are taking.
 
 The borrower is required to repay the loan with interest before the pool's term concludes to avoid liquidation. If the borrower fails to repay the loan, the pool will utilize the collateral to cover the outstanding amount, and the surplus will be liquidated. Any remaining funds can be claimed by the borrower based on the value of their collateral token.
 
@@ -28,17 +28,17 @@ pool.rewardRate =
 pool.lastUpdated = uint48(block.timestamp);
 ```
 
-As an example, the first time someone lends to the pool, the `rewardPerToken` will be `0`, the `rewardRate` will be the interest rate of the pool, and the `lastUpdated` will be the timestamp of the block when the first lender lends to the pool. The next time someone lends to the pool, the `rewardPerToken` will be updated based on the time passed since the last time someone lent to the pool, the `rewardRate` will be updated based on the amount of money borrowed, and the `lastUpdated` will be updated to the timestamp of the block when the last lender lends to the pool, and so forth until the pool finishes its active time.
+As an example, the first time someone lends to the pool, the `rewardPerToken` will be `0`, the `rewardRate` will be the interest rate of the pool, and the `lastUpdated` will be the timestamp of the block when the first lender lent to the pool. The next time someone lends to the pool, the `rewardPerToken` will be updated based on the time passed since the last time someone lent, the `rewardRate` will be updated based on the amount of money borrowed, and the `lastUpdated` will be updated to the timestamp of the block when the last lender lent, and so forth until the pool finishes its active time.
 
 Lets consider the following example to better understand how this flow works:
 
 ## Pool lifecycle
 
-Event #1 -> _Contract is initialized with one pool having gold as collateral and USDC as the lending token_.
-Event #2 -> Alice lends $100k to the pool.
-Event #3 -> Bob borrows $10k from the pool.
-Event #4 -> After 10 days, Bob repays the loan.
-Event #5 -> After 30 days, Alice can claims her rewards.
+- Event #1 -> _Contract is initialized with one pool having gold as collateral and USDC as the lending token_.
+- Event #2 -> Alice lends $100k to the pool.
+- Event #3 -> Bob borrows $10k from the pool.
+- Event #4 -> After 10 days, Bob repays the loan.
+- Event #5 -> After 30 days, Alice can claims her rewards.
 
 In this example, the information is focus on how the contract behaves in the previous events.
 
@@ -58,7 +58,7 @@ In this example, the information is focus on how the contract behaves in the pre
 
 - An event `LendEvent` is emitted.
 
-- This is how it looks before and after the `lend` function call.
+This is how it looks before and after the `lend` function call.
 
 Pool before lending:
 
@@ -112,19 +112,19 @@ Pool after lending:
 }
 ```
 
-There are some attributes to track like `lended` and `lastUpdated` that are updated but not only them were updated the variables `rewardPerToken` and `rewardRate` were also updated, what happened is that in the first call when someone lends, the current values of the pool are making them to have a value of 0 which seems like there were no update on them.
+There are some attributes to track like `lended`, `lastUpdated`, `rewardPerToken` and `rewardRate`. On the first call when someone lends, the current values of the pool are making them to have a value of 0 which seems like no update happened on them.
 
 ### Event #3 (borrowing)
 
 - Only existing and active pools will allow the process to go through the rest of the flow.
 
-  To be able to borrow, the pool should have enough funds to cover the loan which should be `lended + repaid + rewards - borrowed) < amount_to_borrow`.
+- To be able to borrow, the pool should have enough funds to cover the loan that is equivalent to `lent + repaid + rewards - borrowed) < amount_to_borrow`.
 
-- The contract will calculate the collateral based on the amount to borrow and the collateral price using the `chainlink` price feed (oracle), once all values are calculated, the contract will ask of token transfer from the collateral address, for this example it can be GOLD and SILVER but the contract allows any contract that follows the ERC20 standard.
+- The contract will calculate the collateral based on the amount to borrow and the collateral price using the `chainlink` price feed (oracle), once all values are calculated, the contract will ask for token transfer from the collateral address, for this example it can be GOLD and SILVER but the contract allows any contract that follows the `ERC20` standard.
 
-- When the collateral tokens are transferred to the contract, a borrowing record is added to save the borrowing information and some pool values updates will occur like the amount the pool has lended and the new total collateral token amount the pool has.
+- When the collateral tokens are transferred to the contract, a borrowing record is added to save the borrowing information and some pool values updates will occur like the amount the pool has lent and the new total collateral token amount the pool has.
 
-- A last safe USDC token transfer is made to the borrower which represent the amount the pool is lending to the borrower.
+- A last safe USDC token transfer is made to the borrower which represent the amount the pool is lending.
 
 - The update reward method is called.
 
@@ -164,11 +164,11 @@ Pool after borrowing:
 
 - Only existing and active pools will allow the process to go through the rest of the flow.
 
-- To repay a loan there are two main criteria the contract will check to allow the borrower to repay it, the first one is to check if the pool is still in its active period, if not, then the pool will use the collateral token to covert any outstanding amount, the second validation is if the loan has not been already paid.
+- To repay a loan there are two main criterias the contract will check to validate if the borrower can repay it, the first one is to confirm that the pool is still in its active period, if not, then the pool will use the collateral token to covert any outstanding amount, and the second validation is if the loan has not been already paid.
 
 - Once the validations are passed, the contract will calculate the interest for the lent amount the borrow will need to pay.
 
-- The contract will ask for USDC token approval to transfer the USDC tokens from the user's wallet to the pool once it's finished the contract will return the collateral tokens to the borrower.
+- The contract will ask for USDC token approval to transfer the USDC tokens from the user's wallet to the pool. Once it has finished, the contract will return the collateral tokens to the borrower.
 
 - The update reward method is called.
 
@@ -202,7 +202,7 @@ Pool after repaying:
 }
 ```
 
-Now the repaid total amount is updated after the user repays the loan leaving the pool with the full lended amount available to lend.
+Now the repaid total amount is updated after the user repays the loan leaving the pool with the full lent amount available to lend.
 
 ### Event #5 (claiming)
 
@@ -210,7 +210,7 @@ Now the repaid total amount is updated after the user repays the loan leaving th
 
 - In order to claim the rewards, the pool active period should be over and not completed (liquidated collateral equal to cero and collateral token amount different from 0 and not liquidated).
 
-- Once the validations are done, then the contract will pay the rewards that belongs to the lender. This is calculated with the following formula:
+- Once the validations are done, the contract will pay the rewards that belongs to the lender. This is calculated with the following formula:
 
   ```plaintext
   lent amount + ( ( reward per token - reward per token ignored ) * lent amount ) / 1e18 )
@@ -246,7 +246,7 @@ Pool after claiming:
 }
 ```
 
-It's the same, that's because the only data that is updated is the lending information and after claim, this object looks like this:
+It's the same, that's because the only data that is updated is the lending information and after claiming, this object looks like this:
 
 ```json
 {
