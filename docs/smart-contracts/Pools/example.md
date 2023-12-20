@@ -17,6 +17,8 @@ Once the pool owner completes their goal by creating the pool and decides to clo
 
 Lets consider the following example to better understand how this flow works:
 
+## Pool lifecycle
+
 - Event #1 -> _The contract is initialized with the USDC address that will be used for lending money_.
 - Event #2 -> Bob creates a new pool with a soft cap of 1000 USDC and a hard cap of 2000 USDC, using 100 tokens of GOLD as collateral.
 - Event #3 -> Alice commits 1100 USDC to the pool.
