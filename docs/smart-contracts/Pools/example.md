@@ -45,6 +45,31 @@ Let's break down what is under the hood of each event:
 
 - Emit the event PoolCreated.
 
+Before the pool is created:
+
+```json
+{}
+```
+
+After the pool is created:
+
+```json
+{
+  "softCap": "1000000000",
+  "hardCap": "2000000000",
+  "totalCommitted": "0",
+  "totalRewards": "0",
+  "rewardsPaidOut": "0",
+  "createdAt": "1707768289",
+  "deadline": "1708632286",
+  "closedTime": "0",
+  "poolStatus": 0,
+  "poolOwner": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC"
+}
+```
+
+The pools status is set to 0 which represents `CREATED`.
+
 ### Event #3 (commit to a pool)
 
 - The commits to the pool can happen only when the pool status is `CREATED` and the pool has not reached the hard cap.
@@ -56,6 +81,48 @@ Let's break down what is under the hood of each event:
 - Make the transfer of 1100 USDC from Alice's wallet to the contract.
 
 - Emit the event `CommittedToPool`.
+
+Before the investor commits to the pool:
+
+```json
+{
+  "softCap": "1000000000",
+  "hardCap": "2000000000",
+  "totalCommitted": "0",
+  "totalRewards": "0",
+  "rewardsPaidOut": "0",
+  "createdAt": "1707768557",
+  "deadline": "1708632554",
+  "closedTime": "0",
+  "poolStatus": 0,
+  "poolOwner": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC"
+}
+```
+
+After the investor commits to the pool:
+
+```json
+{
+  "softCap": "1000000000",
+  "hardCap": "2000000000",
+  "totalCommitted": "1100000000",
+  "totalRewards": "0",
+  "rewardsPaidOut": "0",
+  "createdAt": "1707768557",
+  "deadline": "1708632554",
+  "closedTime": "0",
+  "poolStatus": 0,
+  "poolOwner": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC"
+}
+```
+
+Lending data:
+
+```json
+{ "amount": "1100000000", "claimedAmount": "0" }
+```
+
+The pool information is updated to reflect the new total committed amount.
 
 ### Event #4 (collect from pool)
 
@@ -73,6 +140,48 @@ Let's break down what is under the hood of each event:
 
 - Emit the event `PoolCollected`.
 
+Before the borrower collects the pool:
+
+```json
+{
+  "softCap": "1000000000",
+  "hardCap": "2000000000",
+  "totalCommitted": "1100000000",
+  "totalRewards": "0",
+  "rewardsPaidOut": "0",
+  "createdAt": "1707768557",
+  "deadline": "1708632554",
+  "closedTime": "0",
+  "poolStatus": 0,
+  "poolOwner": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC"
+}
+```
+
+After the borrower collects the pool:
+
+```json
+{
+  "softCap": "1000000000",
+  "hardCap": "2000000000",
+  "totalCommitted": "1100000000",
+  "totalRewards": "0",
+  "rewardsPaidOut": "0",
+  "createdAt": "1707768557",
+  "deadline": "1708632554",
+  "closedTime": "0",
+  "poolStatus": 1,
+  "poolOwner": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC"
+}
+```
+
+Lending data:
+
+```json
+{ "amount": "1100000000", "claimedAmount": "0" }
+```
+
+When the owner collected the pool, the pool status is set to 1 which represents `ACTIVE`.
+
 ### Event #5 (deposit rewards)
 
 - This can only be done by the pool owner, in this case, it would be Bob.
@@ -82,6 +191,48 @@ Let's break down what is under the hood of each event:
 - Make the transfer of 1100 USDC from Bob's wallet to the contract.
 
 - Emit the event `RewardsDeposited`.
+
+Before the borrower deposit to the pool:
+
+```json
+{
+  "softCap": "1000000000",
+  "hardCap": "2000000000",
+  "totalCommitted": "1100000000",
+  "totalRewards": "0",
+  "rewardsPaidOut": "0",
+  "createdAt": "1707768557",
+  "deadline": "1708632554",
+  "closedTime": "0",
+  "poolStatus": 1,
+  "poolOwner": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC"
+}
+```
+
+After the borrower deposit to the pool:
+
+```json
+{
+  "softCap": "1000000000",
+  "hardCap": "2000000000",
+  "totalCommitted": "1100000000",
+  "totalRewards": "1100000000",
+  "rewardsPaidOut": "0",
+  "createdAt": "1707768557",
+  "deadline": "1708632554",
+  "closedTime": "0",
+  "poolStatus": 1,
+  "poolOwner": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC"
+}
+```
+
+Lending data:
+
+```json
+{ "amount": "1100000000", "claimedAmount": "0" }
+```
+
+Now that the borrower has paid the rewards, the total rewards is updated with the amount deposited, for this specific example, the amount is equal to the amount lent.
 
 ### Event #6 (claim rewards)
 
@@ -101,6 +252,48 @@ Let's break down what is under the hood of each event:
 
 - Emit the event `RewardsClaimed`.
 
+Before the investor claims from the pool:
+
+```json
+{
+  "softCap": "1000000000",
+  "hardCap": "2000000000",
+  "totalCommitted": "1100000000",
+  "totalRewards": "1100000000",
+  "rewardsPaidOut": "0",
+  "createdAt": "1707768557",
+  "deadline": "1708632554",
+  "closedTime": "0",
+  "poolStatus": 1,
+  "poolOwner": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC"
+}
+```
+
+After the investor claims from the pool:
+
+```json
+{
+  "softCap": "1000000000",
+  "hardCap": "2000000000",
+  "totalCommitted": "1100000000",
+  "totalRewards": "1100000000",
+  "rewardsPaidOut": "1100000000",
+  "createdAt": "1707768557",
+  "deadline": "1708632554",
+  "closedTime": "0",
+  "poolStatus": 1,
+  "poolOwner": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC"
+}
+```
+
+Lending data:
+
+```json
+{ "amount": "1100000000", "claimedAmount": "1100000000" }
+```
+
+The investor has claimed their rewards, and the total rewards paid out have been updated to reflect the claimed amount. In this example, as there is only one investor, the 100% reward is disbursed to a single address.
+
 ### Event #7 (close pool)
 
 - This can only be done by the pool owner, in this case, it would be Bob.
@@ -110,3 +303,45 @@ Let's break down what is under the hood of each event:
 - Return the pool owner's collateral tokens from the contract to Bob's wallet.
 
 - Emit the event `PoolClosed`.
+
+Before the borrower closes the pool:
+
+```json
+{
+  "softCap": "1000000000",
+  "hardCap": "2000000000",
+  "totalCommitted": "1100000000",
+  "totalRewards": "1100000000",
+  "rewardsPaidOut": "1100000000",
+  "createdAt": "1707768557",
+  "deadline": "1708632554",
+  "closedTime": "0",
+  "poolStatus": 1,
+  "poolOwner": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC"
+}
+```
+
+After the borrower closes the pool:
+
+```json
+{
+  "softCap": "1000000000",
+  "hardCap": "2000000000",
+  "totalCommitted": "1100000000",
+  "totalRewards": "1100000000",
+  "rewardsPaidOut": "1100000000",
+  "createdAt": "1707768557",
+  "deadline": "1708632554",
+  "closedTime": "1712952564",
+  "poolStatus": 2,
+  "poolOwner": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC"
+}
+```
+
+Lending data:
+
+```json
+{ "amount": "1100000000", "claimedAmount": "1100000000" }
+```
+
+The pool status is set to 2 which represents `CLOSED` and the closed time is set to the current block timestamp.
