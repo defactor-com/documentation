@@ -1,17 +1,26 @@
-# API Endpoints
-1. User Authentication
-Endpoint: /api/auth/login
-Method: POST
-Request:
-```json
+---
+id: lease-agreement-api
+title: Lease Agreement API Endpoints
+sidebar_position: 2
+---
 
+# API Endpoints
+
+## User Authentication
+
+**Endpoint:** `/api/auth/login`
+
+**Method:** POST
+
+**Request:**
+```json
 {
   "username": "string",
   "password": "string"
 }
 ```
 
-Response:
+**Response:**
 ```json
 
 {
@@ -19,10 +28,13 @@ Response:
 }
 ```
 
-2. Create Lease Agreement
-Endpoint: /api/lease
-Method: POST
-Request:
+## Create Lease Agreement
+
+**Endpoint:** `/api/lease`
+
+**Method:** POST
+
+**Request:**
 
 ```json
 
@@ -34,20 +46,22 @@ Request:
 }
 ```
 
-Response:
+**Response:**
 
 ```json
-
 {
   "leaseId": "string",
   "message": "Lease agreement created successfully"
 }
 ```
 
-3. Get Lease Agreement Details
-Endpoint: /api/lease/{leaseId}
-Method: GET
-Response:
+## Get Lease Agreement Details
+
+**Endpoint:** `/api/lease/{leaseId}`
+
+**Method:** GET
+
+**Response:**
 
 ```json
 {
@@ -55,10 +69,14 @@ Response:
 }
 ```
 
-4. Update Lease Agreement
-Endpoint: /api/lease/{leaseId}
-Method: PUT
-Request:
+## Update Lease Agreement
+
+**Endpoint:** `/api/lease/{leaseId}`
+
+**Method:** PUT
+
+**Request:**
+
 ```json
 {
   "lesseeDetails": {},
@@ -67,20 +85,21 @@ Request:
   "paymentInfo": {}
 }
 ```
-Response:
-```json
+**Response:**
 
+```json
 {
   "message": "Lease agreement updated successfully"
 }
 ```
 
-5. Delete Lease Agreement
-Endpoint: /api/lease/{leaseId}
-```
+## Delete Lease Agreement
 
-Method: DELETE
-Response:
+**Endpoint:** `/api/lease/{leaseId}`
+
+**Method:** DELETE
+
+**Response:**
 
 ```json
 {
@@ -88,10 +107,13 @@ Response:
 }
 ```
 
-6. List All Lease Agreements
-Endpoint: /api/lease
-Method: GET
-Response:
+## List All Lease Agreements
+
+**Endpoint:** `/api/lease`
+
+**Method:** GET
+
+****Response:****
 
 ```json
 {

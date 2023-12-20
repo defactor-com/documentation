@@ -1,4 +1,10 @@
-# Database Model for Vehicle Lease Agreement Digitalization Service
+---
+id: lease-agreement-database
+title: Lease Agreement Database
+sidebar_position: 3
+---
+
+# Database Model 
 
 ## User
 - `username`: String
