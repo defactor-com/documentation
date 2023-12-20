@@ -63,7 +63,19 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      // Replace with your project's social card
+      algolia: {
+        appId: 'E3S6H07ZZJ',
+        apiKey: '936f0ee0c5c8285bdeef121c24643acf',
+        indexName: 'umentation--category-api',
+        contextualSearch: true,
+        externalUrlRegex: 'external\\\\.com|domain\\\\.com',
+        replaceSearchResultPathname: {
+          from: '/docs/',
+          to: '/',
+        },
+        searchParameters: {},
+        searchPagePath: 'search'
+      },
       image: 'img/defactor-social-card.jpeg',
       navbar: {
         title: '',
@@ -79,7 +91,6 @@ const config = {
             position: 'left',
             label: 'Docs',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
           {
             href: 'https://github.com/defactor-com',
             label: 'GitHub',
@@ -97,6 +108,10 @@ const config = {
                 label: 'API',
                 to: '/docs/category/api',
               },
+              {
+                label: 'Smart Contracts',
+                to: '/docs/category/smart-contracts',
+              }
             ],
           },
           {
@@ -119,10 +134,6 @@ const config = {
           {
             title: 'More',
             items: [
-              {
-                label: 'Blog',
-                to: '/blog',
-              },
               {
                 label: 'GitHub',
                 href: 'https://github.com/defactor-com',
