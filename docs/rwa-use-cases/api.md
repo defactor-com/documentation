@@ -32,6 +32,8 @@ Request:
   "leaseTerms": {},
   "paymentInfo": {}
 }
+```
+
 Response:
 
 ```json
