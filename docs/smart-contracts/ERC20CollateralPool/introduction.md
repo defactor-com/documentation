@@ -7,18 +7,18 @@ tags:
   - Collateral Pool
 ---
 
-The `ERC20CollateralPool` smart contract, designed for EVM based blockchains, manages a pools of collateralized loans using ERC20 standard token. It facilitates lending, borrowing, and reward distribution in a decentralized finance (DeFi) ecosystem.
+The `ERC20CollateralPool` smart contract, designed for EVM based blockchains, manages pools of collateralized loans using `ERC20` standard token. It facilitates lending, borrowing, and reward distribution in a decentralized finance (DeFi) ecosystem.
 
 ## Pool
 
-The pool is a structure that keeps track of lenders, borrowers, and total balance for USDC and collateral tokens, which are essential for the proper functioning of the flow.
+The pool is a structure that keeps track of lenders, borrowers, and total balance for USDC and collateral tokens.
 
-This pool has some important characteristics:
+Some important characteristics:
 
-- It has an end time, referred to in this document as the `active period time of the pool`. Once this period concludes, neither lending nor borrowing will be allowed.
+- It has an end time, referred to in this document as the `active period time of the pool`. Once this period concludes, neither lending nor borrowing are allowed.
 - The pool has a variable reward rate that depends on the volume of lending and borrowing transactions during its active period.
-- This pool is primarily designed to support USDC tokens for lending and borrowing, but it can accommodate any other contract that adheres to the ERC20 token standard with a `token precision of 6`. It also supports any other ERC20 token as collateral, regardless of precision.
-- The pool has a collateral token factor, which is used to calculate the amount of collateral token a borrower will need to provide to borrow from the pool.
+- This pool is primarily designed to support USDC tokens for lending and borrowing, but it can accommodate any other contract that adheres to the `ERC20` token standard with a `token precision of 6`. It also supports `ERC20` tokens as collateral, regardless of precision.
+- The pool has a `collateral token percentage` that is used to calculate the amount of collateral token a borrower will need to provide to borrow from the pool.
 - A pool can only have one type of collateral token.
 
 ## Roles
@@ -53,7 +53,7 @@ When the user borrows from a given pool, the contract asks for a certain amount 
 
 #### repay
 
-The borrower can pay the loan anytime before the pool's time ends to avoid getting liquidated. The contract asks for USDC token approval to transfer the USDC tokens from the user's wallet to the pool. The contract calculates the interest and the amount of USDC tokens to be paid, so the borrower will have to pay the exact amount of USDC tokens lent plus an interest of the amount the loan has been taken in terms of time. Every pool has a different interest rate, so the interest rate is calculated based on the pool the user is interacting with. The interest to pay is calculated as `(pool.interest * borrowObj.amount * (block.timestamp - borrowObj.borrowTime)) / (ONE_YEAR * HOUNDRED)`.
+The borrower can pay the loan anytime before the pool's time ends to avoid getting liquidated. The contract asks for USDC token approval to transfer the USDC tokens from the user's wallet to the pool. The interest and the amount of USDC tokens to be paid is calculated by the contract, so the borrower will have to return the exact amount of USDC tokens lent plus an interest of the amount the loan has been taken in terms of time. Every pool has a different interest rate that is calculated based on the pool the user is interacting with. The interest to pay is calculated as `(pool.interest * borrowObj.amount * (block.timestamp - borrowObj.borrowTime)) / (ONE_YEAR * HOUNDRED)`.
 
 To break this formula down into something easier to read, we can say: the amount to pay is the interest accrued on a borrowed amount over a period of time, considering the interest rate of the pool.
 
@@ -63,14 +63,14 @@ To break this formula down into something easier to read, we can say: the amount
 
 The pool allows lenders to claim rewards based on the amount they have lent plus a reward per token, which is calculated based on the lend and borrow activity on the pool. To do so, the pool must have finished the active period.
 
-The other action the user can interact with is `claim multiple`, it's the same as claim rewards with a minor difference. Instead of only claiming the rewards for a lending position, it'll claim all the rewards for all the lending positions the user has on the specified pool.
+The other action the user can interact with is `claim multiple`, it's the same as claim rewards with a minor difference. Instead of only claiming the rewards for a lending position, it'll claim the reward for all the lending positions the user has on the specified pool.
 
 ![ERC20CollateralPool_claim_rewards](/img/flowchart/ERC20CollateralPool_claim_rewards.png)
 
 #### claim unliquidated collateral
 
-To reduce the risk of losing funds for lenders and keeping the pool as healthy as possible, the pools have the collateral tokens every borrower puts into them. If a borrower doesn't pay the loan, the pool will use the collateral to pay it, and the rest will be liquidated. If there is any left, the borrower can claim it back based on the amount of their collateral.
+To mitigate the risk of fund loss for lenders and maintain the health of the pool, collateral tokens are required from every borrower. In the event of a borrower's default on the loan, the pool will utilize the collateral to cover it, and any remaining amount will be liquidated. If there is a surplus after liquidation, the borrower can reclaim it based on the value of their collateral.
 
-> There is always a risk of losing funds tied to the market volatility for the collateralized assets.
+> It's important to note that there is always a risk of fund loss associated with market volatility for the collateralized assets.
 
 ![ERC20CollateralPool Claim Unliquidated Collateral](/img/flowchart/ERC20CollateralPool_claimunliquidatedcollateral.png)
