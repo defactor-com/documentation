@@ -4,7 +4,6 @@ title: Technical Aspects
 sidebar_position: 2
 tags:
   - Technical Aspects
-#   - Collateral Pool
 ---
 
 ## Dependencies
