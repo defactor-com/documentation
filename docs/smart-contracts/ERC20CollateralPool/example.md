@@ -34,11 +34,11 @@ Lets consider the following example to better understand how this flow works:
 
 ## Pool lifecycle
 
-Event #1 -> _Contract is initialized with one pool having gold as collateral and USDC as the lending token_.
-Event #2 -> Alice lends $100k to the pool.
-Event #3 -> Bob borrows $10k from the pool.
-Event #4 -> After 10 days, Bob repays the loan.
-Event #5 -> After 30 days, Alice can claims her rewards.
+- Event #1 -> _Contract is initialized with one pool having gold as collateral and USDC as the lending token_.
+- Event #2 -> Alice lends $100k to the pool.
+- Event #3 -> Bob borrows $10k from the pool.
+- Event #4 -> After 10 days, Bob repays the loan.
+- Event #5 -> After 30 days, Alice can claims her rewards.
 
 In this example, the information is focus on how the contract behaves in the previous events.
 
