@@ -65,7 +65,7 @@ const config = {
     ({
       algolia: {
         appId: 'E3S6H07ZZJ',
-        apiKey: '42cd40974e08e4663cb879a96f71b328',
+        apiKey: '96beda7f32e71789f500f76751ac6dfc',
         indexName: 'umentation--category-api',
         contextualSearch: true,
         externalUrlRegex: 'external\\\\.com|domain\\\\.com',
