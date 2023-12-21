@@ -10,8 +10,12 @@
   overflow: hidden;
 }
 
-.homeBody {
+.homeBodyLight {
   background-color: #F8F9FC;
+}
+
+.homeBodyDark {
+  background-color: #1e2136;
 }
 
 @media screen and (max-width: 996px) {
