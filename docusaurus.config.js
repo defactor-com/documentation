@@ -65,7 +65,7 @@ const config = {
     ({
       algolia: {
         appId: 'E3S6H07ZZJ',
-        apiKey: '936f0ee0c5c8285bdeef121c24643acf',
+        apiKey: '42cd40974e08e4663cb879a96f71b328',
         indexName: 'umentation--category-api',
         contextualSearch: true,
         externalUrlRegex: 'external\\\\.com|domain\\\\.com',
@@ -111,6 +111,14 @@ const config = {
               {
                 label: 'Smart Contracts',
                 to: '/docs/category/smart-contracts',
+              },
+              {
+                label: 'Front End',
+                to: '/docs/category/front-end',
+              },
+              {
+                label: 'Real World Use Cases',
+                to: '/docs/category/real-world-use-cases'
               }
             ],
           },
