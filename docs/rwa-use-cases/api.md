@@ -4,8 +4,6 @@ title: Lease Agreement API Endpoints
 sidebar_position: 2
 ---
 
-# API Endpoints
-
 ## User Authentication
 
 **Endpoint:** `/api/auth/login`
@@ -13,6 +11,7 @@ sidebar_position: 2
 **Method:** POST
 
 **Request:**
+
 ```json
 {
   "username": "string",
@@ -21,8 +20,8 @@ sidebar_position: 2
 ```
 
 **Response:**
-```json
 
+```json
 {
   "token": "string"
 }
@@ -37,7 +36,6 @@ sidebar_position: 2
 **Request:**
 
 ```json
-
 {
   "lesseeDetails": {},
   "vehicleDetails": {},
@@ -85,6 +83,7 @@ sidebar_position: 2
   "paymentInfo": {}
 }
 ```
+
 **Response:**
 
 ```json
@@ -113,7 +112,7 @@ sidebar_position: 2
 
 **Method:** GET
 
-****Response:****
+\***\*Response:\*\***
 
 ```json
 {
