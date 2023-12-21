@@ -1,14 +1,24 @@
-# Defactor Staking Documentation
+---
+id: smart-contract-staking-technical-aspects
+title: Technical Aspects
+sidebar_position: 1
+tags:
+  - Technical Aspects
+---
 
 ## Overview
+
 `Staking.sol` is a smart contract for staking tokens in a DeFi environment. It allows users to stake tokens in different plans with various lock durations and APYs (Annual Percentage Yields).
 
 ## Dependencies
+
 - OpenZeppelin Contracts (Upgradeable)
 - `Staking.storage.sol` for storage operations
 
 ## Contract: Staking
+
 - Inherits:
+
   - `StakingStorage`
   - `AccessControlUpgradeable`
   - `PausableUpgradeable`
@@ -16,10 +26,12 @@
 - Uses `SafeERC20Upgradeable` for safe ERC20 token operations.
 
 ### Constants
+
 - `PERCENTAGE_MULTIPLIER`: Used for APY calculations.
 - `MIN_STAKE_AMOUNT`: Minimum staking amount required.
 
 ### Functions
+
 - `__Staking_init`: Initializes the contract with token, staking, and rewards end time.
 - `stake`: Allows users to stake tokens in a specific plan.
 - `unstake`: Unstakes tokens and claims rewards.
@@ -36,11 +48,13 @@
 - Private helper functions for stake retrieval and reward calculation.
 
 ### Events
+
 - `Staked`
 - `Unstaked`
 - `Claimed`
 
 ### Custom Errors
+
 - `StakingCantBeLessThanRewardsEnd`
 - `StakeAlreadyUnstaked`
 - `InvalidStakeIndex`
@@ -50,6 +64,7 @@
 - `InvalidPlan`
 
 ## Notes
+
 - The contract uses OpenZeppelin's upgradeable contracts for future compatibility.
 - It provides flexibility in staking with different plans and lock periods.
 - The contract ensures safe handling of staking, unstaking, and claiming rewards.
