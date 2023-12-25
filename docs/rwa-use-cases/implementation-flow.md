@@ -4,29 +4,22 @@ title: Use Case
 sidebar_position: 4
 ---
 
-In the world of loans there are a few actors that are involved in the process whether they in the real world as it has been done for decades or in the digital world as it is being done today. For this documentations we will be focusing on a traditional loan process abstracting away the complexities and specifications to a more generalized demonstration.
-
-The actors involved in the loan process are the entity that lens the money, the entity that borrows the money, and the entity that facilitates the loan process.
-
-For purposes of this documentation we will be using the following entities:
-
-- The entity that lends the money will be called the **BankCredit**.
-- The entity that borrows the money will be called the **Alice**.
-- The entity that facilitates the loan process will be called the **GoodCar**.
+In the world of loans there are some actors that are involved in the process whether they in the real world as it has been done for decades or in the digital world as it is been doing nowadays. For this documentation, we will be focusing on traditional loan process abstracting away the complexities and specifications to a more generalized example.
 
 ## Real World Use Case
 
 In the real world the entity that lends the money is a bank, the entity that borrows the money from a bank is a person, and the entity that facilitates the loan process to a person is a car dealership, for this example they are **BankCredit**, **Alice**, and **GoodCar** respectively.
 
-BankCredit is a bank that only lends money for people that want to buy cars. Alice is a person that wants to buy a car from GoodCar. GoodCar is a car dealership that sells cars to people.
+BankCredit is a bank that only lends money to people that want to buy cars. Alice is a person that wants to buy a car from GoodCar. GoodCar is a car dealership that sells cars to people.
 
 ### Business Logic
 
-BankCredit has a term that every borrower must now and agree if they want to proceed with them:
+BankCredit has terms and conditions that every borrower must know and agree if they want to proceed with them:
 
 - The prospective borrower is required to demonstrate creditworthiness through a favorable credit score. Additionally, a stable employment history is essential. A down payment equivalent to a minimum of 20% of the car's appraised value is mandatory.
 
 - Every car leasing that GoodCar sells is a 3 year lease. The monthly payment is calculated based on the car's value, the down payment, and the interest rate.
+
 - Only brand-new vehicles are eligible for financing through BankCredit. Loan requests for any other vehicle types will be declined. The borrower assumes responsibility for making timely monthly payments commensurate with the appraised value of the car. Failure to remit two consecutive payments will result in the repossession of the vehicle by BankCredit, without any entitlement to a refund.
 
 - In the event of a delayed monthly payment, the borrower will incur a late fee equivalent to 5% of the monthly payment amount.
@@ -122,12 +115,15 @@ There are four main components in this system required to take alive this use ca
 #### Integration Points
 
 1. Credit Score Verification
+
    - Integrate with credit reporting agencies to verify the creditworthiness of prospective borrowers.
 
 1. Vehicle Appraisal
+
    - Connect with GoodCar's systems to obtain real-time information on car values and availability.
 
 1. Payment Gateway
+
    - Integrate with a secure payment gateway for processing lease payments.
 
 1. Communication
