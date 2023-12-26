@@ -1,0 +1,4 @@
+- Frequently asked questions with comprehensive answers
+- Common issues and their solutions
+- Debugging tips
+- How to report bugs or contribute to the documentation
