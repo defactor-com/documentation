@@ -133,11 +133,11 @@ There are four main components in this system required to simulate this use case
 
 ### Lending Process Example
 
-Now that the rules are defined an clear for all the parties involved: the Bank, Borrower and Intermediary; let's see how the process would looks like in the real world with no intervention of the Blockchain technology.
+Now that the rules are defined and clear for all the parties involved—the Bank, Borrower, and Intermediary—let's explore how the process would look in the real world with no intervention of Blockchain technology.
 
-The flow start when a person, for our example, Alice wants to lease a car from **GoodCar** but she does not have or want to pay the car in full, so she goes to **BankCredit** to ask for a loan to pay the car in full and then pay the loan in monthly payments. The bank is a financial institution that lends money to people but to do so, the bank needs to make sure their terms and conditions are met by the borrower, so the bank infrastructure need to be prepared to accomplish following required tasks to validate that Alice is a good prospect to lend money and make sure she is going to feel comfortable with this process by a transparent experience.
+The flow starts when a person, for our example, Alice, wants to lease a car from **GoodCar** but does not have or want to pay for the car in full. She goes to the **BankCredit** to ask for a loan to pay for the car in full and then repay the loan in monthly installments. The bank is a financial institution that lends money to people, but to do so, the bank needs to ensure that borrowers meet the terms and conditions. Therefore, the bank infrastructure needs to be prepared to accomplish the following required tasks, validating that Alice is a good prospect to lend money and ensuring she feels comfortable with this transparent process.
 
-#### General Information of the leasing
+#### General Information of the Leasing
 
 Alice Information:
 
@@ -189,82 +189,113 @@ Alice approaches to the bank for a loan:
 1. The bank will ask Alice for her personal information to verify her identity and credit score.
 1. The bank will ask Alice for her employment history to verify her income.
 1. The bank will ask Alice for a down payment (`20%`) to make sure she is committed to the process.
-1. The bank will ask Alice for the car information to make sure it is a brand new car.
+1. The bank will ask Alice for the car information to ensure it is a brand new car.
 1. The bank will ask Alice for the car value to calculate the monthly payments.
 1. The bank will show Alice the interest (`5%`) for the monthly payments.
-1. The bank will start communications with GoodCar to make sure the car is available and information provided by Alice is correct.
-1. Base on the card specifications, the bank stipulates the max mileage per year is `4,473.876 miles`.
-1. The bank shows Alice the terms and conditions including sanctions in case of default for the loan and maximum mileage usage per month.
+1. The bank will initiate communications with GoodCar to ensure the car is available and the information provided by Alice is correct.
+1. Based on the car specifications, the bank stipulates the maximum mileage per year is `4,473.876 miles`.
+1. The bank shows Alice the terms and conditions, including sanctions in case of default for the loan and maximum mileage usage per month.
 1. The bank will ask Alice to sign the terms and conditions.
 1. The bank will notify the car dealership that the loan has been approved.
-1. The bank will notify Alice the loan has been approved.
+1. The bank will notify Alice that the loan has been approved.
 1. The car dealership will notify Alice that the car is ready to be picked up.
 1. Alice will go to the car dealership to pick up the car.
-1. Alice will sign last required documents by the car dealership to pick up the car.
-1. Alice now has the car in her property.
+1. Alice will sign the last required documents provided by the car dealership to pick up the car.
+1. Alice now owns the car.
 
-Alice's payments will start the following month after the vehicle is delivered. Up to this point, Alice has concluded the paperwork for the delivery of the car, now she needs to start paying the loan to the bank, so the bank will start the process to collect the monthly payments from Alice and make sure she is paying on time and following the terms and conditions of the loan agreed by both parties.
+Alice's payments will start the following month after the vehicle is delivered. By this point, she has completed the paperwork for the car delivery and is now required to commence paying the loan to the bank. The bank will initiate the process to collect the monthly payments from Alice and ensure that she pays on time, adhering to the terms and conditions of the loan agreed upon by both parties.
 
-> Quick note: if the bank decides Alice is not a good prospect to lend money (because any internal restriction like a borrower needs to be older than 30 years old), the bank will notify Alice that the loan has been denied and the process will end here without any chance to verify that despite she does not meet the age requirement in term of a good payer she meets all the restrictions.
+> Quick note: If the bank determines that Alice is not a suitable candidate for a loan (due to internal restrictions, such as the requirement that borrowers must be older than 30 years old), the bank will notify Alice of the loan denial. In such a case, the process will conclude without further verification, despite her meeting all other requirements except the age restriction.
 
-Based on all the terms and conditions agreed up to this point by both parties and considering that Alice's deadline payment is the day 30 of each month, let's simulates the following scenario of payments by Alice considering that a month has only 30 days:
+Based on all the terms and conditions agreed up to this point by both parties and considering that Alice's deadline payment is the 30th of each month, let's simulate the following scenario of payments by Alice, assuming that a month has only 30 days:
 
 **Day 0**
 
-- Alice gets the car.
+- Alice acquires possession of the vehicle..
 
 **Day 12**
 
-- Alice drives the car 100.00 miles.
+- Alice accumulates an odometer reading of 100.00 miles.
 
 **Day 20**
 
-- Alice has driven the car 200.00 miles.
+- Alice increases the cumulative mileage of the vehicle to 200.00 miles.
 
 **Day 31**
 
-- Alice respected all terms and conditions, so no penalties are applied.
-- Alice pays the monthly payment on time.
+- Alice adheres to the stipulated terms and conditions, thereby avoiding any penalties.
+- Timely remittance of the monthly installment is executed by Alice.
 
 **First year**
 
-- Alice has driven the car 3,400.00 miles.
-- Alice has paid 12 monthly payments on time.
+- The vehicle's odometer registers a total mileage of 3,400.00 miles under Alice's operation.
+- Alice consistently fulfills her obligation by punctually remitting 12 monthly payments.
 
 **Day 398 (One year and two months)**
 
-- Alice delays 2 days of the payment date.
-- Alice is fined and an extra charge of `%5` based on the agreement is applied.
-- Alice will have to pay a total of `$616.47` + `$29.36` = `$645.83`.
+- Alice deviates from the agreed-upon payment schedule by 2 days.
+- In consequence, a penalty is imposed, along with an additional charge of `5%` in accordance with the agreement.
+- The resultant total due amounts to `$616.47` + `$29.36` = `$645.83`.
 
 **Day 425 (One year and three months)**
 
-- Alice delays 1 day of the payment date.
-- Alice is fined and an extra charge of `%5` based on the agreement is applied.
-- Alice will have to pay a total of `$616.47` + `$29.36` = `$645.83`.
+- Alice delays the payment by 1 day, incurring a penalty and an extra charge of `5%`, bringing the total payable to `$645.83`.
 
 **Second year**
 
-- Alice has driven the car 4,500.00 miles, she had exceeded yearly limit of `4,473.876 miles` by `26,124` miles so the fined will be `$2,612.4`.
-- Alice pays 12 monthly payments on time + `$2,612.4` for the excess mileage.
+- Alice logs a total mileage of `4,500.00 miles` on the vehicle, surpassing the annual limit of `4,473.876 miles` by `26,124 miles`.
+- Consequently, a fine of `$2,612.4` is levied.
+- Alice maintains timely payment of 12 monthly installments and additionally remits `$2,612.4` for the excess mileage.
 
 **Third year**
 
-- Alice did not exceed the yearly limit of `4,473.876 miles` so no fined is applied.
-- Alice paid 12 monthly payments on time and concludes all payments.
+- Alice adheres to the annual mileage limit of `4,473.876 miles`, avoiding any fines.
+- Timely settlement of 12 monthly payments is accomplished, marking the conclusion of all financial obligations.
 
-Now that Alice has paid all the monthly payments, she has two options to terminate the lease agreement:
+Given that Alice has fulfilled all monthly payments, she is presented with two alternatives for terminating the lease agreement:
 
-1. Return the car to the car dealership.
-2. Buy the car.
+1. Surrender the vehicle to the authorized car dealership.
+1. Opt to purchase the vehicle outright.
 
-For this example, Alice decides to return the car to the car dealership, so the bank will notify the car dealership that Alice is going to return the car and the car dealership will notify Alice the process to return the car.
+For this example, let's suppose that Alice decides to return the car to the car dealership, so the bank will notify the car dealership that Alice is going to return the car and the car dealership will notify Alice the process to return the car.
 
-To allow all of this interactions Alice has to have the possibility to make the payments through a web application provided by the bank, so Alice can see all the information related to the loan and the car, and the bank can notify Alice about any change in the terms and conditions of the loan and keep an open an transparent communication with Alice, for example, show and notify her about any warning of excess mileage or payment delayed.
+In order to facilitate these interactions, Alice must be afforded the capability to execute payments through a web application provided by the bank. This web application serves as a comprehensive platform enabling Alice to access detailed information pertaining to the loan and the associated vehicle. Concurrently, the bank utilizes this platform to notify Alice promptly about any alterations in the terms and conditions of the loan, fostering an open and transparent line of communication. This includes notifications regarding warnings for excess mileage, delayed payments or any other the bank may consider important.
 
-The bank solution as indicated before, need to have certain documents to provide Alice the tools she needs to make payments, see the terms and conditions, and see the car information, so the bank needs to have a database to store all the information related to the loan and the car, and a server-side logic to handle all the business logic related to the loan and the car, and a payment processing system to handle all the payments and late fees, and a mileage tracking system to track and record mileage throughout the lease term, and a lease termination and return process to handle all the process related to the return of the car.
+To operationalize this solution, the bank necessitates a repository of essential documents to empower Alice in executing payments, comprehending terms and conditions, and reviewing pertinent car details. This mandate underscores the imperative for a robust database to store all loan and vehicle-related information. Furthermore, a server-side logic is indispensable for handling the intricate business logic associated with loans and vehicles. A dedicated payment processing system assumes the role of managing all transactions, encompassing regular payments and late fees. Additionally, a mileage tracking system is imperative to systematically record and monitor mileage throughout the duration of the lease. Finally, a well-structured lease termination and return process is requisite to manage the intricacies surrounding the return of the vehicle.
 
-This previous examples illustrate how the process of lending money works in the real world, but what if we want to apply the same process in the digital world? Let's see how the process would looks like in the digital world with the intervention of the Blockchain technology.
+Having provided a brief overview of the real-world lending process, let's delve deeper to dissect the intricacies of each interaction that occurred between Alice, the bank, and the car dealership.
+
+The key interactions discernible from the preceding flow example include:
+
+- Authenticate user identity through a login process on a website or mobile app.
+- Verify user credit score.
+- Validate user employment history.
+- Confirm user down payment.
+- Verify car details.
+- Validate car valuation.
+- Compute monthly payment amounts.
+- Facilitate the execution of monthly payments.
+- Process payments for late fees.
+- Process payments for excess mileage charges.
+- Ensure ongoing validity of user identity and an active session.
+- Display the terms and conditions of the loan.
+- Conclude the loan agreement.
+- Establish communication with the car dealership to notify the approval of the loan.
+- Establish communication with the car dealership to communicate the conclusion of the loan.
+
+Now, let's focus on the primary interactions to contrast with a Blockchain solution. For instance, for Alice to qualify for credit and secure a loan, approval must exclusively come from the bank entity, adhering to their comprehensive set of rules. Subsequently:
+
+1. User credit score: The bank entity, comprised of individuals responsible for evaluating a person's likelihood to repay the loan based on established metrics and criteria, undertakes the verification of the user's credit score.
+1. User employment history: Similar to the credit score verification, the bank entity, staffed by individuals, assesses the user's employment history to ascertain the stability of their job and income, aligning with predefined metrics and criteria.
+1. Make monthly payments: Typically, a system provided by the bank entity, integrated with a database solution, validates various aspects such as the number of payments made, timeliness of payments, and resolution of late fees.
+1. Pay late fees: The bank entity's system is responsible for validating and imposing charges, if necessary, when a user fails to make timely payments, with corresponding amounts applied as appropriate.
+1. Finish or conclude the loan: The completion of a loan entails the user fulfilling all monthly payments, settling any accrued late fees, and adhering to all the terms and conditions stipulated in the loan agreement. This process involves direct communication with the bank entity, which records and stores all transactions in a database, providing a comprehensive view of each user's payment history and the current stage of their loan.
+
+This previous examples illustrate how the process of lending money works in the real world, but to apply the same process in the digital world some part of the flow needs to be changed? Let's see how the process would looks like in the digital world with the intervention of the Blockchain technology.
+
+#### Layer Diagram
+
+<!-- TODO: create a diagram to showcase where each part of the logic is going to be running base on the business rules -->
 
 ## Real World Tokenization Use Case
 
