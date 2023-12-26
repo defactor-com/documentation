@@ -20,7 +20,7 @@ As a real finance institutions, BankCredit has terms and conditions that every b
 
 - The prospective borrower is required to demonstrate creditworthiness through a favorable credit score. Additionally, a stable employment history is essential. A down payment equivalent to a minimum of 20% of the car's appraised value is mandatory.
 
-- Every car leasing that GoodCar sells is a 3 year lease. The monthly payment is calculated based on the car's value, the down payment, and the interest rate of `5%` that'll be constant over the lease period.
+- Every car leasing that GoodCar sells is a 3 year lease. The first payment will be the following after the vehicle is delivered and it is calculated based on the car's value, the down payment, and the interest rate of `5%` that'll be constant over the lease period.
 
 - Only brand-new vehicles are eligible for financing through BankCredit. Loan requests for any other vehicle types will be declined. The borrower assumes responsibility for making timely monthly payments commensurate with the appraised value of the car. Failure to remit three consecutive payments will result in the repossession of the vehicle by BankCredit, without any entitlement to a refund.
 
@@ -32,9 +32,9 @@ As a real finance institutions, BankCredit has terms and conditions that every b
 
 - In the event that the borrower wishes to terminate the lease agreement before the end of the specified 3-year term, an early termination fee will be applicable. The early termination fee will be calculated as `70%` of the remaining payments, with a minimum fee of `10%`. Additionally, the borrower will be responsible for any outstanding fees or charges accrued up to the termination date. BankCredit reserves the right to repossess the vehicle if early termination conditions are not met according to the terms stipulated in the lease agreement.
 
-- To maintain the residual value of the leased vehicle, the borrower agrees to adhere to the annual mileage limit specified in the lease agreement. In the event that the total mileage exceeds the agreed-upon limit at the end of the lease term, excess mileage charges will apply. The excess mileage charge is `$5` per mile over the limit. Borrowers are encouraged to monitor their mileage throughout the lease term to avoid additional charges.
+- To maintain the residual value of the leased vehicle, the borrower agrees to adhere to the annual mileage limit specified in the lease agreement. In the event that the total mileage exceeds the agreed-upon limit at the end of the lease term, excess mileage charges will apply. The excess mileage charge is `$0.1` per mile over the limit. Borrowers are encouraged to monitor their mileage throughout the lease term to avoid additional charges.
 
-> In a real bank there are a lot more terms and conditions that are not listed here, but this is no and neither intent to be an official one, this is only for demostration purposes, please, do not considerer it at all an equivalent to a real term and contiditions document.
+> In a real bank there are a lot more terms and conditions that are not listed here, but this is no and neither intent to be an official one, this is only for demonstration purposes, please, do not consider it at all as an equivalent document of a real term and conditions document.
 
 ### System Architecture
 
@@ -133,9 +133,9 @@ There are four main components in this system required to simulate this use case
 
 ### Lending Process Example
 
-Now that the rules are defined an clear for all the parties involved: the Bank, Borrower and Intermediary; let's see how the process would looks like in the real world with no intevention of the Blockchain technology.
+Now that the rules are defined an clear for all the parties involved: the Bank, Borrower and Intermediary; let's see how the process would looks like in the real world with no intervention of the Blockchain technology.
 
-The flow start when a person, for our example, Alice wants to lease a car from **GoodCar** but she does not have or want to pay the car in full, so she goes to **BankCredit** to ask for a loan to pay the car in full and then pay the loan in monthly payments. The bank is a financial institution that lends money to people but to do so, the bank needs to make sure their terms and conditions are met by the borrower, so the bank infrastructure need to be prepared to acomplish following required tasks to validate that Alice is a good prospect to lend money and make sure she is going to feel confortable with this process by a transparent experience.
+The flow start when a person, for our example, Alice wants to lease a car from **GoodCar** but she does not have or want to pay the car in full, so she goes to **BankCredit** to ask for a loan to pay the car in full and then pay the loan in monthly payments. The bank is a financial institution that lends money to people but to do so, the bank needs to make sure their terms and conditions are met by the borrower, so the bank infrastructure need to be prepared to accomplish following required tasks to validate that Alice is a good prospect to lend money and make sure she is going to feel comfortable with this process by a transparent experience.
 
 #### General Information of the leasing
 
@@ -147,7 +147,7 @@ Alice Information:
   - phone: `+1 123 456 7890`
   - email: `alice@mail.com`
 - employment data:
-  - company: `ABC Company`
+  - company: `Good Software`
   - position: `Software Engineer`
   - annual salary: `$100,000`
   - start date: `2020-01-01`
@@ -165,24 +165,22 @@ Vehicle Information:
 Lease Information:
 
 - duration: `36` months
-- monthly rate: `$500`
+- monthly rate: `$616.47`
 - mileage allowance: `4,473.876` miles per year
 
 Payment Information:
 
-- constant interest rate: `%5`
-- initial payment: `$5,284`
-- monthly payments: `$500`
+- constant interest rate: `5%`
+- initial payment: `$5,284.00`
+- monthly payments: `$587.11` + `$29.36` = `$616.47`
 - late fee: `5%` of the monthly payment amount
-- excess mileage charge: `$5` per mile over the limit
-- lease termination fee: `70%` of the remaining payments, with a minimum fee of `10%`
-- total loan amount: `$20,136`
-- due date: `30` of each month
+- excess mileage charge: `$0.1` per mile over the limit
+- lease termination fee: `80%` of the remaining payments, with a minimum fee of `10%` for each remaining month
+- total loan amount: `$21,136.00`
+- due date: day `01` of each month
 - status: `active`
 - start date: `2024-01-01`
-- end date: `2027-01-01`
-
-<!-- TODO: calculate the exact values for the loan -->
+- end date: `2027-02-01`
 
 #### Loan Process
 
@@ -190,24 +188,24 @@ Alice approaches to the bank for a loan:
 
 1. The bank will ask Alice for her personal information to verify her identity and credit score.
 1. The bank will ask Alice for her employment history to verify her income.
-1. The bank will ask Alice for a down payment to make sure she is committed to the process.
+1. The bank will ask Alice for a down payment (`20%`) to make sure she is committed to the process.
 1. The bank will ask Alice for the car information to make sure it is a brand new car.
 1. The bank will ask Alice for the car value to calculate the monthly payments.
-1. The bank will show Alice the interest for the monthly payments.
+1. The bank will show Alice the interest (`5%`) for the monthly payments.
 1. The bank will start communications with GoodCar to make sure the car is available and information provided by Alice is correct.
-1. Base on the card specifications, the bank estipulates the max mileage per year is `4,473.876 miles`.
+1. Base on the card specifications, the bank stipulates the max mileage per year is `4,473.876 miles`.
 1. The bank shows Alice the terms and conditions including sanctions in case of default for the loan and maximum mileage usage per month.
 1. The bank will ask Alice to sign the terms and conditions.
 1. The bank will notify the car dealership that the loan has been approved.
 1. The bank will notify Alice the loan has been approved.
 1. The car dealership will notify Alice that the car is ready to be picked up.
 1. Alice will go to the car dealership to pick up the car.
-1. Alice will sign any required documents by the car dealership to pick up the car.
+1. Alice will sign last required documents by the car dealership to pick up the car.
 1. Alice now has the car in her property.
 
-Up to this point, Alice has concluded the paperwork for the delivery of the car, now she needs to start paying the loan to the bank, so the bank will start the process to collect the monthly payments from Alice and make sure she is paying on time and following the terms and conditions of the loan agreed by both parties.
+Alice's payments will start the following month after the vehicle is delivered. Up to this point, Alice has concluded the paperwork for the delivery of the car, now she needs to start paying the loan to the bank, so the bank will start the process to collect the monthly payments from Alice and make sure she is paying on time and following the terms and conditions of the loan agreed by both parties.
 
-> Quick note: if the bank decides Alice is not a good prospect to lend money (because any internal restriction like a borrower needs to be older than 30 years old), the bank will notify Alice that the loan has been denied and the process will end here without any chance to verfiy that despite she does not meet the age requirement in term of a good payer she meets all the restrictions.
+> Quick note: if the bank decides Alice is not a good prospect to lend money (because any internal restriction like a borrower needs to be older than 30 years old), the bank will notify Alice that the loan has been denied and the process will end here without any chance to verify that despite she does not meet the age requirement in term of a good payer she meets all the restrictions.
 
 Based on all the terms and conditions agreed up to this point by both parties and considering that Alice's deadline payment is the day 30 of each month, let's simulates the following scenario of payments by Alice considering that a month has only 30 days:
 
@@ -217,25 +215,56 @@ Based on all the terms and conditions agreed up to this point by both parties an
 
 **Day 12**
 
-- Alice drives the car 100 miles.
+- Alice drives the car 100.00 miles.
 
 **Day 20**
 
-- Alice has driven the car 200 miles.
+- Alice has driven the car 200.00 miles.
 
-**Day 30**
+**Day 31**
 
 - Alice respected all terms and conditions, so no penalties are applied.
 - Alice pays the monthly payment on time.
 
 **First year**
 
-- Alice has driven the car 3,400 miles.
+- Alice has driven the car 3,400.00 miles.
 - Alice has paid 12 monthly payments on time.
 
-**Day 395 (One year and one month)**
+**Day 398 (One year and two months)**
 
-- Alice delays 2 days of the payment date so Alice is multed for .
+- Alice delays 2 days of the payment date.
+- Alice is fined and an extra charge of `%5` based on the agreement is applied.
+- Alice will have to pay a total of `$616.47` + `$29.36` = `$645.83`.
+
+**Day 425 (One year and three months)**
+
+- Alice delays 1 day of the payment date.
+- Alice is fined and an extra charge of `%5` based on the agreement is applied.
+- Alice will have to pay a total of `$616.47` + `$29.36` = `$645.83`.
+
+**Second year**
+
+- Alice has driven the car 4,500.00 miles, she had exceeded yearly limit of `4,473.876 miles` by `26,124` miles so the fined will be `$2,612.4`.
+- Alice pays 12 monthly payments on time + `$2,612.4` for the excess mileage.
+
+**Third year**
+
+- Alice did not exceed the yearly limit of `4,473.876 miles` so no fined is applied.
+- Alice paid 12 monthly payments on time and concludes all payments.
+
+Now that Alice has paid all the monthly payments, she has two options to terminate the lease agreement:
+
+1. Return the car to the car dealership.
+2. Buy the car.
+
+For this example, Alice decides to return the car to the car dealership, so the bank will notify the car dealership that Alice is going to return the car and the car dealership will notify Alice the process to return the car.
+
+To allow all of this interactions Alice has to have the possibility to make the payments through a web application provided by the bank, so Alice can see all the information related to the loan and the car, and the bank can notify Alice about any change in the terms and conditions of the loan and keep an open an transparent communication with Alice, for example, show and notify her about any warning of excess mileage or payment delayed.
+
+The bank solution as indicated before, need to have certain documents to provide Alice the tools she needs to make payments, see the terms and conditions, and see the car information, so the bank needs to have a database to store all the information related to the loan and the car, and a server-side logic to handle all the business logic related to the loan and the car, and a payment processing system to handle all the payments and late fees, and a mileage tracking system to track and record mileage throughout the lease term, and a lease termination and return process to handle all the process related to the return of the car.
+
+This previous examples illustrate how the process of lending money works in the real world, but what if we want to apply the same process in the digital world? Let's see how the process would looks like in the digital world with the intervention of the Blockchain technology.
 
 ## Real World Tokenization Use Case
 
