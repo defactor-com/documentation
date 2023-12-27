@@ -1,14 +1,16 @@
-import clsx from "clsx";
-import Link from "@docusaurus/Link";
-import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
-import Layout from "@theme/Layout";
-import HomepageFeatures from "@site/src/components/HomepageFeatures";
+import clsx from "clsx"
+import Layout from "@theme/Layout"
+import Link from "@docusaurus/Link"
+import Heading from "@theme/Heading"
+import { useColorMode } from '@docusaurus/theme-common'
+import useDocusaurusContext from "@docusaurus/useDocusaurusContext"
+import HomepageFeatures from "@site/src/components/HomepageFeatures"
 
-import Heading from "@theme/Heading";
-import styles from "./index.module.css";
+import styles from "./index.module.css"
 
-function HomepageHeader() {
-  const { siteConfig } = useDocusaurusContext();
+const HomepageHeader = () => {
+  const { siteConfig } = useDocusaurusContext()
+
   return (
     <header className={clsx("hero hero--primary", styles.heroBanner)}>
       <div className="container">
@@ -21,24 +23,33 @@ function HomepageHeader() {
             className="button button--secondary button--lg"
             to="https://defactor.com"
           >
-            Not a Developer? Visit our Website 
+            Not a Developer? Visit our Website
           </Link>
         </div>
       </div>
     </header>
-  );
+  )
+}
+
+const HomepageBody = () => {
+  const { colorMode } = useColorMode()
+
+  return (
+    <div className={colorMode === 'light' ? styles.homeBodyLight : styles.homeBodyDark}>
+      <HomepageFeatures />
+    </div>
+  )
 }
 
 export default function Home() {
-  const { siteConfig } = useDocusaurusContext();
+  const { siteConfig } = useDocusaurusContext()
+
   return (
     <Layout
       title={`${siteConfig.title}: Smart Contracts, APIs, and Use Cases for RWA Blockchain Platform`}
       description="Explore the comprehensive technical documentation for Defactor's blockchain platform. Dive into detailed guides on smart contracts, backend architecture, APIs, and real-world use cases. Ideal for developers and stakeholders in decentralized finance and tokenized assets.">
       <HomepageHeader />
-      <div className={styles.homeBody}>
-        <HomepageFeatures />
-      </div>
+      <HomepageBody />
     </Layout>
-  );
+  )
 }
