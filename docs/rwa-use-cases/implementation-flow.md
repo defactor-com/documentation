@@ -4,19 +4,19 @@ title: Use Case
 sidebar_position: 4
 ---
 
-In the world of loans there are some actors that are involved in the process of lending money whether they in the real-world as it has been done for decades or in the digital world as it has starting been doing nowadays. For this documentation, we will be focusing on traditional loan process abstracting away the complexities and specifications to a more generalized example to illustrate how each process differs from the other.
+## Real-World Use Case
 
-## Real World Use Case
+In the world of loans there are some actors that are involved in the process of lending money whether they in the real-world as it has been done for decades or if they are in the digital world as it has starting been doing nowadays. This document focus on traditional loan process abstracting away the complexities and specifications to a more generalized example to illustrate how each process differs from the other.
 
-In the real-world there are some entities involved in the process of lending money, for example, the entity that lends the money is a bank, the entity that borrows the money from a bank is a person, and the entity that facilitates the loan process to a person is a car dealership, for this example let's assume they are **BankCredit**, **Alice**, and **GoodCar** respectively.
+In this tangible realm, several entities play integral roles in the lending process. To illustrate, the entity extending the loan is typically a banking institution, denoted as BankCredit. The individual procuring the loan from the bank is a person, referred to as Alice. Further, the entity orchestrating the loan process on behalf of the person is a car dealership, identified as GoodCar. For the purposes of this example, we will consider these entities as **BankCredit**, **Alice**, and **GoodCar**, respectively.
 
-The following is the scenario that this document is intended to illustrate and open the mind of the reader to the possibilities that the tokenization of the lending process can bring and how it can help to be applied to facilitate some process in the real-world that for its nature is not possible.
+The following scenario is designed to broaden the reader's perspective on the potential applications of tokenization in the lending process. It endeavors to illuminate how tokenization can be harnessed to facilitate processes of the tangible world that, due to their inherent nature, might otherwise be deemed impractical or challenging.
 
 **BankCredit exclusively provides financing services for individuals seeking to purchase automobiles. Alice, an aspiring car owner, is currently in the process of acquiring a vehicle from GoodCar, a reputable dealership specializing in car sales.**
 
 ### Business Logic
 
-As a real finance institutions, BankCredit has terms and conditions that every borrower must know and agree if they want to proceed with them:
+As a finance institutions, BankCredit has terms and conditions that every borrower must know and agree if they want to proceed with them:
 
 - The prospective borrower is required to demonstrate creditworthiness through a favorable credit score. Additionally, a stable employment history is essential. A down payment equivalent to a minimum of 20% of the car's appraised value is mandatory.
 
@@ -133,9 +133,14 @@ There are four main components in this system required to simulate this use case
 
 ### Lending Process Example
 
+<<<<<<< Updated upstream
 Now that the rules are defined and clear for all the parties involved—the Bank, Borrower, and Intermediary—let's explore how the process would look in the real-world with no intervention of Blockchain technology.
+=======
+Now that the rules are defined and clear for all the parties involved, let's explore how the process would look in the real-world with no intervention of Blockchain technology.
 
-The flow starts when a person, for our example, Alice, wants to lease a car from **GoodCar** but does not have or want to pay for the car in full. She goes to the **BankCredit** to ask for a loan to pay for the car in full and then repay the loan in monthly installments. The bank is a financial institution that lends money to people, but to do so, the bank needs to ensure that borrowers meet the terms and conditions. Therefore, the bank infrastructure needs to be prepared to accomplish the following required tasks, validating that Alice is a good prospect to lend money and ensuring she feels comfortable with this transparent process.
+> > > > > > > Stashed changes
+
+The process initiates when an individual, in this instance, Alice, expresses the intention to lease a car from **GoodCar** without the immediate means or desire to make a full upfront payment. Subsequently, she approaches **BankCredit** to request a loan, intending to settle the entire cost of the car upfront and subsequently repay the loan through monthly installments. As a financial institution, **BankCredit** engages in the practice of lending money to individuals. However, to execute this, the bank must establish mechanisms ensuring that borrowers adhere to specified terms and conditions. Consequently, the bank's infrastructure must be equipped to perform crucial tasks, including validating Alice's creditworthiness and cultivating an environment where she is comfortable with the ensuing transparent lending process.
 
 #### General Information of the Leasing
 
@@ -297,7 +302,7 @@ This previous examples illustrate how the process of lending money works in the 
 
 <!-- TODO: create a diagram to showcase where each part of the logic is going to be running base on the business rules -->
 
-## Real World Tokenization Use Case
+## Real-World Tokenization Use Case
 
 In the digital world the entity that lends the money is a bank, and the entity that borrows the money is a person, and the entity that facilitates the loan process is a car dealership.
 
