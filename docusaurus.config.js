@@ -69,10 +69,6 @@ const config = {
         indexName: 'umentation--category-api',
         contextualSearch: true,
         externalUrlRegex: 'external\\\\.com|domain\\\\.com',
-        replaceSearchResultPathname: {
-          from: '/docs/',
-          to: '/',
-        },
         searchParameters: {},
         searchPagePath: 'search'
       },
