@@ -613,6 +613,6 @@ Now, let's focus on the key interactions that distinguish this blockchain-based 
 1. Pay late fees: The bank entity's system is responsible for validating and imposing charges, if necessary, when a user fails to make timely payments, with corresponding amounts applied as appropriate.
 1. Finish or conclude the loan: The completion of a loan entails the user fulfilling all monthly payments, settling any accrued late fees, and adhering to all the terms and conditions stipulated in the loan agreement and the contract agreement. This process involves direct communication with the blockchain that stores relevant information of the loan and the bank entity, which records and stores all transactions in a database, providing a comprehensive view of each user's payment history and the current stage of their loan.
 
-#### Layer Diagram
+#### Deployment Diagram
 
-<!-- TODO: create a diagram to showcase where each part of the logic is going to be running base on the business rules -->
+![ERC20CollateralPool_claim_rewards](/img/flowchart/rwa_blockchain_usecase.png)
