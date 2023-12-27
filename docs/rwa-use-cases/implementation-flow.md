@@ -293,9 +293,9 @@ Now, let's focus on the primary interactions to contrast with a Blockchain solut
 
 This previous examples illustrate how the process of lending money works in the real-world, but to apply the same process in the digital world some part of the flow needs to be changed? Let's see how the process would looks like in the digital world with the intervention of the Blockchain technology.
 
-#### Layer Diagram
+#### Deployment Diagram
 
-<!-- TODO: create a diagram to showcase where each part of the logic is going to be running base on the business rules -->
+![ERC20CollateralPool_claim_rewards](/img/flowchart/rwa_usecase.png)
 
 ## Real-World Tokenization Use Case
 
