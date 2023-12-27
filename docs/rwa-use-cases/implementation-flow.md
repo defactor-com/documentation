@@ -133,12 +133,7 @@ There are four main components in this system required to simulate this use case
 
 ### Lending Process Example
 
-<<<<<<< Updated upstream
-Now that the rules are defined and clear for all the parties involved—the Bank, Borrower, and Intermediary—let's explore how the process would look in the real-world with no intervention of Blockchain technology.
-=======
-Now that the rules are defined and clear for all the parties involved, let's explore how the process would look in the real-world with no intervention of Blockchain technology.
-
-> > > > > > > Stashed changes
+With the rules now clearly defined for all parties involved, let's examine how the process would unfold in the real world, without the intervention of blockchain technology.
 
 The process initiates when an individual, in this instance, Alice, expresses the intention to lease a car from **GoodCar** without the immediate means or desire to make a full upfront payment. Subsequently, she approaches **BankCredit** to request a loan, intending to settle the entire cost of the car upfront and subsequently repay the loan through monthly installments. As a financial institution, **BankCredit** engages in the practice of lending money to individuals. However, to execute this, the bank must establish mechanisms ensuring that borrowers adhere to specified terms and conditions. Consequently, the bank's infrastructure must be equipped to perform crucial tasks, including validating Alice's creditworthiness and cultivating an environment where she is comfortable with the ensuing transparent lending process.
 
