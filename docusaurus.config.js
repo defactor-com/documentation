@@ -110,7 +110,7 @@ const config = {
               },
               {
                 label: 'Front End',
-                to: '/docs/category/front-end-ui',
+                to: '/docs/front-end-ui',
               },
               {
                 label: 'Real World Use Cases',
