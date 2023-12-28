@@ -6,13 +6,13 @@ sidebar_position: 4
 
 ## Real-World Use Case
 
-In the world of loans there are some actors that are involved in the process of lending money whether they in the real-world as it has been done for decades or if they are in the digital world as it has starting been doing nowadays. This document focus on traditional loan process abstracting away the complexities and specifications to a more generalized example to illustrate how each process differs from the other.
+In the realm of loans, various entities participate in the process of lending money, whether in the traditional real-world fashion that has persisted for decades or in the evolving digital landscape. This document focuses on the traditional loan process, abstracting away complexities and specifications to present a more generalized example. The aim is to illustrate how each process differs from the other.
 
 In this tangible realm, several entities play integral roles in the lending process. To illustrate, the entity extending the loan is typically a banking institution, denoted as BankCredit. The individual procuring the loan from the bank is a person, referred to as Alice. Further, the entity orchestrating the loan process on behalf of the person is a car dealership, identified as GoodCar. For the purposes of this example, we will consider these entities as **BankCredit**, **Alice**, and **GoodCar**, respectively.
 
 The following scenario is designed to broaden the reader's perspective on the potential applications of tokenization in the lending process. It endeavors to illuminate how tokenization can be harnessed to facilitate processes of the tangible world that, due to their inherent nature, might otherwise be deemed impractical or challenging.
 
-**BankCredit exclusively provides financing services for individuals seeking to purchase automobiles. Alice, an aspiring car owner, is currently in the process of acquiring a vehicle from GoodCar, a reputable dealership specializing in car sales.**
+**BankCredit exclusively provides financing services for individuals seeking to purchase automobiles. Alice, an aspiring car owner, is currently in the process of acquiring a vehicle from GoodCar, a reputable dealership that specializes in car sales.**
 
 ### Business Logic
 
@@ -20,7 +20,7 @@ As a finance institutions, BankCredit has terms and conditions that every borrow
 
 - The prospective borrower is required to demonstrate creditworthiness through a favorable credit score. Additionally, a stable employment history is essential. A down payment equivalent to a minimum of 20% of the car's appraised value is mandatory.
 
-- Every car leasing that GoodCar sells is a 3 year lease. The first payment will be the following after the vehicle is delivered and it is calculated based on the car's value, the down payment, and the interest rate of `5%` that'll be constant over the lease period.
+- Every car leasing from GoodCar is a 3 year period. The first payment will be the following after the vehicle is delivered and it is calculated based on the car's value, the down payment, and the interest rate of `5%` that'll be constant over the lease period.
 
 - Only brand-new vehicles are eligible for financing through BankCredit. Loan requests for any other vehicle types will be declined. The borrower assumes responsibility for making timely monthly payments commensurate with the appraised value of the car. Failure to remit three consecutive payments will result in the repossession of the vehicle by BankCredit, without any entitlement to a refund.
 
