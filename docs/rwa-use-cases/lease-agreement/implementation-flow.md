@@ -293,9 +293,13 @@ Now, let's focus on the primary interactions to contrast with a Blockchain solut
 
 This previous examples illustrate how the process of lending money works in the real-world, but to apply the same process in the digital world some part of the flow needs to be changed? Let's see how the process would looks like in the digital world with the intervention of the Blockchain technology.
 
-#### Deployment Diagram
+#### Example Diagrams
 
-![ERC20CollateralPool_claim_rewards](/img/flowchart/rwa_usecase.png)
+Deployment Diagram
+![RWA Use Case](/img/flowchart/rwa_usecase.png)
+
+Deployment Flowchart Diagram
+![RWA Flowchart Use Case](/img/flowchart/rwa_flowchart_usecase.png)
 
 ## Real-World Tokenization Use Case
 
@@ -613,6 +617,10 @@ Now, let's focus on the key interactions that distinguish this blockchain-based 
 1. Pay late fees: The bank entity's system is responsible for validating and imposing charges, if necessary, when a user fails to make timely payments, with corresponding amounts applied as appropriate.
 1. Finish or conclude the loan: The completion of a loan entails the user fulfilling all monthly payments, settling any accrued late fees, and adhering to all the terms and conditions stipulated in the loan agreement and the contract agreement. This process involves direct communication with the blockchain that stores relevant information of the loan and the bank entity, which records and stores all transactions in a database, providing a comprehensive view of each user's payment history and the current stage of their loan.
 
-#### Deployment Diagram
+#### Example Diagrams
 
-![ERC20CollateralPool_claim_rewards](/img/flowchart/rwa_blockchain_usecase.png)
+Deployment Diagram
+![RWA Blockchain Use Case](/img/flowchart/rwa_blockchain_usecase.png)
+
+Deployment Flowchart Diagram
+![RWA Blockchain Flowchart Use Case](/img/flowchart/rwa_flowchart_blockchain_usecase.png)
