@@ -1,9 +1,7 @@
 {
-    "label": "Lease Agreement",
-    "position": 2,
-    "link": {
-      "type": "generated-index",
-      "description": "Lease Agreement Example Real World use cases"
-    }
+  "label": "Lease Agreement",
+  "position": 2,
+  "link": {
+    "type": "generated-index"
   }
-  
+}
