@@ -1,7 +1,5 @@
 ---
-id: blockchain-technology
-title: Blockchain Technology
-sidebar_position: 1
+title: Blockchain and Web3
 ---
 
 # Introduction to Web3
