@@ -4,55 +4,55 @@
 // There are various equivalent ways to declare your Docusaurus config.
 // See: https://docusaurus.io/docs/api/docusaurus-config
 
-import { themes as prismThemes } from "prism-react-renderer";
+import { themes as prismThemes } from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "Defactor Developer Docs",
-  tagline: "Technical Documentation for Defactor Developers",
-  favicon: "img/Defactor_Favicon-32x32.png",
+  title: 'Defactor Developer Docs',
+  tagline: 'Technical Documentation for Defactor Developers',
+  favicon: 'img/Defactor_Favicon-32x32.png',
 
   // Set the production url of your site here
-  url: "https://docs.defactor.com",
+  url: 'https://docs.defactor.com',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: "/documentation/",
+  baseUrl: '/documentation/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: "defactor-com", // Usually your GitHub org/user name.
-  projectName: "documentation", // Usually your repo name.
+  organizationName: 'defactor-com', // Usually your GitHub org/user name.
+  projectName: 'documentation', // Usually your repo name.
 
-  onBrokenLinks: "throw",
-  onBrokenMarkdownLinks: "warn",
+  onBrokenLinks: 'throw',
+  onBrokenMarkdownLinks: 'warn',
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: "en",
-    locales: ["en"],
+    defaultLocale: 'en',
+    locales: ['en'],
   },
 
   presets: [
     [
-      "classic",
+      'classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          sidebarPath: "./sidebars.js",
+          sidebarPath: './sidebars.js',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl: "https://github.com/defactor-com/documentation/tree/main",
+          editUrl: 'https://github.com/defactor-com/documentation/tree/main',
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl: "https://github.com/defactor-com/documentation/tree/main",
+          editUrl: 'https://github.com/defactor-com/documentation/tree/main',
         },
         theme: {
-          customCss: "./src/css/custom.css",
+          customCss: './src/css/custom.css',
         },
       }),
     ],
@@ -62,41 +62,41 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       algolia: {
-        appId: "E3S6H07ZZJ",
-        apiKey: "936f0ee0c5c8285bdeef121c24643acf",
-        indexName: "umentation--category-api",
+        appId: 'E3S6H07ZZJ',
+        apiKey: '936f0ee0c5c8285bdeef121c24643acf',
+        indexName: 'umentation--category-api',
         contextualSearch: false,
-        externalUrlRegex: "external\\\\.com|domain\\\\.com",
+        externalUrlRegex: 'external\\\\.com|domain\\\\.com',
         searchParameters: {},
-        searchPagePath: "search",
+        searchPagePath: 'search',
       },
-      image: "img/defactor-social-card.jpeg",
+      image: 'img/defactor-social-card.jpeg',
       navbar: {
-        title: "",
+        title: '',
         logo: {
-          alt: "Defactor logo",
-          src: "img/Defactor-Logo-Dark.svg",
-          srcDark: "img/Defactor-Logo-Light.svg",
+          alt: 'Defactor logo',
+          src: 'img/Defactor-Logo-Dark.svg',
+          srcDark: 'img/Defactor-Logo-Light.svg',
         },
         items: [
           {
-            type: "docSidebar",
-            sidebarId: "docSidebar",
-            position: "left",
-            label: "Docs",
+            type: 'docSidebar',
+            sidebarId: 'docSidebar',
+            position: 'left',
+            label: 'Docs',
           },
           {
-            href: "https://github.com/defactor-com",
-            label: "GitHub",
-            position: "right",
+            href: 'https://github.com/defactor-com',
+            label: 'GitHub',
+            position: 'right',
           },
         ],
       },
       footer: {
-        style: "dark",
+        style: 'dark',
         links: [
           {
-            title: " ",
+            title: ' ',
             items: [
               {
                 html: `
@@ -110,49 +110,49 @@ const config = {
             ],
           },
           {
-            title: "Docs",
+            title: 'Docs',
             items: [
               {
-                label: "API",
-                to: "/docs/category/back-end-api",
+                label: 'API',
+                to: '/docs/category/back-end-api',
               },
               {
-                label: "Smart Contracts",
-                to: "/docs/category/smart-contracts",
+                label: 'Smart Contracts',
+                to: '/docs/category/smart-contracts',
               },
               {
-                label: "Front End",
-                to: "/docs/front-end-ui",
+                label: 'Front End',
+                to: '/docs/front-end-ui',
               },
               {
-                label: "Real World Use Cases",
-                to: "/docs/category/real-world-use-cases",
+                label: 'Real World Use Cases',
+                to: '/docs/category/real-world-use-cases',
               },
             ],
           },
           {
-            title: "Community",
+            title: 'Community',
             items: [
               {
-                label: "Telegram",
-                href: "https://t.me/defactor_official",
+                label: 'Telegram',
+                href: 'https://t.me/defactor_official',
               },
               {
-                label: "Discord",
-                href: "https://discord.gg/S2SCMTPMUt",
+                label: 'Discord',
+                href: 'https://discord.gg/S2SCMTPMUt',
               },
               {
-                label: "Twitter",
-                href: "https://twitter.com/defactor_",
+                label: 'Twitter',
+                href: 'https://twitter.com/defactor_',
               },
             ],
           },
           {
-            title: "More",
+            title: 'More',
             items: [
               {
-                label: "GitHub",
-                href: "https://github.com/defactor-com",
+                label: 'GitHub',
+                href: 'https://github.com/defactor-com',
               },
             ],
           },
