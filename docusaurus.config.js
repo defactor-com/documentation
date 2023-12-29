@@ -4,7 +4,7 @@
 // There are various equivalent ways to declare your Docusaurus config.
 // See: https://docusaurus.io/docs/api/docusaurus-config
 
-import {themes as prismThemes} from 'prism-react-renderer';
+import { themes as prismThemes } from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -43,15 +43,13 @@ const config = {
           sidebarPath: './sidebars.js',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/defactor-com/documentation/tree/main',
+          editUrl: 'https://github.com/defactor-com/documentation/tree/main',
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/defactor-com/documentation/tree/main',
+          editUrl: 'https://github.com/defactor-com/documentation/tree/main',
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -70,7 +68,7 @@ const config = {
         contextualSearch: false,
         externalUrlRegex: 'external\\\\.com|domain\\\\.com',
         searchParameters: {},
-        searchPagePath: 'search'
+        searchPagePath: 'search',
       },
       image: 'img/defactor-social-card.jpeg',
       navbar: {
@@ -78,7 +76,7 @@ const config = {
         logo: {
           alt: 'Defactor logo',
           src: 'img/Defactor-Logo-Dark.svg',
-          srcDark: 'img/Defactor-Logo-Light.svg'
+          srcDark: 'img/Defactor-Logo-Light.svg',
         },
         items: [
           {
@@ -98,6 +96,20 @@ const config = {
         style: 'dark',
         links: [
           {
+            title: ' ',
+            items: [
+              {
+                html: `
+                  <div style="height: 150px; display: flex; align-items: center;">
+                    <a href="https://www.defactor.com/" target="_blank" rel="noreferrer noopener" aria-label="Defactor Logo">
+                      <img src="img/Defactor-Logo-Light.svg" alt="Defactor Logo" />
+                    </a>
+                  </div>
+                  `,
+              },
+            ],
+          },
+          {
             title: 'Docs',
             items: [
               {
@@ -114,8 +126,8 @@ const config = {
               },
               {
                 label: 'Real World Use Cases',
-                to: '/docs/category/real-world-use-cases'
-              }
+                to: '/docs/category/real-world-use-cases',
+              },
             ],
           },
           {

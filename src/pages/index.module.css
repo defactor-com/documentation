@@ -4,28 +4,38 @@
  */
 
 .heroBanner {
-  padding: 4rem 0;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
+  justify-content: space-between;
+  display: flex;
+  padding: 0;
+}
+
+.heroContainer {
+  padding: 68px 40px;
 }
 
 .homeBodyLight {
-  background-color: #F8F9FC;
+  background-color: #f8f9fc;
 }
 
 .homeBodyDark {
-  background-color: #1e2136;
+  background-color: #272629;
 }
 
-@media screen and (max-width: 996px) {
+@media screen and (max-width: 819px) {
+  .heroContainer {
+    padding: 2rem 1rem;
+  }
+
+  .divImageStyle {
+    display: none;
+  }
+
   .heroBanner {
-    padding: 2rem;
+    justify-content: center;
+    text-align: center;
   }
 }
 
-.buttons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.buttonStyle {
+  border-radius: 100px;
 }
