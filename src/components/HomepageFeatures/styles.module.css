@@ -1,12 +1,57 @@
 .features {
-  display: flex;
   align-items: center;
-  padding: 2rem 0;
+  padding: 80px 0 120px 0;
+  display: flex;
   width: 100%;
 }
 
+.featuresHeaderContainer {
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 16px;
+  display: flex;
+}
+
+.featuresHeader {
+  transition: transform 0.4s ease;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.featuresSpam {
+  position: absolute;
+  font-weight: 700;
+  font-size: 24px;
+  color: white;
+  z-index: 2;
+}
+
 .featureSvg {
-  border-radius: 10%;
-  height: 180px;
-  width: 180px;
+  box-shadow: 0px 1px 3px 1px color(display-p3 0 0 0 / 0.15),
+    0px 1px 2px 0px color(display-p3 0 0 0 / 0.3);
+  border-radius: 4px;
+  height: 226px;
+  width: 268px;
+  z-index: 0;
+}
+
+.featureHoverHeader {
+  transition: background-color 0.5s ease, opacity 0.4s ease;
+  background-color: transparent;
+  position: absolute;
+  z-index: 1000;
+  height: 226px;
+  width: 268px;
+  z-index: 1;
+}
+
+.featureHoverHeader:hover,
+.featuresSpam:hover ~ .featureHoverHeader {
+  background-color: black;
+  opacity: 0.2;
+}
+
+.featuresHeader:hover {
+  transform: scale(1.04);
 }
