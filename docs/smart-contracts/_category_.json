@@ -3,6 +3,6 @@
   "position": 3,
   "link": {
     "type": "generated-index",
-    "description": "Defactor provides secure and efficient smart contracts. Our documentation will guide you through each step to effectively use them."
+    "description": "This is the core of our blockchain operations — the smart contract code. Ethereum and Polygon smart contracts are developed in Solidity, the industry standard for Ethereum-based contracts, the Algorand contracts are crafted in PyTeal, offering a Pythonic approach to Teal contracts."
   }
 }
