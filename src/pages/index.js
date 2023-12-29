@@ -2,6 +2,7 @@ import clsx from "clsx"
 import Layout from "@theme/Layout"
 import Link from "@docusaurus/Link"
 import Heading from "@theme/Heading"
+import { useEffect, useState } from "react"
 import { useColorMode } from "@docusaurus/theme-common"
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext"
 import HomepageFeatures from "@site/src/components/HomepageFeatures"
@@ -9,15 +10,20 @@ import HomepageFeatures from "@site/src/components/HomepageFeatures"
 import styles from "./index.module.css"
 
 const HomepageHeader = () => {
+  const [themeSelected, setThemeSelected] = useState("light")
   const { siteConfig } = useDocusaurusContext()
   const { colorMode } = useColorMode()
+
+  useEffect(() => {
+    setThemeSelected(colorMode)
+  }, [colorMode])
 
   return (
     <header
       className={clsx(
         "hero",
         styles.heroBanner,
-        colorMode === "light" ? styles.homeBodyLight : styles.homeBodyDark
+        themeSelected === "light" ? styles.homeBodyLight : styles.homeBodyDark
       )}
     >
       <div className={styles.heroContainer}>
