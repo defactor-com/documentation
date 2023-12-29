@@ -94,6 +94,10 @@ const config = {
       },
       footer: {
         style: 'dark',
+        logo: {
+          alt: 'Defactor logo',
+          src: 'img/Defactor-Logo-Light.svg',
+        },
         links: [
           {
             title: ' ',

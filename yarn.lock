@@ -1493,7 +1493,7 @@
     "@types/react" "*"
     prop-types "^15.6.2"
 
-"@docusaurus/theme-classic@3.0.1":
+"@docusaurus/theme-classic@3.0.1", "@docusaurus/theme-classic@^3.0.1":
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/@docusaurus/theme-classic/-/theme-classic-3.0.1.tgz#3ba4dc77553d2c1608e433c0d01bed7c6db14eb9"
   integrity sha512-XD1FRXaJiDlmYaiHHdm27PNhhPboUah9rqIH0lMpBt5kYtsGjJzhqa27KuZvHLzOP2OEpqd2+GZ5b6YPq7Q05Q==
