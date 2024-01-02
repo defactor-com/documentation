@@ -36,15 +36,21 @@ function Footer() {
               <div className={styles.docsStyles}>
                 <a
                   className={styles.linkStyles}
-                  href="/documentation/docs/category/back-end-api/"
+                  href="/documentation/docs/category/blockchain-and-web3/"
                 >
-                  API
+                  Blockchain and Web3
                 </a>
                 <a
                   className={styles.linkStyles}
                   href="/documentation/docs/category/smart-contracts/"
                 >
                   Smart Contracts
+                </a>
+                <a
+                  className={styles.linkStyles}
+                  href="/documentation/docs/category/back-end-api/"
+                >
+                  API
                 </a>
                 <a
                   className={styles.linkStyles}
@@ -57,6 +63,12 @@ function Footer() {
                   href="/documentation/docs/category/real-world-use-cases/"
                 >
                   Real World Use Cases
+                </a>
+                <a
+                  className={styles.linkStyles}
+                  href="/documentation/docs/category/real-world-use-cases/"
+                >
+                  Resources
                 </a>
               </div>
             </div>
