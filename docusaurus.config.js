@@ -70,7 +70,7 @@ const config = {
         searchParameters: {},
         searchPagePath: 'search',
       },
-      image: 'img/defactor-social-card.jpeg',
+      image: 'img/defactor-social-card.jpg',
       navbar: {
         title: '',
         logo: {
