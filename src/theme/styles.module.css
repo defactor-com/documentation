@@ -1,0 +1,90 @@
+/**
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+.footerContainer {
+  background-color: #211f23;
+  color: white;
+}
+
+.footerBody {
+  padding: 40px 180px 16px 180px;
+}
+
+.footerHeader {
+  border-bottom: solid 1px #535058;
+  justify-content: space-between;
+  padding-bottom: 24px;
+  display: flex;
+}
+
+.footerLinksContainer {
+  justify-content: space-between;
+  padding-left: 22%;
+  display: flex;
+  width: 78%;
+}
+
+.docsStyles {
+  flex-direction: column;
+  display: flex;
+}
+
+.linkStyles {
+  color: white;
+}
+
+.linkStyles:hover {
+  color: #eb9f00;
+}
+
+.footerBottom {
+  padding-top: 24px;
+}
+
+.footerBottomContent {
+  justify-content: space-between;
+  display: flex;
+}
+
+.socialMediaContainer {
+  display: flex;
+}
+
+.socialMediaStyle {
+  margin-right: 16px;
+}
+
+@media screen and (max-width: 912px) {
+  .footerBody {
+    padding: 40px 40px 16px 40px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .footerBody {
+    padding: 40px 24px 16px 24px;
+  }
+
+  .footerHeader {
+    display: block;
+  }
+
+  .footerLinksContainer {
+    padding-top: 40px;
+    padding-left: 0;
+    width: 100%;
+  }
+
+  .footerBottomContent {
+    text-align: center;
+    display: block;
+  }
+
+  .socialMediaContainer {
+    margin-bottom: 32px;
+  }
+}

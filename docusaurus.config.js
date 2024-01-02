@@ -92,73 +92,7 @@ const config = {
           },
         ],
       },
-      footer: {
-        style: 'dark',
-        links: [
-          {
-            title: ' ',
-            items: [
-              {
-                html: `
-                  <div style="height: 150px; display: flex; align-items: center;">
-                    <a href="https://www.defactor.com/" target="_blank" rel="noreferrer noopener" aria-label="Defactor Logo">
-                      <img src="img/Defactor-Logo-Light.svg" alt="Defactor Logo" />
-                    </a>
-                  </div>
-                  `,
-              },
-            ],
-          },
-          {
-            title: 'Docs',
-            items: [
-              {
-                label: 'API',
-                to: '/docs/category/back-end-api',
-              },
-              {
-                label: 'Smart Contracts',
-                to: '/docs/category/smart-contracts',
-              },
-              {
-                label: 'Front End',
-                to: '/docs/front-end-ui',
-              },
-              {
-                label: 'Real World Use Cases',
-                to: '/docs/category/real-world-use-cases',
-              },
-            ],
-          },
-          {
-            title: 'Community',
-            items: [
-              {
-                label: 'Telegram',
-                href: 'https://t.me/defactor_official',
-              },
-              {
-                label: 'Discord',
-                href: 'https://discord.gg/S2SCMTPMUt',
-              },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/defactor_',
-              },
-            ],
-          },
-          {
-            title: 'More',
-            items: [
-              {
-                label: 'GitHub',
-                href: 'https://github.com/defactor-com',
-              },
-            ],
-          },
-        ],
-        copyright: `Copyright © ${new Date().getFullYear()} Defactor. All Rights Reserved`,
-      },
+      footer: {},
       prism: {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
