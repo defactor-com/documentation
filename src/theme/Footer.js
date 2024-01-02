@@ -36,22 +36,25 @@ function Footer() {
               <div className={styles.docsStyles}>
                 <a
                   className={styles.linkStyles}
-                  href="/docs/category/back-end-api/"
+                  href="/documentation/docs/category/back-end-api/"
                 >
                   API
                 </a>
                 <a
                   className={styles.linkStyles}
-                  href="/docs/category/smart-contracts/"
+                  href="/documentation/docs/category/smart-contracts/"
                 >
                   Smart Contracts
                 </a>
-                <a className={styles.linkStyles} href="/docs/front-end-ui/">
+                <a
+                  className={styles.linkStyles}
+                  href="/documentation/docs/front-end-ui/"
+                >
                   Front End
                 </a>
                 <a
                   className={styles.linkStyles}
-                  href="/docs/category/real-world-use-cases/"
+                  href="/documentation/docs/category/real-world-use-cases/"
                 >
                   Real World Use Cases
                 </a>
@@ -60,6 +63,7 @@ function Footer() {
             <div>
               <h4>More</h4>
               <a
+                target="_blank"
                 className={styles.linkStyles}
                 href="https://github.com/defactor-com"
               >
