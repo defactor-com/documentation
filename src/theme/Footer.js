@@ -66,7 +66,7 @@ function Footer() {
                 </a>
                 <a
                   className={styles.linkStyles}
-                  href="/documentation/docs/category/real-world-use-cases/"
+                  href="/documentation/docs/category/resources/"
                 >
                   Resources
                 </a>
