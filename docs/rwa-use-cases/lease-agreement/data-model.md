@@ -30,7 +30,7 @@ sidebar_position: 3
   - `mileageAllowance`: Number
 - `paymentInfo`:
   - `initialPayment`: Number
-  - `monthlyPayments`: [Number]
+  - `monthlyPayments`: Number
 - `status`: String (e.g., "active", "completed", "terminated")
 
 ## Payment
