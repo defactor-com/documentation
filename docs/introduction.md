@@ -27,7 +27,6 @@ Tokenized real-world assets refer to the representation of tangible or intangibl
 - **Efficiency:** Streamlines processes, reducing the need for intermediaries and lowering transaction costs.
 - **Transparency and Security:** Blockchain technology ensures transparent, secure, and tamper-proof record-keeping.
 
-
 ## Purpose of the Developer Documentation
 
 This developer documentation is designed to be a comprehensive guide for understanding and interacting with the Defactor platform and its associated technologies. It serves several key purposes:

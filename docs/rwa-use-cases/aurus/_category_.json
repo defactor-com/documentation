@@ -1,8 +1,7 @@
 {
-    "label": "Aurus",
-    "position": 2,
-    "link": {
-      "type": "generated-index",
-      "description": "Aurus project"
-    }
+  "label": "Aurus",
+  "position": 3,
+  "link": {
+    "type": "generated-index"
   }
+}
