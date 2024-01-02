@@ -491,7 +491,7 @@ Payment Information:
 
 - constant interest rate: `5%` + `pool fee`
 - initial payment: `$5,284.00`
-- monthly payments: `$587.11` + `$29.36` + `pool fee` = `$616.47`
+- monthly payments: `$587.11` + `$29.36` + `pool fee` = `$616.47` + `pool fee`
 - late fee: `5%` of the monthly payment amount
 - excess mileage charge: `$0.1` per mile over the limit
 - lease termination fee: `80%` of the remaining payments, with a minimum fee of `10%` for each remaining month
