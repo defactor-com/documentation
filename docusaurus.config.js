@@ -13,7 +13,7 @@ const config = {
   favicon: 'img/Defactor_Favicon-32x32.png',
 
   // Set the production url of your site here
-  url: 'https://docs.defactor.com',
+  url: 'https://defactor-com.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/documentation/',
@@ -70,7 +70,7 @@ const config = {
         searchParameters: {},
         searchPagePath: 'search',
       },
-      image: 'img/defactor-social-card.jpg',
+      image: 'img/social-media-preview.png',
       navbar: {
         title: '',
         logo: {
