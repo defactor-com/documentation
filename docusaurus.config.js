@@ -81,9 +81,9 @@ const config = {
         items: [
           {
             type: 'docSidebar',
-            sidebarId: 'docSidebar',
+            sidebarId: 'customSidebar',
             position: 'left',
-            label: 'Docs',
+            label: 'Introduction',
           },
           {
             href: 'https://github.com/defactor-com',
