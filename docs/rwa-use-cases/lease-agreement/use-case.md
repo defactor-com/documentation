@@ -68,7 +68,7 @@ There are four main components in this system required to simulate this use case
 
 #### Security Measures
 
-1. Data Encryption:
+1. Data Encryption
 
    - Encrypt sensitive data, including personal information, financial details, and transaction data.
 
@@ -375,7 +375,7 @@ Consequently, the fundamental infrastructure of the bank remains largely unchang
 
 #### Security Measures
 
-1. Data Encryption:
+1. Data Encryption
 
    - Encrypt sensitive data, including personal information, financial details, and transaction data.
 
