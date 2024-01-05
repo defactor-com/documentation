@@ -80,10 +80,9 @@ const config = {
         },
         items: [
           {
-            type: 'docSidebar',
-            sidebarId: 'docSidebar',
-            position: 'left',
+            href: '/docs/introduction/',
             label: 'Introduction',
+            position: 'left',
           },
           {
             href: '/docs/blockchain-and-web3/',

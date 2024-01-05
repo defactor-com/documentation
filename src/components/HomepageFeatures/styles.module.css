@@ -20,7 +20,9 @@
 }
 
 .featuresSpam {
+  text-align: center;
   position: absolute;
+  max-width: 230px;
   font-weight: 700;
   font-size: 24px;
   color: white;
