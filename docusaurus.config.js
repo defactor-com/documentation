@@ -81,9 +81,39 @@ const config = {
         items: [
           {
             type: 'docSidebar',
-            sidebarId: 'customSidebar',
+            sidebarId: 'docSidebar',
             position: 'left',
             label: 'Introduction',
+          },
+          {
+            href: '/docs/blockchain-and-web3/',
+            label: 'Blockchain',
+            position: 'left',
+          },
+          {
+            href: '/docs/category/smart-contracts',
+            label: 'Smart Contracts',
+            position: 'left',
+          },
+          {
+            href: '/docs/category/back-end-api/',
+            label: 'API',
+            position: 'left',
+          },
+          {
+            href: '/docs/front-end-ui',
+            label: 'Front-End',
+            position: 'left',
+          },
+          {
+            href: '/docs/category/real-world-use-cases',
+            label: 'RW Use Cases',
+            position: 'left',
+          },
+          {
+            href: '/docs/category/resources',
+            label: 'Resources',
+            position: 'left',
           },
           {
             href: 'https://github.com/defactor-com',
