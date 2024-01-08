@@ -5,6 +5,12 @@
  */
 
 /* You can override the default Infima variables here. */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+body {
+  font-family: 'Poppins';
+}
+
 :root {
   --ifm-color-primary: #eb9f00;
   --ifm-color-primary-dark: #d38f00;
