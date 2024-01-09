@@ -4,8 +4,8 @@
   <ShortName>Defactor Developer Docs</ShortName>
   <Description>Search Defactor Developer Docs</Description>
   <InputEncoding>UTF-8</InputEncoding>
-  <Image width="16" height="16" type="image/x-icon">https://defactor-com.github.io/documentation/img/Defactor_Favicon-32x32.png</Image>
-  <Url type="text/html" method="get" template="https://defactor-com.github.io/documentation/search?q={searchTerms}"/>
-  <Url type="application/opensearchdescription+xml" rel="self" template="https://defactor-com.github.io/documentation/opensearch.xml" />
-  <moz:SearchForm>https://defactor-com.github.io/documentation/</moz:SearchForm>
+  <Image width="16" height="16" type="image/x-icon">https://defactor.dev/img/Defactor_Favicon-32x32.png</Image>
+  <Url type="text/html" method="get" template="https://defactor.dev/search?q={searchTerms}"/>
+  <Url type="application/opensearchdescription+xml" rel="self" template="https://defactor.dev/opensearch.xml" />
+  <moz:SearchForm>https://defactor.dev/</moz:SearchForm>
 </OpenSearchDescription>
