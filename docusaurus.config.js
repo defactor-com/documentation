@@ -62,9 +62,9 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       algolia: {
-        appId: 'E3S6H07ZZJ',
-        apiKey: '936f0ee0c5c8285bdeef121c24643acf',
-        indexName: 'umentation--category-api',
+        appId: '2WY12FOPQF',
+        apiKey: '5b74b1e4542814c80531eb2ddee52d39',
+        indexName: 'defactor',
         contextualSearch: false,
         externalUrlRegex: 'external\\\\.com|domain\\\\.com',
         searchParameters: {},

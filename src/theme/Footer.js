@@ -36,37 +36,37 @@ function Footer() {
               <div className={styles.docsStyles}>
                 <a
                   className={styles.linkStyles}
-                  href="/documentation/docs/category/blockchain-and-web3/"
+                  href="/docs/blockchain-and-web3/"
                 >
                   Blockchain and Web3
                 </a>
                 <a
                   className={styles.linkStyles}
-                  href="/documentation/docs/category/smart-contracts/"
+                  href="/docs/category/smart-contracts/"
                 >
                   Smart Contracts
                 </a>
                 <a
                   className={styles.linkStyles}
-                  href="/documentation/docs/category/back-end-api/"
+                  href="/docs/category/back-end-api/"
                 >
                   API
                 </a>
                 <a
                   className={styles.linkStyles}
-                  href="/documentation/docs/front-end-ui/"
+                  href="/docs/front-end-ui/"
                 >
                   Front End
                 </a>
                 <a
                   className={styles.linkStyles}
-                  href="/documentation/docs/category/real-world-use-cases/"
+                  href="/docs/category/real-world-use-cases/"
                 >
                   Real World Use Cases
                 </a>
                 <a
                   className={styles.linkStyles}
-                  href="/documentation/docs/category/resources/"
+                  href="/docs/category/resources/"
                 >
                   Resources
                 </a>
