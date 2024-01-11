@@ -13,10 +13,10 @@ const config = {
   favicon: 'img/Defactor_Favicon-32x32.png',
 
   // Set the production url of your site here
-  url: 'https://defactor-com.github.io',
+  url: 'https://defactor.dev',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/documentation/',
+  baseUrl: '/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -62,9 +62,9 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       algolia: {
-        appId: 'E3S6H07ZZJ',
-        apiKey: '936f0ee0c5c8285bdeef121c24643acf',
-        indexName: 'umentation--category-api',
+        appId: '2WY12FOPQF',
+        apiKey: '5b74b1e4542814c80531eb2ddee52d39',
+        indexName: 'defactor',
         contextualSearch: false,
         externalUrlRegex: 'external\\\\.com|domain\\\\.com',
         searchParameters: {},
