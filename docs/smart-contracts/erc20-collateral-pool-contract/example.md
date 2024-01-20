@@ -9,7 +9,7 @@ tags:
 
 ## In-depth Actions
 
-The happy path for this Smart Contract begins with the initialization of a pool and the lender engages with the contract to lend money to the pool to allow the borrower interact with the contract by borrowing according to the amount of money they need from the pool. A question that may arise in this point is what happen if the borrower decide to steal the loan (do not repay it), to avoid this scenario the borrower must provide collateral tokens that support the loan they are taking.
+The happy path for this Smart Contract begins with the initialization of a pool and the lender engages with the contract to lend money to the pool to allow the borrower interact with the contract by borrowing according to the amount of money they need from the pool. A question that may arise in this point is what happen if the borrower decides to steal the loan (to not repay it), to avoid this scenario the borrower must provide collateral tokens that back up the loan they are requesting.
 
 The borrower is required to repay the loan with interest before the pool's term concludes to avoid liquidation. If the borrower fails to repay the loan, the pool will utilize the collateral to cover the outstanding amount, and the surplus will be liquidated. Any remaining funds can be claimed by the borrower based on the value of their collateral token.
 
@@ -30,7 +30,7 @@ pool.lastUpdated = uint48(block.timestamp);
 
 As an example, the first time someone lends to the pool, the `rewardPerToken` will be `0`, the `rewardRate` will be the interest rate of the pool, and the `lastUpdated` will be the timestamp of the block when the first lender lent to the pool. The next time someone lends to the pool, the `rewardPerToken` will be updated based on the time passed since the last time someone lent, the `rewardRate` will be updated based on the amount of money borrowed, and the `lastUpdated` will be updated to the timestamp of the block when the last lender lent, and so forth until the pool finishes its active time.
 
-Lets consider the following example to better understand how this flow works:
+Let's consider the following example to better understand how this flow works:
 
 ## Pool lifecycle
 
