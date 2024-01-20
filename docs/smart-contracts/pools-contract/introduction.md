@@ -15,7 +15,7 @@ The pool is a structure that keeps track of total committed, total rewarded, who
 
 The pool has some important characteristics:
 
-- Every pool has a soft cap, hard cap and a deadline. The soft cap will be the minimum amount of funds that the pool must reach to be considered `ACTIVE`. The hard cap will be the maximum amount of funds that the pool can reach and the deadline is the maximum time that the pool can be open to receive funds and be rewarded by the borrower. If the pool owner (the borrower) try to collect the pool before reaching the soft cap, the contract will return an error reverting the transaction but it will also no only restrict the pool owner of collecting the funds but also the lender if they try to un-commit from the pool before it reaches the soft cap. In the other hand, the hard cap will be used to revert transactions if a lender tries to commit to a pool and it overpasses the hard cap and also the deadline will be used to revert transactions if someone tries to collect, archive, commit, un-commit in a wrong time.
+- Every pool has a soft cap, hard cap and a deadline. The soft cap will be the minimum amount of funds that the pool must reach to be considered `ACTIVE`. The hard cap will be the maximum amount of funds that the pool can reach and the deadline is the maximum time that the pool can be open to receive funds and be rewarded by the borrower. If the pool owner (the borrower) tries to collect the pool before reaching the soft cap, the contract will return an error reverting the transaction but it will also no only restrict the pool owner of collecting the funds but also the lender if they try to un-commit from the pool before it reaches the soft cap. On the other hand, the hard cap will be used to revert transactions if a lender tries to commit to a pool and it overpasses the hard cap and also the deadline will be used to revert transactions if someone tries to collect, archive, commit, un-commit at a wrong time.
 - This pool has the advantage to receive 3 types of tokens as collaterals that follows the `ERC20`, `ERC721` and `ERC1155` standards. The pool owner can provide as much collaterals as they want at the same time to the same pool.
 - When a pool is created its default status is `CREATED`, and then when it reaches the soft cap and the owner collects it, the pool status will be changed to `ACTIVE`, later when the owner decides to close it, the pool status will be updated to `CLOSED` and finally, when the pool is archived, the pool status will be `ARCHIVED`. All of these statuses changes are made by trigger events.
 
@@ -29,7 +29,7 @@ When a new instance of this contract is deployed, the sender will be by default 
 
 ### pool owner (borrower)
 
-It's in charged of managing its own pool. It can create a new pool, collect the funds from the pool, close the pool and archive the pool. It can also deposit rewards to the pool.
+The pool owner is in charge of managing its own pool. It can create a new pool, collect the funds from the pool, close the pool and archive the pool. It can also deposit rewards to the pool.
 
 #### create a pool
 
@@ -66,7 +66,7 @@ A pool can be archived by two roles, the pool owner and the contract admin but f
 
 ### lender (investor)
 
-It's in charged of lending money to the pools. It can commit to a pool, un-commit from a pool and claim rewards from a pool.
+The lender is in charge of lending money to the pools. It can commit to a pool, un-commit from a pool and claim rewards from a pool.
 
 #### commit to a pool
 
