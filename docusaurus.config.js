@@ -11,13 +11,11 @@ const config = {
   title: 'Defactor Developer Docs',
   tagline: 'Technical Documentation for Defactor Developers',
   favicon: 'img/Defactor_Favicon-32x32.png',
-
   // Set the production url of your site here
   url: 'https://defactor.dev',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
-
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'defactor-com', // Usually your GitHub org/user name.
