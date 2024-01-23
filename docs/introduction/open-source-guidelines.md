@@ -19,7 +19,7 @@ Periodically we move the new Issues to the `To Do` column and manually and give 
 
 When you start working on a task you must manually move it to `In Progress` column.
 
-We use GitHub flow https://guides.github.com/introduction/flow/ to request code changes.
+We use [GitHub flow](https://guides.github.com/introduction/flow/) to request code changes.
 We develop on `master` and `release` using tags with semver versioning.
 
 <img src="/img/github-flow.webp" width="958" height="241" className="centerImg" alt="Open Source Project Workflow on GitHub" />
