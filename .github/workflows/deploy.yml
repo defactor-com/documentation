@@ -41,3 +41,16 @@ jobs:
           # # You can swap them out with your own user credentials.
           # user_name: github-actions[bot]
           # user_email: 41898282+github-actions[bot]@users.noreply.github.com
+  release-notes:
+    runs-on: ubuntu-latest
+    environment: main
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v3
+
+      - name: Create Release
+        id: create_release
+        uses: marvinpinto/action-automatic-releases@latest
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          prerelease: false
