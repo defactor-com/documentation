@@ -5,9 +5,11 @@ sidebar_position: 3
 
 # Agile Development Workflow at Defactor
 
-Defactor's Agile Development Workflow documentation provides an in-depth guide to our iterative and incremental approach to software development. This workflow emphasizes collaboration, customer feedback, and rapid releases to enhance project transparency and efficiency.
+Defactor's Agile Development Workflow documentation outlines our approach to software development, characterized by iterative progress, collaborative effort, and frequent reassessments of plans at short intervals. This workflow emphasizes collaboration, customer feedback, and rapid releases to enhance project transparency and efficiency.
 
 ## Agile Principles at Defactor
+
+Agile at Defactor involves delivering incremental value through a structured yet flexible process. By adapting to feedback and changes quickly, we ensure the continuous improvement of our products.
 
 Agile at Defactor is about:
 
@@ -20,11 +22,11 @@ Refer to the [Agile Manifesto](https://agilemanifesto.org/) for foundational pri
 
 ## Key Agile Roles
 
-- **Product Owner**: Manages the product backlog and ensures product success.
-- **Scrum Master**: Oversees the Agile process and removes impediments.
+- **Product Owner**: Sets the vision and prioritizes the backlog to align with business goals.
+- **Project Manager**: Guides the development process and assumes the responsibilities of a traditional Project Manager, facilitating meetings and removing obstacles.
 - **The Team**: Delivers high-quality work in collaboration.
 
-The [Scrum Guide](https://scrumguides.org/) offers further insights into these roles.
+The [Scrum Guide](https://scrumguides.org/) offers further insights into these roles, however we don's adhere to a strict implementation of scrum.
 
 ## Agile Artifacts
 
@@ -44,37 +46,93 @@ The [Scrum Guide](https://scrumguides.org/) offers further insights into these r
 
 ## Agile Framework and Ceremonies
 
-- **Backlog Grooming**: Refine user stories and defects.
-- **Sprint Planning**: Choose user stories for the sprint.
-- **Daily Stand-Ups**: Update on progress and impediments.
-- **Sprint Review**: Showcase completed work.
-- **Retrospective**: Reflect to improve the next sprint.
+- **Backlog Grooming**: The team reviews the backlog to ensure clarity and readiness of upcoming User Stories.
+- **Sprint Planning**: This is where the team aligns on the goals for the sprint, discusses the roadmap, and plans the development tasks.
+- **Daily Stand-Ups**: A quick, daily check-in where the team reports on progress, plans for the day, and discusses any impediments to their tasks.
+- **Design Review**: A session to evaluate design proposals and ensure they meet the requirements and standards before development begins.
+- **Sprint Review & Release Demo**: The team showcases the work completed during the sprint to the Product Owner/CTO and other stakeholders for feedback.
+- **Retrospective**: An opportunity to reflect on the sprint, discussing what went well, what didn't, and how processes could be improved for the next sprint.
+
+## The Process Framework
+
+<img src="/img/development-process.png" className="centerImg" alt="Software Development Process Framework" />
 
 ## Sprint Ceremonies Detailed
 
-### Sprint Review
-- **Goal**: Validate sprint outcomes with Product Owner approval.
-- **Participants**: Scrum Master, Product Owner, Scrum Team, Stakeholders.
-- **When**: End of the sprint.
+### Sprint Kickoff & Dev Planning
+- **Goal**: Initiate the sprint by setting goals and planning development activities.
+- **Participants**: Project Manager, Product Owner, Dev Team, Stakeholders.
+- **When**: First day of the sprint.
 
-### Test Review
-- **Goal**: Analyze defects and testing outcomes from the sprint.
-- **Participants**: Scrum Master, Product Owner, Testers.
-- **When**: After sprint completion.
+### Daily Standup
+- **Goal**: Facilitate daily communication and prompt resolution of blockers.
+- **Participants**: Project Manager, Product Owner, Dev Team.
+- **When**: Every day of the sprint.
+
+### Backlog Grooming
+- **Goal**: Refine the backlog, ensuring that the team has a clear understanding of upcoming work.
+- **Participants**: Project Manager & Dev Team.
+- **When**: Twice per sprint / once per week.
+
+### Design Review
+- **Goal**: Assess design plans, ensuring they meet user needs and technical requirements.
+- **Participants**: Project Manager, Dev Team, Product Owner.
+- **When**: Once per sprint.
+
+### Sprint Review / Demo
+- **Goal**: Showcases completed work to stakeholders and gathers feedback for future improvements.
+- **Participants**: Project Manager, Product Owner, Dev Team, Stakeholders.
+- **When**: End of the sprint.
 
 ### Retrospective
 - **Goal**: Enhance team collaboration and sprint effectiveness.
-- **Participants**: Scrum Master, Scrum Team, Product Owner.
+- **Participants**: Project Manager, Dev Team, Product Owner.
 - **When**: Last day of the sprint.
+
+### Test Review
+- **Goal**: Analyze defects and testing outcomes from the sprint.
+- **Participants**: Project Manager, Product Owner, Testers.
+- **When**: After sprint completion.
+
+
+## High-level Sprint Meeting Schedule
+
+### Week 1
+
+| Time  | Monday                        | Tuesday       | Wednesday     | Thursday      | Friday        |
+|-------|-------------------------------|---------------|---------------|---------------|---------------|
+| 8:00  |                               |               |               |               |               |
+| 9:00  | Sprint Kickoff & Dev Planning |               |               |               |               |
+| 10:00 |                               |               |               |               |               |
+| 11:00 | Daily Standup                 | Daily Standup | Daily Standup | Daily Standup | Daily Standup |
+| 12:00 |                               |               |               |               |               |
+| 1:00  |                               |               |               |               |               |
+| 2:00  |                               |               | Backlog Grooming |            | Design Review |
+| 3:00  |                               |               |               |               |               |
+| 4:00  |                               |               |               |               |               |
+
+### Week 2
+
+| Time  | Monday        | Tuesday       | Wednesday     | Thursday      | Friday        |
+|-------|---------------|---------------|---------------|---------------|---------------|
+| 8:00  |               |               |               |               |               |
+| 9:00  | Sprint Review & Release Demo |               |               |               |               |
+| 10:00 |               |               |               |               |               |
+| 11:00 | Daily Standup | Daily Standup | Daily Standup | Daily Standup | Daily Standup |
+| 12:00 |               |               |               |               |               |
+| 1:00  |               |               |               |               |               |
+| 2:00  |               |               | Backlog Grooming |               | Retrospective |
+| 3:00  |               |               |               |               |               |
+| 4:00  |               |               |               |               |               |
 
 ## Product Backlog Management
 
-The Product Backlog is dynamically managed, reflecting priorities and incorporating lessons learned. It is used to sequence sprint work and track progress across releases.
+The Product Backlog at Defactor is a living document, continuously updated to reflect the dynamic nature of our project requirements and priorities. It is used to sequence sprint work and track progress across releases and incorporating lessons learned.
 
 ## User Story Development
 
-User stories are crafted to provide value, are independently testable, and are sized to be completed within a sprint. They follow the INVEST criteria and are continuously refined.
-
+User stories are crafted to provide value, are independently testable, and are sized to be completed within a sprint. They are continuously refined and follow the INVEST criteria: Independent, Negotiable, Valuable, Estimable, Small, and Testable.
+ 
 ### Template for User Stories
 - **Format**: As a `[role]`, I want `[action]` so that `[benefit]`.
 
