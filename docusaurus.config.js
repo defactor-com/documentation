@@ -94,12 +94,12 @@ const config = {
           },
           {
             href: '/docs/category/back-end-api/',
-            label: 'API',
+            label: 'Back End',
             position: 'left',
           },
           {
             href: '/docs/front-end-ui',
-            label: 'Front-End',
+            label: 'Front End',
             position: 'left',
           },
           {
