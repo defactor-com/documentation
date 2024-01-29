@@ -13,7 +13,7 @@ sidebar_position: 3
 
 ### Q2: Where can I find API documentation?
 
-**A:** The API documentation is available [here](../category/back-end-api). It includes detailed descriptions of API endpoints, parameters, and examples.
+**A:** The API documentation is available [here](../category/back-end-services). It includes detailed descriptions of API endpoints, parameters, and examples.
 
 ### Q3: Why Blockchain?
 

@@ -48,7 +48,7 @@ function Footer() {
                 </a>
                 <a
                   className={styles.linkStyles}
-                  href="/docs/category/back-end-api/"
+                  href="/docs/category/back-end-services"
                 >
                   API
                 </a>
