@@ -32,7 +32,7 @@ function Footer() {
           </div>
           <div className={styles.footerLinksContainer}>
             <div>
-              <h4>Docs</h4>
+              <h4>Documentation</h4>
               <div className={styles.docsStyles}>
                 <a
                   className={styles.linkStyles}
@@ -50,13 +50,13 @@ function Footer() {
                   className={styles.linkStyles}
                   href="/docs/category/back-end-services"
                 >
-                  API
+                  Backend API
                 </a>
                 <a
                   className={styles.linkStyles}
                   href="/docs/front-end-ui/"
                 >
-                  Front End
+                  Front End UI
                 </a>
                 <a
                   className={styles.linkStyles}
@@ -79,7 +79,7 @@ function Footer() {
                 className={styles.linkStyles}
                 href="https://github.com/defactor-com"
               >
-                GitHub
+                Defactor GitHub
               </a>
             </div>
             <div></div>
