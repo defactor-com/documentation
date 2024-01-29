@@ -1,8 +1,0 @@
-{
-  "label": "Engage",
-  "position": 4,
-  "link": {
-    "type": "generated-index",
-    "description": "Endpoints required to consume the services for the engage application."
-  }
-}

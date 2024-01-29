@@ -1,8 +1,0 @@
-{
-  "label": "ERC20CollateralToken",
-  "position": 3,
-  "link": {
-    "type": "generated-index",
-    "description": "Endpoints required to consume the services for the implementation of ERC20CollateralToken."
-  }
-}
