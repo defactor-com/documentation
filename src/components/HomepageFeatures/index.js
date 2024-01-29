@@ -28,7 +28,7 @@ const FeatureList = [
   },
   {
     title: "Powerful API",
-    link: "docs/category/back-end-api",
+    link: "docs/category/back-end-services",
     Svg: require("@site/static/img/api_defactor.svg").default,
     description: (
       <>
