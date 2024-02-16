@@ -37,7 +37,7 @@ import { DefactorSDK } from "@defactor/defactor-sdk";
 
 This library is built to provide a simple and easy to use interface to interact with the Defactor contracts in two different options:
 
-- `SelfProvider`: For developers who prefer using their own `digital signature provider` to interact with Defactor contracts. In this mode, developers must furnish the private key of the account intended for blockchain interaction. In order to effectuate this integration, the developer team must conscientiously consider the security protocols implemented to safeguard their private key from exposure or compromise in any manner.
+- `SelfProvider`: For developers who prefer using their own **digital signature provider** to interact with Defactor contracts. In this mode, developers must furnish the private key of the account intended for blockchain interaction. In order to effectuate this integration, the developer team must conscientiously consider the security protocols implemented to safeguard their private key from exposure or compromise in any manner.
 
 - `AssistedProvider`: Geared towards developers seeking to interact with Defactor contracts without providing their private key. In this mode, the Defactor library exposes contract methods similar to `SelfProvider`, but instead of signing transactions, it returns the transaction object for developers to sign. Other contract-interaction functions not requiring signature are seamlessly handled by the SDK.
 
