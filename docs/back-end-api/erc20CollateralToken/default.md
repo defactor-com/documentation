@@ -8,17 +8,28 @@ This API offers dual modes of interaction with the smart contract: firstly, via 
 
 Outlined below is a detailed overview of the API's functionalities, leveraging a designated instance of the `erc20collateralpool` contract as the primary data source.
 
-## Endpoints List
+## Endpoints List (GraphQL and RESTful API)
 
-### RESTful API
-
-#### `Create Pool`
+### `Create Pool`
 
 Create a new pool.
 
 **HTTP Request Method**: POST
 
-**Request URL**: `{{BASE_RESTFUL_URL}}/v1/create-pool`
+**RESTful URL**: `{{BASE_RESTFUL_URL}}/api/rest/v1/create-pool`
+
+**GraphQL URL**: `{{BASE_URL}}/v1/graphql`
+
+**GraphQL Body**
+
+```graphql
+mutation ($pool: CreatePoolInput!) {
+  v1CreatePool(pool: $pool) {
+    res
+    success
+  }
+}
+```
 
 **Request Body**
 
@@ -64,13 +75,26 @@ Upon successful completion of a request, the server will issue a status code of 
 }
 ```
 
-#### `Lend`
+### `Lend`
 
 Lend to a pool.
 
 **HTTP Request Method**: POST
 
 **Request URL**: `{{BASE_RESTFUL_URL}}/v1/lend`
+
+**GraphQL URL**: `{{BASE_URL}}/v1/graphql`
+
+**GraphQL Body**
+
+```graphql
+mutation ($loan: LendInput!) {
+  v1Lend(loan: $loan) {
+    res
+    success
+  }
+}
+```
 
 **Request Body**
 
@@ -110,13 +134,26 @@ Upon successful completion of a request, the server will issue a status code of 
 }
 ```
 
-#### `Borrow`
+### `Borrow`
 
 Borrow from a pool.
 
 **HTTP Request Method**: POST
 
 **Request URL**: `{{BASE_RESTFUL_URL}}/v1/borrow`
+
+**GraphQL URL**: `{{BASE_URL}}/v1/graphql`
+
+**GraphQL Body**
+
+```graphql
+mutation ($borrow: BorrowInput!) {
+  v1Borrow(borrow: $borrow) {
+    res
+    success
+  }
+}
+```
 
 **Request Body**
 
@@ -156,13 +193,26 @@ Upon successful completion of a request, the server will issue a status code of 
 }
 ```
 
-#### `Repay`
+### `Repay`
 
 Repay a loan to a pool.
 
 **HTTP Request Method**: POST
 
 **Request URL**: `{{BASE_RESTFUL_URL}}/v1/repay`
+
+**GraphQL URL**: `{{BASE_URL}}/v1/graphql`
+
+**GraphQL Body**
+
+```graphql
+mutation ($loan: RepayInput!) {
+  v1Repay(loan: $loan) {
+    res
+    success
+  }
+}
+```
 
 **Request Body**
 
@@ -202,13 +252,26 @@ Upon successful completion of a request, the server will issue a status code of 
 }
 ```
 
-#### `Liquidate Pool`
+### `Liquidate Pool`
 
 Liquidate a pool.
 
 **HTTP Request Method**: POST
 
 **Request URL**: `{{BASE_RESTFUL_URL}}/v1/liquidate-pool`
+
+**GraphQL URL**: `{{BASE_URL}}/v1/graphql`
+
+**GraphQL Body**
+
+```graphql
+mutation ($pool: GetPoolInput!) {
+  v1LiquidatePool(pool: $pool) {
+    res
+    success
+  }
+}
+```
 
 **Request Body**
 
@@ -247,13 +310,26 @@ Upon successful completion of a request, the server will issue a status code of 
 }
 ```
 
-#### `ERC20 Approve`
+### `ERC20 Approve`
 
 Authorize a third party to expend a designated sum of funds.
 
 **HTTP Request Method**: POST
 
 **Request URL**: `{{BASE_RESTFUL_URL}}/v1/erc20-approve`
+
+**GraphQL URL**: `{{BASE_URL}}/v1/graphql`
+
+**GraphQL Body**
+
+```graphql
+mutation ($token: Erc20ApproveInput!) {
+  v1Erc20Approve(token: $token) {
+    res
+    success
+  }
+}
+```
 
 **Request Body**
 
@@ -294,13 +370,26 @@ Upon successful completion of a request, the server will issue a status code of 
 }
 ```
 
-#### `Get Usdc Address`
+### `Get Usdc Address`
 
 Returns the configured `usdc` contract address within the `erc20collateraltoken` instance.
 
 **HTTP Request Method**: GET
 
 **Request URL**: `{{BASE_RESTFUL_URL}}/v1/get-usdc`
+
+**GraphQL URL**: `{{BASE_URL}}/v1/graphql`
+
+**GraphQL Body**
+
+```graphql
+mutation {
+  v1GetUsdc {
+    res
+    success
+  }
+}
+```
 
 **Request Body**
 
@@ -321,13 +410,26 @@ Upon successful request completion, the server will issue a status code of 200 a
 }
 ```
 
-#### `Get Pool`
+### `Get Pool`
 
 Retrieves the data associated with the specified `poolId`.
 
 **HTTP Request Method**: GET
 
 **Request URL**: `{{BASE_RESTFUL_URL}}/v1/get-pool`
+
+**GraphQL URL**: `{{BASE_URL}}/v1/graphql`
+
+**GraphQL Body**
+
+```graphql
+mutation ($pool: GetPoolInput!) {
+  v1GetPool(pool: $pool) {
+    res
+    success
+  }
+}
+```
 
 **Request Body**
 
@@ -372,13 +474,26 @@ Upon successful request completion, the server will return a status code of 200 
 }
 ```
 
-#### `Get Pools`
+### `Get Pools`
 
 Retrieves the data associated with the `pools` specified in the pagination parameters. If the offset exceeds the total number of pools, the API will return an empty list.
 
 **HTTP Request Method**: GET
 
 **Request URL**: `{{BASE_RESTFUL_URL}}/v1/get-pools`
+
+**GraphQL URL**: `{{BASE_URL}}/v1/graphql`
+
+**GraphQL Body**
+
+```graphql
+mutation ($pool: PaginationInput!) {
+  v1GetPools(pool: $pool) {
+    res
+    success
+  }
+}
+```
 
 **Request Body**
 
@@ -429,13 +544,26 @@ Upon successful request completion, the server will respond with a status code o
 }
 ```
 
-#### `Get Total Pools`
+### `Get Total Pools`
 
 Returns the count of pools created within the current instance of `erc20collateraltoken`.
 
 **HTTP Request Method**: GET
 
 **Request URL**: `{{BASE_RESTFUL_URL}}/v1/get-total-pools`
+
+**GraphQL URL**: `{{BASE_URL}}/v1/graphql`
+
+**GraphQL Body**
+
+```graphql
+mutation {
+  v1GetTotalPools {
+    res
+    success
+  }
+}
+```
 
 **Request Body**
 
@@ -456,13 +584,26 @@ Upon successful request completion, the server will respond with a status code o
 }
 ```
 
-#### `Get Lending`
+### `Get Lending`
 
 Retrieves lending information.
 
 **HTTP Request Method**: GET
 
 **Request URL**: `{{BASE_RESTFUL_URL}}/v1/get-lending`
+
+**GraphQL URL**: `{{BASE_URL}}/v1/graphql`
+
+**GraphQL Body**
+
+```graphql
+mutation ($loan: GetLendingInput!) {
+  v1GetLending(loan: $loan) {
+    res
+    success
+  }
+}
+```
 
 **Request Body**
 
@@ -493,13 +634,26 @@ Upon successful request completion, the server will respond with a status code o
 }
 ```
 
-#### `Get Total Lending`
+### `Get Total Lending`
 
 Returns the amount of lending made for a specific pool and a provided address.
 
 **HTTP Request Method**: GET
 
 **Request URL**: `{{BASE_RESTFUL_URL}}/v1/get-total-lending`
+
+**GraphQL URL**: `{{BASE_URL}}/v1/graphql`
+
+**GraphQL Body**
+
+```graphql
+mutation ($loan: GetTotalLendingInput!) {
+  v1GetTotalLending(loan: $loan) {
+    res
+    success
+  }
+}
+```
 
 **Request Body**
 
@@ -525,13 +679,26 @@ Upon successful request completion, the server will respond with a status code o
 }
 ```
 
-#### `Get Lendings By Lender`
+### `Get Lendings By Lender`
 
 Retrieves the lending participation for a lender in a pool.
 
 **HTTP Request Method**: GET
 
 **Request URL**: `{{BASE_RESTFUL_URL}}/v1/get-lendings-by-lender`
+
+**GraphQL URL**: `{{BASE_URL}}/v1/graphql`
+
+**GraphQL Body**
+
+```graphql
+mutation ($loan: GetLendingsByLenderInput!) {
+  v1GetLendingsByLender(loan: $loan) {
+    res
+    success
+  }
+}
+```
 
 **Request Body**
 
@@ -568,13 +735,26 @@ Upon successful request completion, the server will respond with a status code o
 }
 ```
 
-#### `Calculate Collateral Token Amount`
+### `Calculate Collateral Token Amount`
 
 Retrieves the amount of collateral token required for borrowing.
 
 **HTTP Request Method**: GET
 
 **Request URL**: `{{BASE_RESTFUL_URL}}/v1/calculate-collateral-token-amount`
+
+**GraphQL URL**: `{{BASE_URL}}/v1/graphql`
+
+**GraphQL Body**
+
+```graphql
+mutation ($borrow: CalculateCollateralTokenAmountInput!) {
+  v1CalculateCollateralTokenAmount(borrow: $borrow) {
+    res
+    success
+  }
+}
+```
 
 **Request Body**
 
@@ -600,13 +780,26 @@ Upon successful request completion, the server will respond with a status code o
 }
 ```
 
-#### `Get Borrow`
+### `Get Borrow`
 
 Returns the borrow information for a borrower in a given pool.
 
 **HTTP Request Method**: GET
 
 **Request URL**: `{{BASE_RESTFUL_URL}}/v1/get-borrow`
+
+**GraphQL URL**: `{{BASE_URL}}/v1/graphql`
+
+**GraphQL Body**
+
+```graphql
+mutation ($borrow: GetBorrowInput!) {
+  v1GetBorrow(borrow: $borrow) {
+    res
+    success
+  }
+}
+```
 
 **Request Body**
 
@@ -638,13 +831,26 @@ Upon successful request completion, the server will respond with a status code o
 }
 ```
 
-#### `Get Total Borrows`
+### `Get Total Borrows`
 
 Returns the total borrows for a borrower in a pool.
 
 **HTTP Request Method**: GET
 
 **Request URL**: `{{BASE_RESTFUL_URL}}/v1/get-total-borrows`
+
+**GraphQL URL**: `{{BASE_URL}}/v1/graphql`
+
+**GraphQL Body**
+
+```graphql
+mutation ($borrow: GetTotalBorrowsInput!) {
+  v1GetTotalBorrows(borrow: $borrow) {
+    res
+    success
+  }
+}
+```
 
 **Request Body**
 
@@ -670,13 +876,26 @@ Upon a successful request, the server will respond with a status code of 200 and
 }
 ```
 
-#### `Get Borrows by Borrower`
+### `Get Borrows by Borrower`
 
 Returns the borrows of a pool the borrower is participating in.
 
 **HTTP Request Method**: GET
 
 **Request URL**: `{{BASE_RESTFUL_URL}}/v1/get-borrows-by-borrower`
+
+**GraphQL URL**: `{{BASE_URL}}/v1/graphql`
+
+**GraphQL Body**
+
+```graphql
+mutation ($borrow: GetBorrowsByBorrowerInput!) {
+  v1GetBorrowsByBorrower(borrow: $borrow) {
+    res
+    success
+  }
+}
+```
 
 **Request Body**
 
@@ -714,13 +933,26 @@ Upon successful request completion, the server will respond with a status code o
 }
 ```
 
-#### `Get Liquidation Info`
+### `Get Liquidation Info`
 
 Retrieves the liquidation information of a loan.
 
 **HTTP Request Method**: GET
 
 **Request URL**: `{{BASE_RESTFUL_URL}}/v1/get-liquidation-info`
+
+**GraphQL URL**: `{{BASE_URL}}/v1/graphql`
+
+**GraphQL Body**
+
+```graphql
+mutation ($pool: GetPoolInput!) {
+  v1GetLiquidationInfo(pool: $pool) {
+    res
+    success
+  }
+}
+```
 
 **Request Body**
 
@@ -749,13 +981,26 @@ Upon successful request completion, the server will respond with a status code o
 }
 ```
 
-#### `Calculate Repay Interest`
+### `Calculate Repay Interest`
 
 Returns the interest for a repayment of a borrow.
 
 **HTTP Request Method**: GET
 
 **Request URL**: `{{BASE_RESTFUL_URL}}/v1/calculate-repay-interest`
+
+**GraphQL URL**: `{{BASE_URL}}/v1/graphql`
+
+**GraphQL Body**
+
+```graphql
+mutation ($loan: CalculateRepayInterestInput!) {
+  v1CalculateRepayInterest(loan: $loan) {
+    res
+    success
+  }
+}
+```
 
 **Request Body**
 
@@ -782,13 +1027,26 @@ Upon successful request completion, the server will respond with a status code o
 }
 ```
 
-#### `Get Liquidation Protocol Fee`
+### `Get Liquidation Protocol Fee`
 
 Retrieves the fee for liquidation.
 
 **HTTP Request Method**: GET
 
 **Request URL**: `{{BASE_RESTFUL_URL}}/v1/get-liquidation-protocol-fee`
+
+**GraphQL URL**: `{{BASE_URL}}/v1/graphql`
+
+**GraphQL Body**
+
+```graphql
+mutation {
+  v1GetLiquidationProtocolFee {
+    res
+    success
+  }
+}
+```
 
 **Request Body**
 
