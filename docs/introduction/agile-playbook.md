@@ -102,11 +102,11 @@ The [Scrum Guide](https://scrumguides.org/) offers further insights into these r
 | Time  | Monday                        | Tuesday       | Wednesday     | Thursday      | Friday        |
 |-------|-------------------------------|---------------|---------------|---------------|---------------|
 | 8:00  |                               |               |               |               |               |
-| 9:00  | Sprint Kickoff & Dev Planning |               |               |               |               |
+| 9:00  | Sprint Kickoff & Dev Planning |               |               |               | Design Review |
 | 10:00 |                               |               |               |               |               |
 | 11:00 | Daily Standup                 | Daily Standup | Daily Standup | Daily Standup | Daily Standup |
 | 12:00 |                               |               |               |               |               |
-| 1:00  |                               |               | Backlog Grooming |            | Design Review |
+| 1:00  |                               |               | Backlog Grooming |            |               |
 | 2:00  |                               |               |               |               |               |
 | 3:00  |                               |               |               |               |               |
 | 4:00  |                               |               |               |               |               |
@@ -116,11 +116,11 @@ The [Scrum Guide](https://scrumguides.org/) offers further insights into these r
 | Time  | Monday        | Tuesday       | Wednesday     | Thursday      | Friday        |
 |-------|---------------|---------------|---------------|---------------|---------------|
 | 8:00  |               |               |               |               |               |
-| 9:00  | Sprint Review & Release Demo  |       |       |               |               |
+| 9:00  | Sprint Review & Release Demo  |       |       |               | Retrospective |
 | 10:00 |               |               |               |               |               |
 | 11:00 | Daily Standup | Daily Standup | Daily Standup | Daily Standup | Daily Standup |
 | 12:00 |               |               |               |               |               |
-| 1:00  |               |               | Backlog Grooming |            | Retrospective |
+| 1:00  |               |               | Backlog Grooming |            |               |
 | 2:00  |               |               |               |               |               |
 | 3:00  |               |               |               |               |               |
 | 4:00  |               |               |               |               |               |
