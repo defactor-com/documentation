@@ -10,6 +10,53 @@ Outlined below is a detailed overview of the API's functionalities, leveraging a
 
 ## Endpoints List (GraphQL and RESTful API)
 
+### `Login`
+
+Return an access and refresh token using JWT.
+
+**HTTP Request Method**: POST
+
+**RESTful URL**: `{{BASE_RESTFUL_URL}}/api/rest/v1/login`
+
+**GraphQL URL**: `{{BASE_URL}}/v1/graphql`
+
+**GraphQL Body**
+
+```graphql
+mutation ($session: LoginInput!) {
+  v1Login(session: $session) {
+    res
+    success
+  }
+}
+```
+
+**Request Body**
+
+```json
+{
+  "session": {
+    "address": "0xa8983Fe59b2F08F9F1B3E833c5D47B256F7FE0d5"
+  }
+}
+```
+
+**Response**
+
+Upon successful completion of a request, the server will issue a status code of 200 along with a JSON object encapsulating the generated access token and refresh token. This object encompasses the following attributes:
+
+```json
+{
+  "v1Login": {
+    "res": {
+      "accessToken": "",
+      "refreshToken": ""
+    },
+    "success": true
+  }
+}
+```
+
 ### `Create Pool`
 
 Create a new pool.
@@ -290,6 +337,66 @@ Upon successful completion of a request, the server will issue a status code of 
 ```json
 {
   "v1LiquidatePool": {
+    "res": {
+      "_type": "TransactionResponse",
+      "accessList": [],
+      "blobVersionedHashes": null,
+      "blockHash": null,
+      "blockNumber": null,
+      "chainId": "80001",
+      "from": "0xa8983Fe59b2F08F9F1B3E833c5D47B256F7FE0d5",
+      "gasLimit": "150012",
+      "gasPrice": null,
+      "hash": "0x68dc6f65b96a427c4c289371637b063bbe20d9841d6c8183f06e657ab10efb1e",
+      .
+      .
+      .
+    },
+    "success": true
+  }
+}
+```
+
+### `Claim Rewards`
+
+Claim rewards.
+
+**HTTP Request Method**: POST
+
+**Request URL**: `{{BASE_RESTFUL_URL}}/v1/claim-rewards`
+
+**GraphQL URL**: `{{BASE_URL}}/v1/graphql`
+
+**GraphQL Body**
+
+```graphql
+mutation ($loan: ClaimRewardsInput!) {
+  v1ClaimRewards(loan: $loan) {
+    res
+    success
+  }
+}
+```
+
+**Request Body**
+
+```json
+{
+  "loan": {
+    "poolId": "0",
+    "address": "0xa8983Fe59b2F08F9F1B3E833c5D47B256F7FE0d5",
+    "lendingId": "0"
+  }
+}
+```
+
+**Response**
+
+Upon successful completion of a request, the server will issue a status code of 200 along with a JSON object encapsulating pertinent blockchain transaction details. This object encompasses the following attributes:
+
+```json
+{
+  "v1ClaimRewards": {
     "res": {
       "_type": "TransactionResponse",
       "accessList": [],
@@ -1064,5 +1171,149 @@ Upon successful request completion, the server will respond with a status code o
     "res": "5",
     "success": true
   }
+}
+```
+
+### `Get Total USDC Available`
+
+Get total `usdc` Available.
+
+**HTTP Request Method**: GET
+
+**Request URL**: `{{BASE_RESTFUL_URL}}/v1/get-total-usdc-available`
+
+**GraphQL URL**: `{{BASE_URL}}/v1/graphql`
+
+**GraphQL Body**
+
+```graphql
+query v1GetTotalUsdcAvailable {
+  pool_aggregate {
+    aggregate {
+      sum {
+        borrowed
+        lended
+      }
+    }
+  }
+}
+```
+
+**Request Body**
+
+```json
+{}
+```
+
+**Response**
+
+Upon successful request completion, the server will respond with a status code of 200 and a JSON object containing the total `usdc` available. This object includes the following attributes:
+
+```json
+{
+  "pool_aggregate": {
+    "aggregate": {
+      "sum": {
+        "borrowed": 0,
+        "lended": 0
+      }
+    }
+  }
+}
+```
+
+### `Get Total Collateral Amount`
+
+Get total collateral amount.
+
+**HTTP Request Method**: GET
+
+**Request URL**: `{{BASE_RESTFUL_URL}}/v1/get-total-collateral-amount`
+
+**GraphQL URL**: `{{BASE_URL}}/v1/graphql`
+
+**GraphQL Body**
+
+```graphql
+query v1GetTotalCollateralAmount {
+  pool_aggregate(where: { liquidated: { _neq: true } }) {
+    aggregate {
+      sum {
+        collateralTokenAmount
+      }
+    }
+  }
+}
+```
+
+**Request Body**
+
+```json
+{}
+```
+
+**Response**
+
+Upon successful request completion, the server will respond with a status code of 200 and a JSON object containing the total collateral amount. This object includes the following attributes:
+
+```json
+{
+  "pool_aggregate": {
+    "aggregate": {
+      "sum": {
+        "collateralTokenAmount": 0
+      }
+    }
+  }
+}
+```
+
+### `Get Dollar Price For Token`
+
+Get dollar price for token.
+
+**HTTP Request Method**: GET
+
+**Request URL**: `{{BASE_RESTFUL_URL}}/v1/get-dollar-price-for-token`
+
+**GraphQL URL**: `{{BASE_URL}}/v1/graphql`
+
+**GraphQL Body**
+
+```graphql
+query v1GetDollarPriceForToken {
+  token_price(order_by: { date: desc }, limit: 1) {
+    id
+    date
+    price
+    marketCaps
+    totalVolumes
+    tokenName
+  }
+}
+```
+
+**Request Body**
+
+```json
+{}
+```
+
+**Response**
+
+Upon successful request completion, the server will respond with a status code of 200 and a JSON object containing dollar price for the available tokens. This object includes the following attributes:
+
+```json
+{
+  "token_price": [
+    {
+      "id": "",
+      "date": "",
+      "price": "",
+      "marketCaps": "",
+      "totalVolumes": "",
+      "tokenName": ""
+    }
+  ]
 }
 ```
