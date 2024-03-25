@@ -12,7 +12,7 @@ Outlined below is a detailed overview of the API's functionalities, leveraging a
 
 ### `Login`
 
-Return an access and refresh token using JWT.
+Return a JSON Web Token (JWT) access token and refresh.
 
 **HTTP Request Method**: POST
 
@@ -49,8 +49,61 @@ Upon successful completion of a request, the server will issue a status code of 
 {
   "v1Login": {
     "res": {
-      "accessToken": "",
-      "refreshToken": ""
+      "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWUsImlhdCI6MTUxNjI
+zOTAyMiwiaHR0cHM6Ly9oYXN1cmEuaW8vand0L2NsYWltcyI6eyJ4LWhhc3VyYS1kZWZhdWx0LXJvbGUiOiJ1c2VyIiwieC1oYXN1cmEtYWxsb3dlZC1yb2x
+lcyI6WyJ1c2VyIiwiYWRtaW4iXSwieC1oYXN1cmEtdXNlci1pZCI6IjEyMyIsIngtaGFzdXJhLW9yZy1pZCI6IjQ1NiIsIngtaGFzdXJhLWN1c3RvbSI6ImN
+1c3RvbS12YWx1ZSJ9fQ.07mlUOhH3Oigz_Yyil8EC579Ht6PbZ1yr8fYJfhQ4NE",
+      "refreshToken": "0a1a6d5f-1bf9-4540-8c22-d9442a75476f"
+    },
+    "success": true
+  }
+}
+```
+
+### `Restore Session`
+
+Return a new access and refresh token.
+
+**HTTP Request Method**: POST
+
+**RESTful URL**: `{{BASE_RESTFUL_URL}}/api/rest/v1/restore-session`
+
+**GraphQL URL**: `{{BASE_URL}}/v1/graphql`
+
+**GraphQL Body**
+
+```graphql
+mutation v1RestoreSession($session: RestoreSessionInput!) {
+  v1RestoreSession(session: $session) {
+    res
+    success
+  }
+}
+```
+
+**Request Body**
+
+```json
+{
+  "session": {
+    "refreshToken": "0a1a6d5f-1bf9-4540-8c22-d9442a75476f"
+  }
+}
+```
+
+**Response**
+
+Upon successful completion of a request, the server will issue a status code of 200 along with a JSON object encapsulating the generated access token and refresh token. This object encompasses the following attributes:
+
+```json
+{
+  "v1RestoreSession": {
+    "res": {
+      "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWUsImlhdCI6MTUxNjI
+zOTAyMiwiaHR0cHM6Ly9oYXN1cmEuaW8vand0L2NsYWltcyI6eyJ4LWhhc3VyYS1kZWZhdWx0LXJvbGUiOiJ1c2VyIiwieC1oYXN1cmEtYWxsb3dlZC1yb2x
+lcyI6WyJ1c2VyIiwiYWRtaW4iXSwieC1oYXN1cmEtdXNlci1pZCI6IjEyMyIsIngtaGFzdXJhLW9yZy1pZCI6IjQ1NiIsIngtaGFzdXJhLWN1c3RvbSI6ImN
+1c3RvbS12YWx1ZSJ9fQ.07mlUOhH3Oigz_Yyil8EC579Ht6PbZ1yr8fYJfhQ4NE",
+      "refreshToken": "d9438293-d378-4561-8b67-d7a4608b7d7c"
     },
     "success": true
   }
@@ -1307,12 +1360,12 @@ Upon successful request completion, the server will respond with a status code o
 {
   "token_price": [
     {
-      "id": "",
-      "date": "",
-      "price": "",
-      "marketCaps": "",
-      "totalVolumes": "",
-      "tokenName": ""
+      "id": "dfcec840-6a79-4cc0-b368-f07b7a566b85",
+      "date": "1970-01-01T00:00:00.000Z",
+      "price": 0,
+      "marketCaps": 0,
+      "totalVolumes": 0,
+      "tokenName": "tokenName"
     }
   ]
 }
