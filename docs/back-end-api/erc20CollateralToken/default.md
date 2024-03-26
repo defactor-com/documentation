@@ -1,5 +1,5 @@
 ---
-title: Postman Collection
+title: Endpoints List (GraphQL and RESTful API)
 ---
 
 The Defactor Postman Collection comprises a suite of pre-configured API requests designed for seamless integration into the Postman application, facilitating access to the services offered by the Defactor API.
@@ -8,7 +8,7 @@ This API offers dual modes of interaction with the smart contract: firstly, via 
 
 Outlined below is a detailed overview of the API's functionalities, leveraging a designated instance of the `erc20collateralpool` contract as the primary data source.
 
-## Endpoints List (GraphQL and RESTful API)
+## Authentication
 
 ### `Login`
 
@@ -104,6 +104,8 @@ Upon successful completion of a request, the server will issue a status code of 
 }
 ```
 
+## Pools
+
 ### `Create Pool`
 
 Create a new pool.
@@ -164,401 +166,6 @@ Upon successful completion of a request, the server will issue a status code of 
       .
       .
     },
-    "success": true
-  }
-}
-```
-
-### `Lend`
-
-Lend to a pool.
-
-**HTTP Request Method**: POST
-
-**Request URL**: `{{BASE_RESTFUL_URL}}/v1/lend`
-
-**GraphQL URL**: `{{BASE_URL}}/v1/graphql`
-
-**GraphQL Body**
-
-```graphql
-mutation ($loan: LendInput!) {
-  v1Lend(loan: $loan) {
-    res
-    success
-  }
-}
-```
-
-**Request Body**
-
-```json
-{
-  "loan": {
-    "poolId": "628",
-    "amount": "10000000"
-  }
-}
-```
-
-**Response**
-
-Upon successful completion of a request, the server will issue a status code of 200 along with a JSON object encapsulating pertinent blockchain transaction details. This object encompasses the following attributes:
-
-```json
-{
-  "v1Lend": {
-    "res": {
-      "_type": "TransactionResponse",
-      "accessList": [],
-      "blobVersionedHashes": null,
-      "blockHash": null,
-      "blockNumber": null,
-      "chainId": "80001",
-      "from": "0xa8983Fe59b2F08F9F1B3E833c5D47B256F7FE0d5",
-      "gasLimit": "150012",
-      "gasPrice": null,
-      "hash": "0x68dc6f65b96a427c4c289371637b063bbe20d9841d6c8183f06e657ab10efb1e",
-      .
-      .
-      .
-    },
-    "success": true
-  }
-}
-```
-
-### `Borrow`
-
-Borrow from a pool.
-
-**HTTP Request Method**: POST
-
-**Request URL**: `{{BASE_RESTFUL_URL}}/v1/borrow`
-
-**GraphQL URL**: `{{BASE_URL}}/v1/graphql`
-
-**GraphQL Body**
-
-```graphql
-mutation ($borrow: BorrowInput!) {
-  v1Borrow(borrow: $borrow) {
-    res
-    success
-  }
-}
-```
-
-**Request Body**
-
-```json
-{
-  "borrow": {
-    "poolId": "628",
-    "amount": "1000000"
-  }
-}
-```
-
-**Response**
-
-Upon successful completion of a request, the server will issue a status code of 200 along with a JSON object encapsulating pertinent blockchain transaction details. This object encompasses the following attributes:
-
-```json
-{
-  "v1Borrow": {
-    "res": {
-      "_type": "TransactionResponse",
-      "accessList": [],
-      "blobVersionedHashes": null,
-      "blockHash": null,
-      "blockNumber": null,
-      "chainId": "80001",
-      "from": "0xa8983Fe59b2F08F9F1B3E833c5D47B256F7FE0d5",
-      "gasLimit": "150012",
-      "gasPrice": null,
-      "hash": "0x68dc6f65b96a427c4c289371637b063bbe20d9841d6c8183f06e657ab10efb1e",
-      .
-      .
-      .
-    },
-    "success": true
-  }
-}
-```
-
-### `Repay`
-
-Repay a loan to a pool.
-
-**HTTP Request Method**: POST
-
-**Request URL**: `{{BASE_RESTFUL_URL}}/v1/repay`
-
-**GraphQL URL**: `{{BASE_URL}}/v1/graphql`
-
-**GraphQL Body**
-
-```graphql
-mutation ($loan: RepayInput!) {
-  v1Repay(loan: $loan) {
-    res
-    success
-  }
-}
-```
-
-**Request Body**
-
-```json
-{
-  "loan": {
-    "poolId": "628",
-    "borrowId": "0"
-  }
-}
-```
-
-**Response**
-
-Upon successful completion of a request, the server will issue a status code of 200 along with a JSON object encapsulating pertinent blockchain transaction details. This object encompasses the following attributes:
-
-```json
-{
-  "v1Repay": {
-    "res": {
-      "_type": "TransactionResponse",
-      "accessList": [],
-      "blobVersionedHashes": null,
-      "blockHash": null,
-      "blockNumber": null,
-      "chainId": "80001",
-      "from": "0xa8983Fe59b2F08F9F1B3E833c5D47B256F7FE0d5",
-      "gasLimit": "150012",
-      "gasPrice": null,
-      "hash": "0x68dc6f65b96a427c4c289371637b063bbe20d9841d6c8183f06e657ab10efb1e",
-      .
-      .
-      .
-    },
-    "success": true
-  }
-}
-```
-
-### `Liquidate Pool`
-
-Liquidate a pool.
-
-**HTTP Request Method**: POST
-
-**Request URL**: `{{BASE_RESTFUL_URL}}/v1/liquidate-pool`
-
-**GraphQL URL**: `{{BASE_URL}}/v1/graphql`
-
-**GraphQL Body**
-
-```graphql
-mutation ($pool: GetPoolInput!) {
-  v1LiquidatePool(pool: $pool) {
-    res
-    success
-  }
-}
-```
-
-**Request Body**
-
-```json
-{
-  "pool": {
-    "poolId": "0"
-  }
-}
-```
-
-**Response**
-
-Upon successful completion of a request, the server will issue a status code of 200 along with a JSON object encapsulating pertinent blockchain transaction details. This object encompasses the following attributes:
-
-```json
-{
-  "v1LiquidatePool": {
-    "res": {
-      "_type": "TransactionResponse",
-      "accessList": [],
-      "blobVersionedHashes": null,
-      "blockHash": null,
-      "blockNumber": null,
-      "chainId": "80001",
-      "from": "0xa8983Fe59b2F08F9F1B3E833c5D47B256F7FE0d5",
-      "gasLimit": "150012",
-      "gasPrice": null,
-      "hash": "0x68dc6f65b96a427c4c289371637b063bbe20d9841d6c8183f06e657ab10efb1e",
-      .
-      .
-      .
-    },
-    "success": true
-  }
-}
-```
-
-### `Claim Rewards`
-
-Claim rewards.
-
-**HTTP Request Method**: POST
-
-**Request URL**: `{{BASE_RESTFUL_URL}}/v1/claim-rewards`
-
-**GraphQL URL**: `{{BASE_URL}}/v1/graphql`
-
-**GraphQL Body**
-
-```graphql
-mutation ($loan: ClaimRewardsInput!) {
-  v1ClaimRewards(loan: $loan) {
-    res
-    success
-  }
-}
-```
-
-**Request Body**
-
-```json
-{
-  "loan": {
-    "poolId": "0",
-    "address": "0xa8983Fe59b2F08F9F1B3E833c5D47B256F7FE0d5",
-    "lendingId": "0"
-  }
-}
-```
-
-**Response**
-
-Upon successful completion of a request, the server will issue a status code of 200 along with a JSON object encapsulating pertinent blockchain transaction details. This object encompasses the following attributes:
-
-```json
-{
-  "v1ClaimRewards": {
-    "res": {
-      "_type": "TransactionResponse",
-      "accessList": [],
-      "blobVersionedHashes": null,
-      "blockHash": null,
-      "blockNumber": null,
-      "chainId": "80001",
-      "from": "0xa8983Fe59b2F08F9F1B3E833c5D47B256F7FE0d5",
-      "gasLimit": "150012",
-      "gasPrice": null,
-      "hash": "0x68dc6f65b96a427c4c289371637b063bbe20d9841d6c8183f06e657ab10efb1e",
-      .
-      .
-      .
-    },
-    "success": true
-  }
-}
-```
-
-### `ERC20 Approve`
-
-Authorize a third party to expend a designated sum of funds.
-
-**HTTP Request Method**: POST
-
-**Request URL**: `{{BASE_RESTFUL_URL}}/v1/erc20-approve`
-
-**GraphQL URL**: `{{BASE_URL}}/v1/graphql`
-
-**GraphQL Body**
-
-```graphql
-mutation ($token: Erc20ApproveInput!) {
-  v1Erc20Approve(token: $token) {
-    res
-    success
-  }
-}
-```
-
-**Request Body**
-
-```json
-{
-  "token": {
-    "tokenAddress": "0x81da82b49CD9Ee7b7d67B4655784581f30590eA1",
-    "addressToAuthorize": "0x615e1f7970363Fbf7A1843eFc16f0E4e685610F9",
-    "amount": "1032002028946529865"
-  }
-}
-```
-
-**Response**
-
-Upon successful completion of a request, the server will issue a status code of 200 along with a JSON object encapsulating pertinent blockchain transaction details. This object encompasses the following attributes:
-
-```json
-{
-  "v1Erc20Approve": {
-    "res": {
-      "_type": "TransactionResponse",
-      "accessList": [],
-      "blobVersionedHashes": null,
-      "blockHash": null,
-      "blockNumber": null,
-      "chainId": "80001",
-      "from": "0xa8983Fe59b2F08F9F1B3E833c5D47B256F7FE0d5",
-      "gasLimit": "150012",
-      "gasPrice": null,
-      "hash": "0x68dc6f65b96a427c4c289371637b063bbe20d9841d6c8183f06e657ab10efb1e",
-      .
-      .
-      .
-    },
-    "success": true
-  }
-}
-```
-
-### `Get Usdc Address`
-
-Returns the configured `usdc` contract address within the `erc20collateraltoken` instance.
-
-**HTTP Request Method**: GET
-
-**Request URL**: `{{BASE_RESTFUL_URL}}/v1/get-usdc`
-
-**GraphQL URL**: `{{BASE_URL}}/v1/graphql`
-
-**GraphQL Body**
-
-```graphql
-mutation {
-  v1GetUsdc {
-    res
-    success
-  }
-}
-```
-
-**Request Body**
-
-```json
-{}
-```
-
-**Response**
-
-Upon successful request completion, the server will issue a status code of 200 alongside a JSON object containing the address information for `usdc`. This object incorporates the following attributes:
-
-```json
-{
-  "v1GetUsdc": {
-    "res": "0x80D9E7bC3D962878b292F9536b38E52e266a77Fd",
     "success": true
   }
 }
@@ -738,6 +345,378 @@ Upon successful request completion, the server will respond with a status code o
 }
 ```
 
+### `Liquidate Pool`
+
+Liquidate a pool.
+
+**HTTP Request Method**: POST
+
+**Request URL**: `{{BASE_RESTFUL_URL}}/v1/liquidate-pool`
+
+**GraphQL URL**: `{{BASE_URL}}/v1/graphql`
+
+**GraphQL Body**
+
+```graphql
+mutation ($pool: GetPoolInput!) {
+  v1LiquidatePool(pool: $pool) {
+    res
+    success
+  }
+}
+```
+
+**Request Body**
+
+```json
+{
+  "pool": {
+    "poolId": "0"
+  }
+}
+```
+
+**Response**
+
+Upon successful completion of a request, the server will issue a status code of 200 along with a JSON object encapsulating pertinent blockchain transaction details. This object encompasses the following attributes:
+
+```json
+{
+  "v1LiquidatePool": {
+    "res": {
+      "_type": "TransactionResponse",
+      "accessList": [],
+      "blobVersionedHashes": null,
+      "blockHash": null,
+      "blockNumber": null,
+      "chainId": "80001",
+      "from": "0xa8983Fe59b2F08F9F1B3E833c5D47B256F7FE0d5",
+      "gasLimit": "150012",
+      "gasPrice": null,
+      "hash": "0x68dc6f65b96a427c4c289371637b063bbe20d9841d6c8183f06e657ab10efb1e",
+      .
+      .
+      .
+    },
+    "success": true
+  }
+}
+```
+
+### `Get Liquidation Info`
+
+Retrieves the liquidation information of a loan.
+
+**HTTP Request Method**: GET
+
+**Request URL**: `{{BASE_RESTFUL_URL}}/v1/get-liquidation-info`
+
+**GraphQL URL**: `{{BASE_URL}}/v1/graphql`
+
+**GraphQL Body**
+
+```graphql
+mutation ($pool: GetPoolInput!) {
+  v1GetLiquidationInfo(pool: $pool) {
+    res
+    success
+  }
+}
+```
+
+**Request Body**
+
+```json
+{
+  "pool": {
+    "poolId": "0"
+  }
+}
+```
+
+**Response**
+
+Upon successful request completion, the server will respond with a status code of 200 and a JSON object containing the amount required to be paid in order to liquidate the pool. This object includes the following attributes:
+
+```json
+{
+  "v1GetLiquidationInfo": {
+    "res": {
+      "liquidatableAmountWithLiquidationFee": "2874604918977589116",
+      "liquidatableAmountWithProtocolFee": "2743941059024062338",
+      "remainingInterest": "2613277199070533400"
+    },
+    "success": true
+  }
+}
+```
+
+### `Get Liquidation Protocol Fee`
+
+Retrieves the fee for liquidation.
+
+**HTTP Request Method**: GET
+
+**Request URL**: `{{BASE_RESTFUL_URL}}/v1/get-liquidation-protocol-fee`
+
+**GraphQL URL**: `{{BASE_URL}}/v1/graphql`
+
+**GraphQL Body**
+
+```graphql
+mutation {
+  v1GetLiquidationProtocolFee {
+    res
+    success
+  }
+}
+```
+
+**Request Body**
+
+```json
+{}
+```
+
+**Response**
+
+Upon successful request completion, the server will respond with a status code of 200 and a JSON object containing the liquidation fee. This object includes the following attributes:
+
+```json
+{
+  "v1GetLiquidationProtocolFee": {
+    "res": "5",
+    "success": true
+  }
+}
+```
+
+### `Get Total Collateral Amount`
+
+Get total collateral amount.
+
+**HTTP Request Method**: GET
+
+**Request URL**: `{{BASE_RESTFUL_URL}}/v1/get-total-collateral-amount`
+
+**GraphQL URL**: `{{BASE_URL}}/v1/graphql`
+
+**GraphQL Body**
+
+```graphql
+query v1GetTotalCollateralAmount {
+  pool_aggregate(where: { liquidated: { _neq: true } }) {
+    aggregate {
+      sum {
+        collateralTokenAmount
+      }
+    }
+  }
+}
+```
+
+**Request Body**
+
+```json
+{}
+```
+
+**Response**
+
+Upon successful request completion, the server will respond with a status code of 200 and a JSON object containing the total collateral amount. This object includes the following attributes:
+
+```json
+{
+  "pool_aggregate": {
+    "aggregate": {
+      "sum": {
+        "collateralTokenAmount": 0
+      }
+    }
+  }
+}
+```
+
+## Lend
+
+### `Lend`
+
+Lend to a pool.
+
+**HTTP Request Method**: POST
+
+**Request URL**: `{{BASE_RESTFUL_URL}}/v1/lend`
+
+**GraphQL URL**: `{{BASE_URL}}/v1/graphql`
+
+**GraphQL Body**
+
+```graphql
+mutation ($loan: LendInput!) {
+  v1Lend(loan: $loan) {
+    res
+    success
+  }
+}
+```
+
+**Request Body**
+
+```json
+{
+  "loan": {
+    "poolId": "628",
+    "amount": "10000000"
+  }
+}
+```
+
+**Response**
+
+Upon successful completion of a request, the server will issue a status code of 200 along with a JSON object encapsulating pertinent blockchain transaction details. This object encompasses the following attributes:
+
+```json
+{
+  "v1Lend": {
+    "res": {
+      "_type": "TransactionResponse",
+      "accessList": [],
+      "blobVersionedHashes": null,
+      "blockHash": null,
+      "blockNumber": null,
+      "chainId": "80001",
+      "from": "0xa8983Fe59b2F08F9F1B3E833c5D47B256F7FE0d5",
+      "gasLimit": "150012",
+      "gasPrice": null,
+      "hash": "0x68dc6f65b96a427c4c289371637b063bbe20d9841d6c8183f06e657ab10efb1e",
+      .
+      .
+      .
+    },
+    "success": true
+  }
+}
+```
+
+### `Repay`
+
+Repay a loan to a pool.
+
+**HTTP Request Method**: POST
+
+**Request URL**: `{{BASE_RESTFUL_URL}}/v1/repay`
+
+**GraphQL URL**: `{{BASE_URL}}/v1/graphql`
+
+**GraphQL Body**
+
+```graphql
+mutation ($loan: RepayInput!) {
+  v1Repay(loan: $loan) {
+    res
+    success
+  }
+}
+```
+
+**Request Body**
+
+```json
+{
+  "loan": {
+    "poolId": "628",
+    "borrowId": "0"
+  }
+}
+```
+
+**Response**
+
+Upon successful completion of a request, the server will issue a status code of 200 along with a JSON object encapsulating pertinent blockchain transaction details. This object encompasses the following attributes:
+
+```json
+{
+  "v1Repay": {
+    "res": {
+      "_type": "TransactionResponse",
+      "accessList": [],
+      "blobVersionedHashes": null,
+      "blockHash": null,
+      "blockNumber": null,
+      "chainId": "80001",
+      "from": "0xa8983Fe59b2F08F9F1B3E833c5D47B256F7FE0d5",
+      "gasLimit": "150012",
+      "gasPrice": null,
+      "hash": "0x68dc6f65b96a427c4c289371637b063bbe20d9841d6c8183f06e657ab10efb1e",
+      .
+      .
+      .
+    },
+    "success": true
+  }
+}
+```
+
+### `Claim Rewards`
+
+Claim rewards.
+
+**HTTP Request Method**: POST
+
+**Request URL**: `{{BASE_RESTFUL_URL}}/v1/claim-rewards`
+
+**GraphQL URL**: `{{BASE_URL}}/v1/graphql`
+
+**GraphQL Body**
+
+```graphql
+mutation ($loan: ClaimRewardsInput!) {
+  v1ClaimRewards(loan: $loan) {
+    res
+    success
+  }
+}
+```
+
+**Request Body**
+
+```json
+{
+  "loan": {
+    "poolId": "0",
+    "address": "0xa8983Fe59b2F08F9F1B3E833c5D47B256F7FE0d5",
+    "lendingId": "0"
+  }
+}
+```
+
+**Response**
+
+Upon successful completion of a request, the server will issue a status code of 200 along with a JSON object encapsulating pertinent blockchain transaction details. This object encompasses the following attributes:
+
+```json
+{
+  "v1ClaimRewards": {
+    "res": {
+      "_type": "TransactionResponse",
+      "accessList": [],
+      "blobVersionedHashes": null,
+      "blockHash": null,
+      "blockNumber": null,
+      "chainId": "80001",
+      "from": "0xa8983Fe59b2F08F9F1B3E833c5D47B256F7FE0d5",
+      "gasLimit": "150012",
+      "gasPrice": null,
+      "hash": "0x68dc6f65b96a427c4c289371637b063bbe20d9841d6c8183f06e657ab10efb1e",
+      .
+      .
+      .
+    },
+    "success": true
+  }
+}
+```
+
 ### `Get Lending`
 
 Retrieves lending information.
@@ -884,6 +863,67 @@ Upon successful request completion, the server will respond with a status code o
       .
       .
     ],
+    "success": true
+  }
+}
+```
+
+## Borrow
+
+### `Borrow`
+
+Borrow from a pool.
+
+**HTTP Request Method**: POST
+
+**Request URL**: `{{BASE_RESTFUL_URL}}/v1/borrow`
+
+**GraphQL URL**: `{{BASE_URL}}/v1/graphql`
+
+**GraphQL Body**
+
+```graphql
+mutation ($borrow: BorrowInput!) {
+  v1Borrow(borrow: $borrow) {
+    res
+    success
+  }
+}
+```
+
+**Request Body**
+
+```json
+{
+  "borrow": {
+    "poolId": "628",
+    "amount": "1000000"
+  }
+}
+```
+
+**Response**
+
+Upon successful completion of a request, the server will issue a status code of 200 along with a JSON object encapsulating pertinent blockchain transaction details. This object encompasses the following attributes:
+
+```json
+{
+  "v1Borrow": {
+    "res": {
+      "_type": "TransactionResponse",
+      "accessList": [],
+      "blobVersionedHashes": null,
+      "blockHash": null,
+      "blockNumber": null,
+      "chainId": "80001",
+      "from": "0xa8983Fe59b2F08F9F1B3E833c5D47B256F7FE0d5",
+      "gasLimit": "150012",
+      "gasPrice": null,
+      "hash": "0x68dc6f65b96a427c4c289371637b063bbe20d9841d6c8183f06e657ab10efb1e",
+      .
+      .
+      .
+    },
     "success": true
   }
 }
@@ -1087,53 +1127,7 @@ Upon successful request completion, the server will respond with a status code o
 }
 ```
 
-### `Get Liquidation Info`
 
-Retrieves the liquidation information of a loan.
-
-**HTTP Request Method**: GET
-
-**Request URL**: `{{BASE_RESTFUL_URL}}/v1/get-liquidation-info`
-
-**GraphQL URL**: `{{BASE_URL}}/v1/graphql`
-
-**GraphQL Body**
-
-```graphql
-mutation ($pool: GetPoolInput!) {
-  v1GetLiquidationInfo(pool: $pool) {
-    res
-    success
-  }
-}
-```
-
-**Request Body**
-
-```json
-{
-  "pool": {
-    "poolId": "0"
-  }
-}
-```
-
-**Response**
-
-Upon successful request completion, the server will respond with a status code of 200 and a JSON object containing the amount required to be paid in order to liquidate the pool. This object includes the following attributes:
-
-```json
-{
-  "v1GetLiquidationInfo": {
-    "res": {
-      "liquidatableAmountWithLiquidationFee": "2874604918977589116",
-      "liquidatableAmountWithProtocolFee": "2743941059024062338",
-      "remainingInterest": "2613277199070533400"
-    },
-    "success": true
-  }
-}
-```
 
 ### `Calculate Repay Interest`
 
@@ -1181,45 +1175,7 @@ Upon successful request completion, the server will respond with a status code o
 }
 ```
 
-### `Get Liquidation Protocol Fee`
-
-Retrieves the fee for liquidation.
-
-**HTTP Request Method**: GET
-
-**Request URL**: `{{BASE_RESTFUL_URL}}/v1/get-liquidation-protocol-fee`
-
-**GraphQL URL**: `{{BASE_URL}}/v1/graphql`
-
-**GraphQL Body**
-
-```graphql
-mutation {
-  v1GetLiquidationProtocolFee {
-    res
-    success
-  }
-}
-```
-
-**Request Body**
-
-```json
-{}
-```
-
-**Response**
-
-Upon successful request completion, the server will respond with a status code of 200 and a JSON object containing the liquidation fee. This object includes the following attributes:
-
-```json
-{
-  "v1GetLiquidationProtocolFee": {
-    "res": "5",
-    "success": true
-  }
-}
-```
+## General
 
 ### `Get Total USDC Available`
 
@@ -1269,51 +1225,6 @@ Upon successful request completion, the server will respond with a status code o
 }
 ```
 
-### `Get Total Collateral Amount`
-
-Get total collateral amount.
-
-**HTTP Request Method**: GET
-
-**Request URL**: `{{BASE_RESTFUL_URL}}/v1/get-total-collateral-amount`
-
-**GraphQL URL**: `{{BASE_URL}}/v1/graphql`
-
-**GraphQL Body**
-
-```graphql
-query v1GetTotalCollateralAmount {
-  pool_aggregate(where: { liquidated: { _neq: true } }) {
-    aggregate {
-      sum {
-        collateralTokenAmount
-      }
-    }
-  }
-}
-```
-
-**Request Body**
-
-```json
-{}
-```
-
-**Response**
-
-Upon successful request completion, the server will respond with a status code of 200 and a JSON object containing the total collateral amount. This object includes the following attributes:
-
-```json
-{
-  "pool_aggregate": {
-    "aggregate": {
-      "sum": {
-        "collateralTokenAmount": 0
-      }
-    }
-  }
-}
-```
 
 ### `Get Dollar Price For Token`
 
@@ -1362,5 +1273,105 @@ Upon successful request completion, the server will respond with a status code o
       "tokenName": "tokenName"
     }
   ]
+}
+```
+
+### `ERC20 Approve`
+
+Authorize a third party to expend a designated sum of funds.
+
+**HTTP Request Method**: POST
+
+**Request URL**: `{{BASE_RESTFUL_URL}}/v1/erc20-approve`
+
+**GraphQL URL**: `{{BASE_URL}}/v1/graphql`
+
+**GraphQL Body**
+
+```graphql
+mutation ($token: Erc20ApproveInput!) {
+  v1Erc20Approve(token: $token) {
+    res
+    success
+  }
+}
+```
+
+**Request Body**
+
+```json
+{
+  "token": {
+    "tokenAddress": "0x81da82b49CD9Ee7b7d67B4655784581f30590eA1",
+    "addressToAuthorize": "0x615e1f7970363Fbf7A1843eFc16f0E4e685610F9",
+    "amount": "1032002028946529865"
+  }
+}
+```
+
+**Response**
+
+Upon successful completion of a request, the server will issue a status code of 200 along with a JSON object encapsulating pertinent blockchain transaction details. This object encompasses the following attributes:
+
+```json
+{
+  "v1Erc20Approve": {
+    "res": {
+      "_type": "TransactionResponse",
+      "accessList": [],
+      "blobVersionedHashes": null,
+      "blockHash": null,
+      "blockNumber": null,
+      "chainId": "80001",
+      "from": "0xa8983Fe59b2F08F9F1B3E833c5D47B256F7FE0d5",
+      "gasLimit": "150012",
+      "gasPrice": null,
+      "hash": "0x68dc6f65b96a427c4c289371637b063bbe20d9841d6c8183f06e657ab10efb1e",
+      .
+      .
+      .
+    },
+    "success": true
+  }
+}
+```
+
+### `Get Usdc Address`
+
+Returns the configured `usdc` contract address within the `erc20collateraltoken` instance.
+
+**HTTP Request Method**: GET
+
+**Request URL**: `{{BASE_RESTFUL_URL}}/v1/get-usdc`
+
+**GraphQL URL**: `{{BASE_URL}}/v1/graphql`
+
+**GraphQL Body**
+
+```graphql
+mutation {
+  v1GetUsdc {
+    res
+    success
+  }
+}
+```
+
+**Request Body**
+
+```json
+{}
+```
+
+**Response**
+
+Upon successful request completion, the server will issue a status code of 200 alongside a JSON object containing the address information for `usdc`. This object incorporates the following attributes:
+
+```json
+{
+  "v1GetUsdc": {
+    "res": "0x80D9E7bC3D962878b292F9536b38E52e266a77Fd",
+    "success": true
+  }
 }
 ```
