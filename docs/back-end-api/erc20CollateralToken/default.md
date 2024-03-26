@@ -12,7 +12,7 @@ Outlined below is a detailed overview of the API's functionalities, leveraging a
 
 ### `Login`
 
-Return a JSON Web Token (JWT) access token and refresh.
+Return a JSON Web Token (JWT) access token and refresh token. By default, the access token has a maturity of 60 minutes, but it may vary depending on the server configuration.
 
 **HTTP Request Method**: POST
 
@@ -1223,7 +1223,7 @@ Upon successful request completion, the server will respond with a status code o
 
 ### `Get Total USDC Available`
 
-Get total `usdc` Available.
+Get total `usdc` available which is equal to `lent - borrowed`.
 
 **HTTP Request Method**: GET
 
@@ -1254,7 +1254,7 @@ query v1GetTotalUsdcAvailable {
 
 **Response**
 
-Upon successful request completion, the server will respond with a status code of 200 and a JSON object containing the total `usdc` available. This object includes the following attributes:
+Upon successful request completion, the server will respond with a status code of 200 and a JSON object containing the total lent and borrowed. This object includes the following attributes:
 
 ```json
 {
