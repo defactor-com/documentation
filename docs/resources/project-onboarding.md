@@ -10,7 +10,8 @@ sidebar_position: 2
 ## Smart Contract
 - Define smart contract type (e.g., ERC-20 for tokens, ERC-721 for NFTs, etc.)
 - Define network deployment (Testnet for testing and Mainnet for live deployment)
-- Smart contract development and testing
+- Smart contract deployment and testing
+- Private Key Management
 - Auditing and security checks
 
 ## Backend Configuration and Deployment
