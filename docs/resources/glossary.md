@@ -1,6 +1,6 @@
 ---
 title: Glossary
-sidebar_position: 3
+sidebar_position: 5
 ---
 
 List of terms necessary to understand the contents of this guide.
