@@ -32,6 +32,8 @@ Return a JSON Web Token (JWT) access token and refresh token. By default, the ac
 
 **HTTP Request Method**: POST
 
+**Roles**: Admin
+
 
 
 **Request URL**: `{{BASE_RESTFUL_URL}}/v1/login`
@@ -69,6 +71,8 @@ Upon successful completion of a request, the server will issue a status code of 
 Return a new access and refresh token.
 
 **HTTP Request Method**: POST
+
+**Roles**: Admin
 
 
 
@@ -109,6 +113,8 @@ Upon successful completion of a request, the server will issue a status code of 
 Create a new pool.
 
 **HTTP Request Method**: POST
+
+**Roles**: Admin
 
 
 
@@ -166,6 +172,7 @@ Retrieves the data associated with the specified `poolId`.
 
 **HTTP Request Method**: GET
 
+**Roles**: Guest  
 
 
 **Request URL**: `{{BASE_RESTFUL_URL}}/v1/get-pool`
@@ -221,6 +228,7 @@ Retrieves the data associated with the `pools` specified in the pagination param
 
 **HTTP Request Method**: GET
 
+**Roles**: Guest  
 
 
 **Request URL**: `{{BASE_RESTFUL_URL}}/v1/get-pools`
@@ -282,6 +290,8 @@ Returns the count of pools created within the current instance of `erc20collater
 
 **HTTP Request Method**: GET
 
+**Roles**: Guest
+
 
 
 **Request URL**: `{{BASE_RESTFUL_URL}}/v1/get-total-pools`
@@ -313,6 +323,7 @@ Liquidate a pool.
 
 **HTTP Request Method**: POST
 
+**Roles**: Admin  
 
 
 **Request URL**: `{{BASE_RESTFUL_URL}}/v1/liquidate-pool`
@@ -362,6 +373,7 @@ Retrieves the liquidation information of a loan.
 
 **HTTP Request Method**: GET
 
+**Roles**: Guest  
 
 
 **Request URL**: `{{BASE_RESTFUL_URL}}/v1/get-liquidation-info`
@@ -401,6 +413,8 @@ Retrieves the fee for liquidation.
 
 **HTTP Request Method**: GET
 
+**Roles**: Guest
+
 
 
 **Request URL**: `{{BASE_RESTFUL_URL}}/v1/get-liquidation-protocol-fee`
@@ -431,6 +445,8 @@ Upon successful request completion, the server will respond with a status code o
 Get total collateral amount.
 
 **HTTP Request Method**: GET
+
+**Roles**: Guest
 
 
 
@@ -465,6 +481,8 @@ Upon successful request completion, the server will respond with a status code o
 Update the pool metadata
 
 **HTTP Request Method**: POST
+
+**Roles**: Admin
 
 
 
@@ -505,6 +523,8 @@ Upon successful request completion, the server will issue a status code of 200 a
 Lend to a pool.
 
 **HTTP Request Method**: POST
+
+**Roles**: Admin
 
 
 
@@ -556,6 +576,7 @@ Repay a loan to a pool.
 
 **HTTP Request Method**: POST
 
+**Roles**: Admin  
 
 
 **Request URL**: `{{BASE_RESTFUL_URL}}/v1/repay`
@@ -605,6 +626,8 @@ Upon successful completion of a request, the server will issue a status code of 
 Claim rewards.
 
 **HTTP Request Method**: POST
+
+**Roles**: Admin
 
 
 
@@ -657,6 +680,7 @@ Retrieves lending information.
 
 **HTTP Request Method**: GET
 
+**Roles**: Guest  
 
 
 **Request URL**: `{{BASE_RESTFUL_URL}}/v1/get-lending`
@@ -698,6 +722,8 @@ Returns the amount of lending made for a specific pool and a provided address.
 
 **HTTP Request Method**: GET
 
+**Roles**: Guest
+
 
 
 **Request URL**: `{{BASE_RESTFUL_URL}}/v1/get-total-lending`
@@ -734,6 +760,7 @@ Retrieves the lending participation for a lender in a pool.
 
 **HTTP Request Method**: GET
 
+**Roles**: Guest  
 
 
 **Request URL**: `{{BASE_RESTFUL_URL}}/v1/get-lendings-by-lender`
@@ -782,6 +809,8 @@ Upon successful request completion, the server will respond with a status code o
 Borrow from a pool.
 
 **HTTP Request Method**: POST
+
+**Roles**: Admin
 
 
 
@@ -833,6 +862,7 @@ Retrieves the amount of collateral token required for borrowing.
 
 **HTTP Request Method**: GET
 
+**Roles**: Guest  
 
 
 **Request URL**: `{{BASE_RESTFUL_URL}}/v1/calculate-collateral-token-amount`
@@ -868,6 +898,8 @@ Upon successful request completion, the server will respond with a status code o
 Returns the borrow information for a borrower in a given pool.
 
 **HTTP Request Method**: GET
+
+**Roles**: Guest
 
 
 
@@ -911,6 +943,8 @@ Returns the total borrows for a borrower in a pool.
 
 **HTTP Request Method**: GET
 
+**Roles**: Guest
+
 
 
 **Request URL**: `{{BASE_RESTFUL_URL}}/v1/get-total-borrows`
@@ -946,6 +980,8 @@ Upon a successful request, the server will respond with a status code of 200 and
 Returns the borrows of a pool the borrower is participating in.
 
 **HTTP Request Method**: GET
+
+**Roles**: Guest
 
 
 
@@ -995,6 +1031,7 @@ Returns the interest for a repayment of a borrow.
 
 **HTTP Request Method**: GET
 
+**Roles**: Guest  
 
 
 **Request URL**: `{{BASE_RESTFUL_URL}}/v1/calculate-repay-interest`
@@ -1034,6 +1071,8 @@ Returns the configured `usdc` contract address within the `erc20collateraltoken`
 
 **HTTP Request Method**: GET
 
+**Roles**: Guest
+
 
 
 **Request URL**: `{{BASE_RESTFUL_URL}}/v1/get-usdc`
@@ -1064,6 +1103,8 @@ Upon successful request completion, the server will issue a status code of 200 a
 Get total `usdc` available which is equal to `lent - borrowed`.
 
 **HTTP Request Method**: GET
+
+**Roles**: Guest
 
 
 
@@ -1100,6 +1141,7 @@ Get dollar price for token.
 
 **HTTP Request Method**: GET
 
+**Roles**: Guest  
 
 
 **Request URL**: `{{BASE_RESTFUL_URL}}/v1/get-dollar-price-for-token`
@@ -1137,6 +1179,7 @@ Authorize a third party to expend a designated sum of funds.
 
 **HTTP Request Method**: POST
 
+**Roles**: Admin  
 
 
 **Request URL**: `{{BASE_RESTFUL_URL}}/v1/erc20-approve`
@@ -1187,6 +1230,8 @@ Upon successful completion of a request, the server will issue a status code of 
 Update the pool metadata
 
 **HTTP Request Method**: GET
+
+**Roles**: Guest
 
 
 

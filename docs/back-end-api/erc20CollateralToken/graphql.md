@@ -32,6 +32,8 @@ Return a JSON Web Token (JWT) access token and refresh token. By default, the ac
 
 **HTTP Request Method**: POST
 
+**Roles**: Admin
+
 
 
 **GraphQL URL**: `{{BASE_URL}}/v1/graphql`
@@ -80,6 +82,8 @@ Upon successful completion of a request, the server will issue a status code of 
 Return a new access and refresh token.
 
 **HTTP Request Method**: POST
+
+**Roles**: Admin
 
 
 
@@ -131,6 +135,8 @@ Upon successful completion of a request, the server will issue a status code of 
 Create a new pool.
 
 **HTTP Request Method**: POST
+
+**Roles**: Admin
 
 
 
@@ -199,6 +205,7 @@ Retrieves the data associated with the specified `poolId`.
 
 **HTTP Request Method**: POST
 
+**Roles**: Guest  
 
 
 **GraphQL URL**: `{{BASE_URL}}/v1/graphql`
@@ -265,6 +272,7 @@ Retrieves the data associated with the `pools` specified in the pagination param
 
 **HTTP Request Method**: POST
 
+**Roles**: Guest  
 
 
 **GraphQL URL**: `{{BASE_URL}}/v1/graphql`
@@ -337,6 +345,8 @@ Returns the count of pools created within the current instance of `erc20collater
 
 **HTTP Request Method**: POST
 
+**Roles**: Guest
+
 
 
 **GraphQL URL**: `{{BASE_URL}}/v1/graphql`
@@ -379,6 +389,7 @@ Liquidate a pool.
 
 **HTTP Request Method**: POST
 
+**Roles**: Admin  
 
 
 **GraphQL URL**: `{{BASE_URL}}/v1/graphql`
@@ -439,6 +450,7 @@ Retrieves the liquidation information of a loan.
 
 **HTTP Request Method**: POST
 
+**Roles**: Guest  
 
 
 **GraphQL URL**: `{{BASE_URL}}/v1/graphql`
@@ -489,6 +501,8 @@ Retrieves the fee for liquidation.
 
 **HTTP Request Method**: POST
 
+**Roles**: Guest
+
 
 
 **GraphQL URL**: `{{BASE_URL}}/v1/graphql`
@@ -530,6 +544,8 @@ Upon successful request completion, the server will respond with a status code o
 Get total collateral amount.
 
 **HTTP Request Method**: POST
+
+**Roles**: Guest
 
 
 
@@ -578,6 +594,8 @@ Upon successful request completion, the server will respond with a status code o
 Update the pool metadata
 
 **HTTP Request Method**: POST
+
+**Roles**: Admin
 
 
 
@@ -629,6 +647,8 @@ Upon successful request completion, the server will issue a status code of 200 a
 Lend to a pool.
 
 **HTTP Request Method**: POST
+
+**Roles**: Admin
 
 
 
@@ -691,6 +711,7 @@ Repay a loan to a pool.
 
 **HTTP Request Method**: POST
 
+**Roles**: Admin  
 
 
 **GraphQL URL**: `{{BASE_URL}}/v1/graphql`
@@ -751,6 +772,8 @@ Upon successful completion of a request, the server will issue a status code of 
 Claim rewards.
 
 **HTTP Request Method**: POST
+
+**Roles**: Admin
 
 
 
@@ -814,6 +837,7 @@ Retrieves lending information.
 
 **HTTP Request Method**: POST
 
+**Roles**: Guest  
 
 
 **GraphQL URL**: `{{BASE_URL}}/v1/graphql`
@@ -866,6 +890,8 @@ Returns the amount of lending made for a specific pool and a provided address.
 
 **HTTP Request Method**: POST
 
+**Roles**: Guest
+
 
 
 **GraphQL URL**: `{{BASE_URL}}/v1/graphql`
@@ -913,6 +939,7 @@ Retrieves the lending participation for a lender in a pool.
 
 **HTTP Request Method**: POST
 
+**Roles**: Guest  
 
 
 **GraphQL URL**: `{{BASE_URL}}/v1/graphql`
@@ -972,6 +999,8 @@ Upon successful request completion, the server will respond with a status code o
 Borrow from a pool.
 
 **HTTP Request Method**: POST
+
+**Roles**: Admin
 
 
 
@@ -1034,6 +1063,7 @@ Retrieves the amount of collateral token required for borrowing.
 
 **HTTP Request Method**: POST
 
+**Roles**: Guest  
 
 
 **GraphQL URL**: `{{BASE_URL}}/v1/graphql`
@@ -1081,6 +1111,8 @@ Upon successful request completion, the server will respond with a status code o
 Returns the borrow information for a borrower in a given pool.
 
 **HTTP Request Method**: POST
+
+**Roles**: Guest
 
 
 
@@ -1135,6 +1167,8 @@ Returns the total borrows for a borrower in a pool.
 
 **HTTP Request Method**: POST
 
+**Roles**: Guest
+
 
 
 **GraphQL URL**: `{{BASE_URL}}/v1/graphql`
@@ -1181,6 +1215,8 @@ Upon a successful request, the server will respond with a status code of 200 and
 Returns the borrows of a pool the borrower is participating in.
 
 **HTTP Request Method**: POST
+
+**Roles**: Guest
 
 
 
@@ -1241,6 +1277,7 @@ Returns the interest for a repayment of a borrow.
 
 **HTTP Request Method**: POST
 
+**Roles**: Guest  
 
 
 **GraphQL URL**: `{{BASE_URL}}/v1/graphql`
@@ -1290,6 +1327,8 @@ Upon successful request completion, the server will respond with a status code o
 Get total `usdc` available which is equal to `lent - borrowed`.
 
 **HTTP Request Method**: POST
+
+**Roles**: Guest
 
 
 
@@ -1341,6 +1380,7 @@ Get dollar price for token.
 
 **HTTP Request Method**: POST
 
+**Roles**: Guest  
 
 
 **GraphQL URL**: `{{BASE_URL}}/v1/graphql`
@@ -1393,6 +1433,7 @@ Authorize a third party to expend a designated sum of funds.
 
 **HTTP Request Method**: POST
 
+**Roles**: Admin  
 
 
 **GraphQL URL**: `{{BASE_URL}}/v1/graphql`
@@ -1455,6 +1496,8 @@ Returns the configured `usdc` contract address within the `erc20collateraltoken`
 
 **HTTP Request Method**: POST
 
+**Roles**: Guest
+
 
 
 **GraphQL URL**: `{{BASE_URL}}/v1/graphql`
@@ -1496,6 +1539,8 @@ Upon successful request completion, the server will issue a status code of 200 a
 Update the pool metadata
 
 **HTTP Request Method**: POST
+
+**Roles**: Guest
 
 
 
