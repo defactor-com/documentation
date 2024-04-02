@@ -1,0 +1,24 @@
+{
+  "name": "postman-to-md",
+  "version": "1.0.0",
+  "engines": {
+    "node": ">=20"
+  },
+  "description": "Simple postman collection to markdown generator",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "npx ts-node index.ts -i defactor-api.postman_collection.json -o ../../docs/back-end-api/erc20CollateralToken/"
+  },
+  "dependencies": {
+    "@types/node": "^20.12.2",
+    "commander": "^12.0.0",
+    "postman-collection": "^4.4.0",
+    "typescript": "^5.4.3"
+  },
+  "devDependencies": {
+    "@types/postman-collection": "^3.5.10",
+    "nodemon": "^3.0.2",
+    "ts-node": "^10.9.2"
+  }
+}
