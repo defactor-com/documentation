@@ -69,8 +69,8 @@ const getRouteName = (route: string) =>
   route
     ?.replace(/^[^A-Z]*([A-Z])/, "$1")
     ?.replace(/.+\//g, "-")
-    ?.replace(/-(.)/g, (_, c) => " " + c.toUpperCase())
     ?.replace(/([A-Z])/g, (_, c) => " " + c)
+    ?.replace(/-(.)/g, (_, c) => " " + c.toUpperCase())
     ?.trim();
 
 const getHeading = (number: number) =>
@@ -129,7 +129,7 @@ const getResponseBlockCode = (
 
 const getDescriptionTextBlock = (postmanItem: ItemDefinition) => {
   const postmanDescription: any = postmanItem?.request?.description;
-  const descriptionIndex = postmanDescription?.content?.indexOf("\n");
+  const descriptionIndex = postmanDescription?.content?.indexOf("\n**");
   const description =
     descriptionIndex > -1
       ? postmanDescription?.content?.substring(0, descriptionIndex)
@@ -156,7 +156,7 @@ const getRequestBody = (postmanItem: ItemDefinition) => {
     content += "**Request Body**" + "\n\n";
   }
 
-  content += "```json\n" + `${formatJSON(requestBody)}` + "\n```" + "\n\n";
+  content += "```json\n" + `${formatJSON(requestBody)}` + "\n```";
 
   return content;
 };
@@ -165,7 +165,7 @@ const getRoles = (postmanItem: ItemDefinition, rolesLabel: string) => {
   const description: any = postmanItem?.request?.description;
   const roles = extractText(description?.content || "", rolesLabel);
 
-  return roles ? "**Roles**" + roles : "";
+  return roles ? "**Roles**" + roles.replace(/\n/g, "") : "";
 };
 
 const getMarkdownEndpointDetails = (
@@ -211,6 +211,12 @@ const getMarkdownFileText = (
 
     if (level > 1) {
       content = `${getHeading(level)} ${postmanItem.name}\n`;
+    }
+
+    const postmanDescription: any = postmanItem.description;
+
+    if (postmanDescription?.content) {
+      content += postmanDescription.content + "\n";
     }
 
     (postmanItem as ItemGroupDefinition)?.item?.forEach((subItem) => {
@@ -268,7 +274,7 @@ try {
       additionalContext,
       foldersNames.findIndex((name) => name === folder.name) + 1
     );
-    const folderName = folder.name?.toLocaleLowerCase() + ".md"
+    const folderName = folder.name?.toLocaleLowerCase() + ".md";
 
     fsp.writeFile(outputPath + folderName, result, "utf8");
     console.log(`File ${outputPath + folderName} saved`);
