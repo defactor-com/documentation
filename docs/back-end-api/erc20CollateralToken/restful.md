@@ -1289,57 +1289,61 @@ There is no pool with the provided id:
 **General**
 
 - The date provided has already passed
-    - **Error message**: Time must be in the future
+  - **Error message**: Time must be in the future
 - The number provided is negative or zero
-    - **Error message**: Amount cannot be negative or 0
+  - **Error message**: Amount cannot be negative or 0
 - The JWT is invalid
- - **Error message**: Could not verify JWT: JWTNotInIssuer
+  - **Error message**: Could not verify JWT: JWTNotInIssuer
+- The input provided has a invalid value
+  - **Error message**: Invalid request payload input
+- The string provided is not a integer number
+  - **Error message**: Cannot convert X to BigInt
 
 **Addresses**
 
 - The address provided is invalid
-    - **Error message**: Address does not follow the ethereum address format
+  - **Error message**: Address does not follow the ethereum address format
 - The address does not have the required admin role in the `erc20collateralpool` contract
-    - **Error message**: Sender address is not admin
+  - **Error message**: Sender address is not admin
 - The collateral token address is invalid
-    - **Error message**: Collateral token does not follow the ethereum address format
+  - **Error message**: Collateral token does not follow the ethereum address format
 
 **Pools**
 
 - There is no pool with the provided id
-    - **Error message**: Pool id X does not exits
+  - **Error message**: Pool id X does not exist
 - The `endTime` date of the pool was reached
-    - **Error message**: Pool has ended
+  - **Error message**: Pool has ended
 - The endpoint requires a closed pool
-    - **Error message**: Pool is not closed
+  - **Error message**: Pool is not closed
 - The endpoint requires a not closed pool
-    - **Error message**: Pool is closed
+  - **Error message**: Pool is closed
 - The endpoint requires a completed pool
-    - **Error message**: Pool is not completed
+  - **Error message**: Pool is not completed
 - Occurs when an attempt is made to liquidate or obtain liquidation information for a completed pool
-    - **Error message**: Pool cannot be liquidated
+  - **Error message**: Pool cannot be liquidated
 
 **Lend**
 
 - There is no lending with the provided id
-    - **Error message**: Lending id X does not exits
+  - **Error message**: Lending id X does not exist
 - Occurs when an attempt is made to claim rewards of a loan that has already been claimed
-    - **Error message**: Loan already claimed
+  - **Error message**: Loan already claimed
 
 **Borrow**
 
 - There is no borrow with the provided id
-    - **Error message**: Borrow id X does not exists
+  - **Error message**: Borrow id X does not exists
 - Occurs when an attempt is made to borrow an amount that overpass the pool balance
-    - **Error message**: Amount overpass the pool available amount
+  - **Error message**: Amount overpass the pool available amount
 - Occurs when an attempt is made to repay a borrow that has already been repaid
-    - **Error message**: Borrow already repaid
+  - **Error message**: Borrow already repaid
 
 **Pagination**
 
 - The provided offset is negative
-    - **Error message**: Offset cannot be negative
+  - **Error message**: Offset cannot be negative
 - The provided limit is negative or zero
-    - **Error message**: Limit cannot be negative or 0
-- The provided limit is equal to the maximum results per page, use a smaller value
-    - **Error message**: Max limit allowed is X
+  - **Error message**: Limit cannot be negative or 0
+- The provided limit is equal to the maximum results per page, use a smaller value 
+  - **Error message**: Max limit allowed is X
