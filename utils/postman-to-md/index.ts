@@ -56,6 +56,7 @@ const formatText = (text: string) =>
     ?.replace(/\\`/g, "`")
     ?.replace("``` ", "```")
     ?.replace("\n ```", "```")
+    ?.replace(/<(\/?)code>/g,"`")
     ?.trim();
 
 const restfulToGraphQLRoute = (route: string) =>
