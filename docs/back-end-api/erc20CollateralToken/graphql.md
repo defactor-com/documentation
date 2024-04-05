@@ -10,6 +10,12 @@ This API offers dual modes of interaction with the smart contract: firstly, via 
 
 Outlined below is a detailed overview of the API's functionalities, leveraging a designated instance of the `erc20collateralpool` contract as the primary data source.
 
+:::info
+
+The `erc20collateralpool` contact is based on a token that follows the erc20 token standard and has exactly a precision of 6. For example it can be `usdc`, `euroc` or any other token that meets the above mentioned requirements.
+
+:::
+
 ---
 
 ## Security Details
@@ -520,7 +526,7 @@ Upon successful request completion, the server will respond with a status code o
 
 ### `Get Total Collateral Amount`
 
-Get total collateral amount.
+Get the total collateral amount.
 
 **HTTP Request Method**: POST
 
@@ -615,7 +621,7 @@ Upon successful request completion, the server will issue a status code of 200 a
 
 ### `Lend`
 
-Lend to a pool the specific `usdc` amount.
+Lend to a pool the specific amount of the token on which the contract is based.
 
 **HTTP Request Method**: POST
 
@@ -640,7 +646,7 @@ mutation v1Lend($loan: LendInput!) {
 {
   "loan": {
     "poolId": "628",
-    "amount": "10000000"
+    "amount": "10000000" // 10 of based token contract
   }
 }
 ```
@@ -674,9 +680,9 @@ Upon successful completion of a request, the server will issue a status code of 
 
 ### `Repay`
 
-Repay a loan to a pool if is not close and it is not already repaid.
+Repay a loan to a pool if it is not closed and it has not already been repaid.
 
-The `erc20collateralpool` contract needs the approve to spend money on behalf of the borrower, to give the approve the [`erc20 approve`](#erc20-approve) endpoint could be use. The amount to approve must be `USDC lent + loan interest.`
+The `erc20collateralpool` contract needs the approval to spend money on behalf of the borrower, to give the approve the [`erc20 approve`](#erc20-approve) endpoint could be used. The amount to approve must be `USDC lent + loan interest.`
 
 **HTTP Request Method**: POST
 
@@ -948,9 +954,9 @@ Upon successful request completion, the server will respond with a status code o
 
 ### `Borrow`
 
-Borrow the indicated amout of `usdc` from a pool if is not close and there is enough funds.
+Borrow the indicated amount of the token from the pool if it is not close and there is enough funds. Where the amount in the request body corresponds to the token on which the contract is based.
 
-The `erc20collateralpool` contract needs the approve to spend the amount of collateral token on behalf of the borrower, to give the approve the [`erc20 approve`](#erc20-approve)  endpoint could be use. Also, to get the amount of collateral token use the [`calculate collateral amount`](#calculate-collateral-token-amount) endpoint.
+The `erc20collateralpool` contract needs the approval to spend the amount of collateral token on behalf of the borrower, to give the approve the [`erc20 approve`](#erc20-approve) endpoint could be used. Also, to get the amount of collateral token use the [`calculate collateral amount`](#calculate-collateral-token-amount) endpoint.
 
 **HTTP Request Method**: POST
 
@@ -975,7 +981,7 @@ mutation ($borrow: BorrowInput!) {
 {
     "borrow": {
         "poolId": "8",
-        "amount": "1000000"
+        "amount": "1000000" // 10 of based token contract
     }
 }
 ```
@@ -1009,7 +1015,7 @@ Upon successful completion of a request, the server will issue a status code of 
 
 ### `Calculate Collateral Token Amount`
 
-Retrieves the amount of collateral token required for borrowing the indicated amount in `usdc` from the pool.
+Retrieves the amount of collateral token required for borrowing the indicated amount of token from the pool. Where the amount in the request body corresponds to the token on which the contract is based.
 
 **HTTP Request Method**: POST
 
@@ -1035,19 +1041,19 @@ mutation ($borrow: CalculateCollateralTokenAmountInput!) {
 {
    "borrow": {
     "poolId": "13",
-    "amount": "12000000"
+    "amount": "12000000" // 12 of based token contract
    }
 }
 ```
 
 **Response**
 
-Upon successful request completion, the server will respond with a status code of 200 and a JSON object containing the collateral amount required to borrow the specified amount of `usdc`. This object includes the following attributes:
+Upon successful request completion, the server will respond with a status code of 200 and a JSON object containing the collateral amount required to borrow the specified amount of token on which the contract is based. This object includes the following attributes:
 
 ```json
 {
   "v1CalculateCollateralTokenAmount": {
-    "res": "372006973844054693",
+    "res": "372006973844054693", // amount in collateral token
     "success": true
   }
 }
@@ -1208,7 +1214,7 @@ Upon successful request completion, the server will respond with a status code o
 
 ### `Calculate Repay Interest`
 
-Returns the interest for a repayment of a borrow.
+Returns the interest for the repayment of a borrow.
 
 **HTTP Request Method**: POST
 
@@ -1304,7 +1310,7 @@ Upon successful request completion, the server will respond with a status code o
 
 ### `Get Dollar Price For Token`
 
-Get dollar price for token.
+Get the dollar price for token.
 
 **HTTP Request Method**: POST
 
