@@ -1506,7 +1506,25 @@ query v1GetHistoricalContributions($stats: GetHistoricalContributionsInput!) {
 Upon successful request completion, the server will issue a status code of 200 alongside a JSON object. This object incorporates the following attributes:
 
 ```json
-{}
+{
+  "v1GetHistoricalContributions": {
+    "res": {
+      "1712188800000": {
+        "collateral": 0,
+        "fluctuation": 0,
+        "fluctuationValue": 0,
+        "price": 0
+      },
+      "1712275200000": {
+        "collateral": 0,
+        "fluctuation": 0,
+        "fluctuationValue": 0,
+        "price": 0
+      }
+    },
+    "success": true
+  }
+}
 ```
 
 ## Error Reference

@@ -1185,7 +1185,25 @@ Get the historical contributions by filtered by event and group by period of tim
 Upon successful request completion, the server will issue a status code of 200 alongside a JSON object. This object incorporates the following attributes:
 
 ```json
-{}
+{
+  "v1GetHistoricalContributions": {
+    "res": {
+      "1712188800000": {
+        "collateral": 0,
+        "fluctuation": 0,
+        "fluctuationValue": 0,
+        "price": 0
+      },
+      "1712275200000": {
+        "collateral": 0,
+        "fluctuation": 0,
+        "fluctuationValue": 0,
+        "price": 0
+      }
+    },
+    "success": true
+  }
+}
 ```
 
 ## Error Reference
@@ -1212,7 +1230,7 @@ The variable has a wrong type:
 
  ```
 
-The variable is missing in the request body.
+The variable is missing in the request body:
 
 ``` json
 {
@@ -1223,7 +1241,7 @@ The variable is missing in the request body.
 
  ```
 
-The field does not exists or the role has no permissions.
+The field does not exists or the role has no permissions:
 
 ``` json
 {
@@ -1234,7 +1252,7 @@ The field does not exists or the role has no permissions.
 
  ```
 
-The variable is not in the request body schema.
+The variable is not in the request body schema:
 
 ``` json
 {
@@ -1245,7 +1263,7 @@ The variable is not in the request body schema.
 
  ```
 
-The endpoint does not exists.
+The endpoint does not exists:
 
 ``` json
 {
@@ -1256,7 +1274,7 @@ The endpoint does not exists.
 
  ```
 
-There is no pool with the provided id.
+There is no pool with the provided id:
 
 ``` json
 {
