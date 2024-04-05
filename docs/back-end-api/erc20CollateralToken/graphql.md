@@ -1508,3 +1508,188 @@ Upon successful request completion, the server will issue a status code of 200 a
 ```json
 {}
 ```
+
+## Error Reference
+
+### Error Response Format
+The errors have the GraphQL error schema, an object with an `errors` array property where each item has the following schema:
+
+| Property | Description |
+| --- | --- |
+| `message` | The description of the error |
+| `extensions` | An object with the path to the field that caused the error, and the error code |
+
+**Examples**
+
+The variable has a wrong type:
+
+``` json
+{
+  "errors":
+    [
+      {
+        "message": "expected a string for type 'String', but found a number",
+        "extensions":
+          {
+            "path": "$.selectionSet.v1GetPool.args.pool.poolId",
+            "code": "validation-failed"
+          }
+      }
+    ]
+}
+
+ ```
+
+The variable is missing in the request body:
+
+``` json
+{
+  "errors":
+    [
+      {
+        "message": "missing required field 'poolId'",
+        "extensions":
+          {
+            "path": "$.selectionSet.v1GetPool.args.pool.poolId",
+            "code": "validation-failed"
+          }
+      }
+    ]
+}
+
+ ```
+
+The field does not exists or the role has no permissions:
+
+``` json
+{
+  "errors":
+    [
+      {
+        "message": "field 'v1UpdatePoolMetadata' not found in type: 'mutation_root'",
+        "extensions":
+          {
+            "path": "$.selectionSet.v1UpdatePoolMetadata",
+            "code": "validation-failed"
+          }
+      }
+    ]
+}
+
+ ```
+
+The variable is not in the request body schema:
+
+``` json
+{
+  "errors":
+    [
+      {
+        "message": "Unexpected variable pool",
+        "extensions":
+          {
+            "path": "$",  
+            "code": "bad-request" 
+          }
+      }
+    ]
+}
+
+ ```
+
+The endpoint does not exists:
+
+``` json
+{
+  "errors":
+    [
+      {
+        "message": "Endpoint not found",
+        "extensions":
+          {
+            "path": "$",
+            "code": "not-found"
+          }
+      }
+    ]
+}
+
+ ```
+
+There is no pool with the provided id:
+
+``` json
+{
+  "errors":
+    [
+      {
+        "message": "Pool id 400 does not exist",
+        "extensions":
+        {
+          "path": "$",
+          "code": "unexpected"
+        }
+      }
+    ]
+}
+
+ ```
+
+### Types of Error
+**General**
+
+- The date provided has already passed
+    - **Error message**: Time must be in the future
+- The number provided is negative or zero
+    - **Error message**: Amount cannot be negative or 0
+- The JWT is invalid
+    - **Error message**: Could not verify JWT: JWTNotInIssuer
+
+**Addresses**
+
+- The address provided is invalid
+    - **Error message**: Address does not follow the ethereum address format
+- The address does not have the required admin role in the `erc20collateralpool` contract
+    - **Error message**: Sender address is not admin
+- The collateral token address is invalid
+    - **Error message**: Collateral token does not follow the ethereum address format
+
+**Pools**
+
+- There is no pool with the provided id
+    - **Error message**: Pool id X does not exits
+- The `endTime` date of the pool was reached
+    - **Error message**: Pool has ended
+- The endpoint requires a closed pool
+    - **Error message**: Pool is not closed
+- The endpoint requires a not closed pool
+    - **Error message**: Pool is closed
+- The endpoint requires a completed pool
+    - **Error message**: Pool is not completed
+- Occurs when an attempt is made to liquidate or obtain liquidation information for a completed pool
+    - **Error message**: Pool cannot be liquidated
+
+**Lend**
+
+- There is no lending with the provided id
+    - **Error message**: Lending id X does not exits
+- Occurs when an attempt is made to claim rewards of a loan that has already been claimed
+    - **Error message**: Loan already claimed
+
+**Borrow**
+
+- There is no borrow with the provided id
+    - **Error message**: Borrow id X does not exists
+- Occurs when an attempt is made to borrow an amount that overpass the pool balance
+    - **Error message**: Amount overpass the pool available amount
+- Occurs when an attempt is made to repay a borrow that has already been repaid
+    - **Error message**: Borrow already repaid
+
+**Pagination**
+
+- The provided offset is negative
+    - **Error message**: Offset cannot be negative
+- The provided limit is negative or zero
+    - **Error message**: Limit cannot be negative or 0
+- The provided limit is equal to the maximum results per page, use a smaller value
+    - **Error message**: Max limit allowed is X
