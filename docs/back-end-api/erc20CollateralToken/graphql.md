@@ -10,9 +10,15 @@ This API offers dual modes of interaction with the smart contract: firstly, via 
 
 Outlined below is a detailed overview of the API's functionalities, leveraging a designated instance of the `erc20collateralpool` contract as the primary data source.
 
+:::info
+
+The `erc20collateralpool` contact is based on a token that follows the erc20 token standard and has exactly a precision of 6. For example it can be `usdc`, `euroc` or any other token that meets the above mentioned requirements.
+
+:::
+
 ---
 
-## **Security Details**
+## Security Details
 
 To secure the API access control, all requests are made through [Hasura](https://hasura.io/) which provides secure GraphQL, and RESTful endpoints restricted by a role-based authorization system.
 
@@ -33,8 +39,6 @@ Return a JSON Web Token (JWT) access token and refresh token. By default, the ac
 **HTTP Request Method**: POST
 
 **Roles**: Admin
-
-
 
 **GraphQL URL**: `{{BASE_URL}}/v1/graphql`
 
@@ -58,8 +62,6 @@ mutation v1Login($session: LoginInput!) {
     }
 }
 ```
-
-
 
 **Response**
 
@@ -85,8 +87,6 @@ Return a new access and refresh token.
 
 **Roles**: Admin
 
-
-
 **GraphQL URL**: `{{BASE_URL}}/v1/graphql`
 
 **GraphQL Body**
@@ -110,8 +110,6 @@ mutation v1RestoreSession($session: RestoreSessionInput!) {
 }
 ```
 
-
-
 **Response**
 
 Upon successful completion of a request, the server will issue a status code of 200 along with a JSON object encapsulating the generated access token and refresh token. This object encompasses the following attributes:
@@ -129,16 +127,22 @@ Upon successful completion of a request, the server will issue a status code of 
 ```
 
 ## Pools
+The `collateralDetails` schema has the following properties:
+
+| Property | Description |
+| --- | --- |
+| `collateralToken` | The address where the collateral token is deployed. |
+| `collateralTokenChainlink` | The address where the contract that indicates the price of the collateral token is deployed. |
+| `collateralTokenFactor` | Used to adjust the collateral amount from the price of the collateral. |
+| `collateralTokenPercentage` | Used to calculate the amount of collateral token a borrower will need to provide to borrow from the pool. |
 
 ### `Create Pool`
 
-Create a new pool.
+Create a new pool with the indicated collateral token using the `collateralDetails` schema. Once the `endTime` period concludes, neither lending nor borrowing are allowed.
 
 **HTTP Request Method**: POST
 
 **Roles**: Admin
-
-
 
 **GraphQL URL**: `{{BASE_URL}}/v1/graphql`
 
@@ -162,15 +166,13 @@ mutation ($pool: CreatePoolInput!) {
         "interest": 10,
         "collateralDetails": {
             "collateralToken": "0x6BaB3bEA9aD00893101837d46638B470076f8AAF",
-            "collateralTokenChainlink": "0x2AA6DBa1ae19841Dd46D9CCA4b4d21B9816913F7",
-            "collateralTokenFactor": 1,
-            "collateralTokenPercentage": 255
+            "collateralTokenChainlink": "0x295894a94F859cE1Ac960364D6b0D2Fa430027b4",
+            "collateralTokenFactor": 10,
+            "collateralTokenPercentage": 115
         }
     }
 }
 ```
-
-
 
 **Response**
 
@@ -207,7 +209,6 @@ Retrieves the data associated with the specified `poolId`.
 
 **Roles**: Guest  
 
-
 **GraphQL URL**: `{{BASE_URL}}/v1/graphql`
 
 **GraphQL Body**
@@ -230,8 +231,6 @@ mutation ($pool: GetPoolInput!) {
    }
 }
 ```
-
-
 
 **Response**
 
@@ -274,7 +273,6 @@ Retrieves the data associated with the `pools` specified in the pagination param
 
 **Roles**: Guest  
 
-
 **GraphQL URL**: `{{BASE_URL}}/v1/graphql`
 
 **GraphQL Body**
@@ -299,8 +297,6 @@ mutation ($pool: PaginationInput!) {
 }
 ```
 
-
-
 **Response**
 
 Upon successful request completion, the server will respond with a status code of 200, accompanied by a JSON object containing information regarding the pools. This object comprises the following attributes:
@@ -308,8 +304,9 @@ Upon successful request completion, the server will respond with a status code o
 ```json
 {
   "v1GetPools": {
-    "res": [
-      {
+    "res": {
+    "data":
+      [{
         "borrowed": "2630",
         "collateralDetails": {
           "collateralToken": "0x81da82b49CD9Ee7b7d67B4655784581f30590eA1",
@@ -333,7 +330,9 @@ Upon successful request completion, the server will respond with a status code o
       .
       .
       .
-    ],
+      ],
+      "more": false
+    },
     "success": true
   }
 }
@@ -346,8 +345,6 @@ Returns the count of pools created within the current instance of `erc20collater
 **HTTP Request Method**: POST
 
 **Roles**: Guest
-
-
 
 **GraphQL URL**: `{{BASE_URL}}/v1/graphql`
 
@@ -367,8 +364,6 @@ mutation {
 ```json
 {}
 ```
-
-
 
 **Response**
 
@@ -390,7 +385,6 @@ Liquidate a pool.
 **HTTP Request Method**: POST
 
 **Roles**: Admin  
-
 
 **GraphQL URL**: `{{BASE_URL}}/v1/graphql`
 
@@ -414,8 +408,6 @@ mutation ($pool: GetPoolInput!) {
     }
 }
 ```
-
-
 
 **Response**
 
@@ -452,7 +444,6 @@ Retrieves the liquidation information of a loan.
 
 **Roles**: Guest  
 
-
 **GraphQL URL**: `{{BASE_URL}}/v1/graphql`
 
 **GraphQL Body**
@@ -475,8 +466,6 @@ mutation ($pool: GetPoolInput!) {
    }
 }
 ```
-
-
 
 **Response**
 
@@ -503,8 +492,6 @@ Retrieves the fee for liquidation.
 
 **Roles**: Guest
 
-
-
 **GraphQL URL**: `{{BASE_URL}}/v1/graphql`
 
 **GraphQL Body**
@@ -524,8 +511,6 @@ mutation {
 {}
 ```
 
-
-
 **Response**
 
 Upon successful request completion, the server will respond with a status code of 200 and a JSON object containing the liquidation fee. This object includes the following attributes:
@@ -541,13 +526,11 @@ Upon successful request completion, the server will respond with a status code o
 
 ### `Get Total Collateral Amount`
 
-Get total collateral amount.
+Get the total collateral amount.
 
 **HTTP Request Method**: POST
 
 **Roles**: Guest
-
-
 
 **GraphQL URL**: `{{BASE_URL}}/v1/graphql`
 
@@ -570,8 +553,6 @@ query v1GetTotalCollateralAmount {
 ```json
 {}
 ```
-
-
 
 **Response**
 
@@ -596,8 +577,6 @@ Update the pool metadata
 **HTTP Request Method**: POST
 
 **Roles**: Admin
-
-
 
 **GraphQL URL**: `{{BASE_URL}}/v1/graphql`
 
@@ -630,8 +609,6 @@ mutation ($pool: UpdatePoolMetadataInput!) {
 }
 ```
 
-
-
 **Response**
 
 Upon successful request completion, the server will issue a status code of 200 alongside a JSON object. This object incorporates the following attributes:
@@ -644,13 +621,11 @@ Upon successful request completion, the server will issue a status code of 200 a
 
 ### `Lend`
 
-Lend to a pool.
+Lend to a pool the specific amount of the token on which the contract is based.
 
 **HTTP Request Method**: POST
 
 **Roles**: Admin
-
-
 
 **GraphQL URL**: `{{BASE_URL}}/v1/graphql`
 
@@ -671,12 +646,10 @@ mutation v1Lend($loan: LendInput!) {
 {
   "loan": {
     "poolId": "628",
-    "amount": "10000000"
+    "amount": "10000000" // 10 of based token contract
   }
 }
 ```
-
-
 
 **Response**
 
@@ -707,12 +680,13 @@ Upon successful completion of a request, the server will issue a status code of 
 
 ### `Repay`
 
-Repay a loan to a pool.
+Repay a loan to a pool if it is not closed and it has not already been repaid.
+
+The `erc20collateralpool` contract needs the approval to spend money on behalf of the borrower, to give the approve the [`erc20 approve`](#erc20-approve) endpoint could be used. The amount to approve must be `USDC lent + loan interest.`
 
 **HTTP Request Method**: POST
 
 **Roles**: Admin  
-
 
 **GraphQL URL**: `{{BASE_URL}}/v1/graphql`
 
@@ -737,8 +711,6 @@ mutation ($loan: RepayInput!) {
     }
 }
 ```
-
-
 
 **Response**
 
@@ -769,13 +741,11 @@ Upon successful completion of a request, the server will issue a status code of 
 
 ### `Claim Rewards`
 
-Claim rewards.
+Allows the owner of the address, if they have not already done so, to claim the rewards after the pool has been closed and completed.
 
 **HTTP Request Method**: POST
 
 **Roles**: Admin
-
-
 
 **GraphQL URL**: `{{BASE_URL}}/v1/graphql`
 
@@ -801,8 +771,6 @@ mutation v1ClaimRewards ($loan: ClaimRewardsInput!) {
    }
 }
 ```
-
-
 
 **Response**
 
@@ -833,12 +801,11 @@ Upon successful completion of a request, the server will issue a status code of 
 
 ### `Get Lending`
 
-Retrieves lending information.
+Retrieves lending information associated with the provided address.
 
 **HTTP Request Method**: POST
 
 **Roles**: Guest  
-
 
 **GraphQL URL**: `{{BASE_URL}}/v1/graphql`
 
@@ -865,8 +832,6 @@ mutation ($loan: GetLendingInput!) {
 }
 ```
 
-
-
 **Response**
 
 Upon successful request completion, the server will respond with a status code of 200 and a JSON object containing comprehensive lending information. This object encompasses the following attributes:
@@ -892,8 +857,6 @@ Returns the amount of lending made for a specific pool and a provided address.
 
 **Roles**: Guest
 
-
-
 **GraphQL URL**: `{{BASE_URL}}/v1/graphql`
 
 **GraphQL Body**
@@ -918,8 +881,6 @@ mutation ($loan: GetTotalLendingInput!) {
 }
 ```
 
-
-
 **Response**
 
 Upon successful request completion, the server will respond with a status code of 200 and a JSON object containing comprehensive total lending information. This object incorporates the following attributes:
@@ -935,12 +896,11 @@ Upon successful request completion, the server will respond with a status code o
 
 ### `Get Lendings By Lender`
 
-Retrieves the lending participation for a lender in a pool.
+Retrieves the lending participation for a lender in a pool specified in the pagination parameters.
 
 **HTTP Request Method**: POST
 
 **Roles**: Guest  
-
 
 **GraphQL URL**: `{{BASE_URL}}/v1/graphql`
 
@@ -968,8 +928,6 @@ mutation ($loan: GetLendingsByLenderInput!) {
 }
 ```
 
-
-
 **Response**
 
 Upon successful request completion, the server will respond with a status code of 200 and a JSON object containing the lending participation of a lender in a pool. This object incorporates the following attributes:
@@ -996,13 +954,13 @@ Upon successful request completion, the server will respond with a status code o
 
 ### `Borrow`
 
-Borrow from a pool.
+Borrow the indicated amount of the token from the pool if it is not close and there is enough funds. Where the amount in the request body corresponds to the token on which the contract is based.
+
+The `erc20collateralpool` contract needs the approval to spend the amount of collateral token on behalf of the borrower, to give the approve the [`erc20 approve`](#erc20-approve) endpoint could be used. Also, to get the amount of collateral token use the [`calculate collateral amount`](#calculate-collateral-token-amount) endpoint.
 
 **HTTP Request Method**: POST
 
 **Roles**: Admin
-
-
 
 **GraphQL URL**: `{{BASE_URL}}/v1/graphql`
 
@@ -1023,12 +981,10 @@ mutation ($borrow: BorrowInput!) {
 {
     "borrow": {
         "poolId": "8",
-        "amount": "1000000"
+        "amount": "1000000" // 10 of based token contract
     }
 }
 ```
-
-
 
 **Response**
 
@@ -1059,12 +1015,11 @@ Upon successful completion of a request, the server will issue a status code of 
 
 ### `Calculate Collateral Token Amount`
 
-Retrieves the amount of collateral token required for borrowing.
+Retrieves the amount of collateral token required for borrowing the indicated amount of token from the pool. Where the amount in the request body corresponds to the token on which the contract is based.
 
 **HTTP Request Method**: POST
 
 **Roles**: Guest  
-
 
 **GraphQL URL**: `{{BASE_URL}}/v1/graphql`
 
@@ -1086,21 +1041,19 @@ mutation ($borrow: CalculateCollateralTokenAmountInput!) {
 {
    "borrow": {
     "poolId": "13",
-    "amount": "12000000"
+    "amount": "12000000" // 12 of based token contract
    }
 }
 ```
 
-
-
 **Response**
 
-Upon successful request completion, the server will respond with a status code of 200 and a JSON object containing the collateral amount required to borrow the specified amount. This object includes the following attributes:
+Upon successful request completion, the server will respond with a status code of 200 and a JSON object containing the collateral amount required to borrow the specified amount of token on which the contract is based. This object includes the following attributes:
 
 ```json
 {
   "v1CalculateCollateralTokenAmount": {
-    "res": "372006973844054693",
+    "res": "372006973844054693", // amount in collateral token
     "success": true
   }
 }
@@ -1113,8 +1066,6 @@ Returns the borrow information for a borrower in a given pool.
 **HTTP Request Method**: POST
 
 **Roles**: Guest
-
-
 
 **GraphQL URL**: `{{BASE_URL}}/v1/graphql`
 
@@ -1140,8 +1091,6 @@ mutation ($borrow: GetBorrowInput!) {
    }
 }
 ```
-
-
 
 **Response**
 
@@ -1169,8 +1118,6 @@ Returns the total borrows for a borrower in a pool.
 
 **Roles**: Guest
 
-
-
 **GraphQL URL**: `{{BASE_URL}}/v1/graphql`
 
 **GraphQL Body**
@@ -1195,8 +1142,6 @@ mutation ($borrow: GetTotalBorrowsInput!) {
 }
 ```
 
-
-
 **Response**
 
 Upon a successful request, the server will respond with a status code of 200 and a JSON object containing the total borrow information for a borrower in a pool. The object includes the following attributes:
@@ -1217,8 +1162,6 @@ Returns the borrows of a pool the borrower is participating in.
 **HTTP Request Method**: POST
 
 **Roles**: Guest
-
-
 
 **GraphQL URL**: `{{BASE_URL}}/v1/graphql`
 
@@ -1246,8 +1189,6 @@ mutation ($borrow: GetBorrowsByBorrowerInput!) {
 }
 ```
 
-
-
 **Response**
 
 Upon successful request completion, the server will respond with a status code of 200 and a JSON object containing the borrows in which the borrower is participating in a pool. This object includes the following attributes:
@@ -1273,12 +1214,11 @@ Upon successful request completion, the server will respond with a status code o
 
 ### `Calculate Repay Interest`
 
-Returns the interest for a repayment of a borrow.
+Returns the interest for the repayment of a borrow.
 
 **HTTP Request Method**: POST
 
 **Roles**: Guest  
-
 
 **GraphQL URL**: `{{BASE_URL}}/v1/graphql`
 
@@ -1305,8 +1245,6 @@ mutation ($loan: CalculateRepayInterestInput!) {
 }
 ```
 
-
-
 **Response**
 
 Upon successful request completion, the server will respond with a status code of 200 and a JSON object containing the interest to be paid for a borrow. This object includes the following attributes:
@@ -1329,8 +1267,6 @@ Get total `usdc` available which is equal to `lent - borrowed`.
 **HTTP Request Method**: POST
 
 **Roles**: Guest
-
-
 
 **GraphQL URL**: `{{BASE_URL}}/v1/graphql`
 
@@ -1355,8 +1291,6 @@ query v1GetTotalUsdcAvailable {
 {}
 ```
 
-
-
 **Response**
 
 Upon successful request completion, the server will respond with a status code of 200 and a JSON object containing the total lent and borrowed. This object includes the following attributes:
@@ -1376,12 +1310,11 @@ Upon successful request completion, the server will respond with a status code o
 
 ### `Get Dollar Price For Token`
 
-Get dollar price for token.
+Get the dollar price for token.
 
 **HTTP Request Method**: POST
 
 **Roles**: Guest  
-
 
 **GraphQL URL**: `{{BASE_URL}}/v1/graphql`
 
@@ -1406,8 +1339,6 @@ query v1GetDollarPriceForToken {
 {}
 ```
 
-
-
 **Response**
 
 Upon successful request completion, the server will respond with a status code of 200 and a JSON object containing dollar price for the available tokens. This object includes the following attributes:
@@ -1429,12 +1360,16 @@ Upon successful request completion, the server will respond with a status code o
 
 ### `Erc20 Approve`
 
-Authorize a third party to expend a designated sum of funds.
+Authorize a third party address to expend a designated sum of funds of the indicated token.
+
+| Property | Description |
+| --- | --- |
+| `tokenAddress` | The address where the collateral token is deployed. |
+| `addressToAuthorize` | The address where the `erc20collateralpool` contract is deployed. |
 
 **HTTP Request Method**: POST
 
 **Roles**: Admin  
-
 
 **GraphQL URL**: `{{BASE_URL}}/v1/graphql`
 
@@ -1460,8 +1395,6 @@ mutation ($token: Erc20ApproveInput!) {
     }
 }
 ```
-
-
 
 **Response**
 
@@ -1498,8 +1431,6 @@ Returns the configured `usdc` contract address within the `erc20collateraltoken`
 
 **Roles**: Guest
 
-
-
 **GraphQL URL**: `{{BASE_URL}}/v1/graphql`
 
 **GraphQL Body**
@@ -1519,8 +1450,6 @@ mutation {
 {}
 ```
 
-
-
 **Response**
 
 Upon successful request completion, the server will issue a status code of 200 alongside a JSON object containing the address information for `usdc`. This object incorporates the following attributes:
@@ -1534,15 +1463,18 @@ Upon successful request completion, the server will issue a status code of 200 a
 }
 ```
 
-## `Get Historical Contributions`
+### `Get Historical Contributions`
 
-Update the pool metadata
+Get the historical contributions by filtered by event and group by period of time
+
+| Property | Description |
+| --- | --- |
+| `filterBy` | One of the following values: `minute`, `hour`, `day`, `week`, `month`, `year`, `all` |
+| `byEvent` | One of the following values: `LendEvent`, `BorrowEvent`, `All`. |
 
 **HTTP Request Method**: POST
 
 **Roles**: Guest
-
-
 
 **GraphQL URL**: `{{BASE_URL}}/v1/graphql`
 
@@ -1569,12 +1501,234 @@ query v1GetHistoricalContributions($stats: GetHistoricalContributionsInput!) {
 }
 ```
 
-
-
 **Response**
 
 Upon successful request completion, the server will issue a status code of 200 alongside a JSON object. This object incorporates the following attributes:
 
 ```json
-{}
+{
+  "v1GetHistoricalContributions": {
+    "res": {
+      "1712188800000": {
+        "collateral": 0,
+        "fluctuation": 0,
+        "fluctuationValue": 0,
+        "price": 0
+      },
+      "1712275200000": {
+        "collateral": 0,
+        "fluctuation": 0,
+        "fluctuationValue": 0,
+        "price": 0
+      }
+    },
+    "success": true
+  }
+}
 ```
+
+## Error Reference
+
+### Error Response Format
+The errors have the GraphQL error schema, an object with an `errors` array property where each item has the following schema:
+
+| Property | Description |
+| --- | --- |
+| `message` | The description of the error |
+| `extensions` | An object with the path to the field that caused the error, and the error code |
+
+**Examples**
+
+The variable has a wrong type:
+
+``` json
+{
+  "errors":
+    [
+      {
+        "message": "expected a string for type 'String', but found a number",
+        "extensions":
+          {
+            "path": "$.selectionSet.v1GetPool.args.pool.poolId",
+            "code": "validation-failed"
+          }
+      }
+    ]
+}
+
+ ```
+
+The variable is missing in the request body:
+
+``` json
+{
+  "errors":
+    [
+      {
+        "message": "missing required field 'poolId'",
+        "extensions":
+          {
+            "path": "$.selectionSet.v1GetPool.args.pool.poolId",
+            "code": "validation-failed"
+          }
+      }
+    ]
+}
+
+ ```
+
+The field does not exists or the role has no permissions:
+
+``` json
+{
+  "errors":
+    [
+      {
+        "message": "field 'v1UpdatePoolMetadata' not found in type: 'mutation_root'",
+        "extensions":
+          {
+            "path": "$.selectionSet.v1UpdatePoolMetadata",
+            "code": "validation-failed"
+          }
+      }
+    ]
+}
+
+ ```
+
+The variable is not in the request body schema:
+
+``` json
+{
+  "errors":
+    [
+      {
+        "message": "Unexpected variable pool",
+        "extensions":
+          {
+            "path": "$",  
+            "code": "bad-request" 
+          }
+      }
+    ]
+}
+
+ ```
+
+The GraphQL variables object is not a valid json:
+
+``` json
+{
+    "errors": [
+        {
+            "message": "Error in $: Failed reading: satisfy. Expecting object value at X",
+            "extensions": {
+                "path": "$",
+                "code": "invalid-json"
+            }
+        }
+    ]
+}
+```
+
+
+The endpoint does not exists:
+
+``` json
+{
+  "errors":
+    [
+      {
+        "message": "Endpoint not found",
+        "extensions":
+          {
+            "path": "$",
+            "code": "not-found"
+          }
+      }
+    ]
+}
+
+ ```
+
+There is no pool with the provided id:
+
+``` json
+{
+  "errors":
+    [
+      {
+        "message": "Pool id 400 does not exist",
+        "extensions":
+        {
+          "path": "$",
+          "code": "unexpected"
+        }
+      }
+    ]
+}
+
+ ```
+
+### Types of Error
+**General**
+
+- The date provided has already passed
+  - **Error message**: Time must be in the future
+- The number provided is negative or zero
+  - **Error message**: Amount cannot be negative or 0
+- The JWT is invalid
+  - **Error message**: Could not verify JWT: `JWT error`
+- The input provided has a invalid value
+  - **Error message**: Invalid request payload input
+- The string provided is not a integer number
+  - **Error message**: Cannot convert `X` to BigInt
+
+**Addresses**
+
+- The address provided is invalid
+  - **Error message**: Address does not follow the ethereum address format
+- The address does not have the required admin role in the `erc20collateralpool` contract
+  - **Error message**: Sender address is not admin
+- The collateral token address is invalid
+  - **Error message**: Collateral token does not follow the ethereum address format
+
+**Pools**
+
+- There is no pool with the provided id
+  - **Error message**: Pool id `X` does not exist
+- The `endTime` date of the pool was reached
+  - **Error message**: Pool has ended
+- The endpoint requires a closed pool
+  - **Error message**: Pool is not closed
+- The endpoint requires a not closed pool
+  - **Error message**: Pool is closed
+- The endpoint requires a completed pool
+  - **Error message**: Pool is not completed
+- Occurs when an attempt is made to liquidate or obtain liquidation information for a completed pool
+  - **Error message**: Pool cannot be liquidated
+
+**Lend**
+
+- There is no lending with the provided id
+  - **Error message**: Lending id `X` does not exist
+- Occurs when an attempt is made to claim rewards of a loan that has already been claimed
+  - **Error message**: Loan already claimed
+
+**Borrow**
+
+- There is no borrow with the provided id
+  - **Error message**: Borrow id `X` does not exists
+- Occurs when an attempt is made to borrow an amount that overpass the pool balance
+  - **Error message**: Amount overpass the pool available amount
+- Occurs when an attempt is made to repay a borrow that has already been repaid
+  - **Error message**: Borrow already repaid
+
+**Pagination**
+
+- The provided offset is negative
+  - **Error message**: Offset cannot be negative
+- The provided limit is negative or zero
+  - **Error message**: Limit cannot be negative or 0
+- The provided limit is equal to the maximum results per page, use a smaller value
+  - **Error message**: Max limit allowed is `X`

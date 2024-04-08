@@ -12,14 +12,18 @@ const fsp = require("fs").promises;
 program
   .option(
     "-o, --output <char>",
-    "output path where GraphQL.md and RESTful.md will be save"
+    "output path where GraphQL.md and RESTful.md will be save",
+    ""
   )
-  .option("-i, --input <char>", "postman collection json file");
+  .option(
+    "-i, --input <char>",
+    "postman collection json file",
+    "collection.json"
+  )
+  .option("--ignore <char...>", "folders to ignore", []);
 program.parse();
 
 const options = program.opts();
-const outputPath = options.output || "";
-const collectionFile = options.input || "collection.json";
 
 const isGraphQL = (postmanItem: ItemDefinition) =>
   postmanItem?.request?.body?.mode === "graphql";
@@ -52,6 +56,7 @@ const formatText = (text: string) =>
     ?.replace(/\\`/g, "`")
     ?.replace("``` ", "```")
     ?.replace("\n ```", "```")
+    ?.replace(/<(\/?)code>/g,"`")
     ?.trim();
 
 const restfulToGraphQLRoute = (route: string) =>
@@ -69,8 +74,8 @@ const getRouteName = (route: string) =>
   route
     ?.replace(/^[^A-Z]*([A-Z])/, "$1")
     ?.replace(/.+\//g, "-")
-    ?.replace(/-(.)/g, (_, c) => " " + c.toUpperCase())
     ?.replace(/([A-Z])/g, (_, c) => " " + c)
+    ?.replace(/-(.)/g, (_, c) => " " + c.toUpperCase())
     ?.trim();
 
 const getHeading = (number: number) =>
@@ -129,7 +134,7 @@ const getResponseBlockCode = (
 
 const getDescriptionTextBlock = (postmanItem: ItemDefinition) => {
   const postmanDescription: any = postmanItem?.request?.description;
-  const descriptionIndex = postmanDescription?.content?.indexOf("\n");
+  const descriptionIndex = postmanDescription?.content?.indexOf("\n**");
   const description =
     descriptionIndex > -1
       ? postmanDescription?.content?.substring(0, descriptionIndex)
@@ -156,7 +161,7 @@ const getRequestBody = (postmanItem: ItemDefinition) => {
     content += "**Request Body**" + "\n\n";
   }
 
-  content += "```json\n" + `${formatJSON(requestBody)}` + "\n```" + "\n\n";
+  content += "```json\n" + `${formatJSON(requestBody)}` + "\n```";
 
   return content;
 };
@@ -165,7 +170,7 @@ const getRoles = (postmanItem: ItemDefinition, rolesLabel: string) => {
   const description: any = postmanItem?.request?.description;
   const roles = extractText(description?.content || "", rolesLabel);
 
-  return roles ? "**Roles**" + roles : "";
+  return roles ? "**Roles**" + roles.replace(/\n/g, "") : "";
 };
 
 const getMarkdownEndpointDetails = (
@@ -204,18 +209,33 @@ const getMarkdownEndpointDetails = (
 const getMarkdownFileText = (
   postmanItem: ItemGroupDefinition | ItemDefinition,
   additionalContext: ItemGroupDefinition | ItemDefinition,
-  level: number
+  level: number,
+  ignoreFolders: string[]
 ) => {
   if (isFolder(postmanItem)) {
+    if (postmanItem.name && ignoreFolders.includes(postmanItem.name)) return "";
+
     let content = "";
 
     if (level > 1) {
       content = `${getHeading(level)} ${postmanItem.name}\n`;
     }
 
+    const postmanDescription: any = postmanItem.description;
+
+    if (postmanDescription?.content) {
+      content += postmanDescription.content + "\n";
+    }
+
     (postmanItem as ItemGroupDefinition)?.item?.forEach((subItem) => {
       content +=
-        "\n" + getMarkdownFileText(subItem, additionalContext, level + 1);
+        "\n" +
+        getMarkdownFileText(
+          subItem,
+          additionalContext,
+          level + 1,
+          ignoreFolders
+        );
     });
 
     return content;
@@ -232,7 +252,8 @@ const generateDocumentation = (
   collectionData: CollectionDefinition,
   folder: ItemGroupDefinition | ItemDefinition,
   additionalContext: ItemGroupDefinition | ItemDefinition,
-  position: number
+  position: number,
+  ignoreFolders: string[]
 ) => {
   const data: any = collectionData;
   const description = data?.info?.description?.content
@@ -245,13 +266,15 @@ const generateDocumentation = (
   });
 
   return (
-    header + description + getMarkdownFileText(folder, additionalContext, 1)
+    header +
+    description +
+    getMarkdownFileText(folder, additionalContext, 1, ignoreFolders)
   );
 };
 
 try {
   const collectionInstance = new Collection(
-    JSON.parse(fs.readFileSync(collectionFile).toString())
+    JSON.parse(fs.readFileSync(options.input).toString())
   );
 
   const data = collectionInstance.toJSON();
@@ -266,12 +289,14 @@ try {
       data,
       folder,
       additionalContext,
-      foldersNames.findIndex((name) => name === folder.name) + 1
+      foldersNames.findIndex((name) => name === folder.name) + 1,
+      options.ignore
     );
-    const folderName = folder.name?.toLocaleLowerCase() + ".md"
+    const folderName = folder.name?.toLocaleLowerCase() + ".md";
+    const folderPath = options.output + folderName;
 
-    fsp.writeFile(outputPath + folderName, result, "utf8");
-    console.log(`File ${outputPath + folderName} saved`);
+    fsp.writeFile(folderPath, result, "utf8");
+    console.log(`File ${folderPath} saved`);
   });
 } catch (error) {
   if (error instanceof SyntaxError) {
