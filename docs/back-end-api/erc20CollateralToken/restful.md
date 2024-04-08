@@ -1293,11 +1293,11 @@ There is no pool with the provided id:
 - The number provided is negative or zero
   - **Error message**: Amount cannot be negative or 0
 - The JWT is invalid
-  - **Error message**: Could not verify JWT: JWTNotInIssuer
+  - **Error message**: Could not verify JWT: `JWT error`
 - The input provided has a invalid value
   - **Error message**: Invalid request payload input
 - The string provided is not a integer number
-  - **Error message**: Cannot convert X to BigInt
+  - **Error message**: Cannot convert `X` to BigInt
 
 **Addresses**
 
@@ -1311,7 +1311,7 @@ There is no pool with the provided id:
 **Pools**
 
 - There is no pool with the provided id
-  - **Error message**: Pool id X does not exist
+  - **Error message**: Pool id `X` does not exist
 - The `endTime` date of the pool was reached
   - **Error message**: Pool has ended
 - The endpoint requires a closed pool
@@ -1326,14 +1326,14 @@ There is no pool with the provided id:
 **Lend**
 
 - There is no lending with the provided id
-  - **Error message**: Lending id X does not exist
+  - **Error message**: Lending id `X` does not exist
 - Occurs when an attempt is made to claim rewards of a loan that has already been claimed
   - **Error message**: Loan already claimed
 
 **Borrow**
 
 - There is no borrow with the provided id
-  - **Error message**: Borrow id X does not exists
+  - **Error message**: Borrow id `X` does not exists
 - Occurs when an attempt is made to borrow an amount that overpass the pool balance
   - **Error message**: Amount overpass the pool available amount
 - Occurs when an attempt is made to repay a borrow that has already been repaid
@@ -1345,5 +1345,5 @@ There is no pool with the provided id:
   - **Error message**: Offset cannot be negative
 - The provided limit is negative or zero
   - **Error message**: Limit cannot be negative or 0
-- The provided limit is equal to the maximum results per page, use a smaller value 
-  - **Error message**: Max limit allowed is X
+- The provided limit is equal to the maximum results per page, use a smaller value
+  - **Error message**: Max limit allowed is `X`
