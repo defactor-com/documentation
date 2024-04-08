@@ -1615,6 +1615,23 @@ The variable is not in the request body schema:
 
  ```
 
+The GraphQL variables object is not a valid json:
+
+``` json
+{
+    "errors": [
+        {
+            "message": "Error in $: Failed reading: satisfy. Expecting object value at X",
+            "extensions": {
+                "path": "$",
+                "code": "invalid-json"
+            }
+        }
+    ]
+}
+```
+
+
 The endpoint does not exists:
 
 ``` json
