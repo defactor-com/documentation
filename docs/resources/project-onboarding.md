@@ -43,7 +43,8 @@ The following guide provides a list of resources needed to launch your own lendi
 ### Organization data
 
 - Project name
-- URL with the logo image
+- Project Description
+- URL of the company logo 
 - Website URL and X URL
 
 ### Color Scheme
@@ -64,6 +65,8 @@ The following guide provides a list of resources needed to launch your own lendi
   - Setup the contract, token and collateral token addresses
 
 ## Set Up Pools
+- URL with the token icon image image
+- Pool Name and Description for metadata
 - Create Pools 
   - If you use the `erc20collateralpool` contract you can use the [RESTful](../back-end-api/erc20CollateralToken/restful#create-pool) or [GraphQL](../back-end-api/erc20CollateralToken/graphql#create-pool) endpoints, and update their metadata using the corresponding endpoint
   - If you use the `pool` contract use the [insert pool](../back-end-api/pools/insertPool) endpoint.
