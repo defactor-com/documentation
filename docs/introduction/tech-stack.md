@@ -45,7 +45,16 @@ For custom RESTful needs, we rely on [hapi.dev](https://hapi.dev/) for its simpl
 
 ## EVM Blockchain Integration
 
-We harness the power of EVM-compatible blockchains such as [Polygon](https://polygon.technology/) to benefit from rapid transactions and minimal fees, providing a formidable foundation for our decentralized applications.
+We harness the power of multiple EVM-compatible blockchains such as [Polygon](https://polygon.technology/) to benefit from rapid transactions and minimal fees, providing a formidable foundation for our decentralized applications.
+
+### EVM Compatible Blockchain Networks 
+
+Defactor is building smart contracts to be deployed on  EVM compatible networks:
+
+ - [Ethereum](https://ethereum.org/en/) 
+ - [Polygon](https://polygon.technology/) (Layer 2)
+ - [BSC](https://www.bnbchain.org/en/bnb-smart-chain) (Binance Smart Chain)
+ - [Base](https://www.base.org/) (Coinbase EVM Network)
 
 ## Kubernetes Cluster
 
