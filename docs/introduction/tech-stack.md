@@ -45,7 +45,7 @@ For custom RESTful needs, we rely on [hapi.dev](https://hapi.dev/) for its simpl
 
 ## EVM Blockchain Integration
 
-We harness the power of multiple EVM-compatible blockchains such as [Polygon](https://polygon.technology/) to benefit from rapid transactions and minimal fees, providing a formidable foundation for our decentralized applications.
+We harness the power of multiple Ethereum Virtual Machine (EVM) compatible blockchains, such as [Polygon](https://polygon.technology/), to benefit from rapid transactions and minimal fees, providing a formidable foundation for our decentralized applications.
 
 ### EVM Compatible Blockchain Networks 
 
