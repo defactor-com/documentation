@@ -12,7 +12,7 @@ Outlined below is a detailed overview of the API's functionalities, leveraging a
 
 :::info
 
-The `erc20collateralpool` contact is based on a token that follows the erc20 token standard and has exactly a precision of 6. For example it can be `usdc`, `euroc` or any other token that meets the above mentioned requirements.
+The `erc20collateralpool` contract is based on a token that follows the erc20 token standard and has exactly a precision of 6. For example it can be `usdc`, `euroc` or any other token that meets the above mentioned requirements.
 
 :::
 
@@ -129,11 +129,11 @@ Upon successful completion of a request, the server will issue a status code of 
 ## Pools
 The `collateralDetails` schema has the following properties:
 
-| Property | Description |
-| --- | --- |
-| `collateralToken` | The address where the collateral token is deployed. |
-| `collateralTokenChainlink` | The address where the contract that indicates the price of the collateral token is deployed. |
-| `collateralTokenFactor` | Used to adjust the collateral amount from the price of the collateral. |
+| Property                    | Description                                                                                               |
+| --------------------------- | --------------------------------------------------------------------------------------------------------- |
+| `collateralToken`           | The address where the collateral token is deployed.                                                       |
+| `collateralTokenChainlink`  | The address where the contract that indicates the price of the collateral token is deployed.              |
+| `collateralTokenFactor`     | Used to adjust the collateral amount from the price of the collateral.                                    |
 | `collateralTokenPercentage` | Used to calculate the amount of collateral token a borrower will need to provide to borrow from the pool. |
 
 ### `Create Pool`
@@ -572,7 +572,7 @@ Upon successful request completion, the server will respond with a status code o
 
 ### `Update Pool Metadata`
 
-Update the pool metadata
+Update the pool metadata.
 
 **HTTP Request Method**: POST
 
@@ -596,18 +596,18 @@ mutation ($pool: UpdatePoolMetadataInput!) {
 ```json
 {
     "pool": {
-        "id": "23",
-        "name": "FACTR Pool 23",
+        "id": "1",
+        "name": "FACTR Pool 1",
         "description": "FACTR is a tool that facilitates the connection between the traditional world of assets and the decentralized ecosystem of cryptocurrencies. Explore more about Defactor and its potential in the financial world!",
         "logo": "https://assets.coingecko.com/coins/images/19201/standard/jFLSu4U9_400x400.png?1696518648",
         "collateralToken": {
-            "name":"FACTR",
-            "logo": "https://assets.coingecko.com/coins/images/19201/standard/jFLSu4U9_400x400.png?1696518648",
-            "symbol": "FACTR"
+          "logo": "https://assets.coingecko.com/coins/images/19201/standard/jFLSu4U9_400x400.png?1696518648"
         }
     }
 }
 ```
+
+Some fields in the collateral token are obtained by the backend from the blockchain itself, such as `name`, `symbol`, and `token precision`.
 
 **Response**
 
@@ -1362,9 +1362,9 @@ Upon successful request completion, the server will respond with a status code o
 
 Authorize a third party address to expend a designated sum of funds of the indicated token.
 
-| Property | Description |
-| --- | --- |
-| `tokenAddress` | The address where the collateral token is deployed. |
+| Property             | Description                                                       |
+| -------------------- | ----------------------------------------------------------------- |
+| `tokenAddress`       | The address where the collateral token is deployed.               |
 | `addressToAuthorize` | The address where the `erc20collateralpool` contract is deployed. |
 
 **HTTP Request Method**: POST
@@ -1467,10 +1467,10 @@ Upon successful request completion, the server will issue a status code of 200 a
 
 Get the historical contributions by filtered by event and group by period of time
 
-| Property | Description |
-| --- | --- |
+| Property   | Description                                                                          |
+| ---------- | ------------------------------------------------------------------------------------ |
 | `filterBy` | One of the following values: `minute`, `hour`, `day`, `week`, `month`, `year`, `all` |
-| `byEvent` | One of the following values: `LendEvent`, `BorrowEvent`, `All`. |
+| `byEvent`  | One of the following values: `LendEvent`, `BorrowEvent`, `All`.                      |
 
 **HTTP Request Method**: POST
 
@@ -1532,9 +1532,9 @@ Upon successful request completion, the server will issue a status code of 200 a
 ### Error Response Format
 The errors have the GraphQL error schema, an object with an `errors` array property where each item has the following schema:
 
-| Property | Description |
-| --- | --- |
-| `message` | The description of the error |
+| Property     | Description                                                                    |
+| ------------ | ------------------------------------------------------------------------------ |
+| `message`    | The description of the error                                                   |
 | `extensions` | An object with the path to the field that caused the error, and the error code |
 
 **Examples**
