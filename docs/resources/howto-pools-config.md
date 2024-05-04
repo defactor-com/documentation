@@ -21,13 +21,14 @@ These variables configure the user-facing interface of the pools instance:
   Example: `https://api-dev.defactor.dev/v1/graphql`
 
 - **NEXT_PUBLIC_NETWORKS:** JSON string specifying blockchain networks and their configurations.  
-  Example: '[{"chainId":11155111,"rpcUrl":"https://rpc.sepolia.org","name":"Sepolia","currency":"ETH","explorerUrl":"https://sepolia.otterscan.io","baseTokenAddress":"0x75fe3476d90598080f7D12365020C438943Dcef3","collateralAddress":"0x7D5c1468D8bE9f0F4FaD26F2Cb7e6b2ed9042577"}]'
+  Example: `[{"chainId":11155111,"rpcUrl":"https://rpc.sepolia.org","name":"Sepolia","currency":"ETH","explorerUrl":"https://sepolia.otterscan.io","baseTokenAddress":"0x75fe3476d90598080f7D12365020C438943Dcef3","collateralAddress":"0x7D5c1468D8bE9f0F4FaD26F2Cb7e6b2ed9042577"}]`
 
 - **NEXT_PUBLIC_DEFAULT_NETWORK_SELECTED:** JSON object representing the default network selection.  
-  Example: '{"chainId":11155111,"name":"Sepolia","baseTokenAddress":"0x75fe3476d90598080f7D12365020C438943Dcef3"}'
+  Example: `{"chainId":11155111,"name":"Sepolia","baseTokenAddress":"0x75fe3476d90598080f7D12365020C438943Dcef3"}`
 
 - **NEXT_PUBLIC_ORGANIZATION_DATA:** JSON string containing the organization's branding data.  
-  Example: '{"name":"DEFACTOR.com","logo":"https://assets-global.website-files.com/...","websiteUrl":"https://www.defactor.com/","xUrl":"https://twitter.com/defactor_"}'
+  Example: 
+  `{"name":"DEFACTOR.com","logo":"https://assets-global.website-files.com/...","websiteUrl":"https://www.defactor.com/","xUrl":"https://twitter.com/defactor_"}`
 
 - **NEXT_PUBLIC_WALLET_CONNECT_PROJECT_ID:** Wallet Connect project identifier.
 
@@ -38,7 +39,7 @@ These variables configure the user-facing interface of the pools instance:
 - **NEXT_PUBLIC_BRANDING_CONFIG:** Branding configuration data.
 
 - **NEXT_PUBLIC_ASSETS_APP:** JSON string for application assets configuration.  
-  Example: '{"appLogo":"/logos/logo.svg","favIcon":"/favicon.ico","socialMediaPreviewImage":"preview-image.png","fontFamily":"DMSans"}'
+  Example: `{"appLogo":"/logos/logo.svg","favIcon":"/favicon.ico","socialMediaPreviewImage":"preview-image.png","fontFamily":"DMSans"}`
 
 - **RE_CAPTCHA_PROJECT_ID, NEXT_PUBLIC_RE_CAPTCHA_KEY:** reCAPTCHA project identifiers.
 
