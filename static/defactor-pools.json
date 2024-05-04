@@ -1,0 +1,51 @@
+[
+    {
+        "id": "factr-dev",
+        "name": "FACTR Development Instance",
+        "description": "The development environment for FACTR.",
+        "api": "https://api-dev.defactor.dev",
+        "testnet": true
+    },
+    {
+        "id": "factr-finance-dev",
+        "name": "FACTR Finance Development",
+        "description": "Testnet environment for FACTR Finance.",
+        "api": "https://api.defactor.dev",
+        "testnet": true
+    },
+    {
+        "id": "factr-finance-prod",
+        "name": "FACTR Finance Production",
+        "description": "Production environment for FACTR Finance.",
+        "api": "https://api.factr.finance",
+        "testnet": false
+    },
+    {
+        "id": "aurus2-dev",
+        "name": "Aurus2 Development",
+        "description": "Testnet environment for Aurus2.",
+        "api": "https://aurus2-api.defactor.dev",
+        "testnet": true
+    },
+    {
+        "id": "aurus2-prod",
+        "name": "Aurus2 Production",
+        "description": "Production environment for Aurus2.",
+        "api": "https://aurus2-api.factr.app",
+        "testnet": false
+    },
+    {
+        "id": "qba-credit-dev",
+        "name": "QBA Credit Development",
+        "description": "Testnet environment for QBA Credit.",
+        "api": "https://qba-api.defactor.dev",
+        "testnet": true
+    },
+    {
+        "id": "landx-dev",
+        "name": "LandX Development",
+        "description": "Testnet environment for LandX.",
+        "api": "https://landx-api.defactor.dev",
+        "testnet": true
+    }
+]
