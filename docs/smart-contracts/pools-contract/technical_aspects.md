@@ -40,7 +40,7 @@ tags:
 - `depositRewards`: Deposits rewards into an active pool.
 - `closePool`: Closes an active pool.
 - `archivePool`: Archives a pool.
-- `uncommitFromPool`: Un-commits funds from a pool.
+- `uncommitFromPool`: Un-commit funds from a pool.
 - `claim`: Claims rewards from a pool.
 - `withdrawFeesCollected`: Withdraws collected fees by the admin.
 - `adminWithdrawAll`: Allows admin to withdraw all funds when paused.
