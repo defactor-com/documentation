@@ -9,7 +9,7 @@ tags:
 
 ## In-depth Actions
 
-The flow starts when the borrower creates a new pool giving as collateral one or multiple assets that follows the `ERC20`, `ERC721` or `ERC1155` standards. Once the pool is created and the collateral has been successfully transferred from the borrower's wallet to the contract, the pool will be marked as `CREATED` that means it is ready to start receiving funds from the investors. The pool was configured initially with a soft and hard cap, when the total amount committed to the pool reaches at least the soft cap the borrower (pool owner) can decide whether to collect the funds or wait until the hard cap is reached. When the owner collectes the raised capital, no new commits or un-commit are allowed to the pool this is because the borrower has already took the funds and the investors will need to wait until the rewards start coming in.
+The flow starts when the borrower creates a new pool giving as collateral one or multiple assets that follows the `ERC20`, `ERC721` or `ERC1155` standards. Once the pool is created and the collateral has been successfully transferred from the borrower's wallet to the contract, the pool will be marked as `CREATED` that means it is ready to start receiving funds from the investors. The pool was configured initially with a soft and hard cap, when the total amount committed to the pool reaches at least the soft cap the borrower (pool owner) can decide whether to collect the funds or wait until the hard cap is reached. When the owner collects the raised capital, no new commits or un-commit are allowed to the pool this is because the borrower has already took the funds and the investors will need to wait until the rewards start coming in.
 
 As long as the pool is active, the borrower can deposit the rewards in any frequency they want, when the loan is paid (partial or complete) the investors are the only one allowed to claim the rewards.
 
@@ -19,17 +19,17 @@ Lets consider the following example to better understand how this flow works:
 
 ## Pool lifecycle
 
-- Event #1 -> _The contract is initialized with the USDC address that will be used for lending money_.
-- Event #2 -> Bob creates a new pool with a soft cap of 1000 USDC and a hard cap of 2000 USDC, using 100 tokens of GOLD as collateral.
-- Event #3 -> Alice commits 1100 USDC to the pool.
-- Event #4 -> Bob collects the funds from the pool.
-- Event #5 -> After 30 days, Bob deposits 1100 USDC as rewards into the pool.
-- Event #6 -> After 60 days, Alice claims 1100 USDC as rewards from the pool.
-- Event #7 -> Bob closes the pool.
+- Event #1 (initialize contract) -> _The contract is initialized with the USDC address that will be used for lending money_.
+- Event #2 (create a pool) -> Bob creates a new pool with a soft cap of 1000 USDC and a hard cap of 2000 USDC, using 100 tokens of GOLD as collateral.
+- Event #3 (commit to a pool) -> Alice commits 1100 USDC to the pool.
+- Event #4 (collect from pool) -> Bob collects the funds from the pool.
+- Event #5 (deposit rewards) -> After 30 days, Bob deposits 1100 USDC as rewards into the pool.
+- Event #6 (claim rewards) -> After 60 days, Alice claims 1100 USDC as rewards from the pool.
+- Event #7 (close pool) -> Bob closes the pool.
 
 Let's break this down to know what is under the hood of each event:
 
-### Event #1 (contract initialization)
+### Event #1 (initialize contract)
 
 - The contract is initialized with the USDC token address that will be used for lending money, and the initializer will be the admin of the contract.
 
@@ -138,7 +138,7 @@ The pool information is updated to reflect the new total committed amount.
 
 - The pool status will be marked with the status `ACTIVE`.
 
-- Make the transfer of `total commited to pool - 2% contract fee` USDC tokens from the contract to Bob's wallet.
+- Make the transfer of `total committed to pool - 2% contract fee` USDC tokens from the contract to Bob's wallet.
 
 - Emit the event `PoolCollected`.
 
