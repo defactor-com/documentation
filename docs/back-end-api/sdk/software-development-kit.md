@@ -100,7 +100,7 @@ async liquidatePool(poolId: bigint): Promise<ethers.ContractTransaction | ethers
 
 ## Examples
 
-### Lending to a Pool
+Import the library and instantiate the `SelfProvider` class with the `ERC20CollateralPool` contract.
 
 ```typescript
 import { SelfProvider } from "@defactor/defactor-sdk";
@@ -111,7 +111,11 @@ const providerInstance = new SelfProvider.SelfProvider<ERC20CollateralPool>(
   contractConfig.providerUrl!, // loaded from config file
   contractConfig.privateKey! // loaded from config file
 );
+```
 
+### Lending to a Pool
+
+```typescript
 const poolId = 1;
 const amount = BigInt(100_000000); // 100 USDC
 
@@ -122,15 +126,6 @@ console.log(lendTx);
 ### Borrowing from a Pool
 
 ```typescript
-import { SelfProvider } from "@defactor/defactor-sdk";
-
-const providerInstance = new SelfProvider.SelfProvider<ERC20CollateralPool>(
-  ERC20CollateralPool,
-  contractConfig.contractAddress!, // loaded from config file
-  contractConfig.providerUrl!, // loaded from config file
-  contractConfig.privateKey! // loaded from config file
-);
-
 const poolId = 1;
 const amount = BigInt(10_000000); // 10 USDC
 

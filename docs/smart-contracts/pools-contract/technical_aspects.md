@@ -34,13 +34,13 @@ tags:
 
 - `__Pools_init`: Initializes the contract with USDC token.
 - `getPool`: Retrieves a pool by index.
-- `createPool`: Creates a new funding pool.
-- `collectPool`: Collects funds from a pool that has reached its goal.
+- `createPool`: Create a new funding pool, pool status default is CREATED.
+- `commitToPool`: Commits funds to a pool, only available for pools with CREATED status.
+- `collectPool`: Collects funds from a pool that has reached its goal, changes pool status to ACTIVE.
 - `depositRewards`: Deposits rewards into an active pool.
 - `closePool`: Closes an active pool.
 - `archivePool`: Archives a pool.
-- `commitToPool`: Commits funds to a pool.
-- `uncommitFromPool`: Uncommits funds from a pool.
+- `uncommitFromPool`: Un-commit funds from a pool.
 - `claim`: Claims rewards from a pool.
 - `withdrawFeesCollected`: Withdraws collected fees by the admin.
 - `adminWithdrawAll`: Allows admin to withdraw all funds when paused.
