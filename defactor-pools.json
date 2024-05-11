@@ -3,49 +3,102 @@
         "id": "factr-dev",
         "name": "FACTR Development Instance",
         "description": "The development environment for FACTR.",
+        "web": "https://webapp-dev.defactor.dev",
         "api": "https://api-dev.defactor.dev",
+        "chains": [
+            {
+                "id": "Amoy",
+                "contract": "0x5139129588Ed02d8761aACad1dcCd887c8522f4d"
+            }
+        ],
         "testnet": true
     },
     {
         "id": "factr-finance-dev",
         "name": "FACTR Finance Development",
         "description": "Testnet environment for FACTR Finance.",
+        "web": "https://webapp.defactor.dev",
         "api": "https://api.defactor.dev",
+        "chains": [
+            {
+                "id": "Amoy",
+                "contract": "0x4f641Efe12eBf2FD49a4A97347D38dd4F21c38d8"
+            }
+        ],
         "testnet": true
     },
     {
         "id": "factr-finance-prod",
         "name": "FACTR Finance Production",
         "description": "Production environment for FACTR Finance.",
+        "web": "https://factr.finance",
         "api": "https://api.factr.finance",
+        "chains": [
+            {
+                "id": "Polygon",
+                "contract": ""
+            }
+        ],
         "testnet": false
     },
     {
         "id": "aurus2-dev",
         "name": "Aurus2 Development",
         "description": "Testnet environment for Aurus2.",
+        "web": "https://aurus2.defactor.dev",
         "api": "https://aurus2-api.defactor.dev",
+        "chains": [
+            {
+                "id": "Amoy",
+                "contract": "0x666666ea97809364D68E77c3C3AC036D47d86C93"
+            }
+        ],
         "testnet": true
     },
     {
         "id": "aurus2-prod",
         "name": "Aurus2 Production",
         "description": "Production environment for Aurus2.",
+        "web": "https://aurus2.factr.app",
         "api": "https://aurus2-api.factr.app",
+        "chains": [
+            {
+                "id": "Polygon",
+                "contract": "0x5B23290a4ff67d4A5544935ca89943f00948153A"
+            },
+            {
+                "id": "",
+                "contract": "0xecd5676b7a5E58bda3E3fd599a5caaf26CA286C4"
+            }
+        ],
         "testnet": false
     },
     {
         "id": "qba-credit-dev",
         "name": "QBA Credit Development",
         "description": "Testnet environment for QBA Credit.",
+        "web": "",
         "api": "https://qba-api.defactor.dev",
+        "chains": [
+            {
+                "id": "Amoy",
+                "contract": "0x0a2e94dd0D8EFa9598F3fa7287F888dc03aDd288"
+            }
+        ],
         "testnet": true
     },
     {
         "id": "landx-dev",
         "name": "LandX Development",
         "description": "Testnet environment for LandX.",
+        "web": "https://landx.defactor.dev",
         "api": "https://landx-api.defactor.dev",
+        "chains": [
+            {
+                "id": "Sepolia",
+                "contract": "0xC13cB695fCBe2436C4D76aE6CBD2C50a34078E76"
+            }
+        ],
         "testnet": true
     }
 ]
