@@ -7,12 +7,18 @@
 
 # Defactor Developer Documentation
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+This website is published on [defactor.dev](https://defactor.dev) as technical documentation for defactor developers. The website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
 
 ## Installation
 
+Ensure you have the following prerequisites installed:
+- Node.js (v14.0.0 or higher)
+- Yarn (v1.22.0 or higher)
+
 ```sh
-yarn
+git clone https://github.com/defactor-com/documentation.git
+cd documentation
+yarn install
 ```
 
 ### Local Development
@@ -34,6 +40,20 @@ This command generates static content into the `build` directory and can be serv
 ### Deployment
 
 We  are using GitHub pages for hosting, changes mergred to the `main` branch will automatically build the website and push to the `gh-pages` branch.
+
+## Contributing
+
+We welcome contributions! Please see our [Contribution Guidelines](https://defactor.dev/docs/introduction/open-source-guidelines) for more information.
+
+## License
+
+## License
+
+This project is licensed under the Apache License 2.0 - see the [LICENSE.md](LICENSE.md) file for details.
+
+## Support
+
+For support, please [open an issue](https://github.com/defactor-com/documentation/issues/new) in the GitHub repository or contact [support@defactor.com](mailto:support@defactor.com).
 
 ## About Defactor
 
