@@ -3,7 +3,7 @@ title: New Project Onboarding
 sidebar_position: 2
 ---
 
-The following guide provides a list of resources needed to launch your own lending pools with [**Defactor Pools**](https://defactor.dev/docs/category/pools) for liquidity and funding.
+The following guide provides a list of resources needed to launch your own lending pools with [**Defactor Pools**](https://www.defactor.com/pools) for liquidity and funding.
 
 ### Domain Name
 - Project name / description
