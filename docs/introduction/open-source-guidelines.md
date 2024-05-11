@@ -2,7 +2,7 @@
 id: open-source-guidelines
 title: Open Source Contributing Guidelines
 sidebar_label: Open Source Guidelines
-sidebar_position: 2
+sidebar_position: 4
 description: Guidelines for contributing to open source projects
 keywords: [Open Source, Contributing, Guidelines, Open Source Contributing Guidelines, open source, open source guidelines, Open Source Projects]
 ---

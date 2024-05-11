@@ -1,6 +1,6 @@
 ---
-title: Tech Stack
-sidebar_position: 4
+title:  Defactor Tech Stack
+sidebar_position: 3
 ---
 
 At Defactor, we employ a sophisticated technology stack to ensure our solutions are both powerful and resilient.
