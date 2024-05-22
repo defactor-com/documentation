@@ -1,8 +1,8 @@
 {
   "label": "Pools",
-  "position": 2,
+  "position": 1,
   "link": {
     "type": "generated-index",
-    "description": "Endpoints required to consume services for pool implementation."
+    "description": "Technical documentation for backend services needed for Defactor pools implementations."
   }
 }
