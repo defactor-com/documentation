@@ -1,9 +1,7 @@
 {
-    "label": "How-To Articles",
-    "position": 7,
-    "link": {
-      "type": "generated-index",
-      "description": "How to articles for defactor software suite"
-    }
+  "label": "Pools How-Tos",
+  "position": 4,
+  "link": {
+    "type": "generated-index"
   }
-  
+}
