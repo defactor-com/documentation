@@ -83,23 +83,18 @@ const config = {
             position: 'left',
           },
           {
-            href: '/docs/blockchain-and-web3/',
-            label: 'Blockchain',
+            href: '/docs/category/assets',
+            label: 'Assets',
             position: 'left',
           },
           {
-            href: '/docs/category/smart-contracts',
-            label: 'Smart Contracts',
+            href: '/docs/category/pools',
+            label: 'Pools',
             position: 'left',
           },
           {
-            href: '/docs/category/back-end-services',
-            label: 'Back End',
-            position: 'left',
-          },
-          {
-            href: '/docs/front-end-ui',
-            label: 'Front End',
+            href: '/docs/category/engage',
+            label: 'Engage',
             position: 'left',
           },
           {
