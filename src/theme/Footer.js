@@ -33,42 +33,30 @@ function Footer() {
           <div className={styles.footerLinksContainer}>
             <div>
               <h4>Documentation</h4>
+              <a
+                  className={styles.linkStyles}
+                  href="/docs/introduction/tech-stack"
+                >
+                  Defactor Tech Stack
+                </a>
               <div className={styles.docsStyles}>
                 <a
                   className={styles.linkStyles}
-                  href="/docs/blockchain-and-web3/"
+                  href="/docs/introduction/blockchain-and-web3/"
                 >
                   Blockchain and Web3
                 </a>
                 <a
                   className={styles.linkStyles}
-                  href="/docs/category/smart-contracts/"
+                  href="/docs/introduction/defactor-toolkit"
                 >
-                  Smart Contracts
+                  Software Development Kit
                 </a>
                 <a
                   className={styles.linkStyles}
-                  href="/docs/category/back-end-services"
+                  href="/docs/introduction/react-components"
                 >
-                  Backend API
-                </a>
-                <a
-                  className={styles.linkStyles}
-                  href="/docs/front-end-ui/"
-                >
-                  Front End UI
-                </a>
-                <a
-                  className={styles.linkStyles}
-                  href="/docs/category/real-world-use-cases/"
-                >
-                  Real World Use Cases
-                </a>
-                <a
-                  className={styles.linkStyles}
-                  href="/docs/category/resources/"
-                >
-                  Resources
+                  Front End UI Kit
                 </a>
               </div>
             </div>
@@ -80,7 +68,19 @@ function Footer() {
                 href="https://github.com/defactor-com"
               >
                 Defactor GitHub
-              </a>
+              </a><br/>
+              <a
+                  className={styles.linkStyles}
+                  href="/docs/introduction/open-source-guidelines"
+                >
+                  Open Source Guidelines
+                </a><br/>
+                <a
+                  className={styles.linkStyles}
+                  href="/docs/resources/roadmap"
+                >
+                  Technology Roadmap
+                </a>
             </div>
             <div></div>
           </div>
