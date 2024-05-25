@@ -37,14 +37,14 @@ The **Assets** tool is an advanced token creation platform that allows users to 
 
 The three projects can be deployed across several blockchain networks, ensuring versatility and broad application potential:
 
-- [Ethereum](/docs/blockchain-and-web3/ethereum)
-- [Polygon](/docs/blockchain-and-web3/polygon)
+- [Ethereum](/docs/introduction/blockchain-and-web3/ethereum)
+- [Polygon](/docs/introduction/blockchain-and-web3/polygon)
 - Binance Smart Chain
 - Base - Coinbase
 
 All three projects share a common tech stack, enhancing consistency and efficiency across the platform. This includes:
 
-- A unified [Frontend UI kit](/docs/front-end-ui/react-components) that ensures a cohesive user experience.
+- A unified [Frontend UI kit](/docs/introduction/react-components) that ensures a cohesive user experience.
 - A robust [SDK](http://localhost:3000/docs/category/sdk) that facilitates the integration and development of custom functionalities.
 
 Together, these tools form a comprehensive suite that empowers businesses and developers to innovate within the DeFi ecosystem, providing solutions that are not only efficient but also scalable and secure.

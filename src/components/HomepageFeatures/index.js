@@ -5,36 +5,32 @@ import styles from "./styles.module.css";
 
 const FeatureList = [
   {
-    title: "Blockchain and Web3",
-    link: "docs/blockchain-and-web3/",
+    title: "Assets",
+    link: "docs/category/assets/",
     Svg: require("@site/static/img/bc_web3_defactor.svg").default,
     description: (
       <>
-        We provide all the relevant information you need to understand and use
-        Defactor. From tutorials to case studies, we've got it all.
+        Learn how to tokenize real-world assets with Defactor. Our guides cover everything from basics to advanced techniques, ensuring secure and transparent transactions.
       </>
     ),
   },
   {
-    title: "Smart Contracts",
-    link: "docs/category/smart-contracts",
+    title: "Pools",
+    link: "docs/category/pools/",
     Svg: require("@site/static/img/sc_defactor.svg").default,
     description: (
       <>
-        Defactor provides secure and efficient smart contracts. Our
-        documentation will guide you through each step to effectively use them.
+        Discover how to use Defactor's lending pools to unlock liquidity. Our resources will guide you through utilizing tokenized assets as collateral efficiently.
       </>
     ),
   },
   {
-    title: "Powerful API",
-    link: "docs/category/back-end-services",
+    title: "Engage",
+    link: "docs/category/engage/",
     Svg: require("@site/static/img/api_defactor.svg").default,
     description: (
       <>
-        Our API is robust and easy to use, allowing you to integrate Defactor
-        into your own applications. Detailed documentation will help you get
-        started.
+        Engage with our community and governance tools on Defactor Engage. Find resources on network management, participation, and decision-making processes.
       </>
     ),
   },
