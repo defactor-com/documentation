@@ -69,6 +69,18 @@ A pool can be archived by two roles, the pool owner and the contract admin but f
 
 ![Pools Archive Pool](/img/flowchart/Pools_archivepool.png)
 
+#### claim the rewards for users
+
+This function can be performed by two roles, the pool owner and the contract admin. It allows claims rewards for users only available when the pool status is  `CLOSED` and more than 60 days has passed after pool closing.
+
+![Pools Claim rewards for users](/img/flowchart/Pools_claimforusers.png)
+
+#### un-commit from a pool for users
+
+This function can be performed by two roles, the pool owner and the contract admin. It allows un-commit for users only available when the pool status is  `CREATED` and more than 60 days has passed after pool deadline.
+
+![Pools Un-commit Pool for users](/img/flowchart/Pools_uncommitforusers.png)
+
 ### lender (investor)
 
 The lender is in charge of lending money to the pools. It can commit to a pool, un-commit from a pool and claim rewards from a pool.
