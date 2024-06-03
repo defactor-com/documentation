@@ -55,10 +55,10 @@ A pool owner can close the pool anytime if one of the following conditions are m
 
 - Pool is `CREATED` and the max collect time of 30 days after deadline has passed
 - Pool is `CREATED` the deadline was reached and the soft cap was not reached
-- Pool is `ACTIVE` and the total rewards is equal or greater than the total committed to the pool plus the interest configured. To calculate it, refer to the following formula:
+- Pool is `ACTIVE` and the total rewards are equal to or greater than the total committed in the pool plus the configured interest, adjusted by `INTEREST_DECIMAL_PLACES = 100_000_000`. To calculate this, refer to the following formula:
 
 ```solidity
-pool.totalCommitted + (pool.totalCommitted * pool.minimumAPR)
+pool.totalCommitted + (pool.totalCommitted * pool.minimumAPR) / INTEREST_DECIMAL_PLACES
 ```
 
 ![Pools Close Pool](/img/flowchart/Pools_closepool.png)
