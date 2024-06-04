@@ -18,6 +18,7 @@ tags:
   - `PoolsStorage`
   - `AccessControlUpgradeable`
   - `PausableUpgradeable`
+  - `ReentrancyGuardUpgradeable`
   - `IERC721ReceiverUpgradeable`
   - `IERC1155ReceiverUpgradeable`
 
@@ -27,8 +28,9 @@ tags:
 
 - `POOL_FEE`: Fixed fee for pool creation.
 - `LOAN_TAKEN_FEE_PERCENTAGE`: Fee percentage for taken loans.
-- `MIN_POOL_CLOSED_TIME`: Minimum time before a pool can be closed.
+- `MIN_POOL_CLOSED_TIME`: Minimum time before a pool can be archived.
 - `COLLECT_POOL_MAX_TIME`: Maximum time for collecting funds from a pool.
+- `INTEREST_DECIMAL_PLACES`: Use to adjust the decimals in the interest rate calculation.
 
 ### Functions
 
@@ -44,6 +46,8 @@ tags:
 - `claim`: Claims rewards from a pool.
 - `withdrawFeesCollected`: Withdraws collected fees by the admin.
 - `adminWithdrawAll`: Allows admin to withdraw all funds when paused.
+- `claimRewardsForUsers`: Allows pool owner or admin to claim rewards for user if more than 60 days has passed from pool closing.
+- `uncommitForUsers`: Allows pool owner or admin to uncommit for user if more than 60 days has passed from pool deadline.
 - `pause`: Pauses the contract.
 - `unpause`: Unpauses the contract.
 - Private helper functions for token transfers.
@@ -57,6 +61,7 @@ tags:
 - `RewardsDeposited`
 - `PoolClosed`
 - `RewardsClaimed`
+- `PoolArchived`
 
 ### Custom Errors
 
@@ -76,6 +81,14 @@ tags:
 - `PoolStatusMustBeEitherClosedOrCreated`
 - `PoolStatusMustBeEitherClosedOrActive`
 - `PoolStatusMustBeAtLeast60DaysPastDeadline`
+- `CannotBeZeroAddress`
+- `DeadlineMustNotBeMoreThan1YearInTheFuture`
+- `MustBePoolOwnerOrAdmin`
+- `PoolIsNotEmpty`
+- `PoolOwnerCannotCommitToHisOwnPool`
+- `PoolSoftCapReached`
+- `PoolStatusMustBeClosed`
+- `RewardsHaveNotYetBeenPaidOut`
 
 ## Notes
 
