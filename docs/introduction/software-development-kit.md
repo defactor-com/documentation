@@ -44,6 +44,7 @@ This library is built to provide a simple and easy to use interface to interact 
 ### Instantiating the SDK
 
 ```typescript
+// Collateral Pool Contract
 const provider = new SelfProvider(
   DefactorSDK.ERC20CollateralPool, // contract constructor
   ERC20_COLLATERAL_POOL_ETH_ADDRESS, // contract address
@@ -80,8 +81,9 @@ console.log(liquidationProtocolFee); // 5n
 
 ### Integrations with the contracts
 
-- [`Counterparty Pool`](/docs/pools/back-end-api/sdk/counterparty-pool).
-- [`Collateral Pool`](/docs/pools/back-end-api/sdk/collateral-pool)
+- Pools
+  - [`Counterparty Pool`](/docs/pools/back-end-api/sdk/counterparty-pool).
+  - [`Collateral Pool`](/docs/pools/back-end-api/sdk/collateral-pool)
 
 ## Examples
 

@@ -38,46 +38,34 @@ async pause(): Promise<ethers.ContractTransaction | ethers.TransactionResponse>
 async unpause(): Promise<ethers.ContractTransaction | ethers.TransactionResponse> 
 
 // Create a new pool
-async createPool(
-pool: PoolInput
-): Promise<ethers.ContractTransaction | ethers.TransactionResponse> 
+async createPool(pool: PoolInput): Promise<ethers.ContractTransaction | ethers.TransactionResponse> 
 
 // Allows the owner of the pool collects the committed amount and active the pool
-async collectPool(
-poolId: bigint
-): Promise<ethers.ContractTransaction | ethers.TransactionResponse> 
+async collectPool(poolId: bigint): Promise<ethers.ContractTransaction | ethers.TransactionResponse> 
 
 // Allows the owner of the pool deposits the rewards
 async depositRewards(
-poolId: bigint,
-amount: bigint
+  poolId: bigint,
+  amount: bigint
 ): Promise<ethers.ContractTransaction | ethers.TransactionResponse> 
 
 // Allows to close the pool
-async closePool(
-poolId: bigint
-): Promise<ethers.ContractTransaction | ethers.TransactionResponse> 
+async closePool(poolId: bigint): Promise<ethers.ContractTransaction | ethers.TransactionResponse> 
 
 // Allows to archive the pool
-async archivePool(
-poolId: bigint
-): Promise<ethers.ContractTransaction | ethers.TransactionResponse> 
+async archivePool(poolId: bigint): Promise<ethers.ContractTransaction | ethers.TransactionResponse> 
 
 // Allows the lender (investor) to commit the specific amount to the pool
 async commitToPool(
-poolId: bigint,
-amount: bigint
+  poolId: bigint,
+  amount: bigint
 ): Promise<ethers.ContractTransaction | ethers.TransactionResponse> 
 
 // Transfer the committed amount to the pool by the lender (investor)
-async uncommitFromPool(
-poolId: bigint
-): Promise<ethers.ContractTransaction | ethers.TransactionResponse> 
+async uncommitFromPool(poolId: bigint): Promise<ethers.ContractTransaction | ethers.TransactionResponse> 
 
 // Allows to the lender (investor) to claim their rewards
-async claim(
-poolId: bigint
-): Promise<ethers.ContractTransaction | ethers.TransactionResponse> 
+async claim(poolId: bigint): Promise<ethers.ContractTransaction | ethers.TransactionResponse> 
 ```
 
 ## Examples

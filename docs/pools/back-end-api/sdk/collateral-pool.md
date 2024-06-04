@@ -7,21 +7,50 @@ The [Defactor SDK](/docs/introduction/software-development-kit) provides utiliti
 ## Methods Available
 
 ```typescript
-async USDC_FEES_COLLECTED(): Promise<bigint>                                                                                                // Returns the total USDC fees collected.
-async getUsdc(): Promise<string>                                                                                                            // Returns the USDC contract address.
-async getTotalPools(): Promise<bigint>                                                                                                      // Returns the total number of pools.
-async getPool(poolId: bigint): Promise<Pool>                                                                                                // Returns the pool with the given ID.
-async getPools(offset: bigint, limit: bigint): Promise<Array<Pool>>                                                                         // Returns a list of pools within the given range.
-async getTotalLending(poolId: bigint, address: string): Promise<bigint>                                                                     // Returns the total amount of lending for a given pool and address.
-async getLoan(poolId: bigint, address: string, lendingId: bigint): Promise<Lend>                                                            // Returns a specific loan.
-async addPool(pool: PoolInput): Promise<ethers.ContractTransaction | ethers.TransactionResponse>                                            // Adds a new pool.
-async lend(poolId: bigint, amount: bigint): Promise<ethers.ContractTransaction | ethers.TransactionResponse>                                // Lends a certain amount to a pool.
-async borrow(poolId: bigint, amount: bigint): Promise<ethers.ContractTransaction | ethers.TransactionResponse>                              // Borrows a certain amount from a pool.
-async getBorrow(poolId: bigint, borrowerAddress: string, borrowId: bigint): Promise<Borrow>                                                 // Returns a specific borrow.
-async calculateCollateralTokenAmount(poolId: bigint, amount: bigint): Promise<bigint>                                                       // Calculates the amount of collateral tokens for a given amount.
-async repay(poolId: bigint, borrowerAddress: string, borrowId: bigint): Promise<ethers.ContractTransaction | ethers.TransactionResponse>    // Repays a borrow.
-async getLiquidationInfo(pool: Pool): Promise<PoolLiquidationInfo>                                                                          // Returns information about the liquidation of a pool.
-async liquidatePool(poolId: bigint): Promise<ethers.ContractTransaction | ethers.TransactionResponse>                                       // Liquidates a pool.
+// Returns the total USDC fees collected.
+async USDC_FEES_COLLECTED(): Promise<bigint>                                                                                                
+
+// Returns the USDC contract address.
+async getUsdc(): Promise<string>                                                                                                    
+
+// Returns the total number of pools.        
+async getTotalPools(): Promise<bigint>                                                                                                      
+
+// Returns the pool with the given ID.
+async getPool(poolId: bigint): Promise<Pool>  
+
+// Returns a list of pools within the given range.
+async getPools(offset: bigint, limit: bigint): Promise<Array<Pool>>          
+
+// Returns the total amount of lending for a given pool and address.
+async getTotalLending(poolId: bigint, address: string): Promise<bigint>                                    
+
+// Returns a specific loan.
+async getLoan(poolId: bigint, address: string, lendingId: bigint): Promise<Lend>       
+
+// Adds a new pool.
+async addPool(pool: PoolInput): Promise<ethers.ContractTransaction | ethers.TransactionResponse>               
+
+// Lends a certain amount to a pool.
+async lend(poolId: bigint, amount: bigint): Promise<ethers.ContractTransaction | ethers.TransactionResponse>          
+
+// Borrows a certain amount from a pool.
+async borrow(poolId: bigint, amount: bigint): Promise<ethers.ContractTransaction | ethers.TransactionResponse>                 
+
+// Returns a specific borrow.
+async getBorrow(poolId: bigint, borrowerAddress: string, borrowId: bigint): Promise<Borrow>                        
+
+// Calculates the amount of collateral tokens for a given amount.
+async calculateCollateralTokenAmount(poolId: bigint, amount: bigint): Promise<bigint>                      
+
+// Repays a borrow.
+async repay(poolId: bigint, borrowerAddress: string, borrowId: bigint): Promise<ethers.ContractTransaction | ethers.TransactionResponse>   
+
+// Returns information about the liquidation of a pool.
+async getLiquidationInfo(pool: Pool): Promise<PoolLiquidationInfo>                    
+
+// Liquidates a pool.
+async liquidatePool(poolId: bigint): Promise<ethers.ContractTransaction | ethers.TransactionResponse>                                       
 ```
 
 ## Examples
