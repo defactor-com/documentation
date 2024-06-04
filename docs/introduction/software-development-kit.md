@@ -12,10 +12,10 @@ You can find the source code for this repository in [github.com/defactor-com/sdk
 
 - Support for cjs, es, and esm modules.
 - Developed using TypeScript for enhanced type safety and clarity.
-- Seamless integration with `ERC20CollateralPool` and `Pools`.
+- Seamless integration with [`ERC20CollateralPool`](/docs/pools/back-end-api/sdk/collateral-pool) and [`Pools`](/docs/pools/back-end-api/sdk/counterparty-pool).
 - Well-defined interfaces that accurately model the Defactor contracts for easy interaction and integration.
 
-This library is built on top of `ether@6.x.x` to provide a simple and easy to use interface to interact with the Defactor contracts.
+This library is built on top of [`ether@6.x.x`](https://docs.ethers.org/v6/api/contract/) to provide a simple and easy to use interface to interact with the Defactor contracts.
 
 ## Installation
 
@@ -44,6 +44,7 @@ This library is built to provide a simple and easy to use interface to interact 
 ### Instantiating the SDK
 
 ```typescript
+// Collateral Pool Contract
 const provider = new SelfProvider(
   DefactorSDK.ERC20CollateralPool, // contract constructor
   ERC20_COLLATERAL_POOL_ETH_ADDRESS, // contract address
@@ -75,60 +76,38 @@ const providerInstance = new SelfProvider.SelfProvider<ERC20CollateralPool>(
 const liquidationProtocolFee =
   providerInstance.contract.LIQUIDATION_PROTOCOL_FEE;
 
-console.log(liquidationProtocolFee);
+console.log(liquidationProtocolFee); // 5n
 ```
 
-## Methods Available
+### Integrations with the contracts
 
-```typescript
-async USDC_FEES_COLLECTED(): Promise<bigint>                                                                                                // Returns the total USDC fees collected.
-async getUsdc(): Promise<string>                                                                                                            // Returns the USDC contract address.
-async getTotalPools(): Promise<bigint>                                                                                                      // Returns the total number of pools.
-async getPool(poolId: bigint): Promise<Pool>                                                                                                // Returns the pool with the given ID.
-async getPools(offset: bigint, limit: bigint): Promise<Array<Pool>>                                                                         // Returns a list of pools within the given range.
-async getTotalLending(poolId: bigint, address: string): Promise<bigint>                                                                     // Returns the total amount of lending for a given pool and address.
-async getLoan(poolId: bigint, address: string, lendingId: bigint): Promise<Lend>                                                            // Returns a specific loan.
-async addPool(pool: PoolInput): Promise<ethers.ContractTransaction | ethers.TransactionResponse>                                            // Adds a new pool.
-async lend(poolId: bigint, amount: bigint): Promise<ethers.ContractTransaction | ethers.TransactionResponse>                                // Lends a certain amount to a pool.
-async borrow(poolId: bigint, amount: bigint): Promise<ethers.ContractTransaction | ethers.TransactionResponse>                              // Borrows a certain amount from a pool.
-async getBorrow(poolId: bigint, borrowerAddress: string, borrowId: bigint): Promise<Borrow>                                                 // Returns a specific borrow.
-async calculateCollateralTokenAmount(poolId: bigint, amount: bigint): Promise<bigint>                                                       // Calculates the amount of collateral tokens for a given amount.
-async repay(poolId: bigint, borrowerAddress: string, borrowId: bigint): Promise<ethers.ContractTransaction | ethers.TransactionResponse>    // Repays a borrow.
-async getLiquidationInfo(pool: Pool): Promise<PoolLiquidationInfo>                                                                          // Returns information about the liquidation of a pool.
-async liquidatePool(poolId: bigint): Promise<ethers.ContractTransaction | ethers.TransactionResponse>                                       // Liquidates a pool.
-```
+- Pools
+  - [`Counterparty Pool`](/docs/pools/back-end-api/sdk/counterparty-pool).
+  - [`Collateral Pool`](/docs/pools/back-end-api/sdk/collateral-pool)
 
 ## Examples
 
-Import the library and instantiate the `SelfProvider` class with the `ERC20CollateralPool` contract.
+### Initialize the ERC20
 
 ```typescript
-import { SelfProvider } from "@defactor/defactor-sdk";
+import { ERC20 } from "@defactor/defactor-sdk";
 
-const providerInstance = new SelfProvider.SelfProvider<ERC20CollateralPool>(
-  ERC20CollateralPool,
-  contractConfig.contractAddress!, // loaded from config file
-  contractConfig.providerUrl!, // loaded from config file
-  contractConfig.privateKey! // loaded from config file
+const usdcTokenContract = new Erc20(
+  contractConfig.usdcTokenAddress, // loaded from config file
+  contractConfig.providerUrl, // loaded from config file
+  contractConfig.privateKey // loaded from config file
 );
 ```
 
-### Lending to a Pool
+### Approve an amount of ERC20 tokens
+
+Give to the contract the allowance to spend the indicated amount of USDC by the user.
 
 ```typescript
-const poolId = 1;
-const amount = BigInt(100_000000); // 100 USDC
+const amount = BigInt(200_000000); // 200 USDC
 
-const lendTx = await providerInstance.lend(poolId, amount);
-console.log(lendTx);
-```
-
-### Borrowing from a Pool
-
-```typescript
-const poolId = 1;
-const amount = BigInt(10_000000); // 10 USDC
-
-const borrowTx = await providerInstance.borrow(poolId, amount);
-console.log(borrowTx);
+await usdcTokenContract.approve(
+  providerInstance.contract.address, // the address of the contract
+  amount
+);
 ```
