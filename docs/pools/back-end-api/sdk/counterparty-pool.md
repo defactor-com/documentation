@@ -140,3 +140,39 @@ const provider = new SelfProvider.SelfProvider<Pools>(
 
 await provider.contract.commitToPool(poolId, amount)
 ```
+
+### Get a pool
+
+Get a pool using the sequential id.
+
+```typescript
+const poolId = BigInt(0)
+const pool = await provider.contract.getPool(poolId)
+
+console.log(pool)
+```
+
+Example output:
+
+```typescript
+{
+  softCap: 100000000n,
+  hardCap: 600000000n,
+  totalCommitted: 0n,
+  totalRewards: 0n,
+  rewardsPaidOut: 0n,
+  createdAt: 1717372800n,
+  deadline: 1734652800n,
+  minimumAPR: 50000000n,
+  closedTime: 0n,
+  poolOwner: '0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC',
+  poolStatus: 'CREATED',
+  collateralTokens: [
+    {
+      contractAddress: '0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC',
+      amount: 15000000n
+      id: 0n
+    }
+  ]
+}
+```
