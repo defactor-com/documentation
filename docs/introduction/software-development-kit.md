@@ -84,7 +84,7 @@ console.log(liquidationProtocolFee); // 5n
 
 - Pools
   - [`Counterparty Pool`](/docs/pools/back-end/sdk/counterparty-pool).
-  - [`Collateral Pool`](/docs/pools/back-end-api/sdk/collateral-pool)
+  - [`Collateral Pool`](/docs/pools/back-end/sdk/collateral-pool)
 
 ## Examples
 
