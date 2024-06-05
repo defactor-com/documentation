@@ -1,5 +1,5 @@
 ---
-id: smart-contract-erc20-collateral-pool-technical-aspects
+id: counterparty-pools-technical-aspects
 title: Technical Aspects
 sidebar_position: 2
 tags:

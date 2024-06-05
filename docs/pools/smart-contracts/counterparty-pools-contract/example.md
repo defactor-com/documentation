@@ -1,5 +1,5 @@
 ---
-id: smart-contract-erc20-collateral-pool-example
+id: counterparty-pools-smart-contract-example
 title: Example
 sidebar_position: 3
 tags:
