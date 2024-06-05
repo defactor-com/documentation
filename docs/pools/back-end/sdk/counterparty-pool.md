@@ -3,7 +3,7 @@ title: "Counterparty Pool Contract"
 sidebar_position: 1
 ---
 
-The [Defactor SDK](/docs/introduction/software-development-kit) provides utilities and classes to seamless interaction with the Defactor contracts. In this specific section, the focus is in the [CounterParty Pool Contract](/docs/pools/smart-contracts/counterparty-pools-contract/smart-contract-erc20-collateral-pool) and `Pools` class, which implements the fundamental methods to interact with the contract in question.
+The [Defactor SDK](/docs/introduction/software-development-kit) provides utilities and classes to seamless interaction with the Defactor contracts. In this specific section, the focus is in the [CounterParty Pool Contract](/docs/pools/smart-contracts/counterparty-pools-contract/counterparty-pools-smart-contract) and `Pools` class, which implements the fundamental methods to interact with the contract in question.
  
 ## Constants
 
