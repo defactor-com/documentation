@@ -1,6 +1,6 @@
 ---
 title: "Open Source UI-Kit"
-sidebar_position: 2
+sidebar_position: 5
 ---
 
 # Components

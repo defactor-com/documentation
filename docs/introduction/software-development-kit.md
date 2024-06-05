@@ -1,5 +1,6 @@
 ---
-title: Software Development Kit
+title: Open-Source SDK
+sidebar_position: 4
 ---
 
 The Defactor SDK is a TypeScript-based Node.js library designed to streamline the process of instantiating contracts and enhancing the seamless interaction with Defactor contracts.

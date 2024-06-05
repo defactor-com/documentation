@@ -98,6 +98,11 @@ const config = {
             position: 'left',
           },
           {
+            href: '/docs/blockchain-and-web3',
+            label: 'Blockchain and Web3',
+            position: 'left',
+          },
+          {
             href: '/docs/category/real-world-use-cases',
             label: 'RW Use Cases',
             position: 'left',

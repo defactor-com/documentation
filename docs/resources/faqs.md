@@ -9,7 +9,7 @@ sidebar_position: 4
 
 ### Q1: How do I get started with Defactor development?
 
-**A:** To get started, ensure you have the latest version of Defactor installed. Follow the setup instructions in our [Getting Started Guide](../introduction/blockchain-and-web3/index.md).
+**A:** To get started, ensure you have the latest version of Defactor installed. Follow the setup instructions in our [Getting Started Guide](../blockchain-and-web3/index.md).
 
 ### Q2: Where can I find API documentation?
 
