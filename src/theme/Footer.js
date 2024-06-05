@@ -5,16 +5,16 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import React from "react"
-import { useThemeConfig } from "@docusaurus/theme-common"
+import React from "react";
+import { useThemeConfig } from "@docusaurus/theme-common";
 
-import styles from "./styles.module.css"
+import styles from "./styles.module.css";
 
 function Footer() {
-  const { footer } = useThemeConfig()
+  const { footer } = useThemeConfig();
 
   if (!footer) {
-    return null
+    return null;
   }
 
   return (
@@ -34,31 +34,23 @@ function Footer() {
             <div>
               <h4>Documentation</h4>
               <a
-                  className={styles.linkStyles}
-                  href="/docs/introduction/tech-stack"
-                >
-                  Defactor Tech Stack
-                </a>
-              <div className={styles.docsStyles}>
+                className={styles.linkStyles}
+                href="/docs/introduction/defactor-toolkit"
+              >
+                Software Toolkit
+              </a><br />
+              <a
+                className={styles.linkStyles}
+                href="/docs/introduction/tech-stack"
+              >
+                Defactor Tech Stack
+              </a><br />
                 <a
                   className={styles.linkStyles}
-                  href="/docs/introduction/blockchain-and-web3/"
+                  href="/docs/blockchain-and-web3/"
                 >
                   Blockchain and Web3
                 </a>
-                <a
-                  className={styles.linkStyles}
-                  href="/docs/introduction/defactor-toolkit"
-                >
-                  Software Development Kit
-                </a>
-                <a
-                  className={styles.linkStyles}
-                  href="/docs/introduction/react-components"
-                >
-                  Front End UI Kit
-                </a>
-              </div>
             </div>
             <div>
               <h4>More</h4>
@@ -68,19 +60,18 @@ function Footer() {
                 href="https://github.com/defactor-com"
               >
                 Defactor GitHub
-              </a><br/>
+              </a>
+              <br />
               <a
-                  className={styles.linkStyles}
-                  href="/docs/introduction/open-source-guidelines"
-                >
-                  Open Source Guidelines
-                </a><br/>
-                <a
-                  className={styles.linkStyles}
-                  href="/docs/resources/roadmap"
-                >
-                  Technology Roadmap
-                </a>
+                className={styles.linkStyles}
+                href="/docs/introduction/open-source-guidelines"
+              >
+                Open Source Guidelines
+              </a>
+              <br />
+              <a className={styles.linkStyles} href="/docs/resources/roadmap">
+                Technology Roadmap
+              </a>
             </div>
             <div></div>
           </div>
@@ -132,7 +123,7 @@ function Footer() {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default React.memo(Footer)
+export default React.memo(Footer);

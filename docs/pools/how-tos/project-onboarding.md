@@ -11,12 +11,12 @@ The following guide provides a list of resources needed to launch your own lendi
 
 ## Smart Contract
 - Define [smart contract](https://defactor.dev/docs/category/smart-contracts/) type
-  - [`Pools`](https://defactor.dev/docs/smart-contracts/pools-contract/smart-contract-erc20-collateral-pool), allows users to create, manage, and interact with funding pools using `ERC20`, `ERC721`, and `ERC1155` tokens as collaterals.
-  - [`ERC20CollateralPool`](https://defactor.dev/docs/smart-contracts/pools-contract/smart-contract-erc20-collateral-pool), designed for EVM based blockchains, manages pools of collateralized loans using `ERC20` standard token.
+  - [`Pools`](https://defactor.dev/docs/smart-contracts/counterparty-pools-contract/smart-contract-erc20-collateral-pool), allows users to create, manage, and interact with funding pools using `ERC20`, `ERC721`, and `ERC1155` tokens as collaterals.
+  - [`ERC20CollateralPool`](https://defactor.dev/docs/smart-contracts/counterparty-pools-contract/smart-contract-erc20-collateral-pool), designed for EVM based blockchains, manages pools of collateralized loans using `ERC20` standard token.
 
 - Define network deployment (Testnet for testing and Mainnet for live deployment) 
-  - [Ethereum](https://defactor.dev/docs/introduction/blockchain-and-web3/ethereum)
-  - [Polygon](https://defactor.dev/docs/introduction/blockchain-and-web3/polygon)
+  - [Ethereum](https://defactor.dev/docs/blockchain-and-web3/ethereum)
+  - [Polygon](https://defactor.dev/docs/blockchain-and-web3/polygon)
   - [Algorand](https://defactor.dev/docs/blockchain-and-web3/algorand) 
 - Define a `ERC20` base token with a precision of 6 (e.g., usdc, euroc, etc.)
 - Smart contract deployment and testing

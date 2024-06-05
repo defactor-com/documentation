@@ -1,8 +1,8 @@
 {
   "label": "Blockchain and Web3",
-  "position": 2,
+  "position": 5,
   "link": {
     "type": "doc",
-    "id": "introduction/blockchain-and-web3/index"
+    "id": "blockchain-and-web3/index"
   }
 }
