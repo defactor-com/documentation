@@ -1,5 +1,5 @@
 ---
-title: Migrating Defactor's Front-end to React
+title: Front-End Migration to React
 sidebar_position: 3
 ---
 
