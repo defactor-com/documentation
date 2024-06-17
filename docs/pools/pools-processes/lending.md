@@ -1,6 +1,6 @@
 ---
 title: Pool Lending Process 
-sidebar_position: 1
+sidebar_position: 2
 ---
 
 ## Introduction to Lending
