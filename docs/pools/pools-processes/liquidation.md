@@ -1,6 +1,6 @@
 ---
 title: Pool Liquidation Process 
-sidebar_position: 1
+sidebar_position: 3
 ---
 
 ## Introduction to Liquidation
