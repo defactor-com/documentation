@@ -1,3 +1,10 @@
+---
+title: Pool Lending Process 
+sidebar_position: 1
+---
+
+## Introduction to Lending
+
 Once a pool is set up, you can offer incentives to your community to become liquidity providers by depositing stable coins (e.g., USDC) into your supply pools, offering them a return on their investment. This process allows stable coin holders to earn revenue with relatively low risk by providing secured loans to different borrowers.
 
 ### How it works: Supplying liquidity into the Pool
