@@ -3,16 +3,19 @@ title: Endpoints List GraphQL API
 sidebar_position: 2
 ---
 
-
 The Defactor Postman Collection comprises a suite of pre-configured API requests designed for seamless integration into the Postman application, facilitating access to the services offered by the Defactor API.
 
 This API offers dual modes of interaction with the smart contract: firstly, via the RESTful API; and secondly, through the GraphQL API.
+
+It facilitates interaction with various Pools smart contracts by providing an intuitive interface that maps the actions to straightforward concepts, such as create, lend, borrow, repaid, etc. Also, it enables seamless communication with smart contracts configured across multiple blockchain networks. It is necessary to specify the network and contract name in each request payload.
 
 Outlined below is a detailed overview of the API's functionalities, leveraging a designated instance of the `erc20collateralpool` contract as the primary data source.
 
 :::info
 
-The `erc20collateralpool` contract is based on a token that follows the erc20 token standard and has exactly a precision of 6. For example it can be `usdc`, `euroc` or any other token that meets the above mentioned requirements.
+The `erc20collateralpool` contract is based on a token that follows the `erc20` token standard that has a set precision. For example it can be `usdc`, `euroc` with a exactly a precision of 6 or any other token that meets the above mentioned requirements.
+
+Then, 10500000 is equivalent to 10.5 USDC.
 
 :::
 
@@ -46,10 +49,10 @@ Return a JSON Web Token (JWT) access token and refresh token. By default, the ac
 
 ```graphql
 mutation v1Login($session: LoginInput!) {
-    v1Login(session: $session) {
-        res
-        success
-    }
+  v1Login(session: $session) {
+    res
+    success
+  }
 }
 ```
 
@@ -57,9 +60,9 @@ mutation v1Login($session: LoginInput!) {
 
 ```json
 {
-    "session": {
-        "address": "0xa8983Fe59b2F08F9F1B3E833c5D47B256F7FE0d5"
-    }
+  "session": {
+    "address": "0xa8983Fe59b2F08F9F1B3E833c5D47B256F7FE0d5"
+  }
 }
 ```
 
@@ -93,10 +96,10 @@ Return a new access and refresh token.
 
 ```graphql
 mutation v1RestoreSession($session: RestoreSessionInput!) {
-    v1RestoreSession(session: $session) {
-        res
-        success
-    }
+  v1RestoreSession(session: $session) {
+    res
+    success
+  }
 }
 ```
 
@@ -104,9 +107,9 @@ mutation v1RestoreSession($session: RestoreSessionInput!) {
 
 ```json
 {
-    "session": {
-        "refreshToken": "c1c713d8-1088-4488-87c2-ff290df78cae"
-    }
+  "session": {
+    "refreshToken": "c1c713d8-1088-4488-87c2-ff290df78cae"
+  }
 }
 ```
 
@@ -118,7 +121,7 @@ Upon successful completion of a request, the server will issue a status code of 
 {
   "v1RestoreSession": {
     "res": {
-        "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWUsImlhdCI6MTUxNjIzOTAyMiwiaHR0cHM6Ly9oYXN1cmEuaW8vand0L2NsYWltcyI6eyJ4LWhhc3VyYS1kZWZhdWx0LXJvbGUiOiJ1c2VyIiwieC1oYXN1cmEtYWxsb3dlZC1yb2xlcyI6WyJ1c2VyIiwiYWRtaW4iXSwieC1oYXN1cmEtdXNlci1pZCI6IjEyMyIsIngtaGFzdXJhLW9yZy1pZCI6IjQ1NiIsIngtaGFzdXJhLWN1c3RvbSI6ImN1c3RvbS12YWx1ZSJ9fQ.07mlUOhH3Oigz_Yyil8EC579Ht6PbZ1yr8fYJfhQ4NE",
+      "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWUsImlhdCI6MTUxNjIzOTAyMiwiaHR0cHM6Ly9oYXN1cmEuaW8vand0L2NsYWltcyI6eyJ4LWhhc3VyYS1kZWZhdWx0LXJvbGUiOiJ1c2VyIiwieC1oYXN1cmEtYWxsb3dlZC1yb2xlcyI6WyJ1c2VyIiwiYWRtaW4iXSwieC1oYXN1cmEtdXNlci1pZCI6IjEyMyIsIngtaGFzdXJhLW9yZy1pZCI6IjQ1NiIsIngtaGFzdXJhLWN1c3RvbSI6ImN1c3RvbS12YWx1ZSJ9fQ.07mlUOhH3Oigz_Yyil8EC579Ht6PbZ1yr8fYJfhQ4NE",
       "refreshToken": "0a1a6d5f-1bf9-4540-8c22-d9442a75476f"
     },
     "success": true
@@ -127,6 +130,7 @@ Upon successful completion of a request, the server will issue a status code of 
 ```
 
 ## Pools
+
 The `collateralDetails` schema has the following properties:
 
 | Property                    | Description                                                                                               |
@@ -150,10 +154,10 @@ Create a new pool with the indicated collateral token using the `collateralDetai
 
 ```graphql
 mutation ($pool: CreatePoolInput!) {
-    v1CreatePool(pool: $pool) {
-        res
-        success
-    }
+  v1CreatePool(pool: $pool) {
+    res
+    success
+  }
 }
 ```
 
@@ -161,16 +165,20 @@ mutation ($pool: CreatePoolInput!) {
 
 ```json
 {
-    "pool": {
-        "endTime": "2024-04-28T01:50:00.000",
-        "interest": 10,
-        "collateralDetails": {
-            "collateralToken": "0x6BaB3bEA9aD00893101837d46638B470076f8AAF",
-            "collateralTokenChainlink": "0x295894a94F859cE1Ac960364D6b0D2Fa430027b4",
-            "collateralTokenFactor": 10,
-            "collateralTokenPercentage": 115
-        }
+  "pool": {
+    "network": "{{NETWORK_NAME}}",
+    "contractName": "{{ERC20_COLLATERAL_POOL}}",
+    "data": {
+      "endTime": "2024-08-09T23:58:00.000",
+      "interest": 10,
+      "collateralDetails": {
+        "collateralToken": "0x6BaB3bEA9aD00893101837d46638B470076f8AAF",
+        "collateralTokenChainlink": "0x295894a94F859cE1Ac960364D6b0D2Fa430027b4",
+        "collateralTokenFactor": 10,
+        "collateralTokenPercentage": 115
+      }
     }
+  }
 }
 ```
 
@@ -207,7 +215,7 @@ Retrieves the data associated with the specified `poolId`.
 
 **HTTP Request Method**: POST
 
-**Roles**: Guest  
+**Roles**: Guest
 
 **GraphQL URL**: `{{BASE_URL}}/v1/graphql`
 
@@ -215,10 +223,10 @@ Retrieves the data associated with the specified `poolId`.
 
 ```graphql
 mutation ($pool: GetPoolInput!) {
-    v1GetPool (pool: $pool) {
-        res
-        success
-    }
+  v1GetPool(pool: $pool) {
+    res
+    success
+  }
 }
 ```
 
@@ -226,9 +234,11 @@ mutation ($pool: GetPoolInput!) {
 
 ```json
 {
-   "pool": {
-    "poolId": "23"
-   }
+  "pool": {
+    "network": "{{NETWORK_NAME}}",
+    "contractName": "{{ERC20_COLLATERAL_POOL}}",
+    "poolId": "0"
+  }
 }
 ```
 
@@ -271,7 +281,7 @@ Retrieves the data associated with the `pools` specified in the pagination param
 
 **HTTP Request Method**: POST
 
-**Roles**: Guest  
+**Roles**: Guest
 
 **GraphQL URL**: `{{BASE_URL}}/v1/graphql`
 
@@ -279,10 +289,10 @@ Retrieves the data associated with the `pools` specified in the pagination param
 
 ```graphql
 mutation ($pool: PaginationInput!) {
-    v1GetPools (pool: $pool) {
-        res
-        success
-    }
+  v1GetPools(pool: $pool) {
+    res
+    success
+  }
 }
 ```
 
@@ -290,10 +300,12 @@ mutation ($pool: PaginationInput!) {
 
 ```json
 {
-   "pool": {
+  "pool": {
+    "network": "{{NETWORK_NAME}}",
+    "contractName": "{{ERC20_COLLATERAL_POOL}}",
     "offset": "0",
     "limit": "30"
-   }
+  }
 }
 ```
 
@@ -351,18 +363,23 @@ Returns the count of pools created within the current instance of `erc20collater
 **GraphQL Body**
 
 ```graphql
-mutation {
-    v1GetTotalPools {
-        res
-        success
-    }
+mutation v1GetTotalPools($data: DefaultInput!) {
+  v1GetTotalPools(data: $data) {
+    res
+    success
+  }
 }
 ```
 
 **GraphQL Variables**
 
 ```json
-{}
+{
+  "data": {
+    "network": "{{NETWORK_NAME}}",
+    "contractName": "{{ERC20_COLLATERAL_POOL}}"
+  }
+}
 ```
 
 **Response**
@@ -384,18 +401,18 @@ Liquidate a pool.
 
 **HTTP Request Method**: POST
 
-**Roles**: Admin  
+**Roles**: Admin
 
 **GraphQL URL**: `{{BASE_URL}}/v1/graphql`
 
 **GraphQL Body**
 
 ```graphql
-mutation ($pool: GetPoolInput!) {
-    v1LiquidatePool(pool: $pool) {
-        res
-        success
-    }
+mutation ($pool: LiquidatePoolInput!) {
+  v1LiquidatePool(pool: $pool) {
+    res
+    success
+  }
 }
 ```
 
@@ -403,9 +420,13 @@ mutation ($pool: GetPoolInput!) {
 
 ```json
 {
-    "pool": {
-        "poolId": "23"
+  "pool": {
+    "network": "{{NETWORK_NAME}}",
+    "contractName": "{{ERC20_COLLATERAL_POOL}}",
+    "data": {
+      "poolId": "3"
     }
+  }
 }
 ```
 
@@ -442,7 +463,7 @@ Retrieves the liquidation information of a loan.
 
 **HTTP Request Method**: POST
 
-**Roles**: Guest  
+**Roles**: Guest
 
 **GraphQL URL**: `{{BASE_URL}}/v1/graphql`
 
@@ -450,10 +471,10 @@ Retrieves the liquidation information of a loan.
 
 ```graphql
 mutation ($pool: GetPoolInput!) {
-    v1GetLiquidationInfo (pool: $pool) {
-        res
-        success
-    }
+  v1GetLiquidationInfo(pool: $pool) {
+    res
+    success
+  }
 }
 ```
 
@@ -461,9 +482,11 @@ mutation ($pool: GetPoolInput!) {
 
 ```json
 {
-   "pool": {
-    "poolId": "23"
-   }
+  "pool": {
+    "network": "{{NETWORK_NAME}}",
+    "contractName": "{{ERC20_COLLATERAL_POOL}}",
+    "poolId": "3"
+  }
 }
 ```
 
@@ -497,18 +520,23 @@ Retrieves the fee for liquidation.
 **GraphQL Body**
 
 ```graphql
-mutation {
-    v1GetLiquidationProtocolFee {
-        res
-        success
-    }
+mutation v1GetLiquidationProtocolFee($data: DefaultInput!) {
+  v1GetLiquidationProtocolFee(data: $data) {
+    res
+    success
+  }
 }
 ```
 
 **GraphQL Variables**
 
 ```json
-{}
+{
+  "data": {
+    "network": "{{NETWORK_NAME}}",
+    "contractName": "{{ERC20_COLLATERAL_POOL}}"
+  }
+}
 ```
 
 **Response**
@@ -538,7 +566,12 @@ Get the total collateral amount.
 
 ```graphql
 query v1GetTotalCollateralAmount {
-  pool_aggregate(where: {liquidated: {_neq: true}}) {
+  global_pool_aggregate(
+    where: {
+      liquidated: { _neq: true }
+      contract_id: { _eq: "{{ERC20_COLLATERAL_POOL_ID}}" }
+    }
+  ) {
     aggregate {
       sum {
         collateralTokenAmount
@@ -564,9 +597,9 @@ Upon successful request completion, the server will respond with a status code o
     "aggregate": {
       "sum": {
         "collateralTokenAmount": 0
-       }
-     }
-   }
+      }
+    }
+  }
 }
 ```
 
@@ -584,10 +617,10 @@ Update the pool metadata.
 
 ```graphql
 mutation ($pool: UpdatePoolMetadataInput!) {
-    v1UpdatePoolMetadata(pool: $pool) {
-        res
-        success
-    }
+  v1UpdatePoolMetadata(pool: $pool) {
+    res
+    success
+  }
 }
 ```
 
@@ -595,19 +628,27 @@ mutation ($pool: UpdatePoolMetadataInput!) {
 
 ```json
 {
-    "pool": {
-        "id": "1",
-        "name": "FACTR Pool 1",
-        "description": "FACTR is a tool that facilitates the connection between the traditional world of assets and the decentralized ecosystem of cryptocurrencies. Explore more about Defactor and its potential in the financial world!",
-        "logo": "https://assets.coingecko.com/coins/images/19201/standard/jFLSu4U9_400x400.png?1696518648",
-        "collateralToken": {
-          "logo": "https://assets.coingecko.com/coins/images/19201/standard/jFLSu4U9_400x400.png?1696518648"
-        }
+  "pool": {
+    "network": "{{NETWORK_NAME}}",
+    "contractName": "{{ERC20_COLLATERAL_POOL}}",
+    "id": "0",
+    "name": "FACTR Pool 0",
+    "description": "FACTR is a tool that facilitates the connection between the traditional world of assets and the decentralized ecosystem of cryptocurrencies. Explore more about Defactor and its potential in the financial world!",
+    "logo": "https://assets.coingecko.com/coins/images/19201/standard/jFLSu4U9_400x400.png?1696518648",
+    "collateralToken": {
+      "logo": "https://assets.coingecko.com/coins/images/19201/standard/jFLSu4U9_400x400.png?1696518648"
+    },
+    "termsConditions": {
+      "title": "What happens if I default on my loan?",
+      "description": "Liquidation is an essential process of lending activity, the process of liquidation occurs when the lending pool has reached its maturity date, are still outstanding and have not been repaid by the borrowers.",
+      "ref": {
+        "label": "Download Repayment Terms & Conditions",
+        "url": "https://www.defactor.com/"
+      }
     }
+  }
 }
 ```
-
-Some fields in the collateral token are obtained by the backend from the blockchain itself, such as `name`, `symbol`, and `token precision`.
 
 **Response**
 
@@ -645,8 +686,12 @@ mutation v1Lend($loan: LendInput!) {
 ```json
 {
   "loan": {
-    "poolId": "628",
-    "amount": "10000000" // 10 of based token contract
+    "network": "{{NETWORK_NAME}}",
+    "contractName": "{{ERC20_COLLATERAL_POOL}}",
+    "data": {
+      "poolId": "628",
+      "amount": "10000000" // 10 of based token contract
+    }
   }
 }
 ```
@@ -686,7 +731,7 @@ The `erc20collateralpool` contract needs the approval to spend money on behalf o
 
 **HTTP Request Method**: POST
 
-**Roles**: Admin  
+**Roles**: Admin
 
 **GraphQL URL**: `{{BASE_URL}}/v1/graphql`
 
@@ -694,10 +739,10 @@ The `erc20collateralpool` contract needs the approval to spend money on behalf o
 
 ```graphql
 mutation ($loan: RepayInput!) {
-    v1Repay(loan: $loan) {
-        res
-        success
-    }
+  v1Repay(loan: $loan) {
+    res
+    success
+  }
 }
 ```
 
@@ -705,10 +750,11 @@ mutation ($loan: RepayInput!) {
 
 ```json
 {
-    "loan": {
-        "poolId": "4",
-        "borrowId": "0"
-    }
+  "loan": {
+    "network": "{{NETWORK_NAME}}",
+    "contractName": "{{ERC20_COLLATERAL_POOL}}",
+    "tx": "0x02f8b3830138825b844190ab00844190ab1e8302d712940a2e94dd0d8efa9598f3fa7287f888dc03add28880b844d8aed14500000000000000000000000000000000000000000000000000000000000000250000000000000000000000000000000000000000000000000000000000000000c080a0afe1724c94d340b1a2304b3db1ad2b83d2f00740a21b81ba682979522c667683a06686ecda38010bec2694f9c10bd974e89ca7aeb0a9957d019353803f4e0356fa"
+  }
 }
 ```
 
@@ -752,7 +798,7 @@ Allows the owner of the address, if they have not already done so, to claim the 
 **GraphQL Body**
 
 ```graphql
-mutation v1ClaimRewards ($loan: ClaimRewardsInput!) {
+mutation v1ClaimRewards($loan: ClaimRewardsInput!) {
   v1ClaimRewards(loan: $loan) {
     res
     success
@@ -764,11 +810,13 @@ mutation v1ClaimRewards ($loan: ClaimRewardsInput!) {
 
 ```json
 {
-   "loan": {
+  "loan": {
+    "network": "{{NETWORK_NAME}}",
+    "contractName": "{{ERC20_COLLATERAL_POOL}}",
     "poolId": "0",
     "address": "0xa8983Fe59b2F08F9F1B3E833c5D47B256F7FE0d5",
     "lendingId": "0"
-   }
+  }
 }
 ```
 
@@ -805,7 +853,7 @@ Retrieves lending information associated with the provided address.
 
 **HTTP Request Method**: POST
 
-**Roles**: Guest  
+**Roles**: Guest
 
 **GraphQL URL**: `{{BASE_URL}}/v1/graphql`
 
@@ -813,10 +861,10 @@ Retrieves lending information associated with the provided address.
 
 ```graphql
 mutation ($loan: GetLendingInput!) {
-    v1GetLending (loan: $loan) {
-        res
-        success
-    }
+  v1GetLending(loan: $loan) {
+    res
+    success
+  }
 }
 ```
 
@@ -824,11 +872,13 @@ mutation ($loan: GetLendingInput!) {
 
 ```json
 {
-   "loan": {
+  "loan": {
+    "network": "{{NETWORK_NAME}}",
+    "contractName": "{{ERC20_COLLATERAL_POOL}}",
     "poolId": "0",
     "address": "0xa8983Fe59b2F08F9F1B3E833c5D47B256F7FE0d5",
     "lendingId": "0"
-   }
+  }
 }
 ```
 
@@ -863,10 +913,10 @@ Returns the amount of lending made for a specific pool and a provided address.
 
 ```graphql
 mutation ($loan: GetTotalLendingInput!) {
-    v1GetTotalLending (loan: $loan) {
-        res
-        success
-    }
+  v1GetTotalLending(loan: $loan) {
+    res
+    success
+  }
 }
 ```
 
@@ -874,10 +924,12 @@ mutation ($loan: GetTotalLendingInput!) {
 
 ```json
 {
-   "loan": {
+  "loan": {
+    "network": "{{NETWORK_NAME}}",
+    "contractName": "{{ERC20_COLLATERAL_POOL}}",
     "poolId": "0",
     "address": "0xa8983Fe59b2F08F9F1B3E833c5D47B256F7FE0d5"
-   }
+  }
 }
 ```
 
@@ -900,7 +952,7 @@ Retrieves the lending participation for a lender in a pool specified in the pagi
 
 **HTTP Request Method**: POST
 
-**Roles**: Guest  
+**Roles**: Guest
 
 **GraphQL URL**: `{{BASE_URL}}/v1/graphql`
 
@@ -908,10 +960,10 @@ Retrieves the lending participation for a lender in a pool specified in the pagi
 
 ```graphql
 mutation ($loan: GetLendingsByLenderInput!) {
-    v1GetLendingsByLender (loan: $loan) {
-        res
-        success
-    }
+  v1GetLendingsByLender(loan: $loan) {
+    res
+    success
+  }
 }
 ```
 
@@ -919,12 +971,14 @@ mutation ($loan: GetLendingsByLenderInput!) {
 
 ```json
 {
-   "loan": {
+  "loan": {
+    "network": "{{NETWORK_NAME}}",
+    "contractName": "{{ERC20_COLLATERAL_POOL}}",
     "offset": "0",
     "limit": "10",
     "poolId": "0",
     "lenderAddress": "0x0FEEe8332394aDc9eB439020DD8D38f4F93999Bd"
-   }
+  }
 }
 ```
 
@@ -968,10 +1022,10 @@ The `erc20collateralpool` contract needs the approval to spend the amount of col
 
 ```graphql
 mutation ($borrow: BorrowInput!) {
-    v1Borrow(borrow: $borrow) {
-        res
-        success
-    }
+  v1Borrow(borrow: $borrow) {
+    res
+    success
+  }
 }
 ```
 
@@ -979,10 +1033,11 @@ mutation ($borrow: BorrowInput!) {
 
 ```json
 {
-    "borrow": {
-        "poolId": "8",
-        "amount": "1000000" // 10 of based token contract
-    }
+  "borrow": {
+    "network": "{{NETWORK_NAME}}",
+    "contractName": "{{ERC20_COLLATERAL_POOL}}",
+    "tx": "0x02f8b38301388259844190ab00844190ab1e83044082940a2e94dd0d8efa9598f3fa7287f888dc03add28880b8440ecbcdab00000000000000000000000000000000000000000000000000000000000000250000000000000000000000000000000000000000000000000000000001c9c380c001a060a1ef201be2fb0062b2c8880eb4f7468745b7d057ef942c4d74c53c51adefdda00a17ecbf456d6aaf9d134334e98b24195ec23566abfd4836b6ac69e80dd111d8"
+  }
 }
 ```
 
@@ -1013,52 +1068,6 @@ Upon successful completion of a request, the server will issue a status code of 
 }
 ```
 
-### `Calculate Collateral Token Amount`
-
-Retrieves the amount of collateral token required for borrowing the indicated amount of token from the pool. Where the amount in the request body corresponds to the token on which the contract is based.
-
-**HTTP Request Method**: POST
-
-**Roles**: Guest  
-
-**GraphQL URL**: `{{BASE_URL}}/v1/graphql`
-
-**GraphQL Body**
-
-```graphql
-mutation ($borrow: CalculateCollateralTokenAmountInput!) {
-    v1CalculateCollateralTokenAmount (borrow: $borrow) {
-        res
-        success
-    }
-}
-
-```
-
-**GraphQL Variables**
-
-```json
-{
-   "borrow": {
-    "poolId": "13",
-    "amount": "12000000" // 12 of based token contract
-   }
-}
-```
-
-**Response**
-
-Upon successful request completion, the server will respond with a status code of 200 and a JSON object containing the collateral amount required to borrow the specified amount of token on which the contract is based. This object includes the following attributes:
-
-```json
-{
-  "v1CalculateCollateralTokenAmount": {
-    "res": "372006973844054693", // amount in collateral token
-    "success": true
-  }
-}
-```
-
 ### `Get Borrow`
 
 Returns the borrow information for a borrower in a given pool.
@@ -1073,10 +1082,10 @@ Returns the borrow information for a borrower in a given pool.
 
 ```graphql
 mutation ($borrow: GetBorrowInput!) {
-    v1GetBorrow (borrow: $borrow) {
-        res
-        success
-    }
+  v1GetBorrow(borrow: $borrow) {
+    res
+    success
+  }
 }
 ```
 
@@ -1084,11 +1093,13 @@ mutation ($borrow: GetBorrowInput!) {
 
 ```json
 {
-   "borrow": {
+  "borrow": {
+    "network": "{{NETWORK_NAME}}",
+    "contractName": "{{ERC20_COLLATERAL_POOL}}",
     "poolId": "2",
     "borrowerAddress": "0x0FEEe8332394aDc9eB439020DD8D38f4F93999Bd",
     "borrowId": "4"
-   }
+  }
 }
 ```
 
@@ -1124,10 +1135,10 @@ Returns the total borrows for a borrower in a pool.
 
 ```graphql
 mutation ($borrow: GetTotalBorrowsInput!) {
-    v1GetTotalBorrows (borrow: $borrow) {
-        res
-        success
-    }
+  v1GetTotalBorrows(borrow: $borrow) {
+    res
+    success
+  }
 }
 ```
 
@@ -1135,10 +1146,12 @@ mutation ($borrow: GetTotalBorrowsInput!) {
 
 ```json
 {
-   "borrow": {
-    "poolId": "35",
+  "borrow": {
+    "network": "{{NETWORK_NAME}}",
+    "contractName": "{{ERC20_COLLATERAL_POOL}}",
+    "poolId": "0",
     "borrowerAddress": "0x0FEEe8332394aDc9eB439020DD8D38f4F93999Bd"
-   }
+  }
 }
 ```
 
@@ -1169,10 +1182,10 @@ Returns the borrows of a pool the borrower is participating in.
 
 ```graphql
 mutation ($borrow: GetBorrowsByBorrowerInput!) {
-    v1GetBorrowsByBorrower (borrow: $borrow) {
-        res
-        success
-    }
+  v1GetBorrowsByBorrower(borrow: $borrow) {
+    res
+    success
+  }
 }
 ```
 
@@ -1180,12 +1193,14 @@ mutation ($borrow: GetBorrowsByBorrowerInput!) {
 
 ```json
 {
-   "borrow": {
+  "borrow": {
+    "network": "{{NETWORK_NAME}}",
+    "contractName": "{{ERC20_COLLATERAL_POOL}}",
     "poolId": "0",
     "borrowerAddress": "0x0FEEe8332394aDc9eB439020DD8D38f4F93999Bd",
     "offset": "3",
     "limit": "2"
-   }
+  }
 }
 ```
 
@@ -1212,24 +1227,24 @@ Upon successful request completion, the server will respond with a status code o
 }
 ```
 
-### `Calculate Repay Interest`
+### `Calculate Collateral Token Amount`
 
-Returns the interest for the repayment of a borrow.
+Retrieves the amount of collateral token required for borrowing the indicated amount of token from the pool. Where the amount in the request body corresponds to the token on which the contract is based.
 
 **HTTP Request Method**: POST
 
-**Roles**: Guest  
+**Roles**: Guest
 
 **GraphQL URL**: `{{BASE_URL}}/v1/graphql`
 
 **GraphQL Body**
 
 ```graphql
-mutation ($loan: CalculateRepayInterestInput!) {
-    v1CalculateRepayInterest (loan: $loan) {
-        res
-        success
-    }
+mutation ($borrow: CalculateCollateralTokenAmountInput!) {
+  v1CalculateCollateralTokenAmount(borrow: $borrow) {
+    res
+    success
+  }
 }
 ```
 
@@ -1237,11 +1252,60 @@ mutation ($loan: CalculateRepayInterestInput!) {
 
 ```json
 {
-   "loan": {
-    "poolId": "0",
+  "borrow": {
+    "network": "{{NETWORK_NAME}}",
+    "contractName": "{{ERC20_COLLATERAL_POOL}}",
+    "poolId": "37",
+    "amount": "30000000"
+  }
+}
+```
+
+**Response**
+
+Upon successful request completion, the server will respond with a status code of 200 and a JSON object containing the collateral amount required to borrow the specified amount of token on which the contract is based. This object includes the following attributes:
+
+```json
+{
+  "v1CalculateCollateralTokenAmount": {
+    "res": "372006973844054693", // amount in collateral token
+    "success": true
+  }
+}
+```
+
+### `Calculate Repay Interest`
+
+Returns the interest for the repayment of a borrow.
+
+**HTTP Request Method**: POST
+
+**Roles**: Guest
+
+**GraphQL URL**: `{{BASE_URL}}/v1/graphql`
+
+**GraphQL Body**
+
+```graphql
+mutation ($loan: CalculateRepayInterestInput!) {
+  v1CalculateRepayInterest(loan: $loan) {
+    res
+    success
+  }
+}
+```
+
+**GraphQL Variables**
+
+```json
+{
+  "loan": {
+    "network": "{{NETWORK_NAME}}",
+    "contractName": "{{ERC20_COLLATERAL_POOL}}",
+    "poolId": "37",
     "borrowerAddress": "0x0FEEe8332394aDc9eB439020DD8D38f4F93999Bd",
     "borrowId": "0"
-   }
+  }
 }
 ```
 
@@ -1260,6 +1324,71 @@ Upon successful request completion, the server will respond with a status code o
 
 ## Utilities
 
+### `Erc20 Approve`
+
+Authorize a third party address to expend a designated sum of funds of the indicated token.
+
+| Property             | Description                                                       |
+| -------------------- | ----------------------------------------------------------------- |
+| `tokenAddress`       | The address where the collateral token is deployed.               |
+| `addressToAuthorize` | The address where the `erc20collateralpool` contract is deployed. |
+
+**HTTP Request Method**: POST
+
+**Roles**: Admin
+
+**GraphQL URL**: `{{BASE_URL}}/v1/graphql`
+
+**GraphQL Body**
+
+```graphql
+mutation ($token: Erc20ApproveInput!) {
+  v1Erc20Approve(token: $token) {
+    res
+    success
+  }
+}
+```
+
+**GraphQL Variables**
+
+```json
+{
+  "token": {
+    "contractName": "{{ERC20_COLLATERAL_POOL}}",
+    "network": "{{NETWORK_NAME}}",
+    "tx": "0x02f8b383aa36a7058424bf2f8e85047a307cec82c9799475fe3476d90598080f7d12365020c438943dcef380b844095ea7b3000000000000000000000000ec92ca91907fd64e446122953601e774fd3cd6e60000000000000000000000000000000000000000000000000000000000000190c080a0530e4f4e58484c18038ac30b16fe4a93b91de19420aa9fc0de9b49edcc42a941a0582664ed5820e481c05cda95532df03383b1bdc73f485e51eef9ada80faa5803"
+  }
+}
+```
+
+**Response**
+
+Upon successful completion of a request, the server will issue a status code of 200 along with a JSON object encapsulating pertinent blockchain transaction details. This object encompasses the following attributes:
+
+```json
+{
+  "v1Erc20Approve": {
+    "res": {
+      "_type": "TransactionResponse",
+      "accessList": [],
+      "blobVersionedHashes": null,
+      "blockHash": null,
+      "blockNumber": null,
+      "chainId": "80001",
+      "from": "0xa8983Fe59b2F08F9F1B3E833c5D47B256F7FE0d5",
+      "gasLimit": "150012",
+      "gasPrice": null,
+      "hash": "0x68dc6f65b96a427c4c289371637b063bbe20d9841d6c8183f06e657ab10efb1e",
+      .
+      .
+      .
+    },
+    "success": true
+  }
+}
+```
+
 ### `Get Total Usdc Available`
 
 Get total `usdc` available which is equal to `lent - borrowed`.
@@ -1274,7 +1403,7 @@ Get total `usdc` available which is equal to `lent - borrowed`.
 
 ```graphql
 query v1GetTotalUsdcAvailable {
-  pool_aggregate {
+  {{NETWORK_NAME}}_pool_aggregate {
     aggregate {
       sum {
         borrowed
@@ -1314,7 +1443,7 @@ Get the dollar price for token.
 
 **HTTP Request Method**: POST
 
-**Roles**: Guest  
+**Roles**: Guest
 
 **GraphQL URL**: `{{BASE_URL}}/v1/graphql`
 
@@ -1322,7 +1451,7 @@ Get the dollar price for token.
 
 ```graphql
 query v1GetDollarPriceForToken {
-    token_price(order_by: { date: desc }, limit: 1) {
+    {{NETWORK_NAME}}_token_price(order_by: { date: desc }, limit: 1) {
       id
       date
       price
@@ -1345,7 +1474,7 @@ Upon successful request completion, the server will respond with a status code o
 
 ```json
 {
- "token_price": [
+  "token_price": [
     {
       "id": "dfcec840-6a79-4cc0-b368-f07b7a566b85",
       "date": "1970-01-01T00:00:00.000Z",
@@ -1355,71 +1484,6 @@ Upon successful request completion, the server will respond with a status code o
       "tokenName": "tokenName"
     }
   ]
-}
-```
-
-### `Erc20 Approve`
-
-Authorize a third party address to expend a designated sum of funds of the indicated token.
-
-| Property             | Description                                                       |
-| -------------------- | ----------------------------------------------------------------- |
-| `tokenAddress`       | The address where the collateral token is deployed.               |
-| `addressToAuthorize` | The address where the `erc20collateralpool` contract is deployed. |
-
-**HTTP Request Method**: POST
-
-**Roles**: Admin  
-
-**GraphQL URL**: `{{BASE_URL}}/v1/graphql`
-
-**GraphQL Body**
-
-```graphql
-mutation ($token: Erc20ApproveInput!) {
-    v1Erc20Approve(token: $token) {
-        res
-        success
-    }
-}
-```
-
-**GraphQL Variables**
-
-```json
-{
-    "token": {
-        "tokenAddress": "0x80D9E7bC3D962878b292F9536b38E52e266a77Fd",
-        "addressToAuthorize": "0xDFeB6A537da6A3B2dCa458aCBcb3C38180AC8B66",
-        "amount": "1050000"
-    }
-}
-```
-
-**Response**
-
-Upon successful completion of a request, the server will issue a status code of 200 along with a JSON object encapsulating pertinent blockchain transaction details. This object encompasses the following attributes:
-
-```json
-{
-  "v1Erc20Approve": {
-    "res": {
-      "_type": "TransactionResponse",
-      "accessList": [],
-      "blobVersionedHashes": null,
-      "blockHash": null,
-      "blockNumber": null,
-      "chainId": "80001",
-      "from": "0xa8983Fe59b2F08F9F1B3E833c5D47B256F7FE0d5",
-      "gasLimit": "150012",
-      "gasPrice": null,
-      "hash": "0x68dc6f65b96a427c4c289371637b063bbe20d9841d6c8183f06e657ab10efb1e",
-      .
-      .
-      .
-    },
-    "success": true
-  }
 }
 ```
 
@@ -1436,18 +1500,23 @@ Returns the configured `usdc` contract address within the `erc20collateraltoken`
 **GraphQL Body**
 
 ```graphql
-mutation {
-    v1GetUsdc {
-        res
-        success
-    }
+mutation v1GetUsdc($data: DefaultInput!) {
+  v1GetUsdc(data: $data) {
+    res
+    success
+  }
 }
 ```
 
 **GraphQL Variables**
 
 ```json
-{}
+{
+  "data": {
+    "network": "{{NETWORK_NAME}}",
+    "contractName": "{{ERC20_COLLATERAL_POOL}}"
+  }
+}
 ```
 
 **Response**
@@ -1463,7 +1532,7 @@ Upon successful request completion, the server will issue a status code of 200 a
 }
 ```
 
-### `Get Historical Contributions`
+### `Get Historical Balance`
 
 Get the historical contributions by filtered by event and group by period of time
 
@@ -1481,23 +1550,22 @@ Get the historical contributions by filtered by event and group by period of tim
 **GraphQL Body**
 
 ```graphql
-query v1GetHistoricalContributions($stats: GetHistoricalContributionsInput!) {
-  v1GetHistoricalContributions(stats: $stats) {
+query v1GetHistoricalBalance($stats: GetHistoricalBalanceInput!) {
+  v1GetHistoricalBalance(stats: $stats) {
     res
     success
   }
 }
-
 ```
 
 **GraphQL Variables**
 
 ```json
 {
-    "stats": {
-        "filterBy": "year",
-        "byEvent": "LendEvent"
-    }
+  "stats": {
+    "networks": ["{{NETWORK_NAME}}", "{{NETWORK_NAME}}"],
+    "filterBy": "month"
+  }
 }
 ```
 
@@ -1527,9 +1595,33 @@ Upon successful request completion, the server will issue a status code of 200 a
 }
 ```
 
+### `Config`
+
+**HTTP Request Method**: POST
+
+**GraphQL URL**: `{{BASE_URL}}/v1/graphql`
+
+**GraphQL Body**
+
+```graphql
+query {
+  getConfig {
+    res
+    success
+  }
+}
+```
+
+**GraphQL Variables**
+
+```json
+{}
+```
+
 ## Error Reference
 
 ### Error Response Format
+
 The errors have the GraphQL error schema, an object with an `errors` array property where each item has the following schema:
 
 | Property     | Description                                                                    |
@@ -1541,136 +1633,118 @@ The errors have the GraphQL error schema, an object with an `errors` array prope
 
 The variable has a wrong type:
 
-``` json
+```json
 {
-  "errors":
-    [
-      {
-        "message": "expected a string for type 'String', but found a number",
-        "extensions":
-          {
-            "path": "$.selectionSet.v1GetPool.args.pool.poolId",
-            "code": "validation-failed"
-          }
+  "errors": [
+    {
+      "message": "expected a string for type 'String', but found a number",
+      "extensions": {
+        "path": "$.selectionSet.v1GetPool.args.pool.poolId",
+        "code": "validation-failed"
       }
-    ]
-}
-
- ```
-
-The variable is missing in the request body:
-
-``` json
-{
-  "errors":
-    [
-      {
-        "message": "missing required field 'poolId'",
-        "extensions":
-          {
-            "path": "$.selectionSet.v1GetPool.args.pool.poolId",
-            "code": "validation-failed"
-          }
-      }
-    ]
-}
-
- ```
-
-The field does not exists or the role has no permissions:
-
-``` json
-{
-  "errors":
-    [
-      {
-        "message": "field 'v1UpdatePoolMetadata' not found in type: 'mutation_root'",
-        "extensions":
-          {
-            "path": "$.selectionSet.v1UpdatePoolMetadata",
-            "code": "validation-failed"
-          }
-      }
-    ]
-}
-
- ```
-
-The variable is not in the request body schema:
-
-``` json
-{
-  "errors":
-    [
-      {
-        "message": "Unexpected variable pool",
-        "extensions":
-          {
-            "path": "$",  
-            "code": "bad-request" 
-          }
-      }
-    ]
-}
-
- ```
-
-The GraphQL variables object is not a valid json:
-
-``` json
-{
-    "errors": [
-        {
-            "message": "Error in $: Failed reading: satisfy. Expecting object value at X",
-            "extensions": {
-                "path": "$",
-                "code": "invalid-json"
-            }
-        }
-    ]
+    }
+  ]
 }
 ```
 
+The variable is missing in the request body:
+
+```json
+{
+  "errors": [
+    {
+      "message": "missing required field 'poolId'",
+      "extensions": {
+        "path": "$.selectionSet.v1GetPool.args.pool.poolId",
+        "code": "validation-failed"
+      }
+    }
+  ]
+}
+```
+
+The field does not exists or the role has no permissions:
+
+```json
+{
+  "errors": [
+    {
+      "message": "field 'v1UpdatePoolMetadata' not found in type: 'mutation_root'",
+      "extensions": {
+        "path": "$.selectionSet.v1UpdatePoolMetadata",
+        "code": "validation-failed"
+      }
+    }
+  ]
+}
+```
+
+The variable is not in the request body schema:
+
+```json
+{
+  "errors": [
+    {
+      "message": "Unexpected variable pool",
+      "extensions": {
+        "path": "$",
+        "code": "bad-request"
+      }
+    }
+  ]
+}
+```
+
+The GraphQL variables object is not a valid json:
+
+```json
+{
+  "errors": [
+    {
+      "message": "Error in $: Failed reading: satisfy. Expecting object value at X",
+      "extensions": {
+        "path": "$",
+        "code": "invalid-json"
+      }
+    }
+  ]
+}
+```
 
 The endpoint does not exists:
 
-``` json
+```json
 {
-  "errors":
-    [
-      {
-        "message": "Endpoint not found",
-        "extensions":
-          {
-            "path": "$",
-            "code": "not-found"
-          }
+  "errors": [
+    {
+      "message": "Endpoint not found",
+      "extensions": {
+        "path": "$",
+        "code": "not-found"
       }
-    ]
+    }
+  ]
 }
-
- ```
+```
 
 There is no pool with the provided id:
 
-``` json
+```json
 {
-  "errors":
-    [
-      {
-        "message": "Pool id 400 does not exist",
-        "extensions":
-        {
-          "path": "$",
-          "code": "unexpected"
-        }
+  "errors": [
+    {
+      "message": "Pool id 400 does not exist",
+      "extensions": {
+        "path": "$",
+        "code": "unexpected"
       }
-    ]
+    }
+  ]
 }
-
- ```
+```
 
 ### Types of Error
+
 **General**
 
 - The date provided has already passed
