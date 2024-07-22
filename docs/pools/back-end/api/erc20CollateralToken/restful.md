@@ -599,8 +599,10 @@ The `erc20collateralpool` contract needs the approval to spend money on behalf o
   "loan": {
     "network": "{{NETWORK_NAME}}",
     "contractName": "erc20-collateral-pool",
-    "poolId": "628",
-    "borrowId": "0"
+    "data": {
+      "poolId": "628",
+      "borrowId": "0"
+    }
   }
 }
 ```
@@ -649,9 +651,11 @@ Allows the owner of the address, if they have not already done so, to claim the 
   "loan": {
     "network": "{{NETWORK_NAME}}",
     "contractName": "erc20-collateral-pool",
-    "poolId": "0",
-    "address": "0xa8983Fe59b2F08F9F1B3E833c5D47B256F7FE0d5",
-    "lendingId": "0"
+    "data": {
+      "poolId": "0",
+      "address": "0xa8983Fe59b2F08F9F1B3E833c5D47B256F7FE0d5",
+      "lendingId": "0"
+    }
   }
 }
 ```

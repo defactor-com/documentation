@@ -393,7 +393,9 @@ Close the specified `poolId` if possible.
   "pool": {
     "network": "{{NETWORK_NAME}}",
     "contractName": "counterparty-pool",
-    "poolId": "0"
+    "data": {
+      "poolId": "0"
+    }
   }
 }
 ```
@@ -442,7 +444,9 @@ Archive the specified `poolId` if possible.
   "pool": {
     "network": "{{NETWORK_NAME}}",
     "contractName": "counterparty-pool",
-    "poolId": "0"
+    "data": {
+      "poolId": "0"
+    }
   }
 }
 ```
@@ -547,8 +551,10 @@ The `counterpartypool` contract needs the approval to spend money on behalf of t
   "loan": {
     "network": "{{NETWORK_NAME}}",
     "contractName": "counterparty-pool",
-    "poolId": "0",
-    "amount": "4000000000"
+    "data": {
+      "poolId": "0",
+      "amount": "4000000000"
+    }
   }
 }
 ```
@@ -597,7 +603,9 @@ Allows the owner of the address, if they have not already done so, to claim the 
   "loan": {
     "network": "{{NETWORK_NAME}}",
     "contractName": "counterparty-pool",
-    "poolId": "0"
+    "data": {
+      "poolId": "0"
+    }
   }
 }
 ```

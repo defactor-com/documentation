@@ -489,7 +489,9 @@ mutation ($pool: PoolDataInput!) {
   "pool": {
     "network": "{{NETWORK_NAME}}",
     "contractName": "counterparty-pool",
-    "poolId": "0"
+    "data": {
+      "poolId": "0"
+    }
   }
 }
 ```
@@ -549,7 +551,9 @@ mutation ($pool: PoolDataInput!) {
   "pool": {
     "network": "{{NETWORK_NAME}}",
     "contractName": "counterparty-pool",
-    "poolId": "0"
+    "data": {
+      "poolId": "0"
+    }
   }
 }
 ```
@@ -733,7 +737,9 @@ mutation v1ClaimRewards($loan: ClaimRewardsInput!) {
   "loan": {
     "network": "{{NETWORK_NAME}}",
     "contractName": "counterparty-pool",
-    "poolId": "0"
+    "data": {
+      "poolId": "0"
+    }
   }
 }
 ```
