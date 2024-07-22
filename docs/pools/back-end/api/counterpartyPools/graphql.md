@@ -129,6 +129,8 @@ Upon successful completion of a request, the server will issue a status code of 
 
 ## Pools
 
+Unlike the contract, the status are in lowercase; Additionally, to streamline interaction the API include intermediate status such as collectable, closable, and archivable.
+
 The `collateralDetails` is an array which each element has the following properties:
 
 | Property          | Description                                         |
@@ -139,7 +141,7 @@ The `collateralDetails` is an array which each element has the following propert
 
 ### `Create Pool`
 
-Create a new pool with the indicated collateral token using the `collateralDetails` schema. Once the `endTime` period concludes, neither lending nor borrowing are allowed.
+Create a new pool with the indicated collateral tokens using the `collateralDetails` schema.
 
 **HTTP Request Method**: POST
 
@@ -168,8 +170,8 @@ mutation ($pool: CreatePoolInput!) {
     "data": {
       "endTime": "2024-08-09T23:58:00.000",
       "interest": 10,
-      "softCap": "300000000",
-      "hardCap": "800000000",
+      "softCap": "300000000", // 300 USDC
+      "hardCap": "800000000", // 800 USDC
       "collateralDetails": []
     }
   }
@@ -244,25 +246,23 @@ Upon successful request completion, the server will return a status code of 200 
 {
   "v1GetPool": {
     "res": {
-      "borrowed": "0",
-      "collateralDetails": {
-        "collateralToken": "0x81da82b49CD9Ee7b7d67B4655784581f30590eA1",
-        "collateralTokenChainlink": "0x997a6BCe1372baca6Bbb8db382Cb12F2dDca2b45",
-        "collateralTokenFactor": "115",
-        "collateralTokenPercentage": "60"
+      "borrowed": "980000",
+      "closedTime": "2024-07-18T20:45:30.000Z",
+      "collateralDetails": [],
+      "endTime": "2024-07-18T20:44:07.000Z",
+      "hardCap": "5000000",
+      "id": "0",
+      "interest": 1,
+      "metadata": {
+        "collateralDetails": []
       },
-      "collateralTokenAmount": "0",
-      "collateralTokenAmountAtLiquidation": "0",
-      "endTime": "1706924460",
-      "interest": "10",
-      "lastUpdated": "0",
-      "lended": "0",
-      "liquidated": false,
-      "liquidatedCollateral": "0",
-      "repaid": "0",
-      "rewardPerToken": "0",
-      "rewardRate": "0",
-      "rewards": "0"
+      "poolOwner": "0xa8983Fe59b2F08F9F1B3E833c5D47B256F7FE0d5",
+      "repaid": "2000000",
+      "rewards": "2000000",
+      "softCap": "3000000",
+      "startDate": "2024-07-18T20:43:12.000Z",
+      "status": "closed",
+      "supplied": "1000000"
     },
     "success": true
   }
@@ -313,25 +313,22 @@ Upon successful request completion, the server will respond with a status code o
     "res": {
     "data":
       [{
-        "borrowed": "2630",
-        "collateralDetails": {
-          "collateralToken": "0x81da82b49CD9Ee7b7d67B4655784581f30590eA1",
-          "collateralTokenChainlink": "0x997a6BCe1372baca6Bbb8db382Cb12F2dDca2b45",
-          "collateralTokenFactor": "115",
-          "collateralTokenPercentage": "50"
+        "borrowed": "980000",
+        "collateralDetails": [],
+        "endTime": "2024-07-19T20:42:26.000Z",
+        "hardCap": "5000000",
+        "id": "0",
+        "interest": 1,
+        "metadata": {
+          "collateralDetails": []
         },
-        "collateralTokenAmount": "80353506350309",
-        "collateralTokenAmountAtLiquidation": "0",
-        "endTime": "1711925999",
-        "interest": "10",
-        "lastUpdated": "1707770796",
-        "lended": "6225000150",
-        "liquidated": false,
-        "liquidatedCollateral": "0",
-        "repaid": "470",
-        "rewardPerToken": "419803556",
-        "rewardRate": "1100",
-        "rewards": "0"
+        "poolOwner": "0xa8983Fe59b2F08F9F1B3E833c5D47B256F7FE0d5",
+        "repaid": "0",
+        "rewards": "0",
+        "softCap": "1000000",
+        "startDate": "2024-07-18T20:42:32.000Z",
+        "status": "collectable",
+        "supplied": "1000000"
       },
       .
       .
@@ -421,9 +418,13 @@ mutation ($pool: UpdatePoolMetadataInput!) {
     "name": "FACTR Pool 0",
     "description": "FACTR is a tool that facilitates the connection between the traditional world of assets and the decentralized ecosystem of cryptocurrencies. Explore more about Defactor and its potential in the financial world!",
     "logo": "https://assets.coingecko.com/coins/images/19201/standard/jFLSu4U9_400x400.png?1696518648",
-    "collateralToken": {
-      "logo": "https://assets.coingecko.com/coins/images/19201/standard/jFLSu4U9_400x400.png?1696518648"
-    },
+    "collateralDetails": [
+      {
+        "address": "0x60E87395b0101F85C623c38Be010574f958496db",
+        "standard": "ERC20",
+        "logo": "https://assets.coingecko.com/coins/images/19201/standard/jFLSu4U9_400x400.png?1696518648"
+      }
+    ],
     "termsConditions": {
       "title": "What happens if I default on my loan?",
       "description": "Liquidation is an essential process of lending activity, the process of liquidation occurs when the lending pool has reached its maturity date, are still outstanding and have not been repaid by the borrowers.",
