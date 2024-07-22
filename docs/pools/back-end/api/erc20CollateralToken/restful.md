@@ -63,7 +63,7 @@ Upon successful completion of a request, the server will issue a status code of 
 {
   "v1Login": {
     "res": {
-      "accessToken": <jwt>,
+      "accessToken": "<jwt>",
       "refreshToken": "0a1a6d5f-1bf9-4540-8c22-d9442a75476f"
     },
     "success": true
@@ -99,7 +99,7 @@ Upon successful completion of a request, the server will issue a status code of 
 {
   "v1RestoreSession": {
     "res": {
-      "accessToken": <jwt>,
+      "accessToken": "<jwt>",
       "refreshToken": "0a1a6d5f-1bf9-4540-8c22-d9442a75476f"
     },
     "success": true
