@@ -146,13 +146,16 @@ Create a new pool with the indicated collateral tokens using the `collateralDeta
 {
   "pool": {
     "network": "{{NETWORK_NAME}}",
-    "contractName": "{{COUNTER_PARTY_POOL}}",
+    "contractName": "counterparty-pool",
     "data": {
       "endTime": "2024-08-09T23:58:00.000",
       "interest": 10,
       "softCap": "300000000", // 300 USDC
       "hardCap": "800000000", // 800 USDC
-      "collateralDetails": []
+      "collateralDetails": [{
+        "address": "0xa8983Fe59b2F08F9F1B3E833c5D47B256F7FE0d5",
+        "amount": "500000000",
+      }]
     }
   }
 }
@@ -201,7 +204,7 @@ Retrieves the data associated with the specified `poolId`.
 {
   "pool": {
     "network": "{{NETWORK_NAME}}",
-    "contractName": "{{COUNTER_PARTY_POOL}}",
+    "contractName": "counterparty-pool",
     "poolId": "6"
   }
 }
@@ -254,7 +257,7 @@ Retrieves the data associated with the `pools` specified in the pagination param
 {
   "pool": {
     "network": "{{NETWORK_NAME}}",
-    "contractName": "{{COUNTER_PARTY_POOL}}",
+    "contractName": "counterparty-pool",
     "offset": "6",
     "limit": "10"
   }
@@ -315,7 +318,7 @@ Returns the count of pools created within the current instance of `erc20collater
 {
   "data": {
     "network": "{{NETWORK_NAME}}",
-    "contractName": "{{COUNTER_PARTY_POOL}}"
+    "contractName": "counterparty-pool"
   }
 }
 ```
@@ -349,7 +352,7 @@ Update the pool metadata
 {
   "pool": {
     "network": "{{NETWORK_NAME}}",
-    "contractName": "{{COUNTER_PARTY_POOL}}",
+    "contractName": "counterparty-pool",
     "id": "0",
     "name": "FACTR Pool 0",
     "description": "FACTR is a tool that facilitates the connection between the traditional world of assets and the decentralized ecosystem of cryptocurrencies. Explore more about Defactor and its potential in the financial world!",
@@ -389,7 +392,7 @@ Close the specified `poolId` if possible.
 {
   "pool": {
     "network": "{{NETWORK_NAME}}",
-    "contractName": "{{COUNTER_PARTY_POOL}}",
+    "contractName": "counterparty-pool",
     "poolId": "0"
   }
 }
@@ -438,7 +441,7 @@ Archive the specified `poolId` if possible.
 {
   "pool": {
     "network": "{{NETWORK_NAME}}",
-    "contractName": "{{COUNTER_PARTY_POOL}}",
+    "contractName": "counterparty-pool",
     "poolId": "0"
   }
 }
@@ -489,7 +492,7 @@ Lend to a pool the specific amount of the token on which the contract is based. 
 {
   "loan": {
     "network": "{{NETWORK_NAME}}",
-    "contractName": "{{COUNTER_PARTY_POOL}}",
+    "contractName": "counterparty-pool",
     "data": {
       "poolId": "2",
       "amount": "300000000"
@@ -543,7 +546,7 @@ The `counterpartypool` contract needs the approval to spend money on behalf of t
 {
   "loan": {
     "network": "{{NETWORK_NAME}}",
-    "contractName": "{{COUNTER_PARTY_POOL}}",
+    "contractName": "counterparty-pool",
     "poolId": "0",
     "amount": "4000000000"
   }
@@ -593,7 +596,7 @@ Allows the owner of the address, if they have not already done so, to claim the 
 {
   "loan": {
     "network": "{{NETWORK_NAME}}",
-    "contractName": "{{COUNTER_PARTY_POOL}}",
+    "contractName": "counterparty-pool",
     "poolId": "0"
   }
 }
@@ -642,7 +645,7 @@ If possible recover the supplied amount to a pool. This endpoint is equivalent t
 {
   "loan": {
     "network": "{{NETWORK_NAME}}",
-    "contractName": "{{COUNTER_PARTY_POOL}}",
+    "contractName": "counterparty-pool",
     "data": {
       "poolId": "2"
     }
@@ -695,7 +698,7 @@ Borrow the supplied amount of the base token from the pool if the deadline was r
 {
   "borrow": {
     "network": "{{NETWORK_NAME}}",
-    "contractName": "{{COUNTER_PARTY_POOL}}",
+    "contractName": "counterparty-pool",
     "data": {
       "poolId": "1"
     }
@@ -753,7 +756,7 @@ Authorize a third party address to expend a designated sum of funds of the indic
 {
   "token": {
     "network": "{{NETWORK_NAME}}",
-    "contractName": "{{COUNTER_PARTY_POOL}}",
+    "contractName": "counterparty-pool",
     "data": {
       "address": "0xec92Ca91907fD64E446122953601E774Fd3CD6e6",
       "amount": 200000000

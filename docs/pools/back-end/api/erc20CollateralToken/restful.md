@@ -134,7 +134,7 @@ Create a new pool with the indicated collateral token using the `collateralDetai
 {
   "pool": {
     "network": "{{NETWORK_NAME}}",
-    "contractName": "{{ERC20_COLLATERAL_POOL}}",
+    "contractName": "erc20-collateral-pool",
     "data": {
       "endTime": "2024-08-09T23:58:00.000",
       "interest": 10,
@@ -192,7 +192,7 @@ Retrieves the data associated with the specified `poolId`.
 {
   "pool": {
     "network": "{{NETWORK_NAME}}",
-    "contractName": "{{ERC20_COLLATERAL_POOL}}",
+    "contractName": "erc20-collateral-pool",
     "poolId": "6"
   }
 }
@@ -247,7 +247,7 @@ Retrieves the data associated with the `pools` specified in the pagination param
 {
   "pool": {
     "network": "{{NETWORK_NAME}}",
-    "contractName": "{{ERC20_COLLATERAL_POOL}}",
+    "contractName": "erc20-collateral-pool",
     "offset": "6",
     "limit": "10"
   }
@@ -311,7 +311,7 @@ Returns the count of pools created within the current instance of `erc20collater
 {
   "data": {
     "network": "{{NETWORK_NAME}}",
-    "contractName": "{{ERC20_COLLATERAL_POOL}}"
+    "contractName": "erc20-collateral-pool"
   }
 }
 ```
@@ -345,7 +345,7 @@ Liquidate a pool.
 {
   "pool": {
     "network": "{{NETWORK_NAME}}",
-    "contractName": "{{ERC20_COLLATERAL_POOL}}",
+    "contractName": "erc20-collateral-pool",
     "data": {
       "poolId": "3"
     }
@@ -396,7 +396,7 @@ Retrieves the liquidation information of a loan.
 {
   "pool": {
     "network": "{{NETWORK_NAME}}",
-    "contractName": "{{ERC20_COLLATERAL_POOL}}",
+    "contractName": "erc20-collateral-pool",
     "poolId": "0"
   }
 }
@@ -435,7 +435,7 @@ Retrieves the fee for liquidation.
 {
   "data": {
     "network": "{{NETWORK_NAME}}",
-    "contractName": "{{ERC20_COLLATERAL_POOL}}"
+    "contractName": "erc20-collateral-pool"
   }
 }
 ```
@@ -469,7 +469,7 @@ Get the total collateral amount.
 {
   "data": {
     "network": "{{NETWORK_NAME}}",
-    "contractName": "{{ERC20_COLLATERAL_POOL}}"
+    "contractName": "erc20-collateral-pool"
   }
 }
 ```
@@ -506,7 +506,7 @@ Update the pool metadata.
 {
   "pool": {
     "network": "{{NETWORK_NAME}}",
-    "contractName": "{{ERC20_COLLATERAL_POOL}}",
+    "contractName": "erc20-collateral-pool",
     "id": "0",
     "name": "FACTR Pool 0",
     "description": "FACTR is a tool that facilitates the connection between the traditional world of assets and the decentralized ecosystem of cryptocurrencies. Explore more about Defactor and its potential in the financial world!",
@@ -544,7 +544,7 @@ Lend to a pool the specific amount of the token on which the contract is based.
 {
   "loan": {
     "network": "{{NETWORK_NAME}}",
-    "contractName": "{{ERC20_COLLATERAL_POOL}}",
+    "contractName": "erc20-collateral-pool",
     "data": {
       "poolId": "2",
       "amount": "300000000"
@@ -598,7 +598,7 @@ The `erc20collateralpool` contract needs the approval to spend money on behalf o
 {
   "loan": {
     "network": "{{NETWORK_NAME}}",
-    "contractName": "{{ERC20_COLLATERAL_POOL}}",
+    "contractName": "erc20-collateral-pool",
     "poolId": "628",
     "borrowId": "0"
   }
@@ -648,7 +648,7 @@ Allows the owner of the address, if they have not already done so, to claim the 
 {
   "loan": {
     "network": "{{NETWORK_NAME}}",
-    "contractName": "{{ERC20_COLLATERAL_POOL}}",
+    "contractName": "erc20-collateral-pool",
     "poolId": "0",
     "address": "0xa8983Fe59b2F08F9F1B3E833c5D47B256F7FE0d5",
     "lendingId": "0"
@@ -699,7 +699,7 @@ Retrieves lending information associated with the provided address.
 {
   "loan": {
     "network": "{{NETWORK_NAME}}",
-    "contractName": "{{ERC20_COLLATERAL_POOL}}",
+    "contractName": "erc20-collateral-pool",
     "poolId": "0",
     "address": "0x0FEEe8332394aDc9eB439020DD8D38f4F93999Bd",
     "lendingId": "0"
@@ -740,7 +740,7 @@ Returns the amount of lending made for a specific pool and a provided address.
 {
   "loan": {
     "network": "{{NETWORK_NAME}}",
-    "contractName": "{{ERC20_COLLATERAL_POOL}}",
+    "contractName": "erc20-collateral-pool",
     "poolId": "0",
     "address": "0x0FEEe8332394aDc9eB439020DD8D38f4F93999Bd"
   }
@@ -776,7 +776,7 @@ Retrieves the lending participation for a lender in a pool specified in the pagi
 {
   "loan": {
     "network": "{{NETWORK_NAME}}",
-    "contractName": "{{ERC20_COLLATERAL_POOL}}",
+    "contractName": "erc20-collateral-pool",
     "offset": "0",
     "limit": "10",
     "poolId": "0",
@@ -827,7 +827,7 @@ The `erc20collateralpool` contract needs the approval to spend the amount of col
 {
   "borrow": {
     "network": "{{NETWORK_NAME}}",
-    "contractName": "{{ERC20_COLLATERAL_POOL}}",
+    "contractName": "erc20-collateral-pool",
     "data": {
       "poolId": "1",
       "amount": "15000000" // 15 of based token contract
@@ -879,7 +879,7 @@ Returns the borrow information for a borrower in a given pool.
 {
   "borrow": {
     "network": "{{NETWORK_NAME}}",
-    "contractName": "{{ERC20_COLLATERAL_POOL}}",
+    "contractName": "erc20-collateral-pool",
     "poolId": "0",
     "borrowerAddress": "0x0FEEe8332394aDc9eB439020DD8D38f4F93999Bd",
     "borrowId": "5"
@@ -921,7 +921,7 @@ Returns the total borrows for a borrower in a pool.
 {
   "borrow": {
     "network": "{{NETWORK_NAME}}",
-    "contractName": "{{ERC20_COLLATERAL_POOL}}",
+    "contractName": "erc20-collateral-pool",
     "poolId": "0",
     "borrowerAddress": "0x0FEEe8332394aDc9eB439020DD8D38f4F93999Bd"
   }
@@ -957,7 +957,7 @@ Returns the borrows of a pool the borrower is participating in.
 {
   "borrow": {
     "network": "{{NETWORK_NAME}}",
-    "contractName": "{{ERC20_COLLATERAL_POOL}}",
+    "contractName": "erc20-collateral-pool",
     "poolId": "0",
     "borrowerAddress": "0x0FEEe8332394aDc9eB439020DD8D38f4F93999Bd",
     "offset": "0",
@@ -1005,7 +1005,7 @@ Retrieves the amount of collateral token required for borrowing the indicated am
 {
   "borrow": {
     "network": "{{NETWORK_NAME}}",
-    "contractName": "{{ERC20_COLLATERAL_POOL}}",
+    "contractName": "erc20-collateral-pool",
     "poolId": "0",
     "amount": "10000000" // 10 of based token contract
   }
@@ -1041,7 +1041,7 @@ Returns the interest for the repayment of a borrow.
 {
   "loan": {
     "network": "{{NETWORK_NAME}}",
-    "contractName": "{{ERC20_COLLATERAL_POOL}}",
+    "contractName": "erc20-collateral-pool",
     "poolId": "0",
     "borrowerAddress": "0x0FEEe8332394aDc9eB439020DD8D38f4F93999Bd",
     "borrowId": "136"
@@ -1085,7 +1085,7 @@ Authorize a third party address to expend a designated sum of funds of the indic
 {
   "token": {
     "network": "{{NETWORK_NAME}}",
-    "contractName": "{{ERC20_COLLATERAL_POOL}}",
+    "contractName": "erc20-collateral-pool",
     "data": {
       "address": "0xec92Ca91907fD64E446122953601E774Fd3CD6e6",
       "amount": 200000000
@@ -1137,7 +1137,7 @@ Returns the configured `usdc` contract address within the `erc20collateraltoken`
 {
   "data": {
     "network": "{{NETWORK_NAME}}",
-    "contractName": "{{ERC20_COLLATERAL_POOL}}"
+    "contractName": "erc20-collateral-pool"
   }
 }
 ```
@@ -1171,7 +1171,7 @@ Get total `usdc` available which is equal to `lent - borrowed`.
 {
   "data": {
     "network": "{{NETWORK_NAME}}",
-    "contractName": "{{ERC20_COLLATERAL_POOL}}"
+    "contractName": "erc20-collateral-pool"
   }
 }
 ```
@@ -1209,7 +1209,7 @@ Get the dollar price for token.
 {
   "data": {
     "network": "{{NETWORK_NAME}}",
-    "contractName": "{{ERC20_COLLATERAL_POOL}}"
+    "contractName": "erc20-collateral-pool"
   }
 }
 ```

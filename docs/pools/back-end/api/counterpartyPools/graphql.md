@@ -179,13 +179,16 @@ mutation ($pool: CreatePoolInput!) {
 {
   "pool": {
     "network": "{{NETWORK_NAME}}",
-    "contractName": "{{COUNTER_PARTY_POOL}}",
+    "contractName": "counterparty-pool",
     "data": {
       "endTime": "2024-08-09T23:58:00.000",
       "interest": 10,
       "softCap": "300000000", // 300 USDC
       "hardCap": "800000000", // 800 USDC
-      "collateralDetails": []
+      "collateralDetails": [{
+        "address": "0xa8983Fe59b2F08F9F1B3E833c5D47B256F7FE0d5",
+        "amount": "500000000",
+      }]
     }
   }
 }
@@ -245,7 +248,7 @@ mutation ($pool: GetPoolInput!) {
 {
   "pool": {
     "network": "{{NETWORK_NAME}}",
-    "contractName": "{{COUNTER_PARTY_POOL}}",
+    "contractName": "counterparty-pool",
     "poolId": "0"
   }
 }
@@ -309,7 +312,7 @@ mutation ($pool: PaginationInput!) {
 {
   "pool": {
     "network": "{{NETWORK_NAME}}",
-    "contractName": "{{COUNTER_PARTY_POOL}}",
+    "contractName": "counterparty-pool",
     "offset": "0",
     "limit": "30"
   }
@@ -381,7 +384,7 @@ mutation v1GetTotalPools($data: DefaultInput!) {
 {
   "data": {
     "network": "{{NETWORK_NAME}}",
-    "contractName": "{{COUNTER_PARTY_POOL}}"
+    "contractName": "counterparty-pool"
   }
 }
 ```
@@ -427,7 +430,7 @@ mutation ($pool: UpdatePoolMetadataInput!) {
   "pool": {
     "network": "{{NETWORK_NAME}}",
     "id": "0",
-    "contractName": "{{COUNTER_PARTY_POOL}}",
+    "contractName": "counterparty-pool",
     "name": "FACTR Pool 0",
     "description": "FACTR is a tool that facilitates the connection between the traditional world of assets and the decentralized ecosystem of cryptocurrencies. Explore more about Defactor and its potential in the financial world!",
     "logo": "https://assets.coingecko.com/coins/images/19201/standard/jFLSu4U9_400x400.png?1696518648",
@@ -485,7 +488,7 @@ mutation ($pool: PoolDataInput!) {
 {
   "pool": {
     "network": "{{NETWORK_NAME}}",
-    "contractName": "{{COUNTER_PARTY_POOL}}",
+    "contractName": "counterparty-pool",
     "poolId": "0"
   }
 }
@@ -545,7 +548,7 @@ mutation ($pool: PoolDataInput!) {
 {
   "pool": {
     "network": "{{NETWORK_NAME}}",
-    "contractName": "{{COUNTER_PARTY_POOL}}",
+    "contractName": "counterparty-pool",
     "poolId": "0"
   }
 }
@@ -607,7 +610,7 @@ mutation v1Lend($loan: LendInput!) {
 {
   "loan": {
     "network": "{{NETWORK_NAME}}",
-    "contractName": "{{COUNTER_PARTY_POOL}}",
+    "contractName": "counterparty-pool",
     "tx": "0x02f8b483aa36a70684208411a0850247082f388301dae194ec92ca91907fd64e446122953601e774fd3cd6e680b84418e0137200000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000190c001a0a9517b0049a5a3bcc4a2eefee336ae557eeb506bda6e1124b5283d7af37c20d0a05cf37832388a1a230e35561ff49d4c96f75952b48b1c964139eccd138e2f0b36"
   }
 }
@@ -669,7 +672,7 @@ mutation ($loan: RepayInput!) {
 {
   "loan": {
     "network": "{{NETWORK_NAME}}",
-    "contractName": "{{COUNTER_PARTY_POOL}}",
+    "contractName": "counterparty-pool",
     "tx": "0x02f8b3830138825b844190ab00844190ab1e8302d712940a2e94dd0d8efa9598f3fa7287f888dc03add28880b844d8aed14500000000000000000000000000000000000000000000000000000000000000250000000000000000000000000000000000000000000000000000000000000000c080a0afe1724c94d340b1a2304b3db1ad2b83d2f00740a21b81ba682979522c667683a06686ecda38010bec2694f9c10bd974e89ca7aeb0a9957d019353803f4e0356fa"
   }
 }
@@ -729,7 +732,7 @@ mutation v1ClaimRewards($loan: ClaimRewardsInput!) {
 {
   "loan": {
     "network": "{{NETWORK_NAME}}",
-    "contractName": "{{COUNTER_PARTY_POOL}}",
+    "contractName": "counterparty-pool",
     "poolId": "0"
   }
 }
@@ -789,7 +792,7 @@ mutation v1ReclaimLoan($loan: PoolDataInput!) {
 {
   "loan": {
     "network": "{{NETWORK_NAME}}",
-    "contractName": "{{COUNTER_PARTY_POOL}}",
+    "contractName": "counterparty-pool",
     "tx": "0x02f8b483aa36a70684208411a0850247082f388301dae194ec92ca91907fd64e446122953601e774fd3cd6e680b84418e0137200000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000190c001a0a9517b0049a5a3bcc4a2eefee336ae557eeb506bda6e1124b5283d7af37c20d0a05cf37832388a1a230e35561ff49d4c96f75952b48b1c964139eccd138e2f0b36"
   }
 }
@@ -851,7 +854,7 @@ mutation ($borrow: BorrowInput!) {
 {
   "borrow": {
     "network": "{{NETWORK_NAME}}",
-    "contractName": "{{COUNTER_PARTY_POOL}}",
+    "contractName": "counterparty-pool",
     "tx": "0x02f8b38301388259844190ab00844190ab1e83044082940a2e94dd0d8efa9598f3fa7287f888dc03add28880b8440ecbcdab00000000000000000000000000000000000000000000000000000000000000250000000000000000000000000000000000000000000000000000000001c9c380c001a060a1ef201be2fb0062b2c8880eb4f7468745b7d057ef942c4d74c53c51adefdda00a17ecbf456d6aaf9d134334e98b24195ec23566abfd4836b6ac69e80dd111d8"
   }
 }
@@ -917,7 +920,7 @@ mutation ($token: Erc20ApproveInput!) {
 ```json
 {
   "token": {
-    "contractName": "{{COUNTER_PARTY_POOL}}",
+    "contractName": "counterparty-pool",
     "network": "{{NETWORK_NAME}}",
     "tx": "0x02f8b383aa36a7058424bf2f8e85047a307cec82c9799475fe3476d90598080f7d12365020c438943dcef380b844095ea7b3000000000000000000000000ec92ca91907fd64e446122953601e774fd3cd6e60000000000000000000000000000000000000000000000000000000000000190c080a0530e4f4e58484c18038ac30b16fe4a93b91de19420aa9fc0de9b49edcc42a941a0582664ed5820e481c05cda95532df03383b1bdc73f485e51eef9ada80faa5803"
   }

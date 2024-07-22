@@ -167,7 +167,7 @@ mutation ($pool: CreatePoolInput!) {
 {
   "pool": {
     "network": "{{NETWORK_NAME}}",
-    "contractName": "{{ERC20_COLLATERAL_POOL}}",
+    "contractName": "erc20-collateral-pool",
     "data": {
       "endTime": "2024-08-09T23:58:00.000",
       "interest": 10,
@@ -236,7 +236,7 @@ mutation ($pool: GetPoolInput!) {
 {
   "pool": {
     "network": "{{NETWORK_NAME}}",
-    "contractName": "{{ERC20_COLLATERAL_POOL}}",
+    "contractName": "erc20-collateral-pool",
     "poolId": "0"
   }
 }
@@ -302,7 +302,7 @@ mutation ($pool: PaginationInput!) {
 {
   "pool": {
     "network": "{{NETWORK_NAME}}",
-    "contractName": "{{ERC20_COLLATERAL_POOL}}",
+    "contractName": "erc20-collateral-pool",
     "offset": "0",
     "limit": "30"
   }
@@ -377,7 +377,7 @@ mutation v1GetTotalPools($data: DefaultInput!) {
 {
   "data": {
     "network": "{{NETWORK_NAME}}",
-    "contractName": "{{ERC20_COLLATERAL_POOL}}"
+    "contractName": "erc20-collateral-pool"
   }
 }
 ```
@@ -422,7 +422,7 @@ mutation ($pool: LiquidatePoolInput!) {
 {
   "pool": {
     "network": "{{NETWORK_NAME}}",
-    "contractName": "{{ERC20_COLLATERAL_POOL}}",
+    "contractName": "erc20-collateral-pool",
     "data": {
       "poolId": "3"
     }
@@ -484,7 +484,7 @@ mutation ($pool: GetPoolInput!) {
 {
   "pool": {
     "network": "{{NETWORK_NAME}}",
-    "contractName": "{{ERC20_COLLATERAL_POOL}}",
+    "contractName": "erc20-collateral-pool",
     "poolId": "3"
   }
 }
@@ -534,7 +534,7 @@ mutation v1GetLiquidationProtocolFee($data: DefaultInput!) {
 {
   "data": {
     "network": "{{NETWORK_NAME}}",
-    "contractName": "{{ERC20_COLLATERAL_POOL}}"
+    "contractName": "erc20-collateral-pool"
   }
 }
 ```
@@ -630,7 +630,7 @@ mutation ($pool: UpdatePoolMetadataInput!) {
 {
   "pool": {
     "network": "{{NETWORK_NAME}}",
-    "contractName": "{{ERC20_COLLATERAL_POOL}}",
+    "contractName": "erc20-collateral-pool",
     "id": "0",
     "name": "FACTR Pool 0",
     "description": "FACTR is a tool that facilitates the connection between the traditional world of assets and the decentralized ecosystem of cryptocurrencies. Explore more about Defactor and its potential in the financial world!",
@@ -687,7 +687,7 @@ mutation v1Lend($loan: LendInput!) {
 {
   "loan": {
     "network": "{{NETWORK_NAME}}",
-    "contractName": "{{ERC20_COLLATERAL_POOL}}",
+    "contractName": "erc20-collateral-pool",
     "data": {
       "poolId": "628",
       "amount": "10000000" // 10 of based token contract
@@ -752,7 +752,7 @@ mutation ($loan: RepayInput!) {
 {
   "loan": {
     "network": "{{NETWORK_NAME}}",
-    "contractName": "{{ERC20_COLLATERAL_POOL}}",
+    "contractName": "erc20-collateral-pool",
     "tx": "0x02f8b3830138825b844190ab00844190ab1e8302d712940a2e94dd0d8efa9598f3fa7287f888dc03add28880b844d8aed14500000000000000000000000000000000000000000000000000000000000000250000000000000000000000000000000000000000000000000000000000000000c080a0afe1724c94d340b1a2304b3db1ad2b83d2f00740a21b81ba682979522c667683a06686ecda38010bec2694f9c10bd974e89ca7aeb0a9957d019353803f4e0356fa"
   }
 }
@@ -812,7 +812,7 @@ mutation v1ClaimRewards($loan: ClaimRewardsInput!) {
 {
   "loan": {
     "network": "{{NETWORK_NAME}}",
-    "contractName": "{{ERC20_COLLATERAL_POOL}}",
+    "contractName": "erc20-collateral-pool",
     "poolId": "0",
     "address": "0xa8983Fe59b2F08F9F1B3E833c5D47B256F7FE0d5",
     "lendingId": "0"
@@ -874,7 +874,7 @@ mutation ($loan: GetLendingInput!) {
 {
   "loan": {
     "network": "{{NETWORK_NAME}}",
-    "contractName": "{{ERC20_COLLATERAL_POOL}}",
+    "contractName": "erc20-collateral-pool",
     "poolId": "0",
     "address": "0xa8983Fe59b2F08F9F1B3E833c5D47B256F7FE0d5",
     "lendingId": "0"
@@ -926,7 +926,7 @@ mutation ($loan: GetTotalLendingInput!) {
 {
   "loan": {
     "network": "{{NETWORK_NAME}}",
-    "contractName": "{{ERC20_COLLATERAL_POOL}}",
+    "contractName": "erc20-collateral-pool",
     "poolId": "0",
     "address": "0xa8983Fe59b2F08F9F1B3E833c5D47B256F7FE0d5"
   }
@@ -973,7 +973,7 @@ mutation ($loan: GetLendingsByLenderInput!) {
 {
   "loan": {
     "network": "{{NETWORK_NAME}}",
-    "contractName": "{{ERC20_COLLATERAL_POOL}}",
+    "contractName": "erc20-collateral-pool",
     "offset": "0",
     "limit": "10",
     "poolId": "0",
@@ -1035,7 +1035,7 @@ mutation ($borrow: BorrowInput!) {
 {
   "borrow": {
     "network": "{{NETWORK_NAME}}",
-    "contractName": "{{ERC20_COLLATERAL_POOL}}",
+    "contractName": "erc20-collateral-pool",
     "tx": "0x02f8b38301388259844190ab00844190ab1e83044082940a2e94dd0d8efa9598f3fa7287f888dc03add28880b8440ecbcdab00000000000000000000000000000000000000000000000000000000000000250000000000000000000000000000000000000000000000000000000001c9c380c001a060a1ef201be2fb0062b2c8880eb4f7468745b7d057ef942c4d74c53c51adefdda00a17ecbf456d6aaf9d134334e98b24195ec23566abfd4836b6ac69e80dd111d8"
   }
 }
@@ -1095,7 +1095,7 @@ mutation ($borrow: GetBorrowInput!) {
 {
   "borrow": {
     "network": "{{NETWORK_NAME}}",
-    "contractName": "{{ERC20_COLLATERAL_POOL}}",
+    "contractName": "erc20-collateral-pool",
     "poolId": "2",
     "borrowerAddress": "0x0FEEe8332394aDc9eB439020DD8D38f4F93999Bd",
     "borrowId": "4"
@@ -1148,7 +1148,7 @@ mutation ($borrow: GetTotalBorrowsInput!) {
 {
   "borrow": {
     "network": "{{NETWORK_NAME}}",
-    "contractName": "{{ERC20_COLLATERAL_POOL}}",
+    "contractName": "erc20-collateral-pool",
     "poolId": "0",
     "borrowerAddress": "0x0FEEe8332394aDc9eB439020DD8D38f4F93999Bd"
   }
@@ -1195,7 +1195,7 @@ mutation ($borrow: GetBorrowsByBorrowerInput!) {
 {
   "borrow": {
     "network": "{{NETWORK_NAME}}",
-    "contractName": "{{ERC20_COLLATERAL_POOL}}",
+    "contractName": "erc20-collateral-pool",
     "poolId": "0",
     "borrowerAddress": "0x0FEEe8332394aDc9eB439020DD8D38f4F93999Bd",
     "offset": "3",
@@ -1254,7 +1254,7 @@ mutation ($borrow: CalculateCollateralTokenAmountInput!) {
 {
   "borrow": {
     "network": "{{NETWORK_NAME}}",
-    "contractName": "{{ERC20_COLLATERAL_POOL}}",
+    "contractName": "erc20-collateral-pool",
     "poolId": "37",
     "amount": "30000000"
   }
@@ -1301,7 +1301,7 @@ mutation ($loan: CalculateRepayInterestInput!) {
 {
   "loan": {
     "network": "{{NETWORK_NAME}}",
-    "contractName": "{{ERC20_COLLATERAL_POOL}}",
+    "contractName": "erc20-collateral-pool",
     "poolId": "37",
     "borrowerAddress": "0x0FEEe8332394aDc9eB439020DD8D38f4F93999Bd",
     "borrowId": "0"
@@ -1355,8 +1355,8 @@ mutation ($token: Erc20ApproveInput!) {
 ```json
 {
   "token": {
-    "contractName": "{{ERC20_COLLATERAL_POOL}}",
     "network": "{{NETWORK_NAME}}",
+    "contractName": "erc20-collateral-pool",
     "tx": "0x02f8b383aa36a7058424bf2f8e85047a307cec82c9799475fe3476d90598080f7d12365020c438943dcef380b844095ea7b3000000000000000000000000ec92ca91907fd64e446122953601e774fd3cd6e60000000000000000000000000000000000000000000000000000000000000190c080a0530e4f4e58484c18038ac30b16fe4a93b91de19420aa9fc0de9b49edcc42a941a0582664ed5820e481c05cda95532df03383b1bdc73f485e51eef9ada80faa5803"
   }
 }
@@ -1514,7 +1514,7 @@ mutation v1GetUsdc($data: DefaultInput!) {
 {
   "data": {
     "network": "{{NETWORK_NAME}}",
-    "contractName": "{{ERC20_COLLATERAL_POOL}}"
+    "contractName": "erc20-collateral-pool"
   }
 }
 ```
