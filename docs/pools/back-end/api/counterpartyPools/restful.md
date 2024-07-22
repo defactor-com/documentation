@@ -7,6 +7,8 @@ The Defactor Postman Collection comprises a suite of pre-configured API requests
 
 This API offers dual modes of interaction with the smart contract: firstly, via the RESTful API; and secondly, through the GraphQL API.
 
+It facilitates interaction with various Pools smart contracts by providing an intuitive interface that maps the actions to straightforward concepts, such as create, lend, borrow, repaid, etc. Also, it enables seamless communication with smart contracts configured across multiple blockchain networks. It is necessary to specify the network and contract name in each request payload.
+
 Outlined below is a detailed overview of the API's functionalities, leveraging a designated instance of the `counterpartypool` contract as the primary data source.
 
 :::info
@@ -107,7 +109,7 @@ Upon successful completion of a request, the server will issue a status code of 
 
 ## Pools
 
-Unlike the contract, the status are in lowercase; Additionally, to streamline interaction the API include intermediate status such as collectable, closable, and archivable.
+Unlike the contract, the status are in lowercase; Additionally, to streamline interaction the API include intermediate status such as `collectable`, `closable`, and `archivable`.
 
 The `collateralDetails` is an array which each element has the following properties:
 
@@ -123,7 +125,7 @@ Create a new pool with the indicated collateral tokens using the `collateralDeta
 
 **HTTP Request Method**: POST
 
-**Roles**: Admin
+**Roles**: Guest
 
 **Request URL**: `{{BASE_RESTFUL_URL}}/v1/create-pool`
 
@@ -362,33 +364,107 @@ Upon successful request completion, the server will issue a status code of 200 a
 
 ### `Close Pool`
 
+Close the specified `poolId` if possible.
+
 **HTTP Request Method**: POST
+
+**Roles**: Guest
 
 **Request URL**: `{{BASE_RESTFUL_URL}}/v1/close-pool`
 
 **Request Body**
 
 ```json
-{}
+{
+  "pool": {
+    "network": "{{NETWORK_NAME}}",
+    "contractName": "{{COUNTER_PARTY_POOL}}",
+    "poolId": "0"
+  }
+}
+```
+
+**Response**
+
+Upon successful completion of a request, the server will issue a status code of 200 along with a JSON object encapsulating pertinent blockchain transaction details. This object encompasses the following attributes:
+
+```json
+{
+  "v1ClosePool": {
+    "res": {
+      "_type": "TransactionResponse",
+      "accessList": [],
+      "blobVersionedHashes": null,
+      "blockHash": null,
+      "blockNumber": null,
+      "chainId": "80001",
+      "from": "0xa8983Fe59b2F08F9F1B3E833c5D47B256F7FE0d5",
+      "gasLimit": "150012",
+      "gasPrice": null,
+      "hash": "0x68dc6f65b96a427c4c289371637b063bbe20d9841d6c8183f06e657ab10efb1e",
+      .
+      .
+      .
+    },
+    "success": true
+  }
+}
 ```
 
 ### `Archive Pool`
 
+Archive the specified `poolId` if possible.
+
 **HTTP Request Method**: POST
+
+**Roles**: Guest
 
 **Request URL**: `{{BASE_RESTFUL_URL}}/v1/archive-pool`
 
 **Request Body**
 
 ```json
-{}
+{
+  "pool": {
+    "network": "{{NETWORK_NAME}}",
+    "contractName": "{{COUNTER_PARTY_POOL}}",
+    "poolId": "0"
+  }
+}
+```
+
+**Response**
+
+Upon successful completion of a request, the server will issue a status code of 200 along with a JSON object encapsulating pertinent blockchain transaction details. This object encompasses the following attributes:
+
+```json
+{
+  "v1ArchivePool": {
+    "res": {
+      "_type": "TransactionResponse",
+      "accessList": [],
+      "blobVersionedHashes": null,
+      "blockHash": null,
+      "blockNumber": null,
+      "chainId": "80001",
+      "from": "0xa8983Fe59b2F08F9F1B3E833c5D47B256F7FE0d5",
+      "gasLimit": "150012",
+      "gasPrice": null,
+      "hash": "0x68dc6f65b96a427c4c289371637b063bbe20d9841d6c8183f06e657ab10efb1e",
+      .
+      .
+      .
+    },
+    "success": true
+  }
+}
 ```
 
 ## Lend
 
 ### `Lend`
 
-Lend to a pool the specific amount of the token on which the contract is based.
+Lend to a pool the specific amount of the token on which the contract is based. This endpoint is equivalent to the action `commitToPool` in the contract.
 
 **HTTP Request Method**: POST
 
@@ -440,9 +516,9 @@ Upon successful completion of a request, the server will issue a status code of 
 
 ### `Repay`
 
-Repay a loan to a pool if it is not closed and it has not already been repaid.
+Repay a loan to a pool if it is `active` and it has not already been repaid. This endpoint is equivalent to the action `depositRewards` in the contract.
 
-The `counterpartypool` contract needs the approval to spend money on behalf of the borrower, to give the approve the [`erc20 approve`](#erc20-approve) endpoint could be used. The amount to approve must be `USDC lent + loan interest.`
+The `counterpartypool` contract needs the approval to spend money on behalf of the borrower, to give the approve the [`erc20 approve`](#erc20-approve) endpoint could be used. The amount to approve must be greater than `pool.supplied + (pool.supplied * pool.interest / 100).`
 
 **HTTP Request Method**: POST
 
@@ -492,7 +568,7 @@ Upon successful completion of a request, the server will issue a status code of 
 
 ### `Claim Rewards`
 
-Allows the owner of the address, if they have not already done so, to claim the rewards after the pool has been closed and completed.
+Allows the owner of the address, if they have not already done so, to claim the rewards the pool must be arctive or closed. This endpoints it equivalent to the action `claim` in the contract.
 
 **HTTP Request Method**: POST
 
@@ -543,14 +619,53 @@ Upon successful completion of a request, the server will issue a status code of 
 
 ### `Reclaim Loan`
 
-**HTTP Request Method**: GET
+If possible recover the supplied amount to a pool. This endpoint is equivalent to the action `uncommitFromPool` in the contract.
+
+**HTTP Request Method**: POST
+
+**Roles**: Guest
 
 **Request URL**: `{{BASE_RESTFUL_URL}}/v1/reclaim-loan`
 
 **Request Body**
 
 ```json
-{}
+{
+  "loan": {
+    "network": "{{NETWORK_NAME}}",
+    "contractName": "{{COUNTER_PARTY_POOL}}",
+    "data": {
+      "poolId": "2"
+    }
+  }
+}
+```
+
+**Response**
+
+Upon successful completion of a request, the server will issue a status code of 200 along with a JSON object encapsulating pertinent blockchain transaction details. This object encompasses the following attributes:
+
+```json
+{
+  "v1ReclaimLoan": {
+    "res": {
+      "_type": "TransactionResponse",
+      "accessList": [],
+      "blobVersionedHashes": null,
+      "blockHash": null,
+      "blockNumber": null,
+      "chainId": "80001",
+      "from": "0xa8983Fe59b2F08F9F1B3E833c5D47B256F7FE0d5",
+      "gasLimit": "150012",
+      "gasPrice": null,
+      "hash": "0x68dc6f65b96a427c4c289371637b063bbe20d9841d6c8183f06e657ab10efb1e",
+      .
+      .
+      .
+    },
+    "success": true
+  }
+}
 ```
 
 ## Borrow
@@ -615,9 +730,9 @@ Upon successful completion of a request, the server will issue a status code of 
 
 Authorize a third party address to expend a designated sum of funds of the indicated token.
 
-| Property             | Description                                                    |
-| -------------------- | -------------------------------------------------------------- |
-| `tokenAddress`       | The address where the collateral token is deployed.            |
+| Property             | Description                                                       |
+| -------------------- | ----------------------------------------------------------------- |
+| `tokenAddress`       | The address where the collateral token is deployed.               |
 | `addressToAuthorize` | The address where the `counterpartypool` contract is deployed. |
 
 **HTTP Request Method**: POST
