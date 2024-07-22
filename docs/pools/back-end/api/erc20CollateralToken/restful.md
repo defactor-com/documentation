@@ -1068,10 +1068,10 @@ Upon successful request completion, the server will respond with a status code o
 
 Authorize a third party address to expend a designated sum of funds of the indicated token.
 
-| Property             | Description                                                       |
-| -------------------- | ----------------------------------------------------------------- |
-| `tokenAddress`       | The address where the collateral token is deployed.               |
-| `addressToAuthorize` | The address where the `erc20collateralpool` contract is deployed. |
+| Property  | Description                                                       |
+| --------- | ----------------------------------------------------------------- |
+| `amount`  | The amount to approve.                                            |
+| `address` | The address where the `erc20collateralpool` contract is deployed. |
 
 **HTTP Request Method**: POST
 

@@ -890,10 +890,10 @@ Upon successful completion of a request, the server will issue a status code of 
 
 Authorize a third party address to expend a designated sum of funds of the indicated token.
 
-| Property             | Description                                                    |
-| -------------------- | -------------------------------------------------------------- |
-| `tokenAddress`       | The address where the collateral token is deployed.            |
-| `addressToAuthorize` | The address where the `counterpartypool` contract is deployed. |
+| Property  | Description                                                    |
+| --------- | -------------------------------------------------------------- |
+| `amount`  | The amount to approve.                                         |
+| `address` | The address where the `counterpartypool` contract is deployed. |
 
 **HTTP Request Method**: POST
 
@@ -951,104 +951,6 @@ Upon successful completion of a request, the server will issue a status code of 
 }
 ```
 
-### `Get Total Usdc Available`
-
-Get total `usdc` available which is equal to `lent - borrowed`.
-
-**HTTP Request Method**: POST
-
-**Roles**: Guest
-
-**GraphQL URL**: `{{BASE_URL}}/v1/graphql`
-
-**GraphQL Body**
-
-```graphql
-query v1GetTotalUsdcAvailable {
-  {{NETWORK_NAME}}_pool_aggregate {
-    aggregate {
-      sum {
-        borrowed
-        lended
-      }
-    }
-  }
-}
-```
-
-**GraphQL Variables**
-
-```json
-{}
-```
-
-**Response**
-
-Upon successful request completion, the server will respond with a status code of 200 and a JSON object containing the total lent and borrowed. This object includes the following attributes:
-
-```json
-{
-  "pool_aggregate": {
-    "aggregate": {
-      "sum": {
-        "borrowed": 0,
-        "lended": 0
-      }
-    }
-  }
-}
-```
-
-### `Get Dollar Price For Token`
-
-Get the dollar price for token.
-
-**HTTP Request Method**: POST
-
-**Roles**: Guest
-
-**GraphQL URL**: `{{BASE_URL}}/v1/graphql`
-
-**GraphQL Body**
-
-```graphql
-query v1GetDollarPriceForToken {
-    {{NETWORK_NAME}}_token_price(order_by: { date: desc }, limit: 1) {
-      id
-      date
-      price
-      marketCaps
-      totalVolumes
-      tokenName
-    }
-  }
-```
-
-**GraphQL Variables**
-
-```json
-{}
-```
-
-**Response**
-
-Upon successful request completion, the server will respond with a status code of 200 and a JSON object containing dollar price for the available tokens. This object includes the following attributes:
-
-```json
-{
-  "token_price": [
-    {
-      "id": "dfcec840-6a79-4cc0-b368-f07b7a566b85",
-      "date": "1970-01-01T00:00:00.000Z",
-      "price": 0,
-      "marketCaps": 0,
-      "totalVolumes": 0,
-      "tokenName": "tokenName"
-    }
-  ]
-}
-```
-
 ### `Get Usdc`
 
 Returns the configured `usdc` contract address within the `erc20collateraltoken` instance.
@@ -1088,69 +990,6 @@ Upon successful request completion, the server will issue a status code of 200 a
 {
   "v1GetUsdc": {
     "res": "0x80D9E7bC3D962878b292F9536b38E52e266a77Fd",
-    "success": true
-  }
-}
-```
-
-### `Get Historical Balance`
-
-Get the historical contributions by filtered by event and group by period of time
-
-| Property   | Description                                                                          |
-| ---------- | ------------------------------------------------------------------------------------ |
-| `filterBy` | One of the following values: `minute`, `hour`, `day`, `week`, `month`, `year`, `all` |
-| `byEvent`  | One of the following values: `LendEvent`, `BorrowEvent`, `All`.                      |
-
-**HTTP Request Method**: POST
-
-**Roles**: Guest
-
-**GraphQL URL**: `{{BASE_URL}}/v1/graphql`
-
-**GraphQL Body**
-
-```graphql
-query v1GetHistoricalBalance($stats: GetHistoricalBalanceInput!) {
-  v1GetHistoricalBalance(stats: $stats) {
-    res
-    success
-  }
-}
-```
-
-**GraphQL Variables**
-
-```json
-{
-  "stats": {
-    "networks": ["{{NETWORK_NAME}}", "{{NETWORK_NAME}}"],
-    "filterBy": "month"
-  }
-}
-```
-
-**Response**
-
-Upon successful request completion, the server will issue a status code of 200 alongside a JSON object. This object incorporates the following attributes:
-
-```json
-{
-  "v1GetHistoricalContributions": {
-    "res": {
-      "1712188800000": {
-        "collateral": 0,
-        "fluctuation": 0,
-        "fluctuationValue": 0,
-        "price": 0
-      },
-      "1712275200000": {
-        "collateral": 0,
-        "fluctuation": 0,
-        "fluctuationValue": 0,
-        "price": 0
-      }
-    },
     "success": true
   }
 }

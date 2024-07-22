@@ -544,7 +544,8 @@ The `counterpartypool` contract needs the approval to spend money on behalf of t
   "loan": {
     "network": "{{NETWORK_NAME}}",
     "contractName": "{{COUNTER_PARTY_POOL}}",
-    "poolId": "0"
+    "poolId": "0",
+    "amount": "4000000000"
   }
 }
 ```
@@ -735,10 +736,10 @@ Upon successful completion of a request, the server will issue a status code of 
 
 Authorize a third party address to expend a designated sum of funds of the indicated token.
 
-| Property             | Description                                                    |
-| -------------------- | -------------------------------------------------------------- |
-| `tokenAddress`       | The address where the collateral token is deployed.            |
-| `addressToAuthorize` | The address where the `counterpartypool` contract is deployed. |
+| Property  | Description                                                    |
+| --------- | -------------------------------------------------------------- |
+| `amount`  | The amount to approve.                                         |
+| `address` | The address where the `counterpartypool` contract is deployed. |
 
 **HTTP Request Method**: POST
 
@@ -821,135 +822,7 @@ Upon successful request completion, the server will issue a status code of 200 a
 }
 ```
 
-### `Get Total Usdc Available`
-
-Get total `usdc` available which is equal to `lent - borrowed`.
-
-**HTTP Request Method**: GET
-
-**Roles**: Guest
-
-**Request URL**: `{{BASE_RESTFUL_URL}}/v1/get-total-usdc-available`
-
-**Request Body**
-
-```json
-{
-  "data": {
-    "network": "{{NETWORK_NAME}}"
-  }
-}
-```
-
-**Response**
-
-Upon successful request completion, the server will respond with a status code of 200 and a JSON object containing the total lent and borrowed. This object includes the following attributes:
-
-```json
-{
-  "pool_aggregate": {
-    "aggregate": {
-      "sum": {
-        "borrowed": 0,
-        "lended": 0
-      }
-    }
-  }
-}
-```
-
-### `Get Dollar Price For Token`
-
-Get the dollar price for token.
-
-**HTTP Request Method**: GET
-
-**Roles**: Guest
-
-**Request URL**: `{{BASE_RESTFUL_URL}}/v1/get-dollar-price-for-token`
-
-**Request Body**
-
-```json
-{
-  "data": {
-    "network": "{{NETWORK_NAME}}"
-  }
-}
-```
-
-**Response**
-
-Upon successful request completion, the server will respond with a status code of 200 and a JSON object containing dollar price for the available tokens. This object includes the following attributes:
-
-```json
-{
-  "token_price": [
-    {
-      "id": "dfcec840-6a79-4cc0-b368-f07b7a566b85",
-      "date": "1970-01-01T00:00:00.000Z",
-      "price": 0,
-      "marketCaps": 0,
-      "totalVolumes": 0,
-      "tokenName": "tokenName"
-    }
-  ]
-}
-```
-
-### `Get Historical Balance`
-
-Get the historical contributions by filtered by event and group by period of time
-
-| Property   | Description                                                                          |
-| ---------- | ------------------------------------------------------------------------------------ |
-| `filterBy` | One of the following values: `minute`, `hour`, `day`, `week`, `month`, `year`, `all` |
-| `byEvent`  | One of the following values: `LendEvent`, `BorrowEvent`, `All`.                      |
-
-**HTTP Request Method**: GET
-
-**Roles**: Guest
-
-**Request URL**: `{{BASE_RESTFUL_URL}}/v1/get-historical-balance`
-
-**Request Body**
-
-```json
-{
-  "stats": {
-    "networks": ["{{NETWORK_NAME}}"],
-    "filterBy": "month"
-  }
-}
-```
-
-**Response**
-
-Upon successful request completion, the server will issue a status code of 200 alongside a JSON object. This object incorporates the following attributes:
-
-```json
-{
-  "v1GetHistoricalContributions": {
-    "res": {
-      "1712188800000": {
-        "collateral": 0,
-        "fluctuation": 0,
-        "fluctuationValue": 0,
-        "price": 0
-      },
-      "1712275200000": {
-        "collateral": 0,
-        "fluctuation": 0,
-        "fluctuationValue": 0,
-        "price": 0
-      }
-    },
-    "success": true
-  }
-}
-```
-
-### `get Config`
+### `Get Config`
 
 **HTTP Request Method**: GET
 
