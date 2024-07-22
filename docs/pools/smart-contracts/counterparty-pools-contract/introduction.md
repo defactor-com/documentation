@@ -119,16 +119,15 @@ In simple words it means, the rewards is equal to the percentage of the amount l
 
 In this version of the counterparty pools the admin is the only borrower and therefore the only one who can create pools. The differences with the default version are listed below:
 
-- The following actions only can be perform by the admin:
+- The following actions can only be perform by the admin:
   - `createPool`
   - `collectPool`
   - `depositRewards`
   - `closePool`
   - `archivePool`
-  - `uncommitFromPool`
 - The 200 token fee is not required to create a pool.
 - The pool can be collected at any time as long as the pool status is `CREATED`.
 - A `CREATED` pool cannot be closed or archived.
-  - To close a pool the status must be `ACTIVE` and the total rewards are equal to or greater than the total committed in the pool plus the configured interest.
-  - To archive a pool all rewards must have been claimed, the pool needs to be `CLOSED`, and a minimum of pool `closed time + 60 days` needs to be passed to archive the pool.
+- To close a pool the status must be `ACTIVE` and the total rewards are equal to or greater than the total committed in the pool plus the configured interest.
+- To archive a pool all rewards must have been claimed, the pool needs to be `CLOSED`, and a minimum of pool `closed time + 60 days` needs to be passed to archive the pool.
 - The actions `uncommitFromPool` and `uncommitForUsers` are not supported.
