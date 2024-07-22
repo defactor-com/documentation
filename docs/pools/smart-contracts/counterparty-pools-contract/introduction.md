@@ -9,6 +9,12 @@ tags:
 
 `Pools.sol` this contract allows users to create, manage, and interact with funding pools using `ERC20`, `ERC721`, and `ERC1155` tokens.
 
+## Contract versions
+
+This contract has two versions, the first one is the `default` version where anyone can create a pool by paying 200 tokens in the base token of the contract. On the other hand, the second version only allows the creation of the pool to the contract admin who is the only borrower.
+
+First, the version where anyone can create their pools will be detailed, and at the end the differences with the `admin-only` version will be contrasted.
+
 ## Pool
 
 The pool is a structure that keeps track of total committed, total rewarded, who the borrower is (pool creator), and other information that are essential for the proper functioning of the contract.
@@ -65,19 +71,19 @@ pool.totalCommitted + (pool.totalCommitted * pool.minimumAPR) / INTEREST_DECIMAL
 
 #### archive a pool
 
-A pool can be archived by two roles, the pool owner and the contract admin but for both roles all rewards must have been claimed and the pool needs to be `CLOSED` or `CREATED`. If the pool status is `CLOSED`, then a minimum of `pool close time + 60 days` needs to be passed to archive the pool. If the pool status is `CREATED`, then the total committed must be zero and a minimum of `pool deadline + 60 days` needs to be passed to archive the pool, otherwise the transaction will be reverted.
+A pool can be archived by two roles, the pool owner and the contract admin but for both roles all rewards must have been claimed and the pool needs to be `CLOSED` or `CREATED`. If the pool status is `CLOSED`, then a minimum of `pool closed time + 60 days` needs to be passed to archive the pool. If the pool status is `CREATED`, then the total committed must be zero and a minimum of `pool deadline + 60 days` needs to be passed to archive the pool, otherwise the transaction will be reverted.
 
 ![Pools Archive Pool](/img/flowchart/Pools_archivepool.png)
 
 #### claim the rewards for users
 
-This function can be performed by two roles, the pool owner and the contract admin. It allows claims rewards for users only available when the pool status is  `CLOSED` and more than 60 days has passed after pool closing.
+This function can be performed by two roles, the pool owner and the contract admin. It allows claims rewards for users only available when the pool status is `CLOSED` and more than 60 days has passed after pool closing.
 
 ![Pools Claim rewards for users](/img/flowchart/Pools_claimforusers.png)
 
 #### un-commit from a pool for users
 
-This function can be performed by two roles, the pool owner and the contract admin. It allows un-commit for users only available when the pool status is  `CREATED` and more than 60 days has passed after pool deadline.
+This function can be performed by two roles, the pool owner and the contract admin. It allows un-commit for users only available when the pool status is `CREATED` and more than 60 days has passed after pool deadline.
 
 ![Pools Un-commit Pool for users](/img/flowchart/Pools_uncommitforusers.png)
 
@@ -108,3 +114,21 @@ Once the owner has collected the funds from the pool, the lender will be able to
 In simple words it means, the rewards is equal to the percentage of the amount lent times the total rewards minus the amount already claimed.
 
 ![Pools Claim](/img/flowchart/Pools_claim.png)
+
+## Admin-only version
+
+In this version of the counterparty pools the admin is the only borrower and therefore the only one who can create pools. The differences with the default version are listed below:
+
+- The following actions only can be perform by the admin:
+  - `createPool`
+  - `collectPool`
+  - `depositRewards`
+  - `closePool`
+  - `archivePool`
+  - `uncommitFromPool`
+- The 200 token fee is not required to create a pool.
+- The pool can be collected at any time as long as the pool status is `CREATED`.
+- A `CREATED` pool cannot be closed or archived.
+  - To close a pool the status must be `ACTIVE` and the total rewards are equal to or greater than the total committed in the pool plus the configured interest.
+  - To archive a pool all rewards must have been claimed, the pool needs to be `CLOSED`, and a minimum of pool `closed time + 60 days` needs to be passed to archive the pool.
+- The actions `uncommitFromPool` and `uncommitForUsers` are not supported.
