@@ -133,6 +133,17 @@ Upon successful completion of a request, the server will issue a status code of 
 
 Unlike the contract, the status are in lowercase; Additionally, to streamline interaction the API include intermediate status such as `collectable`, `closable`, and `archivable`.
 
+To maintain a common interface between API endpoints the structure of the counterparty pool is mapped as follows:
+
+| Counterparty Pool contract | API                      |
+| -------------------------- | ------------------------ |
+| totalCommitted             | supplied                 |
+| deadline                   | endTime (as Date)        |
+| createdAt                  | startDate (as Date)      |
+| minimumAPR                 | interest (as Percentage) |
+| totalRewards               | repaid                   |
+| rewardsPaidOut             | rewards                  |
+
 The `collateralDetails` is an array which each element has the following properties:
 
 | Property          | Description                                         |
@@ -719,9 +730,7 @@ mutation v1ClaimRewards($loan: ClaimRewardsInput!) {
   "loan": {
     "network": "{{NETWORK_NAME}}",
     "contractName": "{{COUNTER_PARTY_POOL}}",
-    "poolId": "0",
-    "address": "0xa8983Fe59b2F08F9F1B3E833c5D47B256F7FE0d5",
-    "lendingId": "0"
+    "poolId": "0"
   }
 }
 ```
@@ -817,9 +826,7 @@ Upon successful completion of a request, the server will issue a status code of 
 
 ### `Borrow`
 
-Borrow the indicated amount of the token from the pool if it is not close and there is enough funds. Where the amount in the request body corresponds to the token on which the contract is based.
-
-The `counterpartypool` contract needs the approval to spend the amount of collateral token on behalf of the borrower, to give the approve the [`erc20 approve`](#erc20-approve) endpoint could be used. Also, to get the amount of collateral token use the [`calculate collateral amount`](#calculate-collateral-token-amount) endpoint.
+Borrow the supplied amount of the base token from the pool if the deadline was reached and status is `created`. This endpoint is equivalent to the action `collectPool` in the contract.
 
 **HTTP Request Method**: POST
 
@@ -1338,15 +1345,11 @@ There is no pool with the provided id:
 
 **Lend**
 
-- There is no lending with the provided id
-  - **Error message**: Lending id `X` does not exist
 - Occurs when an attempt is made to claim rewards of a loan that has already been claimed
   - **Error message**: Loan already claimed
 
 **Borrow**
 
-- There is no borrow with the provided id
-  - **Error message**: Borrow id `X` does not exists
 - Occurs when an attempt is made to borrow an amount that overpass the pool balance
   - **Error message**: Amount overpass the pool available amount
 - Occurs when an attempt is made to repay a borrow that has already been repaid
