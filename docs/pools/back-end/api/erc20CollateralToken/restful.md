@@ -3,16 +3,19 @@ title: Endpoints List RESTful API
 sidebar_position: 1
 ---
 
-
 The Defactor Postman Collection comprises a suite of pre-configured API requests designed for seamless integration into the Postman application, facilitating access to the services offered by the Defactor API.
 
 This API offers dual modes of interaction with the smart contract: firstly, via the RESTful API; and secondly, through the GraphQL API.
+
+It facilitates interaction with various Pools smart contracts by providing an intuitive interface that maps the actions to straightforward concepts, such as create, lend, borrow, repaid, etc. Also, it enables seamless communication with smart contracts configured across multiple blockchain networks. It is necessary to specify the network and contract name in each request payload.
 
 Outlined below is a detailed overview of the API's functionalities, leveraging a designated instance of the `erc20collateralpool` contract as the primary data source.
 
 :::info
 
-The `erc20collateralpool` contract is based on a token that follows the erc20 token standard and has exactly a precision of 6. For example it can be `usdc`, `euroc` or any other token that meets the above mentioned requirements.
+The `erc20collateralpool` contract is based on a token that follows the `erc20` token standard that has a set precision. For example it can be `usdc`, `euroc` with a exactly a precision of 6 or any other token that meets the above mentioned requirements.
+
+Then, 10500000 is equivalent to 10.5 USDC.
 
 :::
 
@@ -46,9 +49,9 @@ Return a JSON Web Token (JWT) access token and refresh token. By default, the ac
 
 ```json
 {
-    "session": {
-        "address": "0xa8983Fe59b2F08F9F1B3E833c5D47B256F7FE0d5"
-    }
+  "session": {
+    "address": "0xa8983Fe59b2F08F9F1B3E833c5D47B256F7FE0d5"
+  }
 }
 ```
 
@@ -60,7 +63,7 @@ Upon successful completion of a request, the server will issue a status code of 
 {
   "v1Login": {
     "res": {
-      "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWUsImlhdCI6MTUxNjIzOTAyMiwiaHR0cHM6Ly9oYXN1cmEuaW8vand0L2NsYWltcyI6eyJ4LWhhc3VyYS1kZWZhdWx0LXJvbGUiOiJ1c2VyIiwieC1oYXN1cmEtYWxsb3dlZC1yb2xlcyI6WyJ1c2VyIiwiYWRtaW4iXSwieC1oYXN1cmEtdXNlci1pZCI6IjEyMyIsIngtaGFzdXJhLW9yZy1pZCI6IjQ1NiIsIngtaGFzdXJhLWN1c3RvbSI6ImN1c3RvbS12YWx1ZSJ9fQ.07mlUOhH3Oigz_Yyil8EC579Ht6PbZ1yr8fYJfhQ4NE",
+      "accessToken": "<jwt>",
       "refreshToken": "0a1a6d5f-1bf9-4540-8c22-d9442a75476f"
     },
     "success": true
@@ -82,9 +85,9 @@ Return a new access and refresh token.
 
 ```json
 {
-    "session": {
-        "refreshToken": "e6781b1a-ff37-4074-8b9e-39953b5a4f9d"
-    }
+  "session": {
+    "refreshToken": "e6781b1a-ff37-4074-8b9e-39953b5a4f9d"
+  }
 }
 ```
 
@@ -96,7 +99,7 @@ Upon successful completion of a request, the server will issue a status code of 
 {
   "v1RestoreSession": {
     "res": {
-        "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWUsImlhdCI6MTUxNjIzOTAyMiwiaHR0cHM6Ly9oYXN1cmEuaW8vand0L2NsYWltcyI6eyJ4LWhhc3VyYS1kZWZhdWx0LXJvbGUiOiJ1c2VyIiwieC1oYXN1cmEtYWxsb3dlZC1yb2xlcyI6WyJ1c2VyIiwiYWRtaW4iXSwieC1oYXN1cmEtdXNlci1pZCI6IjEyMyIsIngtaGFzdXJhLW9yZy1pZCI6IjQ1NiIsIngtaGFzdXJhLWN1c3RvbSI6ImN1c3RvbS12YWx1ZSJ9fQ.07mlUOhH3Oigz_Yyil8EC579Ht6PbZ1yr8fYJfhQ4NE",
+      "accessToken": "<jwt>",
       "refreshToken": "0a1a6d5f-1bf9-4540-8c22-d9442a75476f"
     },
     "success": true
@@ -105,6 +108,7 @@ Upon successful completion of a request, the server will issue a status code of 
 ```
 
 ## Pools
+
 The `collateralDetails` schema has the following properties:
 
 | Property                    | Description                                                                                               |
@@ -128,16 +132,20 @@ Create a new pool with the indicated collateral token using the `collateralDetai
 
 ```json
 {
-    "pool": {
-        "endTime": "2024-02-28T00:20:00.000",
-        "interest": 10,
-        "collateralDetails": {
-            "collateralToken": "0x5093C6838f44991B509b7f940fD7e8f0131B0A7C",
-            "collateralTokenChainlink": "0xFd3da056e0552Bdac2b97025D7784C7C09838df8",
-            "collateralTokenFactor": 115,
-            "collateralTokenPercentage": 60
-        }
+  "pool": {
+    "network": "{{NETWORK_NAME}}",
+    "contractName": "erc20-collateral-pool",
+    "data": {
+      "endTime": "2024-08-09T23:58:00.000",
+      "interest": 10,
+      "collateralDetails": {
+        "collateralToken": "0x6BaB3bEA9aD00893101837d46638B470076f8AAF",
+        "collateralTokenChainlink": "0x295894a94F859cE1Ac960364D6b0D2Fa430027b4",
+        "collateralTokenFactor": 10,
+        "collateralTokenPercentage": 115
+      }
     }
+  }
 }
 ```
 
@@ -174,7 +182,7 @@ Retrieves the data associated with the specified `poolId`.
 
 **HTTP Request Method**: GET
 
-**Roles**: Guest  
+**Roles**: Guest
 
 **Request URL**: `{{BASE_RESTFUL_URL}}/v1/get-pool`
 
@@ -182,9 +190,11 @@ Retrieves the data associated with the specified `poolId`.
 
 ```json
 {
-    "pool": {
-        "poolId": "6"
-    }
+  "pool": {
+    "network": "{{NETWORK_NAME}}",
+    "contractName": "erc20-collateral-pool",
+    "poolId": "6"
+  }
 }
 ```
 
@@ -227,7 +237,7 @@ Retrieves the data associated with the `pools` specified in the pagination param
 
 **HTTP Request Method**: GET
 
-**Roles**: Guest  
+**Roles**: Guest
 
 **Request URL**: `{{BASE_RESTFUL_URL}}/v1/get-pools`
 
@@ -235,10 +245,12 @@ Retrieves the data associated with the `pools` specified in the pagination param
 
 ```json
 {
-    "pool": {
-        "offset": "6",
-        "limit": "10"
-    }
+  "pool": {
+    "network": "{{NETWORK_NAME}}",
+    "contractName": "erc20-collateral-pool",
+    "offset": "6",
+    "limit": "10"
+  }
 }
 ```
 
@@ -296,7 +308,12 @@ Returns the count of pools created within the current instance of `erc20collater
 **Request Body**
 
 ```json
-{}
+{
+  "data": {
+    "network": "{{NETWORK_NAME}}",
+    "contractName": "erc20-collateral-pool"
+  }
+}
 ```
 
 **Response**
@@ -318,7 +335,7 @@ Liquidate a pool.
 
 **HTTP Request Method**: POST
 
-**Roles**: Admin  
+**Roles**: Admin
 
 **Request URL**: `{{BASE_RESTFUL_URL}}/v1/liquidate-pool`
 
@@ -326,9 +343,13 @@ Liquidate a pool.
 
 ```json
 {
-    "pool": {
-        "poolId": "0"
+  "pool": {
+    "network": "{{NETWORK_NAME}}",
+    "contractName": "erc20-collateral-pool",
+    "data": {
+      "poolId": "3"
     }
+  }
 }
 ```
 
@@ -365,7 +386,7 @@ Retrieves the liquidation information of a loan.
 
 **HTTP Request Method**: GET
 
-**Roles**: Guest  
+**Roles**: Guest
 
 **Request URL**: `{{BASE_RESTFUL_URL}}/v1/get-liquidation-info`
 
@@ -373,9 +394,11 @@ Retrieves the liquidation information of a loan.
 
 ```json
 {
-   "pool": {
-        "poolId": "0"
-   }
+  "pool": {
+    "network": "{{NETWORK_NAME}}",
+    "contractName": "erc20-collateral-pool",
+    "poolId": "0"
+  }
 }
 ```
 
@@ -409,7 +432,12 @@ Retrieves the fee for liquidation.
 **Request Body**
 
 ```json
-{}
+{
+  "data": {
+    "network": "{{NETWORK_NAME}}",
+    "contractName": "erc20-collateral-pool"
+  }
+}
 ```
 
 **Response**
@@ -438,7 +466,12 @@ Get the total collateral amount.
 **Request Body**
 
 ```json
-{}
+{
+  "data": {
+    "network": "{{NETWORK_NAME}}",
+    "contractName": "erc20-collateral-pool"
+  }
+}
 ```
 
 **Response**
@@ -451,9 +484,9 @@ Upon successful request completion, the server will respond with a status code o
     "aggregate": {
       "sum": {
         "collateralTokenAmount": 0
-       }
-     }
-   }
+      }
+    }
+  }
 }
 ```
 
@@ -471,19 +504,19 @@ Update the pool metadata.
 
 ```json
 {
-    "pool": {
-        "id": "1",
-        "name": "FACTR Pool 1",
-        "description": "FACTR is a tool that facilitates the connection between the traditional world of assets and the decentralized ecosystem of cryptocurrencies. Explore more about Defactor and its potential in the financial world!",
-        "logo": "https://assets.coingecko.com/coins/images/19201/standard/jFLSu4U9_400x400.png?1696518648",
-        "collateralToken": {
-          "logo": "https://assets.coingecko.com/coins/images/19201/standard/jFLSu4U9_400x400.png?1696518648"
-        }
+  "pool": {
+    "network": "{{NETWORK_NAME}}",
+    "contractName": "erc20-collateral-pool",
+    "id": "0",
+    "name": "FACTR Pool 0",
+    "description": "FACTR is a tool that facilitates the connection between the traditional world of assets and the decentralized ecosystem of cryptocurrencies. Explore more about Defactor and its potential in the financial world!",
+    "logo": "https://assets.coingecko.com/coins/images/19201/standard/jFLSu4U9_400x400.png?1696518648",
+    "collateralToken": {
+      "logo": "https://assets.coingecko.com/coins/images/19201/standard/jFLSu4U9_400x400.png?1696518648"
     }
+  }
 }
 ```
-
-Some fields in the collateral token are obtained by the backend from the blockchain itself, such as `name`, `symbol`, and `token precision`.
 
 **Response**
 
@@ -509,10 +542,14 @@ Lend to a pool the specific amount of the token on which the contract is based.
 
 ```json
 {
-    "loan": {
-        "poolId": "0",
-        "amount": "10000000" // 10 of based token contract
+  "loan": {
+    "network": "{{NETWORK_NAME}}",
+    "contractName": "erc20-collateral-pool",
+    "data": {
+      "poolId": "2",
+      "amount": "300000000"
     }
+  }
 }
 ```
 
@@ -551,7 +588,7 @@ The `erc20collateralpool` contract needs the approval to spend money on behalf o
 
 **HTTP Request Method**: POST
 
-**Roles**: Admin  
+**Roles**: Admin
 
 **Request URL**: `{{BASE_RESTFUL_URL}}/v1/repay`
 
@@ -559,10 +596,14 @@ The `erc20collateralpool` contract needs the approval to spend money on behalf o
 
 ```json
 {
-    "loan": {
-        "poolId": "628",
-        "borrowId": "0"
+  "loan": {
+    "network": "{{NETWORK_NAME}}",
+    "contractName": "erc20-collateral-pool",
+    "data": {
+      "poolId": "628",
+      "borrowId": "0"
     }
+  }
 }
 ```
 
@@ -607,11 +648,15 @@ Allows the owner of the address, if they have not already done so, to claim the 
 
 ```json
 {
-   "loan": {
-    "poolId": "0",
-    "address": "0xa8983Fe59b2F08F9F1B3E833c5D47B256F7FE0d5",
-    "lendingId": "0"
-   }
+  "loan": {
+    "network": "{{NETWORK_NAME}}",
+    "contractName": "erc20-collateral-pool",
+    "data": {
+      "poolId": "0",
+      "address": "0xa8983Fe59b2F08F9F1B3E833c5D47B256F7FE0d5",
+      "lendingId": "0"
+    }
+  }
 }
 ```
 
@@ -648,7 +693,7 @@ Retrieves lending information associated with the provided address.
 
 **HTTP Request Method**: GET
 
-**Roles**: Guest  
+**Roles**: Guest
 
 **Request URL**: `{{BASE_RESTFUL_URL}}/v1/get-lending`
 
@@ -656,11 +701,13 @@ Retrieves lending information associated with the provided address.
 
 ```json
 {
-    "loan": {
-        "poolId": "0",
-        "address": "0x0FEEe8332394aDc9eB439020DD8D38f4F93999Bd",
-        "lendingId": "0"
-    }
+  "loan": {
+    "network": "{{NETWORK_NAME}}",
+    "contractName": "erc20-collateral-pool",
+    "poolId": "0",
+    "address": "0x0FEEe8332394aDc9eB439020DD8D38f4F93999Bd",
+    "lendingId": "0"
+  }
 }
 ```
 
@@ -695,10 +742,12 @@ Returns the amount of lending made for a specific pool and a provided address.
 
 ```json
 {
-    "loan": {
-        "poolId": "0",
-        "address": "0x0FEEe8332394aDc9eB439020DD8D38f4F93999Bd"
-    }
+  "loan": {
+    "network": "{{NETWORK_NAME}}",
+    "contractName": "erc20-collateral-pool",
+    "poolId": "0",
+    "address": "0x0FEEe8332394aDc9eB439020DD8D38f4F93999Bd"
+  }
 }
 ```
 
@@ -721,7 +770,7 @@ Retrieves the lending participation for a lender in a pool specified in the pagi
 
 **HTTP Request Method**: GET
 
-**Roles**: Guest  
+**Roles**: Guest
 
 **Request URL**: `{{BASE_RESTFUL_URL}}/v1/get-lendings-by-lender`
 
@@ -729,12 +778,14 @@ Retrieves the lending participation for a lender in a pool specified in the pagi
 
 ```json
 {
-    "loan": {
-        "offset": "0",
-        "limit": "10",
-        "poolId": "0",
-        "lenderAddress": "0x0FEEe8332394aDc9eB439020DD8D38f4F93999Bd"
-    }
+  "loan": {
+    "network": "{{NETWORK_NAME}}",
+    "contractName": "erc20-collateral-pool",
+    "offset": "0",
+    "limit": "10",
+    "poolId": "0",
+    "lenderAddress": "0x0FEEe8332394aDc9eB439020DD8D38f4F93999Bd"
+  }
 }
 ```
 
@@ -778,10 +829,14 @@ The `erc20collateralpool` contract needs the approval to spend the amount of col
 
 ```json
 {
-    "borrow": {
-        "poolId": "628",
-        "amount": "1000000" // 10 of based token contract
+  "borrow": {
+    "network": "{{NETWORK_NAME}}",
+    "contractName": "erc20-collateral-pool",
+    "data": {
+      "poolId": "1",
+      "amount": "15000000" // 15 of based token contract
     }
+  }
 }
 ```
 
@@ -812,40 +867,6 @@ Upon successful completion of a request, the server will issue a status code of 
 }
 ```
 
-### `Calculate Collateral Token Amount`
-
-Retrieves the amount of collateral token required for borrowing the indicated amount of token from the pool. Where the amount in the request body corresponds to the token on which the contract is based.
-
-**HTTP Request Method**: GET
-
-**Roles**: Guest  
-
-**Request URL**: `{{BASE_RESTFUL_URL}}/v1/calculate-collateral-token-amount`
-
-**Request Body**
-
-```json
-{
-    "borrow": {
-        "poolId": "0",
-        "amount": "10000000" // 10 of based token contract
-    }
-}
-```
-
-**Response**
-
-Upon successful request completion, the server will respond with a status code of 200 and a JSON object containing the collateral amount required to borrow the specified amount of token on which the contract is based. This object includes the following attributes:
-
-```json
-{
-  "v1CalculateCollateralTokenAmount": {
-    "res": "372006973844054693", // amount in collateral token
-    "success": true
-  }
-}
-```
-
 ### `Get Borrow`
 
 Returns the borrow information for a borrower in a given pool.
@@ -860,11 +881,13 @@ Returns the borrow information for a borrower in a given pool.
 
 ```json
 {
-   "borrow": {
-        "poolId": "0",
-        "borrowerAddress": "0x0FEEe8332394aDc9eB439020DD8D38f4F93999Bd",
-        "borrowId": "5"
-   }
+  "borrow": {
+    "network": "{{NETWORK_NAME}}",
+    "contractName": "erc20-collateral-pool",
+    "poolId": "0",
+    "borrowerAddress": "0x0FEEe8332394aDc9eB439020DD8D38f4F93999Bd",
+    "borrowId": "5"
+  }
 }
 ```
 
@@ -900,10 +923,12 @@ Returns the total borrows for a borrower in a pool.
 
 ```json
 {
-   "borrow": {
-        "poolId": "0",
-        "borrowerAddress": "0x0FEEe8332394aDc9eB439020DD8D38f4F93999Bd"
-   }
+  "borrow": {
+    "network": "{{NETWORK_NAME}}",
+    "contractName": "erc20-collateral-pool",
+    "poolId": "0",
+    "borrowerAddress": "0x0FEEe8332394aDc9eB439020DD8D38f4F93999Bd"
+  }
 }
 ```
 
@@ -934,12 +959,14 @@ Returns the borrows of a pool the borrower is participating in.
 
 ```json
 {
-   "borrow": {
-        "poolId": "0",
-        "borrowerAddress": "0x0FEEe8332394aDc9eB439020DD8D38f4F93999Bd",
-        "offset": "0",
-        "limit": "10"
-   }
+  "borrow": {
+    "network": "{{NETWORK_NAME}}",
+    "contractName": "erc20-collateral-pool",
+    "poolId": "0",
+    "borrowerAddress": "0x0FEEe8332394aDc9eB439020DD8D38f4F93999Bd",
+    "offset": "0",
+    "limit": "10"
+  }
 }
 ```
 
@@ -966,13 +993,49 @@ Upon successful request completion, the server will respond with a status code o
 }
 ```
 
+### `Calculate Collateral Token Amount`
+
+Retrieves the amount of collateral token required for borrowing the indicated amount of token from the pool. Where the amount in the request body corresponds to the token on which the contract is based.
+
+**HTTP Request Method**: GET
+
+**Roles**: Guest
+
+**Request URL**: `{{BASE_RESTFUL_URL}}/v1/calculate-collateral-token-amount`
+
+**Request Body**
+
+```json
+{
+  "borrow": {
+    "network": "{{NETWORK_NAME}}",
+    "contractName": "erc20-collateral-pool",
+    "poolId": "0",
+    "amount": "10000000" // 10 of based token contract
+  }
+}
+```
+
+**Response**
+
+Upon successful request completion, the server will respond with a status code of 200 and a JSON object containing the collateral amount required to borrow the specified amount of token on which the contract is based. This object includes the following attributes:
+
+```json
+{
+  "v1CalculateCollateralTokenAmount": {
+    "res": "372006973844054693", // amount in collateral token
+    "success": true
+  }
+}
+```
+
 ### `Calculate Repay Interest`
 
 Returns the interest for the repayment of a borrow.
 
 **HTTP Request Method**: GET
 
-**Roles**: Guest  
+**Roles**: Guest
 
 **Request URL**: `{{BASE_RESTFUL_URL}}/v1/calculate-repay-interest`
 
@@ -980,11 +1043,13 @@ Returns the interest for the repayment of a borrow.
 
 ```json
 {
-   "loan": {
-        "poolId": "0",
-        "borrowerAddress": "0x0FEEe8332394aDc9eB439020DD8D38f4F93999Bd",
-        "borrowId": "136"
-   }
+  "loan": {
+    "network": "{{NETWORK_NAME}}",
+    "contractName": "erc20-collateral-pool",
+    "poolId": "0",
+    "borrowerAddress": "0x0FEEe8332394aDc9eB439020DD8D38f4F93999Bd",
+    "borrowId": "136"
+  }
 }
 ```
 
@@ -1003,115 +1068,18 @@ Upon successful request completion, the server will respond with a status code o
 
 ## Utilities
 
-### `Get Usdc`
-
-Returns the configured `usdc` contract address within the `erc20collateraltoken` instance.
-
-**HTTP Request Method**: GET
-
-**Roles**: Guest
-
-**Request URL**: `{{BASE_RESTFUL_URL}}/v1/get-usdc`
-
-**Request Body**
-
-```json
-{}
-```
-
-**Response**
-
-Upon successful request completion, the server will issue a status code of 200 alongside a JSON object containing the address information for `usdc`. This object incorporates the following attributes:
-
-```json
-{
-  "v1GetUsdc": {
-    "res": "0x80D9E7bC3D962878b292F9536b38E52e266a77Fd",
-    "success": true
-  }
-}
-```
-
-### `Get Total Usdc Available`
-
-Get total `usdc` available which is equal to `lent - borrowed`.
-
-**HTTP Request Method**: GET
-
-**Roles**: Guest
-
-**Request URL**: `{{BASE_RESTFUL_URL}}/v1/get-total-usdc-available`
-
-**Request Body**
-
-```json
-{}
-```
-
-**Response**
-
-Upon successful request completion, the server will respond with a status code of 200 and a JSON object containing the total lent and borrowed. This object includes the following attributes:
-
-```json
-{
-  "pool_aggregate": {
-    "aggregate": {
-      "sum": {
-        "borrowed": 0,
-        "lended": 0
-      }
-    }
-  }
-}
-```
-
-### `Get Dollar Price For Token`
-
-Get the dollar price for token.
-
-**HTTP Request Method**: GET
-
-**Roles**: Guest  
-
-**Request URL**: `{{BASE_RESTFUL_URL}}/v1/get-dollar-price-for-token`
-
-**Request Body**
-
-```json
-{}
-```
-
-**Response**
-
-Upon successful request completion, the server will respond with a status code of 200 and a JSON object containing dollar price for the available tokens. This object includes the following attributes:
-
-```json
-{
- "token_price": [
-    {
-      "id": "dfcec840-6a79-4cc0-b368-f07b7a566b85",
-      "date": "1970-01-01T00:00:00.000Z",
-      "price": 0,
-      "marketCaps": 0,
-      "totalVolumes": 0,
-      "tokenName": "tokenName"
-    }
-  ]
-}
-```
-
 ### `Erc20 Approve`
 
 Authorize a third party address to expend a designated sum of funds of the indicated token.
 
-| Property             | Description                                                       |
-| -------------------- | ----------------------------------------------------------------- |
-| `tokenAddress`       | The address where the collateral token is deployed.               |
-| `addressToAuthorize` | The address where the `erc20collateralpool` contract is deployed. |
+| Property  | Description                                                       |
+| --------- | ----------------------------------------------------------------- |
+| `amount`  | The amount to approve.                                            |
+| `address` | The address where the `erc20collateralpool` contract is deployed. |
 
 **HTTP Request Method**: POST
 
-**Roles**: Admin  
+**Roles**: Admin
 
 **Request URL**: `{{BASE_RESTFUL_URL}}/v1/erc20-approve`
 
@@ -1119,11 +1087,14 @@ Authorize a third party address to expend a designated sum of funds of the indic
 
 ```json
 {
-    "token": {
-        "tokenAddress": "0x81da82b49CD9Ee7b7d67B4655784581f30590eA1",
-        "addressToAuthorize": "0x615e1f7970363Fbf7A1843eFc16f0E4e685610F9",
-        "amount": "1032002028946529865"
+  "token": {
+    "network": "{{NETWORK_NAME}}",
+    "contractName": "erc20-collateral-pool",
+    "data": {
+      "address": "0xec92Ca91907fD64E446122953601E774Fd3CD6e6",
+      "amount": 200000000
     }
+  }
 }
 ```
 
@@ -1154,7 +1125,119 @@ Upon successful completion of a request, the server will issue a status code of 
 }
 ```
 
-### `Get Historical Contributions`
+### `Get Usdc`
+
+Returns the configured `usdc` contract address within the `erc20collateraltoken` instance.
+
+**HTTP Request Method**: GET
+
+**Roles**: Guest
+
+**Request URL**: `{{BASE_RESTFUL_URL}}/v1/get-usdc`
+
+**Request Body**
+
+```json
+{
+  "data": {
+    "network": "{{NETWORK_NAME}}",
+    "contractName": "erc20-collateral-pool"
+  }
+}
+```
+
+**Response**
+
+Upon successful request completion, the server will issue a status code of 200 alongside a JSON object containing the address information for `usdc`. This object incorporates the following attributes:
+
+```json
+{
+  "v1GetUsdc": {
+    "res": "0x80D9E7bC3D962878b292F9536b38E52e266a77Fd",
+    "success": true
+  }
+}
+```
+
+### `Get Total Usdc Available`
+
+Get total `usdc` available which is equal to `lent - borrowed`.
+
+**HTTP Request Method**: GET
+
+**Roles**: Guest
+
+**Request URL**: `{{BASE_RESTFUL_URL}}/v1/get-total-usdc-available`
+
+**Request Body**
+
+```json
+{
+  "data": {
+    "network": "{{NETWORK_NAME}}",
+    "contractName": "erc20-collateral-pool"
+  }
+}
+```
+
+**Response**
+
+Upon successful request completion, the server will respond with a status code of 200 and a JSON object containing the total lent and borrowed. This object includes the following attributes:
+
+```json
+{
+  "pool_aggregate": {
+    "aggregate": {
+      "sum": {
+        "borrowed": 0,
+        "lended": 0
+      }
+    }
+  }
+}
+```
+
+### `Get Dollar Price For Token`
+
+Get the dollar price for token.
+
+**HTTP Request Method**: GET
+
+**Roles**: Guest
+
+**Request URL**: `{{BASE_RESTFUL_URL}}/v1/get-dollar-price-for-token`
+
+**Request Body**
+
+```json
+{
+  "data": {
+    "network": "{{NETWORK_NAME}}",
+    "contractName": "erc20-collateral-pool"
+  }
+}
+```
+
+**Response**
+
+Upon successful request completion, the server will respond with a status code of 200 and a JSON object containing dollar price for the available tokens. This object includes the following attributes:
+
+```json
+{
+  "token_price": [
+    {
+      "id": "dfcec840-6a79-4cc0-b368-f07b7a566b85",
+      "date": "1970-01-01T00:00:00.000Z",
+      "price": 0,
+      "marketCaps": 0,
+      "totalVolumes": 0,
+      "tokenName": "tokenName"
+    }
+  ]
+}
+```
+
+### `Get Historical Balance`
 
 Get the historical contributions by filtered by event and group by period of time
 
@@ -1167,16 +1250,16 @@ Get the historical contributions by filtered by event and group by period of tim
 
 **Roles**: Guest
 
-**Request URL**: `{{BASE_RESTFUL_URL}}/v1/get-historical-contributions`
+**Request URL**: `{{BASE_RESTFUL_URL}}/v1/get-historical-balance`
 
 **Request Body**
 
 ```json
 {
-    "stats": {
-        "filterBy": "year",
-        "byEvent": "LendEvent"
-    }
+  "stats": {
+    "networks": ["{{NETWORK_NAME}}"],
+    "filterBy": "month"
+  }
 }
 ```
 
@@ -1206,9 +1289,22 @@ Upon successful request completion, the server will issue a status code of 200 a
 }
 ```
 
+### `get Config`
+
+**HTTP Request Method**: GET
+
+**Request URL**: `{{BASE_RESTFUL_URL}}/get-config`
+
+**Request Body**
+
+```json
+{}
+```
+
 ## Error Reference
 
 ### Error Response Format
+
 The errors have the following schema:
 
 | Property | Description                                 |
@@ -1221,71 +1317,66 @@ The errors have the following schema:
 
 The variable has a wrong type:
 
-``` json
+```json
 {
   "error": "expected a string for type 'String', but found a number",
   "path": "$.selectionSet.v1GetPool.args.pool.poolId",
   "code": "validation-failed"
 }
-
- ```
+```
 
 The variable is missing in the request body:
 
-``` json
+```json
 {
   "error": "missing required field 'poolId'",
   "path": "$.selectionSet.v1GetPool.args.pool.poolId",
   "code": "validation-failed"
 }
-
- ```
+```
 
 The field does not exists or the role has no permissions:
 
-``` json
+```json
 {
   "error": "field 'v1UpdatePoolMetadata' not found in type: 'mutation_root'",
   "path": "$.selectionSet.v1UpdatePoolMetadata",
-  "code": "validation-failed" 
+  "code": "validation-failed"
 }
-
- ```
+```
 
 The variable is not in the request body schema:
 
-``` json
+```json
 {
   "error": "Unexpected variable pool",
   "path": "$",
   "code": "bad-request"
 }
-
- ```
+```
 
 The endpoint does not exists:
 
-``` json
+```json
 {
   "error": "Endpoint not found",
   "path": "$",
-  "code": "not-found"  
+  "code": "not-found"
 }
-
- ```
+```
 
 There is no pool with the provided id:
 
-``` json
+```json
 {
   "error": "Pool id 400 does not exist",
   "path": "$",
   "code": "unexpected"
 }
-
- ```
+```
 
 ### Types of Errors
+
 **General**
 
 - The date provided has already passed
