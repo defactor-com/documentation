@@ -8,7 +8,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "npx ts-node index.ts -i defactor-api.postman_collection.json -o ../../docs/back-end-api/erc20CollateralToken/"
+    "start": "npx ts-node index.ts -i defactor-pools-api.postman_collection.json -o ../../docs/pools/back-end/api/erc20CollateralToken/ --ignore \"COUNTER PARTY POOL\""
   },
   "dependencies": {
     "@types/node": "^20.12.2",

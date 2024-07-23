@@ -4,6 +4,8 @@ sidebar_position: 1
 ---
 
 The [Defactor SDK](/docs/introduction/software-development-kit) provides utilities and classes to seamless interaction with the Defactor contracts. In this specific section, the focus is in the [CounterParty Pool Contract](/docs/pools/smart-contracts/counterparty-pools-contract/counterparty-pools-smart-contract) and `Pools` class, which implements the fundamental methods to interact with the contract in question.
+
+To support the [Admin version](/docs/pools/smart-contracts/counterparty-pools-contract/counterparty-pools-smart-contract#admin-only-version) of the contract it is needed to use the `AdminPools` class instead.
  
 ## Constants
 

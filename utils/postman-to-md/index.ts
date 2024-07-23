@@ -99,6 +99,8 @@ const getUrl = (postmanItem: ItemDefinition) => {
 };
 
 const extractText = (text: string, label: string) => {
+  if (!text) return '';
+
   const startIndex = text.indexOf(`**${label}**`);
   const offset = label.length + 4;
 
