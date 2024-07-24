@@ -3,22 +3,34 @@ import requests
 import datetime
 import logging
 import re
+import argparse
 from openai import OpenAI
 from slack_sdk import WebClient
 from slack_sdk.errors import SlackApiError
 import ssl
 import certifi
+from dotenv import load_dotenv
+
+# Load environment variables
+load_dotenv()
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 # Constants
 GITHUB_API_URL = "https://api.github.com"
-TOKEN = os.getenv("GH_TOKEN")  # Get the token from environment variables
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")  # Get the OpenAI API key from environment variables
-SLACK_TOKEN = os.getenv("SLACK_TOKEN")  # Get the Slack token from environment variables
-SLACK_CHANNEL = os.getenv("SLACK_CHANNEL")  # Get the Slack channel from environment variables
-ASSISTANT_ID = os.getenv("ASSISTANT_ID")  # Get the assistant ID from environment variables
+GH_TOKEN = ""
+OPENAI_API_KEY = ""
+SLACK_TOKEN = " "
+SLACK_CHANNEL = "defactor-internal" 
+ASSISTANT_ID = "asst_1oN1ByOk4JJ9CxXdUmmVw7vQ"
+
+if not TOKEN:
+    logging.error("GitHub token is not set. Please check your environment variables.")
+else:
+    logging.info("GitHub token loaded successfully.")
+    # Debugging: print the token (ensure to remove this in production)
+    print(f"GitHub Token: {TOKEN}")
 
 # Initialize OpenAI client
 client = OpenAI(api_key=OPENAI_API_KEY)
@@ -28,12 +40,14 @@ slack_client = WebClient(token=SLACK_TOKEN, ssl=ssl.create_default_context(cafil
 
 # List of repositories
 REPOS = [
-    {'owner': 'defactor-com', 'name': 'ui-kit'},
     {'owner': 'defactor-com', 'name': 'assets-webapp'},
-    {'owner': 'defactor-com', 'name': 'pools-backend'},
+    {'owner': 'defactor-com', 'name': 'assets-backend'},
     {'owner': 'defactor-com', 'name': 'pools-webapp'},
-    {'owner': 'defactor-com', 'name': 'documentation'},
-    {'owner': 'defactor-com', 'name': 'sdk'}
+    {'owner': 'defactor-com', 'name': 'pools-backend'},
+    {'owner': 'defactor-com', 'name': 'ui-kit'},
+    {'owner': 'defactor-com', 'name': 'sdk'},
+    {'owner': 'defactor-com', 'name': 'ipfs'},
+    {'owner': 'defactor-com', 'name': 'documentation'}
 ]
 
 # Helper functions
@@ -46,6 +60,7 @@ def get_previous_week_dates():
 def github_api_request(url, params=None):
     headers = {"Authorization": f"token {TOKEN}"}
     response = requests.get(url, headers=headers, params=params)
+    logging.debug(f"GitHub API request URL: {response.url}")
     response.raise_for_status()
     return response.json()
 
@@ -61,6 +76,9 @@ def get_issue_details(owner, repo, issue_number):
     return github_api_request(issue_url)
 
 def extract_issue_numbers(pr_body):
+    if not pr_body:
+        return []
+    
     issue_numbers = []
     # More flexible regex to capture variations in references
     issue_references = re.findall(r'(?:fixes|closes|resolves|references|refs|fix|close|resolve)[^\n\r#]*(?:#|GH-)(\d+)', pr_body, re.IGNORECASE)
@@ -69,6 +87,9 @@ def extract_issue_numbers(pr_body):
     return issue_numbers
 
 def clean_pr_body(pr_body):
+    if pr_body is None:
+        return "No description provided."
+    
     # Remove "Steps to test" and "CheckList" sections
     cleaned_body = re.sub(r'### Steps to test.*?(\n\n|$)', '', pr_body, flags=re.DOTALL)
     cleaned_body = re.sub(r'#### CheckList.*?(\n\n|$)', '', cleaned_body, flags=re.DOTALL)
@@ -91,11 +112,12 @@ def generate_summary(repos, start_date, end_date):
         
         issues_seen = set()
         for pr in pulls:
-            logging.debug(f"Processing PR #{pr['number']} with body:\n{pr['body']}")
-            cleaned_body = clean_pr_body(pr['body'])
+            pr_body = pr.get('body', 'No description provided.')
+            logging.debug(f"Processing PR #{pr['number']} with body:\n{pr_body}")
+            cleaned_body = clean_pr_body(pr_body)
             summary += f"### Pull Request #{pr['number']}: {pr['title']}\n"
             summary += f"- **Description:** {cleaned_body}\n"
-            issue_numbers = extract_issue_numbers(pr['body'])
+            issue_numbers = extract_issue_numbers(pr_body)
             logging.debug(f"Issue numbers for PR #{pr['number']}: {issue_numbers}")
             if issue_numbers:
                 summary += "- **Referenced Issues:**\n"
@@ -141,8 +163,9 @@ def post_to_slack(channel, message):
     except SlackApiError as e:
         logging.error(f"Error posting message to Slack: {e.response['error']}")
 
-def main(repos):
-    start_date, end_date = get_previous_week_dates()
+def main(repos, start_date=None, end_date=None):
+    if not start_date or not end_date:
+        start_date, end_date = get_previous_week_dates()
     summary = generate_summary(repos, start_date, end_date)
     raw_summary_filename = f"Development_Weekly_Updates_{start_date}_to_{end_date}_raw.txt"
     polished_summary_filename = f"Development_Weekly_Updates_{start_date}_to_{end_date}_polished.txt"
@@ -157,4 +180,12 @@ def main(repos):
     post_to_slack(SLACK_CHANNEL, polished_summary)
 
 if __name__ == "__main__":
-    main(REPOS)
+    parser = argparse.ArgumentParser(description='Generate weekly GitHub update report.')
+    parser.add_argument('--start_date', type=str, help='Start date in YYYY-MM-DD format')
+    parser.add_argument('--end_date', type=str, help='End date in YYYY-MM-DD format')
+    args = parser.parse_args()
+
+    start_date = datetime.datetime.strptime(args.start_date, '%Y-%m-%d').date() if args.start_date else None
+    end_date = datetime.datetime.strptime(args.end_date, '%Y-%m-%d').date() if args.end_date else None
+
+    main(REPOS, start_date, end_date)
