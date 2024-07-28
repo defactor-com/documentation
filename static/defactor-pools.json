@@ -141,8 +141,8 @@
   },
   {
     "id": "pools-landshare-testnet",
-    "name": "LandShare Testnet",
-    "description": "Development environment for LandShare.",
+    "name": "LandShare Development",
+    "description": "Testnet environment for LandShare.",
     "web": "https://landshare.defactor.dev",
     "api": "https://landshare-api.defactor.dev",
     "testnet": true,
