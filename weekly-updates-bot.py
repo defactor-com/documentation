@@ -4,7 +4,6 @@ import datetime
 import logging
 import re
 import argparse
-from openai import OpenAI
 from slack_sdk import WebClient
 from slack_sdk.errors import SlackApiError
 import ssl
@@ -29,11 +28,6 @@ if not TOKEN:
     logging.error("GitHub token is not set. Please check your environment variables.")
 else:
     logging.info("GitHub token loaded successfully.")
-    # Debugging: print the token (ensure to remove this in production)
-    print(f"GitHub Token: {TOKEN}")
-
-# Initialize OpenAI client
-client = OpenAI(api_key=OPENAI_API_KEY)
 
 # Initialize Slack client
 slack_client = WebClient(token=SLACK_TOKEN, ssl=ssl.create_default_context(cafile=certifi.where()))
@@ -41,13 +35,15 @@ slack_client = WebClient(token=SLACK_TOKEN, ssl=ssl.create_default_context(cafil
 # List of repositories
 REPOS = [
     {'owner': 'defactor-com', 'name': 'assets-webapp'},
-    {'owner': 'defactor-com', 'name': 'assets-backend'},
-    {'owner': 'defactor-com', 'name': 'pools-webapp'},
-    {'owner': 'defactor-com', 'name': 'pools-backend'},
-    {'owner': 'defactor-com', 'name': 'ui-kit'},
-    {'owner': 'defactor-com', 'name': 'sdk'},
-    {'owner': 'defactor-com', 'name': 'ipfs'},
-    {'owner': 'defactor-com', 'name': 'documentation'}
+    # {'owner': 'defactor-com', 'name': 'assets-backend'},
+    # {'owner': 'defactor-com', 'name': 'pools-webapp'},
+    # {'owner': 'defactor-com', 'name': 'pools-backend'},
+    # {'owner': 'defactor-com', 'name': 'engage-webapp'},
+    # {'owner': 'defactor-com', 'name': 'engage-backend'},
+    # {'owner': 'defactor-com', 'name': 'ui-kit'},
+    # {'owner': 'defactor-com', 'name': 'sdk'},
+    # {'owner': 'defactor-com', 'name': 'ipfs'},
+    # {'owner': 'defactor-com', 'name': 'documentation'}
 ]
 
 # Helper functions
@@ -80,7 +76,6 @@ def extract_issue_numbers(pr_body):
         return []
     
     issue_numbers = []
-    # More flexible regex to capture variations in references
     issue_references = re.findall(r'(?:fixes|closes|resolves|references|refs|fix|close|resolve)[^\n\r#]*(?:#|GH-)(\d+)', pr_body, re.IGNORECASE)
     logging.debug(f"Extracted issue references: {issue_references}")
     issue_numbers.extend(map(int, issue_references))
@@ -90,7 +85,6 @@ def clean_pr_body(pr_body):
     if pr_body is None:
         return "No description provided."
     
-    # Remove "Steps to test" and "CheckList" sections
     cleaned_body = re.sub(r'### Steps to test.*?(\n\n|$)', '', pr_body, flags=re.DOTALL)
     cleaned_body = re.sub(r'#### CheckList.*?(\n\n|$)', '', cleaned_body, flags=re.DOTALL)
     cleaned_body = re.sub(r'\d+\.\s.*\n', '', cleaned_body, flags=re.MULTILINE)
@@ -142,19 +136,39 @@ def save_summary_to_file(summary, filename):
         file.write(summary)
     logging.info(f"Summary saved to {filename}")
 
-def get_polished_summary(summary):
-    response = client.chat.completions.create(
-        model="gpt-4",
-        messages=[
-            {"role": "system", "content": f"You are an assistant with the ID {ASSISTANT_ID}."},
-            {"role": "user", "content": summary}
-        ],
-        max_tokens=1024,
-        n=1,
-        stop=None,
-        temperature=0.5
-    )
-    return response.choices[0].message.content.strip()
+def create_conversation():
+    url = f'https://api.openai.com/v1/assistants/{ASSISTANT_ID}/conversations'
+    headers = {
+        'Authorization': f'Bearer {OPENAI_API_KEY}',
+        'Content-Type': 'application/json',
+        'OpenAI-Beta': 'assistants-v1'
+    }
+    payload = {}
+    response = requests.post(url, headers=headers, json=payload)
+    if response.status_code == 201:
+        return response.json()['id']
+    else:
+        logging.error(f'Error: {response.status_code}')
+        logging.error(response.text)
+        return None
+    
+def get_polished_summary(conversation_id, summary):
+    url = f'https://api.openai.com/v1/assistants/{ASSISTANT_ID}/conversations/{conversation_id}/messages'
+    headers = {
+        'Authorization': f'Bearer {OPENAI_API_KEY}',
+        'Content-Type': 'application/json',
+        'OpenAI-Beta': 'assistants-v1'
+    }
+    payload = {
+        'input': {'text': summary}
+    }
+    response = requests.post(url, headers=headers, json=payload)
+    if response.status_code == 201:
+        return response.json()['message']['content']
+    else:
+        logging.error(f'Error: {response.status_code}')
+        logging.error(response.text)
+        return None
 
 def post_to_slack(channel, message):
     try:
@@ -170,14 +184,11 @@ def main(repos, start_date=None, end_date=None):
     raw_summary_filename = f"Development_Weekly_Updates_{start_date}_to_{end_date}_raw.txt"
     polished_summary_filename = f"Development_Weekly_Updates_{start_date}_to_{end_date}_polished.txt"
     save_summary_to_file(summary, raw_summary_filename)
-    polished_summary = get_polished_summary(summary)
-    save_summary_to_file(polished_summary, polished_summary_filename)
-
-    # Generate Development Updates Article
-    print(polished_summary)
-
-    # Post summary to Slack (commented out for now)
-    post_to_slack(SLACK_CHANNEL, polished_summary)
+    conversation_id = create_conversation()
+    if conversation_id:
+        polished_summary = get_polished_summary(conversation_id, summary)
+        save_summary_to_file(polished_summary, polished_summary_filename)
+        post_to_slack(SLACK_CHANNEL, polished_summary)
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Generate weekly GitHub update report.')
