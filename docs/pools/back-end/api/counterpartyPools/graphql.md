@@ -440,15 +440,7 @@ mutation ($pool: UpdatePoolMetadataInput!) {
         "standard": "ERC20",
         "logo": "https://assets.coingecko.com/coins/images/19201/standard/jFLSu4U9_400x400.png?1696518648"
       }
-    ],
-    "termsConditions": {
-      "title": "What happens if I default on my loan?",
-      "description": "Liquidation is an essential process of lending activity, the process of liquidation occurs when the lending pool has reached its maturity date, are still outstanding and have not been repaid by the borrowers.",
-      "ref": {
-        "label": "Download Repayment Terms & Conditions",
-        "url": "https://www.defactor.com/"
-      }
-    }
+    ]
   }
 }
 ```
