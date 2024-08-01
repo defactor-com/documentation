@@ -1,0 +1,61 @@
+[
+  {
+    "id": "pools-factr-mainnet",
+    "name": "FACTR Finance Production",
+    "description": "Production environment for FACTR Finance.",
+    "web": "https://factr.finance",
+    "api": "https://api.factr.finance",
+    "chains": [
+      {
+        "id": "Base",
+        "type": "Erc20 Collateral Pool",
+        "contract": "0x326a7E3cB01f2d429B871114A1417dd3B3cAbfD6",
+        "token": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+        "oracle": "<pending>",
+        "collateral": "0xd33c7B753ECaa85E5D5F5B5fD99Dec59f26a087E"
+      }
+    ]
+  },
+  {
+    "id": "pools-aurus2-mainnet",
+    "name": "Aurus2 Production",
+    "description": "Production environment for Aurus2.",
+    "web": "https://aurus2.factr.app",
+    "api": "https://aurus2-api.factr.app",
+    "chains": [
+      {
+        "id": "Polygon",
+        "type": "Erc20 Collateral Pool",
+        "contract": "0x5B23290a4ff67d4A5544935ca89943f00948153A",
+        "token": "0x3c499c542cef5e3811e1192ce70d8cc03d5c3359",
+        "oracle": "<pending>",
+        "collateral": "0xa6da8c8999c094432c77e7d318951d34019af24b"
+      },
+      {
+        "id": "Ethereum",
+        "type": "Erc20 Collateral Pool",
+        "contract": "0xecd5676b7a5E58bda3E3fd599a5caaf26CA286C4",
+        "token": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+        "oracle": "<pending>",
+        "collateral": "0xe4a6f23fb9e00fca037aa0ea0a6954de0a6c53bf"
+      }
+    ]
+  },
+  {
+    "id": "pools-landx-mainnet",
+    "name": "LandX Production",
+    "description": "Production environment for LandX.",
+    "web": "https://landx.defactor.dev",
+    "api": "https://landx-api.defactor.dev",
+    "chains": [
+      {
+        "id": "Ethereum",
+        "type": "Erc20 Collateral Pool",
+        "contract": "0x326a7E3cB01f2d429B871114A1417dd3B3cAbfD6",
+        "token": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+        "oracle": "0x21A0bDC6BC2a47Cd390F601422750f576de46cB2",
+        "collateral": "0x6fC27F5CC0aAFeC8e2b8bC4E6393aC89e45232d3"
+      }
+    ]
+  }
+]
