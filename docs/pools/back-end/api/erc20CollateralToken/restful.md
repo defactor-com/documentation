@@ -331,7 +331,9 @@ Upon successful request completion, the server will respond with a status code o
 
 ### `Liquidate Pool`
 
-Liquidate a pool.
+Liquidate a pool if it is not completed.
+
+The `erc20collateralpool` contract needs the approval to spend the amount of base token on behalf of the lender, to give the approve the [`erc20 approve`](#erc20-approve) endpoint could be used. Also, to get the amount needed to liquidate the pool use the [`get liquidation info`](#get-liquidation-info) endpoint.
 
 **HTTP Request Method**: POST
 
@@ -382,7 +384,7 @@ Upon successful completion of a request, the server will issue a status code of 
 
 ### `Get Liquidation Info`
 
-Retrieves the liquidation information of a loan.
+if the pool is not completed retrieves the liquidation information of a loan.
 
 **HTTP Request Method**: GET
 
@@ -453,43 +455,6 @@ Upon successful request completion, the server will respond with a status code o
 }
 ```
 
-### `Get Total Collateral Amount`
-
-Get the total collateral amount.
-
-**HTTP Request Method**: GET
-
-**Roles**: Guest
-
-**Request URL**: `{{BASE_RESTFUL_URL}}/v1/get-total-collateral-amount`
-
-**Request Body**
-
-```json
-{
-  "data": {
-    "network": "{{NETWORK_NAME}}",
-    "contractName": "erc20-collateral-pool"
-  }
-}
-```
-
-**Response**
-
-Upon successful request completion, the server will respond with a status code of 200 and a JSON object containing the total collateral amount. This object includes the following attributes:
-
-```json
-{
-  "pool_aggregate": {
-    "aggregate": {
-      "sum": {
-        "collateralTokenAmount": 0
-      }
-    }
-  }
-}
-```
-
 ### `Update Pool Metadata`
 
 Update the pool metadata.
@@ -513,6 +478,14 @@ Update the pool metadata.
     "logo": "https://assets.coingecko.com/coins/images/19201/standard/jFLSu4U9_400x400.png?1696518648",
     "collateralToken": {
       "logo": "https://assets.coingecko.com/coins/images/19201/standard/jFLSu4U9_400x400.png?1696518648"
+    },
+    "termsConditions": {
+      "title": "What happens if I default on my loan?",
+      "description": "Liquidation is an essential process of lending activity, the process of liquidation occurs when the lending pool has reached its maturity date, are still outstanding and have not been repaid by the borrowers.",
+      "ref": {
+        "label": "Download Repayment Terms & Conditions",
+        "url": "https://www.defactor.com/"
+      }
     }
   }
 }
@@ -582,7 +555,7 @@ Upon successful completion of a request, the server will issue a status code of 
 
 ### `Repay`
 
-Repay a loan to a pool if it is not closed and it has not already been repaid.
+Repay a loan to a pool if it is not closed and it has not already been repaid. This endpoint only supports signed transactions as payload.
 
 The `erc20collateralpool` contract needs the approval to spend money on behalf of the borrower, to give the approve the [`erc20 approve`](#erc20-approve) endpoint could be used. The amount to approve must be `USDC lent + loan interest.`
 
@@ -599,10 +572,7 @@ The `erc20collateralpool` contract needs the approval to spend money on behalf o
   "loan": {
     "network": "{{NETWORK_NAME}}",
     "contractName": "erc20-collateral-pool",
-    "data": {
-      "poolId": "628",
-      "borrowId": "0"
-    }
+    "tx": "0x02f8b38301388259844190ab00844190ab1e83044082940a2e94dd0d8efa9598f3fa7287f888dc03add28880b8440ecbcdab00000000000000000000000000000000000000000000000000000000000000250000000000000000000000000000000000000000000000000000000001c9c380c001a060a1ef201be2fb0062b2c8880eb4f7468745b7d057ef942c4d74c53c51adefdda00a17ecbf456d6aaf9d134334e98b24195ec23566abfd4836b6ac69e80dd111d8"
   }
 }
 ```
@@ -815,7 +785,7 @@ Upon successful request completion, the server will respond with a status code o
 
 ### `Borrow`
 
-Borrow the indicated amount of the token from the pool if it is not close and there is enough funds. Where the amount in the request body corresponds to the token on which the contract is based.
+Borrow the indicated amount of the token from the pool if it is not close and there is enough funds. Where the amount in the request body corresponds to the token on which the contract is based. This endpoint only supports signed transactions as payload.
 
 The `erc20collateralpool` contract needs the approval to spend the amount of collateral token on behalf of the borrower, to give the approve the [`erc20 approve`](#erc20-approve) endpoint could be used. Also, to get the amount of collateral token use the [`calculate collateral amount`](#calculate-collateral-token-amount) endpoint.
 
@@ -832,10 +802,7 @@ The `erc20collateralpool` contract needs the approval to spend the amount of col
   "borrow": {
     "network": "{{NETWORK_NAME}}",
     "contractName": "erc20-collateral-pool",
-    "data": {
-      "poolId": "1",
-      "amount": "15000000" // 15 of based token contract
-    }
+    "tx": "0x02f8b38301388259844190ab00844190ab1e83044082940a2e94dd0d8efa9598f3fa7287f888dc03add28880b8440ecbcdab00000000000000000000000000000000000000000000000000000000000000250000000000000000000000000000000000000000000000000000000001c9c380c001a060a1ef201be2fb0062b2c8880eb4f7468745b7d057ef942c4d74c53c51adefdda00a17ecbf456d6aaf9d134334e98b24195ec23566abfd4836b6ac69e80dd111d8"
   }
 }
 ```
@@ -1156,84 +1123,6 @@ Upon successful request completion, the server will issue a status code of 200 a
     "res": "0x80D9E7bC3D962878b292F9536b38E52e266a77Fd",
     "success": true
   }
-}
-```
-
-### `Get Total Usdc Available`
-
-Get total `usdc` available which is equal to `lent - borrowed`.
-
-**HTTP Request Method**: GET
-
-**Roles**: Guest
-
-**Request URL**: `{{BASE_RESTFUL_URL}}/v1/get-total-usdc-available`
-
-**Request Body**
-
-```json
-{
-  "data": {
-    "network": "{{NETWORK_NAME}}",
-    "contractName": "erc20-collateral-pool"
-  }
-}
-```
-
-**Response**
-
-Upon successful request completion, the server will respond with a status code of 200 and a JSON object containing the total lent and borrowed. This object includes the following attributes:
-
-```json
-{
-  "pool_aggregate": {
-    "aggregate": {
-      "sum": {
-        "borrowed": 0,
-        "lended": 0
-      }
-    }
-  }
-}
-```
-
-### `Get Dollar Price For Token`
-
-Get the dollar price for token.
-
-**HTTP Request Method**: GET
-
-**Roles**: Guest
-
-**Request URL**: `{{BASE_RESTFUL_URL}}/v1/get-dollar-price-for-token`
-
-**Request Body**
-
-```json
-{
-  "data": {
-    "network": "{{NETWORK_NAME}}",
-    "contractName": "erc20-collateral-pool"
-  }
-}
-```
-
-**Response**
-
-Upon successful request completion, the server will respond with a status code of 200 and a JSON object containing dollar price for the available tokens. This object includes the following attributes:
-
-```json
-{
-  "token_price": [
-    {
-      "id": "dfcec840-6a79-4cc0-b368-f07b7a566b85",
-      "date": "1970-01-01T00:00:00.000Z",
-      "price": 0,
-      "marketCaps": 0,
-      "totalVolumes": 0,
-      "tokenName": "tokenName"
-    }
-  ]
 }
 ```
 

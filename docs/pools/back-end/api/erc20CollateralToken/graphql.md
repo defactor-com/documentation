@@ -397,7 +397,9 @@ Upon successful request completion, the server will respond with a status code o
 
 ### `Liquidate Pool`
 
-Liquidate a pool.
+Liquidate a pool if it is not completed.
+
+The `erc20collateralpool` contract needs the approval to spend the amount of base token on behalf of the lender, to give the approve the [`erc20 approve`](#erc20-approve) endpoint could be used. Also, to get the amount needed to liquidate the pool use the [`get liquidation info`](#get-liquidation-info) endpoint.
 
 **HTTP Request Method**: POST
 
@@ -459,7 +461,7 @@ Upon successful completion of a request, the server will issue a status code of 
 
 ### `Get Liquidation Info`
 
-Retrieves the liquidation information of a loan.
+if the pool is not completed retrieves the liquidation information of a loan.
 
 **HTTP Request Method**: POST
 
@@ -725,7 +727,7 @@ Upon successful completion of a request, the server will issue a status code of 
 
 ### `Repay`
 
-Repay a loan to a pool if it is not closed and it has not already been repaid.
+Repay a loan to a pool if it is not closed and it has not already been repaid. This endpoint only supports signed transactions as payload.
 
 The `erc20collateralpool` contract needs the approval to spend money on behalf of the borrower, to give the approve the [`erc20 approve`](#erc20-approve) endpoint could be used. The amount to approve must be `USDC lent + loan interest.`
 
@@ -1010,7 +1012,7 @@ Upon successful request completion, the server will respond with a status code o
 
 ### `Borrow`
 
-Borrow the indicated amount of the token from the pool if it is not close and there is enough funds. Where the amount in the request body corresponds to the token on which the contract is based.
+Borrow the indicated amount of the token from the pool if it is not close and there is enough funds. Where the amount in the request body corresponds to the token on which the contract is based. This endpoint only supports signed transactions as payload.
 
 The `erc20collateralpool` contract needs the approval to spend the amount of collateral token on behalf of the borrower, to give the approve the [`erc20 approve`](#erc20-approve) endpoint could be used. Also, to get the amount of collateral token use the [`calculate collateral amount`](#calculate-collateral-token-amount) endpoint.
 
@@ -1393,7 +1395,7 @@ Upon successful completion of a request, the server will issue a status code of 
 
 ### `Get Total Usdc Available`
 
-Get total `usdc` available which is equal to `lent - borrowed`.
+Get total `usdc` available which is equal to `supplied - borrowed`.
 
 **HTTP Request Method**: POST
 
@@ -1405,11 +1407,15 @@ Get total `usdc` available which is equal to `lent - borrowed`.
 
 ```graphql
 query v1GetTotalUsdcAvailable {
-  {{NETWORK_NAME}}_pool_aggregate {
+  {{NETWORK_NAME}}_pool_aggregate(
+    where: {
+      contract_id: { _eq: "{{ERC20_COLLATERAL_POOL_ID}}"}
+   }
+  ) {
     aggregate {
       sum {
         borrowed
-        lended
+        supplied
       }
     }
   }
