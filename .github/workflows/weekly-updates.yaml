@@ -31,4 +31,4 @@ jobs:
         SLACK_CHANNEL: ${{ secrets.SLACK_CHANNEL }}
         ASSISTANT_ID: ${{ secrets.ASSISTANT_ID }}
       run: |
-        python updates-bot.py
+        python weekly-updates-bot.py

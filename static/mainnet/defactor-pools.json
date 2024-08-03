@@ -45,8 +45,8 @@
     "id": "pools-landx-mainnet",
     "name": "LandX Production",
     "description": "Production environment for LandX.",
-    "web": "https://landx.defactor.dev",
-    "api": "https://landx-api.defactor.dev",
+    "web": "https://landx.factr.app",
+    "api": "https://landx-api.factr.app",
     "chains": [
       {
         "id": "Ethereum",
