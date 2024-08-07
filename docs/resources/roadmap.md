@@ -40,15 +40,15 @@ Our roadmap is a testament to our dedication to innovate and grow in the DeFi an
 
 | Milestone                      | Description                                                               | Status |
 |--------------------------------|---------------------------------------------------------------------------|--------|
-| Precious Metal Pool v2         | Updated features and UI                                                   | 🟡 In Progress |
+| Precious Metal Pool v2         | Updated features and UI                                                   | 🟢 Completed |
 | Open Source SDK and UI Toolkit | Design and Develop Open-Source DeFi Toolkit Empowering developers to build on our platform.   | 🟡 In Progress |
-| Pools Version 2                | Updated React UI showcasing ERC20.loans with adequate liquidity on uniswap| 🔵 Upcoming |
+| Pools Version 2                | Updated React UI showcasing ERC20.loans with adequate liquidity on uniswap| 🟢 Completed |
+| Crypto market Maker v1         | SME Lending Pool for Market Maker                                        | 🟢 Completed |
+| Migrate Legacy Customers       | Migrate legacy customers over to latest Version of Defactor Pools        | 🟢 Completed |
+| Engage v2                      | New UX design using react framework for engage App including Buyback Dashboard | 🟡 In Progress  |
+| Precious Metal Pool 3          | Using new React Framework UI                                             | 🟢 Completed |
+| Credit rating System           | Implementation Credit Ratings in LatAm                                   | 🟢 Completed |
 | Music Royalties Pool v1        | Defactor pools instance for tokenized music assets                       | 🔵 Upcoming  |
-| Crypto market Maker v1         | SME Lending Pool for Market Maker                                        | 🔵 Upcoming |
-| Migrate Legacy Customers       | Migrate legacy customers over to latest Version of Defactor Pools        | 🔵 Upcoming |
-| Engage v2                      | New UX design using react framework for engage App including Buyback Dashboard | 🔵 Upcoming  |
-| Precious Metal Pool 3          | Using new React Framework UI                                             | 🔵 Upcoming |
-| Credit rating System           | Implementation Credit Ratings in LatAm                                   | 🔵 Upcoming |
 
 ### Second Half (H2)
 
