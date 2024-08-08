@@ -18,9 +18,9 @@
   },
   {
     "id": "pools-aurus2-mainnet",
-    "name": "Aurus2 Production",
-    "description": "Production environment for Aurus2.",
-    "web": "https://aurus2.factr.app",
+    "name": "Aurus Production",
+    "description": "Production environment for Aurus.",
+    "web": "https://aurus.factr.app",
     "api": "https://aurus2-api.factr.app",
     "chains": [
       {
