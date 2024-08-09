@@ -15,24 +15,12 @@
         "collateral": "0x8574299682D036F88195a2685601D90300E21Bca"
       },
       {
-        "id": "Amoy",
-        "type": "Staking",
-        "contract": "0xdaE01d1d63C119b6F389ec3188c8D9f716C6C77c",
-        "factr": "0x8574299682D036F88195a2685601D90300E21Bca"
-      },
-      {
         "id": "Sepolia",
         "type": "Erc20 Collateral Pool",
         "contract": "0x295894a94F859cE1Ac960364D6b0D2Fa430027b4",
         "token": "0x75fe3476d90598080f7D12365020C438943Dcef3",
         "oracle": "0xaD65748ad8Ad34bCF4b2AEb4Fd83F37C543F4b97",
         "collateral": "0x7D5c1468D8bE9f0F4FaD26F2Cb7e6b2ed9042577"
-      },
-      {
-        "id": "Sepolia",
-        "type": "Staking",
-        "contract": "0x733D816f9d7ea664E1132EF132C040655a0c81Ea",
-        "factr": "0x7D5c1468D8bE9f0F4FaD26F2Cb7e6b2ed9042577"
       }
     ]
   },
