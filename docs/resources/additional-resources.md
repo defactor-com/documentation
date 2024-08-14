@@ -30,7 +30,27 @@ This page provides a curated list of additional resources for further exploratio
 - [News](https://www.cryptopolitan.com/huawei-introduces-defactor-to-the-world/)
 - [E-Book](https://www.defactor.com/resources/lending-pools-unpacked)
 
-## Video Tutorials
+## Toolkit Test Environment
+### Urls
+- [Assets Test Environment](https://assets.defactor.dev/)
+- [Pools Test Environment](https://assets.defactor.dev/)
 
+### Toolkit Test Environment Configurations
+#### Amoy Testnet
+- **Network Name**: Polygon Amoy Testnet
+- **New RPC URL**: https://rpc-amoy.polygon.technology/
+- **Chain ID**: 80002
+- **Currency Symbol**: MATIC
+- **Block Explorer URL**: https://www.oklink.com/amoy‍
+- **Faucet1**: https://faucet.polygon.technology/
+- **Faucet2**: https://www.alchemy.com/faucets/polygon-amoy
+
+#### Sepolia Testnet
+- **Network Name**: Sepolia Testnet
+- **New RPC URL**: https://sepolia.infura.io/v3/
+- **Chain ID**: 11155111
+- **Currency Symbol**: SepoliaETH
+- **Block Explorer URL**: [https://sepolia.etherscan.io](https://sepolia.etherscan.io/)
+- **Faucet**: https://www.alchemy.com/faucets/ethereum-sepolia
 
 Feel free to explore these resources to deepen your understanding and engagement with the Defactor ecosystem.
