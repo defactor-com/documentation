@@ -33,7 +33,8 @@ This page provides a curated list of additional resources for further exploratio
 ## Toolkit Test Environment
 ### Urls
 - [Assets Test Environment](https://assets.defactor.dev/)
-- [Pools Test Environment](https://assets.defactor.dev/)
+- [Engage Test Environment](https://engage.defactor.dev/)
+- [Pools Test Environment](https://pools.defactor.dev/)
 
 ### Toolkit Test Environment Configurations
 #### Amoy Testnet
