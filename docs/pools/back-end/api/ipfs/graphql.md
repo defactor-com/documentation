@@ -27,7 +27,7 @@ Interact with a private IPFS node to upload and retrieve files. Interact with a 
 
 ### `Upload File`
 
-Upload a file to the private IPFS node. The endpoint expects a string with a byte array, for example: `[130, 20, 8]` or a `base64` encoded string. In other words, the binary data in the file must be encoded in any of these string formats. 
+Upload a file to the private IPFS node. The endpoint expects a string with a byte array, for example: `[130, 20, 8]` or a `base64` encoded string. In other words, the binary data in the file must be encoded in any of these string formats.
 
 The response `CID` hash and file type must then be stored so that the file can be retrieved and reconstructed correctly.
 
@@ -252,18 +252,15 @@ Error processing the request:
 
 **General**
 
-- The JWT is invalid
-  - **Error message**: Could not verify JWT: `JWT error`
-- The data format is not as expected.
-  - **Error message**: Invalid request payload input
-- The input provided has a invalid value
-  - **Error message**: Invalid request payload input
+| Error Message                     | Reason                              |
+| --------------------------------- | ----------------------------------- |
+| Could not verify JWT: `JWT error` | The JWT is invalid                  |
+| Invalid request payload input     | The data format is not as expected. |
 
 **IPFS**
 
-- An error occurs on the server
-  - **Error message**: An error occurred while interacting with the ipfs endpoint
-- The has provided is not a valid CID
-  - **Error message**: The hash is an invalid CID
-- The file does not exist or the IPFS node failed.
-  - **Error message**: The IPFS file with the hash "hash" cannot be found
+| Error Message                                              | Reason                                           |
+| ---------------------------------------------------------- | ------------------------------------------------ |
+| An error occurred while interacting with the ipfs endpoint | An error occurs on the server                    |
+| The hash is an invalid CID                                 | The provided string is not a content identifier. |
+| The IPFS file with the hash "hash" cannot be found         | The file does not exist or the IPFS node failed  |
