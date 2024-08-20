@@ -27,7 +27,9 @@ Interact with a private IPFS node to upload and retrieve files. Interact with a 
 
 ### `Upload File`
 
-Upload a file to the private IPFS node. The endpoint expects a string with a byte array, for example: `[130, 20, 8]` or a `base64` encoded string. In other words, the binary data in the file must be encoded in any of these string formats.
+Upload a file to the private IPFS node. The endpoint expects a string with a byte array, for example: `[130, 20, 8]` or a `base64` encoded string. In other words, the binary data in the file must be encoded in any of these string formats. 
+
+The response `CID` hash and file type must then be stored so that the file can be retrieved and reconstructed correctly.
 
 **HTTP Request Method**: POST
 
@@ -66,6 +68,12 @@ Upon successful completion of a request, the server will issue a status code of 
   }
 }
 ```
+
+:::info
+
+In the previous example an xml file with an svg was uploaded, so in a database it's necessary to store the hash of the response and that the file is an xml.
+
+:::
 
 ### `Get File`
 
