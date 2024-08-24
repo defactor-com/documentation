@@ -30,7 +30,7 @@
     "testnet": true,
     "chains": [
       {
-        "id": "Sepolia",
+        "id": "Amoy",
         "type": "Staking",
         "contract": "0x1b38efa8F4aBb12660D1D3A16cc0AF432933C3AD",
         "token": "0x8574299682D036F88195a2685601D90300E21Bca"
