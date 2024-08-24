@@ -10,14 +10,14 @@
       {
         "id": "Amoy",
         "type": "Staking",
-        "contract": "0x59d529885f6394E365F79B44bD0bA800B49bF186",
-        "factr": "0x8574299682D036F88195a2685601D90300E21Bca"
+        "contract": "0xfE48D0F4c0Aa234D34Aa25a5aCD8DF2C2d1330A7",
+        "token": "0x8574299682D036F88195a2685601D90300E21Bca"
       },
       {
         "id": "Sepolia",
         "type": "Staking",
         "contract": "0xB0eae41071bDE1D4FA116059526aD7ce88F2b462",
-        "factr": "0x7D5c1468D8bE9f0F4FaD26F2Cb7e6b2ed9042577"
+        "token": "0x7D5c1468D8bE9f0F4FaD26F2Cb7e6b2ed9042577"
       }
     ]
   },
@@ -30,8 +30,10 @@
     "testnet": true,
     "chains": [
       {
-        "id": "",
-        "contract": ""
+        "id": "Sepolia",
+        "type": "Staking",
+        "contract": "0x1b38efa8F4aBb12660D1D3A16cc0AF432933C3AD",
+        "token": "0x8574299682D036F88195a2685601D90300E21Bca"
       }
     ]
   }
