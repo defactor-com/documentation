@@ -41,7 +41,7 @@ Our roadmap is a testament to our dedication to innovate and grow in the DeFi an
 | Milestone                      | Description                                                               | Status |
 |--------------------------------|---------------------------------------------------------------------------|--------|
 | Precious Metal Pool v2         | Updated features and UI                                                   | 🟢 Completed |
-| Open Source SDK and UI Toolkit | Design and Develop Open-Source DeFi Toolkit Empowering developers to build on our platform.   | 🟢 Completed |
+| Open Source SDK and UI Toolkit | Design and Develop Open-Source DeFi Toolkit Empowering developers to build on our platform. | 🟢 Completed |
 | Pools Version 2                | Updated React UI showcasing ERC20.loans with adequate liquidity on uniswap| 🟢 Completed |
 | Crypto market Maker v1         | SME Lending Pool for Market Maker                                        | 🟢 Completed |
 | Migrate Legacy Customers       | Migrate legacy customers over to latest Version of Defactor Pools        | 🟢 Completed |
@@ -54,15 +54,14 @@ Our roadmap is a testament to our dedication to innovate and grow in the DeFi an
 
 | Milestone                      | Description                                                               | Status |
 |--------------------------------|---------------------------------------------------------------------------|--------|
-
-| Pools Multicollateral          |                                                                           | 🟢 Completed |
-| Pools Multichain               |                                                                           | 🟢 Completed |
-| Deloy Pools New Instances      | Real Estate Tokenization (LandX , Landshares)                             | 🟢 Completed |
-| Deloy Engage Stobox Instance   |                                                                           | 🟢 Completed |
-| Engage v2 UI/UX Designs        |                                                                           | 🟢 Completed |
-| Assets v2 alpha release        |                                                                           | 🟡 In Progress |
-| Open Source SDK and UI Toolkit | Unified Design accross the open source toolkit                            | 🟢 Completed |
-| DevOps and Infrastructure      | Created CI/CD pipelines for cloud native deployemnts using kubernetes     | 🟢 Completed |
+| Pools Multicollateral          | Support for multiple tokens in a pools instnce instance                   | 🟢 Completed |
+| Pools Multichain               | Support for multiple blockchain networks for a pools instance             | 🟢 Completed |
+| Deloy New Pools Instances      | Real Estate Tokenization (LandX , Landshares)                             | 🟢 Completed |
+| Deloy Engage - Stobox Instance | Stobox Partnership to Enhance DeFi and Tokenisation Capabilities          | 🟢 Completed |
+| Engage v2 UI/UX Design         | Create new React Based UI/UX design for Engage v2                         | 🟢 Completed |
+| Assets v2 Alpha Release        | Develop new FrontEnd and Backend API for Assets                           | 🟡 In Progress |
+| Open Source SDK & UI Toolkit   | Unified Design accross the open source toolkit                            | 🟢 Completed |
+| DevOps & Infrastructure        | Created CI/CD pipelines for cloud native deployemnts using kubernetes     | 🟢 Completed |
 | IPFS File Storage              | Create private IPFS file storage cluster for all Defactor Toolkit Products | 🟢 Completed |
 | Admin User Authentication      | JWT Authentcation and Authorizations for admin access control             |  🟡 In Progress |
 
@@ -70,15 +69,13 @@ Our roadmap is a testament to our dedication to innovate and grow in the DeFi an
 
 | Milestone                      | Description                                                               | Status |
 |--------------------------------|---------------------------------------------------------------------------|--------|
-
-| Assets v2                      |  Beta launch of first assets customer                                     | 🟡 In Progress |
-| Engage v2                      |  Engage Staking Platform and Ecosystem Dashboard                          | 🟡 In Progress |
-| Engage Govenance               |  Engage Governance Platform                                               | 🔵 Upcoming |
-| Engage BuyBacks                |  Engage Token Buybacks Smart Contract Integration                         | 🔵 Upcoming |
-| Engage Vesting                 |  Engage Token Vesting Smart Contract Integration                          | 🔵 Upcoming |
-| CounterParty Pools UI          |  CounterParty Pools UI Revamp                                             | 🔵 Upcoming |
-| Admin User Panel               |  Admin User Suite for product administration                             | ⚪ Not Started |
-
+| Assets v2                      |  Beta launch for the first customer on the Assets v2 platform             | 🟡 In Progress |
+| Engage v2                      |  Launch of the Engage Staking Platform and Ecosystem Dashboard            | 🟡 In Progress |
+| Engage Govenance               |  Implementation of the Engage Governance platform                         | 🔵 Upcoming |
+| Engage BuyBacks                |  Integration of smart contracts for automated token buybacks              | 🔵 Upcoming |
+| Engage Vesting                 |  Implementation of smart contracts for token vesting                      | 🔵 Upcoming |
+| CounterParty Pools UI          |  Revamp of the CounterParty Pools user interface                          | 🔵 Upcoming |
+| Admin User Panel               |  Advanced Admin User Suite to manage settings, users, and  analytics.     | ⚪ Not Started |
 
 ## 2025
 
