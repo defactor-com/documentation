@@ -41,7 +41,7 @@ Our roadmap is a testament to our dedication to innovate and grow in the DeFi an
 | Milestone                      | Description                                                               | Status |
 |--------------------------------|---------------------------------------------------------------------------|--------|
 | Precious Metal Pool v2         | Updated features and UI                                                   | 🟢 Completed |
-| Open Source SDK and UI Toolkit | Design and Develop Open-Source DeFi Toolkit Empowering developers to build on our platform.   | 🟢 Completed |
+| Open Source SDK and UI Toolkit | Design and Develop Open-Source DeFi Toolkit Empowering developers to build on our platform. | 🟢 Completed |
 | Pools Version 2                | Updated React UI showcasing ERC20.loans with adequate liquidity on uniswap| 🟢 Completed |
 | Crypto market Maker v1         | SME Lending Pool for Market Maker                                        | 🟢 Completed |
 | Migrate Legacy Customers       | Migrate legacy customers over to latest Version of Defactor Pools        | 🟢 Completed |
@@ -50,14 +50,42 @@ Our roadmap is a testament to our dedication to innovate and grow in the DeFi an
 | Credit rating System           | Implementation Credit Ratings in LatAm                                   | 🟢 Completed |
 | Music Royalties Pool v1        | Defactor pools instance for tokenized music assets                       | 🔵 Upcoming  |
 
-### Second Half (H2)
+### Third Quarter (Q3)
+
+| Milestone                      | Description                                                               | Status |
+|--------------------------------|---------------------------------------------------------------------------|--------|
+| Pools Multicollateral          | Support for multiple tokens in a pools instnce instance                   | 🟢 Completed |
+| Pools Multichain               | Support for multiple blockchain networks for a pools instance             | 🟢 Completed |
+| Deloy New Pools Instances      | Real Estate Tokenization (LandX , Landshares)                             | 🟢 Completed |
+| Deloy Engage - Stobox Instance | Stobox Partnership to Enhance DeFi and Tokenisation Capabilities          | 🟢 Completed |
+| Engage v2 UI/UX Design         | Create new React Based UI/UX design for Engage v2                         | 🟢 Completed |
+| Assets v2 Alpha Release        | Develop new FrontEnd and Backend API for Assets                           | 🟡 In Progress |
+| Open Source SDK & UI Toolkit   | Unified Design accross the open source toolkit                            | 🟢 Completed |
+| DevOps & Infrastructure        | Created CI/CD pipelines for cloud native deployemnts using kubernetes     | 🟢 Completed |
+| IPFS File Storage              | Create private IPFS file storage cluster for all Defactor Toolkit Products | 🟢 Completed |
+| Admin User Authentication      | JWT Authentcation and Authorizations for admin access control             |  🟡 In Progress |
+
+### Fourth Quarter (Q4)
+
+| Milestone                      | Description                                                               | Status |
+|--------------------------------|---------------------------------------------------------------------------|--------|
+| Assets v2                      |  Beta launch for the first customer on the Assets v2 platform             | 🟡 In Progress |
+| Engage v2                      |  Launch of the Engage Staking Platform and Ecosystem Dashboard            | 🟡 In Progress |
+| Engage Govenance               |  Implementation of the Engage Governance platform                         | 🔵 Upcoming |
+| Engage BuyBacks                |  Integration of smart contracts for automated token buybacks              | 🔵 Upcoming |
+| Engage Vesting                 |  Implementation of smart contracts for token vesting                      | 🔵 Upcoming |
+| CounterParty Pools UI          |  Revamp of the CounterParty Pools user interface                          | 🔵 Upcoming |
+| Admin User Panel               |  Advanced Admin User Suite to manage settings, users, and  analytics.     | ⚪ Not Started |
+
+## 2025
+
+### First Quarter (Q1)
 
 | Milestone                      | Description                                                               | Status |
 |--------------------------------|---------------------------------------------------------------------------|--------|
 | Conduct Performance Tests      | On EVM-compatible networks and enterprise applications.                   | ⚪ Not Started |
 | SAP / ERP POC                  | Proof of concept for SAP Enterprise Resource Management                   | ⚪ Not Started |
 | Defactor Chain                 | Pilot a new blockchain infrastructure layer                               | ⚪ Not Started |
-| Assets v2                      | Beta launch of first assets customer                                      | ⚪ Not Started |
 | RWA AI POC                     | Use Artificial Intelligence to generate legal agreements                  | ⚪ Not Started |
 | Pilot Bounty 2.0 Projects             | Expanding community-driven initiatives.                            | ⚪ Not Started |
 | Extend the Open Source DeFi Toolkit   | Providing additional functionalities.                              | ⚪ Not Started |
