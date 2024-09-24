@@ -41,7 +41,7 @@ Our roadmap is a testament to our dedication to innovate and grow in the DeFi an
 | Milestone                      | Description                                                               | Status |
 |--------------------------------|---------------------------------------------------------------------------|--------|
 | Precious Metal Pool v2         | Updated features and UI                                                   | 🟢 Completed |
-| Open Source SDK and UI Toolkit | Design and Develop Open-Source DeFi Toolkit Empowering developers to build on our platform.   | 🟡 In Progress |
+| Open Source SDK and UI Toolkit | Design and Develop Open-Source DeFi Toolkit Empowering developers to build on our platform.   | 🟢 Completed |
 | Pools Version 2                | Updated React UI showcasing ERC20.loans with adequate liquidity on uniswap| 🟢 Completed |
 | Crypto market Maker v1         | SME Lending Pool for Market Maker                                        | 🟢 Completed |
 | Migrate Legacy Customers       | Migrate legacy customers over to latest Version of Defactor Pools        | 🟢 Completed |
