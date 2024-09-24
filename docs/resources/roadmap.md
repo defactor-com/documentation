@@ -62,8 +62,8 @@ Our roadmap is a testament to our dedication to innovate and grow in the DeFi an
 | Assets v2 Alpha Release        | Develop new FrontEnd and Backend API for Assets                           | 🟡 In Progress |
 | Open Source SDK & UI Toolkit   | Unified Design accross the open source toolkit                            | 🟢 Completed |
 | DevOps & Infrastructure        | Created CI/CD pipelines for cloud native deployemnts using kubernetes     | 🟢 Completed |
-| IPFS File Storage              | Create private IPFS file storage cluster for all Defactor Toolkit Products | 🟢 Completed |
-| Admin User Authentication      | JWT Authentcation and Authorizations for admin access control             |  🟡 In Progress |
+| IPFS File Storage              | Create private IPFS file storage cluster for use across Defactor Toolkit  | 🟢 Completed |
+| Admin User Authentication      | JWT Authentcation and Authorizations for admin access control             | 🟡 In Progress |
 
 ### Fourth Quarter (Q4)
 
@@ -74,7 +74,7 @@ Our roadmap is a testament to our dedication to innovate and grow in the DeFi an
 | Engage Govenance               |  Implementation of the Engage Governance platform                         | 🔵 Upcoming |
 | Engage BuyBacks                |  Integration of smart contracts for automated token buybacks              | 🔵 Upcoming |
 | Engage Vesting                 |  Implementation of smart contracts for token vesting                      | 🔵 Upcoming |
-| CounterParty Pools UI          |  Revamp of the CounterParty Pools user interface                          | 🔵 Upcoming |
+| CounterParty Pools UI          |  Revamp of the CounterParty Pools user interface                          | ⚪ Not Started |
 | Admin User Panel               |  Advanced Admin User Suite to manage settings, users, and  analytics.     | ⚪ Not Started |
 
 ## 2025
