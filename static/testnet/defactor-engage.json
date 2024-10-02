@@ -16,7 +16,7 @@
       {
         "id": "Sepolia",
         "type": "Staking",
-        "contract": "0xaF9c500fD51b6e58F0D2D2d722eFF8A6aeF432c6",
+        "contract": "0x069f72714E432A23469B9845cC96e3Ed4fa83d38",
         "token": "0x7D5c1468D8bE9f0F4FaD26F2Cb7e6b2ed9042577"
       }
     ]
