@@ -57,5 +57,25 @@
         "collateral": "0x6fC27F5CC0aAFeC8e2b8bC4E6393aC89e45232d3"
       }
     ]
+  },
+  {
+    "id": "pools-landshare-mainnet",
+    "name": "LandShare Production",
+    "description": "Production environment for LandShare.",
+    "web": "https://landshare.factr.app",
+    "api": "https://landshare-api.factr.app",
+    "chains": [
+      {
+        "id": "Bsc",
+        "type": "Erc20 Collateral Pool",
+        "contract": "0x6cbA45B0228F7e2e058e877060619225F9979c87",
+        "token": "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d",
+        "oracle": "0x60E87395b0101F85C623c38Be010574f958496db",
+        "collateral": [
+          "0xa73164db271931cf952cbaeff9e8f5817b42fa5c",
+          "0x475ed67bfc62b41c048b81310337c1d75d45aadd"
+        ]
+      }
+    ]
   }
 ]
