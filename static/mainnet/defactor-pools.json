@@ -70,7 +70,7 @@
         "type": "Erc20 Collateral Pool",
         "contract": "0x6cbA45B0228F7e2e058e877060619225F9979c87",
         "token": "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d",
-        "oracle": "0x60E87395b0101F85C623c38Be010574f958496db",
+        "oracle": "0xd2896dE7De086BFcd80B66356458Ae61BE4aBEaD",
         "collateral": [
           "0xa73164db271931cf952cbaeff9e8f5817b42fa5c",
           "0x475ed67bfc62b41c048b81310337c1d75d45aadd"
