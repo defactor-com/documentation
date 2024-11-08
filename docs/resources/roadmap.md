@@ -63,7 +63,7 @@ Our roadmap is a testament to our dedication to innovate and grow in the DeFi an
 | Open Source SDK & UI Toolkit   | Unified Design accross the open source toolkit                            | 🟢 Completed |
 | DevOps & Infrastructure        | Created CI/CD pipelines for cloud native deployemnts using kubernetes     | 🟢 Completed |
 | IPFS File Storage              | Create private IPFS file storage cluster for use across Defactor Toolkit  | 🟢 Completed |
-| Admin User Authentication      | JWT Authentcation and Authorizations for admin access control             | 🟡 In Progress |
+| Admin User Authentication      | JWT Authentcation and Authorizations for admin access control             | 🟢 Completed |
 
 ### Fourth Quarter (Q4)
 
