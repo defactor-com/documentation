@@ -29,10 +29,10 @@ Our roadmap is a testament to our dedication to innovate and grow in the DeFi an
 
 | Milestone                             | Description                                                              |  Status  |
 |---------------------------------------|--------------------------------------------------------------------------|----------|
-| Deploy Backback Contract              | Audited Smart Contract for FACTR token Buybacks                          | 🟢 Completed   |
-| Develop a Tokenisation Engine         | Supporting multiple asset classes.                                       | 🟡 In Progress |
-| Launch defactor pools                 | A platform combining RWA and DeFi.                                       |  🟢 Completed  |
-| Investigate AI in RWA Adoption        | Exploring AI's potential in accelerating RWA adoption.                   | 🟢 Completed   |
+| Deploy Buyback Contract              | Audited Smart Contract for FACTR token Buybacks                           | 🟢 Completed |
+| Develop a Tokenisation Engine         | Supporting multiple asset classes.                                       | 🟢 Completed |
+| Launch defactor pools                 | A platform combining RWA and DeFi.                                       | 🟢 Completed | 
+| Investigate AI in RWA Adoption        | Exploring AI's potential in accelerating RWA adoption.                   | 🟢 Completed |
 
 ## 2024
 
@@ -69,11 +69,11 @@ Our roadmap is a testament to our dedication to innovate and grow in the DeFi an
 
 | Milestone                      | Description                                                               | Status |
 |--------------------------------|---------------------------------------------------------------------------|--------|
-| Assets v2                      |  Beta launch for the first customer on the Assets v2 platform             | 🟡 In Progress |
+| Assets v2                      |  Beta launch for the first customer on the Assets v2 platform             | 🟢 Completed   |
 | Engage v2                      |  Launch of the Engage Staking Platform and Ecosystem Dashboard            | 🟡 In Progress |
-| Engage Govenance               |  Implementation of the Engage Governance platform                         | 🔵 Upcoming |
-| Engage BuyBacks                |  Integration of smart contracts for automated token buybacks              | 🔵 Upcoming |
-| Engage Vesting                 |  Implementation of smart contracts for token vesting                      | 🔵 Upcoming |
+| Engage Govenance               |  Implementation of the Engage Governance platform                         | 🟡 In Progress |
+| Engage BuyBacks                |  Integration of smart contracts for automated token buybacks              | 🟡 In Progress |
+| Engage Vesting                 |  Implementation of smart contracts for token vesting                      | 🟡 In Progress |
 | CounterParty Pools UI          |  Revamp of the CounterParty Pools user interface                          | ⚪ Not Started |
 | Admin User Panel               |  Advanced Admin User Suite to manage settings, users, and  analytics.     | ⚪ Not Started |
 
