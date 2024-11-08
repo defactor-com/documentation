@@ -59,7 +59,7 @@ Our roadmap is a testament to our dedication to innovate and grow in the DeFi an
 | Deloy New Pools Instances      | Real Estate Tokenization (LandX , Landshares)                             | 🟢 Completed |
 | Deloy Engage - Stobox Instance | Stobox Partnership to Enhance DeFi and Tokenisation Capabilities          | 🟢 Completed |
 | Engage v2 UI/UX Design         | Create new React Based UI/UX design for Engage v2                         | 🟢 Completed |
-| Assets v2 Alpha Release        | Develop new FrontEnd and Backend API for Assets                           | 🟡 In Progress |
+| Assets v2 Alpha Release        | Develop new FrontEnd and Backend API for Assets                           | 🟢 Completed |
 | Open Source SDK & UI Toolkit   | Unified Design accross the open source toolkit                            | 🟢 Completed |
 | DevOps & Infrastructure        | Created CI/CD pipelines for cloud native deployemnts using kubernetes     | 🟢 Completed |
 | IPFS File Storage              | Create private IPFS file storage cluster for use across Defactor Toolkit  | 🟢 Completed |
