@@ -115,5 +115,22 @@
         "collateral": "0x7F400A79139A603E5F8A930cEC9562171fDCD906"
       }
     ]
+  },
+  {
+    "id": "pools-realtyx-testnet",
+    "name": "RealtyX Development",
+    "description": "Testnet environment for RealtyX.",
+    "web": "https://realtyx.defactor.dev",
+    "api": "https://realty-api.defactor.dev",
+    "chains": [
+      {
+        "id": "Base",
+        "type": "Erc20 Collateral Pool",
+        "contract": "0x2CaD0Be2B4E138509EfeE5B3FDE9bF42b6e8D5D0",
+        "token": "0xC1cf57c43b0109Be365676E79972Ee2d35adC7A4",
+        "oracle": "0x60E87395b0101F85C623c38Be010574f958496db",
+        "collateral": "0x6bD5fd8cAbCce2caD5241a4A233EE4be2798d49e"
+      }
+    ]
   }
 ]
