@@ -79,7 +79,7 @@
   },
   {
     "id": "pools-realtyx-mainnet",
-    "name": "RealtyC Production",
+    "name": "RealtyX Production",
     "description": "Production environment for RealtyX.",
     "web": "https://realtyx.factr.app",
     "api": "https://realtyx-api.factr.app",
