@@ -62,7 +62,7 @@
     "id": "pools-landshare-mainnet",
     "name": "LandShare Production",
     "description": "Production environment for LandShare.",
-    "web": "https://landshare.factr.app",
+    "web": "https://pools.landshare.io",
     "api": "https://landshare-api.factr.app",
     "chains": [
       {
