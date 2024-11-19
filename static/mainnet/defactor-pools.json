@@ -69,12 +69,32 @@
         "id": "Bsc",
         "type": "Erc20 Collateral Pool",
         "contract": "0x6cbA45B0228F7e2e058e877060619225F9979c87",
-        "token": "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d",
-        "oracle": "0xd2896dE7De086BFcd80B66356458Ae61BE4aBEaD",
+        "token": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "oracle": [
+          "0xd2896dE7De086BFcd80B66356458Ae61BE4aBEaD",
+          "0x33C1B41916FbC754C70237776f2435dd90558E23"
+        ],
         "collateral": [
-          "0xa73164db271931cf952cbaeff9e8f5817b42fa5c",
-          "0x475ed67bfc62b41c048b81310337c1d75d45aadd"
+          "0xA73164DB271931CF952cBaEfF9E8F5817b42fA5C",
+          "0x475eD67Bfc62B41c048b81310337c1D75D45aADd"
         ]
+      }
+    ]
+  },
+  {
+    "id": "pools-realtyx-mainnet",
+    "name": "RealtyX Production",
+    "description": "Production environment for RealtyX.",
+    "web": "https://realtyx.factr.app",
+    "api": "https://realtyx-api.factr.app",
+    "chains": [
+      {
+        "id": "Base",
+        "type": "Erc20 Collateral Pool",
+        "contract": "0x1CD2416342D32Ba10bC8f43F4b6A38d6d19bCd83",
+        "token": "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d",
+        "oracle": "0x8d9a73170E41c175806F29b51a0D48D48084Ff49",
+        "collateral": "0xDbf9F254C365ABe4294884d1249c7a2388f70911"
       }
     ]
   }
