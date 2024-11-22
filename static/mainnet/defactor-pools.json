@@ -97,5 +97,22 @@
         "collateral": "0xDbf9F254C365ABe4294884d1249c7a2388f70911"
       }
     ]
+  },
+  {
+    "id": "pools-songyield-mainnet",
+    "name": "SongYield Production",
+    "description": "Production environment for SongYield.",
+    "web": "https://songyield.factr.app",
+    "api": "https://songyield-api.factr.app",
+    "chains": [
+      {
+        "id": "Polygon",
+        "type": "Erc20 Collateral Pool",
+        "contract": "0x19d3e50F2519ba1812856615E15C763e8488BaD2",
+        "token": "0x3c499c542cef5e3811e1192ce70d8cc03d5c3359",
+        "oracle": "0x8DA92A6C86838B97148DC7CFfeDB4C128fC43925",
+        "collateral": "0x84f6c044d58ecf833f2c8dd7e2c4d098959ae1f2"
+      }
+    ]
   }
 ]
