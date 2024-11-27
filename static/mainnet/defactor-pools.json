@@ -108,7 +108,7 @@
       {
         "id": "Polygon",
         "type": "Erc20 Collateral Pool",
-        "contract": "0x25602198EEc6622619c481E48fECDc4eD0e3fD43",
+        "contract": "0x19d3e50F2519ba1812856615E15C763e8488BaD2",
         "token": "0x3c499c542cef5e3811e1192ce70d8cc03d5c3359",
         "oracle": "0x8DA92A6C86838B97148DC7CFfeDB4C128fC43925",
         "collateral": "0x84f6c044d58ecf833f2c8dd7e2c4d098959ae1f2"
