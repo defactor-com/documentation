@@ -7,12 +7,6 @@ This guide outlines the steps and resources required to launch your own lending 
 
 ---
 
-## Domain Name
-- **Project Name / Description**: Provide a brief and clear description of your project.  
-- **Domain DNS Changes and Verification**: Update DNS settings and verify domain ownership to enable integration with Defactor services.
-
----
-
 ## Smart Contract Setup
 The smart contract setup process involves selecting the appropriate contract type and configuring it with the required parameters.
 
@@ -24,14 +18,6 @@ The smart contract setup process involves selecting the appropriate contract typ
 #### 2. [**ERC20CollateralPool Contract**](https://defactor.dev/docs/smart-contracts/counterparty-pools-contract/smart-contract-erc20-collateral-pool)
 - Designed for EVM-compatible blockchains.
 - Facilitates pools of collateralized loans using the `ERC20` token standard.
-
----
-
-### Pools Smart Contract Configuration
-
-Smart contracts must be deployed and initialized with specific configuration parameters.
-
-- Refer to the [Pools Contract Requirements and Parameters Guide](https://defactor.dev/docs/pools/how-tos/smart-contract-config) for more details.
 
 ---
 
@@ -49,10 +35,24 @@ Supported networks:
 
 ---
 
+### Pools Smart Contract Configuration
+
+Smart contracts must be deployed and initialized with specific configuration parameters.
+
+- Refer to the [Pools Contract Requirements and Parameters Guide](https://defactor.dev/docs/pools/how-tos/smart-contract-config) for more details.
+
+---
+
 ### Security and Testing
 - **Contract Deployment**: Deploy the contract on the selected network.  
 - **Private Key Management**: Securely store and manage private keys.  
 - **Auditing and Security Checks**: Perform audits and vulnerability scans before deployment.  
+
+---
+
+## Domain Name
+- **Project Name / Description**: Provide a brief and clear description of your project.  
+- **Domain DNS Changes and Verification**: Update DNS settings and verify domain ownership to enable integration with Defactor services.
 
 ---
 
@@ -69,7 +69,7 @@ Set up the backend infrastructure to integrate with smart contracts and manage d
 
 ---
 
-## Deploy Frontend Instance
+## FrontEnd Configuration and Deployment
 
 - **Google Analytics**: Integrate tracking codes for analytics and monitoring.  
 - **Frontend Configuration**: Configure contract, token, and collateral addresses.  
@@ -110,12 +110,8 @@ secondary:
 ---
 
 ## Pool Setup
-### Metadata
-- Add pool metadata including:  
-  - Pool name and description.  
-  - Token icon image URL.  
 
-### Contract Deployment
+### Pool Creation
 Pools can be created using APIs:
 
 - **ERC20CollateralPool** APIs:  
@@ -124,6 +120,13 @@ Pools can be created using APIs:
 
 - **Pools Contract APIs**:  
   - [Insert Pool Endpoint](https://defactor.dev/docs/back-end-api/pools/insertPool).  
+
+### Metadata
+- Add pool metadata including:  
+  - Pool name and description.  
+  - Token icon image URL.  
+
+Please Refer to the [Configuring a New Pools Instance Guide](https://defactor.dev/docs/pools/how-tos/howto-pools-config) for more details.
 
 ---
 
