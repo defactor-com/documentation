@@ -1,6 +1,6 @@
 ---
-title: Add New Pool Metadata
-sidebar_position: 2
+title: Add and Edit Pool Metadata
+sidebar_position: 5
 ---
 
 # Adding Pool Metadata Using the API

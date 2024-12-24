@@ -1,6 +1,6 @@
 ---
 title: Whitelabeling Defactor Pools
-sidebar_position: 2
+sidebar_position: 4
 ---
 
 This document outlines the process of whitelabeling, detailing how to customize Defactor pools instances to make them unique for each client.
