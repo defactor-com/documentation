@@ -1,6 +1,6 @@
 ---
-title: New Project Onboarding
-sidebar_position: 2
+title: Engage Client Onboarding
+sidebar_position: 1
 ---
 
 ## Introduction
@@ -27,6 +27,10 @@ For each staking plan:
 * Define the Annual Percentage Rate (APR).
 * Specify the locking duration for staked tokens.
 * Indicate the end date for staking rewards.
+
+Smart contracts must be deployed and initialized with specific configuration parameters.
+
+- Refer to the [Staking Contract Requirements and Parameters Guide](https://defactor.dev/docs/engage/how-tos/smart-contract-config.md) for more details.
 
 ### Governance (after initial deployment)
 **Vote Details**
