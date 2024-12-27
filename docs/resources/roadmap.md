@@ -45,7 +45,7 @@ Our roadmap is a testament to our dedication to innovate and grow in the DeFi an
 | Pools Version 2                | Updated React UI showcasing ERC20.loans with adequate liquidity on uniswap| 🟢 Completed |
 | Crypto market Maker v1         | SME Lending Pool for Market Maker                                        | 🟢 Completed |
 | Migrate Legacy Customers       | Migrate legacy customers over to latest Version of Defactor Pools        | 🟢 Completed |
-| Engage v2                      | New UX design using react framework for engage App including Buyback Dashboard | 🟡 In Progress  |
+| Engage v2                      | New UX design using react framework for engage App including Buyback Dashboard | 🟢 Completed  |
 | Precious Metal Pool 3          | Using new React Framework UI                                             | 🟢 Completed |
 | Credit rating System           | Implementation Credit Ratings in LatAm                                   | 🟢 Completed |
 | Music Royalties Pool v1        | Defactor pools instance for tokenized music assets                       | 🔵 Upcoming  |
@@ -70,8 +70,8 @@ Our roadmap is a testament to our dedication to innovate and grow in the DeFi an
 | Milestone                      | Description                                                               | Status |
 |--------------------------------|---------------------------------------------------------------------------|--------|
 | Assets v2                      |  Beta launch for the first customer on the Assets v2 platform             | 🟢 Completed   |
-| Engage v2                      |  Launch of the Engage Staking Platform and Ecosystem Dashboard            | 🟡 In Progress |
-| Engage Govenance               |  Implementation of the Engage Governance platform                         | 🟡 In Progress |
+| Engage v2                      |  Launch of the Engage Staking Platform and Ecosystem Dashboard            | 🟢 Completed |
+| Engage Govenance               |  Implementation of the Engage Governance platform                         | 🟢 Completed |
 | Engage BuyBacks                |  Integration of smart contracts for automated token buybacks              | 🟡 In Progress |
 | Engage Vesting                 |  Implementation of smart contracts for token vesting                      | 🟡 In Progress |
 | CounterParty Pools UI          |  Revamp of the CounterParty Pools user interface                          | ⚪ Not Started |
