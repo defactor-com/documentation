@@ -42,5 +42,43 @@
         "token": "0x7D5c1468D8bE9f0F4FaD26F2Cb7e6b2ed9042577"
       }
     ]
+  },
+  {
+    "id": "engage-sharingblock-testnet",
+    "name": "Sharingblock Engage Testnet Instance",
+    "description": "Demo environment for Sharingblock Engage.",
+    "web": "https://sharingblock-engage.defactor.dev",
+    "api": "https://sharingblock-engage-api.defactor.dev",
+    "testnet": true,
+    "chains": [
+      {
+        "id": "Rwa",
+        "type": "Staking",
+        "contract": "0xC3dc06FdEB4b8Cef58Db03690B39Dc2939d4Ca9a",
+        "token": "0xbA0Ff22dF14bb9AF691885c79EA9224fA59dBFED"
+      },
+      {
+        "id": "Rwa",
+        "type": "Buyback",
+        "contract": "",
+        "token": ""
+      }
+    ]
+  },
+  {
+    "id": "engage-libertum-testnet",
+    "name": "Libertum Engage Testnet Instance",
+    "description": "Testnet environment for Libertum Engage.",
+    "web": "https://libertum-engage.defactor.dev",
+    "api": "https://libertum-engage-api.defactor.dev",
+    "testnet": true,
+    "chains": [
+      {
+        "id": "Base",
+        "type": "Staking",
+        "contract": "0x07Fdb405f157F7D3d64D581518D001Ebd3D005CC",
+        "token": "0x29B46620F12377F9636D9297C0695d395Ff40e3A"
+      }
+    ]
   }
 ]
