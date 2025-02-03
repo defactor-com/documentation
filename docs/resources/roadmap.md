@@ -48,7 +48,7 @@ Our roadmap is a testament to our dedication to innovate and grow in the DeFi an
 | Engage v2                      | New UX design using react framework for engage App including Buyback Dashboard | 🟢 Completed  |
 | Precious Metal Pool 3          | Using new React Framework UI                                             | 🟢 Completed |
 | Credit rating System           | Implementation Credit Ratings in LatAm                                   | 🟢 Completed |
-| Music Royalties Pool v1        | Defactor pools instance for tokenized music assets                       | 🔵 Upcoming  |
+| Music Royalties Pool v1        | Defactor pools instance for tokenized music assets                       | 🟢 Completed |
 
 ### Third Quarter (Q3)
 
