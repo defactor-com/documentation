@@ -72,10 +72,9 @@ Our roadmap is a testament to our dedication to innovate and grow in the DeFi an
 | Assets v2                      |  Beta launch for the first customer on the Assets v2 platform             | 🟢 Completed   |
 | Engage v2                      |  Launch of the Engage Staking Platform and Ecosystem Dashboard            | 🟢 Completed |
 | Engage Govenance               |  Implementation of the Engage Governance platform                         | 🟢 Completed |
-| Engage BuyBacks                |  Integration of smart contracts for automated token buybacks              | 🟡 In Progress |
+| Engage BuyBacks                |  Integration of smart contracts for automated token buybacks              | 🟢 Completed |
+| Defactor Chain                 | Pilot a new blockchain infrastructure layer                               | 🟢 Completed |
 | Engage Vesting                 |  Implementation of smart contracts for token vesting                      | 🟡 In Progress |
-| CounterParty Pools UI          |  Revamp of the CounterParty Pools user interface                          | ⚪ Not Started |
-| Admin User Panel               |  Advanced Admin User Suite to manage settings, users, and  analytics.     | ⚪ Not Started |
 
 ## 2025
 
@@ -83,11 +82,18 @@ Our roadmap is a testament to our dedication to innovate and grow in the DeFi an
 
 | Milestone                      | Description                                                               | Status |
 |--------------------------------|---------------------------------------------------------------------------|--------|
-| Conduct Performance Tests      | On EVM-compatible networks and enterprise applications.                   | ⚪ Not Started |
-| SAP / ERP POC                  | Proof of concept for SAP Enterprise Resource Management                   | ⚪ Not Started |
-| Defactor Chain                 | Pilot a new blockchain infrastructure layer                               | ⚪ Not Started |
-| RWA AI POC                     | Use Artificial Intelligence to generate legal agreements                  | ⚪ Not Started |
+| Defactor Engage v2             |  Launch of the FACTR Engage Platform on latest toolkit                    | 🟡 In Progress |
+| CounterParty Pools UI          |  Revamp of the CounterParty Pools user interface                          | 🟡 In Progress |
+| Conduct Performance Tests      | On EVM-compatible networks and enterprise applications.                   | 🟡 In Progress |
+| SAP / ERP POC                  | Proof of concept for SAP Enterprise Resource Management                   | 🟡 In Progress |
 | Pilot Bounty 2.0 Projects             | Expanding community-driven initiatives.                            | ⚪ Not Started |
 | Extend the Open Source DeFi Toolkit   | Providing additional functionalities.                              | ⚪ Not Started |
+
+### Second Quarter (Q2)
+
+| Milestone                      | Description                                                               | Status |
+|--------------------------------|---------------------------------------------------------------------------|--------|
+| Defactor AI                    | Use Artificial Intelligence to facilitate project onboarding.             | ⚪ Not Started |
+| Admin User Panel               |  Advanced Admin User Suite to manage settings, users, and  analytics.     | ⚪ Not Started |
 
 This roadmap represents our commitment to technological excellence and innovation in the DeFi space. Stay tuned for more updates as we progress towards these milestones.
