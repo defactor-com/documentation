@@ -14,25 +14,26 @@ Our roadmap is a testament to our dedication to innovate and grow in the DeFi an
 - 🟡 In Progress - Work on the milestone is currently underway.
 - 🟢 Completed - The milestone has been fully achieved.
 
-## 2023
+## 2025
 
-### First Half (H1)
+### First Quarter (Q1)
 
-| Milestone                             | Description                                            | Status |
-|---------------------------------------|--------------------------------------------------------|--------|
-| Publish Tech & Innovation Roadmap     | Outlining our strategic direction.                     | 🟢 Completed |
-| Establish the Innovation Division     | Fostering creativity and exploration within our team.  | 🟢 Completed |
-| Develop a Bounty Program              | Incentivize community participation.                   | 🟢 Completed |
-| Roll Out engage.defactor.com          | A platform for engaging with our community.            | 🟢 Completed |
+| Milestone                      | Description                                                               | Status |
+|--------------------------------|---------------------------------------------------------------------------|--------|
+| Defactor Engage v2             |  Launch of the FACTR Engage Platform on latest toolkit                    | 🟡 In Progress |
+| CounterParty Pools UI          |  Revamp of the CounterParty Pools user interface                          | 🟡 In Progress |
+| Conduct Performance Tests      | On EVM-compatible networks and enterprise applications.                   | 🟡 In Progress |
+| SAP / ERP POC                  | Proof of concept for SAP Enterprise Resource Management                   | 🟡 In Progress |
+| Pilot Bounty 2.0 Projects             | Expanding community-driven initiatives.                            | ⚪ Not Started |
+| Extend the Open Source DeFi Toolkit   | Providing additional functionalities.                              | ⚪ Not Started |
 
-### Second Half (H2)
+### Second Quarter (Q2)
 
-| Milestone                             | Description                                                              |  Status  |
-|---------------------------------------|--------------------------------------------------------------------------|----------|
-| Deploy Buyback Contract              | Audited Smart Contract for FACTR token Buybacks                           | 🟢 Completed |
-| Develop a Tokenisation Engine         | Supporting multiple asset classes.                                       | 🟢 Completed |
-| Launch defactor pools                 | A platform combining RWA and DeFi.                                       | 🟢 Completed | 
-| Investigate AI in RWA Adoption        | Exploring AI's potential in accelerating RWA adoption.                   | 🟢 Completed |
+| Milestone                      | Description                                                               | Status |
+|--------------------------------|---------------------------------------------------------------------------|--------|
+| Defactor AI                    | Use Artificial Intelligence to facilitate project onboarding.             | ⚪ Not Started |
+| Admin User Panel               |  Advanced Admin User Suite to manage settings, users, and  analytics.     | ⚪ Not Started |
+
 
 ## 2024
 
@@ -76,24 +77,24 @@ Our roadmap is a testament to our dedication to innovate and grow in the DeFi an
 | Defactor Chain                 | Pilot a new blockchain infrastructure layer                               | 🟢 Completed |
 | Engage Vesting                 |  Implementation of smart contracts for token vesting                      | 🟡 In Progress |
 
-## 2025
+## 2023
 
-### First Quarter (Q1)
+### First Half (H1)
 
-| Milestone                      | Description                                                               | Status |
-|--------------------------------|---------------------------------------------------------------------------|--------|
-| Defactor Engage v2             |  Launch of the FACTR Engage Platform on latest toolkit                    | 🟡 In Progress |
-| CounterParty Pools UI          |  Revamp of the CounterParty Pools user interface                          | 🟡 In Progress |
-| Conduct Performance Tests      | On EVM-compatible networks and enterprise applications.                   | 🟡 In Progress |
-| SAP / ERP POC                  | Proof of concept for SAP Enterprise Resource Management                   | 🟡 In Progress |
-| Pilot Bounty 2.0 Projects             | Expanding community-driven initiatives.                            | ⚪ Not Started |
-| Extend the Open Source DeFi Toolkit   | Providing additional functionalities.                              | ⚪ Not Started |
+| Milestone                             | Description                                            | Status |
+|---------------------------------------|--------------------------------------------------------|--------|
+| Publish Tech & Innovation Roadmap     | Outlining our strategic direction.                     | 🟢 Completed |
+| Establish the Innovation Division     | Fostering creativity and exploration within our team.  | 🟢 Completed |
+| Develop a Bounty Program              | Incentivize community participation.                   | 🟢 Completed |
+| Roll Out engage.defactor.com          | A platform for engaging with our community.            | 🟢 Completed |
 
-### Second Quarter (Q2)
+### Second Half (H2)
 
-| Milestone                      | Description                                                               | Status |
-|--------------------------------|---------------------------------------------------------------------------|--------|
-| Defactor AI                    | Use Artificial Intelligence to facilitate project onboarding.             | ⚪ Not Started |
-| Admin User Panel               |  Advanced Admin User Suite to manage settings, users, and  analytics.     | ⚪ Not Started |
+| Milestone                             | Description                                                              |  Status  |
+|---------------------------------------|--------------------------------------------------------------------------|----------|
+| Deploy Buyback Contract              | Audited Smart Contract for FACTR token Buybacks                           | 🟢 Completed |
+| Develop a Tokenisation Engine         | Supporting multiple asset classes.                                       | 🟢 Completed |
+| Launch defactor pools                 | A platform combining RWA and DeFi.                                       | 🟢 Completed | 
+| Investigate AI in RWA Adoption        | Exploring AI's potential in accelerating RWA adoption.                   | 🟢 Completed |
 
 This roadmap represents our commitment to technological excellence and innovation in the DeFi space. Stay tuned for more updates as we progress towards these milestones.
