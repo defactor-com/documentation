@@ -3,8 +3,6 @@ title: Technology Roadmap
 sidebar_position: 3
 ---
 
-# Defactor Technology & Innovation Roadmap
-
 Welcome to our Technology & Innovation Roadmap! Our mission is to merge Real-World Assets (RWA) with Decentralized Finance (DeFi), continually pushing the boundaries of what’s possible. As an open-source project, we are committed to expanding the ecosystem and building upon established protocols. This roadmap outlines the key milestones and strategic initiatives that will drive our evolution.
 
 > **Note:** The status indicators are as follows:
