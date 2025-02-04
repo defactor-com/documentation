@@ -19,6 +19,7 @@ Welcome to our Technology & Innovation Roadmap! Our mission is to merge Real-Wor
 
 | **Milestone**                | **Description**                                                                           | **Status**       |
 |------------------------------|-------------------------------------------------------------------------------------------|------------------|
+| **Engage Vesting**           | Implement smart contracts for token vesting.                                              | 🟡 In Progress   |
 | **Defactor Engage v2**       | Launch of the FACTR Engage Platform using the latest toolkit.                             | 🟡 In Progress   |
 | **CounterParty Pools UI**    | Revamp of the CounterParty Pools user interface.                                          | 🟡 In Progress   |
 | **Performance Testing**      | Conduct performance tests on EVM-compatible networks and enterprise applications.         | 🟡 In Progress   |
@@ -28,10 +29,10 @@ Welcome to our Technology & Innovation Roadmap! Our mission is to merge Real-Wor
 
 | **Milestone**                        | **Description**                                                       | **Status**       |
 |--------------------------------------|-----------------------------------------------------------------------|------------------|
-| **Admin User Panel**                 | Develop an advanced admin suite for project deployment and managing settings. | ⚪ Not Started   |
-| **Defactor AI**                      | Leverage artificial intelligence to streamline project onboarding.    | ⚪ Not Started   |
-| **Expand Developer Relations**       | Grow community-driven initiatives to strengthen our developer ecosystem. | ⚪ Not Started   |
-| **Extend Open Source DeFi Toolkit**  | Enhance our toolkit with additional functionalities.                  | ⚪ Not Started   |
+| **Admin User Panel**                 | Develop an advanced admin suite for project deployment and managing settings. | 🟡 In Progress   |
+| **Defactor AI**                      | Leverage artificial intelligence to streamline project onboarding.    |  🟡 In Progress   |
+| **Expand Developer Relations**       | Grow community-driven initiatives to strengthen our developer ecosystem. | 🟡 In Progress  |
+| **Extend Open Source DeFi Toolkit**  | Enhance our toolkit with additional functionalities.                  | 🟡 In Progress   |
 
 ---
 
@@ -42,13 +43,12 @@ Welcome to our Technology & Innovation Roadmap! Our mission is to merge Real-Wor
 | **Milestone**                          | **Description**                                                                                                  | **Status**       |
 |----------------------------------------|------------------------------------------------------------------------------------------------------------------|------------------|
 | **Precious Metal Pool v2**             | Updated features and user interface improvements.                                                                | 🟢 Completed     |
-| **Open Source SDK and UI Toolkit**     | Design and develop a comprehensive toolkit to empower developers on our platform.                                 | 🟢 Completed     |
-| **Pools Version 2**                    | Updated React UI showcasing ERC20.loans with improved liquidity integration via Uniswap.                          | 🟢 Completed     |
-| **Crypto Market Maker v1**             | Launch SME Lending Pool designed for market makers.                                                               | 🟢 Completed     |
+| **Open Source SDK and UI Toolkit**     | Design and develop a comprehensive toolkit to empower developers on our platform.                                | 🟢 Completed     |
+| **Pools Version 2**                    | Updated React UI showcasing ERC20.loans with improved liquidity integration via Uniswap.                         | 🟢 Completed     |
+| **Crypto Market Maker v1**             | Launch SME Lending Pool designed for market makers.                                                              | 🟢 Completed     |
 | **Migrate Legacy Customers**           | Transition legacy customers to the latest version of Defactor Pools.                                               | 🟢 Completed     |
 | **Engage v2**                          | Implement a new UX design using React for the Engage App, including the Buyback Dashboard.                         | 🟢 Completed     |
 | **Precious Metal Pool 3**              | Introduce a new React Framework-based UI for the Precious Metal Pool.                                              | 🟢 Completed     |
-| **Credit Rating System**               | Deploy credit rating capabilities for the Latin American market.                                                  | 🟢 Completed     |
 | **Music Royalties Pool v1**            | Launch a Defactor Pools instance tailored for tokenized music assets.                                               | 🟢 Completed     |
 
 ### Third Quarter (Q3)
@@ -75,7 +75,6 @@ Welcome to our Technology & Innovation Roadmap! Our mission is to merge Real-Wor
 | **Engage Governance**                  | Deploy the Engage Governance platform.                                                                             | 🟢 Completed     |
 | **Engage BuyBacks**                    | Integrate smart contracts to facilitate automated token buybacks.                                                  | 🟢 Completed     |
 | **Defactor Chain**                     | Pilot a new blockchain infrastructure layer.                                                                       | 🟢 Completed     |
-| **Engage Vesting**                     | Implement smart contracts for token vesting.                                                                       | 🟡 In Progress   |
 
 ---
 
