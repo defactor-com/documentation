@@ -1,6 +1,6 @@
 ---
-title: Deploy a New Pools Instance
-sidebar_position: 2
+title: Configuring Pools Instances
+sidebar_position: 3
 ---
 
 # Configuring a New Pools Instance

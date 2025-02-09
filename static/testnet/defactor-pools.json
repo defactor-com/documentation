@@ -15,24 +15,12 @@
         "collateral": "0x8574299682D036F88195a2685601D90300E21Bca"
       },
       {
-        "id": "Amoy",
-        "type": "Staking",
-        "contract": "0xdaE01d1d63C119b6F389ec3188c8D9f716C6C77c",
-        "factr": "0x8574299682D036F88195a2685601D90300E21Bca"
-      },
-      {
         "id": "Sepolia",
         "type": "Erc20 Collateral Pool",
         "contract": "0x295894a94F859cE1Ac960364D6b0D2Fa430027b4",
         "token": "0x75fe3476d90598080f7D12365020C438943Dcef3",
         "oracle": "0xaD65748ad8Ad34bCF4b2AEb4Fd83F37C543F4b97",
         "collateral": "0x7D5c1468D8bE9f0F4FaD26F2Cb7e6b2ed9042577"
-      },
-      {
-        "id": "Sepolia",
-        "type": "Staking",
-        "contract": "0x733D816f9d7ea664E1132EF132C040655a0c81Ea",
-        "factr": "0x7D5c1468D8bE9f0F4FaD26F2Cb7e6b2ed9042577"
       }
     ]
   },
@@ -125,6 +113,23 @@
         "token": "0xC4993eEB677035bb71534a8e991c4A6d1bfFA5d0",
         "oracle": "0x60E87395b0101F85C623c38Be010574f958496db",
         "collateral": "0x7F400A79139A603E5F8A930cEC9562171fDCD906"
+      }
+    ]
+  },
+  {
+    "id": "pools-realtyx-testnet",
+    "name": "RealtyX Development",
+    "description": "Testnet environment for RealtyX.",
+    "web": "https://realtyx.defactor.dev",
+    "api": "https://realty-api.defactor.dev",
+    "chains": [
+      {
+        "id": "Base",
+        "type": "Erc20 Collateral Pool",
+        "contract": "0x2CaD0Be2B4E138509EfeE5B3FDE9bF42b6e8D5D0",
+        "token": "0xC1cf57c43b0109Be365676E79972Ee2d35adC7A4",
+        "oracle": "0x60E87395b0101F85C623c38Be010574f958496db",
+        "collateral": "0x6bD5fd8cAbCce2caD5241a4A233EE4be2798d49e"
       }
     ]
   }

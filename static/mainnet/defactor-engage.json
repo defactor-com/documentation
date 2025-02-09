@@ -1,0 +1,19 @@
+[
+    {
+      "id": "engage-libertum-mainnet",
+      "name": "Libertum Engage Mainnet Instance",
+      "description": "Mainnet environment for Libertum Engage.",
+      "web": "https://libertum-engage.factr.app",
+      "api": "https://libertum-engage-api.factr.app",
+      "testnet": true,
+      "chains": [
+        {
+          "id": "Base",
+          "type": "Staking",
+          "contract": "0x04dbe3bb529e24A0DB12d343a9D6020feb3Ae338",
+          "token": "0x56A38E7216304108E841579041249fEb236C887b"
+        }
+      ]
+    }
+  ]
+  

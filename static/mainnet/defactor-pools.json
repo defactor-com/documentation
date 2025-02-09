@@ -18,9 +18,9 @@
   },
   {
     "id": "pools-aurus2-mainnet",
-    "name": "Aurus2 Production",
-    "description": "Production environment for Aurus2.",
-    "web": "https://aurus2.factr.app",
+    "name": "Aurus Production",
+    "description": "Production environment for Aurus.",
+    "web": "https://aurus.factr.app",
     "api": "https://aurus2-api.factr.app",
     "chains": [
       {
@@ -55,6 +55,63 @@
         "token": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
         "oracle": "0x21A0bDC6BC2a47Cd390F601422750f576de46cB2",
         "collateral": "0x6fC27F5CC0aAFeC8e2b8bC4E6393aC89e45232d3"
+      }
+    ]
+  },
+  {
+    "id": "pools-landshare-mainnet",
+    "name": "LandShare Production",
+    "description": "Production environment for LandShare.",
+    "web": "https://pools.landshare.io",
+    "api": "https://landshare-api.factr.app",
+    "chains": [
+      {
+        "id": "Bsc",
+        "type": "Erc20 Collateral Pool",
+        "contract": "0x6cbA45B0228F7e2e058e877060619225F9979c87",
+        "token": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "oracle": [
+          "0xd2896dE7De086BFcd80B66356458Ae61BE4aBEaD",
+          "0x33C1B41916FbC754C70237776f2435dd90558E23"
+        ],
+        "collateral": [
+          "0xA73164DB271931CF952cBaEfF9E8F5817b42fA5C",
+          "0x475eD67Bfc62B41c048b81310337c1D75D45aADd"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "pools-realtyx-mainnet",
+    "name": "RealtyX Production",
+    "description": "Production environment for RealtyX.",
+    "web": "https://realtyx.factr.app",
+    "api": "https://realtyx-api.factr.app",
+    "chains": [
+      {
+        "id": "Base",
+        "type": "Erc20 Collateral Pool",
+        "contract": "0x1CD2416342D32Ba10bC8f43F4b6A38d6d19bCd83",
+        "token": "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d",
+        "oracle": "0x8d9a73170E41c175806F29b51a0D48D48084Ff49",
+        "collateral": "0xDbf9F254C365ABe4294884d1249c7a2388f70911"
+      }
+    ]
+  },
+  {
+    "id": "pools-songyield-mainnet",
+    "name": "SongYield Production",
+    "description": "Production environment for SongYield.",
+    "web": "https://songyield.factr.app",
+    "api": "https://songyield-api.factr.app",
+    "chains": [
+      {
+        "id": "Polygon",
+        "type": "Erc20 Collateral Pool",
+        "contract": "0x19d3e50F2519ba1812856615E15C763e8488BaD2",
+        "token": "0x3c499c542cef5e3811e1192ce70d8cc03d5c3359",
+        "oracle": "0x8DA92A6C86838B97148DC7CFfeDB4C128fC43925",
+        "collateral": "0x84f6c044d58ecf833f2c8dd7e2c4d098959ae1f2"
       }
     ]
   }
