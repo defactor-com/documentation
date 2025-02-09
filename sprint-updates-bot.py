@@ -6,6 +6,7 @@ import re
 import argparse
 import ssl
 import certifi
+import time
 
 from dotenv import load_dotenv
 from openai import OpenAI
@@ -148,24 +149,84 @@ def save_summary_to_file(summary, filename):
         file.write(summary)
     logging.info(f"Summary saved to {filename}")
 
+def format_for_slack(text):
+    """Convert markdown formatting to Slack formatting"""
+    # Replace markdown headers with Slack bold
+    text = re.sub(r'^# (.*?)$', r'*\1*\n', text, flags=re.MULTILINE)  # h1
+    text = re.sub(r'^## (.*?)$', r'*\1*\n', text, flags=re.MULTILINE)  # h2
+    text = re.sub(r'^### (.*?)$', r'• *\1*\n', text, flags=re.MULTILINE)  # h3 with bullet
+    
+    # Replace markdown bold with Slack bold
+    text = re.sub(r'\*\*(.*?)\*\*', r'*\1*', text)
+    
+    # Replace markdown lists with Slack lists
+    text = re.sub(r'^\s*- ', '• ', text, flags=re.MULTILINE)
+    
+    # Add spacing for readability
+    text = re.sub(r'\n\n+', '\n\n', text)  # Normalize multiple newlines
+    text = re.sub(r'(\*[^*]+\*)\n', r'\1\n\n', text)  # Add space after headers
+    
+    # Clean up any remaining markdown artifacts
+    text = re.sub(r'`|_', '', text)
+    
+    return text.strip()
+
 def get_polished_summary(summary):
-    response = client.chat.completions.create(
-        model="gpt-4",
-        messages=[
-            {"role": "system", "content": f"You are an assistant with the ID {ASSISTANT_ID}."},
-            {"role": "user", "content": summary}
-        ],
-        max_tokens=1024,
-        n=1,
-        stop=None,
-        temperature=0.5
+    # Create a thread
+    thread = client.beta.threads.create()
+
+    # Add the summary message to the thread
+    client.beta.threads.messages.create(
+        thread_id=thread.id,
+        role="user",
+        content=f"""Please format this sprint development update in a clear, concise way for Slack. 
+        Use bullet points for clarity and organize the information hierarchically.
+        Focus on the most important changes and achievements.
+        
+        {summary}"""
     )
-    return response.choices[0].message.content.strip()
+
+    # Run the assistant
+    run = client.beta.threads.runs.create(
+        thread_id=thread.id,
+        assistant_id=ASSISTANT_ID
+    )
+
+    # Wait for the run to complete
+    while True:
+        run_status = client.beta.threads.runs.retrieve(
+            thread_id=thread.id,
+            run_id=run.id
+        )
+        if run_status.status == 'completed':
+            break
+        elif run_status.status in ['failed', 'cancelled', 'expired']:
+            logging.error(f"Assistant run failed with status: {run_status.status}")
+            return format_for_slack(summary)
+        time.sleep(1)
+
+    # Get the assistant's response
+    messages = client.beta.threads.messages.list(thread_id=thread.id)
+    # Get the last assistant message
+    for message in messages:
+        if message.role == "assistant":
+            return format_for_slack(message.content[0].text.value)
+
+    return format_for_slack(summary)  # Return formatted original summary if no assistant response
 
 def post_to_slack(channel, message):
     try:
-        response = slack_client.chat_postMessage(channel=channel, text=message)
-        logging.info(f"Message posted to {channel}: {response['ts']}")
+        # Split message if it exceeds Slack's length limit
+        max_length = 40000  # Slack's message length limit
+        messages = [message[i:i+max_length] for i in range(0, len(message), max_length)]
+        
+        for msg in messages:
+            response = slack_client.chat_postMessage(
+                channel=channel,
+                text=msg,
+                parse='full'  # This tells Slack to parse all formatting
+            )
+            logging.info(f"Message posted to {channel}: {response['ts']}")
     except SlackApiError as e:
         logging.error(f"Error posting message to Slack: {e.response['error']}")
 
@@ -173,15 +234,15 @@ def main(repos, start_date=None, end_date=None):
     if not start_date or not end_date:
         start_date, end_date = get_previous_week_dates()
     summary = generate_summary(repos, start_date, end_date)
-    raw_summary_filename = f"Development_Weekly_Updates_{start_date}_to_{end_date}_raw.txt"
-    polished_summary_filename = f"Development_Weekly_Updates_{start_date}_to_{end_date}_polished.txt"
+    raw_summary_filename = f"Development_Sprint_Updates_{start_date}_to_{end_date}_raw.txt"
+    polished_summary_filename = f"Development_Sprint_Updates_{start_date}_to_{end_date}_polished.txt"
     save_summary_to_file(summary, raw_summary_filename)
     polished_summary = get_polished_summary(summary)
     save_summary_to_file(polished_summary, polished_summary_filename)
     post_to_slack(SLACK_CHANNEL, polished_summary)
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description='Generate weekly GitHub update report.')
+    parser = argparse.ArgumentParser(description='Generate sprint update report from GitHub.')
     parser.add_argument('--start_date', type=str, help='Start date in YYYY-MM-DD format')
     parser.add_argument('--end_date', type=str, help='End date in YYYY-MM-DD format')
     args = parser.parse_args()

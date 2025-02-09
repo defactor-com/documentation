@@ -1,4 +1,4 @@
-name: Run Weekly Updates Bot
+name: Run Sprint Updates Bot
 
 on:
   schedule:
@@ -31,4 +31,4 @@ jobs:
         SLACK_CHANNEL: ${{ secrets.SLACK_CHANNEL }}
         ASSISTANT_ID: ${{ secrets.ASSISTANT_ID }}
       run: |
-        python weekly-updates-bot.py
+        python sprint-updates-bot.py
