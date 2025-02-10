@@ -2,33 +2,54 @@ name: Run Sprint Updates Bot
 
 on:
   schedule:
-    - cron: '0 1 * * 1'  # At 1:00 AM on Monday
+    - cron: '0 1 * * 1'  # Every Monday at 1:00 AM UTC
   workflow_dispatch:  # Allows manual triggering
 
 jobs:
   run-script:
     runs-on: ubuntu-latest
-
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
-    - name: Set up Python
-      uses: actions/setup-python@v2
-      with:
-        python-version: '3.x'
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
 
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install requests openai slack_sdk certifi
+      # Check if today is a sprint update day.
+      - name: Check if sprint update day
+        id: check_update_day
+        run: |
+          # Set the reference update day.
+          # For a sprint starting on January 27, 2025, if the update is posted when the sprint is over,
+          # the first update day is February 10, 2025.
+          REF_DATE="2025-02-10"
+          CURRENT_DATE=$(date -u +'%Y-%m-%d')
+          # Convert dates to seconds since epoch and calculate the difference in days.
+          diff=$(( ( $(date -d "$CURRENT_DATE" +%s) - $(date -d "$REF_DATE" +%s) ) / 86400 ))
+          echo "Days difference from reference update day: $diff"
+          # Check if the difference is a multiple of 14.
+          if [ $(( diff % 14 )) -eq 0 ]; then
+              echo "This is a sprint update day."
+              echo "::set-output name=run_update::true"
+          else
+              echo "Not a sprint update day. Exiting."
+              echo "::set-output name=run_update::false"
+          fi
 
-    - name: Run the script
-      env:
-        GH_TOKEN: ${{ secrets.GH_TOKEN }}
-        OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-        SLACK_TOKEN: ${{ secrets.SLACK_TOKEN }}
-        SLACK_CHANNEL: ${{ secrets.SLACK_CHANNEL }}
-        ASSISTANT_ID: ${{ secrets.ASSISTANT_ID }}
-      run: |
-        python sprint-updates-bot.py
+      - name: Install dependencies
+        if: steps.check_update_day.outputs.run_update == 'true'
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests openai slack_sdk certifi python-dotenv
+
+      - name: Run sprint updates bot
+        if: steps.check_update_day.outputs.run_update == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          SLACK_TOKEN: ${{ secrets.SLACK_TOKEN }}
+          SLACK_CHANNEL: ${{ secrets.SLACK_CHANNEL }}
+          ASSISTANT_ID: ${{ secrets.ASSISTANT_ID }}
+        run: python sprint-updates-bot.py
