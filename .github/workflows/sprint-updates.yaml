@@ -6,8 +6,9 @@ on:
   workflow_dispatch:  # Allows manual triggering
 
 jobs:
-  run-script:
+  generate-sprint-updates:
     runs-on: ubuntu-latest
+    
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
@@ -17,25 +18,22 @@ jobs:
         with:
           python-version: '3.x'
 
-      # Check if today is a sprint update day.
+      # Check if today is a sprint update day
       - name: Check if sprint update day
         id: check_update_day
         run: |
-          # Set the reference update day.
-          # For a sprint starting on January 27, 2025, if the update is posted when the sprint is over,
-          # the first update day is February 10, 2025.
-          REF_DATE="2025-02-10"
+          # Set the reference sprint start date (Sprint 29)
+          REF_DATE="2025-01-27"
           CURRENT_DATE=$(date -u +'%Y-%m-%d')
-          # Convert dates to seconds since epoch and calculate the difference in days.
+          # Calculate days since reference date
           diff=$(( ( $(date -d "$CURRENT_DATE" +%s) - $(date -d "$REF_DATE" +%s) ) / 86400 ))
-          echo "Days difference from reference update day: $diff"
-          # Check if the difference is a multiple of 14.
-          if [ $(( diff % 14 )) -eq 0 ]; then
-              echo "This is a sprint update day."
-              echo "::set-output name=run_update::true"
+          # Check if we're at the end of a sprint (diff % 14 should be 13)
+          if [ $(( diff % 14 )) -eq 13 ]; then
+            echo "This is a sprint update day."
+            echo "run_update=true" >> $GITHUB_OUTPUT
           else
-              echo "Not a sprint update day. Exiting."
-              echo "::set-output name=run_update::false"
+            echo "Not a sprint update day. Exiting."
+            echo "run_update=false" >> $GITHUB_OUTPUT
           fi
 
       - name: Install dependencies
@@ -52,4 +50,4 @@ jobs:
           SLACK_TOKEN: ${{ secrets.SLACK_TOKEN }}
           SLACK_CHANNEL: ${{ secrets.SLACK_CHANNEL }}
           ASSISTANT_ID: ${{ secrets.ASSISTANT_ID }}
-        run: python sprint-updates-bot.py
+        run: python weekly-updates-bot.py
