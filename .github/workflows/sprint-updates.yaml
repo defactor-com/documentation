@@ -6,8 +6,9 @@ on:
   workflow_dispatch:  # Allows manual triggering
 
 jobs:
-  run-script:
+  generate-sprint-updates:
     runs-on: ubuntu-latest
+    
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
@@ -17,35 +18,34 @@ jobs:
         with:
           python-version: '3.x'
 
-      # Check if today is a sprint update day.
-      - name: Check if sprint update day
-        id: check_update_day
+      # Check if today is a sprint start day
+      - name: Check if sprint start day
+        id: check_sprint_day
         run: |
-          # Set the reference update day.
-          # For a sprint starting on January 27, 2025, if the update is posted when the sprint is over,
-          # the first update day is February 10, 2025.
-          REF_DATE="2025-02-10"
+          # Set the reference sprint start date (Sprint 29)
+          REF_DATE="2025-01-27"
           CURRENT_DATE=$(date -u +'%Y-%m-%d')
-          # Convert dates to seconds since epoch and calculate the difference in days.
+          
+          # Calculate days since reference date
           diff=$(( ( $(date -d "$CURRENT_DATE" +%s) - $(date -d "$REF_DATE" +%s) ) / 86400 ))
-          echo "Days difference from reference update day: $diff"
-          # Check if the difference is a multiple of 14.
+          
+          # Check if today is a sprint start day (diff should be divisible by 14)
           if [ $(( diff % 14 )) -eq 0 ]; then
-              echo "This is a sprint update day."
-              echo "::set-output name=run_update::true"
+            echo "This is a sprint start day."
+            echo "run_update=true" >> $GITHUB_OUTPUT
           else
-              echo "Not a sprint update day. Exiting."
-              echo "::set-output name=run_update::false"
+            echo "Not a sprint start day. Exiting."
+            echo "run_update=false" >> $GITHUB_OUTPUT
           fi
 
       - name: Install dependencies
-        if: steps.check_update_day.outputs.run_update == 'true'
+        if: steps.check_sprint_day.outputs.run_update == 'true'
         run: |
           python -m pip install --upgrade pip
           pip install requests openai slack_sdk certifi python-dotenv
 
       - name: Run sprint updates bot
-        if: steps.check_update_day.outputs.run_update == 'true'
+        if: steps.check_sprint_day.outputs.run_update == 'true'
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}

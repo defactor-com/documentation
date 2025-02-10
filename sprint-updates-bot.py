@@ -56,14 +56,61 @@ REPOS = [
 ]
 
 # Helper functions
-def get_previous_week_dates():
+def get_sprint_info(target_date=None):
     """
-    Returns the start and end dates for the previous week.
+    Calculate sprint information based on a target date.
+    If no date is provided, uses today's date.
+    Returns sprint start date, end date, and sprint number.
+    """
+    SPRINT_29_START = datetime.date(2025, 1, 27)  # Reference sprint start date
+    SPRINT_29_NUMBER = 29  # Reference sprint number
+    
+    target_date = target_date or datetime.date.today()
+    logging.info(f"Calculating sprint info for date: {target_date.strftime('%B %d, %Y')}")
+    
+    # Calculate days since the reference sprint
+    days_since_ref = (target_date - SPRINT_29_START).days
+    
+    # Calculate which sprint this date belongs to
+    current_sprint = days_since_ref // 14
+    
+    # Calculate sprint number and dates
+    sprint_number = SPRINT_29_NUMBER + current_sprint
+    sprint_start = SPRINT_29_START + datetime.timedelta(days=14 * current_sprint)
+    sprint_end = sprint_start + datetime.timedelta(days=13)
+    
+    is_sprint_complete = target_date > sprint_end
+    is_sprint_start_day = target_date.weekday() == 0 and target_date == sprint_start
+    
+    logging.info(f"Sprint {sprint_number}: {sprint_start.strftime('%B %d')} - {sprint_end.strftime('%B %d, %Y')}")
+    logging.info(f"Sprint status: {'Complete' if is_sprint_complete else 'In Progress'}")
+    
+    return sprint_start, sprint_end, sprint_number, is_sprint_complete, is_sprint_start_day
+
+def get_previous_sprint_dates():
+    """
+    Returns the start and end dates for the previous completed sprint,
+    along with the sprint number.
     """
     today = datetime.date.today()
-    start_of_week = today - datetime.timedelta(days=today.weekday() + 7)
-    end_of_week = start_of_week + datetime.timedelta(days=6)
-    return start_of_week, end_of_week
+    current_sprint_start, current_sprint_end, current_sprint_number, is_complete, is_start_day = get_sprint_info(today)
+    
+    if is_start_day:
+        # On sprint start day (Monday), return the previous sprint
+        previous_sprint_start = current_sprint_start - datetime.timedelta(days=14)
+        previous_sprint_end = current_sprint_start - datetime.timedelta(days=1)
+        previous_sprint_number = current_sprint_number - 1
+    else:
+        # On any other day, return the current sprint
+        previous_sprint_start = current_sprint_start
+        previous_sprint_end = current_sprint_end
+        previous_sprint_number = current_sprint_number
+    
+    logging.info(f"Selected Sprint {previous_sprint_number}")
+    logging.info(f"Sprint start date: {previous_sprint_start.strftime('%B %d, %Y')}")
+    logging.info(f"Sprint end date: {previous_sprint_end.strftime('%B %d, %Y')}")
+    
+    return previous_sprint_start, previous_sprint_end, previous_sprint_number
 
 def github_api_request(url, params=None):
     """
@@ -75,13 +122,20 @@ def github_api_request(url, params=None):
     response.raise_for_status()
     return response.json()
 
-def get_pull_requests(owner, repo, start_date, end_date):
-    """
-    Retrieve pull requests updated between start_date and end_date.
-    """
-    pulls_url = f"{GITHUB_API_URL}/repos/{owner}/{repo}/pulls"
-    params = {"state": "all", "sort": "updated", "direction": "desc", "per_page": 100}
-    pulls = github_api_request(pulls_url, params)
+def get_pull_requests(owner: str, repo: str, start_date: datetime.date, end_date: datetime.date) -> list:
+    pulls = []
+    page = 1
+    while True:
+        pulls_url = f"{GITHUB_API_URL}/repos/{owner}/{repo}/pulls"
+        params = {"state": "all", "sort": "updated", "direction": "desc", "per_page": 100, "page": page}
+        page_data = github_api_request(pulls_url, params)
+        if not page_data:
+            break
+        pulls.extend(page_data)
+        # If fewer than 100 results, then it's the last page.
+        if len(page_data) < 100:
+            break
+        page += 1
     relevant_pulls = [
         pr for pr in pulls 
         if start_date <= datetime.datetime.strptime(pr["updated_at"], "%Y-%m-%dT%H:%M:%SZ").date() <= end_date
@@ -120,11 +174,12 @@ def clean_pr_body(pr_body):
     cleaned = re.sub(r'- \[[ x]\].*\n', '', cleaned, flags=re.MULTILINE)
     return cleaned.strip()
 
-def generate_summary(repos, start_date, end_date):
+def generate_summary(repos, start_date, end_date, sprint_number):
     """
     Generate a markdown summary of the sprint updates.
     """
-    summary = f"# Development Weekly Updates (Week of {start_date} to {end_date})\n\n"
+    summary = f"# Development Sprint Updates (Sprint {sprint_number}: {start_date.strftime('%B %d')} - {end_date.strftime('%B %d, %Y')})\n\n"
+    
     for repo in repos:
         owner = repo['owner']
         name = repo['name']
@@ -184,24 +239,22 @@ def format_for_slack(text):
     text = re.sub(r'\n\n+', '\n\n', text)
     return text.strip()
 
-def get_polished_summary(summary):
+def get_polished_summary(summary: str, sprint_number: int) -> str:
     """
     Use the assistant to reformat the summary for Slack.
     If the assistant fails, return the formatted summary.
     """
-    # Create a new thread for conversation with the assistant
     thread = client.beta.threads.create()
-    # Improved prompt for the assistant
     assistant_prompt = f"""
-Please reformat the following sprint development update into a concise, well-structured Slack message for our marketing team.
-Organize the updates by repository (each repository under its own header).
-Use bullet points for key updates but do not nest them (avoid double bullet points).
-Remove any references to PR numbers and issue numbers.
-Rewrite each bullet point’s title to be more human-friendly based on our commit message guidelines.
-This update will be published on the defactor Technology & Innovation section of our internal site: https://inside.defactor.com.
-
-{summary}
-"""
+    Please reformat the following development update for Sprint {sprint_number} into a concise, well-structured Slack message for our marketing team.
+    Organize the updates by repository (each repository under its own header).
+    Use bullet points for key updates but do not nest them (avoid double bullet points).
+    Remove any references to PR numbers and issue numbers.
+    Rewrite each bullet point's title to be more human-friendly based on our commit message guidelines.
+    This update will be published on the defactor Technology & Innovation section of our internal site: https://inside.defactor.com.
+    
+    {summary}
+    """
     client.beta.threads.messages.create(
         thread_id=thread.id,
         role="user",
@@ -209,7 +262,12 @@ This update will be published on the defactor Technology & Innovation section of
     )
     run = client.beta.threads.runs.create(thread_id=thread.id, assistant_id=ASSISTANT_ID)
 
+    timeout = 60  # maximum seconds to wait (tweak as needed)
+    start_time = time.time()
     while True:
+        if time.time() - start_time > timeout:
+            logging.error("Assistant run timed out!")
+            return format_for_slack(summary)
         run_status = client.beta.threads.runs.retrieve(thread_id=thread.id, run_id=run.id)
         if run_status.status == 'completed':
             break
@@ -218,11 +276,9 @@ This update will be published on the defactor Technology & Innovation section of
             return format_for_slack(summary)
         time.sleep(1)
 
-    # Retrieve the assistant's response
     messages = client.beta.threads.messages.list(thread_id=thread.id)
     for message in messages:
         if message.role == "assistant":
-            # Assuming the assistant message content is available as text
             return format_for_slack(message.content[0].text.value)
     return format_for_slack(summary)
 
@@ -239,7 +295,7 @@ def post_to_slack(channel, message):
     except SlackApiError as e:
         logging.error(f"Error posting message to Slack: {e.response['error']}")
 
-def main(repos, start_date=None, end_date=None):
+def main(repos, start_date=None, end_date=None, sprint_number=None):
     """
     Main workflow:
       1. Generate a summary of updates.
@@ -248,23 +304,54 @@ def main(repos, start_date=None, end_date=None):
       4. Save the polished summary.
       5. Post the polished summary to Slack.
     """
-    if not start_date or not end_date:
-        start_date, end_date = get_previous_week_dates()
-    summary = generate_summary(repos, start_date, end_date)
-    raw_filename = f"Development_Sprint_Updates_{start_date}_to_{end_date}_raw.txt"
-    polished_filename = f"Development_Sprint_Updates_{start_date}_to_{end_date}_polished.txt"
+    if start_date and end_date:
+        # Manual date range provided
+        if not sprint_number:
+            # Calculate sprint number based on the start date
+            _, _, sprint_number, _, _ = get_sprint_info(start_date)
+        logging.info(f"Using provided dates: {start_date.strftime('%B %d, %Y')} to {end_date.strftime('%B %d, %Y')}")
+        logging.info(f"Using sprint number: {sprint_number}")
+    else:
+        # Automatic date calculation
+        start_date, end_date, sprint_number = get_previous_sprint_dates()
+    
+    logging.info(f"Generating summary for Sprint {sprint_number}")
+    if datetime.date.today() <= end_date:
+        logging.warning(f"Generating report for incomplete Sprint {sprint_number}")
+    
+    summary = generate_summary(repos, start_date, end_date, sprint_number)
+    
+    raw_filename = f"Development_Sprint_{sprint_number}_Updates_{start_date}_to_{end_date}_raw.txt"
+    polished_filename = f"Development_Sprint_{sprint_number}_Updates_{start_date}_to_{end_date}_polished.txt"
+    
+    logging.info(f"Saving raw summary to: {raw_filename}")
     save_summary_to_file(summary, raw_filename)
-    polished_summary = get_polished_summary(summary)
+    
+    logging.info(f"Getting polished summary from assistant for Sprint {sprint_number}")
+    polished_summary = get_polished_summary(summary, sprint_number)
+    
+    logging.info(f"Saving polished summary to: {polished_filename}")
     save_summary_to_file(polished_summary, polished_filename)
+    
+    logging.info(f"Posting Sprint {sprint_number} update to Slack channel: {SLACK_CHANNEL}")
     post_to_slack(SLACK_CHANNEL, polished_summary)
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Generate sprint update report from GitHub.')
     parser.add_argument('--start_date', type=str, help='Start date in YYYY-MM-DD format')
     parser.add_argument('--end_date', type=str, help='End date in YYYY-MM-DD format')
+    parser.add_argument('--sprint_number', type=int, help='Optional: Override sprint number')
     args = parser.parse_args()
 
-    start_date = datetime.datetime.strptime(args.start_date, '%Y-%m-%d').date() if args.start_date else None
-    end_date = datetime.datetime.strptime(args.end_date, '%Y-%m-%d').date() if args.end_date else None
-
-    main(REPOS, start_date, end_date)
+    try:
+        if (args.start_date and not args.end_date) or (args.end_date and not args.start_date):
+            raise ValueError("Both start_date and end_date must be provided together.")
+        
+        start_date = datetime.datetime.strptime(args.start_date, '%Y-%m-%d').date() if args.start_date else None
+        end_date = datetime.datetime.strptime(args.end_date, '%Y-%m-%d').date() if args.end_date else None
+        sprint_number = args.sprint_number
+        
+        main(REPOS, start_date, end_date, sprint_number)
+    except Exception as e:
+        logging.error(f"Error running script: {str(e)}")
+        raise
