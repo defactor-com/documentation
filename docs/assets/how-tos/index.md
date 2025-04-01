@@ -2,7 +2,7 @@
 title: Assets New Project Onboarding
 ---
 
-We support widelabeling for assets. The following guide provides a list of resources needed to launch your own Assets with Defactor smart contracts.
+We support whitelabeling for assets. The following guide provides a list of resources needed to launch your own Assets with Defactor smart contracts.
 
 ## General information about website
 - Site name
