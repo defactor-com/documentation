@@ -3,7 +3,7 @@ title: Introduction to Polygon
 sidebar_position: 3
 ---
 
-Polygon, formerly known as Matic Network, is a protocol and a framework for building and connecting Ethereum-compatible blockchain networks. It provides scalable solutions on Ethereum, supporting a multi-chain Ethereum ecosystem. Polygon transforms Ethereum into a full-fledged multi-chain system, often referred to as the “Internet of Blockchains.” This multi-chain system is akin to other ones such as Polkadot, Cosmos, Avalanche, etc., but with the added benefits of Ethereum's security, vibrant ecosystem, and openness.
+Polygon, formerly known as Matic Network, is a protocol and a framework for building and connecting Ethereum-compatible blockchainGoerli networks. It provides scalable solutions on Ethereum, supporting a multi-chain Ethereum ecosystem. Polygon transforms Ethereum into a full-fledged multi-chain system, often referred to as the “Internet of Blockchains.” This multi-chain system is akin to other ones such as Polkadot, Cosmos, Avalanche, etc., but with the added benefits of Ethereum's security, vibrant ecosystem, and openness.
 
 ## Key Features of Polygon
 
@@ -41,20 +41,21 @@ Similar to Ethereum, Polygon uses gas fees to compensate for the computational r
 - **Transaction Complexity:** Complex operations require more computational power, hence more gas.
 - **Gas Price:** Users can set the gas price, which influences transaction processing speed.
 
-# Polygon Testnets: Mumbai
+# Polygon Testnets: Amoy
 
-Polygon's primary testnet, Mumbai, is used for testing and development purposes, similar to Ethereum's testnets. It allows developers to deploy and test their DApps in a simulated environment before launching them on the main Polygon network.
+Amoy is the current official testnet for the Polygon PoS network and for projects built using the Polygon Chain Development Kit (CDK). It replaces the deprecated Mumbai testnet and offers a more stable and modern environment for testing and deploying decentralized applications (DApps).
 
-## Features of Mumbai Testnet
+## Features of Amoy Testnet
 
-- **Ethereum Compatibility:** Mumbai testnet mirrors the Polygon mainnet and is fully compatible with Ethereum tools.
-- **Free Test Tokens:** Developers can obtain test MATIC tokens for experimentation.
-- **Realistic Testing Environment:** Mumbai replicates the mainnet environment, allowing for accurate testing and debugging.
+- **Ethereum Alignment:** Fully compatible with Ethereum tools and infrastructure.
+- **Stable and Supported:** Actively maintained by the Polygon team, unlike Mumbai.
+- **Testnet Faucet Access:** Developers can request test MATIC to simulate transactions.
+- **Ready for Polygon 2.0:** Aligned with the modular and zk-focused future of the Polygon ecosystem.
 
-## Accessing the Mumbai Testnet
+## Accessing the Amoy Testnet
 
-Developers can access the Mumbai testnet through wallets like MetaMask, configuring it for the Polygon network to test their DApps and smart contracts.
+Amoy can be configured in wallets like MetaMask, Rabby, or OKX Wallet. RPC and faucet URLs are provided by Polygon’s official documentation to ensure easy onboarding for developers.
 
 ## Conclusion
 
-Polygon is a powerful solution for Ethereum's scalability issues, providing a versatile and user-friendly platform for decentralized applications. With its unique features like low gas fees, and a robust testnet in Mumbai, Polygon stands as a significant contributor to the blockchain ecosystem, enhancing the capabilities and reach of Ethereum's network.
+Polygon is a powerful solution for Ethereum's scalability challenges, offering a modular and developer-friendly framework for building decentralized applications. With features like low gas fees, Ethereum compatibility, and the new Amoy testnet aligned with Polygon 2.0, the ecosystem provides a modern and reliable environment for development. Polygon continues to play a crucial role in extending Ethereum’s reach through scalable infrastructure and innovative tools.
