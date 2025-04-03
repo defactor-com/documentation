@@ -1,5 +1,6 @@
 ---
 title: Blockchain and Web3
+sidebar_position: 2
 ---
 
 # Introduction to Web3
