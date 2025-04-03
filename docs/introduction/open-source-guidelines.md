@@ -4,7 +4,16 @@ title: Open Source Contributing Guidelines
 sidebar_label: Open Source Guidelines
 sidebar_position: 6
 description: Guidelines for contributing to open source projects
-keywords: [Open Source, Contributing, Guidelines, Open Source Contributing Guidelines, open source, open source guidelines, Open Source Projects]
+keywords:
+  [
+    Open Source,
+    Contributing,
+    Guidelines,
+    Open Source Contributing Guidelines,
+    open source,
+    open source guidelines,
+    Open Source Projects,
+  ]
 ---
 
 ## Development Process
@@ -36,12 +45,12 @@ Name every branch for your pull requests using the following simple convention:
 <type>/<task-description>-<issue-number>
 ```
 
-* Always use lowercase.
-* Choose the [type](#type).
-* Meaningful and short descriptions.
-* Use hyphens as separators.
-* Use the imperative, present tense: "change" not "changed" nor "changes".
-* Use the ``issue`` number to reference it in the branch.
+- Always use lowercase.
+- Choose the [type](#type).
+- Meaningful and short descriptions.
+- Use hyphens as separators.
+- Use the imperative, present tense: "change" not "changed" nor "changes".
+- Use the `issue` number to reference it in the branch.
 
 -**Example**:
 
@@ -58,25 +67,25 @@ feat/new-feature-123
 
 ## Pull Request General Guidelines
 
-* Please check to make sure that there aren't existing `pull request` attempting to address the `issue` mentioned.
-* Check for related `issues` on the `issue tracker`.
-* Non-trivial changes should be discussed on an issue first.
-* Develop in a topic branch, never on master: `git checkout -b type/task-issue`.
-* Provide useful `pull request` description.
-* Make well scoped `atomic` pull requests. 1 PR per feature of bug fix.
-* Link the `issue` on the `pull request` description for cross references between code and issues.
+- Please check to make sure that there aren't existing `pull request` attempting to address the `issue` mentioned.
+- Check for related `issues` on the `issue tracker`.
+- Non-trivial changes should be discussed on an issue first.
+- Develop in a topic branch, never on master: `git checkout -b type/task-issue`.
+- Provide useful `pull request` description.
+- Make well scoped `atomic` pull requests. 1 PR per feature of bug fix.
+- Link the `issue` on the `pull request` description for cross references between code and issues.
 
-We only support support **squash merge** of the `pull requests` as a best practice for ensure the `master` log is maintained clean and relevant, without requiring the pull request to be rebased. This strategy requires that all pull request made are `atomic`, in other words they solve one thing only.  One pull request per feature, bug fix or documentation update.
+We only support support **squash merge** of the `pull requests` as a best practice for ensure the `master` log is maintained clean and relevant, without requiring the pull request to be rebased. This strategy requires that all pull request made are `atomic`, in other words they solve one thing only. One pull request per feature, bug fix or documentation update.
 
 ## Commit Message Guidelines
 
-We have very precise rules over how our `git` commit messages can be formatted, following GitHub conventions and standards.  This leads to **more readable messages** that are easy to follow when looking through the **project history**.  But also, we use the `git` commit messages to **generate the project change log**.
+We have very precise rules over how our `git` commit messages can be formatted, following GitHub conventions and standards. This leads to **more readable messages** that are easy to follow when looking through the **project history**. But also, we use the `git` commit messages to **generate the project change log**.
 
 We follow the commit message conventions as shown below:
 
 ### Commit Message Format
 
-Each commit message consists of a **header**, a **body** and a **footer**.  The header has a special
+Each commit message consists of a **header**, a **body** and a **footer**. The header has a special
 format that includes a **type**, a **scope** and a **subject**:
 
 ```
@@ -87,7 +96,7 @@ format that includes a **type**, a **scope** and a **subject**:
 <footer>
 ```
 
-The ```header``` is mandatory and the ```scope``` of the header is optional.
+The `header` is mandatory and the `scope` of the header is optional.
 
 **Example:**
 
@@ -95,8 +104,8 @@ The ```header``` is mandatory and the ```scope``` of the header is optional.
 feat(scope): subject
 ^--^ ^---^   ^-----^
 |    |       |
-|    |       +-> description in present tense. 
-|    |     
+|    |       +-> description in present tense.
+|    |
 |    +-> scope is usually the service worked on (webapp, hapi, hasura etc.)
 |
 +-> Type: build, ci, docs, feat, fix, perf, refactor, style, test, content, or devtools.
@@ -107,6 +116,7 @@ The commit message cannot be longer than 100 characters. This allows the message
 The footer should contain a [closing reference to an issue](https://help.github.com/articles/closing-issues-via-commit-messages/) if any.
 
 **The commit message should look like the following examples:**
+
 ```
 feat(webapp): add a new react component for logo
 ```
@@ -129,41 +139,43 @@ If the commit reverts a previous commit, it should begin with `revert: `, follow
 
 ### Type
 
-* **build**: Changes that affect the build system or external dependencies (example scopes: gulp, broccoli, npm).
-* **chore**: What a user would not see (changes to the build process, configuration, etc).
-* **ci**: Changes to our CI configuration files and scripts (example scopes: Travis, Circle, BrowserStack, SauceLabs).
-* **docs**: Documentation only changes.
-* **feat**: A new feature for the user.
-* **fix**: A bug fix for the user.
-* **perf**: A code change that improves performance.
-* **refactor**: A code change that neither fixes a bug nor adds a feature (renaming a variable).
-* **revert**: Reverts a previous commit.
-* **style**: Changes that do not affect the meaning of the code (white space, formatting, missing semi-colons, etc).
-* **test**: Adding missing tests or correcting existing tests.
-* **content**: Adding or removing content.
-* **devtools**: Developer tooling related.
+- **build**: Changes that affect the build system or external dependencies (example scopes: gulp, broccoli, npm).
+- **chore**: What a user would not see (changes to the build process, configuration, etc).
+- **ci**: Changes to our CI configuration files and scripts (example scopes: Travis, Circle, BrowserStack, SauceLabs).
+- **docs**: Documentation only changes.
+- **feat**: A new feature for the user.
+- **fix**: A bug fix for the user.
+- **perf**: A code change that improves performance.
+- **refactor**: A code change that neither fixes a bug nor adds a feature (renaming a variable).
+- **revert**: Reverts a previous commit.
+- **style**: Changes that do not affect the meaning of the code (white space, formatting, missing semi-colons, etc).
+- **test**: Adding missing tests or correcting existing tests.
+- **content**: Adding or removing content.
+- **devtools**: Developer tooling related.
 
 ### Scope
 
 The scope is the name of the component or service that it affects. Eg:
 
-* **common**
-* **smart-contracts**
-* **webapp**
-* **storage**
-* **graphql**
-* **frontend**
-* **demux**
-* **docker**
+- **common**
+- **smart-contracts**
+- **webapp**
+- **storage**
+- **graphql**
+- **frontend**
+- **demux**
+- **docker**
 
 ### Subject
+
 The subject contains a succinct description of the change:
 
-* use the imperative, present tense: "change" not "changed" nor "changes"
-* don't capitalize the first letter
-* no dot (.) at the end
+- use the imperative, present tense: "change" not "changed" nor "changes"
+- don't capitalize the first letter
+- no dot (.) at the end
 
 ### Body
+
 Just as in the **subject**, use the imperative, present tense: "change" not "changed" nor "changes".
 The body should include the motivation for the change and contrast this with previous behavior.
 
@@ -178,23 +190,23 @@ reference GitHub `issues` that this commit closes.
 
 Before submitting your `issue` please check that you've completed the following steps:
 
-* Made sure you're on the latest version.
-* Used the search feature to ensure that the bug hasn't been reported before.
+- Made sure you're on the latest version.
+- Used the search feature to ensure that the bug hasn't been reported before.
 
 Bug reports should contain the following information:
 
-* Summary: A brief description.
-* Steps to reproduce: How did you encounter the bug? Instructions to reproduce it.
-* Expected behavior: How did you expect it to behave?
-* Actual behavior: How did it actually behave?
-* References: Links to any related tickets or information sources.
-* If possible, attach visual documentation of the bug. Screenshot or animated gif.
+- Summary: A brief description.
+- Steps to reproduce: How did you encounter the bug? Instructions to reproduce it.
+- Expected behavior: How did you expect it to behave?
+- Actual behavior: How did it actually behave?
+- References: Links to any related tickets or information sources.
+- If possible, attach visual documentation of the bug. Screenshot or animated gif.
 
 ## Releases
 
 We release the production software version using github tags following [Semver](http://semver.org), except the version roles have the semantic names, "Breaking.Feature.Fix" instead of "Major.Minor.Patch".
 
-#### Breaking.Feature.Fix
+#### Defactor Version Format: Breaking.Feature.Fix
 
 We don't decide what the version will be. The API changes decide. Version numbers are for computers, not people. Release names are for people.
 
