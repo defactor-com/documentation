@@ -1,6 +1,6 @@
 ---
 title: Introduction to Ethereum
-sidebar_position: 2
+sidebar_position: 3
 ---
 
 Ethereum is an open-source, blockchain-based platform known for its smart contract functionality. It enables the creation and execution of decentralized applications (DApps) and smart contracts directly on the blockchain, without intermediaries. Ethereum extends the original blockchain concept, pioneered by Bitcoin, to support more than just cryptocurrency transactions. It provides a platform for developers to build decentralized applications and deploy smart contracts.
