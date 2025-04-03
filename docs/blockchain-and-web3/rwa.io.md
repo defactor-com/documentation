@@ -5,6 +5,8 @@ sidebar_position: 6
 
 RWA.IO is an Ethereum-compatible blockchain focused on the tokenization and management of Real World Assets (RWAs). Designed to bridge traditional finance with decentralized infrastructure, RWA.IO provides a secure, compliant, and scalable environment for issuing, trading, and managing digital representations of tangible assets such as real estate, commodities, bonds, and invoices.
 
+🔗 [RWA.IO](https://www.rwa.io)
+
 ## Key Features of RWA.IO
 
 - **EVM Compatibility:** Built on standard Ethereum tooling, allowing seamless deployment of Solidity smart contracts.

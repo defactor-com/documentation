@@ -5,6 +5,8 @@ sidebar_position: 4
 
 Base is an Ethereum Layer 2 network built by Coinbase using the Optimism OP Stack. It is designed to provide a secure, scalable, and low-cost environment for decentralized applications (DApps) while maintaining full compatibility with the Ethereum ecosystem. As part of the broader Ethereum scaling roadmap, Base contributes to a modular, multi-chain internet by extending Ethereum’s capabilities with faster and cheaper transactions.
 
+🔗 [Base](https://base.org)
+
 ## Key Features of Base
 
 - **Scalability:** Base significantly reduces transaction costs and increases throughput by leveraging optimistic rollup technology.

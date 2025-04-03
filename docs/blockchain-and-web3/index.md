@@ -6,6 +6,8 @@ title: Blockchain and Web3
 
 Web3 represents the next evolution of the World Wide Web, offering a decentralized online ecosystem based on blockchain technology. Unlike its predecessors, Web3 emphasizes user privacy, data ownership, and decentralized applications (DApps) that operate on blockchain networks like Ethereum and Polygon. This paradigm shift towards decentralization enables more secure, transparent, and user-centric online experiences.
 
+🔗 [Web3](https://ethereum.org/en/web3/)
+
 ## Key Features of Web3
 
 - **Decentralization:** Eliminating central points of control or failure, enhancing security and resistance to censorship.

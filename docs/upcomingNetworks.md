@@ -15,13 +15,13 @@ Explore some of the most promising blockchain networks and protocols that are sh
 
 **Lumia** is focused on building sovereign chains with zero-knowledge (ZK) security. Positioned as a modular chain ecosystem, it offers tools to launch rollups with enhanced privacy and performance.
 
-🔗 [lumia.network](https://www.lumia.network)
+🔗 [Lumia](https://lumia.org/)
 
 ## LayerZero
 
 **LayerZero** is an interoperability protocol that enables secure omnichain messaging between blockchains. It allows developers to build dApps that can interact across chains without intermediaries.
 
-🔗 [layerzero.network](https://layerzero.network)
+🔗 [LayerZero](https://layerzero.network)
 
 ## Chainlink (CCIP + PoR)
 
@@ -35,22 +35,22 @@ Explore some of the most promising blockchain networks and protocols that are sh
 
 **Redbelly** is a high-throughput blockchain infrastructure developed with academic and enterprise-grade standards. It emphasizes deterministic finality, safety, and performance, often suited for regulated environments.
 
-🔗 [redbellyblockchain.io](https://www.redbellyblockchain.io)
+🔗 [Redbelly Blockchain](https://www.redbellyblockchain.io)
 
 ## Linea
 
 **Linea** is a zkEVM Layer 2 solution developed by Consensys. It combines Ethereum compatibility with scalability and reduced gas fees, making it ideal for dApps and tokenized asset platforms.
 
-🔗 [linea.build](https://www.linea.build)
+🔗 [Linea](https://www.linea.build)
 
 ## Ozean Protocol
 
 **Ozean** is a decentralized data protocol aimed at enabling compliant and privacy-focused RWA solutions. It facilitates the secure exchange of sensitive off-chain data using encryption and decentralized identifiers.
 
-🔗 [ozean.xyz](https://www.ozean.xyz)
+🔗 [Ozean](https://www.ozean.xyz)
 
 ## Mantra
 
 **Mantra** is a Layer 1 blockchain designed to support regulated tokenized assets. Built using the Cosmos SDK, it incorporates compliance tooling, KYC modules, and enterprise-level governance for RWAs.
 
-🔗 [mantrachain.io](https://www.mantrachain.io)
+🔗 [Mantra](https://www.mantrachain.io)
