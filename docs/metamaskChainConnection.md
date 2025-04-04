@@ -1,5 +1,5 @@
 ---
-title: Configure MetaMask for All Supported Chains
+title: Configure MetaMask for Chains
 sidebar_position: 6
 ---
 
