@@ -1,5 +1,5 @@
 ---
-title: Configure MetaMask for Chains
+title: Metamask Wallet
 sidebar_position: 6
 ---
 
