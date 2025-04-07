@@ -1,6 +1,6 @@
 ---
 title: Upcoming Networks
-sidebar_position: 6
+sidebar_position: 7
 ---
 
 Explore some of the most promising blockchain networks and protocols that are shaping the future of decentralized finance, tokenization, and interoperability. These projects are paving the way for scalable, secure, and user-centric digital infrastructure.
