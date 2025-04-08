@@ -1,5 +1,5 @@
 ---
-sidebar_position: 4
+sidebar_position: 6
 ---
 
 # Get Kyc
@@ -18,8 +18,8 @@ This endpoint makes an HTTP GET request to retrieve Know Your Customer (KYC) inf
 
 Upon a successful execution, the endpoint returns a status code of 200 along with an empty JSON response.
 
-``` json
+```json
 {
-    "wallet": ""
+  "wallet": ""
 }
 ```
