@@ -1,6 +1,6 @@
 ---
-title: Configure MetaMask for Chains
-sidebar_position: 6
+title: How-To Configure Metamask
+sidebar_position: 7
 ---
 
 This guide provides the general steps to connect your **MetaMask** wallet to the following supported networks:
