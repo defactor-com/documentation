@@ -1,5 +1,5 @@
 ---
-title: Smart Contract Configuration
+title: Staking Contract Configuration
 sidebar_position: 2
 ---
 
