@@ -8,7 +8,7 @@
     "chains": [
       {
         "id": "Amoy",
-        "type": "Erc20 Collateral Pool",
+        "type": "ERC20_COLLATERAL_POOL",
         "contract": "0x5139129588Ed02d8761aACad1dcCd887c8522f4d",
         "token": "0x60E87395b0101F85C623c38Be010574f958496db",
         "oracle": "0xBFa0BdeB62E6C2c057e06738e9D37963FDf416dC",
@@ -16,7 +16,7 @@
       },
       {
         "id": "Sepolia",
-        "type": "Erc20 Collateral Pool",
+        "type": "ERC20_COLLATERAL_POOL",
         "contract": "0x295894a94F859cE1Ac960364D6b0D2Fa430027b4",
         "token": "0x75fe3476d90598080f7D12365020C438943Dcef3",
         "oracle": "0xaD65748ad8Ad34bCF4b2AEb4Fd83F37C543F4b97",
@@ -33,7 +33,7 @@
     "chains": [
       {
         "id": "Amoy",
-        "type": "Erc20 Collateral Pool",
+        "type": "ERC20_COLLATERAL_POOL",
         "contract": "0x4f641Efe12eBf2FD49a4A97347D38dd4F21c38d8",
         "token": "0x60E87395b0101F85C623c38Be010574f958496db",
         "oracle": "0xBFa0BdeB62E6C2c057e06738e9D37963FDf416dC",
@@ -41,11 +41,28 @@
       },
       {
         "id": "Sepolia",
-        "type": "Erc20 Collateral Pool",
+        "type": "ERC20_COLLATERAL_POOL",
         "contract": "0xEc45Be8912250E8955073F472Fc017dC18ee279B",
         "token": "0x75fe3476d90598080f7D12365020C438943Dcef3",
         "oracle": "0xaD65748ad8Ad34bCF4b2AEb4Fd83F37C543F4b97",
         "collateral": "0x7D5c1468D8bE9f0F4FaD26F2Cb7e6b2ed9042577"
+      }
+    ]
+  },
+  {
+    "id": "pools-sharingblock-testnet",
+    "name": "SharingBlock Pools Demo Environment Testnet",
+    "description": "Demo environment for SharingBlock Pools.",
+    "web": "https://sharingblock-pools.defactor.dev",
+    "api": "https://sharingblock-pools-api.defactor.dev",
+    "chains": [
+      {
+        "id": "Rwa",
+        "type": "ERC20_COLLATERAL_POOL",
+        "contract": "0x731C4DEA506f062A92A84FFAa767a5587d538a67",
+        "token": " ",
+        "oracle": " ",
+        "collateral": " "
       }
     ]
   },
@@ -58,7 +75,7 @@
     "chains": [
       {
         "id": "Amoy",
-        "type": "Erc20 Collateral Pool",
+        "type": "ERC20_COLLATERAL_POOL",
         "contract": "0x666666ea97809364D68E77c3C3AC036D47d86C93",
         "token": "0x60E87395b0101F85C623c38Be010574f958496db",
         "oracle": "0x8B05acc6C3B25786400C5F662ffA6b606A2F7F63",
@@ -75,7 +92,7 @@
     "chains": [
       {
         "id": "Amoy",
-        "type": "Counterparty Pool",
+        "type": "Counterparty_Pools",
         "contract": "0xe0e4b3989f0eb16f7598a6c3a9764ac2fc666d03",
         "token": "0x60E87395b0101F85C623c38Be010574f958496db",
         "collateral": "0x6BaB3bEA9aD00893101837d46638B470076f8AAF"
@@ -91,7 +108,7 @@
     "chains": [
       {
         "id": "Sepolia",
-        "type": "Erc20 Collateral Pool",
+        "type": "ERC20_COLLATERAL_POOL",
         "contract": "0xC13cB695fCBe2436C4D76aE6CBD2C50a34078E76",
         "token": "0x75fe3476d90598080f7D12365020C438943Dcef3",
         "oracle": "0x8574299682D036F88195a2685601D90300E21Bca",
@@ -108,7 +125,7 @@
     "chains": [
       {
         "id": "Bsc",
-        "type": "Erc20 Collateral Pool",
+        "type": "ERC20_COLLATERAL_POOL",
         "contract": "0x7D5c1468D8bE9f0F4FaD26F2Cb7e6b2ed9042577",
         "token": "0xC4993eEB677035bb71534a8e991c4A6d1bfFA5d0",
         "oracle": "0x60E87395b0101F85C623c38Be010574f958496db",
@@ -125,11 +142,28 @@
     "chains": [
       {
         "id": "Base",
-        "type": "Erc20 Collateral Pool",
+        "type": "ERC20_COLLATERAL_POOL",
         "contract": "0x2CaD0Be2B4E138509EfeE5B3FDE9bF42b6e8D5D0",
         "token": "0xC1cf57c43b0109Be365676E79972Ee2d35adC7A4",
         "oracle": "0x60E87395b0101F85C623c38Be010574f958496db",
         "collateral": "0x6bD5fd8cAbCce2caD5241a4A233EE4be2798d49e"
+      }
+    ]
+  },
+  {
+    "id": "pools-satoshiloans-testnet",
+    "name": "Satoshiloans testnet",
+    "description": "Testnet environment for Satoshiloans.",
+    "web": "https://satoshiloans-pools.defactor.dev",
+    "api": "https://satoshiloans-pools-api.defactor.dev",
+    "chains": [
+      {
+        "id": "rwa",
+        "type": "ERC20_COLLATERAL_POOL",
+        "contract": "0xB0eae41071bDE1D4FA116059526aD7ce88F2b462",
+        "token": " ",
+        "oracle": " ",
+        "collateral": " "
       }
     ]
   }
