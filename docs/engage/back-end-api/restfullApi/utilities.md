@@ -147,6 +147,11 @@ Get the current instance configuration.
 
 ## `v1 Get Circulating Supply`
 
+**Description**:
+
+This endpoint makes an HTTP GET request to retrieve the circulating supply. The request does not include a request body.
+
+
 **HTTP Method**: GET
 
 **Endpoint**: `{{BASE_RESTFUL_URL}}/v1-get-circulating-supply`
@@ -160,3 +165,6 @@ Get the current instance configuration.
   }
 }
 ```
+**Response**
+
+Upon the last execution, the server responded with a status code of 200 and the circulating supply value of 111083061.0.
