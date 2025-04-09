@@ -1,19 +1,40 @@
 [
-    {
-      "id": "engage-libertum-mainnet",
-      "name": "Libertum Engage Mainnet Instance",
-      "description": "Mainnet environment for Libertum Engage.",
-      "web": "https://libertum-engage.factr.app",
-      "api": "https://libertum-engage-api.factr.app",
-      "testnet": true,
-      "chains": [
-        {
-          "id": "Base",
-          "type": "Staking",
-          "contract": "0x04dbe3bb529e24A0DB12d343a9D6020feb3Ae338",
-          "token": "0x56A38E7216304108E841579041249fEb236C887b"
-        }
-      ]
-    }
-  ]
-  
+  {
+    "id": "engage-factr-mainnet",
+    "name": "FACTR Engage Mainnet Instance",
+    "description": "Mainnet environment for FACTR Engage.",
+    "web": "https://engage.factr.app/",
+    "api": "https://engage-api.factr.app/",
+    "testnet": false,
+    "chains": [
+      {
+        "id": "polygon",
+        "type": "Staking",
+        "contract": "0xf2ca18c660e0e03357d2a6eaffcb25f655a3019e",
+        "token": "0xe0bCEEF36F3a6eFDd5EEBFACD591423f8549B9D5"
+      },
+      {
+        "id": "polygon",
+        "type": "Buyback",
+        "contract": "<pending>",
+        "token": "<pending>"
+      }
+    ]
+  },
+  {
+    "id": "engage-libertum-mainnet",
+    "name": "Libertum Engage Mainnet Instance",
+    "description": "Mainnet environment for Libertum Engage.",
+    "web": "https://earn.libertum.io",
+    "api": "https://libertum-engage-api.factr.app",
+    "testnet": false,
+    "chains": [
+      {
+        "id": "base",
+        "type": "Staking",
+        "contract": "0x04dbe3bb529e24A0DB12d343a9D6020feb3Ae338",
+        "token": "0x56A38E7216304108E841579041249fEb236C887b"
+      }
+    ]
+  }
+]
