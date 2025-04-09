@@ -5,11 +5,11 @@ sidebar_position: 7
 
 This guide provides the general steps to connect your **MetaMask** wallet to the following supported networks:
 
+- RWA.IO
 - Ethereum
 - Polygon
 - Binance Smart Chain (BSC)
 - Base
-- RWA.IO
 
 ## Step 1: Install MetaMask
 
