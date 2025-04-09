@@ -2,22 +2,46 @@
   {
     "id": "engage-dev",
     "name": "Engage Development Instance",
-    "description": "The development environment for Defactor Engage.",
+    "description": "Development environment for Defactor Engage.",
     "web": "https://engage-dev.defactor.dev",
     "api": "https://engage-dev-api.defactor.dev",
     "testnet": true,
     "chains": [
       {
-        "id": "Amoy",
-        "type": "Staking",
-        "contract": "0x8EDE5DA0CFd4560BA1238A1F83f48dc3258Cab93",
-        "token": "0x8574299682D036F88195a2685601D90300E21Bca"
-      },
-      {
-        "id": "Sepolia",
+        "id": "ethereum",
         "type": "Staking",
         "contract": "0x069f72714E432A23469B9845cC96e3Ed4fa83d38",
         "token": "0x7D5c1468D8bE9f0F4FaD26F2Cb7e6b2ed9042577"
+      },
+      {
+        "id": "ethereum",
+        "type": "Buyback",
+        "contract": "0xf254aeea620144c9a3af284a7A357b6899F8dab5",
+        "token": "0x7D5c1468D8bE9f0F4FaD26F2Cb7e6b2ed9042577"
+      },
+      {
+        "id": "ethereum",
+        "type": "Vesting",
+        "contract": "0x47d88034fbb44BAC5C959D2fB08EfAbc47B1933E",
+        "token": "0x7D5c1468D8bE9f0F4FaD26F2Cb7e6b2ed9042577"
+      },
+      {
+        "id": "base",
+        "type": "Staking",
+        "contract": "0x731C4DEA506f062A92A84FFAa767a5587d538a67",
+        "token": "0xBcB5c3a726913A471B1fAc71bB20d301553e2Cb6"
+      },
+      {
+        "id": "base",
+        "type": "Buyback",
+        "contract": "0x2e61a3Ecee4a89e460AFCA7790C920dF73DC7C10",
+        "token": "0xBcB5c3a726913A471B1fAc71bB20d301553e2Cb6>"
+      },
+      {
+        "id": "base",
+        "type": "Vesting",
+        "contract": "0x07Fbc4b8b64C55b5540d1e1cdBEd3b332D89EB71",
+        "token": "0xBcB5c3a726913A471B1fAc71bB20d301553e2Cb6"
       }
     ]
   },
@@ -30,54 +54,124 @@
     "testnet": true,
     "chains": [
       {
-        "id": "Amoy",
-        "type": "Staking",
-        "contract": "0x76Bc59651c5369a3543793DE0B0e2D33b64A5e15",
-        "token": "0x8574299682D036F88195a2685601D90300E21Bca"
-      },
-      {
-        "id": "Sepolia",
+        "id": "ethereum",
         "type": "Staking",
         "contract": "0x87D26F7945af6e6025E418D98e9C9c42C4481998",
         "token": "0x7D5c1468D8bE9f0F4FaD26F2Cb7e6b2ed9042577"
+      },
+      {
+        "id": "ethereum",
+        "type": "Buyback",
+        "contract": "<pending>",
+        "token": "<pending>"
+      },
+      {
+        "id": "ethereum",
+        "type": "Vesting",
+        "contract": "0x3C22Fa0438ffB36ECdDb87d4EA98F02Bf0c6c4b6",
+        "token": "0x7D5c1468D8bE9f0F4FaD26F2Cb7e6b2ed9042577"
+      },
+      {
+        "id": "base",
+        "type": "Staking",
+        "contract": "0x7FAeEC13539Ede433A8b8FEa141BfAe8D8CE6E27",
+        "token": "0xBcB5c3a726913A471B1fAc71bB20d301553e2Cb6"
+      },
+      {
+        "id": "base",
+        "type": "Buyback",
+        "contract": "<pending>",
+        "token": "0xBcB5c3a726913A471B1fAc71bB20d301553e2Cb6"
+      },
+      {
+        "id": "base",
+        "type": "Vesting",
+        "contract": "0x69eF3A00985D01fd27530cd8C5F077921B693c92",
+        "token": "0xBcB5c3a726913A471B1fAc71bB20d301553e2Cb6"
       }
     ]
   },
   {
-    "id": "engage-sharingblock-testnet",
-    "name": "Sharingblock Engage Testnet Instance",
-    "description": "Demo environment for Sharingblock Engage.",
-    "web": "https://sharingblock-engage.defactor.dev",
-    "api": "https://sharingblock-engage-api.defactor.dev",
+    "id": "engage-sharingblock",
+    "name": "Engage SharingBlock Demo Instance",
+    "description": "The demo environment for SharingBlock Engage.",
+    "web": "https://sharingblock-engage.defactor.dev/",
+    "api": "https://sharingblock-engage-api.defactor.dev/",
     "testnet": true,
     "chains": [
       {
-        "id": "Rwa",
+        "id": "base",
+        "type": "Staking",
+        "contract": "<pending>",
+        "token": "<pending>"
+      },
+      {
+        "id": "base",
+        "type": "Buyback",
+        "contract": "<pending>",
+        "token": "<pending>"
+      },
+      {
+        "id": "base",
+        "type": "Vesting",
+        "contract": "<pending>",
+        "token": "<pending>"
+      },
+      {
+        "id": "rwa",
         "type": "Staking",
         "contract": "0xC3dc06FdEB4b8Cef58Db03690B39Dc2939d4Ca9a",
         "token": "0xbA0Ff22dF14bb9AF691885c79EA9224fA59dBFED"
       },
       {
-        "id": "Rwa",
+        "id": "rwa",
         "type": "Buyback",
-        "contract": "",
-        "token": ""
+        "contract": "<pending>",
+        "token": "0xbA0Ff22dF14bb9AF691885c79EA9224fA59dBFED"
+      },
+      {
+        "id": "rwa",
+        "type": "Vesting",
+        "contract": "<pending>",
+        "token": "0xbA0Ff22dF14bb9AF691885c79EA9224fA59dBFED"
       }
     ]
   },
   {
     "id": "engage-libertum-testnet",
-    "name": "Libertum Engage Testnet Instance",
-    "description": "Testnet environment for Libertum Engage.",
-    "web": "https://libertum-engage.defactor.dev",
-    "api": "https://libertum-engage-api.defactor.dev",
+    "name": "Libertum Testnet Instance",
+    "description": "The testnet environment for Libertum Engage.",
+    "web": "https://libertum-engage.defactor.dev/",
+    "api": "https://libertum-engage-api.defactor.dev/",
     "testnet": true,
     "chains": [
       {
-        "id": "Base",
+        "id": "base",
         "type": "Staking",
         "contract": "0x07Fdb405f157F7D3d64D581518D001Ebd3D005CC",
         "token": "0x29B46620F12377F9636D9297C0695d395Ff40e3A"
+      }
+    ]
+  },
+  {
+    "id": "engage-auroca-testnet",
+    "name": "Auroca Testnet Instance",
+    "description": "The testnet environment for Auroca Engage.",
+    "web": "https://auroca-engage.factr.dev",
+    "api": "https://auroca-engage-api.factr.dev",
+    "testnet": true,
+    "chains": [
+      {
+        "id": "base",
+        "type": "Staking",
+        "contract": "0xaF9c500fD51b6e58F0D2D2d722eFF8A6aeF432c6",
+        "token": "0x7b72c44CEf36f328D57348800A54DA07C47DDD98"
+      },
+      {
+        "id": "base",
+        "type": "Buyback",
+        "contract": "0xeFC2e77a8a7B487Ec183D0dF498fCf56E4750282",
+        "token": "0x7b72c44CEf36f328D57348800A54DA07C47DDD98"
       }
     ]
   }
