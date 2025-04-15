@@ -7,9 +7,13 @@ sidebar_position: 1
 
 This guide provides the configuration parameters required to set up and deploy a **Buyback Contract** in the Defactor Engage platform.
 
-## New Buyback Contract Configuration
+## Buyback Contract Configuration
 
-For creating a new buyback plan apart from the default plans, the following parameters need to be defined:
+Unlike other modules, Buyback Contracts in Engage do not rely on pre-defined plans. Instead, each contract operates autonomously based on its configuration.
+
+The core function of a Buyback Contract is to receive USDC, periodically convert it into FACTR tokens via a swap on the open market, and then lock the purchased FACTR for one year. After the lock period, the tokens are distributed to a set of predefined vault addresses.
+
+This mechanism supports Defactor’s circular token economy by reducing circulating supply and reinforcing long-term value through time-locked distribution:
 
 ### **BuyBack Configuration Parameters**
 
@@ -31,17 +35,17 @@ For creating a new buyback plan apart from the default plans, the following para
 
 ```yaml
 buybackContract:
-  recoverer: "0x1234567890abcdef1234567890abcdef12345678" # Address allowed to recover stuck tokens
-  buyFrequency: 86400 # Cooldown period between consecutive buybacks (in seconds)
-  vaults: # Addresses where purchased FACTR tokens will be distributed
-    - "0xVaultAddress1abcdefabcdefabcdefabcdefabcdef01"
-    - "0xVaultAddress2abcdefabcdefabcdefabcdefabcdef02"
-    - "0xVaultAddress3abcdefabcdefabcdefabcdefabcdef03"
-    - "0xVaultAddress4abcdefabcdefabcdefabcdefabcdef04"
-  maxLiquiditySlippage: 100 # Maximum slippage allowed during token swap (in basis points, 100 = 1%)
-  uniswapRouter: "0xE592427A0AEce92De3Edee1F18E0157C05861564" # Uniswap v3 router address
-  factrToken: "0xF4c5AF7e0A695e2b3832d203a9522A1D77b40F76" # FACTR token address to be bought back
-  usdcToken: "0xA0b86991c6218b36c1d19d4a2e9eb0ce3606eb48" # USDC token address used to buy FACTR
-  wethToken: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2" # WETH token used as swap intermediary
-  quoter: "0xb27308f9F90D607463bb33eA1BeBb41C27CE5AB6" # Uniswap Quoter contract for fetching swap quotes
+  recoverer: "0x1234567890ABCDEF1234567890ABCDEF12345678" # Address allowed to recover stuck tokens
+  buyFrequency: 86400 # Buyback cooldown period (in seconds)
+  vaults: # Vault addresses to distribute purchased FACTR
+    - "0xABCDEF1234567890ABCDEF1234567890ABCDEF01"
+    - "0xABCDEF1234567890ABCDEF1234567890ABCDEF02"
+    - "0xABCDEF1234567890ABCDEF1234567890ABCDEF03"
+    - "0xABCDEF1234567890ABCDEF1234567890ABCDEF04"
+  maxLiquiditySlippage: 100 # 1% slippage (100 basis points)
+  uniswapRouter: "0xE592427A0AECE92DE3EDEE1F18E0157C05861564" # Uniswap V3 router
+  factrToken: "0xF4C5AF7E0A695E2B3832D203A9522A1D77B40F76" # FACTR token address
+  usdcToken: "0xA0B86991C6218B36C1D19D4A2E9EB0CE3606EB48" # USDC token address
+  wethToken: "0xC02AA39B223FE8D0A0E5C4F27EAD9083C756CC2" # WETH intermediary
+  quoter: "0xB27308F9F90D607463BB33EA1BEBB41C27CE5AB6" # Uniswap Quoter contract
 ```

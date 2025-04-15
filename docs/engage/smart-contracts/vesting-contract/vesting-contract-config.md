@@ -47,12 +47,12 @@ To create a new vesting schedule validated via Merkle tree, the following parame
 
 ```yaml
 vestingContract:
-  admin: "0xAdminAddressABCDEF1234567890ABCDEF1234567890" # Admin address with permissions to pause, withdraw, and manage the contract
-  operator: "0xOperatorAddress1234567890ABCDEF1234567890ABCDEF12" # Operator address with permissions to update Merkle roots and handle revocations
+  admin: "0xABCDEF1234567890ABCDEF1234567890ABCDEF12" # Admin address with permissions to pause, withdraw, and manage the contract
+  operator: "0x1234567890ABCDEF1234567890ABCDEFABCDEF34" # Operator address with permissions to update Merkle roots and handle revocations
 
 vestingSchedules:
-  - beneficiary: "0xBeneficiary1234567890ABCDEF1234567890ABCDEFABCD" # Address receiving the vested tokens
-    tokenAddress: "0xTokenABCDEF1234567890ABCDEF1234567890ABCDEF" # ERC20 token address to be vested
+  - beneficiary: "0xFEDCBA9876543210FEDCBA9876543210FEDCBA98" # Address receiving the vested tokens
+    tokenAddress: "0x0ABCDEF1234567890ABCDEF1234567890ABCDEF0" # ERC20 token address to be vested
     amount: 500000000000000000000 # Total amount of tokens to be vested (500 tokens, assuming 18 decimals)
     initialAmount: 50000000000000000000 # Amount released immediately at vesting start (50 tokens)
     start: 1712700000 # Vesting start time (April 10, 2024 12:00 UTC)
