@@ -15,6 +15,17 @@ Create a new plan with the indicated APY and lock duration in seconds.
 
 **Endpoint**: `{{BASE_URL}}/v1/graphql`
 
+**GraphQL Body**:
+
+```graphql
+mutation ($plan: CreatePlanV2Input!) {
+    v2CreatePlan(plan: $plan) {
+        res
+        success
+    }
+}
+```
+
 **Params**:
 
 ```json
@@ -73,6 +84,17 @@ Create a new plan with the indicated APY and lock duration in seconds.
 
 **Endpoint**: `{{BASE_URL}}/v1/graphql`
 
+**GraphQL Body**:
+
+```graphql
+mutation ($plan: UpdatePlanV2Input!) {
+    v2UpdatePlan(plan: $plan) {
+        res
+        success
+    }
+}
+```
+
 **Params**:
 
 ```json
@@ -121,13 +143,23 @@ Create a new plan with the indicated APY and lock duration in seconds.
 
 ### `Get Plans Dynamic Apr`
 
-Get the dynamic apr for each plan in the requested networks.
 
 **HTTP Method**: POST
 
 **Roles**: Guest
 
 **Endpoint**: `{{BASE_URL}}/v1/graphql`
+
+**GraphQL Body**:
+
+```graphql
+query v2GetPlansDynamicApr($plan: GetDynamicAprInput!) {
+    v2GetPlansDynamicApr(plan: $plan) {
+        res
+        success
+    }
+}
+```
 
 **Params**:
 
@@ -178,7 +210,16 @@ Get the expected rewards by user for each open position. Filter by `now`, `day`,
 
 **Endpoint**: `{{BASE_URL}}/v1/graphql`
 
-````
+**GraphQL Body**:
+
+```graphql
+query ($position: RewardsByUserInput!) {
+    v2GetExpectedRewardsByUser(position: $position) {
+        res
+        success
+    }
+}
+```
 
 **Params**:
 
@@ -226,6 +267,17 @@ Get the expected rewards for each open position. Filter by `now`, `day`, `week`,
 
 **Endpoint**: `{{BASE_URL}}/v1/graphql`
 
+**GraphQL Body**:
+
+```graphql
+query ($position: RewardsFilterInput!) {
+    v2GetExpectedRewards(position: $position) {
+        res
+        success
+    }
+}
+```
+
 **Params**:
 
 ```json
@@ -271,6 +323,17 @@ Get the rewards claimed by user. Filter by `now`, `day`, `week`, `month`, `six-m
 
 **Endpoint**: `{{BASE_URL}}/v1/graphql`
 
+**GraphQL Body**:
+
+```graphql
+query ($position: RewardsByUserInput!) {
+    v2GetRewardsReceivedByUser(position: $position) {
+        res
+        success
+    }
+}
+```
+
 **Params**:
 
 ```json
@@ -308,13 +371,24 @@ Get the rewards claimed by user. Filter by `now`, `day`, `week`, `month`, `six-m
 
 ### `Get Total Value Locked`
 
-Get the expected rewards by user for each open position.
+Get the expected rewards by user for each open position. Address is optional.
 
 **HTTP Method**: POST
 
 **Roles**: Guest
 
 **Endpoint**: `{{BASE_URL}}/v1/graphql`
+
+**GraphQL Body**:
+
+```graphql
+query v2GetTotalValueLocked($position: GetTotalValueLockedInput!) {
+    v2GetTotalValueLocked(position: $position) {
+        res
+        success
+    }
+}
+```
 
 **Params**:
 

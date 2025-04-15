@@ -1,7 +1,19 @@
 ---
 title: Governance
-sidebar_position: 3
+sidebar_position: 4
 ---
+
+## `Get Proposals`
+
+**HTTP Request Method**: POST
+
+**Request URL**: `{{BASE_RESTFUL_URL}}/v1/get-proposals`
+
+**Request Body**
+
+```json
+{}
+```
 
 ## List Proposals
 
