@@ -5,7 +5,11 @@ sidebar_position: 1
 
 ## Introduction
 
-This toolkit brings together a powerful suite of decentralized finance (DeFi) modules built for real-world asset (RWA) tokenization, governance, and liquidity. It includes:
+The platform provides a modular and extensible infrastructure tailored for decentralized finance (DeFi) applications, with a particular focus on the tokenization, governance, and utilization of real-world assets (RWA). By combining critical components such as staking, governance, buybacks, and vesting within a single architecture, the platform enables efficient on-chain financial operations aligned with regulatory and community-driven frameworks.
+
+The Engage Toolkit consists of several integrated modules designed to streamline token utility and life cycle management while supporting decentralized governance and community incentives. Each module operates independently but can be used in combination to support more complex use cases, including liquidity provisioning, project fundraising, and structured token distribution.
+
+Key modules include:
 
 - **Staking** – incentivize and engage communities
 - **Governance** – on-chain proposal and voting systems
@@ -38,7 +42,7 @@ The UI is responsive and works across modern browsers and mobile devices.
 
 Explore individual feature documentation for deeper insights:
 
-- [Stacking](stacking.md)
+- [Staking](staking.md)
 - [Governance](governance.md)
 - [Buybacks](buyback.md)
 - [Vesting](vesting.md)

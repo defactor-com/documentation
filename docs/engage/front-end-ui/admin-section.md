@@ -1,9 +1,13 @@
 ---
 title: Admin Section
-sidebar_position: 6
+sidebar_position: 7
 ---
 
-The Admin Section in Engage is a permissioned interface used by authorized team members to manage and maintain critical parts of the ecosystem. This includes user roles, proposal creation, wallet configuration, and vesting operations.
+The Admin Section provides a secure and permissioned interface for managing core operational and configuration aspects of the Engage platform. It enables authorized team members to carry out high-impact actions related to governance, token vesting, liquidity pool setup, and system permissions.
+
+This section is integral to maintaining the integrity of the ecosystem and ensuring that only designated actors can initiate or approve protocol-level changes. Role-based access is enforced through smart contract permissions, and all actions are executed transparently on-chain.
+
+The module is designed to support evolving platform needs, with extensibility for managing ecosystem wallets, approving proposals, or coordinating token distributions.
 
 ## Key Capabilities
 
@@ -28,11 +32,3 @@ Only wallets designated as Admins can:
 - **Proposals** – Launch and edit governance proposals
 - **Pools** – Configure parameters like maturity dates, token pairs, and caps
 - **Vesting** – Create or modify token release batches
-
-## QA Checklist
-
-- Admin permissions enforced via smart contract logic
-- Pool editing and creation validate required fields
-- Proposal form validates title, description, and schedule
-- Vesting batch editor loads with correct user/token data
-- Ecosystem wallet additions are reflected on the dashboard

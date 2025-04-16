@@ -3,7 +3,13 @@ title: Vesting Module
 sidebar_position: 5
 ---
 
-The Vesting module on Engage enables the structured and time-based release of $FACTR tokens. It is designed for distributing tokens to investors, contributors, and team members while fostering long-term commitment.
+The Vesting module enables time-based, structured distribution of tokens according to predefined schedules. It is typically used to manage allocations for contributors, investors, core team members, and ecosystem participants, ensuring long-term alignment with project objectives and token supply discipline.
+
+By enforcing lock-up periods and gradual token release, the vesting mechanism helps mitigate premature sell-offs, build trust with stakeholders, and enhance transparency across token allocations. Vesting plans can vary in complexity and duration and are fully trackable through the Engage platform.
+
+The module is compatible with any ERC-20 token and supports a wide range of vesting scenarios, including linear, cliff-based, or milestone-driven schedules.
+
+A live example of the module in action can be accessed via the [Engage Platform Demo](https://sharingblock-engage.defactor.dev/vesting).
 
 ## Core Functionality
 
@@ -29,11 +35,3 @@ The Vesting module on Engage enables the structured and time-based release of $F
 - **My Vesting** – Personal breakdown of allocations and events
 - **Claimable Amount** – Tokens ready for withdrawal
 - **Event Graph** – Visual timeline of release schedule
-
-## QA Checklist
-
-- Graphs render without errors on mobile and desktop
-- Claim button only appears when funds are unlocked
-- Balances update after each claim transaction
-- Events grouped correctly in Ongoing/Upcoming/Completed
-- Smart contract handles multiple simultaneous vesting plans
