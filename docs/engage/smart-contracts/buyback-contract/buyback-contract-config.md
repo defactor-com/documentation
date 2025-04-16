@@ -1,5 +1,5 @@
 ---
-title: Buyback Contract Configuration
+title: Buyback Contract Config
 sidebar_position: 1
 ---
 
