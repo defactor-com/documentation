@@ -17,6 +17,14 @@ A live example of the module in action can be accessed via the [Engage Platform 
 - Claim unlocked tokens directly from the interface
 - Review all past and future vesting events in real time
 
+Vesting is structured into three event categories:
+
+![Vesting Events Tab](../../../static/img/front-end/vesting-events.png)
+
+- **Ongoing Events** – Active vesting periods in progress.
+- **Upcoming Events** – Future scheduled releases.
+- **Completed Events** – Finalized distributions and fully vested tokens.
+
 ## Vesting Details
 
 - Tokens are locked and released based on predefined schedules
@@ -31,6 +39,10 @@ A live example of the module in action can be accessed via the [Engage Platform 
 4. Confirm the transaction in your wallet
 
 ## Dashboard Elements
+
+The main vesting dashboard gives a clear summary of the user's vesting progress:
+
+![Vesting Dashboard](../../../static/img/front-end/vesting-dashboard.png)
 
 - **My Vesting** – Personal breakdown of allocations and events
 - **Claimable Amount** – Tokens ready for withdrawal

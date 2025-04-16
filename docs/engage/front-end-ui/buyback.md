@@ -17,13 +17,29 @@ The module supports any ERC-20 token and can be customized to align with project
 
 ## Features
 
-- View **total tokens bought back** in real time
-- Explore **personal buyback history** under "My Buybacks"
-- Monitor **frequency and volume** of market buybacks
+- View **total tokens bought back** in real time.
+- Explore **personal buyback history** under "My Buybacks".
+- Monitor **frequency and volume** of market buybacks.
 
 ## Dashboard Elements
 
-- **Total Bought Back** – Cumulative amount of tokens repurchased
-- **Latest Buybacks** – Time-stamped records of recent buybacks
-- **My Buybacks** – History of individual user contributions and allocations
-- **Buyback Form** – Interface (if enabled) to trigger manual buybacks
+The buyback dashboard gives a clear summary of the user's buyback progress:
+
+![BuyBack Dashboard](../../../static/img/front-end/buyback-dashboard.png)
+
+- **Total Bought Back** – Cumulative amount of tokens repurchased.
+- **Latest Buybacks** – Time-stamped records of recent buybacks.
+- **My Buybacks** – History of individual user contributions and allocations.
+- **Buyback Form** – Interface (if enabled) to trigger manual buybacks.
+
+## My Buybacks
+
+To enhance individual user transparency, the "My Buybacks" section allows users to view a history of their contributions. This feature helps track personal engagement and locked tokens.
+
+![My Buybacks](../../../static/img/front-end/buyback-myBuybacks.png)
+
+Here, users can:
+
+- View total personal buyback amounts.
+- See historical buyback timestamps.
+- Understand their impact on token circulation.

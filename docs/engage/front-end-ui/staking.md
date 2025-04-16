@@ -26,7 +26,29 @@ A live example of this staking module in production is available at the [Engage 
 4. **Earn Rewards** – View accrued rewards in real time.
 5. **Claim or Unstake** – Once the lockup period ends, click 'Unstake & Claim' or 'Claim' to receive rewards.
 
+## Opening a Staking Position
+
+To initiate a new staking position:
+
+![Open Staking Position](../../../static/img/front-end/staking-open-position.png)
+
+- Select the **chain**, **collateral token**, and **reward token**.
+- Configure your staking duration and confirm the transaction.
+
+## Viewing and Managing Positions
+
+Stakeholders can view active and completed staking positions via the **Positions** section:
+
+![Staking Positions List](../../../static/img/front-end/staking-positions-lists.png)
+
+- **Open Positions** – Currently staked pools, with data on APR, lockup time, and chain.
+- **Completed Pools** – Historical data on claimed and expired pools.
+
 ## Dashboard Elements
+
+The **My Stats** dashboard provides a real-time overview of your ecosystem contribution:
+
+![Staking Dashboard](../../../static/img/front-end/staking-dashboard.png)
 
 - **Available** – Tokens earned and ready to be claimed.
 - **Received** – Historical record of claimed tokens.

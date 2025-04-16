@@ -9,27 +9,33 @@ Engage provides the foundational infrastructure for composable engagement strate
 
 Accessible via the [Engage Platform Demo](https://sharingblock-engage.defactor.dev/), the ecosystem showcases real-time interaction with on-chain contracts, giving projects a transparent and customizable interface to launch, monitor, and scale engagement programs.
 
-## Core Modules
+## Key Modules
 
 - **Staking** – Lock tokens in customizable pools to incentivize long-term holding and participation.
 - **Vesting** – Distribute tokens over time to contributors, team members, or investors.
 - **Claiming** – Manage and automate token claim workflows for airdrops, rewards, and grants.
 - **Contribution Tracking** – Measure and reward verifiable participation across platforms.
 
-## Key Benefits
+## Core Benefits
 
 - **No-code front-end** – Launch and manage programs directly from a user-friendly dashboard.
 - **Composable contracts** – Combine modules to suit specific community or project needs.
 - **Cross-chain support** – Compatible with Ethereum, Polygon, and other EVM networks.
 - **Secure & Transparent** – Built on audited smart contracts with full on-chain visibility.
 
-## Ecosystem Use Cases
+## Dashboard Features
+
+The ecosystem dashboard gives a clear summary of the user's ecosystem progress:
+
+![Ecosystem Dashboard](../../../static/img/front-end/ecosystem-dashboard.png)
+
+- **Dynamic Time Frames** – Toggle between 1D, 7D, 1M, and 1Y for TVL and rewards data.
+- **Chain Filters** – View statistics across supported EVM-compatible chains.
+- **Interactive Visualizations** – Hover to inspect historical data points and activity changes.
+
+## Example Use Cases
 
 - **DAOs** – Automate reward mechanisms for contributors, voters, and members.
 - **DeFi Projects** – Deploy staking and vesting campaigns to bootstrap liquidity and participation.
 - **RWA Platforms** – Implement long-term incentive strategies for real-world asset tokenization.
 - **Web3 Communities** – Gamify engagement and align user behavior with ecosystem growth.
-
-## Live Demo & Resources
-
-You can explore the live version of the Engage ecosystem at the [Engage Platform Demo](https://sharingblock-engage.defactor.dev/). This instance includes real-time data displays for staking, claiming, and reward calculations—ideal for both developers and community managers looking to test functionality.

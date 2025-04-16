@@ -13,6 +13,8 @@ An example instance of the governance interface is available at the [Engage Plat
 
 ## Core Functionality
 
+![Governance proposals lists](../../../static/img/front-end/governance-proposals-lists.png)
+
 - **Submit proposals** for new initiatives or upgrades.
 - **Vote on proposals** using token weight.
 - **View voting history** and proposal details.
@@ -31,3 +33,14 @@ An example instance of the governance interface is available at the [Engage Plat
 - **Description** – Full explanation, criteria, and rationale
 - **Snapshot Date** – Timestamp when wallet balances are captured
 - **End Date** – Last day to cast votes
+
+## Example Proposal Detail
+
+![Governance proposal detail](../../../static/img/front-end/governance-proposal.png)
+
+This example displays a **rejected proposal** that aimed to modify staking rates. The metadata section includes:
+
+- **Start & End Dates**
+- **Voting Outcome & Stake Power**
+- **On-chain Discussion Link**
+- **Wallet Voting Breakdown**
