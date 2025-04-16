@@ -1,19 +1,19 @@
 ---
 title: BuyBack
-sidebar_position: 5
+sidebar_position: 6
 ---
 
-## `Copy`
+### `Get Buyback Aggregate`
 
-Create a new plan with the indicated APY and lock duration in seconds.
+Retrieve the total buy and send amount from the buyback contract.
 
-**HTTP Method**: GET
+**HTTP Request Method**: GET
 
-**Roles**: Admin
+**Roles**: Guest
 
-**Endpoint**: `{{BASE_RESTFUL_URL}}/v1/get-pools Copy`
+**Request URL**: `{{BASE_RESTFUL_URL}}/v1/get-buyback-aggregate`
 
-**Params**:
+**Request Body**
 
 ```json
 {}
@@ -23,23 +23,13 @@ Create a new plan with the indicated APY and lock duration in seconds.
 
 ```json
 {
-  "v1CreatePlan": {
-    "res": {
-      "_type": "TransactionResponse",
-      "accessList": [],
-      "blobVersionedHashes": null,
-      "blockHash": null,
-      "blockNumber": null,
-      "chainId": "80001",
-      "from": "0xa8983Fe59b2F08F9F1B3E833c5D47B256F7FE0d5",
-      "gasLimit": "150012",
-      "gasPrice": null,
-      "hash": "0x68dc6f65b96a427c4c289371637b063bbe20d9841d6c8183f06e657ab10efb1e",
-      .
-      .
-      .
-    },
-    "success": true
-  }
+      "global_buyback_view_aggregate": {
+      "aggregate": {
+        "sum": {
+          "buy_amount": 3.047851264858275e+23,
+          "spend_amount": 5000000000
+        }
+      }
+    }
 }
 ```

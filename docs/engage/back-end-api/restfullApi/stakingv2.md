@@ -1,6 +1,6 @@
 ---
 title: Staking V2
-sidebar_position: 2
+sidebar_position: 3
 ---
 
 ## Plans
@@ -306,7 +306,7 @@ Get the rewards claimed by user. Filter by `now`, `day`, `week`, `month`, `six-m
 
 ### `Get Total Value Locked`
 
-Get the expected rewards by user for each open position.
+Get the expected rewards by user for each open position. Address is optional.
 
 **HTTP Method**: GET
 
