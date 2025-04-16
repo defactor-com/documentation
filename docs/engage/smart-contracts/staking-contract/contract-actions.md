@@ -1,9 +1,9 @@
 ---
-id: smart-contract-staking-technical-aspects
-title: Technical Aspects
-sidebar_position: 1
+id: smart-contract-actions
+title: Contract Actions
+sidebar_position: 2
 tags:
-  - Technical Aspects
+  - Contract Actions
 ---
 
 ## Overview
