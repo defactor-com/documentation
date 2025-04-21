@@ -23,7 +23,7 @@ Retrieve an access token with the role of the user and a refresh token to regene
 
 **Roles**: Guest
 
-**Endpoint**: `{{BASE_RESTFUL_URL}}/v1/login`
+**Endpoint**: `{{BASE_URL}}/v1/login`
 
 **GraphQL Body**:
 
