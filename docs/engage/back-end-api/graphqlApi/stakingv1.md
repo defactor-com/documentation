@@ -19,10 +19,10 @@ Create a new plan with the indicated APY and lock duration in seconds.
 
 ```graphql
 mutation ($plan: CreatePlanInput!) {
-    v1CreatePlan(plan: $plan) {
-        res
-        success
-    }
+  v1CreatePlan(plan: $plan) {
+    res
+    success
+  }
 }
 ```
 
@@ -70,8 +70,8 @@ mutation ($plan: CreatePlanInput!) {
 
 Update the metadata of an existing plan using an unique plan identifier. Either a `planId` or a `txHash` must be provided, but not both.
 
-| **Param** | **Description** |
-| --- | --- |
+| **Param** | **Description**                                      |
+| --------- | ---------------------------------------------------- |
 | `planId`  | The id that the smart contract set to the plan       |
 | `txHash`  | The hash of the transaction where the plan was added |
 | `name`    | The new name of the plan                             |
@@ -87,10 +87,10 @@ Update the metadata of an existing plan using an unique plan identifier. Either 
 
 ```graphql
 mutation ($position: CreatePlanInput!) {
-    v1Stake(position: $position) {
-        res
-        success
-    }
+  v1Stake(position: $position) {
+    res
+    success
+  }
 }
 ```
 
@@ -98,10 +98,10 @@ mutation ($position: CreatePlanInput!) {
 
 ```graphql
 mutation ($plan: PlanMetadataInput!) {
-    v1UpdatePlanMetadata(plan: $plan) {
-        res
-        success
-    }
+  v1UpdatePlanMetadata(plan: $plan) {
+    res
+    success
+  }
 }
 ```
 
@@ -109,15 +109,15 @@ mutation ($plan: PlanMetadataInput!) {
 
 ```json
 {
-    "plan": {
-        "network": "{{NETWORK_BASE}}",
-        "contractName": "{{STAKING}}",
-        "data": {
-            "planId": "2",
-            "name": "FACTR Plan - 25%",
-            "logo": "https://assets.coingecko.com/coins/images/19201/standard/jFLSu4U9_400x400.png?1696518648"
-        }
+  "plan": {
+    "network": "{{NETWORK_BASE}}",
+    "contractName": "{{STAKING}}",
+    "data": {
+      "planId": "2",
+      "name": "FACTR Plan - 25%",
+      "logo": "https://assets.coingecko.com/coins/images/19201/standard/jFLSu4U9_400x400.png?1696518648"
     }
+  }
 }
 ```
 
@@ -150,10 +150,10 @@ Stake the indicated amount to the plan. Once the `stakingEndTime` period conclud
 
 ```graphql
 mutation ($position: CreatePlanInput!) {
-    v1Stake(position: $position) {
-        res
-        success
-    }
+  v1Stake(position: $position) {
+    res
+    success
+  }
 }
 ```
 
@@ -161,7 +161,7 @@ mutation ($position: CreatePlanInput!) {
 
 ```json
 {
-  "plan": {
+  "position": {
     "network": "{{NETWORK_POLYGON}}",
     "contractName": "{{STAKING}}",
     "data": {
@@ -211,10 +211,10 @@ Unstake the position with the indicated stake index and stake the amount in the 
 
 ```graphql
 mutation ($position: ReopenPositionInput!) {
-    v1Restake(position: $position) {
-        res
-        success
-    }
+  v1Restake(position: $position) {
+    res
+    success
+  }
 }
 ```
 
@@ -222,7 +222,7 @@ mutation ($position: ReopenPositionInput!) {
 
 ```json
 {
-  "plan": {
+  "position": {
     "network": "{{NETWORK_POLYGON}}",
     "contractName": "{{STAKING}}",
     "data": {
@@ -272,10 +272,10 @@ Claim the available rewards of the position with the indicated stake index.
 
 ```graphql
 mutation ($position: PositionInput!) {
-    v1ClaimRewards(position: $position) {
-        res
-        success
-    }
+  v1ClaimRewards(position: $position) {
+    res
+    success
+  }
 }
 ```
 
@@ -283,7 +283,7 @@ mutation ($position: PositionInput!) {
 
 ```json
 {
-  "plan": {
+  "position": {
     "network": "{{NETWORK_POLYGON}}",
     "contractName": "{{STAKING}}",
     "data": {
@@ -332,10 +332,10 @@ Unstake the position with the indicated stake index.
 
 ```graphql
 mutation ($position: PositionInput!) {
-    v1Unstake(position: $position) {
-        res
-        success
-    }
+  v1Unstake(position: $position) {
+    res
+    success
+  }
 }
 ```
 
@@ -343,7 +343,7 @@ mutation ($position: PositionInput!) {
 
 ```json
 {
-  "plan": {
+  "position": {
     "network": "{{NETWORK_POLYGON}}",
     "contractName": "{{STAKING}}",
     "data": {
@@ -382,7 +382,7 @@ mutation ($position: PositionInput!) {
 
 Get the expected rewards by user for each open position. Filter by `now`, `day`, `week`, `month`, `six-months`, `year` or `all`.
 
-**HTTP Method**: GET
+**HTTP Method**: POST
 
 **Roles**: Guest
 
@@ -392,10 +392,10 @@ Get the expected rewards by user for each open position. Filter by `now`, `day`,
 
 ```graphql
 query ($position: RewardsByUserInput!) {
-    v1GetExpectedRewardsByUser(position: $position) {
-        res
-        success
-    }
+  v1GetExpectedRewardsByUser(position: $position) {
+    res
+    success
+  }
 }
 ```
 
@@ -403,15 +403,15 @@ query ($position: RewardsByUserInput!) {
 
 ```json
 {
-    "position": {
-        "contractName": "{{STAKING}}",
-        "data": {
-            "address": "0xa8983Fe59b2F08F9F1B3E833c5D47B256F7FE0d5",
-            "networks": ["{{NETWORK_ETHEREUM}}","{{NETWORK_POLYGON}}"],
-            "filterBy": ["day", "year"],
-            "withAccruedRewards": false
-        }
+  "position": {
+    "contractName": "{{STAKING}}",
+    "data": {
+      "address": "0xa8983Fe59b2F08F9F1B3E833c5D47B256F7FE0d5",
+      "networks": ["{{NETWORK_ETHEREUM}}", "{{NETWORK_POLYGON}}"],
+      "filterBy": ["day", "year"],
+      "withAccruedRewards": false
     }
+  }
 }
 ```
 
@@ -441,7 +441,7 @@ query ($position: RewardsByUserInput!) {
 
 Get the expected rewards for each open position. Filter by `now`, `day`, `week`, `month`, `six-months`, `year` or `all`.
 
-**HTTP Method**: GET
+**HTTP Method**: POST
 
 **Roles**: Guest
 
@@ -451,10 +451,10 @@ Get the expected rewards for each open position. Filter by `now`, `day`, `week`,
 
 ```graphql
 query ($position: RewardsFilterInput!) {
-    v1GetExpectedRewards(position: $position) {
-        res
-        success
-    }
+  v1GetExpectedRewards(position: $position) {
+    res
+    success
+  }
 }
 ```
 
@@ -462,14 +462,14 @@ query ($position: RewardsFilterInput!) {
 
 ```json
 {
-    "position": {
-        "contractName": "{{STAKING}}",
-        "data": {
-            "networks": ["{{NETWORK_ETHEREUM}}","{{NETWORK_POLYGON}}"],
-            "filterBy": ["day", "year"],
-            "withAccruedRewards": false
-        }
+  "position": {
+    "contractName": "{{STAKING}}",
+    "data": {
+      "networks": ["{{NETWORK_ETHEREUM}}", "{{NETWORK_POLYGON}}"],
+      "filterBy": ["day", "year"],
+      "withAccruedRewards": false
     }
+  }
 }
 ```
 
@@ -499,7 +499,7 @@ query ($position: RewardsFilterInput!) {
 
 Get the historical value locked in a period of time. Filter by `now`, `day`, `week`, `month`, `six-months`, `year` or `all`.
 
-**HTTP Method**: GET
+**HTTP Method**: POST
 
 **Roles**: Guest
 
@@ -509,10 +509,10 @@ Get the historical value locked in a period of time. Filter by `now`, `day`, `we
 
 ```graphql
 query ($position: HistoricalInput!) {
-    v1GetHistoricalValueLocked(position: $position) {
-        res
-        success
-    }
+  v1GetHistoricalValueLocked(position: $position) {
+    res
+    success
+  }
 }
 ```
 
@@ -563,7 +563,7 @@ query ($position: HistoricalInput!) {
 
 Get the rewards claimed by user. Filter by `now`, `day`, `week`, `month`, `six-months`, `year` or `all`.
 
-**HTTP Method**: GET
+**HTTP Method**: POST
 
 **Roles**: Guest
 
@@ -573,10 +573,10 @@ Get the rewards claimed by user. Filter by `now`, `day`, `week`, `month`, `six-m
 
 ```graphql
 query ($position: RewardsByUserInput!) {
-    v1GetRewardsReceivedByUser(position: $position) {
-        res
-        success
-    }
+  v1GetRewardsReceivedByUser(position: $position) {
+    res
+    success
+  }
 }
 ```
 
@@ -584,14 +584,14 @@ query ($position: RewardsByUserInput!) {
 
 ```json
 {
-    "position": {
-        "contractName": "{{STAKING}}",
-        "data": {
-            "address": "0xa8983Fe59b2F08F9F1B3E833c5D47B256F7FE0d5",
-            "networks": ["{{NETWORK_ETHEREUM}}","{{NETWORK_POLYGON}}"],
-            "filterBy": ["day", "year"]
-        }
+  "position": {
+    "contractName": "{{STAKING}}",
+    "data": {
+      "address": "0xa8983Fe59b2F08F9F1B3E833c5D47B256F7FE0d5",
+      "networks": ["{{NETWORK_ETHEREUM}}", "{{NETWORK_POLYGON}}"],
+      "filterBy": ["day", "year"]
     }
+  }
 }
 ```
 
@@ -621,7 +621,7 @@ query ($position: RewardsByUserInput!) {
 
 Get the expected rewards by user for each open position. Filter by `now`, `day`, `week`, `month`, `six-months`, `year` or `all`.
 
-**HTTP Method**: GET
+**HTTP Method**: POST
 
 **Roles**: Guest
 
@@ -631,10 +631,10 @@ Get the expected rewards by user for each open position. Filter by `now`, `day`,
 
 ```graphql
 query ($position: GetTotalValueLockedInput!) {
-    v1GetTotalValueLocked(position: $position) {
-        res
-        success
-    }
+  v1GetTotalValueLocked(position: $position) {
+    res
+    success
+  }
 }
 ```
 
@@ -642,13 +642,13 @@ query ($position: GetTotalValueLockedInput!) {
 
 ```json
 {
-    "position": {
-        "contractName": "{{STAKING}}",
-        "data": {
-            "networks": ["ethereum"],
-            "address": "0xa8983Fe59b2F08F9F1B3E833c5D47B256F7FE0d5"
-        }
+  "position": {
+    "contractName": "{{STAKING}}",
+    "data": {
+      "networks": ["ethereum"],
+      "address": "0xa8983Fe59b2F08F9F1B3E833c5D47B256F7FE0d5"
     }
+  }
 }
 ```
 
@@ -688,10 +688,10 @@ Update the metadata of the contract token.
 
 ```graphql
 mutation ($token: TokenMetadataInput!) {
-    v1UpdateTokenMetadata(token: $token) {
-        res
-        success
-    }
+  v1UpdateTokenMetadata(token: $token) {
+    res
+    success
+  }
 }
 ```
 
@@ -700,11 +700,11 @@ mutation ($token: TokenMetadataInput!) {
 ```json
 {
   "token": {
-      "network": "{{NETWORK_BASE}}",
-      "contractName": "{{STAKING}}",
-      "data": {
-          "logo": "https://assets.coingecko.com/coins/images/19201/standard/jFLSu4U9_400x400.png?1696518648"
-      }
+    "network": "{{NETWORK_BASE}}",
+    "contractName": "{{STAKING}}",
+    "data": {
+      "logo": "https://assets.coingecko.com/coins/images/19201/standard/jFLSu4U9_400x400.png?1696518648"
+    }
   }
 }
 ```
@@ -734,10 +734,10 @@ mutation ($token: TokenMetadataInput!) {
 
 ```graphql
 mutation ($wallet: UpsertEcosystemWalletInput!) {
-    v1UpsertEcosystemWallet(wallet: $wallet) {
-        res
-        success
-    }
+  v1UpsertEcosystemWallet(wallet: $wallet) {
+    res
+    success
+  }
 }
 ```
 
@@ -768,10 +768,10 @@ mutation ($wallet: UpsertEcosystemWalletInput!) {
 
 ```graphql
 mutation ($wallet: DeleteEcosystemWalletInput!) {
-    v1DeleteEcosystemWallet(wallet: $wallet) {
-        res
-        success
-    }
+  v1DeleteEcosystemWallet(wallet: $wallet) {
+    res
+    success
+  }
 }
 ```
 
@@ -790,192 +790,180 @@ mutation ($wallet: DeleteEcosystemWalletInput!) {
 ## Error Reference
 
 ### Error Response Format
+
 The errors have the GraphQL error schema, an object with an `errors` array property where each item has the following schema:
 
-| Property | Description |
-| --- | --- |
-| `message` | The description of the error |
+| Property     | Description                                                                    |
+| ------------ | ------------------------------------------------------------------------------ |
+| `message`    | The description of the error                                                   |
 | `extensions` | An object with the path to the field that caused the error, and the error code |
 
 **Examples**
 
 The variable has a wrong type:
 
-``` json
+```json
 {
-  "errors":
-    [
-      {
-        "message": "expected a string for type 'String', but found a number",
-        "extensions":
-          {
-            "path": "$.selectionSet.v1Stake.args.position.amount",
-            "code": "validation-failed"
-          }
+  "errors": [
+    {
+      "message": "expected a string for type 'String', but found a number",
+      "extensions": {
+        "path": "$.selectionSet.v1Stake.args.position.amount",
+        "code": "validation-failed"
       }
-    ]
+    }
+  ]
 }
- ```
+```
 
 The variable is missing in the request body:
 
-``` json
+```json
 {
-  "errors":
-    [
-      {
-        "message": "missing required field 'planId'",
-        "extensions":
-          {
-            "path": "$.selectionSet.v1Stake.args.position.planId",
-            "code": "validation-failed"
-          }
+  "errors": [
+    {
+      "message": "missing required field 'planId'",
+      "extensions": {
+        "path": "$.selectionSet.v1Stake.args.position.planId",
+        "code": "validation-failed"
       }
-    ]
+    }
+  ]
 }
- ```
+```
 
 The field does not exists or the role has no permissions:
 
-``` json
+```json
 {
-  "errors":
-    [
-      {
-        "message": "field 'v1CreatePlan' not found in type: 'mutation_root'",
-        "extensions":
-          {
-            "path": "$.selectionSet.v1CreatePlan",
-            "code": "validation-failed"
-          }
+  "errors": [
+    {
+      "message": "field 'v1CreatePlan' not found in type: 'mutation_root'",
+      "extensions": {
+        "path": "$.selectionSet.v1CreatePlan",
+        "code": "validation-failed"
       }
-    ]
+    }
+  ]
 }
- ```
+```
 
 The variable is not in the request body schema:
 
-``` json
+```json
 {
-  "errors":
-    [
-      {
-        "message": "Unexpected variable stake",
-        "extensions":
-          {
-            "path": "$",  
-            "code": "bad-request" 
-          }
+  "errors": [
+    {
+      "message": "Unexpected variable stake",
+      "extensions": {
+        "path": "$",
+        "code": "bad-request"
       }
-    ]
+    }
+  ]
 }
-
- ```
+```
 
 The GraphQL variables object is not a valid json:
 
-``` json
+```json
 {
-    "errors": [
-        {
-            "message": "Error in $: Failed reading: satisfy. Expecting object value at X",
-            "extensions": {
-                "path": "$",
-                "code": "invalid-json"
-            }
-        }
-    ]
+  "errors": [
+    {
+      "message": "Error in $: Failed reading: satisfy. Expecting object value at X",
+      "extensions": {
+        "path": "$",
+        "code": "invalid-json"
+      }
+    }
+  ]
 }
- ```
+```
 
 The endpoint does not exists:
 
-``` json
+```json
 {
-  "errors":
-    [
-      {
-        "message": "Endpoint not found",
-        "extensions":
-          {
-            "path": "$",
-            "code": "not-found"
-          }
+  "errors": [
+    {
+      "message": "Endpoint not found",
+      "extensions": {
+        "path": "$",
+        "code": "not-found"
       }
-    ]
+    }
+  ]
 }
- ```
+```
 
 There is no pool with the provided id:
 
-``` json
+```json
 {
-  "errors":
-    [
-      {
-        "message": "Plan id 400 does not exist",
-        "extensions":
-        {
-          "path": "$",
-          "code": "unexpected"
-        }
+  "errors": [
+    {
+      "message": "Plan id 400 does not exist",
+      "extensions": {
+        "path": "$",
+        "code": "unexpected"
       }
-    ]
+    }
+  ]
 }
- ```
+```
 
 ### Types of Error
 
 **General**
 
-| **Error message** | **Reason** |
-| --- | --- |
-| Could not verify JWT: `JWT error` | The JWT is invalid |
-| Invalid request payload input | The input provided has a invalid value |
-| Cannot convert `X` to BigInt | The string provided is not a integer number |
+| **Error message**                 | **Reason**                                  |
+| --------------------------------- | ------------------------------------------- |
+| Could not verify JWT: `JWT error` | The JWT is invalid                          |
+| Invalid request payload input     | The input provided has a invalid value      |
+| Cannot convert `X` to BigInt      | The string provided is not a integer number |
 
 **Session**
 
-| **Error message** | **Reason** |
-| --- | --- |
+| **Error message**                                | **Reason**                                       |
+| ------------------------------------------------ | ------------------------------------------------ |
 | The account does not have sufficient permissions | The user is not authorized to perform the action |
-| Invalid message or signature | The message provided is invalid |
-| Invalid or expired session | The user session is invalid |
+| Invalid message or signature                     | The message provided is invalid                  |
+| Invalid or expired session                       | The user session is invalid                      |
 
 **Addresses**
 
-| **Error message** | **Reason** |
-| --- | --- |
-| Neither Index nor Id can be negative | The index or id are negative |
-| Address does not follow the ethereum address format | The address provided is invalid |
-| Sender address is not admin | The address does not have the required admin role in the `staking` contract |
-| Collateral token does not follow the ethereum address format | The collateral token address is invalid |
+| **Error message**                                            | **Reason**                                                                  |
+| ------------------------------------------------------------ | --------------------------------------------------------------------------- |
+| Neither Index nor Id can be negative                         | The index or id are negative                                                |
+| Address does not follow the ethereum address format          | The address provided is invalid                                             |
+| Sender address is not admin                                  | The address does not have the required admin role in the `staking` contract |
+| Collateral token does not follow the ethereum address format | The collateral token address is invalid                                     |
 
 **Plan**
 
-| **Error message** | **Reason** |
-| --- | --- |
-| Invalid plan id `X` | There is no plan with the provided id |
-| Plan id is not unique | "0x" does not uniquely identify a Plan |
-| Lock duration cannot be negative | The lock duration is not a positive number |
-| APY cannot be negative | The APY is not a positive number |
-| Neither staking nor reward end date can be negative | Occurs when trying to set negative dates |
+| **Error message**                                     | **Reason**                                                                         |
+| ----------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| Invalid plan id `X`                                   | There is no plan with the provided id                                              |
+| Plan id is not unique                                 | "0x" does not uniquely identify a Plan                                             |
+| Lock duration cannot be negative                      | The lock duration is not a positive number                                         |
+| APY cannot be negative                                | The APY is not a positive number                                                   |
+| Neither staking nor reward end date can be negative   | Occurs when trying to set negative dates                                           |
 | Staking end time cannot be less than rewards end time | Occurs when trying to set dates with a staking end time less than rewards end time |
 
 **Staking**
 
-| **Error message** | **Reason** |
-| --- | --- |
-| Stake amount too low | Must stake more than the minimum |
-| Invalid stake index | The position does not exists |
-| Staking has ended | The staking end time has passed and new positions cannot be created |
-| Stake already unstaked | An already unstaked position cannot be unstaked again |
-| Stake is locked | The lock duration has not passed |
+| **Error message**      | **Reason**                                                          |
+| ---------------------- | ------------------------------------------------------------------- |
+| Stake amount too low   | Must stake more than the minimum                                    |
+| Invalid stake index    | The position does not exists                                        |
+| Staking has ended      | The staking end time has passed and new positions cannot be created |
+| Stake already unstaked | An already unstaked position cannot be unstaked again               |
+| Stake is locked        | The lock duration has not passed                                    |
 
 **Pagination**
 
-| **Error Message** | **Reason** |
-| --- | --- |
-| Offset cannot be negative | The provided offset is negative |
-| Limit cannot be negative or 0 | The provided limit is negative or zero |
-| Max limit allowed is `X` | The provided limit is equal to the maximum results per page, use a smaller value |
+| **Error Message**             | **Reason**                                                                       |
+| ----------------------------- | -------------------------------------------------------------------------------- |
+| Offset cannot be negative     | The provided offset is negative                                                  |
+| Limit cannot be negative or 0 | The provided limit is negative or zero                                           |
+| Max limit allowed is `X`      | The provided limit is equal to the maximum results per page, use a smaller value |
