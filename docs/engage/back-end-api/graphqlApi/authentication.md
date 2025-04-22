@@ -1,7 +1,19 @@
 ---
 title: Authentication
-sidebar_position: 4
+sidebar_position: 1
 ---
+
+## Security Details
+
+To secure the API access control, all requests are made through [Hasura](https://hasura.io/) which provides secure GraphQL, and RESTful endpoints restricted by a role-based authorization system.
+
+Those endpoints that return public blockchain data do not require authentication for use. Query type requests are opened under the `guest` role, while mutation type needs a token with `admin` role.
+
+For those that can modify data the API expects a valid authorization header containing a bearer token. These tokens are implemented as JSON Web Tokens (JWTs) issued by the server.
+
+The security of the JWT is because it is signed by a secret key and has a configurable expiration time, which by default is 60 minutes.
+
+Upon receiving a request, Hasura decodes and validates the JWT, which contains user account data, and their corresponding role. If the role lacks the necessary permissions or the token is invalid, expired or missing, the request is promptly rejected.
 
 ## `Login`
 
@@ -11,7 +23,18 @@ Retrieve an access token with the role of the user and a refresh token to regene
 
 **Roles**: Guest
 
-**Endpoint**: `{{BASE_URL}}/v1/graphql`
+**Endpoint**: `{{BASE_URL}}/v1/login`
+
+**GraphQL Body**:
+
+```graphql
+mutation v1Login($session: LoginInput!) {
+  v1Login(session: $session) {
+    res
+    success
+  }
+}
+```
 
 **Params**:
 
@@ -48,6 +71,17 @@ Retrieve a new access token with the role of the user and a refresh token to reg
 
 **Endpoint**: `{{BASE_URL}}/v1/graphql`
 
+**GraphQL Body**:
+
+```graphql
+mutation v1RestoreSession($session: RestoreSessionInput!) {
+  v1RestoreSession(session: $session) {
+    res
+    success
+  }
+}
+```
+
 **Params**:
 
 ```json
@@ -81,6 +115,17 @@ Update the metadata of an existing account in multiple networks using the addres
 **Roles**: User Admin
 
 **Endpoint**: `{{BASE_URL}}/v1/graphql`
+
+**GraphQL Body**:
+
+```graphql
+mutation v1UpdateAccount($account: UpdateAccountInput!) {
+  v1UpdateAccount(account: $account) {
+    res
+    success
+  }
+}
+```
 
 **Params**:
 
