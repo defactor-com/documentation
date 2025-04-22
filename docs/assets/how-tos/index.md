@@ -55,11 +55,6 @@ provide a wallet connect project id. You can obtain it on https://cloud.reown.co
 provide a Google tag ID for Google Analytics, Google Ads. You can read instructions on how to get it here:
 https://support.google.com/analytics/answer/9539598
 
-## Intercom app ID
-
-We use intercom for our ai assistant chatbot: https://www.intercom.com/.
-If you wish to have an ai assistant please provide an intercom app id.
-
 ## Mailing
 
 We use nodemailer to send out verification emails
