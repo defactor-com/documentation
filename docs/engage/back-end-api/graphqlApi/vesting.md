@@ -15,6 +15,17 @@ Add a new batch schedule with vesting schedules and their beneficieries.
 
 **Endpoint**: `{{BASE_URL}}/v1/graphql`
 
+**GraphQL Body**:
+
+```graphql
+mutation ($schedule: CreateScheduleInput!) {
+    v1CreateSchedule(schedule: $schedule) {
+        res
+        success
+    }
+}
+```
+
 **Params**:
 
 ```json
@@ -77,6 +88,17 @@ Retrieve the historical emissions from the day group by date.
 **Roles**: Guest
 
 **Endpoint**: `{{BASE_URL}}/v1/graphql`
+
+**GraphQL Body**:
+
+```graphql
+mutation ($release: HistoricalEmissionsInput!) {
+    v1GetHistoricalEmissions(release: $release) {
+        res
+        success
+    }
+}
+```
 
 **Params**:
 

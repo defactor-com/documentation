@@ -1,6 +1,6 @@
 ---
 title: Vesting
-sidebar_position: 4
+sidebar_position: 5
 ---
 
 ## Schedules
@@ -11,7 +11,7 @@ Add a new batch schedule with vesting schedules and their beneficieries.
 
 **HTTP Method**: POST
 
-**Roles**: Guest
+**Roles**: User Admin
 
 **Endpoint**: `{{BASE_RESTFUL_URL}}/v1/create-schedule`
 

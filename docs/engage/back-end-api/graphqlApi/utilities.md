@@ -11,9 +11,20 @@ Update the metadata of the contract token.
 
 **HTTP Method**: POST
 
-**Roles**: Admin\*\_Request Body\_\_\*\_The token attribute is an object which identies in a unique way the token to update, it could be the tokenId or an object with the name, symbol, and precision of the erc20 token`json{    "metadata": {       "logo": "https://assets.coingecko.com/coins/images/19201/standard/jFLSu4U9_400x400.png?1696518648"    },    "token": {       "tokenId": "66d65ef0-5d57-4199-83ac-e7961949f420"    }}`
+**Roles**: Admin
 
 **Endpoint**: `{{BASE_URL}}/v1/graphql`
+
+**GraphQL Body**:
+
+```graphql
+mutation ($token: GlobalTokenMetadataInput!) {
+    v1UpdateGlobalTokenMetadata(token: $token) {
+        res
+        success
+    }
+}
+```
 
 **Params**:
 
@@ -51,6 +62,18 @@ Update the metadata of the contract token.
 
 **Endpoint**: `{{BASE_URL}}/v1/graphql`
 
+**GraphQL Body**
+
+```graphql
+query getTokenPrice($symbol: String!) {
+  token_price: global_latest_token_price(where: {symbol:{_eq:$symbol}}){
+    price
+    symbol
+    date
+  }
+}
+```
+
 **Params**:
 
 ```json
@@ -65,6 +88,17 @@ Update the metadata of the contract token.
 
 **Endpoint**: `{{BASE_URL}}/v1/graphql`
 
+**GraphQL Body**:
+
+```graphql
+query getConfig {
+  getConfig {
+    res
+    success
+  }
+}
+```
+
 **Params**:
 
 ```json
@@ -76,6 +110,17 @@ Update the metadata of the contract token.
 **HTTP Method**: POST
 
 **Endpoint**: `{{BASE_URL}}/v1/graphql`
+
+**GraphQL Body**:
+
+```graphql
+query v1GetCirculatingSupply ($global: CirculatingSupplyInput) {
+  v1GetCirculatingSupply (global: $global) {
+    res
+    success
+  }
+}
+```
 
 **Params**:
 

@@ -1,5 +1,5 @@
 ---
-title: Vesting Contract Configuration
+title: Vesting Contract Config
 sidebar_position: 1
 ---
 

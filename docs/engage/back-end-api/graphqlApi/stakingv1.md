@@ -1,6 +1,6 @@
 ---
 title: Staking V1
-sidebar_position: 1
+sidebar_position: 2
 ---
 
 ## Plans
@@ -14,6 +14,17 @@ Create a new plan with the indicated APY and lock duration in seconds.
 **Roles**: Admin
 
 **Endpoint**: `{{BASE_URL}}/v1/graphql`
+
+**GraphQL Body**:
+
+```graphql
+mutation ($plan: CreatePlanInput!) {
+  v1CreatePlan(plan: $plan) {
+    res
+    success
+  }
+}
+```
 
 **Params**:
 
@@ -72,6 +83,28 @@ Update the metadata of an existing plan using an unique plan identifier. Either 
 
 **Endpoint**: `{{BASE_URL}}/v1/graphql`
 
+**GraphQL Body**:
+
+```graphql
+mutation ($position: CreatePlanInput!) {
+  v1Stake(position: $position) {
+    res
+    success
+  }
+}
+```
+
+**GraphQL Body**:
+
+```graphql
+mutation ($plan: PlanMetadataInput!) {
+  v1UpdatePlanMetadata(plan: $plan) {
+    res
+    success
+  }
+}
+```
+
 **Params**:
 
 ```json
@@ -112,6 +145,17 @@ Stake the indicated amount to the plan. Once the `stakingEndTime` period conclud
 **Roles**: Admin
 
 **Endpoint**: `{{BASE_URL}}/v1/graphql`
+
+**GraphQL Body**:
+
+```graphql
+mutation ($position: CreatePlanInput!) {
+  v1Stake(position: $position) {
+    res
+    success
+  }
+}
+```
 
 **Params**:
 
@@ -163,6 +207,17 @@ Unstake the position with the indicated stake index and stake the amount in the 
 
 **Endpoint**: `{{BASE_URL}}/v1/graphql`
 
+**GraphQL Body**:
+
+```graphql
+mutation ($position: ReopenPositionInput!) {
+  v1Restake(position: $position) {
+    res
+    success
+  }
+}
+```
+
 **Params**:
 
 ```json
@@ -213,6 +268,17 @@ Claim the available rewards of the position with the indicated stake index.
 
 **Endpoint**: `{{BASE_URL}}/v1/graphql`
 
+**GraphQL Body**:
+
+```graphql
+mutation ($position: PositionInput!) {
+  v1ClaimRewards(position: $position) {
+    res
+    success
+  }
+}
+```
+
 **Params**:
 
 ```json
@@ -261,6 +327,17 @@ Unstake the position with the indicated stake index.
 **Roles**: User Admin
 
 **Endpoint**: `{{BASE_URL}}/v1/graphql`
+
+**GraphQL Body**:
+
+```graphql
+mutation ($position: PositionInput!) {
+  v1Unstake(position: $position) {
+    res
+    success
+  }
+}
+```
 
 **Params**:
 
@@ -311,6 +388,17 @@ Get the expected rewards by user for each open position. Filter by `now`, `day`,
 
 **Endpoint**: `{{BASE_URL}}/v1/graphql`
 
+**GraphQL Body**:
+
+```graphql
+query ($position: RewardsByUserInput!) {
+  v1GetExpectedRewardsByUser(position: $position) {
+    res
+    success
+  }
+}
+```
+
 **Params**:
 
 ```json
@@ -359,6 +447,17 @@ Get the expected rewards for each open position. Filter by `now`, `day`, `week`,
 
 **Endpoint**: `{{BASE_URL}}/v1/graphql`
 
+**GraphQL Body**:
+
+```graphql
+query ($position: RewardsFilterInput!) {
+  v1GetExpectedRewards(position: $position) {
+    res
+    success
+  }
+}
+```
+
 **Params**:
 
 ```json
@@ -406,6 +505,17 @@ Get the historical value locked in a period of time. Filter by `now`, `day`, `we
 
 **Endpoint**: `{{BASE_URL}}/v1/graphql`
 
+**GraphQL Body**:
+
+```graphql
+query ($position: HistoricalInput!) {
+  v1GetHistoricalValueLocked(position: $position) {
+    res
+    success
+  }
+}
+```
+
 **Params**:
 
 ```json
@@ -413,7 +523,7 @@ Get the historical value locked in a period of time. Filter by `now`, `day`, `we
   "position": {
     "contractName": "{{STAKING}}",
     "data": {
-      "networks": ["{{NETWORK_ETHEREUM}}", "{{NETWORK_BASE}}"],
+      "networks": ["{{NETWORK_ETHEREUM}}", "{{NETWORK_POLYGON}}"],
       "filterBy": ["day", "year", "week", "month"]
     }
   }
@@ -458,6 +568,17 @@ Get the rewards claimed by user. Filter by `now`, `day`, `week`, `month`, `six-m
 **Roles**: Guest
 
 **Endpoint**: `{{BASE_URL}}/v1/graphql`
+
+**GraphQL Body**:
+
+```graphql
+query ($position: RewardsByUserInput!) {
+  v1GetRewardsReceivedByUser(position: $position) {
+    res
+    success
+  }
+}
+```
 
 **Params**:
 
@@ -506,6 +627,17 @@ Get the expected rewards by user for each open position. Filter by `now`, `day`,
 
 **Endpoint**: `{{BASE_URL}}/v1/graphql`
 
+**GraphQL Body**:
+
+```graphql
+query ($position: GetTotalValueLockedInput!) {
+  v1GetTotalValueLocked(position: $position) {
+    res
+    success
+  }
+}
+```
+
 **Params**:
 
 ```json
@@ -552,6 +684,17 @@ Update the metadata of the contract token.
 
 **Endpoint**: `{{BASE_URL}}/v1/graphql`
 
+**GraphQL Body**:
+
+```graphql
+mutation ($token: TokenMetadataInput!) {
+  v1UpdateTokenMetadata(token: $token) {
+    res
+    success
+  }
+}
+```
+
 **Params**:
 
 ```json
@@ -587,15 +730,26 @@ Update the metadata of the contract token.
 
 **Endpoint**: `{{BASE_URL}}/v1/graphql`
 
+**GraphQL Body**:
+
+```graphql
+mutation ($wallet: UpsertEcosystemWalletInput!) {
+  v1UpsertEcosystemWallet(wallet: $wallet) {
+    res
+    success
+  }
+}
+```
+
 **Params**:
 
 ```json
 {
   "wallet": {
-    "network": "{{NETWORK_ETHEREUM}}",
+    "network": "{{NETWORK_BASE}}",
     "contractName": "{{STAKING}}",
     "data": {
-      "label": "Governance long-term lock",
+      "label": "Governance long-term lock3",
       "address": "0xa8983Fe59b2F08F9F1B3E833c5D47B256F7FE0d5",
       "initialAmount": 50000000,
       "iconUrl": "https://realtyx.factr.app/"
@@ -610,6 +764,17 @@ Update the metadata of the contract token.
 
 **Endpoint**: `{{BASE_URL}}/v1/graphql`
 
+**GraphQL Body**:
+
+```graphql
+mutation ($wallet: DeleteEcosystemWalletInput!) {
+  v1DeleteEcosystemWallet(wallet: $wallet) {
+    res
+    success
+  }
+}
+```
+
 **Params**:
 
 ```json
@@ -621,3 +786,184 @@ Update the metadata of the contract token.
   }
 }
 ```
+
+## Error Reference
+
+### Error Response Format
+
+The errors have the GraphQL error schema, an object with an `errors` array property where each item has the following schema:
+
+| Property     | Description                                                                    |
+| ------------ | ------------------------------------------------------------------------------ |
+| `message`    | The description of the error                                                   |
+| `extensions` | An object with the path to the field that caused the error, and the error code |
+
+**Examples**
+
+The variable has a wrong type:
+
+```json
+{
+  "errors": [
+    {
+      "message": "expected a string for type 'String', but found a number",
+      "extensions": {
+        "path": "$.selectionSet.v1Stake.args.position.amount",
+        "code": "validation-failed"
+      }
+    }
+  ]
+}
+```
+
+The variable is missing in the request body:
+
+```json
+{
+  "errors": [
+    {
+      "message": "missing required field 'planId'",
+      "extensions": {
+        "path": "$.selectionSet.v1Stake.args.position.planId",
+        "code": "validation-failed"
+      }
+    }
+  ]
+}
+```
+
+The field does not exists or the role has no permissions:
+
+```json
+{
+  "errors": [
+    {
+      "message": "field 'v1CreatePlan' not found in type: 'mutation_root'",
+      "extensions": {
+        "path": "$.selectionSet.v1CreatePlan",
+        "code": "validation-failed"
+      }
+    }
+  ]
+}
+```
+
+The variable is not in the request body schema:
+
+```json
+{
+  "errors": [
+    {
+      "message": "Unexpected variable stake",
+      "extensions": {
+        "path": "$",
+        "code": "bad-request"
+      }
+    }
+  ]
+}
+```
+
+The GraphQL variables object is not a valid json:
+
+```json
+{
+  "errors": [
+    {
+      "message": "Error in $: Failed reading: satisfy. Expecting object value at X",
+      "extensions": {
+        "path": "$",
+        "code": "invalid-json"
+      }
+    }
+  ]
+}
+```
+
+The endpoint does not exists:
+
+```json
+{
+  "errors": [
+    {
+      "message": "Endpoint not found",
+      "extensions": {
+        "path": "$",
+        "code": "not-found"
+      }
+    }
+  ]
+}
+```
+
+There is no pool with the provided id:
+
+```json
+{
+  "errors": [
+    {
+      "message": "Plan id 400 does not exist",
+      "extensions": {
+        "path": "$",
+        "code": "unexpected"
+      }
+    }
+  ]
+}
+```
+
+### Types of Error
+
+**General**
+
+| **Error message**                 | **Reason**                                  |
+| --------------------------------- | ------------------------------------------- |
+| Could not verify JWT: `JWT error` | The JWT is invalid                          |
+| Invalid request payload input     | The input provided has a invalid value      |
+| Cannot convert `X` to BigInt      | The string provided is not a integer number |
+
+**Session**
+
+| **Error message**                                | **Reason**                                       |
+| ------------------------------------------------ | ------------------------------------------------ |
+| The account does not have sufficient permissions | The user is not authorized to perform the action |
+| Invalid message or signature                     | The message provided is invalid                  |
+| Invalid or expired session                       | The user session is invalid                      |
+
+**Addresses**
+
+| **Error message**                                            | **Reason**                                                                  |
+| ------------------------------------------------------------ | --------------------------------------------------------------------------- |
+| Neither Index nor Id can be negative                         | The index or id are negative                                                |
+| Address does not follow the ethereum address format          | The address provided is invalid                                             |
+| Sender address is not admin                                  | The address does not have the required admin role in the `staking` contract |
+| Collateral token does not follow the ethereum address format | The collateral token address is invalid                                     |
+
+**Plan**
+
+| **Error message**                                     | **Reason**                                                                         |
+| ----------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| Invalid plan id `X`                                   | There is no plan with the provided id                                              |
+| Plan id is not unique                                 | "0x" does not uniquely identify a Plan                                             |
+| Lock duration cannot be negative                      | The lock duration is not a positive number                                         |
+| APY cannot be negative                                | The APY is not a positive number                                                   |
+| Neither staking nor reward end date can be negative   | Occurs when trying to set negative dates                                           |
+| Staking end time cannot be less than rewards end time | Occurs when trying to set dates with a staking end time less than rewards end time |
+
+**Staking**
+
+| **Error message**      | **Reason**                                                          |
+| ---------------------- | ------------------------------------------------------------------- |
+| Stake amount too low   | Must stake more than the minimum                                    |
+| Invalid stake index    | The position does not exists                                        |
+| Staking has ended      | The staking end time has passed and new positions cannot be created |
+| Stake already unstaked | An already unstaked position cannot be unstaked again               |
+| Stake is locked        | The lock duration has not passed                                    |
+
+**Pagination**
+
+| **Error Message**             | **Reason**                                                                       |
+| ----------------------------- | -------------------------------------------------------------------------------- |
+| Offset cannot be negative     | The provided offset is negative                                                  |
+| Limit cannot be negative or 0 | The provided limit is negative or zero                                           |
+| Max limit allowed is `X`      | The provided limit is equal to the maximum results per page, use a smaller value |

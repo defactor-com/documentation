@@ -1,6 +1,6 @@
 ---
 title: Utilities
-sidebar_position: 7
+sidebar_position: 10
 ---
 
 ## Token
@@ -11,7 +11,7 @@ Update the metadata of the contract token.
 
 **HTTP Method**: POST
 
-**Roles**: Admin\*\_Request Body\_\_\*\_The token attribute is an object which identies in a unique way the token to update, it could be the tokenId or an object with the name, symbol, and precision of the erc20 token`json{    "metadata": {       "logo": "https://assets.coingecko.com/coins/images/19201/standard/jFLSu4U9_400x400.png?1696518648"    },    "token": {       "tokenId": "66d65ef0-5d57-4199-83ac-e7961949f420"    }}`
+**Roles**: User Admin
 
 **Endpoint**: `{{BASE_RESTFUL_URL}}/v1/update-global-token-metadata`
 
@@ -147,10 +147,7 @@ Get the current instance configuration.
 
 ## `v1 Get Circulating Supply`
 
-**Description**:
-
-This endpoint makes an HTTP GET request to retrieve the circulating supply. The request does not include a request body.
-
+Makes an HTTP GET request to retrieve the circulating supply. The request does not include a request body.
 
 **HTTP Method**: GET
 
@@ -165,6 +162,3 @@ This endpoint makes an HTTP GET request to retrieve the circulating supply. The 
   }
 }
 ```
-**Response**
-
-Upon the last execution, the server responded with a status code of 200 and the circulating supply value of 111083061.0.

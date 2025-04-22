@@ -1,6 +1,6 @@
 ---
-title: Staking Contract Configuration
-sidebar_position: 2
+title: Staking Contract Config
+sidebar_position: 3
 ---
 
 # Staking Contract Configuration
