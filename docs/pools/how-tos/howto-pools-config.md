@@ -1,6 +1,6 @@
 ---
 title: Configuring Pools Instances
-sidebar_position: 3
+sidebar_position: 4
 ---
 
 # Configuring a New Pools Instance
@@ -27,7 +27,7 @@ These variables configure the user-facing interface of the pools instance:
   Example: `{"chainId":11155111,"name":"Sepolia","baseTokenAddress":"0x75fe3476d90598080f7D12365020C438943Dcef3"}`
 
 - **NEXT_PUBLIC_ORGANIZATION_DATA:** JSON string containing the organization's branding data.  
-  Example: 
+  Example:
   `{"name":"DEFACTOR.com","logo":"https://assets-global.website-files.com/...","websiteUrl":"https://www.defactor.com/","xUrl":"https://twitter.com/defactor_"}`
 
 - **NEXT_PUBLIC_WALLET_CONNECT_PROJECT_ID:** Wallet Connect project identifier.

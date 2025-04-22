@@ -2,6 +2,7 @@
   "label": "Engage How-Tos",
   "position": 4,
   "link": {
-    "type": "generated-index"
+    "type": "doc",
+    "id": "project-onboarding"
   }
 }

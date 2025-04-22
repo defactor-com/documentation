@@ -1,6 +1,6 @@
 ---
 title: Add and Edit Pool Metadata
-sidebar_position: 5
+sidebar_position: 6
 ---
 
 # Adding Pool Metadata Using the API
@@ -17,18 +17,17 @@ The metadata is stored as a JSONB object within the `pools` table in the databas
 
 The following JSON example shows the structure and attributes required by the frontend:
 
-
 ```json
 {
-    "pool": {
-        "id": "1",
-        "name": "FACTR Pool 1",
-        "description": "FACTR is a tool that facilitates the connection between the traditional world of assets and the decentralized ecosystem of cryptocurrencies. Explore more about Defactor and its potential in the financial world!",
-        "logo": "https://assets.coingecko.com/coins/images/19201/standard/jFLSu4U9_400x400.png?1696518648",
-        "collateralToken": {
-          "logo": "https://assets.coingecko.com/coins/images/19201/standard/jFLSu4U9_400x400.png?1696518648"
-        }
+  "pool": {
+    "id": "1",
+    "name": "FACTR Pool 1",
+    "description": "FACTR is a tool that facilitates the connection between the traditional world of assets and the decentralized ecosystem of cryptocurrencies. Explore more about Defactor and its potential in the financial world!",
+    "logo": "https://assets.coingecko.com/coins/images/19201/standard/jFLSu4U9_400x400.png?1696518648",
+    "collateralToken": {
+      "logo": "https://assets.coingecko.com/coins/images/19201/standard/jFLSu4U9_400x400.png?1696518648"
     }
+  }
 }
 ```
 
