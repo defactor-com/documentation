@@ -13,8 +13,7 @@ Accessible via the [Engage Platform Demo](https://sharingblock-engage.defactor.d
 
 - **Staking** – Lock tokens in customizable pools to incentivize long-term holding and participation.
 - **Vesting** – Distribute tokens over time to contributors, team members, or investors.
-- **Claiming** – Manage and automate token claim workflows for airdrops, rewards, and grants.
-- **Contribution Tracking** – Measure and reward verifiable participation across platforms.
+- **Buybacks** – Automatically buy back $FACTR tokens from the open market using revenue collected across the ecosystem. Bought-back tokens are locked for a fixed period (typically 1 year), supporting token scarcity and reinforcing long-term value through a circular economy.
 
 ## Core Benefits
 

@@ -39,3 +39,5 @@ The UI is responsive and works across modern browsers and mobile devices.
 
 - **Chains Supported**: Ethereum, Polygon, Base, BNB Chain
 - **Wallets**: MetaMask, Trust Wallet, WalletConnect
+
+The UI is fully white-labeled, meaning clients can apply their own custom branding and use their own domain or subdomain to run their instance of Engage.
