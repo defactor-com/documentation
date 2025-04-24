@@ -13,7 +13,7 @@ sidebar_position: 1
     alignItems: 'flex-start',
     textDecoration: 'underline',
   }}>
-    <a href="API%20Endpoints/api-authentication" className="pagination-nav__label">ERC-20</a>
+    <a href="API-Endpoints/api-authentication" className="pagination-nav__label">ERC-20</a>
   </div>
 </div>
 
@@ -31,22 +31,22 @@ The Assets API exposes endpoints grouped by function, allowing seamless coordina
 
 Available modules:
 
-- [**Authentication**](API%20Endpoints/api-authentication)  
+- [**Authentication**](API-Endpoints/api-authentication)  
   Token-based access control for platforms and users.
 
-- [**Form API**](API%20Endpoints/api-form)  
+- [**Form API**](API-Endpoints/api-form)  
   Process structured submissions used in onboarding and verification.
 
-- [**IPFS Integration**](API%20Endpoints/api-ipfs)  
+- [**IPFS Integration**](API-Endpoints/api-ipfs)  
   Upload and link off-chain metadata/documents on IPFS.
 
-- [**Mailing API**](API%20Endpoints/api-mailing)  
+- [**Mailing API**](API-Endpoints/api-mailing)  
   Trigger automated emails for onboarding and platform events.
 
-- [**Stats API**](API%20Endpoints/api-sats)  
+- [**Stats API**](API-Endpoints/api-sats)  
   Query analytics and operational metrics from the platform.
 
-- [**Transactions API**](API%20Endpoints/api-transactions)  
+- [**Transactions API**](API-Endpoints/api-transactions)  
   View historical transaction data between smart contracts and wallets.
 
 ## Key Capabilities
@@ -62,7 +62,7 @@ Available modules:
 
 Before integrating with any modules, it's essential to ensure your client is authenticated. This includes access to the `/assets` module, which requires a valid token.
 
-1. [Authenticate your client](API%20Endpoints/api-authentication)
+1. [Authenticate your client](API-Endpoints/api-authentication)
 2. Start integrating with relevant modules (e.g., IPFS, stats, transactions)
 3. Use `/form` and `/mailing` to automate user onboarding and communication
 4. Query `/stats` and `/transactions` for operational insights and transparency
