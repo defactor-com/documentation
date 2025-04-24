@@ -2,6 +2,7 @@
   "label": "Vesting Contract",
   "position": 4,
   "link": {
-    "type": "generated-index"
+    "type": "doc",
+    "id": "vesting-contract-overview"
   }
 }

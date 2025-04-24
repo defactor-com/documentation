@@ -1,7 +1,32 @@
 ---
+id: smart-contracts-overview
 title: Smart Contracts Overview
 sidebar_position: 1
 ---
+
+<div style={{ display: 'flex', flexWrap: 'wrap', color: '#eb9f00', gap: '1rem' }}>
+  <div style={{
+    flex: '1 1 280px',
+    display: 'flex',
+    flexDirection: 'column',
+    rowGap: '1rem',
+    alignItems: 'flex-start',
+    textDecoration: 'underline',
+  }}>
+    <a href="ERC-20/erc20-factory-smart-contract" className="pagination-nav__label">ERC-20</a>
+  </div>
+
+  <div style={{
+    flex: '1 1 280px',
+    display: 'flex',
+    flexDirection: 'column',
+    rowGap: '1rem',
+    alignItems: 'flex-start',
+    textDecoration: 'underline'
+  }}>
+    <a href="ERC-3643/erc3643-smart-contract" className="pagination-nav__label">ERC-3643</a>
+  </div>
+</div>
 
 ## Introduction
 
@@ -11,8 +36,8 @@ The contracts are designed to support varying levels of complexity—ranging fro
 
 Key smart contract modules include:
 
-- [**ERC-20 Contracts**](ERC-20/factory.md) – lightweight contracts for general-purpose token issuance
-- [**ERC-3643 Contracts**](ERC-3643/introduction.md) – advanced contracts for regulated, permissioned tokens
+- [**ERC-20 Contracts**](ERC-20/erc20-factory-smart-contract) – lightweight contracts for general-purpose token issuance
+- [**ERC-3643 Contracts**](ERC-3643/erc3643-smart-contract) – advanced contracts for regulated, permissioned tokens
 
 These contracts are directly accessible via the Assets platform UI and are compatible with standard Ethereum tooling and wallet providers.
 

@@ -1,7 +1,32 @@
 ---
+id: backend-overview
 title: Pools Backend Overview
 sidebar_position: 1
 ---
+
+<div style={{ display: 'flex', flexWrap: 'wrap', color: '#eb9f00', gap: '1rem' }}>
+  <div style={{
+    flex: '1 1 280px',
+    display: 'flex',
+    flexDirection: 'column',
+    rowGap: '1rem',
+    alignItems: 'flex-start',
+    textDecoration: 'underline',
+  }}>
+    <a href="api/counterpartyPools/restful.md" className="pagination-nav__label">API Endpoints</a>
+  </div>
+
+  <div style={{
+    flex: '1 1 280px',
+    display: 'flex',
+    flexDirection: 'column',
+    rowGap: '1rem',
+    alignItems: 'flex-start',
+    textDecoration: 'underline'
+  }}>
+    <a href="sdk/counterparty-pool.md" className="pagination-nav__label">SDK</a>
+  </div>
+</div>
 
 ## Introduction
 
@@ -11,33 +36,39 @@ This backend layer supports both **ERC-20 Collateral Pools** and **Counterparty 
 
 ## API Access
 
-The Pools backend exposes both **GraphQL** and **RESTful** APIs for integration with frontend dashboards, monitoring tools, or automation systems.
+The Pools APIs provide programmatic access to lending pool data, loan management functions, and real-time system states.
 
-- [**GraphQL API**](api/engagegraphql.md)  
-  Used for dynamic queries, metadata access, and state tracking  
-  Supports real-time access to pool configuration, transactions, and statuses
+Use APIs to:
 
-- [**RESTful API**](api/engagerestful.md)  
-  Ideal for server-side operations, triggering actions, and syncing data  
-  Useful for managing interactions with smart contracts and orchestrating workflows
+- Query pool and loan information
+- Trigger actions like borrowing or repaying
+- Monitor status updates and metrics
+- Automate backend processes and alerts
 
-Additional APIs exist for:
+Explore available endpoints:
 
-- [**Counterparty Pools**](api/counterpartyPools/restful.md)
-- [**ERC-20 Collateral Pools**](api/erc20CollateralToken/restful.md)
-- [**IPFS Integration**](api/ipfs/restful.md) (for off-chain metadata)
+- [Collateral Pool API](api/erc20CollateralToken/restful.md)
+- [Counterparty Pool API](api/counterpartyPools/restful.md)
+- [IPFS Integration](api/ipfs/restful.md)
+
+These APIs are suitable for teams building custom interfaces, automations, or analytics solutions on top of Pools.
 
 ## SDK Modules
 
-For direct integration into JavaScript/TypeScript environments, the Pools SDK provides ready-to-use modules with contract wrappers and utility functions.
+Defactor’s SDKs are optimized for TypeScript/JavaScript environments and provide utility modules to simplify smart contract interaction, transaction formatting, and wallet integration.
 
-- [**Collateral Pool SDK**](sdk/collateral-pool.md)  
-  Manage ERC-20 token collateralization, borrowing, repayment, and reward logic
+Use SDKs to:
 
-- [**Counterparty Pool SDK**](sdk/counterparty-pool.md)  
-  Handle lender/borrower matching, custom loan terms, and permissioned flows
+- Integrate on-chain lending logic into dApps
+- Estimate gas and prepare transactions
+- Wrap and abstract smart contracts into simple functions
 
-These SDKs abstract low-level contract interactions and provide utilities for gas estimation, transaction formatting, and wallet connection.
+Available modules:
+
+- [**Collateral Pool SDK**](sdk/collateral-pool.md): Manage ERC-20 token collateralization, borrowing, and repayment.
+- [**Counterparty Pool SDK**](sdk/counterparty-pool.md): Handle permissioned lending flows, lender matching, and custom loan terms.
+
+SDKs are ideal for developers looking to integrate directly into web apps and smart contract frontends.
 
 ## Key Capabilities
 
@@ -47,8 +78,8 @@ These SDKs abstract low-level contract interactions and provide utilities for ga
 - Handle automatic liquidations and risk triggers
 - Integrate with wallet providers and frontends
 
-## Getting Started
+## Get Started
 
-1. Choose your integration type: [API](api/engagerestful.md) or [SDK](sdk/collateral-pool.md)
+1. Choose your integration type: [API](api/counterpartyPools/restful.md) or [SDK](sdk/counterparty-pool.md)
 2. Connect your Web3 wallet or backend provider
 3. Start building lending, borrowing, and liquidity flows

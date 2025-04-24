@@ -1,7 +1,36 @@
 ---
+id: engage-frontend-overview
 title: Platform Overview
 sidebar_position: 1
 ---
+
+<div style={{ display: 'flex', flexWrap: 'wrap', color: '#eb9f00', gap: '1rem' }}>
+  <div style={{
+    flex: '1 1 280px',
+    display: 'flex',
+    flexDirection: 'column',
+    rowGap: '1rem',
+    alignItems: 'flex-start',
+    textDecoration: 'underline',
+  }}>
+    <a href="engage-staking-module" className="pagination-nav__label">Staking Module</a>
+    <a href="engage-governance-module" className="pagination-nav__label">Governance Module</a>
+    <a href="engage-buyback-module" className="pagination-nav__label">BuyBack Module</a>
+  </div>
+
+  <div style={{
+    flex: '1 1 280px',
+    display: 'flex',
+    flexDirection: 'column',
+    rowGap: '1rem',
+    alignItems: 'flex-start',
+    textDecoration: 'underline'
+  }}>
+    <a href="engage-vesting-module" className="pagination-nav__label">Vesting Module</a>
+    <a href="engage-ecosystem-module" className="pagination-nav__label">Engage Ecosystem</a>
+    <a href="andmin-section" className="pagination-nav__label">Admin Section</a>
+  </div>
+</div>
 
 ## Introduction
 
@@ -11,11 +40,11 @@ The Engage Toolkit consists of several integrated modules designed to streamline
 
 Key modules include:
 
-- [**Staking**](staking.md) – incentivize and engage communities
-- [**Governance**](governance.md) – on-chain proposal and voting systems
-- [**Buybacks**](buyback.md) – deflationary token mechanics
-- [**Vesting**](vesting.md) – structured token releases
-- [**Admin Section**](admin-section.md) – manage system parameters and users
+- [**Staking**](engage-staking-module) – incentivize and engage communities
+- [**Governance**](engage-governance-module) – on-chain proposal and voting systems
+- [**Buybacks**](engage-buyback-module) – deflationary token mechanics
+- [**Vesting**](engage-vesting-module) – structured token releases
+- [**Admin Section**](andmin-section) – manage system parameters and users
 
 These modules are accessible via a clean, responsive frontend, compatible across devices and optimized for MetaMask, Trust Wallet, and WalletConnect (via RainbowKit).
 

@@ -1,4 +1,5 @@
 ---
+id: graphql-api-authentication
 title: Authentication
 sidebar_position: 1
 ---

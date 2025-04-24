@@ -1,4 +1,5 @@
 ---
+id: smart-contracts-overview
 title: Smart Contracts Overview
 sidebar_position: 1
 ---
@@ -13,8 +14,8 @@ These contracts are responsible for enabling over-collateralized lending, counte
 
 Two core implementations are currently supported:
 
-- [**ERC-20 Collateral Pools**](erc20-collateral-pool-contract/introduction.md) – for permissionless, token-based collateralized lending
-- [**Counterparty Pools**](counterparty-pools-contract/introduction.md) – for structured deals with whitelisted borrower and lender roles
+- [**ERC-20 Collateral Pools**](erc20-collateral-pool-contract/smart-contract-erc20-collateral-pool) – for permissionless, token-based collateralized lending
+- [**Counterparty Pools**](counterparty-pools-contract/counterparty-pools-smart-contract) – for structured deals with whitelisted borrower and lender roles
 
 ## Smart Contract Capabilities
 

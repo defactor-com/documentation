@@ -1,4 +1,5 @@
 ---
+id: restfull-api-add-kyc
 sidebar_position: 9
 ---
 

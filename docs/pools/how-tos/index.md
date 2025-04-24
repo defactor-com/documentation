@@ -1,7 +1,35 @@
 ---
+id: project-onboarding
 title: Pools Client Onboarding
 sidebar_position: 2
 ---
+
+<div style={{ display: 'flex', flexWrap: 'wrap', color: '#eb9f00', gap: '1rem' }}>
+  <div style={{
+    flex: '1 1 280px',
+    display: 'flex',
+    flexDirection: 'column',
+    rowGap: '1rem',
+    alignItems: 'flex-start',
+    textDecoration: 'underline',
+  }}>
+    <a href="new-pools-client-onboarding" className="pagination-nav__label">New Pools Client Onboarding</a>
+    <a href="pools-smart-contracts-configuration" className="pagination-nav__label">Pools Contract Configuration</a>
+    <a href="configuring-pools-intances" className="pagination-nav__label">Configuring Pools Instances</a>
+  </div>
+
+  <div style={{
+    flex: '1 1 280px',
+    display: 'flex',
+    flexDirection: 'column',
+    rowGap: '1rem',
+    alignItems: 'flex-start',
+    textDecoration: 'underline'
+  }}>
+    <a href="whitelabeling-defactor-pools" className="pagination-nav__label">Whitelabeling Defactor Pools</a>
+    <a href="add-and-edit-pool-metadata" className="pagination-nav__label">Add and Edit Pool Metadata</a>
+  </div>
+</div>
 
 ## Introduction
 

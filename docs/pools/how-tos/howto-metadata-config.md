@@ -1,4 +1,5 @@
 ---
+id: add-and-edit-pool-metadata
 title: Add and Edit Pool Metadata
 sidebar_position: 6
 ---

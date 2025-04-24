@@ -1,6 +1,7 @@
 ---
+id: engage-staking-module
 title: Staking Module
-sidebar_position: 2
+sidebar_position: 3
 ---
 
 The staking module enables the creation and management of on-chain incentive programs designed to promote long-term token holding and community participation. As part of the Engage platform, it allows tokens to be locked into configurable pools, rewarding participants based on duration, pool parameters, and overall network engagement.

@@ -1,4 +1,5 @@
 ---
+id: graphql-api-staking-v2
 title: Staking V2
 sidebar_position: 2
 ---
@@ -19,10 +20,10 @@ Create a new plan with the indicated APY and lock duration in seconds.
 
 ```graphql
 mutation ($plan: CreatePlanV2Input!) {
-    v2CreatePlan(plan: $plan) {
-        res
-        success
-    }
+  v2CreatePlan(plan: $plan) {
+    res
+    success
+  }
 }
 ```
 
@@ -88,10 +89,10 @@ Create a new plan with the indicated APY and lock duration in seconds.
 
 ```graphql
 mutation ($plan: UpdatePlanV2Input!) {
-    v2UpdatePlan(plan: $plan) {
-        res
-        success
-    }
+  v2UpdatePlan(plan: $plan) {
+    res
+    success
+  }
 }
 ```
 
@@ -143,7 +144,6 @@ mutation ($plan: UpdatePlanV2Input!) {
 
 ### `Get Plans Dynamic Apr`
 
-
 **HTTP Method**: POST
 
 **Roles**: Guest
@@ -154,10 +154,10 @@ mutation ($plan: UpdatePlanV2Input!) {
 
 ```graphql
 query v2GetPlansDynamicApr($plan: GetDynamicAprInput!) {
-    v2GetPlansDynamicApr(plan: $plan) {
-        res
-        success
-    }
+  v2GetPlansDynamicApr(plan: $plan) {
+    res
+    success
+  }
 }
 ```
 
@@ -214,10 +214,10 @@ Get the expected rewards by user for each open position. Filter by `now`, `day`,
 
 ```graphql
 query ($position: RewardsByUserInput!) {
-    v2GetExpectedRewardsByUser(position: $position) {
-        res
-        success
-    }
+  v2GetExpectedRewardsByUser(position: $position) {
+    res
+    success
+  }
 }
 ```
 
@@ -235,7 +235,7 @@ query ($position: RewardsByUserInput!) {
     }
   }
 }
-````
+```
 
 **Response**
 
@@ -271,10 +271,10 @@ Get the expected rewards for each open position. Filter by `now`, `day`, `week`,
 
 ```graphql
 query ($position: RewardsFilterInput!) {
-    v2GetExpectedRewards(position: $position) {
-        res
-        success
-    }
+  v2GetExpectedRewards(position: $position) {
+    res
+    success
+  }
 }
 ```
 
@@ -327,10 +327,10 @@ Get the rewards claimed by user. Filter by `now`, `day`, `week`, `month`, `six-m
 
 ```graphql
 query ($position: RewardsByUserInput!) {
-    v2GetRewardsReceivedByUser(position: $position) {
-        res
-        success
-    }
+  v2GetRewardsReceivedByUser(position: $position) {
+    res
+    success
+  }
 }
 ```
 
@@ -383,10 +383,10 @@ Get the expected rewards by user for each open position. Address is optional.
 
 ```graphql
 query v2GetTotalValueLocked($position: GetTotalValueLockedInput!) {
-    v2GetTotalValueLocked(position: $position) {
-        res
-        success
-    }
+  v2GetTotalValueLocked(position: $position) {
+    res
+    success
+  }
 }
 ```
 

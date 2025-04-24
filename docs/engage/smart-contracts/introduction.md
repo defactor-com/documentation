@@ -1,7 +1,33 @@
 ---
+id: smart-contracts-overview
 title: Smart Contracts Overview
 sidebar_position: 1
 ---
+
+<div style={{ display: 'flex', flexWrap: 'wrap', color: '#eb9f00', gap: '1rem' }}>
+  <div style={{
+    flex: '1 1 280px',
+    display: 'flex',
+    flexDirection: 'column',
+    rowGap: '1rem',
+    alignItems: 'flex-start',
+    textDecoration: 'underline',
+  }}>
+    <a href="staking-contract/staking-contract-overview" className="pagination-nav__label">Staking Smart Contract</a>
+    <a href="buyback-contract/buyback-contract-overview" className="pagination-nav__label">BuyBack Smart Contract</a>
+  </div>
+
+  <div style={{
+    flex: '1 1 280px',
+    display: 'flex',
+    flexDirection: 'column',
+    rowGap: '1rem',
+    alignItems: 'flex-start',
+    textDecoration: 'underline'
+  }}>
+    <a href="vesting-contract/vesting-contract-overview" className="pagination-nav__label">Vesting Smart Contract</a>
+  </div>
+</div>
 
 ## Introduction
 
@@ -11,9 +37,9 @@ This smart contract layer is modular by design, enabling projects to activate on
 
 Key contract modules include:
 
-- [**Staking**](staking-contract/introduction.md) – automated reward distribution with customizable lockups
-- [**Buyback**](buyback-contract/buyback-contract-config.md) – market-driven token repurchase logic
-- [**Vesting**](vesting-contract/vesting-contract-config.md) – scheduled token release for teams and stakeholders
+- [**Staking**](staking-contract/staking-contract-overview) – automated reward distribution with customizable lockups
+- [**Buyback**](buyback-contract/buyback-contract-overview) – market-driven token repurchase logic
+- [**Vesting**](vesting-contract/vesting-contract-overview) – scheduled token release for teams and stakeholders
 
 These contracts are tightly integrated with the Engage frontend and are designed to interoperate with WalletConnect-compatible wallets. The logic powering these modules has been externally audited to ensure safety and reliability.
 

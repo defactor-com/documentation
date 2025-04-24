@@ -1,4 +1,5 @@
 ---
+id: whitelabeling-defactor-pools
 title: Whitelabeling Defactor Pools
 sidebar_position: 5
 ---

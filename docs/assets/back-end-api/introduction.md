@@ -1,7 +1,21 @@
 ---
+id: backend-overview
 title: Assets Backend API Overview
 sidebar_position: 1
 ---
+
+<div style={{ display: 'flex', flexWrap: 'wrap', color: '#eb9f00', gap: '1rem' }}>
+  <div style={{
+    flex: '1 1 280px',
+    display: 'flex',
+    flexDirection: 'column',
+    rowGap: '1rem',
+    alignItems: 'flex-start',
+    textDecoration: 'underline',
+  }}>
+    <a href="API%20Endpoints/api-authentication" className="pagination-nav__label">ERC-20</a>
+  </div>
+</div>
 
 ## Introduction
 
@@ -11,54 +25,44 @@ This API layer is designed for developers and platform integrators looking to au
 
 This section provides an overview of the API and links to specific endpoint categories.
 
-## Core Capabilities
+## Assets API
 
-The API is structured to support core backend functions required to operate tokenized asset platforms:
+The Assets API exposes endpoints grouped by function, allowing seamless coordination between asset issuance, metadata storage, user communication, and operational analytics.
 
-- **Authentication**  
-  Securely authenticate users and systems using token-based access.  
-  → [View Authentication Endpoints](API%20Endpoints/authentication.md)
+Available modules:
 
-- **Form Submissions**  
-  Handle structured form inputs for onboarding or KYC workflows.  
-  → [View Form API](API%20Endpoints/form.md)
+- [**Authentication**](API%20Endpoints/api-authentication)  
+  Token-based access control for platforms and users.
 
-- **IPFS Integration**  
-  Upload and reference metadata or documents on IPFS through the API.  
-  → [View IPFS API](API%20Endpoints/ipfs.md)
+- [**Form API**](API%20Endpoints/api-form)  
+  Process structured submissions used in onboarding and verification.
 
-- **Mailing Services**  
-  Trigger email notifications for platform events (e.g., onboarding, alerts).  
-  → [View Mailing API](API%20Endpoints/mailing.md)
+- [**IPFS Integration**](API%20Endpoints/api-ipfs)  
+  Upload and link off-chain metadata/documents on IPFS.
 
-- **Platform Statistics**  
-  Retrieve key metrics and analytics about users, assets, and operations.  
-  → [View Stats API](API%20Endpoints/stats.md)
+- [**Mailing API**](API%20Endpoints/api-mailing)  
+  Trigger automated emails for onboarding and platform events.
 
-- **Transactions Management**  
-  Access transaction logs and operational flows between wallets and contracts.  
-  → [View Transactions API](API%20Endpoints/transactions.md)
+- [**Stats API**](API%20Endpoints/api-sats)  
+  Query analytics and operational metrics from the platform.
 
-## Authentication & Access
+- [**Transactions API**](API%20Endpoints/api-transactions)  
+  View historical transaction data between smart contracts and wallets.
 
-The API requires authenticated access via bearer tokens or OAuth flows. Admin, issuer, and viewer roles can be configured depending on the endpoint access level.
+## Key Capabilities
 
-Please contact the Defactor team to obtain:
+- Automate the creation and management of tokenized assets
+- Enforce compliance via structured KYC form workflows
+- Store and retrieve metadata using decentralized IPFS integration
+- Monitor platform-wide metrics and transaction histories
+- Enable platform notifications via customizable email triggers
+- Authenticate platform components and manage user roles securely
 
-- API keys or OAuth credentials
-- Sandbox environment access
-- Technical integration support
+## Get Started
 
-## API Format
+Before integrating with any modules, it's essential to ensure your client is authenticated. This includes access to the `/assets` module, which requires a valid token.
 
-- **Base URL**: `https://api.defactor.network` _(example only)_
-- **Format**: JSON over HTTPS (RESTful)
-- **Rate Limiting**: Applied per key/session
-- **Error Codes**: Standardized HTTP error responses (4xx/5xx)
-
-## Getting Started
-
-1. [Authenticate your client](API%20Endpoints/authentication.md)
+1. [Authenticate your client](API%20Endpoints/api-authentication)
 2. Start integrating with relevant modules (e.g., IPFS, stats, transactions)
 3. Use `/form` and `/mailing` to automate user onboarding and communication
 4. Query `/stats` and `/transactions` for operational insights and transparency

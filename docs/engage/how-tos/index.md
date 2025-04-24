@@ -1,4 +1,5 @@
 ---
+id: project-onboarding
 title: Engage Client Onboarding
 sidebar_position: 1
 ---
@@ -38,7 +39,7 @@ For each staking plan:
 
 Smart contracts must be deployed and initialized with specific configuration parameters.
 
-- Refer to the [Staking Contract Requirements and Parameters Guide](https://defactor.dev/docs/engage/how-tos/smart-contract-config.md) for more details.
+- Refer to the [Staking Contract Requirements and Parameters Guide](../smart-contracts/smart-contracts-overview) for more details.
 
 ### Governance (after initial deployment)
 

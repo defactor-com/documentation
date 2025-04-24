@@ -1,4 +1,5 @@
 ---
+id: staking-contract-configuration
 title: Staking Contract Config
 sidebar_position: 3
 ---

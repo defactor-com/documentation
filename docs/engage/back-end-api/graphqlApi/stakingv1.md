@@ -1,4 +1,5 @@
 ---
+id: graphql-api-staking-v1
 title: Staking V1
 sidebar_position: 2
 ---

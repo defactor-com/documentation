@@ -1,6 +1,6 @@
 ---
-id: buyback-smart-contract
-title: Introduction
+id: buyback-contract-overview
+title: BuyBack Contract Overview
 sidebar_position: 1
 tags:
   - Buyback

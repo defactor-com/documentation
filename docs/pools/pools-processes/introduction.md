@@ -1,8 +1,34 @@
 ---
+id: processes-overview
 title: Pools Processes Overview
 sidebar_position: 1
 description: Learn How to Interact with the Defactor Pools Solution
 ---
+
+<div style={{ display: 'flex', flexWrap: 'wrap', color: '#eb9f00', gap: '1rem' }}>
+  <div style={{
+    flex: '1 1 280px',
+    display: 'flex',
+    flexDirection: 'column',
+    rowGap: '1rem',
+    alignItems: 'flex-start',
+    textDecoration: 'underline',
+  }}>
+    <a href="pool-borrowing-process" className="pagination-nav__label">Pool Borrowing Process</a>
+    <a href="pool-lending-process" className="pagination-nav__label">Pool Lending Process</a>
+  </div>
+
+  <div style={{
+    flex: '1 1 280px',
+    display: 'flex',
+    flexDirection: 'column',
+    rowGap: '1rem',
+    alignItems: 'flex-start',
+    textDecoration: 'underline'
+  }}>
+    <a href="pool-liquidation-process" className="pagination-nav__label">Pool Loquidating Process</a>
+  </div>
+</div>
 
 ## Introduction
 
@@ -12,9 +38,9 @@ Each process is designed to be secure, transparent, and governed by smart contra
 
 ## Included Guides
 
-- [**Lending**](lending.md) – How to supply stablecoins to a pool, earn rewards, and manage your position
-- [**Borrowing**](borrowing.md) – How to borrow against your tokenized assets and repay loans
-- [**Liquidation**](liquidation.md) – What happens when loans are not repaid and how collateral is managed
+- [**Lending**](pool-lending-process) – How to supply stablecoins to a pool, earn rewards, and manage your position
+- [**Borrowing**](pool-borrowing-process) – How to borrow against your tokenized assets and repay loans
+- [**Liquidation**](pool-liquidation-process) – What happens when loans are not repaid and how collateral is managed
 
 These process guides are relevant to both **ERC-20 Collateral Pools** and **Counterparty Pools**, with differences noted where applicable.
 
@@ -26,11 +52,3 @@ These guides are useful for:
 - Project teams launching custom lending pools
 - Liquidators and automation bots
 - Developers integrating pool actions into their platforms
-
-## Next Steps
-
-Start by exploring each process to understand your role in the lending lifecycle:
-
-- [Lending](lending.md)
-- [Borrowing](borrowing.md)
-- [Liquidation](liquidation.md)

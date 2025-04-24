@@ -1,5 +1,6 @@
 ---
-title: Pool Liquidation Process 
+id: pool-liquidation-process
+title: Pool Liquidation Process
 sidebar_position: 3
 ---
 
