@@ -4,31 +4,6 @@ title: Smart Contracts Overview
 sidebar_position: 1
 ---
 
-<div style={{ display: 'flex', flexWrap: 'wrap', color: '#eb9f00', gap: '1rem' }}>
-  <div style={{
-    flex: '1 1 280px',
-    display: 'flex',
-    flexDirection: 'column',
-    rowGap: '1rem',
-    alignItems: 'flex-start',
-    textDecoration: 'underline',
-  }}>
-    <a href="staking-contract/staking-contract-overview" className="pagination-nav__label">Staking Smart Contract</a>
-    <a href="buyback-contract/buyback-contract-overview" className="pagination-nav__label">BuyBack Smart Contract</a>
-  </div>
-
-  <div style={{
-    flex: '1 1 280px',
-    display: 'flex',
-    flexDirection: 'column',
-    rowGap: '1rem',
-    alignItems: 'flex-start',
-    textDecoration: 'underline'
-  }}>
-    <a href="vesting-contract/vesting-contract-overview" className="pagination-nav__label">Vesting Smart Contract</a>
-  </div>
-</div>
-
 ## Introduction
 
 The **Engage Smart Contracts** provide a foundational layer for decentralized community operations and ecosystem alignment across the Defactor platform. These contracts enable transparent, auditable, and automated management of core economic mechanisms, including incentives, governance, and scheduled distributions.

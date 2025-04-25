@@ -4,34 +4,6 @@ title: Platform Overview
 sidebar_position: 1
 ---
 
-<div style={{ display: 'flex', flexWrap: 'wrap', color: '#eb9f00', gap: '1rem' }}>
-  <div style={{
-    flex: '1 1 280px',
-    display: 'flex',
-    flexDirection: 'column',
-    rowGap: '1rem',
-    alignItems: 'flex-start',
-    textDecoration: 'underline',
-  }}>
-    <a href="engage-staking-module" className="pagination-nav__label">Staking Module</a>
-    <a href="engage-governance-module" className="pagination-nav__label">Governance Module</a>
-    <a href="engage-buyback-module" className="pagination-nav__label">BuyBack Module</a>
-  </div>
-
-  <div style={{
-    flex: '1 1 280px',
-    display: 'flex',
-    flexDirection: 'column',
-    rowGap: '1rem',
-    alignItems: 'flex-start',
-    textDecoration: 'underline'
-  }}>
-    <a href="engage-vesting-module" className="pagination-nav__label">Vesting Module</a>
-    <a href="engage-ecosystem-module" className="pagination-nav__label">Engage Ecosystem</a>
-    <a href="andmin-section" className="pagination-nav__label">Admin Section</a>
-  </div>
-</div>
-
 ## Introduction
 
 The platform provides a modular and extensible infrastructure tailored for decentralized finance (DeFi) applications, with a particular focus on the tokenization, governance, and utilization of real-world assets (RWA). By combining critical components such as staking, governance, buybacks, and vesting within a single architecture, the platform enables efficient on-chain financial operations aligned with regulatory and community-driven frameworks.

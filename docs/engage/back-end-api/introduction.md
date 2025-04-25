@@ -4,30 +4,6 @@ title: Engage Backend API Overview
 sidebar_position: 1
 ---
 
-<div style={{ display: 'flex', flexWrap: 'wrap', color: '#eb9f00', gap: '1rem' }}>
-  <div style={{
-    flex: '1 1 280px',
-    display: 'flex',
-    flexDirection: 'column',
-    rowGap: '1rem',
-    alignItems: 'flex-start',
-    textDecoration: 'underline',
-  }}>
-    <a href="ERC-20/erc20-factory-smart-contract" className="pagination-nav__label">ERC-20</a>
-  </div>
-
-  <div style={{
-    flex: '1 1 280px',
-    display: 'flex',
-    flexDirection: 'column',
-    rowGap: '1rem',
-    alignItems: 'flex-start',
-    textDecoration: 'underline'
-  }}>
-    <a href="ERC-3643/erc3643-smart-contract" className="pagination-nav__label">ERC-3643</a>
-  </div>
-</div>
-
 ## Introduction
 
 The **Engage Backend API** is the engine behind Defactor's governance, staking, vesting, and KYC systems. It enables platforms and applications to programmatically interact with the Engage module, allowing for fully integrated community participation, compliance workflows, and token utility tracking.
