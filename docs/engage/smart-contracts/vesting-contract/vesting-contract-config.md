@@ -1,6 +1,7 @@
 ---
+id: vesting-contract-configuration
 title: Vesting Contract Config
-sidebar_position: 1
+sidebar_position: 3
 ---
 
 # Vesting Contract Configuration

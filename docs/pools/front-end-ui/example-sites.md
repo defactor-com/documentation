@@ -1,4 +1,5 @@
 ---
+id: pools-frontend-examples
 sidebar_position: 3
 ---
 

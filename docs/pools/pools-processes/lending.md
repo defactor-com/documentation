@@ -1,5 +1,6 @@
 ---
-title: Pool Lending Process 
+id: pool-lending-process
+title: Pool Lending Process
 sidebar_position: 2
 ---
 
@@ -19,8 +20,8 @@ Once a pool matures no further loans can be taken from the available funds. If a
 
 The rewards on your pools deposits are calculated by taking into account three different variables:
 
-- **The Duration of your deposit:** The duration of your deposit refers to the time between your deposit action and the time the pool matures  ( (Pool maturity date) - ( Deposit date)) measured in minutes to accurately capture the time your deposit has been sitting in the pool.
+- **The Duration of your deposit:** The duration of your deposit refers to the time between your deposit action and the time the pool matures ( (Pool maturity date) - ( Deposit date)) measured in minutes to accurately capture the time your deposit has been sitting in the pool.
 - **The interest rate of the pool:** Reflected in the pool metric calculated on a per minute basis. APY/(360 Days*24 Hours*60 Minutes).
 - **The utilisation ratio:** Measures the effectiveness of the capital deposited in the pool. This metric reflects how much of the capital deposited in the pool is being utilised by active loans and is measured as (Borrowed Pool capital)/ (Total supplied pool capital).
 
-The effective reward function becomes: Capital deposited in the Pool * Duration * Interest rate * utilisation ratio.
+The effective reward function becomes: Capital deposited in the Pool _ Duration _ Interest rate \* utilisation ratio.

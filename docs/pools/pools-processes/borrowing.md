@@ -1,5 +1,6 @@
 ---
-title: Pool Borrowing Process 
+id: pool-borrowing-process
+title: Pool Borrowing Process
 sidebar_position: 1
 ---
 
@@ -15,10 +16,10 @@ If you choose to borrow from a pool, start by connecting your wallet to the plat
 
 When you have an open borrow position (borrowing liquidity from a pool) interest is accrued on your position every minute that the position is open until the maturity date of the pool. When deciding which pool suits your needs you first need to look at the APY (annual percentage yield) of that pool. If you want to know how much interest you will be paying every minute your position is open you simply have to take into consideration 2 metrics:
 
-- **The Duration of your deposit:** The duration of your deposit refers to the time between your deposit action and the time the pool matures  ( (Pool maturity date) - ( Deposit date)) measured in minutes to accurately capture the time your deposit has been sitting in the pool.
+- **The Duration of your deposit:** The duration of your deposit refers to the time between your deposit action and the time the pool matures ( (Pool maturity date) - ( Deposit date)) measured in minutes to accurately capture the time your deposit has been sitting in the pool.
 - **The interest rate of the pool:** Reflected in the pool metric calculated on a per minute basis. APY/(360 Days*24 Hours*60 Minutes).
 
-Your interest payment is then calculated as follows: Amount Borrowed * Duration * Interest rate
+Your interest payment is then calculated as follows: Amount Borrowed _ Duration _ Interest rate
 
 ### Loan Repayment
 

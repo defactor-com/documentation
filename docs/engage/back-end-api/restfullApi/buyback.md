@@ -1,4 +1,5 @@
 ---
+id: restfull-api-buyback
 title: BuyBack
 sidebar_position: 6
 ---
@@ -23,13 +24,13 @@ Retrieve the total buy and send amount from the buyback contract.
 
 ```json
 {
-      "global_buyback_view_aggregate": {
-      "aggregate": {
-        "sum": {
-          "buy_amount": 3.047851264858275e+23,
-          "spend_amount": 5000000000
-        }
+  "global_buyback_view_aggregate": {
+    "aggregate": {
+      "sum": {
+        "buy_amount": 3.047851264858275e23,
+        "spend_amount": 5000000000
       }
     }
+  }
 }
 ```

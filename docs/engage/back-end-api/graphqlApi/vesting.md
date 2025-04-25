@@ -1,4 +1,5 @@
 ---
+id: graphql-api-vesting
 title: Vesting
 sidebar_position: 3
 ---
@@ -19,10 +20,10 @@ Add a new batch schedule with vesting schedules and their beneficieries.
 
 ```graphql
 mutation ($schedule: CreateScheduleInput!) {
-    v1CreateSchedule(schedule: $schedule) {
-        res
-        success
-    }
+  v1CreateSchedule(schedule: $schedule) {
+    res
+    success
+  }
 }
 ```
 
@@ -93,10 +94,10 @@ Retrieve the historical emissions from the day group by date.
 
 ```graphql
 mutation ($release: HistoricalEmissionsInput!) {
-    v1GetHistoricalEmissions(release: $release) {
-        res
-        success
-    }
+  v1GetHistoricalEmissions(release: $release) {
+    res
+    success
+  }
 }
 ```
 

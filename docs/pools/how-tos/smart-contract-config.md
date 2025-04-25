@@ -1,6 +1,7 @@
 ---
+id: pools-smart-contracts-configuration
 title: Pools Contract Configuration
-sidebar_position: 2
+sidebar_position: 3
 ---
 
 ## Contract Requirements and Parameters

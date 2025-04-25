@@ -1,4 +1,5 @@
 ---
+id: pools-react-components
 sidebar_position: 2
 ---
 

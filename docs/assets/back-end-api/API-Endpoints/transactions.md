@@ -1,4 +1,5 @@
 ---
+id: api-transactions
 title: Transactions
 sidebar_position: 1
 ---
@@ -19,9 +20,7 @@ The security of the JWT is because it is signed by a secret key and has a config
 
 Upon receiving a request, Hasura decodes and validates the JWT, which contains user account data, and their corresponding role. If the role lacks the necessary permissions or the token is invalid, expired or missing, the request is promptly rejected.
 
-
 ## Transactions
-
 
 ### `Get wallet assets`
 
@@ -62,7 +61,6 @@ Upon successful completion of a request, the server will issue a status code of 
   ]
 }
 ```
-
 
 ### `Get user's transactions`
 
@@ -122,7 +120,6 @@ Fetches the contact name of a wallet address for a specific creator.
   "creator": "0xa8983Fe59b2F08F9F1B3E833c5D47B256F7FE0d5",
   "wallet": "0xb8983Fe59b2F08F9F1B3E833c5D47B256F7FE0d1"
 }
-
 ```
 
 **Response**
@@ -157,7 +154,6 @@ Fetches the balance for a specific token from the blockchain.
   "owner": "0xb8983Fe59b2F08F9F1B3E833c5D47B256F7FE0d1",
   "token": "0x0000000000000000000000000000000000000000"
 }
-
 ```
 
 **Response**
@@ -174,7 +170,7 @@ Upon successful completion of a request, the server will issue a status code of 
 
 ### `Update transaction hash`
 
-Updates hash of a transaction object. 
+Updates hash of a transaction object.
 
 **HTTP Request Method**: POST
 
@@ -241,14 +237,15 @@ Set the correct states in the db after broadcasting transaction via the frontend
 
 ```json
 {
-    "chainId": 1,
-    "sender": "0xb8983Fe59b2F08F9F1B3E833c5D47B256F7FE0d1",
-    "value": "10000000000000000",
-    "type": "transaction",
-    "assetId": "eb60b6d7...",
-    "receiver": "0x18983Fe59b2F08F9F1B3E833c5D47B256F7FE0d2"
+  "chainId": 1,
+  "sender": "0xb8983Fe59b2F08F9F1B3E833c5D47B256F7FE0d1",
+  "value": "10000000000000000",
+  "type": "transaction",
+  "assetId": "eb60b6d7...",
+  "receiver": "0x18983Fe59b2F08F9F1B3E833c5D47B256F7FE0d2"
 }
 ```
+
 **Response**
 
 Upon successful completion of a request, the server will issue a status code of 200. Successful response should look like this:
@@ -291,6 +288,7 @@ Creates a transaction for creating user's ERC3643 tokens.
   "chainId": 1
 }
 ```
+
 **Response**
 
 Upon successful completion of a request, the server will issue a status code of 200. Successful response should look like this:
@@ -329,6 +327,7 @@ Creates a transaction for creating user's ERC20 tokens.
   "chainId": 1
 }
 ```
+
 **Response**
 
 Upon successful completion of a request, the server will issue a status code of 200. Successful response should look like this:
@@ -365,6 +364,7 @@ Creates a transaction for burning user's ERC3643 tokens.
   "chainId": 1
 }
 ```
+
 **Response**
 
 Upon successful completion of a request, the server will issue a status code of 200. Successful response should look like this:
@@ -401,6 +401,7 @@ Creates a transaction for burning user's ERC20 tokens.
   "chainId": 1
 }
 ```
+
 **Response**
 
 Upon successful completion of a request, the server will issue a status code of 200. Successful response should look like this:
@@ -438,6 +439,7 @@ Creates a transaction for burning user's ERC20 tokens.
   "chainId": 1
 }
 ```
+
 **Response**
 
 Upon successful completion of a request, the server will issue a status code of 200. Successful response should look like this:
@@ -470,6 +472,7 @@ Checks if wallet identity contract is already deployed for a given user.
   "chainId": 1
 }
 ```
+
 **Response**
 
 Upon successful completion of a request, the server will issue a status code of 200. Successful response should look like this:
@@ -556,7 +559,7 @@ Registers the new identity contract in the protocol.
 **Request Body**
 
 ```json
-      {
+{
   "creator": "0xb8983Fe59b2F08F9F1B3E833c5D47B256F7FE0d1",
   "tokenAddress": "0xe2cEEfA9b6301280D785652C62cfbcf4d0B48283",
   "walletAddress": "0xb8983Fe59b2F08F9F1B3E833c5D47B256F7FE0d1",
@@ -591,7 +594,7 @@ Creates a transaction for burning user's ERC3643 tokens.
 **Request Body**
 
 ```json
-      {
+{
   "creator": "0xb8983Fe59b2F08F9F1B3E833c5D47B256F7FE0d1",
   "tokenAddress": "0xe2cEEfA9b6301280D785652C62cfbcf4d0B48283",
   "walletAddress": "0xb8983Fe59b2F08F9F1B3E833c5D47B256F7FE0d1",

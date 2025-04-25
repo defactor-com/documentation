@@ -1,11 +1,13 @@
 ---
+id: whitelabeling-defactor-pools
 title: Whitelabeling Defactor Pools
-sidebar_position: 4
+sidebar_position: 5
 ---
 
 This document outlines the process of whitelabeling, detailing how to customize Defactor pools instances to make them unique for each client.
 
 ## Overview
+
 Whitelabeling allows clients to apply their branding to Defactor pool instances. This guide covers all necessary configuration values and files.
 
 ## Organization Data Configuration
@@ -22,7 +24,7 @@ Specify the basic organizational details using the `NEXT_PUBLIC_ORGANIZATION_DAT
 ```
 
 ### Assets Configuration
- 
+
 Define the branding assets with the `NEXT_PUBLIC_ASSETS_APP` variable:
 
 ```json
@@ -36,8 +38,7 @@ Define the branding assets with the `NEXT_PUBLIC_ASSETS_APP` variable:
 
 ### Branding Customization
 
-Customize the visual theme of the application using the  `branding.json` file. This file controls the color schemes and other UI elements.
-
+Customize the visual theme of the application using the `branding.json` file. This file controls the color schemes and other UI elements.
 
 #### Color Schemes
 
@@ -66,21 +67,15 @@ Customize the visual theme of the application using the  `branding.json` file. T
         "liquidated": "#D21A4D",
         "awaitingLiquidation": "#E0A225"
       },
-      "barChartColors": [
-        "#5A5BEB",
-        "#26A66B80"
-      ],
-      "lineChartColors": [
-        "#26A66B",
-        "#5A5BEB",
-        "#D21A4D"
-      ]
+      "barChartColors": ["#5A5BEB", "#26A66B80"],
+      "lineChartColors": ["#26A66B", "#5A5BEB", "#D21A4D"]
     }
   }
 }
 ```
 
 #### Site Metadata
+
 Customize the site metadata for different languages, ensuring that the platform is accessible and understandable to a diverse audience:
 
 ```json

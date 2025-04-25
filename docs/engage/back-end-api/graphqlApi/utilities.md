@@ -1,4 +1,5 @@
 ---
+id: graphql-api-utilities
 title: Utilities
 sidebar_position: 5
 ---
@@ -19,10 +20,10 @@ Update the metadata of the contract token.
 
 ```graphql
 mutation ($token: GlobalTokenMetadataInput!) {
-    v1UpdateGlobalTokenMetadata(token: $token) {
-        res
-        success
-    }
+  v1UpdateGlobalTokenMetadata(token: $token) {
+    res
+    success
+  }
 }
 ```
 
@@ -66,7 +67,7 @@ mutation ($token: GlobalTokenMetadataInput!) {
 
 ```graphql
 query getTokenPrice($symbol: String!) {
-  token_price: global_latest_token_price(where: {symbol:{_eq:$symbol}}){
+  token_price: global_latest_token_price(where: { symbol: { _eq: $symbol } }) {
     price
     symbol
     date
@@ -114,8 +115,8 @@ query getConfig {
 **GraphQL Body**:
 
 ```graphql
-query v1GetCirculatingSupply ($global: CirculatingSupplyInput) {
-  v1GetCirculatingSupply (global: $global) {
+query v1GetCirculatingSupply($global: CirculatingSupplyInput) {
+  v1GetCirculatingSupply(global: $global) {
     res
     success
   }

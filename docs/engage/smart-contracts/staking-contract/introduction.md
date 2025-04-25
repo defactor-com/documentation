@@ -1,6 +1,6 @@
 ---
-id: staking-smart-contract
-title: Introduction
+id: staking-contract-overview
+title: Staking Contract Overview
 sidebar_position: 1
 tags:
   - Staking

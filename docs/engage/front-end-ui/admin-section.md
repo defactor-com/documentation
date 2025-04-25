@@ -1,4 +1,5 @@
 ---
+id: andmin-section
 title: Admin Section
 sidebar_position: 7
 ---

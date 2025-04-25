@@ -1,7 +1,7 @@
 ---
-id: vesting-smart-contract
-title: Introduction
-sidebar_position: 3
+id: vesting-contract-overview
+title: Vesting Contract Overview
+sidebar_position: 1
 tags:
   - Vesting
 ---

@@ -1,6 +1,7 @@
 ---
+id: buyback-contract-configuration
 title: Buyback Contract Config
-sidebar_position: 1
+sidebar_position: 3
 ---
 
 # BuyBack Contract Configuration

@@ -1,6 +1,7 @@
 ---
+id: engage-buyback-module
 title: BuyBack Module
-sidebar_position: 4
+sidebar_position: 5
 ---
 
 The BuyBack module offers a transparent framework for implementing deflationary tokenomics by leveraging protocol-generated revenue to repurchase tokens from the open market. Designed to strengthen token value and demonstrate commitment to long-term ecosystem sustainability, this mechanism serves as an automated link between platform usage and token demand.

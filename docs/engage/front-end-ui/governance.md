@@ -1,6 +1,7 @@
 ---
+id: engage-governance-module
 title: Governance Module
-sidebar_position: 3
+sidebar_position: 4
 ---
 
 The governance module enables decentralized decision-making by allowing token holders to vote on proposals that influence the strategic and operational direction of a project. Integrated within the Engage platform, it provides a structured and transparent mechanism to facilitate protocol evolution, parameter updates, treasury actions, and other community-driven changes.

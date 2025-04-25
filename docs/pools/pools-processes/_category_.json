@@ -2,8 +2,8 @@
     "label": "Pools Processes",
     "position": 4,
     "link": {
-      "type": "generated-index",
-      "description": "Learn How to Interact with the Defactor Pools Solution"
+      "type": "doc",
+      "id": "processes-overview"
     }
   }
   

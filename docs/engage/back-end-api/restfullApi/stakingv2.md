@@ -1,4 +1,5 @@
 ---
+id: restfull-api-staking-v2
 title: Staking V2
 sidebar_position: 3
 ---

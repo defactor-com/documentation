@@ -1,6 +1,7 @@
 ---
+id: engage-vesting-module
 title: Vesting Module
-sidebar_position: 5
+sidebar_position: 6
 ---
 
 The Vesting module enables time-based, structured distribution of tokens according to predefined schedules. It is typically used to manage allocations for contributors, investors, core team members, and ecosystem participants, ensuring long-term alignment with project objectives and token supply discipline.

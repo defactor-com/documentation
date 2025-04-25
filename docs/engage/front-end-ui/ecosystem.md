@@ -1,6 +1,7 @@
 ---
-title: Engage Ecosystem
-sidebar_position: 6
+id: engage-ecosystem-module
+title: Ecosystem Module
+sidebar_position: 2
 ---
 
 The Engage ecosystem is a modular suite of smart contract tools and dashboards designed to streamline the deployment and management of token-based incentive programs. It empowers web3 projects, DAOs, and digital asset communities to create trustless reward mechanisms that foster participation, loyalty, and alignment between stakeholders.

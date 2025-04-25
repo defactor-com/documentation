@@ -1,7 +1,8 @@
 {
   "label": "Staking Contract",
-  "position": 1,
+  "position": 2,
   "link": {
-    "type": "generated-index"
+    "type": "doc",
+    "id": "staking-contract-overview"
   }
 }

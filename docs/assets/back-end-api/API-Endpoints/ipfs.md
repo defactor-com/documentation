@@ -1,4 +1,5 @@
 ---
+id: api-ipfs
 title: IPFS
 sidebar_position: 1
 ---

@@ -1,4 +1,5 @@
 ---
+id: restfull-api-staking-v1
 title: Staking V1
 sidebar_position: 2
 ---
@@ -677,190 +678,180 @@ Update the metadata of the contract token.
 ## Error Reference
 
 ### Error Response Format
+
 The errors have the GraphQL error schema, an object with an `errors` array property where each item has the following schema:
 
-| Property | Description |
-| --- | --- |
-| `message` | The description of the error |
+| Property     | Description                                                                    |
+| ------------ | ------------------------------------------------------------------------------ |
+| `message`    | The description of the error                                                   |
 | `extensions` | An object with the path to the field that caused the error, and the error code |
 
 **Examples**
 
 The variable has a wrong type:
 
-``` json
+```json
 {
-  "errors":
-    [
-      {
-        "message": "expected a string for type 'String', but found a number",
-        "extensions":
-          {
-            "path": "$.selectionSet.v1Stake.args.position.amount",
-            "code": "validation-failed"
-          }
+  "errors": [
+    {
+      "message": "expected a string for type 'String', but found a number",
+      "extensions": {
+        "path": "$.selectionSet.v1Stake.args.position.amount",
+        "code": "validation-failed"
       }
-    ]
+    }
+  ]
 }
 ```
 
 The variable is missing in the request body:
 
-``` json
+```json
 {
-  "errors":
-    [
-      {
-        "message": "missing required field 'planId'",
-        "extensions":
-          {
-            "path": "$.selectionSet.v1Stake.args.position.planId",
-            "code": "validation-failed"
-          }
+  "errors": [
+    {
+      "message": "missing required field 'planId'",
+      "extensions": {
+        "path": "$.selectionSet.v1Stake.args.position.planId",
+        "code": "validation-failed"
       }
-    ]
+    }
+  ]
 }
 ```
 
 The field does not exists or the role has no permissions:
 
-``` json
+```json
 {
-  "errors":
-    [
-      {
-        "message": "field 'v1CreatePlan' not found in type: 'mutation_root'",
-        "extensions":
-          {
-            "path": "$.selectionSet.v1CreatePlan",
-            "code": "validation-failed"
-          }
+  "errors": [
+    {
+      "message": "field 'v1CreatePlan' not found in type: 'mutation_root'",
+      "extensions": {
+        "path": "$.selectionSet.v1CreatePlan",
+        "code": "validation-failed"
       }
-    ]
+    }
+  ]
 }
 ```
 
 The variable is not in the request body schema:
 
-``` json
+```json
 {
-  "errors":
-    [
-      {
-        "message": "Unexpected variable stake",
-        "extensions":
-          {
-            "path": "$",  
-            "code": "bad-request" 
-          }
+  "errors": [
+    {
+      "message": "Unexpected variable stake",
+      "extensions": {
+        "path": "$",
+        "code": "bad-request"
       }
-    ]
+    }
+  ]
 }
 ```
 
 The GraphQL variables object is not a valid json:
 
-``` json
+```json
 {
-    "errors": [
-        {
-            "message": "Error in $: Failed reading: satisfy. Expecting object value at X",
-            "extensions": {
-                "path": "$",
-                "code": "invalid-json"
-            }
-        }
-    ]
+  "errors": [
+    {
+      "message": "Error in $: Failed reading: satisfy. Expecting object value at X",
+      "extensions": {
+        "path": "$",
+        "code": "invalid-json"
+      }
+    }
+  ]
 }
 ```
 
 The endpoint does not exists:
 
-``` json
+```json
 {
-  "errors":
-    [
-      {
-        "message": "Endpoint not found",
-        "extensions":
-          {
-            "path": "$",
-            "code": "not-found"
-          }
+  "errors": [
+    {
+      "message": "Endpoint not found",
+      "extensions": {
+        "path": "$",
+        "code": "not-found"
       }
-    ]
+    }
+  ]
 }
 ```
 
 There is no pool with the provided id:
 
-``` json
+```json
 {
-  "errors":
-    [
-      {
-        "message": "Plan id 400 does not exist",
-        "extensions":
-        {
-          "path": "$",
-          "code": "unexpected"
-        }
+  "errors": [
+    {
+      "message": "Plan id 400 does not exist",
+      "extensions": {
+        "path": "$",
+        "code": "unexpected"
       }
-    ]
+    }
+  ]
 }
 ```
 
 ### Types of Error
+
 **General**
 
-| **Error message** | **Reason** |
-| --- | --- |
-| Could not verify JWT: `JWT error` | The JWT is invalid |
-| Invalid request payload input | The input provided has a invalid value |
-| Cannot convert `X` to BigInt | The string provided is not a integer number |
+| **Error message**                 | **Reason**                                  |
+| --------------------------------- | ------------------------------------------- |
+| Could not verify JWT: `JWT error` | The JWT is invalid                          |
+| Invalid request payload input     | The input provided has a invalid value      |
+| Cannot convert `X` to BigInt      | The string provided is not a integer number |
 
 **Session**
 
-| **Error message** | **Reason** |
-| --- | --- |
+| **Error message**                                | **Reason**                                       |
+| ------------------------------------------------ | ------------------------------------------------ |
 | The account does not have sufficient permissions | The user is not authorized to perform the action |
-| Invalid message or signature | The message provided is invalid |
-| Invalid or expired session | The user session is invalid |
+| Invalid message or signature                     | The message provided is invalid                  |
+| Invalid or expired session                       | The user session is invalid                      |
 
 **Addresses**
 
-| **Error message** | **Reason** |
-| --- | --- |
-| Neither Index nor Id can be negative | The index or id are negative |
-| Address does not follow the ethereum address format | The address provided is invalid |
-| Sender address is not admin | The address does not have the required admin role in the `staking` contract |
-| Collateral token does not follow the ethereum address format | The collateral token address is invalid |
+| **Error message**                                            | **Reason**                                                                  |
+| ------------------------------------------------------------ | --------------------------------------------------------------------------- |
+| Neither Index nor Id can be negative                         | The index or id are negative                                                |
+| Address does not follow the ethereum address format          | The address provided is invalid                                             |
+| Sender address is not admin                                  | The address does not have the required admin role in the `staking` contract |
+| Collateral token does not follow the ethereum address format | The collateral token address is invalid                                     |
 
 **Plan**
 
-| **Error message** | **Reason** |
-| --- | --- |
-| Invalid plan id `X` | There is no plan with the provided id |
-| Plan id is not unique | "0x" does not uniquely identify a Plan |
-| Lock duration cannot be negative | The lock duration is not a positive number |
-| APY cannot be negative | The APY is not a positive number |
-| Neither staking nor reward end date can be negative | Occurs when trying to set negative dates |
+| **Error message**                                     | **Reason**                                                                         |
+| ----------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| Invalid plan id `X`                                   | There is no plan with the provided id                                              |
+| Plan id is not unique                                 | "0x" does not uniquely identify a Plan                                             |
+| Lock duration cannot be negative                      | The lock duration is not a positive number                                         |
+| APY cannot be negative                                | The APY is not a positive number                                                   |
+| Neither staking nor reward end date can be negative   | Occurs when trying to set negative dates                                           |
 | Staking end time cannot be less than rewards end time | Occurs when trying to set dates with a staking end time less than rewards end time |
 
 **Staking**
 
-| **Error message** | **Reason** |
-| --- | --- |
-| Stake amount too low | Must stake more than the minimum |
-| Invalid stake index | The position does not exists |
-| Staking has ended | The staking end time has passed and new positions cannot be created |
-| Stake already unstaked | An already unstaked position cannot be unstaked again |
-| Stake is locked | The lock duration has not passed |
+| **Error message**      | **Reason**                                                          |
+| ---------------------- | ------------------------------------------------------------------- |
+| Stake amount too low   | Must stake more than the minimum                                    |
+| Invalid stake index    | The position does not exists                                        |
+| Staking has ended      | The staking end time has passed and new positions cannot be created |
+| Stake already unstaked | An already unstaked position cannot be unstaked again               |
+| Stake is locked        | The lock duration has not passed                                    |
 
 **Pagination**
 
-| **Error Message** | **Reason** |
-| --- | --- |
-| Offset cannot be negative | The provided offset is negative |
-| Limit cannot be negative or 0 | The provided limit is negative or zero |
-| Max limit allowed is `X` | The provided limit is equal to the maximum results per page, use a smaller value |
+| **Error Message**             | **Reason**                                                                       |
+| ----------------------------- | -------------------------------------------------------------------------------- |
+| Offset cannot be negative     | The provided offset is negative                                                  |
+| Limit cannot be negative or 0 | The provided limit is negative or zero                                           |
+| Max limit allowed is `X`      | The provided limit is equal to the maximum results per page, use a smaller value |

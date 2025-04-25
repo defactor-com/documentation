@@ -1,4 +1,5 @@
 ---
+id: api-form
 title: Form
 sidebar_position: 1
 ---
@@ -19,7 +20,6 @@ The security of the JWT is because it is signed by a secret key and has a config
 
 Upon receiving a request, Hasura decodes and validates the JWT, which contains user account data, and their corresponding role. If the role lacks the necessary permissions or the token is invalid, expired or missing, the request is promptly rejected.
 
-
 ## Form
 
 ### `Get form templates`
@@ -36,7 +36,7 @@ Fetches all community templates and templates that were created by an user suppl
 
 ```json
 {
-  "creator":"0xa8983Fe59b2F08F9F1B3E833c5D47B256F7FE0d5"
+  "creator": "0xa8983Fe59b2F08F9F1B3E833c5D47B256F7FE0d5"
 }
 ```
 
@@ -125,7 +125,7 @@ Fetches all assets created by a given address. The assets are divided based on t
 
 ```json
 {
-  "creator":"0xa8983Fe59b2F08F9F1B3E833c5D47B256F7FE0d5"
+  "creator": "0xa8983Fe59b2F08F9F1B3E833c5D47B256F7FE0d5"
 }
 ```
 
@@ -195,7 +195,7 @@ Fetches a specific asset and all its details.
 
 ```json
 {
-  "uuid":"8e075898..."
+  "uuid": "8e075898..."
 }
 ```
 
@@ -297,7 +297,7 @@ Upon successful completion of a request, the server will issue a status code of 
 
 ### `Get form entry`
 
-Fetches form entry with all the fields associated. 
+Fetches form entry with all the fields associated.
 
 **HTTP Request Method**: GET
 
@@ -309,7 +309,7 @@ Fetches form entry with all the fields associated.
 
 ```json
 {
-  "uuid":"7739a0e2..."
+  "uuid": "7739a0e2..."
 }
 ```
 
@@ -404,9 +404,9 @@ Posts a new instance of form entry.
 
 ```json
 {
-  "asset_id":"9839c4b5",
-  "metadata_id":"1731c298",
-  "creator":"0xa8983Fe59b2F08F9F1B3E833c5D47B256F7FE0d5",
+  "asset_id": "9839c4b5",
+  "metadata_id": "1731c298",
+  "creator": "0xa8983Fe59b2F08F9F1B3E833c5D47B256F7FE0d5",
   "status": "draft"
 }
 ```
@@ -441,16 +441,16 @@ Posts a new template field associated with a form template.
 
 ```json
 {
-  "field_length":"full",
-  "field_name":"Name",
-  "field_type":"number",
-  "is_dynamic":true,
-  "is_required":true,
-  "is_tooltip":true,
-  "metadata_id":"bd04f5cc...",
-  "placeholder":"Field",
+  "field_length": "full",
+  "field_name": "Name",
+  "field_type": "number",
+  "is_dynamic": true,
+  "is_required": true,
+  "is_tooltip": true,
+  "metadata_id": "bd04f5cc...",
+  "placeholder": "Field",
   "position_in_metadata": 0,
-  "suffix":"usd",
+  "suffix": "usd",
   "tooltip_text": ""
 }
 ```
@@ -485,9 +485,9 @@ Post a field value for a form entry.
 
 ```json
 {
-  "entry_metadata_id":"751d7024...",
-  "field_id":"853e6f1e...",
-  "value":"365"
+  "entry_metadata_id": "751d7024...",
+  "field_id": "853e6f1e...",
+  "value": "365"
 }
 ```
 
@@ -522,7 +522,7 @@ Posts an url for an associated asset.
 ```json
 {
   "asset_id": "866cd4ff...",
-  "url":"https://someLink.com"
+  "url": "https://someLink.com"
 }
 ```
 
@@ -556,17 +556,17 @@ Posts a new instance of asset, associated with the entry form.
 
 ```json
 {
-  "asset_type":"erc20",
-  "asset_icon":"/icon.svg",
-  "supply":"2000000",
-  "status":"draft",
-  "spf":"spf",
-  "price":"3000000000",
-  "description":"Description",
+  "asset_type": "erc20",
+  "asset_icon": "/icon.svg",
+  "supply": "2000000",
+  "status": "draft",
+  "spf": "spf",
+  "price": "3000000000",
+  "description": "Description",
   "chain_id": 1,
-  "asset_name":"Asset 1",
-  "asset_category":"realEstate",
-  "creator":"0xa8983Fe59b2F08F9F1B3E833c5D47B256F7FE0d5",
+  "asset_name": "Asset 1",
+  "asset_category": "realEstate",
+  "creator": "0xa8983Fe59b2F08F9F1B3E833c5D47B256F7FE0d5",
   "asset_symbol": "AS1"
 }
 ```
