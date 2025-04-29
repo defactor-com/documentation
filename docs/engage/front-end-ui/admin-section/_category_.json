@@ -1,0 +1,8 @@
+{
+    "label": "Engage Admin UI",
+    "position": 1,
+    "link": {
+      "type": "doc",
+      "id": "admin-section"
+    }
+  }
