@@ -12,7 +12,7 @@ The module is designed to support evolving platform needs, with extensibility fo
 
 ---
 
-## 📌 Overview
+## Overview
 
 Defactor Engage provides a suite of powerful tools to administer and interact with the token economy. Admins can:
 
@@ -21,6 +21,7 @@ Defactor Engage provides a suite of powerful tools to administer and interact wi
 - Oversee governance proposals and votes
 - Monitor token buybacks
 - Maintain transparency with community stakeholders
+- Track vesting schedules and manage token distribution
 
 ## Role-Based Access
 
@@ -32,17 +33,20 @@ Only wallets designated as Admins can:
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 **Accessing the Admin Dashboard**
-1. Go to https://engage.defactor.com/dashboard
+1. Go to your Defactor Engage instance.
 2. Connect your wallet (MetaMask, Trust Wallet, or any WalletConnect-supported wallet)
 3. Ensure you're on the correct network (Polygon, Ethereum, Base, BNB Chain, or Algorand)
 4. Admin privileges will automatically unlock advanced configuration options if your wallet is whitelisted
+5. You will see the admin section in the main navigation bar
+
+![sidebar menu](../../../../static/img/front-end/sidebar-menu-admin-section.png)
 
 ---
 
-## 📊 Token Metrics & Wallets
+## Token Metrics & Wallets
 
 **Token Supply & Distribution**
 
@@ -61,11 +65,12 @@ Engage displays all project-owned wallets, including:
 - Live balances
 - Transaction history
 
-Admins can assign labels and explanations to each wallet for added clarity.
+Admins can assign labels and explanations to each wallet for added clarity. 
+> 💡 *The ecosystem wallets configured here will be shown in the Ecosystem Dashboard. There is a default wallet that will be automatically assigned any unallocated funds.*
 
 ---
 
-## 🔐 Staking Management
+## Staking Management
 
 Admins can create and manage staking pools with full control over:
 
@@ -90,7 +95,7 @@ Admins can create and manage staking pools with full control over:
 
 ---
 
-## 🗳️ Governance Module
+## Governance Module
 
 Engage supports decentralized governance using token-weighted voting.
 
@@ -114,7 +119,7 @@ Engage supports decentralized governance using token-weighted voting.
 
 ---
 
-## 🔁 Buyback Dashboard
+## Buyback Dashboard
 
 The **Buyback** section shows all automated buyback operations, including:
 
@@ -131,7 +136,7 @@ Admins can:
 
 ---
 
-## 🧑‍💼 Identity and Permission Management
+## Identity and Permission Management
 
 Admins can whitelist users for:
 
@@ -147,7 +152,7 @@ Add a wallet address, assign roles, and save. You can also revoke roles at any t
 
 ---
 
-🔄 Network & Token Configuration
+## Network & Token Configuration
 
 Admins can:
 - Add support for new blockchain networks (EVM-compatible)
@@ -159,11 +164,26 @@ Admins can:
 
 ---
 
-<!-- 
-## Functional Areas
+## Vesting Schedules
 
-- **Admin Accounts** – Manage permissions
-- **Ecosystem Wallets** – Add/update public wallet references
-- **Proposals** – Launch and edit governance proposals
-- **Pools** – Configure parameters like maturity dates, token pairs, and caps
-- **Vesting** – Create or modify token release batches -->
+The Vesting tab allows admins to securely manage token vesting for:
+- Team members
+- Advisors and investors
+- Ecosystem partners
+
+**Admin Capabilities:**
+- Create new vesting schedules
+- View unlock timelines and progress
+- Cancel or adjust schedules (with proper rights)
+- Monitor released vs. locked amounts
+
+**How to Create a Vesting Entry:**
+1. Navigate to Admin > Vesting
+2. Click Create Vesting Schedule
+3. Input:
+   - Wallet address
+   - Total amount
+   - Start date
+   - Cliff (optional)
+   - Vesting duration & frequency
+4. Confirm via wallet
