@@ -16,7 +16,7 @@ Key modules include:
 - [**Governance**](engage-governance-module) – on-chain proposal and voting systems
 - [**Buybacks**](engage-buyback-module) – deflationary token mechanics
 - [**Vesting**](engage-vesting-module) – structured token releases
-- [**Admin Section**](andmin-section) – manage system parameters and users
+- [**Admin Section**](admin-section) – manage system parameters and users
 
 These modules are accessible via a clean, responsive frontend, compatible across devices and optimized for MetaMask, Trust Wallet, and WalletConnect (via RainbowKit).
 
