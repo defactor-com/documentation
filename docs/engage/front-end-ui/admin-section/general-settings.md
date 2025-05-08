@@ -73,7 +73,7 @@ To remove an admin:
 
 ---
 
-## Manage Tokens
+<!-- ## Manage Tokens
 
 The **Manage Tokens** section of the Engage Admin Panel enables administrators to control and configure all project tokens that are integrated with the Engage platform. This includes basic metadata setup, network mapping, regulatory settings (e.g., KYC/AML enforcement), and compatibility for use in staking, governance, or collateralization.
 
@@ -109,11 +109,11 @@ To modify a token:
 - Update Logo URL and/or Price Source.
 - Click on **Save Changes**
 
-<!-- To remove a token:
+To remove a token:
 - Click the **Remove** icon.
 - Confirm the action through your connected wallet. 
 
-> ⚠️ Token removal will disable its use in staking, proposals, and dashboards. It does not affect previously issued tokens.-->
+> ⚠️ Token removal will disable its use in staking, proposals, and dashboards. It does not affect previously issued tokens.
 ---
 
 ## Best Practices
@@ -124,3 +124,4 @@ To modify a token:
 - Use clear naming and labeling conventions for easier wallet UX.
 
 ---
+-->
