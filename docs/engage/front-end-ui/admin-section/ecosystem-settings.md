@@ -80,10 +80,10 @@ The **Add Ecosystem Addresses** flow in the Engage Admin Panel allows project ad
 
 Adding project wallets to the Ecosystem section allows Engage to:
 
-- Display token balances for each wallet in real time
-- Attribute wallet activity (e.g., staking, rewards, treasury) to specific categories
-- Populate the Allocation and Token Distribution charts with verified data
-- Ensure full visibility and traceability for audits and community reporting
+- Display token balances for each wallet in real time.
+- Attribute wallet activity (e.g., staking, rewards, treasury) to specific categories.
+- Populate the Allocation and Token Distribution charts with verified data.
+- Ensure full visibility and traceability for audits and community reporting.
 
 ### How to Add a New Ecosystem Wallet
 
@@ -103,3 +103,9 @@ Follow these steps in the **Admin Section > Ecosystem View**:
 1. Click the **Edit** button at the right of the wallet you want to edit.
 2. Modify the desired parameters.
 3. Click the **Confirm** button.
+
+### Best Practices
+
+- Use **distinct wallet addresses** for each function (e.g., one for liquidity, one for staking).
+- Choose **clear and standardized labels** to avoid confusion.
+- **Verify** addresses before saving to avoid tracking third-party or incorrect accounts.
