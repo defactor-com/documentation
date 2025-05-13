@@ -1,4 +1,4 @@
----
+<!-- ---
 id: buyback-settings
 title: Buyback Settings
 sidebar_position: 4
@@ -39,4 +39,4 @@ Buyback wallets are designated treasury or contract-controlled wallets used to:
 
 4. **Auditability**
 
-    All buyback wallet transactions are logged and made visible through the Buyback section in Engage for transparency.
+    All buyback wallet transactions are logged and made visible through the Buyback section in Engage for transparency. -->
