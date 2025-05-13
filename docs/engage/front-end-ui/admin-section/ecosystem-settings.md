@@ -58,7 +58,7 @@ These are typically held in reserve by the project’s treasury and can be used 
 Each project-owned wallet is displayed in the Ecosystem section with:
 
 - **Wallet address**
-- **Balance of $FACTR or other project tokens**
+- **Balance of project tokens**
 - **Custom label** for its purpose (e.g., "Staking Rewards", "Liquidity Provision", "Vesting Treasury")
 - **Network location** (Ethereum, Polygon, Base, etc.)
 
@@ -73,6 +73,8 @@ Each project-owned wallet is displayed in the Ecosystem section with:
 | Development | Internal Dev or DAO infrastructure budgets |
 
 ### Add Ecosystem Addresses
+
+![add ecosystem address](add-ecosystem-address.png)
 
 The **Add Ecosystem Addresses** flow in the Engage Admin Panel allows project administrators to register new wallet addresses that belong to the project. These wallets will be monitored and categorized as part of your token ecosystem.
 

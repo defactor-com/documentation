@@ -54,11 +54,11 @@ The proposal will now be visible on the governance dashboard for eligible voters
 
 ### Editing or Canceling Proposals
 
-Admins can:
-- **Edit** proposals **before voting starts**
-- **Cancel** proposals under exceptional circumstances (e.g., malicious content, protocol error)
+<!--Admins can:
+ - **Edit** proposals **before voting starts**
+ - **Cancel** proposals under exceptional circumstances (e.g., malicious content, protocol error)
 
-> ⚠️ Canceling live proposals may require DAO approval depending on project setup.
+> ⚠️ Canceling live proposals may require DAO approval depending on project setup. -->
 
 ---
 
@@ -76,21 +76,16 @@ The **Members** tab allows admins to manage the list of wallets authorized to:
 
 ### How to Add a Member
 
-1. Go to **Governance > Members**
+1. Go to **Admin Section > Governance > Members**
 2. Click **“Add Member”**
 3. Enter the wallet address
-4. Assign permissions:
-   - **Can Create Proposals**
-   - **Can Vote** (if restricted)
-   - **KYC Verified** (for ERC-3643 tokens)
+4. Assign role
 5. Click **Save** and confirm via wallet
 
 ### How to Remove a Member
 
 - Click the **trash icon** next to a wallet address
 - Confirm wallet signature to complete removal
-
-> 🧠 All governance actions taken by members are logged for transparency and auditability.
 
 ---
 
