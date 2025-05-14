@@ -6,7 +6,9 @@ sidebar_position: 3
 
 The **Ecosystem** section in the Engage Admin Panel offers a transparent overview of all wallet addresses, token flows, and allocations within your project’s ecosystem. This section allows administrators to ensure financial clarity and trust by clearly showing how project tokens are held, used, and distributed.
 
-### Overview of the Ecosystem Section?
+### Overview of the Ecosystem Section
+
+![ecosystem settings](../../../../static/img/front-end/ecosystem-settings.png)
 
 This section centralizes all wallet-related information and real-time analytics for your token ecosystem. It acts as a **public ledger and admin ledger** that showcases:
 
@@ -18,6 +20,8 @@ This section centralizes all wallet-related information and real-time analytics 
 ---
 
 ## Understanding the Allocation graphic
+
+![allocation graphic](../../../../static/img/front-end/allocation-graphic.png)
 
 The Allocation Graphic in the Ecosystem section visually represents how your project’s token supply is distributed across key stakeholder categories and functions. It provides a real-time, visual summary of tokenomics in action.
 
@@ -55,6 +59,8 @@ These are typically held in reserve by the project’s treasury and can be used 
 
 ## Ecosystem Addresses
 
+![ecosystem addresses](../../../../static/img/front-end/ecosystem-addresses.png)
+
 Each project-owned wallet is displayed in the Ecosystem section with:
 
 - **Wallet address**
@@ -74,8 +80,6 @@ Each project-owned wallet is displayed in the Ecosystem section with:
 
 ### Add Ecosystem Addresses
 
-![add ecosystem address](add-ecosystem-address.png)
-
 The **Add Ecosystem Addresses** flow in the Engage Admin Panel allows project administrators to register new wallet addresses that belong to the project. These wallets will be monitored and categorized as part of your token ecosystem.
 
 ### Why Add Ecosystem Addresses?
@@ -89,6 +93,8 @@ Adding project wallets to the Ecosystem section allows Engage to:
 
 ### How to Add a New Ecosystem Wallet
 
+![add ecosystem address](../../../../static/img/front-end/add-ecosystem-address.png)
+
 Follow these steps in the **Admin Section > Ecosystem View**:
 
 1. Click the **“Add Wallet** button at the top of the wallet list.
@@ -101,6 +107,8 @@ Follow these steps in the **Admin Section > Ecosystem View**:
 5. Click the **Confirm** button.
 
 ### Edit Ecosystem Addresses
+
+![edit ecosystem address](../../../../static/img/front-end/edit-ecosystem-address.png)
 
 1. Click the **Edit** button at the right of the wallet you want to edit.
 2. Modify the desired parameters.

@@ -11,6 +11,8 @@ This section provides core functionalities for monitoring, managing, and ensurin
 
 ## Overview of the General Section
 
+![admin section general settings](../../../../static/img/front-end/admin-section-general.png)
+
 The General section of the Engage Admin Panel serves as the operational cockpit for administrators, offering a centralized view of all essential token economy data and ecosystem management. It is designed to help you oversee and manage your token ecosystem with precision and transparency.
 
 - Token supply and distribution
@@ -50,19 +52,24 @@ Admin accounts are critical to the governance and operational lifecycle of a tok
 
 ### Adding or Removing Admins
 
-To update admin access:
+To add an admin:
 
 1. Navigate to the **Admin Section > General > Admin Accounts** section.
 2. You will see a table of current admin wallet addresses.
 3. Click **“Add Admin”** and input a valid wallet address.
 4. Confirm the action via your connected wallet.
 
+![add admin account](../../../../static/img/front-end/add-admin-account.png)
+
 To remove an admin:
 - Click the trash icon next to their address.
 - Confirm the wallet signature to complete removal.
 
+![remove admin](../../../../static/img/front-end/remove-admin.png)
+
 > 🛡️ *Only the primary contract owner or governance-approved multisig can update admin privileges.*
 
+---
 
 **Best Practices for Admin Account Management**
 
@@ -70,58 +77,3 @@ To remove an admin:
 - Assign admin privileges based on roles (e.g., staking manager, vesting manager).
 - Regularly review the admin list and remove inactive accounts.
 - For DAOs, rotate admin keys or multisig signers in sync with governance cycles.
-
----
-
-<!-- ## Manage Tokens
-
-The **Manage Tokens** section of the Engage Admin Panel enables administrators to control and configure all project tokens that are integrated with the Engage platform. This includes basic metadata setup, network mapping, regulatory settings (e.g., KYC/AML enforcement), and compatibility for use in staking, governance, or collateralization.
-
----
-
-## Overview
-
-Managing tokens is a core function of ecosystem administration. Whether your project supports utility tokens like **$FACTR** or regulatory-compliant tokens such as **ERC-3643 assets**, this section ensures they are properly configured for cross-platform usage and transparency.
-
----
-
-### Adding a New Token
-
-To register a new token on Engage:
-
-1. Go to **Admin > General > Manage Tokens**
-2. Click **“Add Token”**
-3. Fill in the following details:
-   - **Token Contract Address**
-   - **Token Name**
-   - **Token Symbol**
-   - **Token Logo URL**
-   - **Price Source** (The Manual Price checkbox lets the user manually input a price if the token is not listed in Coingecko.)
-
-> ☑️ Engage automatically verifies the token’s contract metadata and checks its validity on-chain.
-
----
-
-## Editing or Removing Tokens
-
-To modify a token:
-- Click the **Edit** icon next to the token.
-- Update Logo URL and/or Price Source.
-- Click on **Save Changes**
-
-To remove a token:
-- Click the **Remove** icon.
-- Confirm the action through your connected wallet. 
-
-> ⚠️ Token removal will disable its use in staking, proposals, and dashboards. It does not affect previously issued tokens.
----
-
-## Best Practices
-
-- Verify all contract addresses carefully — incorrect inputs may misrepresent your token.
-- Periodically review token usage across modules (staking, ART, governance).
-- Apply compliance controls for regulated assets to ensure legal consistency.
-- Use clear naming and labeling conventions for easier wallet UX.
-
----
--->
