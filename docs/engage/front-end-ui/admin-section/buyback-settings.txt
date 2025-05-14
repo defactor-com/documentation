@@ -1,0 +1,42 @@
+<!-- ---
+id: buyback-settings
+title: Buyback Settings
+sidebar_position: 4
+---
+
+The **Buyback** section in the Engage Admin Panel gives project teams visibility into all token buyback operations. Token buybacks are an essential part of Defactor’s circular token economy — used to reduce circulating supply, support token value, and return value to the ecosystem.
+
+---
+
+## Buyback Wallets
+
+**Buyback wallets** are specific blockchain wallet addresses used within the **Engage platform** to carry out and manage **token buybacks**.
+
+Here’s a breakdown of what they are, how they work, and why they matter:
+
+### What are Buyback Wallets?
+
+Buyback wallets are designated treasury or contract-controlled wallets used to:
+
+1. Receive protocol revenue (typically in USDC or other stablecoins).
+2. Trigger token buybacks on the open market.
+3. Lock repurchased tokens for a fixed period (e.g., 12 months).
+4. Track and report buyback activity in the Engage dashboard.
+
+### How they work in Engage?
+
+1. **Revenue Collection**
+
+    Fees from toolkit usage (Assets, Engage, Pools) are funneled into the buyback wallet.
+
+2. **Conversion & Purchase**
+
+    The wallet's funds are used to purchase tokens (e.g. $FACTR) on the open market via a DEX (like Uniswap).
+
+3. **Token Lockup**
+
+    Purchased tokens are transferred to a lock or vesting wallet and are unavailable for circulation during the lockup period.
+
+4. **Auditability**
+
+    All buyback wallet transactions are logged and made visible through the Buyback section in Engage for transparency. -->
