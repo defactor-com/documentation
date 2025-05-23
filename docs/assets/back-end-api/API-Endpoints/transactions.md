@@ -20,6 +20,8 @@ The security of the JWT is because it is signed by a secret key and has a config
 
 Upon receiving a request, Hasura decodes and validates the JWT, which contains user account data, and their corresponding role. If the role lacks the necessary permissions or the token is invalid, expired or missing, the request is promptly rejected.
 
+---
+
 ## Transactions
 
 ### `Get wallet assets`
@@ -346,7 +348,7 @@ Upon successful completion of a request, the server will issue a status code of 
 
 Creates a transaction for burning user's ERC3643 tokens.
 
-> Note: Only contract owner can burn user's tokens.
+> 🔒 *Only contract owner can burn user's tokens.*
 
 **HTTP Request Method**: POST
 
@@ -383,7 +385,7 @@ Upon successful completion of a request, the server will issue a status code of 
 
 Creates a transaction for burning user's ERC20 tokens.
 
-> Note: Only contract owner can burn user's tokens.
+> 🔒 *Only contract owner can burn user's tokens.*
 
 **HTTP Request Method**: POST
 
@@ -420,7 +422,7 @@ Upon successful completion of a request, the server will issue a status code of 
 
 Creates a transaction for burning user's ERC20 tokens.
 
-> Note: Only contract owner can burn user's tokens.
+> 🔒 *Only contract owner can burn user's tokens.*
 
 **HTTP Request Method**: POST
 

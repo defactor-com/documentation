@@ -16,6 +16,8 @@ The security of the JWT is because it is signed by a secret key and has a config
 
 Upon receiving a request, Hasura decodes and validates the JWT, which contains user account data, and their corresponding role. If the role lacks the necessary permissions or the token is invalid, expired or missing, the request is promptly rejected.
 
+---
+
 ## `Login`
 
 Retrieve an access token with the role of the user and a refresh token to regenerate a new access token.
@@ -53,6 +55,8 @@ Retrieve an access token with the role of the user and a refresh token to regene
 }
 ```
 
+---
+
 ## `Restore Session`
 
 Retrieve a new access token with the role of the user and a refresh token to regenerate a new access token.
@@ -88,6 +92,8 @@ Retrieve a new access token with the role of the user and a refresh token to reg
   }
 }
 ```
+
+---
 
 ## `Update Account`
 

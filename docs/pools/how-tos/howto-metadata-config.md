@@ -4,13 +4,13 @@ title: Add and Edit Pool Metadata
 sidebar_position: 6
 ---
 
-# Adding Pool Metadata Using the API
-
 In Defactor, pool metadata is stored in a database rather than on-chain. As a result, when new Defactor instances are deployed (or if the database is cleared for any reason), the metadata must be manually saved back to the database. The best way to do this is by calling the API endpoint `/v1/update-pool-metadata`.
 
 For more information, please see the [API documentation](https://defactor.dev/docs/back-end-api/erc20CollateralToken/restful#update-pool-metadata).
 
 **Note:** Pools without metadata are hidden from the UI.
+
+---
 
 ## Metadata Structure
 

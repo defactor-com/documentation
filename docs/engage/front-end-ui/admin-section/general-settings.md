@@ -4,7 +4,6 @@ title: General Settings
 sidebar_position: 2
 ---
 
-## Welcome to the General Section of the Engage Admin Panel!
 This section provides core functionalities for monitoring, managing, and ensuring transparency across your project's token ecosystem.
 
 ---
@@ -37,7 +36,7 @@ Admins gain real-time access to essential token metrics:
 - Buybacks Completed: The cumulative number of tokens repurchased from the market via automated buyback programs.
 - Staked Tokens: The volume of tokens currently locked into staking pools.
 
-> *Tip: Use this section to monitor the project's health and growth based on staking and buyback dynamics.*
+> _Tip: Use this section to monitor the project's health and growth based on staking and buyback dynamics._
 
 ## Ecosystem Wallet Management
 

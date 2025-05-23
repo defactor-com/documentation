@@ -4,8 +4,6 @@ title: Smart Contracts Overview
 sidebar_position: 1
 ---
 
-## Introduction
-
 The **Engage Smart Contracts** provide a foundational layer for decentralized community operations and ecosystem alignment across the Defactor platform. These contracts enable transparent, auditable, and automated management of core economic mechanisms, including incentives, governance, and scheduled distributions.
 
 This smart contract layer is modular by design, enabling projects to activate only the components they need, while ensuring interoperability with broader DeFi tooling. Each module automates a specific function critical to maintaining an efficient and community-driven decentralized finance (DeFi) protocol.
@@ -18,6 +16,8 @@ Key contract modules include:
 
 These contracts are tightly integrated with the Engage frontend and are designed to interoperate with WalletConnect-compatible wallets. The logic powering these modules has been externally audited to ensure safety and reliability.
 
+---
+
 ## Smart Contract Capabilities
 
 Each module provides distinct programmatic capabilities:
@@ -27,6 +27,8 @@ Each module provides distinct programmatic capabilities:
 - **Auditability**: Activity is traceable via transaction logs and block explorers.
 - **EVM Compatibility**: Deployed on Ethereum, Polygon, Base, and BNB Chain.
 - **Upgradeable Paths**: Support for modular upgrades while preserving data state.
+
+---
 
 ## Integration with Engage UI
 

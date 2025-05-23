@@ -4,11 +4,11 @@ title: Engage Backend API Overview
 sidebar_position: 1
 ---
 
-## Introduction
-
 The **Engage Backend API** is the engine behind Defactor's governance, staking, vesting, and KYC systems. It enables platforms and applications to programmatically interact with the Engage module, allowing for fully integrated community participation, compliance workflows, and token utility tracking.
 
 The API supports both **GraphQL** and **RESTful** interfaces, providing flexibility for different development stacks and use cases.
+
+---
 
 ## GraphQL API
 
@@ -28,6 +28,8 @@ Available modules:
 - [Vesting](graphqlApi/graphql-api-vesting)
 - [Authentication](graphqlApi/graphql-api-authentication)
 - [Utilities](graphqlApi/graphql-api-utilities)
+
+---
 
 ## RESTful API
 
@@ -53,6 +55,8 @@ Available endpoints:
 - [Authentication](restfullApi/restfull-api-authentication)
 - [Utilities](restfullApi/restfull-api-utilities)
 
+---
+
 ## Key Capabilities
 
 - Launch and manage flexible staking programs
@@ -61,6 +65,8 @@ Available endpoints:
 - Track token vesting and distribution across users and teams
 - Monitor and configure token buyback activities
 - Enable secure user authentication and metadata access
+
+---
 
 ## Get Started
 

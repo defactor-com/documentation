@@ -28,6 +28,8 @@ sidebar_position: 1
   </div>
 </div>
 
+---
+
 ## Introduction
 
 The **Assets Smart Contracts** provide the infrastructure for compliant and scalable tokenization of real-world assets (RWAs) within the ecosystem. These contracts allow issuers to create, manage, and control digital asset representations on the blockchain, aligned with industry standards and regulatory requirements.
@@ -41,6 +43,8 @@ Key smart contract modules include:
 
 These contracts are directly accessible via the Assets platform UI and are compatible with standard Ethereum tooling and wallet providers.
 
+---
+
 ## Smart Contract Capabilities
 
 Each contract type supports a range of programmable features for asset lifecycle management:
@@ -51,6 +55,8 @@ Each contract type supports a range of programmable features for asset lifecycle
 - **Mint/Burn Support** – manage supply over time with on-chain authorization
 - **Auditability** – full transparency via on-chain logs and wallet-level traceability
 - **Multi-chain Deployment** – contracts are available on Ethereum, Polygon, and compatible EVM chains
+
+---
 
 ## Platform Integration
 

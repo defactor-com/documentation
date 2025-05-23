@@ -8,9 +8,13 @@ tags:
 
 `Staking.sol` is a modular, upgradeable smart contract that allows users to stake ERC20 tokens in predefined plans to earn rewards over time. It supports multiple staking strategies, lock periods, and dynamic reward distribution via token ratio tracking.
 
+---
+
 ## Contract Versions
 
 This contract is in production and supports upgradeable functionality using OpenZeppelin’s proxy patterns. Future iterations may include auto-compounding features and integrations with governance mechanisms.
+
+---
 
 ## Staking Smart Contract Documentation
 
@@ -129,4 +133,4 @@ Users can unstake funds and claim rewards after lock duration:
 - **Role-Based Permissions**: Admin-only access for sensitive functions.
 - **Token Accounting**: Ensures sufficient balance for reward payouts.
 
-> Note: The staking contract is designed for flexibility across use cases, including variable lock periods, restaking strategies, and APY management.
+> 📌 *The staking contract is designed for flexibility across use cases, including variable lock periods, restaking strategies, and APY management.*

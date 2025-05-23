@@ -6,15 +6,19 @@ sidebar_position: 2
 
 `ERC20.sol` this contract extends the Openzeppelin's base ERC20 token implementation.
 
+---
+
 ## Contract versions
 
 There is currently only 1 version of ERC-20 token.
+
+---
 
 ## Smart Contract Documentation
 
 ### Overview
 
-The ERC20 token smart contract is used as a template for ERC20-factory for deploying new ERC2 tokens. It extends the 
+The ERC20 token smart contract is used as a template for ERC20-factory for deploying new ERC2 tokens. It extends the
 base ERC-20 implementation with burn functionality, which is available for contract owners.
 
 ### Dependencies
