@@ -6,8 +6,6 @@ sidebar_position: 1
 
 ## Introduction
 
-## Introduction
-
 The **Pools Smart Contracts** module underpins Defactor's decentralized lending infrastructure. It consists of multiple contract implementations tailored to support a range of financial and regulatory requirements.
 
 These contracts are responsible for enabling over-collateralized lending, counterparty agreement tracking, interest accrual, and automated liquidation logic—all on-chain and fully auditable.
@@ -16,6 +14,8 @@ Two core implementations are currently supported:
 
 - [**ERC-20 Collateral Pools**](erc20-collateral-pool-contract/smart-contract-erc20-collateral-pool) – for permissionless, token-based collateralized lending
 - [**Counterparty Pools**](counterparty-pools-contract/counterparty-pools-smart-contract) – for structured deals with whitelisted borrower and lender roles
+
+---
 
 ## Smart Contract Capabilities
 
@@ -27,6 +27,8 @@ Each contract type supports key features for decentralized loan lifecycle manage
 - **Liquidation Logic** – automatically enforce repayment deadlines and liquidate overdue positions
 - **Auditability** – full on-chain history of deposits, loans, repayments, and liquidations
 - **Multi-chain Deployment** – available on Ethereum, Polygon, Base, and other EVM-compatible networks
+
+---
 
 ## Platform Integration
 

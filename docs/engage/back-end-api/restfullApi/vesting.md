@@ -59,6 +59,8 @@ Add a new batch schedule with vesting schedules and their beneficieries.
 }
 ```
 
+---
+
 ## Releases
 
 ### `Get Historical Emissions`

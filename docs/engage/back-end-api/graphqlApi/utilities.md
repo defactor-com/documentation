@@ -83,6 +83,8 @@ query getTokenPrice($symbol: String!) {
 }
 ```
 
+---
+
 ## `Config`
 
 **HTTP Method**: POST
@@ -105,6 +107,8 @@ query getConfig {
 ```json
 {}
 ```
+
+---
 
 ## `Get Circulating Supply`
 

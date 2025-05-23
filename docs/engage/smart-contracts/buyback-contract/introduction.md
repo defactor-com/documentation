@@ -8,9 +8,13 @@ tags:
 
 `Buyback.sol` is a smart contract designed to automate the repurchase of FACTR tokens from the open market using USDC. These repurchased tokens are locked and later distributed to designated vaults or custom addresses.
 
+---
+
 ## Contract Versions
 
 This contract has an audited version, with future iterations potentially expanding its flexibility, efficiency, and support for multi-chain integrations.
+
+---
 
 ## Buyback Smart Contract Documentation
 
@@ -105,4 +109,4 @@ FACTR is split according to the predefined bps (basis points) distribution array
 - **1-Year Lock**: Prevents immediate token release post-buyback, enhancing tokenomics design.
 - **Fallback Protection**: Ensures that even if users delay custom withdraws, tokens remain locked safely.
 
-> Note: All buyback data is stored on-chain and accessible via public getters or events. Future UI integrations (e.g., Engage dashboard) are expected to display this information transparently.
+> 📌 *All buyback data is stored on-chain and accessible via public getters or events.* Future UI integrations (e.g., Engage dashboard) are expected to display this information transparently.

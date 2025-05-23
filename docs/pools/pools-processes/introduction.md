@@ -30,11 +30,11 @@ description: Learn How to Interact with the Defactor Pools Solution
   </div>
 </div>
 
-## Introduction
-
 The **Pools Processes** section provides a step-by-step breakdown of how users and integrators interact with the Defactor Pools system. Whether you're lending capital, borrowing against tokenized assets, or managing liquidation events, these guides help you navigate the lifecycle of a pool with clarity and confidence.
 
 Each process is designed to be secure, transparent, and governed by smart contracts.
+
+---
 
 ## Included Guides
 
@@ -43,6 +43,8 @@ Each process is designed to be secure, transparent, and governed by smart contra
 - [**Liquidation**](pool-liquidation-process) – What happens when loans are not repaid and how collateral is managed
 
 These process guides are relevant to both **ERC-20 Collateral Pools** and **Counterparty Pools**, with differences noted where applicable.
+
+---
 
 ## Use Cases
 

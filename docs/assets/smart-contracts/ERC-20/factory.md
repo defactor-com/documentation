@@ -6,9 +6,13 @@ sidebar_position: 1
 
 `ERC20Factory.sol` this contract allows anyone to create new instances of `ERC20` tokens.
 
+---
+
 ## Contract versions
 
 There is currently only 1 version of ERC-20 factory.
+
+---
 
 ## Smart Contract Documentation
 

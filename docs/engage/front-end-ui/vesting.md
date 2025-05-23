@@ -12,6 +12,8 @@ The module is compatible with any ERC-20 token and supports a wide range of vest
 
 A live example of the module in action can be accessed via the [Engage Platform Demo](https://sharingblock-engage.defactor.dev/vesting).
 
+---
+
 ## Core Functionality
 
 - Visualize your vesting timeline and upcoming unlocks
@@ -26,11 +28,15 @@ Vesting is structured into three event categories:
 - **Upcoming Events** – Future scheduled releases.
 - **Completed Events** – Finalized distributions and fully vested tokens.
 
+---
+
 ## Vesting Details
 
 - Tokens are locked and released based on predefined schedules
 - Users see their **Allocated**, **Claimed**, and **Remaining** balances
 - Vesting events are categorized into **Ongoing**, **Upcoming**, and **Completed**
+
+---
 
 ## How to Claim
 
@@ -38,6 +44,8 @@ Vesting is structured into three event categories:
 2. Connect your wallet and select the vesting plan
 3. If tokens are unlocked, click **Claim**
 4. Confirm the transaction in your wallet
+
+---
 
 ## Dashboard Elements
 

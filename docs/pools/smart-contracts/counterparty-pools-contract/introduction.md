@@ -9,11 +9,15 @@ tags:
 
 `Pools.sol` this contract allows users to create, manage, and interact with funding pools using `ERC20`, `ERC721`, and `ERC1155` tokens.
 
+---
+
 ## Contract versions
 
 This contract has two versions, the first one is the `default` version where anyone can create a pool by paying 200 tokens in the base token of the contract. On the other hand, the second version only allows the creation of the pool to the contract admin who is the only borrower.
 
 First, the version where anyone can create their pools will be detailed, and at the end the differences with the `admin-only` version will be contrasted.
+
+---
 
 ## Pool
 
@@ -24,6 +28,8 @@ The pool has some important characteristics:
 - Every pool has a soft cap, hard cap, a deadline, and a minimum APR. The soft cap will be the minimum amount of funds that the pool must reach to be considered `ACTIVE`. The hard cap will be the maximum amount of funds that the pool can reach, the deadline is the maximum time that the pool can be open to receive funds and be rewarded by the borrower, and, finally the minimum APR is the interest applied to the total committed that the deposited rewards must exceed to close the pool. If the pool owner (the borrower) tries to collect the pool before reaching the soft cap, the contract will return an error reverting the transaction but it will also no only restrict the pool owner of collecting the funds but also the lender if they try to un-commit from the pool before it reaches the soft cap. On the other hand, the hard cap will be used to revert transactions if a lender tries to commit to a pool and it overpasses the hard cap and also the deadline will be used to revert transactions if someone tries to collect, archive, commit, un-commit at a wrong time.
 - This pool has the advantage of receiving 3 types of tokens as collateral that follows the `ERC20`, `ERC721` and `ERC1155` standards. The pool owner can provide as much collateral as they want at the same time to the same pool.
 - When a pool is created its default status is `CREATED`, and then when it reaches the soft cap and the owner collects it, the pool status will be changed to `ACTIVE`, later when the owner decides to close it, the pool status will be updated to `CLOSED` and finally, when the pool is archived, the pool status will be `ARCHIVED`. All of these status changes are made by trigger events.
+
+---
 
 ## Roles
 
@@ -114,6 +120,8 @@ Once the owner has collected the funds from the pool, the lender will be able to
 In simple words it means, the rewards is equal to the percentage of the amount lent times the total rewards minus the amount already claimed.
 
 ![Pools Claim](/img/flowchart/Pools_claim.png)
+
+---
 
 ## Admin-only version
 

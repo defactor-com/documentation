@@ -4,9 +4,9 @@ title: Configuring Pools Instances
 sidebar_position: 4
 ---
 
-# Configuring a New Pools Instance
-
 To deploy a new instance of Defactor Pools, you'll need to provide specific environment variables. This document lists the variables required, grouped into categories for clarity.
+
+---
 
 ## Frontend UI
 
@@ -46,6 +46,8 @@ These variables configure the user-facing interface of the pools instance:
 
 - **GOOGLE_APPLICATION_CREDENTIALS, NEXT_PUBLIC_GA_TRACKING_CODE:** Google Application and Analytics credentials.
 
+---
+
 ## Backend API
 
 These variables configure the backend API:
@@ -76,6 +78,8 @@ These variables configure the backend API:
 
 - **HAPI_SERVICES_CONFIG:** JSON configuration for services.
 
+---
+
 ## Hasura GraphQL
 
 These variables configure the Hasura GraphQL instance:
@@ -91,6 +95,8 @@ These variables configure the Hasura GraphQL instance:
 - **HASURA_GRAPHQL_ACTION_BASE_URL:** Base URL for GraphQL actions.
 
 - **HASURA_GRAPHQL_JWT_SECRET:** JWT secret for Hasura.
+
+---
 
 ## Servers and Infrastructure
 

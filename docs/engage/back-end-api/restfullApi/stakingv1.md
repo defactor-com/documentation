@@ -151,6 +151,8 @@ Update the metadata of an existing plan using an unique plan identifier. Either 
 }
 ```
 
+---
+
 ## Positions
 
 ### `Stake`
@@ -589,6 +591,8 @@ Get the expected rewards by user for each open position. Filter by `now`, `day`,
 }
 ```
 
+---
+
 ## Token
 
 ### `Update Token Metadata`
@@ -627,6 +631,8 @@ Update the metadata of the contract token.
   }
 }
 ```
+
+---
 
 ## Ecosystem Wallet
 
@@ -674,6 +680,8 @@ Update the metadata of the contract token.
   }
 }
 ```
+
+---
 
 ## Error Reference
 

@@ -135,6 +135,8 @@ mutation ($plan: PlanMetadataInput!) {
 }
 ```
 
+---
+
 ## Positions
 
 ### `Stake`
@@ -673,6 +675,8 @@ query ($position: GetTotalValueLockedInput!) {
 }
 ```
 
+---
+
 ## Token
 
 ### `Update Token Metadata`
@@ -722,6 +726,8 @@ mutation ($token: TokenMetadataInput!) {
   }
 }
 ```
+
+---
 
 ## Ecosystem Wallet
 
@@ -787,6 +793,8 @@ mutation ($wallet: DeleteEcosystemWalletInput!) {
   }
 }
 ```
+
+---
 
 ## Error Reference
 

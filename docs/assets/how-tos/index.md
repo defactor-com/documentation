@@ -5,6 +5,8 @@ title: Assets New Project Onboarding
 
 We support whitelabeling for assets. The following guide provides a list of resources needed to launch your own Assets with Defactor smart contracts.
 
+---
+
 ## General information about website
 
 - Site name
@@ -13,6 +15,8 @@ We support whitelabeling for assets. The following guide provides a list of reso
 - facIcon in .fav format
 - socialMediaPreviewImag (This image will be displayed when sending url of your page)
 - Pools, Enage url's if they are configured
+
+---
 
 ## UI theme
 
@@ -38,9 +42,13 @@ Example of provided theme colors in json format:
 }
 ```
 
+---
+
 ## Wallet connect (now reown)
 
 provide a wallet connect project id. You can obtain it on https://cloud.reown.com
+
+---
 
 ## Supported networks
 
@@ -51,10 +59,14 @@ provide a wallet connect project id. You can obtain it on https://cloud.reown.co
 - baseTokenAddress
 - collateralAddress
 
+---
+
 ## Google analytics
 
 provide a Google tag ID for Google Analytics, Google Ads. You can read instructions on how to get it here:
 https://support.google.com/analytics/answer/9539598
+
+---
 
 ## Mailing
 

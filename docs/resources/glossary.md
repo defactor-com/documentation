@@ -5,6 +5,8 @@ sidebar_position: 5
 
 List of terms necessary to understand the contents of this guide.
 
+---
+
 ## **A**
 
 ### ACL (Access Control List)
@@ -88,23 +90,30 @@ A property of a system that allows it to continue operating properly in the even
 It is a type of web hosting that uses multiple different servers to balance the load and maximize uptime.
 
 ---
+
 ### Collateral Token (Smart Contract Address)
 
 - **Definition:** The address of the smart contract that issued the crypto collateral token that will be used.
 - **Purpose:** Ensures that the correct collateral token is used and managed by the pool’s smart contract.
 - **Example:** If FACTR is used as collateral, the address of the FACTR smart contract must be specified.
+
 ---
+
 ### Collateral Token Chainlink Address
 
 - **Definition:** Chainlink is an on-chain oracle that provides decentralized data feeds to on-chain smart contracts.
 - **Purpose:** The POOLS smart contract uses chainlink oracle to get price data and monitor the collateral value.
+
 ---
+
 ### Collateral Token Factor
 
 - **Definition:** Used to adjust the collateral amount from the price of the collateral.
 - **Purpose:** Used to take into account the buy-sell spread around the collateral token ensuring the success of the liquidation process if needed.
 - **Example:** The collateral token is priced at 100 euros but trading on Uniswap with a spread of 105-95, then your collateral token factor would be 105.
+
 ---
+
 ### Consensus Algorithm
 
 A process in blockchain networks used to achieve agreement on a single data value or a single state of the network among distributed processes or multi-agent systems.
@@ -130,12 +139,15 @@ A database is an organized set of data stored and accessible electronically.
 An application that runs on a decentralized network, avoiding a single point of failure or control.
 
 ---
+
 ### Deadline
 
 - **Definition:** The deadline defines the maturity date of a pool.
 - **Purpose:** Establishes a clear timeline for the pool’s operation, defining when it will end.
 - **Example:** A pool created on Jan 1st 2024 with a deadline of March 31st 2024 will be operational for 90 days.
+
 ---
+
 ### DeFi
 
 DeFi, or Decentralized Finance, is a term that refers to financial applications built on blockchain networks that do not depend on centralized financial intermediaries.
@@ -245,12 +257,15 @@ A secondary framework or protocol built on top of an existing blockchain system,
 A record of transactions maintained by a blockchain network, which is distributed and immutable.
 
 ---
+
 ### Loan to Value (LTV) Ratio (also called collateral token percentage)
 
 - **Definition:** The collateralization rate of the crypto asset to the stable coin, usually always greater than 100% to ensure overcollateralization of the loans.
 - **Purpose:** Protects lenders by ensuring that the value of the collateral always exceeds the loan amount, mitigating the risk of borrower default.
 - **Example:** An LTV ratio of 150% means that for a $100 loan, the borrower must provide $150 worth of collateral.
+
 ---
+
 ## **M**
 
 ### Mainnet
@@ -384,11 +399,14 @@ It is an exact replica of the original blockchain, with the same technology, sof
 A digital unit designed with utility in mind, providing access and use of a larger crypto-economic system.
 
 ---
+
 ### Token Set
 
 - **Definition:** The specific ERC20 token pairs that will be accepted as deposits.
 - **Example:** If the pool is designed to accept USDC from lenders and FACTR as collateral from borrowers, these details need to be specified during setup.
+
 ---
+
 ### Transactions
 
 It is a combination of one or more actions. Usually the result of executing a `smart contract`.

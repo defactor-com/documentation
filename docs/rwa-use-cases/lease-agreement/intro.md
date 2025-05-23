@@ -6,6 +6,8 @@ sidebar_position: 1
 
 This service digitizes the vehicle lease agreement process, enabling electronic interactions with the contract. It facilitates data entry, validation, storage, and retrieval of contract details, tailored for Angular front-end and Node.js backend with MongoDB.
 
+---
+
 ## System Architecture
 
 - **Backend**: Node.js with TypeScript
@@ -13,6 +15,8 @@ This service digitizes the vehicle lease agreement process, enabling electronic 
 - **Frontend**: Angular
 - **Cloud Hosting**: AWS (EC2, S3, Lambda, etc.)
 - **API Documentation**: Swagger or OpenAPI
+
+---
 
 ## Backend (Node.js with TypeScript)
 
@@ -44,6 +48,8 @@ This service digitizes the vehicle lease agreement process, enabling electronic 
 - Integration with logging frameworks like Winston or Morgan.
 - AWS CloudWatch for monitoring and alerts.
 
+---
+
 ## Frontend (Angular)
 
 ### User Interface
@@ -66,6 +72,8 @@ This service digitizes the vehicle lease agreement process, enabling electronic 
 - HTTP client to interact with Node.js APIs.
 - Handling of authentication tokens and secured routes.
 
+---
+
 ## Database (MongoDB)
 
 ### Schema Design
@@ -77,6 +85,8 @@ This service digitizes the vehicle lease agreement process, enabling electronic 
 
 - Use of Mongoose for schema validation.
 - Transactions for operations involving multiple documents.
+
+---
 
 ## AWS Cloud Infrastructure
 
@@ -103,11 +113,15 @@ This service digitizes the vehicle lease agreement process, enabling electronic 
 
 - AWS CodeBuild and CodePipeline for automated testing and deployment.
 
+---
+
 ## Security Considerations
 
 - AWS IAM roles and policies for fine-grained access control.
 - Regular security audits and compliance with industry standards.
 - Encryption of sensitive data using AWS KMS.
+
+---
 
 ## Testing and Quality Assurance
 
@@ -115,11 +129,15 @@ This service digitizes the vehicle lease agreement process, enabling electronic 
 - End-to-end testing with Protractor or a similar tool.
 - Continuous integration via AWS CodePipeline or GitHub Actions.
 
+---
+
 ## Documentation and Support
 
 - Comprehensive API documentation using Swagger or OpenAPI.
 - User guides for the frontend application.
 - Developer guide for local setup and contribution.
+
+---
 
 ## Future Enhancements
 

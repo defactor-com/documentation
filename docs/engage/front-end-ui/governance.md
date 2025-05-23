@@ -12,6 +12,8 @@ Designed for flexibility, the governance module is compatible with any ERC-20 go
 
 An example instance of the governance interface is available at the [Engage Platform Demo](https://sharingblock-engage.defactor.dev/governance), which illustrates real-time voting, proposal tracking, and snapshot-based logic in action.
 
+---
+
 ## Core Functionality
 
 ![Governance proposals lists](../../../static/img/front-end/governance-proposals-lists.png)
@@ -21,6 +23,8 @@ An example instance of the governance interface is available at the [Engage Plat
 - **View voting history** and proposal details.
 - **Snapshot-based system** to calculate voting power.
 
+---
+
 ## How Governance Works
 
 1. **Proposal Creation** – Community or admin users submit proposals with descriptions, thresholds, and timelines.
@@ -28,12 +32,16 @@ An example instance of the governance interface is available at the [Engage Plat
 3. **Snapshot Date** – Determines voting power based on wallet holdings.
 4. **Result Tally** – After the end date, results are finalized.
 
+---
+
 ## Voting Metadata
 
 - **Title** – Summary of the proposal topic
 - **Description** – Full explanation, criteria, and rationale
 - **Snapshot Date** – Timestamp when wallet balances are captured
 - **End Date** – Last day to cast votes
+
+---
 
 ## Example Proposal Detail
 

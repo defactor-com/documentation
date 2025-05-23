@@ -5,11 +5,15 @@ sidebar_position: 7
 
 Explore some of the most promising blockchain networks and protocols that are shaping the future of decentralized finance, tokenization, and interoperability. These projects are paving the way for scalable, secure, and user-centric digital infrastructure.
 
+---
+
 ## Plume
 
 **Plume** is a Layer 1 blockchain optimized for real-world asset (RWA) tokenization. Designed with compliance and institutional integration in mind, it aims to serve as the foundational layer for on-chain asset issuance and trading.
 
 🔗 [plumenetwork.xyz](https://plumenetwork.xyz)
+
+---
 
 ## Lumia
 
@@ -17,11 +21,15 @@ Explore some of the most promising blockchain networks and protocols that are sh
 
 🔗 [Lumia](https://lumia.org/)
 
+---
+
 ## LayerZero
 
 **LayerZero** is an interoperability protocol that enables secure omnichain messaging between blockchains. It allows developers to build dApps that can interact across chains without intermediaries.
 
 🔗 [LayerZero](https://layerzero.network)
+
+---
 
 ## Chainlink (CCIP + PoR)
 
@@ -31,11 +39,15 @@ Explore some of the most promising blockchain networks and protocols that are sh
 
 🔗 [Proof of Reserve](https://chain.link/proof-of-reserve)
 
+---
+
 ## Redbelly
 
 **Redbelly** is a high-throughput blockchain infrastructure developed with academic and enterprise-grade standards. It emphasizes deterministic finality, safety, and performance, often suited for regulated environments.
 
 🔗 [Redbelly Blockchain](https://www.redbellyblockchain.io)
+
+---
 
 ## Linea
 
@@ -43,11 +55,15 @@ Explore some of the most promising blockchain networks and protocols that are sh
 
 🔗 [Linea](https://www.linea.build)
 
+---
+
 ## Ozean Protocol
 
 **Ozean** is a decentralized data protocol aimed at enabling compliant and privacy-focused RWA solutions. It facilitates the secure exchange of sensitive off-chain data using encryption and decentralized identifiers.
 
 🔗 [Ozean](https://www.ozean.xyz)
+
+---
 
 ## Mantra
 

@@ -33,6 +33,8 @@ The security of the JWT is because it is signed by a secret key and has a config
 
 Upon receiving a request, Hasura decodes and validates the JWT, which contains user account data, and their corresponding role. If the role lacks the necessary permissions or the token is invalid, expired or missing, the request is promptly rejected.
 
+---
+
 ## Authentication
 
 ### `Login`
@@ -107,6 +109,8 @@ Upon successful completion of a request, the server will issue a status code of 
 }
 ```
 
+---
+
 ## Pools
 
 Unlike the contract, the status are in lowercase; Additionally, to streamline interaction the API include intermediate status such as `collectable`, `closable`, and `archivable`.
@@ -152,10 +156,12 @@ Create a new pool with the indicated collateral tokens using the `collateralDeta
       "interest": 10,
       "softCap": "300000000", // 300 USDC
       "hardCap": "800000000", // 800 USDC
-      "collateralDetails": [{
-        "address": "0xa8983Fe59b2F08F9F1B3E833c5D47B256F7FE0d5",
-        "amount": "500000000",
-      }]
+      "collateralDetails": [
+        {
+          "address": "0xa8983Fe59b2F08F9F1B3E833c5D47B256F7FE0d5",
+          "amount": "500000000"
+        }
+      ]
     }
   }
 }
@@ -478,6 +484,8 @@ Upon successful completion of a request, the server will issue a status code of 
 }
 ```
 
+---
+
 ## Lend
 
 ### `Lend`
@@ -688,6 +696,8 @@ Upon successful completion of a request, the server will issue a status code of 
 }
 ```
 
+---
+
 ## Borrow
 
 ### `Borrow`
@@ -740,6 +750,8 @@ Upon successful completion of a request, the server will issue a status code of 
   }
 }
 ```
+
+---
 
 ## Utilities
 
@@ -844,6 +856,8 @@ Upon successful request completion, the server will issue a status code of 200 a
 ```json
 {}
 ```
+
+---
 
 ## Error Reference
 

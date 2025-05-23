@@ -3,7 +3,7 @@ id: restfull-api-add-kyc
 sidebar_position: 9
 ---
 
-# Add Kyc Wallet
+## Add Kyc Wallet
 
 **Endpoint**: `/addKycWallet`
 
@@ -19,8 +19,8 @@ sidebar_position: 9
 }
 ```
 
-## Description
+### Description
 
 This endpoint allows you to add a KYC (Know Your Customer) wallet.
 
-## Response
+### Response

@@ -23,6 +23,8 @@ Defactor Engage provides a suite of powerful tools to administer and interact wi
 - Maintain transparency with community stakeholders
 - Track vesting schedules and manage token distribution
 
+---
+
 ## Role-Based Access
 
 Only wallets designated as Admins can:
@@ -36,6 +38,7 @@ Only wallets designated as Admins can:
 ## Getting Started
 
 **Accessing the Admin Dashboard**
+
 1. Go to your Defactor Engage instance.
 2. Connect your wallet (MetaMask, Trust Wallet, or any WalletConnect-supported wallet)
 3. Ensure you're on the correct network (Polygon, Ethereum, Base, BNB Chain, or Algorand)
@@ -55,7 +58,7 @@ Admins can monitor:
 - Total supply and circulating supply
 - Staked tokens and buyback totals
 - Network distribution (Ethereum, Polygon, etc.)
-> 📝 *Tip: Hover over tooltips for deeper insights into how these numbers are calculated.*
+  > 📝 _Tip: Hover over tooltips for deeper insights into how these numbers are calculated._
 
 **Ecosystem Wallet Management**
 
@@ -65,8 +68,9 @@ Engage displays all project-owned wallets, including:
 - Live balances
 - Transaction history
 
-Admins can assign labels and explanations to each wallet for added clarity. 
-> 💡 *The ecosystem wallets configured here will be shown in the Ecosystem Dashboard. There is a default wallet that will be automatically assigned any unallocated funds.*
+Admins can assign labels and explanations to each wallet for added clarity.
+
+> 💡 _The ecosystem wallets configured here will be shown in the Ecosystem Dashboard. There is a default wallet that will be automatically assigned any unallocated funds._
 
 ---
 
@@ -82,16 +86,17 @@ Admins can create and manage staking pools with full control over:
 
 **Setting Up a Staking Pool**
 
-1. Navigate to Staking > Admin Panel 
+1. Navigate to Staking > Admin Panel
 2. Click Create New Pool
 3. Fill in:
-    - Pool Name
-    - Lockup Period
-    - Reward Rate (APY)
-    - Accepted Token
+
+   - Pool Name
+   - Lockup Period
+   - Reward Rate (APY)
+   - Accepted Token
 
 4. Deploy the smart contract via your connected wallet
-> ✅ *Engage handles smart contract deployment and staking logic — no manual coding required.*
+   > ✅ _Engage handles smart contract deployment and staking logic — no manual coding required._
 
 ---
 
@@ -103,13 +108,14 @@ Engage supports decentralized governance using token-weighted voting.
 
 1. Go to Governance > Propose
 2. Enter:
-    - Title
-    - Description (supporting text, rationale, thresholds)
-    - Snapshot date: defines voting power based on token holdings
-    - End date
+
+   - Title
+   - Description (supporting text, rationale, thresholds)
+   - Snapshot date: defines voting power based on token holdings
+   - End date
 
 3. Submit and sign the transaction
-> 📈 *Only wallets with governance rights (e.g., minimum FACTR threshold) can submit proposals.*
+   > 📈 _Only wallets with governance rights (e.g., minimum FACTR threshold) can submit proposals._
 
 **Admin Responsibilities**
 
@@ -155,29 +161,33 @@ Add a wallet address, assign roles, and save. You can also revoke roles at any t
 ## Network & Token Configuration
 
 Admins can:
+
 - Add support for new blockchain networks (EVM-compatible)
 - Register new tokens (ERC-20 or ERC-3643)
 - Set compliance requirements per token
 - Configure staking token compatibility
 
-> 📋 *This is particularly important for platforms using Engage to manage third-party tokens, like Libertum's $LBM.*
+> 📋 _This is particularly important for platforms using Engage to manage third-party tokens, like Libertum's $LBM._
 
 ---
 
 ## Vesting Schedules
 
 The Vesting tab allows admins to securely manage token vesting for:
+
 - Team members
 - Advisors and investors
 - Ecosystem partners
 
 **Admin Capabilities:**
+
 - Create new vesting schedules
 - View unlock timelines and progress
 - Cancel or adjust schedules (with proper rights)
 - Monitor released vs. locked amounts
 
 **How to Create a Vesting Entry:**
+
 1. Navigate to Admin > Vesting
 2. Click Create Vesting Schedule
 3. Input:

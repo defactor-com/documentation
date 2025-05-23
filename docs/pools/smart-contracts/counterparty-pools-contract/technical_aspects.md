@@ -11,6 +11,8 @@ tags:
 - OpenZeppelin Contracts (Upgradeable)
 - `Pools.storage.sol` for storage-related operations
 
+---
+
 ## Contract: Pools
 
 - Inherits:
@@ -89,6 +91,8 @@ tags:
 - `PoolSoftCapReached`
 - `PoolStatusMustBeClosed`
 - `RewardsHaveNotYetBeenPaidOut`
+
+---
 
 ## Notes
 

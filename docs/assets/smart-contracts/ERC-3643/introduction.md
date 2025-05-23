@@ -8,9 +8,13 @@ ERC-3643, also known as T-REX, is a token standard for the tokenization of real-
 
 For further details on the smart contracts, please refer to Tokeny's [whitepaper](https://tokeny.com/wp-content/uploads/2023/05/ERC3643-Whitepaper-T-REX-v4.pdf) or the [smart contracts implementation](https://github.com/TokenySolutions/T-REX).
 
+---
+
 ## Contract Versions
 
 We are using version 4.1.5 of T-REX as the base for our contract. Currently, there is only one version of the Defactor Assets fork.
+
+---
 
 ## Staking Smart Contract Documentation
 

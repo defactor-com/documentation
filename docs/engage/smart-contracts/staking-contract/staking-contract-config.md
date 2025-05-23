@@ -4,8 +4,6 @@ title: Staking Contract Config
 sidebar_position: 3
 ---
 
-# Staking Contract Configuration
-
 This guide provides the configuration parameters required to set up and deploy a **Staking Contract** in the Defactor Engage platform. The staking contract allows users to stake tokens and earn rewards based on predefined plans and parameters.
 
 ---

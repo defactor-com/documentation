@@ -2,56 +2,61 @@
 title: "Collateral Pool Contract"
 sidebar_position: 2
 ---
+
 The [Defactor SDK](/docs/introduction/software-development-kit) provides utilities and classes to seamless interaction with the Defactor contracts. In this specific section, the focus is in the [Collateral Pool Contract](/docs/pools/smart-contracts/erc20-collateral-pool-contract/smart-contract-erc20-collateral-pool) and `ERC20CollateralPool` class, which implements the fundamental methods to interact with the contract in question.
+
+---
 
 ## Methods Available
 
 ```typescript
 // Returns the total USDC fees collected.
-async USDC_FEES_COLLECTED(): Promise<bigint>                                                                                                
+async USDC_FEES_COLLECTED(): Promise<bigint>
 
 // Returns the USDC contract address.
-async getUsdc(): Promise<string>                                                                                                    
+async getUsdc(): Promise<string>
 
-// Returns the total number of pools.        
-async getTotalPools(): Promise<bigint>                                                                                                      
+// Returns the total number of pools.
+async getTotalPools(): Promise<bigint>
 
 // Returns the pool with the given ID.
-async getPool(poolId: bigint): Promise<Pool>  
+async getPool(poolId: bigint): Promise<Pool>
 
 // Returns a list of pools within the given range.
-async getPools(offset: bigint, limit: bigint): Promise<Array<Pool>>          
+async getPools(offset: bigint, limit: bigint): Promise<Array<Pool>>
 
 // Returns the total amount of lending for a given pool and address.
-async getTotalLending(poolId: bigint, address: string): Promise<bigint>                                    
+async getTotalLending(poolId: bigint, address: string): Promise<bigint>
 
 // Returns a specific loan.
-async getLoan(poolId: bigint, address: string, lendingId: bigint): Promise<Lend>       
+async getLoan(poolId: bigint, address: string, lendingId: bigint): Promise<Lend>
 
 // Adds a new pool.
-async addPool(pool: PoolInput): Promise<ethers.ContractTransaction | ethers.TransactionResponse>               
+async addPool(pool: PoolInput): Promise<ethers.ContractTransaction | ethers.TransactionResponse>
 
 // Lends a certain amount to a pool.
-async lend(poolId: bigint, amount: bigint): Promise<ethers.ContractTransaction | ethers.TransactionResponse>          
+async lend(poolId: bigint, amount: bigint): Promise<ethers.ContractTransaction | ethers.TransactionResponse>
 
 // Borrows a certain amount from a pool.
-async borrow(poolId: bigint, amount: bigint): Promise<ethers.ContractTransaction | ethers.TransactionResponse>                 
+async borrow(poolId: bigint, amount: bigint): Promise<ethers.ContractTransaction | ethers.TransactionResponse>
 
 // Returns a specific borrow.
-async getBorrow(poolId: bigint, borrowerAddress: string, borrowId: bigint): Promise<Borrow>                        
+async getBorrow(poolId: bigint, borrowerAddress: string, borrowId: bigint): Promise<Borrow>
 
 // Calculates the amount of collateral tokens for a given amount.
-async calculateCollateralTokenAmount(poolId: bigint, amount: bigint): Promise<bigint>                      
+async calculateCollateralTokenAmount(poolId: bigint, amount: bigint): Promise<bigint>
 
 // Repays a borrow.
-async repay(poolId: bigint, borrowerAddress: string, borrowId: bigint): Promise<ethers.ContractTransaction | ethers.TransactionResponse>   
+async repay(poolId: bigint, borrowerAddress: string, borrowId: bigint): Promise<ethers.ContractTransaction | ethers.TransactionResponse>
 
 // Returns information about the liquidation of a pool.
-async getLiquidationInfo(pool: Pool): Promise<PoolLiquidationInfo>                    
+async getLiquidationInfo(pool: Pool): Promise<PoolLiquidationInfo>
 
 // Liquidates a pool.
-async liquidatePool(poolId: bigint): Promise<ethers.ContractTransaction | ethers.TransactionResponse>                                       
+async liquidatePool(poolId: bigint): Promise<ethers.ContractTransaction | ethers.TransactionResponse>
 ```
+
+---
 
 ## Examples
 

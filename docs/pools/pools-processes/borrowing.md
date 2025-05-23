@@ -4,8 +4,6 @@ title: Pool Borrowing Process
 sidebar_position: 1
 ---
 
-## Introduction to Borrowing
-
 Overcollateralized crypto borrowing is the predominant form of lending and borrowing on the blockchain. It allows for the creation of a lending and borrowing market without the need for credit history checks. Borrowers can use their volatile crypto assets as collateral to borrow stable coins, providing a way to access liquidity without selling their crypto assets and thus protecting those crypto assets from market volatility.
 
 ### How do I borrow crypto assets from a pool?

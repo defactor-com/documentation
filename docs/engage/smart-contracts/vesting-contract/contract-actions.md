@@ -6,9 +6,9 @@ tags:
   - Contract Actions
 ---
 
-## Overview
-
 `ERC20LazyVesting.sol` is a smart contract for token vesting that utilizes off-chain Merkle proofs and on-chain validation to efficiently manage scalable vesting schedules. It allows beneficiaries or operators to claim vested tokens over time, based on predefined parameters encoded in Merkle trees.
+
+---
 
 ## Dependencies
 
@@ -18,6 +18,8 @@ tags:
   - `Pausable`
   - `SafeERC20`
 - `ERC20LazyVesting.interface.sol` – Interface for defining the `VestingSchedule` struct and external function signatures.
+
+---
 
 ## Contract: ERC20LazyVesting
 
@@ -61,6 +63,8 @@ tags:
 - Schedules must pass Merkle proof validation and must not be revoked.
 - Withdrawals can only occur 30 days after `requestWithdraw` is called.
 - Only `DEFAULT_ADMIN_ROLE` can manage withdrawal, pause, or unpause.
+
+---
 
 ## Notes
 

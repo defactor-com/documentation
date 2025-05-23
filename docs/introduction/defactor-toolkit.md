@@ -5,11 +5,14 @@ sidebar_position: 2
 
 The Defactor software suite is composed of three main projects: [**Assets**](/docs/category/assets), [**Engage**](/docs/category/engage), and [**Pools**](/docs/category/pools). Each tool is designed to enhance the capabilities of businesses and developers in the decentralized finance (DeFi) landscape.
 
+---
+
 ## Assets
 
 The **Assets** tool is an advanced token creation platform that allows users to tokenize real-world assets, such as real estate and gold. This tool facilitates the division of high-value assets into smaller, tradable tokens, enhancing their liquidity and making them accessible to a wider range of investors.
 
 **Key Features:**
+
 - **Fractional Ownership:** Enables the division of assets into smaller units.
 - **Increased Liquidity:** Transforms traditionally illiquid assets into tradeable tokens.
 - **Blockchain Empowerment:** Utilizes blockchain technology for enhanced trust and compliance.
@@ -17,27 +20,35 @@ The **Assets** tool is an advanced token creation platform that allows users to 
 
 [**Learn More About Assets >**](/docs/category/assets)
 
+---
+
 ## Engage
 
 **Engage** is a community management tool designed to enhance the utility of tokens by providing comprehensive engagement and insight tools for token communities.
 
 **Key Features:**
+
 - **Community Empowerment:** Offers tools for token staking, voting, and governance.
 - **Analytical Insights:** Provides analytics dashboards to keep the community informed.
 - **Transaction-Based Fees:** Keeps overhead low by leveraging a transaction-based fee structure.
 
 [**Learn More About Engage >**](/docs/category/engage)
 
+---
+
 ## Pools
 
 **Pools** is a lending and borrowing platform that enables the creation of liquidity pools using real-world assets (RWA) as collateral. This tool allows businesses to lock their assets and access liquidity in a decentralized manner.
 
 **Key Features:**
+
 - **Customizable Pools:** Offers unique domains and branding options for each pool.
 - **Secure and Compliant:** Integrates with trusted operators and ensures precision through external audits.
 - **Innovative Financial Models:** Supports a variety of financial operations including loans backed by tokenized assets.
 
 [**Learn More About Pools >**](/docs/category/pools)
+
+---
 
 ## Technical Implementation
 

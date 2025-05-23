@@ -11,6 +11,8 @@ This guide provides the general steps to connect your **MetaMask** wallet to the
 - Binance Smart Chain (BSC)
 - Base
 
+---
+
 ## Step 1: Install MetaMask
 
 If you don’t already have MetaMask:
@@ -18,6 +20,8 @@ If you don’t already have MetaMask:
 1. Go to [https://metamask.io](https://metamask.io)
 2. Download and install the browser extension (Chrome, Firefox, Brave, or Edge).
 3. Open MetaMask and either **create a new wallet** or **import an existing one** using your secret recovery phrase.
+
+---
 
 ## Step 2: Add a Network to MetaMask
 
@@ -29,6 +33,8 @@ To add a new blockchain network to MetaMask:
 4. Enter the network information as listed below.
 5. Click **Save**.
 6. MetaMask will automatically switch to the selected network.
+
+---
 
 ## RWA.IO
 
@@ -50,6 +56,8 @@ To add a new blockchain network to MetaMask:
 - **Block Explorer URL:** https://explorer-op.rwa.io
 - 🔗 [Instructions](https://docs.rwa.io/testnet)
 
+---
+
 ## Ethereum
 
 ### Mainnet
@@ -70,6 +78,8 @@ To add a new blockchain network to MetaMask:
 - **Block Explorer URL:** https://sepolia.etherscan.io
 - 🔗 [Instructions](https://sepolia.dev/)
 
+---
+
 ## Polygon
 
 ### Mainnet
@@ -89,6 +99,8 @@ To add a new blockchain network to MetaMask:
 - **Currency Symbol:** MATIC
 - **Block Explorer URL:** https://mumbai.polygonscan.com
 - 🔗 [Instructions](https://wiki.polygon.technology/docs/develop/network-details/network)
+
+---
 
 ## Base
 
@@ -129,6 +141,8 @@ To add a new blockchain network to MetaMask:
 - **Currency Symbol:** tBNB
 - **Block Explorer URL:** https://testnet.bscscan.com
 - 🔗 [Instructions](https://docs.bnbchain.org/docs/testnet/wallet/metamask)
+
+---
 
 ## Step 3: Switch and Use
 

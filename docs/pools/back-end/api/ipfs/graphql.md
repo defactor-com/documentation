@@ -21,6 +21,8 @@ The security of the JWT is because it is signed by a secret key and has a config
 
 Upon receiving a request, Hasura decodes and validates the JWT, which contains user account data, and their corresponding role. If the role lacks the necessary permissions or the token is invalid, expired or missing, the request is promptly rejected.
 
+---
+
 ## IPFS
 
 Interact with a private IPFS node to upload and retrieve files. Interact with a private IPFS node to upload and retrieve files. Since GraphQL operates with `JSON` payloads and responses, binary data needs to be represented as a string. This API supports both byte arrays (`bytea`) and base64-encoded strings.
@@ -122,6 +124,8 @@ Upon successful completion of a request, the server will issue a status code of 
   }
 }
 ```
+
+---
 
 ## Error Reference
 

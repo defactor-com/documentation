@@ -6,9 +6,9 @@ tags:
   - Contract Actions
 ---
 
-## Overview
-
 `Staking.sol` is a modular, upgradeable smart contract that enables users to stake ERC20 tokens in predefined plans to earn rewards over time. Each plan has configurable parameters such as lock duration, APY, staking and reward tokens, and staking caps. Rewards are calculated dynamically and can be claimed at any time or upon unstaking.
+
+---
 
 ## Dependencies
 
@@ -19,6 +19,8 @@ tags:
   - `SafeERC20Upgradeable`
 - Internal:
   - `StakingStorage.sol` – Storage structure for plans, stakes, and token ratios
+
+---
 
 ## Contract: Staking
 
@@ -98,6 +100,8 @@ tags:
 - `TokenRatioChangedTooManyTimes`
 - `RewardEndTimePassed`
 - `MaxStakedReached`
+
+---
 
 ## Notes
 

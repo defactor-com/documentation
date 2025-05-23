@@ -14,6 +14,8 @@ tags:
 - **ERC20CollateralPool.storage.sol**: Storage contract for state management.
 - **AggregatorV3Interface.sol**: Interface for Chainlink price feeds.
 
+---
+
 ## Key Components
 
 ### Constants

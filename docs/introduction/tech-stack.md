@@ -1,9 +1,11 @@
 ---
-title:  Defactor Tech Stack
+title: Defactor Tech Stack
 sidebar_position: 3
 ---
 
 At Defactor, we employ a sophisticated technology stack to ensure our solutions are both powerful and resilient.
+
+---
 
 ## Core Technologies
 
@@ -15,11 +17,15 @@ At Defactor, we employ a sophisticated technology stack to ensure our solutions 
 - **Docker**: Docker's containerization technology allows us to deliver software reliably.
 - **Kubernetes**: We orchestrate our containerized applications with Kubernetes, enhancing deployment and scalability.
 
+---
+
 ## Infrastructure Overview
 
 <center>
     ![Defactor Technology Stack](/img/defactor-services.webp)
 </center>
+
+---
 
 ## Web Application
 
@@ -28,6 +34,8 @@ Our web applications are crafted using [React.js](https://reactjs.org), [Apollo 
 ### UI Kit
 
 Our UI Kit is an open-source collection of React components designed for easy integration into Defactor front-ends. It ensures visual consistency across our tools and accelerates the development process. Access the UI Kit on our [GitHub repository](https://github.com/defactor-com/ui-kit).
+
+---
 
 ## Backend Architecture
 
@@ -43,18 +51,22 @@ Hasura enhances our PostgreSQL database operations with a robust GraphQL API, si
 
 For custom RESTful needs, we rely on [hapi.dev](https://hapi.dev/) for its simplicity and efficiency in developing scalable server-side solutions.
 
+---
+
 ## EVM Blockchain Integration
 
 We harness the power of multiple Ethereum Virtual Machine (EVM) compatible blockchains, such as [Polygon](https://polygon.technology/), to benefit from rapid transactions and minimal fees, providing a formidable foundation for our decentralized applications.
 
-### EVM Compatible Blockchain Networks 
+### EVM Compatible Blockchain Networks
 
-Defactor is building smart contracts to be deployed on  EVM compatible networks:
+Defactor is building smart contracts to be deployed on EVM compatible networks:
 
- - [Ethereum](https://ethereum.org/en/) 
- - [Polygon](https://polygon.technology/) (Layer 2)
- - [BSC](https://www.bnbchain.org/en/bnb-smart-chain) (Binance Smart Chain)
- - [Base](https://www.base.org/) (Coinbase EVM Network)
+- [Ethereum](https://ethereum.org/en/)
+- [Polygon](https://polygon.technology/) (Layer 2)
+- [BSC](https://www.bnbchain.org/en/bnb-smart-chain) (Binance Smart Chain)
+- [Base](https://www.base.org/) (Coinbase EVM Network)
+
+---
 
 ## Kubernetes Cluster
 

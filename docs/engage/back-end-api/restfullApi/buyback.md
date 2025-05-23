@@ -4,7 +4,7 @@ title: BuyBack
 sidebar_position: 6
 ---
 
-### `Get Buyback Aggregate`
+## `Get Buyback Aggregate`
 
 Retrieve the total buy and send amount from the buyback contract.
 

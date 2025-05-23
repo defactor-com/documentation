@@ -11,6 +11,8 @@ sidebar_position: 3
 - `email`: String
 - `role`: String
 
+---
+
 ## Lease Agreement
 
 - `leaseId`: ObjectId
@@ -32,6 +34,8 @@ sidebar_position: 3
   - `initialPayment`: Number
   - `monthlyPayments`: Number
 - `status`: String (e.g., "active", "completed", "terminated")
+
+---
 
 ## Payment
 

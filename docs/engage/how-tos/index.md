@@ -4,10 +4,10 @@ title: Engage Client Onboarding
 sidebar_position: 1
 ---
 
-## Introduction
-
 ENGAGE is Defactor's powerful tool designed to enhance community engagement and provide valuable insights for your token holders. ENGAGE is your comprehensive portal to the world of tokenization, empowering, informing, and incentivising your community. By prioritising transparency and striving to provide users and partners with reliable, up-to-date information, ENGAGE fosters an environment of active involvement. Whether you're looking to empower your community or foster active participation, ENGAGE offers a seamless, white-label solution tailored to your needs.
 To ensure a smooth onboarding process and to maximise the potential of ENGAGE, we have outlined the essential information required. This document provides a detailed checklist of the necessary components needed to set up your dashboard, staking plans, and governance features effectively.
+
+---
 
 ## Onboarding Checklist
 
@@ -59,6 +59,8 @@ Smart contracts must be deployed and initialized with specific configuration par
 - Exchange address: Provide details about the exchange where your tokens are traded.
 - Receipt addresses: Define the addresses where the bought tokens will be sent.
 - Allocation per address: Determine the allocation to each receipt address.
+
+---
 
 ## Live customer examples
 

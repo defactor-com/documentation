@@ -37,6 +37,8 @@ New and reopened `pull request` are automatically added to the board in the `In 
 
 When the pull request is closed is moved to the `Done` column automatically. If the pull request closes and issues it is properly stated with the GitHub keywords closes in the pull request it gets automatically moved to the `Done` column too.
 
+---
+
 ## Branch Naming Convention
 
 Name every branch for your pull requests using the following simple convention:
@@ -65,6 +67,8 @@ feat/new-feature-123
 +-> Type: build, chore, ci, docs, feat, fix, perf, refactor, revert, style, test, content, or devtools
 ```
 
+---
+
 ## Pull Request General Guidelines
 
 - Please check to make sure that there aren't existing `pull request` attempting to address the `issue` mentioned.
@@ -76,6 +80,8 @@ feat/new-feature-123
 - Link the `issue` on the `pull request` description for cross references between code and issues.
 
 We only support support **squash merge** of the `pull requests` as a best practice for ensure the `master` log is maintained clean and relevant, without requiring the pull request to be rebased. This strategy requires that all pull request made are `atomic`, in other words they solve one thing only. One pull request per feature, bug fix or documentation update.
+
+---
 
 ## Commit Message Guidelines
 
@@ -186,6 +192,8 @@ reference GitHub `issues` that this commit closes.
 
 **Breaking Changes** should start with the word `BREAKING CHANGE:` with a space or two newlines. The rest of the commit message is then used for this.
 
+---
+
 ## Reporting Bugs
 
 Before submitting your `issue` please check that you've completed the following steps:
@@ -201,6 +209,8 @@ Bug reports should contain the following information:
 - Actual behavior: How did it actually behave?
 - References: Links to any related tickets or information sources.
 - If possible, attach visual documentation of the bug. Screenshot or animated gif.
+
+---
 
 ## Releases
 
@@ -226,17 +236,25 @@ When a documented feature does not behave as documented, or when a security issu
 
 On each release we generate a changelog file to document changes using the standard [git-changelog](https://github.com/rafinskipg/git-changelog) package. There's an npm task for it.
 
+---
+
 ## Advanced Git Tools
 
 There are also tools like [Hub](https://hub.github.com/) and [git-extras](https://github.com/tj/git-extras) that facilitate interacting with Github. You can leverage these tools to contribute to this repository.
+
+---
 
 ## Code Standards
 
 We use the [standardjs code style](https://standardjs.com).
 
+---
+
 ## Continuous Integration and Delivery
 
 We will use github actions for CI/CD deployments.
+
+---
 
 ## Pre-commit Hooks
 

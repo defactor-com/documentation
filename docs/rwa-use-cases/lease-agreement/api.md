@@ -27,6 +27,8 @@ sidebar_position: 2
 }
 ```
 
+---
+
 ## Create Lease Agreement
 
 **Endpoint:** `/api/lease`
@@ -53,6 +55,8 @@ sidebar_position: 2
 }
 ```
 
+---
+
 ## Get Lease Agreement Details
 
 **Endpoint:** `/api/lease/{leaseId}`
@@ -66,6 +70,8 @@ sidebar_position: 2
   "leaseDetails": {}
 }
 ```
+
+---
 
 ## Update Lease Agreement
 
@@ -92,6 +98,8 @@ sidebar_position: 2
 }
 ```
 
+---
+
 ## Delete Lease Agreement
 
 **Endpoint:** `/api/lease/{leaseId}`
@@ -105,6 +113,8 @@ sidebar_position: 2
   "message": "Lease agreement deleted successfully"
 }
 ```
+
+---
 
 ## List All Lease Agreements
 

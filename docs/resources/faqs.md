@@ -3,8 +3,6 @@ title: FAQs
 sidebar_position: 4
 ---
 
-# Frequently Asked Questions
-
 ## Common Questions
 
 ### Q1: How do I get started with Defactor development?
@@ -39,9 +37,15 @@ Mentioned in Whitfield Diffie and Martin Hellman 1976 paper `New Directions in C
 
 [More information on how it works](https://www.preveil.com/blog/public-and-private-key/)
 
+---
+
 ## Common Issues and Solutions
 
+---
+
 ## Debugging Tips
+
+---
 
 ## Reporting Bugs & Contributing
 

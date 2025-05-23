@@ -33,6 +33,8 @@ The security of the JWT is because it is signed by a secret key and has a config
 
 Upon receiving a request, Hasura decodes and validates the JWT, which contains user account data, and their corresponding role. If the role lacks the necessary permissions or the token is invalid, expired or missing, the request is promptly rejected.
 
+---
+
 ## Authentication
 
 ### `Login`
@@ -128,6 +130,8 @@ Upon successful completion of a request, the server will issue a status code of 
   }
 }
 ```
+
+---
 
 ## Pools
 
@@ -660,6 +664,8 @@ Upon successful request completion, the server will issue a status code of 200 a
 {}
 ```
 
+---
+
 ## Lend
 
 ### `Lend`
@@ -1008,6 +1014,8 @@ Upon successful request completion, the server will respond with a status code o
 }
 ```
 
+---
+
 ## Borrow
 
 ### `Borrow`
@@ -1326,6 +1334,8 @@ Upon successful request completion, the server will respond with a status code o
 }
 ```
 
+---
+
 ## Utilities
 
 ### `Erc20 Approve`
@@ -1625,6 +1635,8 @@ query {
 ```json
 {}
 ```
+
+---
 
 ## Error Reference
 

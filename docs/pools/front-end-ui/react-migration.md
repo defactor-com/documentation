@@ -4,9 +4,9 @@ title: Front-End Migration to React
 sidebar_position: 3
 ---
 
-## Introduction
-
 This section of the Defactor developer documentation explains the rationale behind our decision to migrate the front-end tech stack to React. This transition marks a significant step in our development strategy, aiming to enhance the efficiency and performance of our web applications.
+
+---
 
 ## Reasons for Choosing React
 
@@ -38,6 +38,8 @@ This section of the Defactor developer documentation explains the rationale behi
 - In recent years, React has emerged as one of the most popular frameworks in web application development.
 - This popularity translates to a larger pool of developers and teams proficient in React, along with an abundance of support documentation and libraries.
 - Statistics indicate React's dominance over Angular in terms of developer preference and usage.
+
+---
 
 ## Utilizing Atomic Components in React
 
