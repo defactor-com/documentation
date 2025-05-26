@@ -59,6 +59,45 @@ Add a new batch schedule with vesting schedules and their beneficieries.
 }
 ```
 
+### `Get Vesting Stats By User`
+
+Get the vesting stats by user. The result can be filtered by network.
+
+**HTTP Request Method**: GET
+
+**Roles**: Guest
+
+**Request URL**: `{{BASE_RESTFUL_URL}}/v1/get-vesting-stats-by-user`
+
+**Request Body**:
+
+```json
+{
+  "schedule": {
+    "contractName": "{{VESTING}}",
+    "data": {
+      "address": "0xd198F7a8C953AC47dfd0F6a0267e4d19c67ce351",
+      "networks": ["{{NETWORK_ETHEREUM}}"]
+    }
+  }
+}
+```
+
+**Response**
+
+```json
+{
+  "v1GetVestingStatsByUser": {
+    "res": {
+      "currentLockedAmount": 6000000,
+      "pendingClaimAmount": 1000000,
+      "totalVested": 1000000
+    },
+    "success": true
+  }
+}
+```
+
 ## Releases
 
 ### `Get Historical Emissions`

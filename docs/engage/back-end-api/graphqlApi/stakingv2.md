@@ -257,6 +257,69 @@ query ($position: RewardsByUserInput!) {
 }
 ```
 
+### `Get Detailed Expected Rewards By User`
+
+Get detailed expected rewards by user for each open position. Filter by `now`, `day`, `week`, `month`, `six-months`, `year` or `all`.
+
+**HTTP Request Method**: POST
+
+**Roles**: Guest
+
+**GraphQL URL**: `{{BASE_URL}}/v1/graphql`
+
+**GraphQL Body**:
+
+```graphql
+query ($position: RewardsByUserInput!) {
+  v2GetDetailedExpectedRewardsByUser(position: $position) {
+    res
+    success
+  }
+}
+```
+
+**Params**:
+
+```json
+{
+  "position": {
+    "contractName": "{{STAKING}}",
+    "data": {
+      "address": "0xa8983Fe59b2F08F9F1B3E833c5D47B256F7FE0d5",
+      "networks": ["{{NETWORK_ETHEREUM}}", "{{NETWORK_BASE}}"],
+      "filterBy": ["now", "day", "year"],
+      "withAccruedRewards": false
+    }
+  }
+}
+```
+
+**Response**
+
+```json
+{
+  "v2GetDetailedExpectedRewardsByUser": {
+    "res": {
+      "now": {
+        "USD": 0.46357703076262946,
+        "byToken": [{
+            "FACTR": 11.87201460235921,
+            "USD": 0.46357703076262946
+        }]
+      },
+      "day": {
+        "USD": 0.5758285490345839
+        "byToken": [{
+            "FACTR": 14.74672921423135,
+            "USD": 0.5758285490345839
+        }]
+      },
+    },
+    "success": true
+  }
+}
+```
+
 ### `Get Expected Rewards`
 
 Get the expected rewards for each open position. Filter by `now`, `day`, `week`, `month`, `six-months`, `year` or `all`.
@@ -307,6 +370,68 @@ query ($position: RewardsFilterInput!) {
         "FACTR": 14.746729214231358,
         "USD": 0.5758285490345839
       }
+    },
+    "success": true
+  }
+}
+```
+
+### `Get Detailed Expected Rewards`
+
+Get detailed expected rewards for each open position. Filter by `now`, `day`, `week`, `month`, `six-months`, `year` or `all`.
+
+**HTTP Request Method**: POST
+
+**Roles**: Guest
+
+**GraphQL URL**: `{{BASE_URL}}/v1/graphql`
+
+**GraphQL Body**:
+
+```graphql
+query ($position: RewardsFilterInput!) {
+  v2GetDetailedExpectedRewards(position: $position) {
+    res
+    success
+  }
+}
+```
+
+**Params**:
+
+```json
+{
+  "position": {
+    "contractName": "{{STAKING}}",
+    "data": {
+      "networks": ["{{NETWORK_ETHEREUM}}", "{{NETWORK_POLYGON}}"],
+      "filterBy": ["day", "year"],
+      "withAccruedRewards": false
+    }
+  }
+}
+```
+
+**Response**
+
+```json
+{
+  "v2GetDetailedExpectedRewards": {
+    "res": {
+      "now": {
+        "USD": 0.46357703076262946,
+        "byToken": [{
+            "FACTR": 11.87201460235921,
+            "USD": 0.46357703076262946
+        }]
+      },
+      "day": {
+        "USD": 0.5758285490345839
+        "byToken": [{
+            "FACTR": 14.74672921423135,
+            "USD": 0.5758285490345839
+        }]
+      },
     },
     "success": true
   }
@@ -369,6 +494,80 @@ query ($position: RewardsByUserInput!) {
 }
 ```
 
+### `Get Detailed Rewards Received By User`
+
+Get the rewards claimed by user. Filter by `now`, `day`, `week`, `month`, `six-months`, `year` or `all`.
+
+**HTTP Request Method**: POST
+
+**Roles**: Guest
+
+**GraphQL URL**: `{{BASE_URL}}/v1/graphql`
+
+**GraphQL Body**
+
+```graphql
+query ($position: RewardsByUserInput!) {
+  v2GetDetailedRewardsReceivedByUser(position: $position) {
+    res
+    success
+  }
+}
+```
+
+**Params**:
+
+```json
+{
+  "position": {
+    "contractName": "{{STAKING}}",
+    "data": {
+      "address": "0xa8983Fe59b2F08F9F1B3E833c5D47B256F7FE0d5",
+      "networks": ["{{NETWORK_ETHEREUM}}", "{{NETWORK_POLYGON}}"],
+      "filterBy": ["day", "year"]
+    }
+  }
+}
+```
+
+**Response**
+
+```json
+{
+  "v2GetDetailedRewardsReceivedByUser": {
+    "res": {
+      "month": {
+        "USD": 5.2017,
+        "byToken": [
+          {
+            "MTK": 1.7,
+            "USD": 0.0017
+          },
+          {
+            "FACTR": 250,
+            "USD": 5.2
+          }
+        ]
+      },
+      "year": {
+        "USD": 5.2017,
+        "byToken": [
+          {
+            "MTK": 1.7,
+            "USD": 0.0017
+          },
+          {
+            "FACTR": 250,
+            "USD": 5.2
+          }
+        ]
+      }
+    },
+    "success": true
+  }
+}
+```
+
 ### `Get Total Value Locked`
 
 Get the expected rewards by user for each open position. Address is optional.
@@ -421,6 +620,37 @@ query v2GetTotalValueLocked($position: GetTotalValueLockedInput!) {
         }
       }
     "success": true
+  }
+}
+```
+
+### `Get Staking Stats`
+
+**HTTP Request Method**: POST
+
+**GraphQL URL**: `{{BASE_URL}}/v1/graphql`
+
+**GraphQL Body**:
+
+```graphql
+query v2GetStakingStats($position: GetTotalValueLockedInput!) {
+  v2GetStakingStats(position: $position) {
+    res
+    success
+  }
+}
+```
+
+**Params**:
+
+```json
+{
+  "position": {
+    "contractName": "{{STAKING}}",
+    "data": {
+      "networks": ["ethereum"],
+      "address": "0xa8983Fe59b2F08F9F1B3E833c5D47B256F7FE0d5"
+    }
   }
 }
 ```
