@@ -4,9 +4,9 @@ title: Buyback Contract Config
 sidebar_position: 3
 ---
 
-# BuyBack Contract Configuration
-
 This guide provides the configuration parameters required to set up and deploy a **Buyback Contract** in the Defactor Engage platform.
+
+---
 
 ## Buyback Contract Configuration
 

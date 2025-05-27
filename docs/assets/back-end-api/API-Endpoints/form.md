@@ -20,6 +20,8 @@ The security of the JWT is because it is signed by a secret key and has a config
 
 Upon receiving a request, Hasura decodes and validates the JWT, which contains user account data, and their corresponding role. If the role lacks the necessary permissions or the token is invalid, expired or missing, the request is promptly rejected.
 
+---
+
 ## Form
 
 ### `Get form templates`
@@ -626,7 +628,7 @@ Upon successful completion of a request, the server will issue a status code of 
 
 Deletes an instance of form template.
 
-> Note: There should be no form entries associated with the template, otherwise deletion will not work.
+> ⚠️ *There should be no form entries associated with the template, otherwise deletion will not work.*
 
 **HTTP Request Method**: DELETE
 

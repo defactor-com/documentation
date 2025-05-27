@@ -3,11 +3,11 @@ title: Blockchain and Web3
 sidebar_position: 2
 ---
 
-# Introduction to Web3
-
 Web3 represents the next evolution of the World Wide Web, offering a decentralized online ecosystem based on blockchain technology. Unlike its predecessors, Web3 emphasizes user privacy, data ownership, and decentralized applications (DApps) that operate on blockchain networks like Ethereum and Polygon. This paradigm shift towards decentralization enables more secure, transparent, and user-centric online experiences.
 
 🔗 [Web3](https://ethereum.org/en/web3/)
+
+---
 
 ## Key Features of Web3
 
@@ -16,9 +16,13 @@ Web3 represents the next evolution of the World Wide Web, offering a decentraliz
 - **Tokenization:** Digital assets and cryptocurrencies represent real-world assets and value.
 - **Smart Contracts:** Automated, self-executing contracts that facilitate, verify, or enforce the negotiation or performance of a contract.
 
+---
+
 ## Web3's Role in the Digital Economy
 
 Web3 is transforming various industries by providing a framework for secure, transparent, and decentralized transactions. It is instrumental in fields like finance, supply chain management, and digital identity verification, offering new opportunities for innovation and efficiency.
+
+---
 
 ## Web3 and Real World Assets (RWA)
 

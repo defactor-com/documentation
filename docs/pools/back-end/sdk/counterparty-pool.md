@@ -6,69 +6,75 @@ sidebar_position: 1
 The [Defactor SDK](/docs/introduction/software-development-kit) provides utilities and classes to seamless interaction with the Defactor contracts. In this specific section, the focus is in the [CounterParty Pool Contract](/docs/pools/smart-contracts/counterparty-pools-contract/counterparty-pools-smart-contract) and `Pools` class, which implements the fundamental methods to interact with the contract in question.
 
 To support the [Admin version](/docs/pools/smart-contracts/counterparty-pools-contract/counterparty-pools-smart-contract#admin-only-version) of the contract it is needed to use the `AdminPools` class instead.
- 
+
+---
+
 ## Constants
 
 ```typescript
-INTEREST_DECIMAL_PLACES //  Use to adjust the decimals in the interest rate calculation.
-POOL_FEE                //  The required amount of USDC to create a pool.
-COLLECT_POOL_MAX_SECS   //  Maximum unix epoch time for collecting funds from a pool.
-COLLECT_POOL_MAX_DAYS   //  Maximum days for collecting funds from a pool.
-MIN_POOL_CLOSED_SECS    //  Minimum unix epoch time before a pool can be archived
-MIN_POOL_CLOSED_DAYS    //  Minimum days before a pool can be archived
+INTEREST_DECIMAL_PLACES; //  Use to adjust the decimals in the interest rate calculation.
+POOL_FEE; //  The required amount of USDC to create a pool.
+COLLECT_POOL_MAX_SECS; //  Maximum unix epoch time for collecting funds from a pool.
+COLLECT_POOL_MAX_DAYS; //  Maximum days for collecting funds from a pool.
+MIN_POOL_CLOSED_SECS; //  Minimum unix epoch time before a pool can be archived
+MIN_POOL_CLOSED_DAYS; //  Minimum days before a pool can be archived
 ```
+
+---
 
 ## Methods Available
 
 ```typescript
 // Returns the USDC address configured as the base token.
-async USD_ADDRESS(): Promise<string> 
+async USD_ADDRESS(): Promise<string>
 
 // Returns if the contract is paused.
-async isPaused(): Promise<boolean> 
+async isPaused(): Promise<boolean>
 
 // Returns the pool with the given poolId.
 async getPool(poolId: bigint): Promise<Pool>
 
 // Returns a list of pools within the given range.
-async getPools(offset: bigint, limit: bigint): Promise<Pagination<Pool>> 
+async getPools(offset: bigint, limit: bigint): Promise<Pagination<Pool>>
 
 // Pause the contract
-async pause(): Promise<ethers.ContractTransaction | ethers.TransactionResponse> 
+async pause(): Promise<ethers.ContractTransaction | ethers.TransactionResponse>
 
 // Unpause the contract
-async unpause(): Promise<ethers.ContractTransaction | ethers.TransactionResponse> 
+async unpause(): Promise<ethers.ContractTransaction | ethers.TransactionResponse>
 
 // Create a new pool
-async createPool(pool: PoolInput): Promise<ethers.ContractTransaction | ethers.TransactionResponse> 
+async createPool(pool: PoolInput): Promise<ethers.ContractTransaction | ethers.TransactionResponse>
 
 // Allows the owner of the pool collects the committed amount and active the pool
-async collectPool(poolId: bigint): Promise<ethers.ContractTransaction | ethers.TransactionResponse> 
+async collectPool(poolId: bigint): Promise<ethers.ContractTransaction | ethers.TransactionResponse>
 
 // Allows the owner of the pool deposits the rewards
 async depositRewards(
   poolId: bigint,
   amount: bigint
-): Promise<ethers.ContractTransaction | ethers.TransactionResponse> 
+): Promise<ethers.ContractTransaction | ethers.TransactionResponse>
 
 // Allows to close the pool
-async closePool(poolId: bigint): Promise<ethers.ContractTransaction | ethers.TransactionResponse> 
+async closePool(poolId: bigint): Promise<ethers.ContractTransaction | ethers.TransactionResponse>
 
 // Allows to archive the pool
-async archivePool(poolId: bigint): Promise<ethers.ContractTransaction | ethers.TransactionResponse> 
+async archivePool(poolId: bigint): Promise<ethers.ContractTransaction | ethers.TransactionResponse>
 
 // Allows the lender (investor) to commit the specific amount to the pool
 async commitToPool(
   poolId: bigint,
   amount: bigint
-): Promise<ethers.ContractTransaction | ethers.TransactionResponse> 
+): Promise<ethers.ContractTransaction | ethers.TransactionResponse>
 
 // Transfer the committed amount to the pool by the lender (investor)
-async uncommitFromPool(poolId: bigint): Promise<ethers.ContractTransaction | ethers.TransactionResponse> 
+async uncommitFromPool(poolId: bigint): Promise<ethers.ContractTransaction | ethers.TransactionResponse>
 
 // Allows to the lender (investor) to claim their rewards
-async claim(poolId: bigint): Promise<ethers.ContractTransaction | ethers.TransactionResponse> 
+async claim(poolId: bigint): Promise<ethers.ContractTransaction | ethers.TransactionResponse>
 ```
+
+---
 
 ## Examples
 
@@ -84,13 +90,13 @@ const provider = new SelfProvider.SelfProvider<Pools>(
   contractConfig.contractAddress, // loaded from config file
   contractConfig.providerUrl, // loaded from config file
   contractConfig.AlicePrivateKey // loaded from config file
-)
+);
 ```
 
 ### Access to constants
 
 ```typescript
-const poolCreationFee: bigint = provider.contract.POOL_FEE
+const poolCreationFee: bigint = provider.contract.POOL_FEE;
 ```
 
 ### Create a pool
@@ -105,18 +111,18 @@ To successfully create the pool, the contract must have the allowance to transfe
 
 ```typescript
 await provider.contract.createPool({
-    softCap: BigInt(100_000000),    // 100 USDC
-    hardCap: BigInt(600_000000),    // 600 USDC
-    deadline: BigInt(1734652800),   // 2024-12-20T00:00:00.000Z
-    minimumAPR: BigInt(50_000000),  // 50 USDC
-    collateralTokens: [
-        {
-            contractAddress: contractConfig.goldTokenAddress,  // loaded from config file
-            amount: BigInt(15_000000), // 15 GOLD
-            id: null
-        }
-    ]
-})
+  softCap: BigInt(100_000000), // 100 USDC
+  hardCap: BigInt(600_000000), // 600 USDC
+  deadline: BigInt(1734652800), // 2024-12-20T00:00:00.000Z
+  minimumAPR: BigInt(50_000000), // 50 USDC
+  collateralTokens: [
+    {
+      contractAddress: contractConfig.goldTokenAddress, // loaded from config file
+      amount: BigInt(15_000000), // 15 GOLD
+      id: null,
+    },
+  ],
+});
 ```
 
 ### Commit to a pool
@@ -130,17 +136,17 @@ To successfully commit to the pool, the contract must have the allowance to tran
 :::
 
 ```typescript
-const poolId = BigInt(0)
-const amount = BigInt(200_000000)   // 200 USDC
+const poolId = BigInt(0);
+const amount = BigInt(200_000000); // 200 USDC
 
 const provider = new SelfProvider.SelfProvider<Pools>(
   Pools,
   contractConfig.contractAddress, // loaded from config file
-  contractConfig.providerUrl,     // loaded from config file
-  contractConfig.BobPrivateKey    // loaded from config file
+  contractConfig.providerUrl, // loaded from config file
+  contractConfig.BobPrivateKey // loaded from config file
 );
 
-await provider.contract.commitToPool(poolId, amount)
+await provider.contract.commitToPool(poolId, amount);
 ```
 
 ### Get a pool
@@ -148,10 +154,10 @@ await provider.contract.commitToPool(poolId, amount)
 Get a pool using the sequential id.
 
 ```typescript
-const poolId = BigInt(0)
-const pool = await provider.contract.getPool(poolId)
+const poolId = BigInt(0);
+const pool = await provider.contract.getPool(poolId);
 
-console.log(pool)
+console.log(pool);
 ```
 
 Example output:

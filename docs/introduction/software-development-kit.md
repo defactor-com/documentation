@@ -9,6 +9,8 @@ Tailored for developers engaged in blockchain or cryptocurrency operations, this
 
 You can find the source code for this repository in [github.com/defactor-com/sdk](https://github.com/defactor-com/sdk/).
 
+---
+
 ## Features
 
 - Support for cjs, es, and esm modules.
@@ -17,6 +19,8 @@ You can find the source code for this repository in [github.com/defactor-com/sdk
 - Well-defined interfaces that accurately model the Defactor contracts for easy interaction and integration.
 
 This library is built on top of [`ether@6.x.x`](https://docs.ethers.org/v6/api/contract/) to provide a simple and easy to use interface to interact with the Defactor contracts.
+
+---
 
 ## Installation
 
@@ -27,6 +31,8 @@ yarn add @defactor/defactor-sdk
 # npm
 npm install @defactor/defactor-sdk
 ```
+
+---
 
 ## Usage
 
@@ -85,6 +91,8 @@ console.log(liquidationProtocolFee); // 5n
 - Pools
   - [`Counterparty Pool`](/docs/pools/back-end/sdk/counterparty-pool).
   - [`Collateral Pool`](/docs/pools/back-end/sdk/collateral-pool)
+
+---
 
 ## Examples
 

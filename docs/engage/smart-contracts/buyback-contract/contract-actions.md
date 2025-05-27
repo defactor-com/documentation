@@ -6,9 +6,9 @@ tags:
   - Contract Actions
 ---
 
-## Overview
-
 `Buyback.sol` is an upgradeable smart contract used to repurchase $FACTR tokens using USDC via Uniswap V3. It supports standard and custom buybacks, applies TWAP-based price checks, and locks acquired FACTR for 1 year before distribution to either predefined vaults or custom addresses.
+
+---
 
 ## Dependencies
 
@@ -22,6 +22,8 @@ tags:
 - Custom:
   - `BuybackStorage.sol`
   - `IERC20`
+
+---
 
 ## Contract: Buyback
 
@@ -82,6 +84,8 @@ tags:
 - Custom distribution arrays must sum to 10,000 bps.
 - Withdrawals are only allowed after 365 days have passed.
 - `recoverERC20` rejects recovery of FACTR or USDC.
+
+---
 
 ## Notes
 

@@ -28,11 +28,11 @@ sidebar_position: 1
   </div>
 </div>
 
-## Introduction
-
 The **Pools Backend** includes a full set of APIs and SDK modules to interact with Defactor’s lending infrastructure. These tools enable developers to integrate borrowing, lending, collateral management, and liquidation flows into their applications with ease.
 
 This backend layer supports both **ERC-20 Collateral Pools** and **Counterparty Pools**, offering flexibility for open and permissioned lending models.
+
+---
 
 ## API Access
 
@@ -53,6 +53,8 @@ Explore available endpoints:
 
 These APIs are suitable for teams building custom interfaces, automations, or analytics solutions on top of Pools.
 
+---
+
 ## SDK Modules
 
 Defactor’s SDKs are optimized for TypeScript/JavaScript environments and provide utility modules to simplify smart contract interaction, transaction formatting, and wallet integration.
@@ -70,6 +72,8 @@ Available modules:
 
 SDKs are ideal for developers looking to integrate directly into web apps and smart contract frontends.
 
+---
+
 ## Key Capabilities
 
 - Create and manage lending pools
@@ -77,6 +81,8 @@ SDKs are ideal for developers looking to integrate directly into web apps and sm
 - Monitor loan status, interest accrual, and repayment
 - Handle automatic liquidations and risk triggers
 - Integrate with wallet providers and frontends
+
+---
 
 ## Get Started
 

@@ -8,9 +8,13 @@ tags:
 
 `ERC20LazyVesting.sol` is a smart contract that enables scalable, secure, and flexible token vesting using off-chain Merkle proofs and on-chain validation. Beneficiaries claim tokens progressively based on vesting schedules validated through Merkle roots.
 
+---
+
 ## Contract Versions
 
 This contract currently exists in a single production version, with potential improvements in UI integrations and audit tooling planned for the future.
+
+---
 
 ## Vesting Smart Contract Documentation
 
@@ -101,4 +105,4 @@ Admins can request and execute token withdrawals from the contract under strict 
 - **30-Day Withdrawal Delay**: Ensures transparency and reduces risks of misuse by requiring early announcement.
 - **Access Control**: Role-based architecture isolates permissions between admins and operators.
 
-> Note: All schedules are validated via off-chain computed Merkle trees. This approach is optimized for mass distributions and minimizes on-chain complexity.
+> 🛡️ All schedules are validated via off-chain computed Merkle trees. This approach is optimized for mass distributions and minimizes on-chain complexity.

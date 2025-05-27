@@ -5,29 +5,31 @@ sidebar_position: 1
 
 Defactor is an innovative platform at the convergence of real-world assets (RWA) and decentralized finance (DeFi). It provides a comprehensive decentralized open-source toolkit for asset tokenization, enabling businesses to access DeFi liquidity backed by real-world value.
 
-## Core Pillars of Defactor
+### Core Pillars of Defactor
 
 - **Technology & Innovation:** Pioneering innovation in RWA and DeFi, reducing time to market for businesses and providing DeFi liquidity.
 - **Governance:** Encouraging community collaboration and driving innovation in RWA tokenization.
 - **Community:** Building a global support system valuing contributions and participation.
 - **Liquidity & Markets:** Ensuring token availability and market liquidity, nurturing partnerships, and monitoring market conditions.
 
-## Defactor's Role in Blockchain Ecosystem
+### Defactor's Role in Blockchain Ecosystem
 
 Defactor plays a crucial role in bridging the gap between traditional finance and DeFi. By tokenizing real-world assets, it opens new avenues for investment, funding, and economic growth, while providing the security and efficiency of blockchain technology.
 
-# Tokenized Real World Assets
+---
+
+## Tokenized Real World Assets
 
 Tokenized real-world assets refer to the representation of tangible or intangible assets as digital tokens on a blockchain. These tokens reflect the value and ownership of their real-world counterparts, offering a bridge between traditional finance (TradFi) and decentralized finance (DeFi).
 
-## Advantages of Tokenization
+### Advantages of Tokenization
 
 - **Liquidity:** Tokenization can increase the liquidity of traditionally illiquid assets like real estate or art.
 - **Accessibility:** Broadens the accessibility to investment opportunities, allowing fractional ownership.
 - **Efficiency:** Streamlines processes, reducing the need for intermediaries and lowering transaction costs.
 - **Transparency and Security:** Blockchain technology ensures transparent, secure, and tamper-proof record-keeping.
 
-## Purpose of the Developer Documentation
+### Purpose of the Developer Documentation
 
 This developer documentation is designed to be a comprehensive guide for understanding and interacting with the Defactor platform and its associated technologies. It serves several key purposes:
 
@@ -36,7 +38,7 @@ This developer documentation is designed to be a comprehensive guide for underst
 - **Best Practices Guide:** To offer guidance on best practices in developing, deploying, and maintaining applications within the Defactor ecosystem.
 - **Community Engagement:** To foster a community of developers by providing a common resource that encourages collaboration and innovation.
 
-## Target Audience
+### Target Audience
 
 The target audience for this documentation includes:
 
@@ -45,7 +47,7 @@ The target audience for this documentation includes:
 - **Software Engineers:** General software developers seeking to understand the technical aspects of the Defactor platform and how it integrates with the broader blockchain and Web3 landscape.
 - **Technical Decision Makers:** CTOs, technical leads, and other decision-makers evaluating the Defactor platform for potential use in their projects or businesses.
 
-## How to Navigate the Documentation
+### How to Navigate the Documentation
 
 Navigating this documentation is straightforward, with the content organized into several key sections:
 

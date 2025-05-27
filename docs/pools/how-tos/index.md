@@ -31,11 +31,11 @@ sidebar_position: 2
   </div>
 </div>
 
-## Introduction
-
 **POOLS** is Defactor’s decentralized lending infrastructure that allows businesses to launch and manage custom lending environments using tokenized or real-world assets. Whether you're looking to unlock liquidity or create institutional lending agreements, POOLS offers flexible, secure, and on-chain functionality.
 
 This guide outlines the essential details required to configure your pool smart contracts and onboard successfully.
+
+---
 
 ## Onboarding Checklist
 

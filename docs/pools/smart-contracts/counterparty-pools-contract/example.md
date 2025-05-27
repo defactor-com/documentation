@@ -17,6 +17,8 @@ Once the pool owner completes their goal by creating the pool and decides to clo
 
 Let's consider the following example to better understand how this flow works:
 
+---
+
 ## Pool lifecycle
 
 - Event #1 (initialize contract) -> _The contract is initialized with the USDC address that will be used for lending money_.

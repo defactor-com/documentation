@@ -3,7 +3,7 @@ id: restfull-api-start-kyc
 sidebar_position: 8
 ---
 
-# Start Kyc
+## Start Kyc
 
 **Endpoint**: `/startKyc`
 
@@ -17,11 +17,11 @@ sidebar_position: 8
 }
 ```
 
-## Description
+### Description
 
 This endpoint is used to initiate the KYC (Know Your Customer) process.
 
-## Response
+### Response
 
 - `wallet (string): The wallet information.`
 - `sumSubId (string): The summary sub ID.`

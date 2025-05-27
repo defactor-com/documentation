@@ -34,7 +34,7 @@ As a finance institutions, BankCredit has terms and conditions that every borrow
 
 - To maintain the residual value of the leased vehicle, the borrower agrees to adhere to the annual mileage limit specified in the lease agreement. In the event that the total mileage exceeds the agreed-upon limit at the end of the lease term, excess mileage charges will apply. The excess mileage charge is `$0.1` per mile over the limit. Borrowers are encouraged to monitor their mileage throughout the lease term to avoid additional charges.
 
-> In a real bank there are a lot more terms and conditions that are not listed here, but this is no and neither intent to be an official one, this is only for demonstration purposes, please, do not consider it at all as an equivalent document of a real term and conditions document.
+> ⚠️ In a real bank there are a lot more terms and conditions that are not listed here, but this is no and neither intent to be an official one, this is only for demonstration purposes, please, do not consider it at all as an equivalent document of a real term and conditions document.
 
 ### System Architecture
 
@@ -300,6 +300,8 @@ Deployment Diagram
 
 Deployment Flowchart Diagram
 ![RWA Flowchart Use Case](/img/flowchart/rwa_flowchart_usecase.png)
+
+---
 
 ## Real-World Tokenization Use Case
 
