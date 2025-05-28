@@ -8,7 +8,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "npx ts-node index.ts -i \"defactor-engage-api.postman_collection (2).json\" -o ../../docs/pools/back-end/api/engage"
+    "start": "npx ts-node index.ts -i defactor-engage-api.postman_collection.json -o ../../docs/pools/back-end/api/engage"
   },
   "dependencies": {
     "@types/node": "^20.12.2",
