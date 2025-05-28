@@ -198,6 +198,8 @@ query v2GetPlansDynamicApr($plan: GetDynamicAprInput!) {
 }
 ```
 
+---
+
 ## Positions
 
 ### `Get Expected Rewards By User`

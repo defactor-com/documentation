@@ -9,7 +9,9 @@ Aurus Protocol stands as a solution strategically constructed atop the open infr
 1. ERC20CollateralPool contract instance (facilitated by Defactor).
 2. Frontend application (developed and supplied by Aurus).
 
-> Note: Defactor provides a general frontend application template to get started quick and easy.
+> 📌 *Defactor provides a general frontend application template to get started quick and easy.*
+
+---
 
 ## Key Concepts
 
@@ -25,11 +27,15 @@ Aurus Protocol stands as a solution strategically constructed atop the open infr
 
 **Loan Fee**: A fee that is charged to the borrower for every loan made. The fee is a percentage of the loan amount.
 
+---
+
 ## How to Interact with the Contract?
 
 The interactions are facilitated through a frontend application, serving as an intermediary that communicates with the contract. This application enables administrative actions by an authorized admin user, facilitates funding from an investor, and facilitates the borrowing and repayment of loans by a borrower.
 
 Additionally, the smart contract exposes specific public views, allowing users to access information about pools and loans, enhancing transparency and accessibility.
+
+---
 
 ## Use Case Example
 
@@ -50,6 +56,8 @@ Through this narrative, it's possible to distill the following key points:
 3. **Flexible Usage:** Alice can freely utilize the borrowed `USDC` for her various financial needs, showcasing the flexibility and utility of the Aurus solution.
 
 Upon completing her endeavors, Alice only needs to repay the loan along with the fees stipulated by the pool, allowing her to retrieve the collateralized tokens. This scenario exemplifies how Aurus empowers individuals like Alice to unlock the value of their physical assets, navigate credit challenges, and benefit from the security and flexibility of decentralized lending.
+
+---
 
 ## Sequence Diagram
 

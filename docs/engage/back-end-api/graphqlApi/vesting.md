@@ -128,6 +128,8 @@ mutation ($schedule: CreateScheduleInput!) {
 }
 ```
 
+---
+
 ## Releases
 
 ### `Get Historical Emissions`

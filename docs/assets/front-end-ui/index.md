@@ -49,6 +49,8 @@ Identity Management: ERC-3643 tokens are linked to on-chain identities managed b
 
 Once a user has a deployed identity, they can be registered by the asset creator to be eligible to receive, send, and burn tokens.
 
+---
+
 ## ERC-20 vs ERC-3643
 
 When it comes to asset tokenization, ERC-20 and ERC-3643 tokens offer different advantages based on their design and features. ERC-20 tokens provide a straightforward and flexible option for creating fungible tokens, making them suitable for tokenizing assets where regulatory oversight is minimal and interoperability with various platforms is prioritized. However, ERC-3643 tokens are specifically tailored for asset tokenization that requires stringent regulatory compliance, incorporating advanced features such as KYC/AML verification, whitelisting, and the ability to mint or burn tokens according to regulatory needs. While ERC-20 is ideal for broader applications, ERC-3643 offers a more robust framework for tokenizing assets that demand higher levels of control, security, and compliance.

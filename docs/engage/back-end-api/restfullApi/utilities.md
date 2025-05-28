@@ -77,7 +77,9 @@ Get the current instance configuration.
 }
 ```
 
-## `config`
+---
+
+## `Config`
 
 Get the current instance configuration.
 
@@ -145,6 +147,8 @@ Get the current instance configuration.
     }
   }
 ```
+
+---
 
 ## `v1 Get Circulating Supply`
 

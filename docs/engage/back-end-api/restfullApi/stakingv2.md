@@ -167,6 +167,8 @@ Get the dynamic apr for each plan in the requested networks.
 }
 ```
 
+---
+
 ## Positions
 
 ### `Get Expected Rewards By User`

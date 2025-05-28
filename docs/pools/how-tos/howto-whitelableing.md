@@ -6,9 +6,13 @@ sidebar_position: 5
 
 This document outlines the process of whitelabeling, detailing how to customize Defactor pools instances to make them unique for each client.
 
+---
+
 ## Overview
 
 Whitelabeling allows clients to apply their branding to Defactor pool instances. This guide covers all necessary configuration values and files.
+
+---
 
 ## Organization Data Configuration
 

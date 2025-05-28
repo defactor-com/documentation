@@ -98,6 +98,8 @@ Get the vesting stats by user. The result can be filtered by network.
 }
 ```
 
+---
+
 ## Releases
 
 ### `Get Historical Emissions`

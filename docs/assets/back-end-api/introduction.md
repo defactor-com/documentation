@@ -17,6 +17,8 @@ sidebar_position: 1
   </div>
 </div>
 
+---
+
 ## Introduction
 
 The **Assets Backend API** enables secure and programmable interaction with Defactor’s tokenization infrastructure. It provides endpoints for asset creation, identity and compliance integration, transaction management, analytics, and third-party system coordination.
@@ -24,6 +26,8 @@ The **Assets Backend API** enables secure and programmable interaction with Defa
 This API layer is designed for developers and platform integrators looking to automate and manage tokenized real-world assets (RWAs) through backend services.
 
 This section provides an overview of the API and links to specific endpoint categories.
+
+---
 
 ## Assets API
 
@@ -49,6 +53,8 @@ Available modules:
 - [**Transactions API**](API-Endpoints/api-transactions)  
   View historical transaction data between smart contracts and wallets.
 
+---
+
 ## Key Capabilities
 
 - Automate the creation and management of tokenized assets
@@ -57,6 +63,8 @@ Available modules:
 - Monitor platform-wide metrics and transaction histories
 - Enable platform notifications via customizable email triggers
 - Authenticate platform components and manage user roles securely
+
+---
 
 ## Get Started
 

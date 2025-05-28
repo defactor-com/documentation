@@ -10,17 +10,23 @@ Token buybacks are typically funded through fees collected from various modules 
 
 The module supports any ERC-20 token and can be customized to align with project-specific treasury strategies. A production-ready example is available at the [Engage Platform Demo](https://sharingblock-engage.defactor.dev/buy-back), showcasing real-time buyback activity and historical data.
 
+---
+
 ## How It Works
 
 - Usage fees (paid in USDC) from platform modules are aggregated.
 - These funds are used to automatically **buy tokens on the open market**.
 - Purchased tokens are **locked for 12 months**, reducing circulating supply.
 
+---
+
 ## Features
 
 - View **total tokens bought back** in real time.
 - Explore **personal buyback history** under "My Buybacks".
 - Monitor **frequency and volume** of market buybacks.
+
+---
 
 ## Dashboard Elements
 
@@ -32,6 +38,8 @@ The buyback dashboard gives a clear summary of the user's buyback progress:
 - **Latest Buybacks** – Time-stamped records of recent buybacks.
 - **My Buybacks** – History of individual user contributions and allocations.
 - **Buyback Form** – Interface (if enabled) to trigger manual buybacks.
+
+---
 
 ## My Buybacks
 

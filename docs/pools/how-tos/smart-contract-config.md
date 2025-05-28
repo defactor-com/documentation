@@ -6,7 +6,7 @@ sidebar_position: 3
 
 ## Contract Requirements and Parameters
 
-## **ERC20 Collateral Pool Contract**
+### **ERC20 Collateral Pool Contract**
 
 **General Setup**
 
@@ -34,7 +34,7 @@ symbol: string       # Token symbol (e.g., "FACTR")
 decimals: number     # Token precision (e.g., 6)
 ````
 
-## **Counter Party Pool Configuration**
+### **Counter Party Pool Configuration**
 
 - **USD Token Address**: Ethereum address of the base token.
 

@@ -32,6 +32,8 @@ As an example, the first time someone lends to the pool, the `rewardPerToken` wi
 
 Let's consider the following example to better understand how this flow works:
 
+---
+
 ## Pool lifecycle
 
 - Event #1 -> _Contract is initialized with one pool having gold as collateral and USDC as the lending token_.

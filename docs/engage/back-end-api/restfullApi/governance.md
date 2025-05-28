@@ -16,6 +16,8 @@ sidebar_position: 4
 {}
 ```
 
+---
+
 ## List Proposals
 
 **Endpoint**: `/listProposals`
@@ -38,6 +40,8 @@ The response returns a status code of 200 along with an array of objects, each r
 - votesFor (number): The number of votes in favor of the proposal.
 - votesAgainst (number): The number of votes against the proposal.
 - status (string): The status of the proposal.
+
+---
 
 ## Get Proposal Details
 
@@ -69,6 +73,8 @@ The response will have a status code of 200 and will include the details of the 
 }
 ```
 
+---
+
 ## List Votes
 
 **Endpoint**: `/listVotes/{proposalID}`
@@ -84,6 +90,8 @@ This endpoint makes an HTTP GET request to retrieve a list of votes associated w
 The response to the last execution of this request had a status code of 200, and it returned a JSON object containing an array of "votes" along with a "count" of the total number of votes.
 
 The "votes" array includes objects with properties such as "\_id", "voting", "wallet", "chain", "vote", "signature", "signedTimestamp", "createdAt", "updatedAt", "\_\_v", and "value".
+
+---
 
 ## Insert User Vote
 

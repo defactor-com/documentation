@@ -9,6 +9,8 @@ tags:
 
 The `ERC20CollateralPool` smart contract, designed for EVM based blockchains, manages pools of collateralized loans using `ERC20` standard token. It facilitates lending, borrowing, and reward distribution in a decentralized finance (DeFi) ecosystem.
 
+---
+
 ## Pool
 
 The pool is a structure that keeps track of lenders, borrowers, and total balance for USDC and collateral tokens.
@@ -20,6 +22,8 @@ Some important characteristics:
 - This pool is primarily designed to support USDC tokens for lending and borrowing, but it can accommodate any other contract that adheres to the `ERC20` token standard with a `token precision of 6`. It also supports `ERC20` tokens as collateral, regardless of precision.
 - The pool has a `collateral token percentage` that is used to calculate the amount of collateral token a borrower will need to provide to borrow from the pool.
 - A pool can only have one type of collateral token.
+
+---
 
 ## Roles
 
@@ -71,6 +75,6 @@ The other action the user can interact with is `claim multiple`, it's the same a
 
 To mitigate the risk of fund loss for lenders and maintain the health of the pool, collateral tokens are required from every borrower. In the event of a borrower's default on the loan, the pool will utilize the collateral to cover it, and any remaining amount will be liquidated. If there is a surplus after liquidation, the borrower can reclaim it based on the value of their collateral.
 
-> It's important to note that there is always a risk of fund loss associated with market volatility for the collateralized assets.
+> ⚠️ It's important to note that there is always a risk of fund loss associated with market volatility for the collateralized assets.
 
 ![ERC20CollateralPool Claim Unliquidated Collateral](/img/flowchart/ERC20CollateralPool_claimunliquidatedcollateral.png)

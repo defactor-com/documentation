@@ -12,12 +12,16 @@ The system is token-agnostic, compatible with any ERC-20 asset that meets basic 
 
 A live example of this staking module in production is available at the [Engage Platform Demo](https://sharingblock-engage.defactor.dev/staking), showcasing real-time reward tracking and multiple pool configurations.
 
+---
+
 ## Key Features
 
 - **Multiple staking pools** with varying lockup periods and reward rates.
 - **Real-time reward tracking** through the Engage dashboard.
 - **Claim functionality** available during or after lockup ends.
 - **Seamless wallet integration** for MetaMask, Trust Wallet, and WalletConnect.
+
+---
 
 ## How Staking Works
 
@@ -26,6 +30,8 @@ A live example of this staking module in production is available at the [Engage 
 3. **Stake Tokens** – Enter the number of tokens and confirm the transaction.
 4. **Earn Rewards** – View accrued rewards in real time.
 5. **Claim or Unstake** – Once the lockup period ends, click 'Unstake & Claim' or 'Claim' to receive rewards.
+
+---
 
 ## Opening a Staking Position
 
@@ -36,6 +42,8 @@ To initiate a new staking position:
 - Select the **chain**, **collateral token**, and **reward token**.
 - Configure your staking duration and confirm the transaction.
 
+---
+
 ## Viewing and Managing Positions
 
 Stakeholders can view active and completed staking positions via the **Positions** section:
@@ -44,6 +52,8 @@ Stakeholders can view active and completed staking positions via the **Positions
 
 - **Open Positions** – Currently staked pools, with data on APR, lockup time, and chain.
 - **Completed Pools** – Historical data on claimed and expired pools.
+
+---
 
 ## Dashboard Elements
 
