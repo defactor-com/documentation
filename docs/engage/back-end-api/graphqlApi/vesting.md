@@ -78,6 +78,56 @@ mutation ($schedule: CreateScheduleInput!) {
 }
 ```
 
+### `Get Vesting Stats By User`
+
+Get the vesting stats by user. The result can be filtered by network.
+
+**HTTP Request Method**: POST
+
+**Roles**: Guest
+
+**GraphQL URL**: `{{BASE_URL}}/v1/graphql`
+
+**GraphQL Body**:
+
+```graphql
+mutation ($schedule: CreateScheduleInput!) {
+  VestingStatsByUserInput(schedule: $schedule) {
+    res
+    success
+  }
+}
+```
+
+**Params**:
+
+```json
+{
+  "schedule": {
+    "contractName": "{{VESTING}}",
+    "data": {
+      "address": "0xabc",
+      "networks": ["POLYGON_NETWORK"]
+    }
+  }
+}
+```
+
+**Response**
+
+```json
+{
+  "v1GetVestingStatsByUser": {
+    "res": {
+      "currentLockedAmount": 6000000,
+      "pendingClaimAmount": 1000000,
+      "totalVested": 1000000
+    },
+    "success": true
+  }
+}
+```
+
 ---
 
 ## Releases

@@ -217,6 +217,58 @@ Get the expected rewards by user for each open position. Filter by `now`, `day`,
 }
 ```
 
+### `Get Detailed Expected Rewards By User`
+
+Get the detailed expected rewards by user for each open position. Filter by `now`, `day`, `week`, `month`, `six-months`, `year` or `all`.
+
+**HTTP Request Method**: GET
+
+**Roles**: Guest
+
+**Request URL**: `{{BASE_RESTFUL_URL}}/v2/get-detailed-expected-rewards-by-user`
+
+**Params**:
+
+```json
+{
+  "position": {
+    "contractName": "{{STAKING}}",
+    "data": {
+      "address": "0xd198F7a8C953AC47dfd0F6a0267e4d19c67ce351",
+      "networks": ["{{NETWORK_ETHEREUM}}"],
+      "filterBy": ["month"],
+      "withAccruedRewards": false
+    }
+  }
+}
+```
+
+**Response**
+
+```json
+{
+  "v2GetDetailedExpectedRewardsByUser": {
+    "res": {
+      "now": {
+        "USD": 0.46357703076262946,
+        "byToken": [{
+            "FACTR": 11.87201460235921,
+            "USD": 0.46357703076262946
+        }]
+      },
+      "day": {
+        "USD": 0.5758285490345839
+        "byToken": [{
+            "FACTR": 14.74672921423135,
+            "USD": 0.5758285490345839
+        }]
+      },
+    },
+    "success": true
+  }
+}
+```
+
 ### `Get Expected Rewards`
 
 Get the expected rewards for each open position. Filter by `now`, `day`, `week`, `month`, `six-months`, `year` or `all`.
@@ -256,6 +308,57 @@ Get the expected rewards for each open position. Filter by `now`, `day`, `week`,
         "FACTR": 14.746729214231358,
         "USD": 0.5758285490345839
       }
+    },
+    "success": true
+  }
+}
+```
+
+### `Get Detailed Expected Rewards`
+
+Get the detailed expected rewards for each open position. Filter by `now`, `day`, `week`, `month`, `six-months`, `year` or `all`.
+
+**HTTP Request Method**: GET
+
+**Roles**: Guest
+
+**Request URL**: `{{BASE_RESTFUL_URL}}/v2/get-detailed-expected-rewards`
+
+**Params**:
+
+```json
+{
+  "position": {
+    "contractName": "{{STAKING}}",
+    "data": {
+      "networks": ["{{NETWORK_ETHEREUM}}"],
+      "filterBy": ["year"],
+      "withAccruedRewards": false
+    }
+  }
+}
+```
+
+**Response**
+
+```json
+{
+  "v2GetDetailedExpectedRewards": {
+    "res": {
+      "now": {
+        "USD": 0.46357703076262946,
+        "byToken": [{
+            "FACTR": 11.87201460235921,
+            "USD": 0.46357703076262946
+        }]
+      },
+      "day": {
+        "USD": 0.5758285490345839
+        "byToken": [{
+            "FACTR": 14.74672921423135,
+            "USD": 0.5758285490345839
+        }]
+      },
     },
     "success": true
   }
@@ -307,6 +410,69 @@ Get the rewards claimed by user. Filter by `now`, `day`, `week`, `month`, `six-m
 }
 ```
 
+### `Get Detailed Rewards Received By User`
+
+Get the rewards claimed by user. Filter by `now`, `day`, `week`, `month`, `six-months`, `year` or `all`.
+
+**HTTP Request Method**: GET
+
+**Roles**: Guest
+
+**Request URL**: `{{BASE_RESTFUL_URL}}/v2/get-detailed-rewards-received-by-user`
+
+**Params**:
+
+```json
+{
+  "position": {
+    "contractName": "{{STAKING}}",
+    "data": {
+      "address": "0xd198F7a8C953AC47dfd0F6a0267e4d19c67ce351",
+      "networks": ["{{NETWORK_ETHEREUM}}"],
+      "filterBy": ["month"]
+    }
+  }
+}
+```
+
+**Response**
+
+```json
+{
+  "v2GetDetailedRewardsReceivedByUser": {
+    "res": {
+      "month": {
+        "USD": 5.2017,
+        "byToken": [
+          {
+            "MTK": 1.7,
+            "USD": 0.0017
+          },
+          {
+            "FACTR": 250,
+            "USD": 5.2
+          }
+        ]
+      },
+      "year": {
+        "USD": 5.2017,
+        "byToken": [
+          {
+            "MTK": 1.7,
+            "USD": 0.0017
+          },
+          {
+            "FACTR": 250,
+            "USD": 5.2
+          }
+        ]
+      }
+    },
+    "success": true
+  }
+}
+```
+
 ### `Get Total Value Locked`
 
 Get the expected rewards by user for each open position. Address is optional.
@@ -347,6 +513,66 @@ Get the expected rewards by user for each open position. Address is optional.
         }
       }
     "success": true
+  }
+}
+```
+
+##### `Get Staking Summary`
+
+Get the staking summary for each open position. Address is optional.|
+
+**HTTP Request Method**: GET
+
+**Roles**: Guest
+
+**Request URL**: `{{BASE_RESTFUL_URL}}/v2/get-staking-summary`
+
+**Params**:
+
+```json
+{
+  "position": {
+    "contractName": "{{STAKING}}",
+    "data": {
+      "networks": ["{{NETWORK_ETHEREUM}}", "{{NETWORK_BASE}}"]
+    }
+  }
+}
+```
+
+**Response**
+
+```json
+{
+  "v2GetStakingStats": {
+    "success": true,
+    "res": {
+      "byAddress": {
+        "USD": 31.2,
+        "byToken": [
+          {
+            "FACTR": 1500,
+            "USD": 31.2,
+            "logo": "defactor logo"
+          }
+        ]
+      },
+      "byNetworks": {
+        "USD": 75.06,
+        "byToken": [
+          {
+            "FACTR": 2500,
+            "USD": 52,
+            "logo": "defactor logo"
+          },
+          {
+            "LBM": 2000,
+            "USD": 23.060000000000002,
+            "logo": "libertum logo"
+          }
+        ]
+      }
+    }
   }
 }
 ```
