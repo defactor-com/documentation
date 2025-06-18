@@ -21,8 +21,8 @@ Welcome to our Technology & Innovation Roadmap! Our mission is to merge Real-Wor
 | **Milestone**             | **Description**                                                                   | **Status**     |
 | ------------------------- | --------------------------------------------------------------------------------- | -------------- |
 | **Engage Vesting**        | Implement smart contracts for token vesting.                                      | 🟢 Completed   |
-| **Defactor Engage v2**    | Launch of the FACTR Engage Platform using the latest toolkit.                     | 🟡 In Progress |
-| **CounterParty Pools UI** | Revamp of the CounterParty Pools user interface.                                  | 🟡 In Progress |
+| **Defactor Engage v2**    | Launch of the FACTR Engage Platform using the latest toolkit.                     | 🟢 Completed |
+| **CounterParty Pools UI** | Revamp of the CounterParty Pools user interface.                                  | 🟢 Completed |
 | **Performance Testing**   | Conduct performance tests on EVM-compatible networks and enterprise applications. | 🟡 In Progress |
 | **SAP / ERP POC**         | Proof of concept for integrating SAP Enterprise Resource Management.              | 🟡 In Progress |
 
