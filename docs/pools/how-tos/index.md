@@ -101,7 +101,7 @@ This guide outlines the essential details required to configure your pool smart 
 - Confirm deployment network
 - Ensure access to gas fees and final review of all parameters
 
-_See [Smart Contract Configuration Guide](https://defactor.dev/docs/pools/smart-contract-config) for deployment details._
+_See [Smart Contract Configuration Guide](/docs/pools/how-tos/pools-smart-contracts-configuration) for deployment details._
 
 ---
 
