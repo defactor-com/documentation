@@ -15,7 +15,7 @@ sidebar_position: 2
   }}>
     <a href="new-pools-client-onboarding" className="pagination-nav__label">New Pools Client Onboarding</a>
     <a href="pools-smart-contracts-configuration" className="pagination-nav__label">Pools Contract Configuration</a>
-    <a href="configuring-pools-intances" className="pagination-nav__label">Configuring Pools Instances</a>
+    <a href="configuring-pools-instances" className="pagination-nav__label">Configuring Pools Instances</a>
   </div>
 
   <div style={{

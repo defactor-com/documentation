@@ -1,5 +1,5 @@
 ---
-id: configuring-pools-intances
+id: configuring-pools-instances
 title: Configuring Pools Instances
 sidebar_position: 4
 ---
