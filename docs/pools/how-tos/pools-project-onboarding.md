@@ -76,7 +76,7 @@ Set up the backend infrastructure to integrate with smart contracts and manage d
 - **Security Measures**: Encrypt sensitive data, enable firewalls, and follow security best practices.
 - **CI/CD Pipelines**: Automate testing and deployment workflows.
 
-- For detailed instructions, refer to [Configuring Pool Instances](/docs/pools/how-tos/configuring-pools-intances).
+- For detailed instructions, refer to [Configuring Pool Instances](/docs/pools/how-tos/configuring-pools-instances).
 
 ---
 
@@ -86,7 +86,7 @@ Set up the backend infrastructure to integrate with smart contracts and manage d
 - **Frontend Configuration**: Configure contract, token, and collateral addresses.
 - **CI/CD Pipelines**: Automate deployment and updates to streamline delivery.
 
-For more information, visit [Configuring Pool Instances](/docs/pools/how-tos/configuring-pools-intances).
+For more information, visit [Configuring Pool Instances](/docs/pools/how-tos/configuring-pools-instances).
 
 ---
 
@@ -145,7 +145,7 @@ Pools can be created and managed in the admin section.
   - Pool's visibility in the UI.
   - Terms and conditions link.
 
-Please Refer to the [Configuring a New Pools Instance Guide](/docs/pools/how-tos/configuring-pools-intances) for more details.
+Please Refer to the [Configuring a New Pools Instance Guide](/docs/pools/how-tos/configuring-pools-instances) for more details.
 
 ---
 
