@@ -3,8 +3,10 @@ id: counterparty-pools-smart-contract
 title: Introduction
 sidebar_position: 1
 tags:
+  - Counterparty Pool
   - ERC20
-  - Collateral Pool
+  - ERC721
+  - ERC1155
 ---
 
 `Pools.sol` this contract allows users to create, manage, and interact with funding pools using `ERC20`, `ERC721`, and `ERC1155` tokens.

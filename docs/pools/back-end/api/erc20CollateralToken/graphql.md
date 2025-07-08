@@ -362,7 +362,7 @@ Upon successful request completion, the server will return a status code of 200 
 }
 ```
 
-### `Update Pool Metadata`
+### `Update Metadata`
 
 Update the pool metadata.
 

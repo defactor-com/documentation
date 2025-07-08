@@ -38,7 +38,7 @@ The **Assets** tool is an advanced token creation platform that allows users to 
 
 ## Pools
 
-**Pools** is a lending and borrowing platform that enables the creation of liquidity pools using real-world assets (RWA) as collateral. This tool allows businesses to lock their assets and access liquidity in a decentralized manner.
+**Pools** is a supplying and borrowing platform that enables the creation of liquidity pools using real-world assets (RWA) as collateral. This tool allows businesses to lock their assets and access liquidity in a decentralized manner.
 
 **Key Features:**
 

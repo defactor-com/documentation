@@ -22,7 +22,7 @@ tags:
 - `LIQUIDATION_PROTOCOL_FEE`: A fixed fee charged by the contract during liquidation.
 - `LIQUIDATION_FEE`: A fee awarded to the liquidator as an incentive for carrying out liquidations.
 - `LIQUIDATION_MARGIN_FACTOR`: Factor that determines whether the position is liquidatable.
-- `MAX_LTV_PERCENTAGE`: The highest loan-to-value (LTV) ratio that can be set for a pool.
+- `MAX_LTV_PERCENTAGE`: The highest [loan-to-value (LTV) ratio](/docs/resources/glossary#loan-to-value-ltv-ratio-also-called-collateral-token-percentage) that can be set for a pool.
 - `ONE_YEAR`: One year in seconds.
 - `BPS_DIVIDER`: Basis point divider.
 

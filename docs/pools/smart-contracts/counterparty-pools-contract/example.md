@@ -3,8 +3,10 @@ id: counterparty-pools-smart-contract-example
 title: Example
 sidebar_position: 3
 tags:
-  - Borrow
-  - Lend
+  - Counterparty Pool
+  - ERC20
+  - ERC721
+  - ERC1155
 ---
 
 ## In-depth Actions

@@ -54,7 +54,7 @@ Each pool has a minimum amount to lend and maximum USDC capacity.
 
 #### borrow
 
-When the user borrows from a given pool, the contract asks for a certain amount of collateral assets as a safe mechanism to ensure the borrower will come back and pay the borrow position. The borrower can indicate how much collateral token provide with the restriction that the loan-to-value (LTV) ratio is less than pool max ltv configured. 
+When the user borrows from a given pool, the contract asks for a certain amount of collateral assets as a safe mechanism to ensure the borrower will come back and pay the borrow position. The borrower can indicate how much collateral token provide with the restriction that the [loan-to-value (LTV) ratio](/docs/resources/glossary#loan-to-value-ltv-ratio-also-called-collateral-token-percentage) is less than pool max ltv configured. 
 
 Once the position is open if the LTV increase and reach the liquidation threshold the borrow position become liquidatable. To avoid getting liquidated, the borrower must pay the borrow position with interest or increase the collateral amount of the borrow position.
 
