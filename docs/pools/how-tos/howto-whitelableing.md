@@ -42,7 +42,7 @@ Define the branding assets with the `NEXT_PUBLIC_ASSETS_APP` variable:
 
 ### Branding Customization
 
-Customize the visual theme of the application using the `branding.json` file. This file controls the color schemes and other UI elements.
+Customize the visual theme of the application using the `NEXT_PUBLIC_BRANDING_CONFIG` variable. This variable controls the color schemes and other UI elements.
 
 #### Color Schemes
 
@@ -50,29 +50,40 @@ Customize the visual theme of the application using the `branding.json` file. Th
 {
   "color": {
     "primary": {
-      "light": "#c8e2d7",
-      "main": "#50af95",
-      "dark": "#aaccc0"
+      "light": "#FFFFFF",
+      "main": "#26A66B",
+      "dark": "#348DE5"
     },
     "secondary": {
-      "light": "#FFFAEE",
-      "main": "#F6CA53",
-      "dark": "#aaccc0"
+      "light": "#26A66B",
+      "main": "#26A66B",
+      "dark": "#348DE5"
     },
     "background": {
-      "default": "#f9f9f9"
+      "default": "#F9F9F9",
+      "ellipseOne": "#26A66B",
+      "ellipseTwo": "#26A66B",
+      "ellipseThree": "#E0A225",
+      "ellipseFour": "#26A66B"
     },
     "charts": {
       "pieChartColors": {
-        "paid": "#5A5BEB",
-        "active": "#26A66B",
-        "claimed": "#D21A4D",
-        "available": "#5A5BEB",
-        "liquidated": "#D21A4D",
-        "awaitingLiquidation": "#E0A225"
+        "paid": "#26a66b",
+        "paidBg": "#E8F3E8",
+        "active": "#26a66b",
+        "activeBg": "rgb(38, 166, 107, 0.1)",
+        "claimed": "#7C7D7E",
+        "claimedBg": "rgb(75, 153, 232, 0.3)",
+        "available": "#26a66b",
+        "liquidated": "#7C7D7E",
+        "liquidatedBg": "rgb(75, 153, 232, 0.3)",
+        "completed": "#7C7D7E",
+        "completedBg": "rgb(75, 153, 232, 0.3)",
+        "awaitingLiquidation": "#E0A225",
+        "awaitingLiquidationBg": "#FCF6EA"
       },
-      "barChartColors": ["#5A5BEB", "#26A66B80"],
-      "lineChartColors": ["#26A66B", "#5A5BEB", "#D21A4D"]
+      "barChartColors": ["#26A66B", "#1A73DE80"],
+      "lineChartColors": ["#26A66B", "#D21A4D", "#2D569B"]
     }
   }
 }
