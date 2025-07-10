@@ -11,18 +11,18 @@ sidebar_position: 4
 
 ### Q2: Where can I find API documentation?
 
-**A:** The API documentation is available [here](../pools/back-end/backend-overview). It includes detailed descriptions of API endpoints, parameters, and examples.
+**A:** The API documentation for the defactor toolkit could be find here: [Assets](/docs/assets/back-end-api/backend-overview), [Engage](/docs/engage/back-end-api/backend-overview) and [Pools](../pools/back-end/backend-overview). It includes detailed descriptions of API endpoints, parameters, and examples.
 
 ### Q3: Why Blockchain?
 
 **A:** A blockchain is a data registry that works as a large ledger of accounts shared between several users or "nodes" in which transactions are recorded in a reliable and secure way. In this ledger, "blocks" are recorded, which are collections of data. These blocks are connected to each other in a chronological way creating a kind of chain. For more details, see How does a blockchain work?
 
-### Q4: What is the difference between a Regular Account and a Blockcahin Account?
+### Q4: What is the difference between a Regular Account and a Blockchain Account?
 
 **A:**
 | Regular Account | Blockchain Account |  
 |------|------|
-|-Password is stored on company servers <br/> -Prone to be hack <br/> -No transparency | -Should be kept secret <br/> -Assymmetric crytography <br/> -Public key and private key <br/> -Different key pairs have different permissions asociated |
+|-Password is stored on company servers <br/> -Prone to be hack <br/> -No transparency | -Should be kept secret <br/> -Asymmetric cryptography <br/> -Public key and private key <br/> -Different key pairs have different permissions associated |
 
 ### Q5: How does a Smart Contract work?
 

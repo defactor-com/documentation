@@ -101,7 +101,7 @@ mutation v1RestoreSession($session: RestoreSessionInput!) {
 
 ```json
 {
-  "v1Loding": {
+  "v1RestoreSession": {
     "res": {
       "accessToken": "",
       "refreshToken": ""

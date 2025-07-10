@@ -8,7 +8,7 @@ sidebar_position: 3
 
 ### `Create Schedule`
 
-Add a new batch schedule with vesting schedules and their beneficieries.
+Add a new batch schedule with vesting schedules and their beneficiaries.
 
 **HTTP Method**: POST
 
