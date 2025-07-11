@@ -83,7 +83,7 @@ Retrieve a new access token with the role of the user and a refresh token to reg
 
 ```json
 {
-  "v1Loding": {
+  "v1RestoreSession": {
     "res": {
       "accessToken": "",
       "refreshToken": ""
