@@ -4,7 +4,6 @@ title: Technical Aspects
 sidebar_position: 2
 tags:
   - Technical Aspects
-#   - Collateral Pool
 ---
 
 ## Contract Modules
@@ -20,11 +19,12 @@ tags:
 
 ### Constants
 
-- `LIQUIDATION_PROTOCOL_FEE`: Fixed fee for liquidation.
-- `LIQUIDATION_FEE`: Additional liquidation fee.
-- `OZ_IN_G`: Ounces to grams conversion constant.
+- `LIQUIDATION_PROTOCOL_FEE`: A fixed fee charged by the contract during liquidation.
+- `LIQUIDATION_FEE`: A fee awarded to the liquidator as an incentive for carrying out liquidations.
+- `LIQUIDATION_MARGIN_FACTOR`: Factor that determines whether the position is liquidatable.
+- `MAX_LTV_PERCENTAGE`: The highest [loan-to-value (LTV) ratio](/docs/resources/glossary#loan-to-value-ltv-ratio-also-called-collateral-token-percentage) that can be set for a pool.
 - `ONE_YEAR`: One year in seconds.
-- `HOUNDRED`: Constant for percentage calculations.
+- `BPS_DIVIDER`: Basis point divider.
 
 ### Initialization
 
@@ -40,24 +40,35 @@ tags:
 ### Contract Control
 
 - `pause` / `unpause`: Pause or unpause contract operations.
+- `withdrawProtocolRewards`: Allows admin to withdraw protocol fees.
 
 ### User Interactions
 
-- `lend`: Lend USDC to a pool.
+- `lend`: Supply USDC to a pool.
 - `borrow`: Borrow USDC against collateral.
 - `repay`: Repay borrowed USDC with interest.
-- `claimRewards`: Claim rewards after pool closure.
-- `claimUnliquidatedCollateral`: Claim back collateral if not repaid.
-- `liquidatePool`: Liquidate a pool after closure.
+- `claim`: Withdraw supplied USDC with rewards.
+- `changeCollateralAmount`: Change the collateral amount of a borrow position.
+- `liquidate`: Liquidate borrow positions that are liquidatable.
+- `claimCollateral`: Allow to withdraw supply positions, receiving their rewards in collateral tokens by liquidate borrow positions.  
 
 ### Calculation Utilities
 
 - `calculateRepayInterest`: Calculate repayment interest.
 - `calculateCollateralTokenAmount`: Calculate required collateral token amount.
+- `isPositionLiquidatable`: Calculate is a borrow position is liquidatable.
 
 ### View Functions
 
 - `getPools`: Get details of all pools.
+- `getPool`: Get details of one pool.
+- `getLendPosition`: Get details of one supply.
+- `getAllLendPositions`: Get all user supply position in the given pool.
+- `getBorrowPosition`: Get details of one borrow.
+- `getAllBorrowPositions`: Get all user borrow position in the given pool.
+- `getCollateralTokens`: Get the list of all collateral tokens.
+- `getCollateralTokenProtocolFee`: Get protocol fees for collateral token.
+- `getAvailableAmountsInPool`: Get available USDC and collateral token amount in a given pool.
 
 ### Error Handling
 
@@ -65,7 +76,7 @@ Defined errors for exceptional scenarios, like `PoolEndsAtIsInThePast` and `Admi
 
 ### Event Logging
 
-Events like `LendEvent`, `BorrowEvent`, and `RepayEvent` for activity tracking.
+Events like `newLend`, `newBorrow`, `Repaid`, `RewardsClaimed`, `AddedCollateral`, `RemovedCollateral`, and `UserPositionLiquidated` for activity tracking.
 
 ### Security Features
 
@@ -83,6 +94,6 @@ Designed with OpenZeppelin's upgradeable contracts framework.
 
 ### Important Considerations
 
-- **Precision and Rounding**: Handle mathematical calculations accurately.
+- **Precision and Rounding**: While mathematical calculations are handled accurately, slight discrepancies may arise due to rounding and the use of different timestamps for calculating suppliers' and borrowers' rewards.
 - **Time Dependencies**: Time-sensitive functions need careful handling.
 - **Security**: Regular audits and reviews are recommended.

@@ -26,11 +26,11 @@ description: Learn How to Interact with the Defactor Pools Solution
     alignItems: 'flex-start',
     textDecoration: 'underline'
   }}>
-    <a href="pool-liquidation-process" className="pagination-nav__label">Pool Loquidating Process</a>
+    <a href="pool-liquidation-process" className="pagination-nav__label">Pool Liquidating Process</a>
   </div>
 </div>
 
-The **Pools Processes** section provides a step-by-step breakdown of how users and integrators interact with the Defactor Pools system. Whether you're lending capital, borrowing against tokenized assets, or managing liquidation events, these guides help you navigate the lifecycle of a pool with clarity and confidence.
+The **Pools Processes** section provides a step-by-step breakdown of how users and integrators interact with the Defactor Pools system. Whether you're supplying capital, borrowing against tokenized assets, or managing liquidation events, these guides help you navigate the lifecycle of a pool with clarity and confidence.
 
 Each process is designed to be secure, transparent, and governed by smart contracts.
 
@@ -38,8 +38,8 @@ Each process is designed to be secure, transparent, and governed by smart contra
 
 ## Included Guides
 
-- [**Lending**](pool-lending-process) – How to supply stablecoins to a pool, earn rewards, and manage your position
-- [**Borrowing**](pool-borrowing-process) – How to borrow against your tokenized assets and repay loans
+- [**Lending**](pool-lending-process) – How to supply stablecoins to a pool, earn rewards, and manage your positions
+- [**Borrowing**](pool-borrowing-process) – How to borrow against your tokenized assets as collateral and repay loans
 - [**Liquidation**](pool-liquidation-process) – What happens when loans are not repaid and how collateral is managed
 
 These process guides are relevant to both **ERC-20 Collateral Pools** and **Counterparty Pools**, with differences noted where applicable.

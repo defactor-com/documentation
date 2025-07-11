@@ -14,12 +14,12 @@ The smart contract setup process involves selecting the appropriate contract typ
 
 ### Contract Types
 
-#### 1. [**Pools Contract**](https://defactor.dev/docs/smart-contracts/counterparty-pools-contract/smart-contract-erc20-collateral-pool)
+#### 1. [**Counterparty Pools Contract**](/docs/pools/smart-contracts/counterparty-pools-contract/counterparty-pools-smart-contract)
 
-- Enables users to create, manage, and interact with lending pools.
+- Enables users to create, manage, and interact with counterparty pools.
 - Supports `ERC20`, `ERC721`, and `ERC1155` tokens as collateral.
 
-#### 2. [**ERC20CollateralPool Contract**](https://defactor.dev/docs/smart-contracts/counterparty-pools-contract/smart-contract-erc20-collateral-pool)
+#### 2. [**ERC20CollateralPool Contract**](/docs/pools/smart-contracts/erc20-collateral-pool-contract/smart-contract-erc20-collateral-pool)
 
 - Designed for EVM-compatible blockchains.
 - Facilitates pools of collateralized loans using the `ERC20` token standard.
@@ -38,8 +38,8 @@ Supported networks:
 - [RWA.io](https://rwa.io)
 - [Base](https://www.base.org/)
 - [BNB Chain](https://www.bnbchain.org/en)
-- [Ethereum](https://defactor.dev/docs/blockchain-and-web3/ethereum)
-- [Polygon](https://defactor.dev/docs/blockchain-and-web3/polygon)
+- [Ethereum](/docs/blockchain-and-web3/ethereum)
+- [Polygon](/docs/blockchain-and-web3/polygon)
 
 ---
 
@@ -47,7 +47,7 @@ Supported networks:
 
 Smart contracts must be deployed and initialized with specific configuration parameters.
 
-- Refer to the [Pools Contract Requirements and Parameters Guide](https://defactor.dev/docs/pools/how-tos/smart-contract-config) for more details.
+- Refer to the [Pools Contract Requirements and Parameters Guide](/docs/pools/how-tos/pools-smart-contracts-configuration) for more details.
 
 ---
 
@@ -76,7 +76,7 @@ Set up the backend infrastructure to integrate with smart contracts and manage d
 - **Security Measures**: Encrypt sensitive data, enable firewalls, and follow security best practices.
 - **CI/CD Pipelines**: Automate testing and deployment workflows.
 
-- For detailed instructions, refer to [Configuring Pool Instances](https://defactor.dev/docs/pools/how-tos/howto-pools-config).
+- For detailed instructions, refer to [Configuring Pool Instances](/docs/pools/how-tos/configuring-pools-instances).
 
 ---
 
@@ -86,13 +86,13 @@ Set up the backend infrastructure to integrate with smart contracts and manage d
 - **Frontend Configuration**: Configure contract, token, and collateral addresses.
 - **CI/CD Pipelines**: Automate deployment and updates to streamline delivery.
 
-For more information, visit [Configuring Pool Instances](https://defactor.dev/docs/pools/how-tos/howto-pools-config).
+For more information, visit [Configuring Pool Instances](/docs/pools/how-tos/configuring-pools-instances).
 
 ---
 
 ## Web App Branding
 
-For branding customization, check [Whitelabeling Defactor Pools](https://defactor.dev/docs/pools/how-tos/howto-whitelableing).
+For branding customization, check [Whitelabeling Defactor Pools](/docs/pools/how-tos/whitelabeling-defactor-pools).
 
 ### Logos
 
@@ -128,25 +128,24 @@ secondary:
 
 ## Pool Setup
 
+### API
+
+- [RESTful API](/docs/pools/back-end/api/erc20CollateralToken/restful)
+- [GraphQL API](/docs/pools/back-end/api/erc20CollateralToken/graphql)
+
 ### Pool Creation
 
-Pools can be created using APIs:
-
-- **ERC20CollateralPool** APIs:
-
-  - [RESTful API](https://defactor.dev/docs/back-end-api/pools/erc20CollateralToken/restful)
-  - [GraphQL API](https://defactor.dev/docs/back-end-api/pools/erc20CollateralToken/graphql)
-
-- **Pools Contract APIs**:
-  - [Insert Pool Endpoint](https://defactor.dev/docs/back-end-api/pools/insertPool).
+Pools can be created and managed in the admin section.
 
 ### Metadata
 
 - Add pool metadata including:
-  - Pool name and description.
+  - Pool name, description and icon.
   - Token icon image URL.
+  - Pool's visibility in the UI.
+  - Terms and conditions link.
 
-Please Refer to the [Configuring a New Pools Instance Guide](https://defactor.dev/docs/pools/how-tos/howto-pools-config) for more details.
+Please Refer to the [Configuring a New Pools Instance Guide](/docs/pools/how-tos/configuring-pools-instances) for more details.
 
 ---
 

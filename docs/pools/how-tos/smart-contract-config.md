@@ -11,20 +11,21 @@ sidebar_position: 3
 **General Setup**
 
 - **Admin Address**: Ethereum address for the administrator.
-- **USDC Address**: Ethereum address of the base token (e.g., USDC).
+- **USDC Address**: Ethereum address of the `ERC20` base token (e.g., USDC).
 
 **Optional Pools Configuration**  
 Define pools with the following parameters:
 
 ````yaml
-- maxLended: number # Maximum amount allowed for lending.
 - minLended: number # Minimum amount required for lending.
 - minBorrow: number # Minimum borrowable amount.
+- maxPoolCapacity: number # Maximum amount that can be supply.
 - endTime: UTC Date # Pool closing date.
-- collateralToken: eth address # Address of the collateral token contract.
-- collateralTokenChainlink: eth address # Chainlink price feed address for collateral token valuation.
-- collateralTokenFactor: number # Risk factor multiplier for collateral token.
-- collateralTokenPercentage: number # Percentage of collateral required.
+- collateralToken: eth address # Address of the ERC20 collateral token contract.
+- collateralTokenPriceOracle: eth address # Chainlink price feed address for collateral token valuation.
+- collateralTokenSequencerOracle: eth address # Sequencer oracle address for collateral token valuation.
+- collateralTokenFactor: number # Risk factor multiplier in bps for collateral token.
+- collateralTokenLTVPercentage: number # Loan-to-value (LTV) percentage in bps.
 - interest: number # Interest rate applied to loans.
 
 #### **ERC20 Token Configuration**

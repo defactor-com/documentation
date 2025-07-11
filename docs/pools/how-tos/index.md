@@ -15,7 +15,7 @@ sidebar_position: 2
   }}>
     <a href="new-pools-client-onboarding" className="pagination-nav__label">New Pools Client Onboarding</a>
     <a href="pools-smart-contracts-configuration" className="pagination-nav__label">Pools Contract Configuration</a>
-    <a href="configuring-pools-intances" className="pagination-nav__label">Configuring Pools Instances</a>
+    <a href="configuring-pools-instances" className="pagination-nav__label">Configuring Pools Instances</a>
   </div>
 
   <div style={{
@@ -101,7 +101,7 @@ This guide outlines the essential details required to configure your pool smart 
 - Confirm deployment network
 - Ensure access to gas fees and final review of all parameters
 
-_See [Smart Contract Configuration Guide](https://defactor.dev/docs/pools/smart-contract-config) for deployment details._
+_See [Smart Contract Configuration Guide](/docs/pools/how-tos/pools-smart-contracts-configuration) for deployment details._
 
 ---
 
