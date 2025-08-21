@@ -2,6 +2,9 @@
 id: graphql-api-authentication
 title: Authentication
 sidebar_position: 2
+description: GraphQL API authentication endpoints for Defactor Pools platform including login and user management
+keywords: [authentication, auth, login, jwt, graphql, api, pools, backend, security]
+tags: [authentication, pools, backend, graphql]
 ---
 
 # Authentication Actions

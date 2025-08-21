@@ -2,6 +2,9 @@
 id: graphql-api-lend
 title: Lend
 sidebar_position: 4
+description: GraphQL API endpoints for lending operations in Defactor Pools platform
+keywords: [lending, lend, graphql, api, pools, backend, v1, v2, rewards, supplies]
+tags: [lending, pools, backend, graphql]
 ---
 
 # Lend Actions

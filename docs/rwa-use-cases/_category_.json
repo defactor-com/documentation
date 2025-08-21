@@ -1,7 +1,11 @@
 {
   "label": "Real World Use Cases",
   "position": 8,
+  "collapsible": true,
+  "collapsed": true,
   "link": {
-    "type": "generated-index"
+    "type": "generated-index",
+    "title": "Real World Asset Use Cases",
+    "description": "Real-world implementations and case studies of Defactor tokenization platform"
   }
 }

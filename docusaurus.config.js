@@ -63,10 +63,13 @@ const config = {
         appId: '2WY12FOPQF',
         apiKey: '5b74b1e4542814c80531eb2ddee52d39',
         indexName: 'defactor',
-        contextualSearch: false,
+        contextualSearch: true,
         externalUrlRegex: 'external\\\\.com|domain\\\\.com',
-        searchParameters: {},
+        searchParameters: {
+          facetFilters: ['language:en']
+        },
         searchPagePath: 'search',
+        insights: false,
       },
       image: 'img/social-media-preview.png',
       navbar: {

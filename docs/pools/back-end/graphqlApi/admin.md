@@ -2,6 +2,9 @@
 id: graphql-api-admin
 title: Admin
 sidebar_position: 1
+description: GraphQL API endpoints for administrative operations in Defactor Pools platform
+keywords: [admin, administration, graphql, api, pools, backend, management, configuration]
+tags: [admin, pools, backend, graphql]
 ---
 
 # Admin Actions
