@@ -2,19 +2,24 @@ package main
 
 import (
 	"encoding/json"
+	"flag"
 	"fmt"
 	"log"
 	"os"
+	"regexp"
 	"strings"
 )
 
 type HasuraMetadata struct {
 	Metadata struct {
-		Actions     []Action    `json:"actions"`
-		CustomTypes CustomTypes `json:"custom_types"`
+		Actions          []Action          `json:"actions"`
+		RestEndpoints    []RestEndpoint    `json:"rest_endpoints"`
+		QueryCollections []QueryCollection `json:"query_collections"`
+		CustomTypes      CustomTypes       `json:"custom_types"`
 	} `json:"metadata"`
 }
 
+// Actions types
 type Action struct {
 	Name        string       `json:"name"`
 	Definition  Definition   `json:"definition"`
@@ -45,6 +50,39 @@ type Argument struct {
 	Type string `json:"type"`
 }
 
+// REST endpoints types
+type RestEndpoint struct {
+	Comment    string          `json:"comment,omitempty"`
+	Definition RestEndpointDef `json:"definition"`
+	Methods    []string        `json:"methods"`
+	Name       string          `json:"name"`
+	URL        string          `json:"url"`
+}
+
+type RestEndpointDef struct {
+	Query QueryRef `json:"query"`
+}
+
+type QueryRef struct {
+	CollectionName string `json:"collection_name"`
+	QueryName      string `json:"query_name"`
+}
+
+type QueryCollection struct {
+	Name       string        `json:"name"`
+	Definition CollectionDef `json:"definition"`
+}
+
+type CollectionDef struct {
+	Queries []Query `json:"queries"`
+}
+
+type Query struct {
+	Name  string `json:"name"`
+	Query string `json:"query"`
+}
+
+// Shared types
 type CustomTypes struct {
 	InputObjects []TypeObject `json:"input_objects"`
 	Objects      []TypeObject `json:"objects"`
@@ -63,12 +101,20 @@ type Field struct {
 	Description string `json:"description,omitempty"`
 }
 
+type QueryParam struct {
+	Name string
+	Type string
+}
+
 func main() {
-	if len(os.Args) < 2 {
-		log.Fatal("Usage: go run main.go <hasura_metadata.json>")
+	var mode = flag.String("mode", "actions", "Generation mode: 'actions' or 'rest'")
+	flag.Parse()
+
+	if len(flag.Args()) < 1 {
+		log.Fatal("Usage: go run hasura-docs.go [-mode=actions|rest] <hasura_metadata.json>")
 	}
 
-	filename := os.Args[1]
+	filename := flag.Args()[0]
 
 	data, err := os.ReadFile(filename)
 	if err != nil {
@@ -80,9 +126,20 @@ func main() {
 		log.Fatalf("Error parsing JSON: %v", err)
 	}
 
-	doc := generateDocumentation(metadata)
+	var doc string
+	var outputFile string
 
-	outputFile := "hasura-actions-documentation.md"
+	switch *mode {
+	case "actions":
+		doc = generateActionsDocumentation(metadata)
+		outputFile = "hasura-actions-documentation.md"
+	case "rest":
+		doc = generateRestEndpointDocumentation(metadata)
+		outputFile = "hasura-rest-endpoints-documentation.md"
+	default:
+		log.Fatalf("Invalid mode: %s. Use 'actions' or 'rest'", *mode)
+	}
+
 	if err := os.WriteFile(outputFile, []byte(doc), 0644); err != nil {
 		log.Fatalf("Error writing documentation: %v", err)
 	}
@@ -90,7 +147,8 @@ func main() {
 	fmt.Printf("Documentation generated successfully: %s\n", outputFile)
 }
 
-func generateDocumentation(metadata HasuraMetadata) string {
+// Actions documentation generation
+func generateActionsDocumentation(metadata HasuraMetadata) string {
 	var doc strings.Builder
 
 	// Create type lookup maps
@@ -209,6 +267,133 @@ func extractWrapperField(action Action, argName string) string {
 	// Default: return the argument name if it seems to be a wrapper
 	// This covers cases where the GraphQL variable name matches the wrapper field
 	return argName
+}
+
+// REST endpoints documentation generation
+func generateRestEndpointDocumentation(metadata HasuraMetadata) string {
+	var doc strings.Builder
+
+	// Create lookup maps
+	inputTypes := make(map[string]TypeObject)
+	outputTypes := make(map[string]TypeObject)
+	queryMap := make(map[string]Query)
+
+	for _, inputObj := range metadata.Metadata.CustomTypes.InputObjects {
+		inputTypes[inputObj.Name] = inputObj
+	}
+	for _, obj := range metadata.Metadata.CustomTypes.Objects {
+		outputTypes[obj.Name] = obj
+	}
+
+	// Build query lookup map
+	for _, collection := range metadata.Metadata.QueryCollections {
+		for _, query := range collection.Definition.Queries {
+			queryMap[query.Name] = query
+		}
+	}
+
+	// Generate REST endpoints documentation
+	if len(metadata.Metadata.RestEndpoints) > 0 {
+		for _, endpoint := range metadata.Metadata.RestEndpoints {
+			doc.WriteString(fmt.Sprintf("### %s\n\n", endpoint.Name))
+
+			if endpoint.Comment != "" {
+				doc.WriteString(fmt.Sprintf("%s\n\n", endpoint.Comment))
+			}
+
+			// HTTP Methods
+			doc.WriteString(fmt.Sprintf("**Methods:** `%s`\n\n", strings.Join(endpoint.Methods, ", ")))
+
+			// URL
+			doc.WriteString(fmt.Sprintf("**URL:** `%s`\n\n", endpoint.URL))
+
+			// Find the corresponding query
+			query, exists := queryMap[endpoint.Definition.Query.QueryName]
+			if !exists {
+				doc.WriteString("*Query not found in collections*\n\n")
+				continue
+			}
+
+			// Parse the query to extract input parameters and output type
+			inputParams, outputType := parseGraphQLQuery(query.Query)
+
+			// Input Parameters
+			if len(inputParams) > 0 {
+				doc.WriteString("#### Input Parameters\n\n")
+				for _, param := range inputParams {
+					doc.WriteString(fmt.Sprintf("**%s** (`%s`)\n\n", param.Name, param.Type))
+
+					// Generate JSON example for input type
+					cleanParamType := strings.TrimSuffix(param.Type, "!")
+					if inputType, exists := inputTypes[cleanParamType]; exists {
+						doc.WriteString("```json\n")
+						jsonExample := generateJSONExample(inputType, inputTypes, outputTypes, true)
+						formattedJSON := formatJSON(jsonExample)
+						doc.WriteString(formattedJSON)
+						doc.WriteString("\n```\n\n")
+					}
+				}
+			}
+
+			// Response
+			doc.WriteString("#### Response\n\n")
+			if outputType != "" {
+				doc.WriteString(fmt.Sprintf("**Type:** `%s`\n\n", outputType))
+
+				// Generate JSON example for output type
+				if outputTypeObj, exists := outputTypes[outputType]; exists {
+					doc.WriteString("```json\n")
+					jsonExample := generateJSONExample(outputTypeObj, inputTypes, outputTypes, false)
+					formattedJSON := formatJSON(jsonExample)
+					doc.WriteString(formattedJSON)
+					doc.WriteString("\n```\n\n")
+				}
+			}
+
+			doc.WriteString("---\n\n")
+		}
+	}
+
+	return doc.String()
+}
+
+func parseGraphQLQuery(queryStr string) ([]QueryParam, string) {
+	var params []QueryParam
+	var outputType string
+
+	// Extract parameters from query/mutation signature
+	// Pattern: ($paramName: ParamType!)
+	paramRegex := regexp.MustCompile(`\$(\w+):\s*([^,\)]+)`)
+	paramMatches := paramRegex.FindAllStringSubmatch(queryStr, -1)
+
+	for _, match := range paramMatches {
+		if len(match) == 3 {
+			params = append(params, QueryParam{
+				Name: match[1],
+				Type: strings.TrimSpace(match[2]),
+			})
+		}
+	}
+
+	// Extract output type from the query body
+	// Look for the function call pattern and try to infer from context
+	// This is a simplified approach - in practice, you might need more sophisticated parsing
+	lines := strings.Split(queryStr, "\n")
+	for _, line := range lines {
+		line = strings.TrimSpace(line)
+		if strings.Contains(line, "{") && (strings.Contains(line, "res") || strings.Contains(line, "success")) {
+			// Most queries seem to return DataOutput based on the pattern
+			outputType = "DataOutput"
+			break
+		}
+	}
+
+	// Fallback to DataOutput if we couldn't determine the type
+	if outputType == "" {
+		outputType = "DataOutput"
+	}
+
+	return params, outputType
 }
 
 func generateJSONExample(typeObj TypeObject, inputTypes, outputTypes map[string]TypeObject, isInput bool) string {
