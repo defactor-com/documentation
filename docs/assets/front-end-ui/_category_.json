@@ -1,0 +1,11 @@
+{
+    "label": "Front End UI",
+    "position": 2,
+    "collapsible": true,
+    "collapsed": false,
+    "link": {
+        "type": "generated-index",
+        "title": "Assets Front End UI",
+        "description": "User interface components and implementation guides for Defactor Assets platform"
+    }
+}

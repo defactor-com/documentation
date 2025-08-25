@@ -1,138 +1,61 @@
 ---
 id: graphql-api-utilities
 title: Utilities
-sidebar_position: 5
+sidebar_position: 6
 ---
 
-## Token
+# Utilities Actions
 
-### `Update Global Token Metadata`
+## getConfig
 
-Update the metadata of the contract token.
+**Handler URL:** `{{HASURA_GRAPHQL_ACTION_BASE_URL}}/config`
 
-**HTTP Method**: POST
+**Action Type:** `query`
 
-**Roles**: Admin
+**Permissions:** `guest`, `user-admin`
 
-**Endpoint**: `{{BASE_URL}}/v1/graphql`
+### Response
 
-**GraphQL Body**:
-
-```graphql
-mutation ($token: GlobalTokenMetadataInput!) {
-  v1UpdateGlobalTokenMetadata(token: $token) {
-    res
-    success
-  }
-}
-```
-
-**Params**:
+**Type:** `DataOutput`
 
 ```json
 {
-  "token": {
-    "data": {
-      "metadata": {
-        "logo": "https://assets.coingecko.com/coins/images/19201/standard/jFLSu4U9_400x400.png?1696518648"
-      },
-      "token": {
-        "tokenId": "b1c7d7c9-6f31-44de-9eb2-ab052fca7504"
-      }
-    }
-  }
-}
-```
-
-**Response**
-
-```json
-{
-  "v1UpdateGlobalPlanMetadata": {
-    "res": {
-      "id": "f8f6925d-f20a-40a6-bb57-40bed4de188e"
-    },
-    "success": true
-  }
-}
-```
-
-### `Token Price`
-
-**HTTP Method**: POST
-
-**Endpoint**: `{{BASE_URL}}/v1/graphql`
-
-**GraphQL Body**
-
-```graphql
-query getTokenPrice($symbol: String!) {
-  token_price: global_latest_token_price(where: { symbol: { _eq: $symbol } }) {
-    price
-    symbol
-    date
-  }
-}
-```
-
-**Params**:
-
-```json
-{
-  "symbol": "FACTR"
+  "res": "value",
+  "success": false
 }
 ```
 
 ---
 
-## `Config`
+## v1GetCirculatingSupply
 
-**HTTP Method**: POST
+**Handler URL:** `{{BASE_RESTFUL_URL}}/global/circulating-supply`
 
-**Endpoint**: `{{BASE_URL}}/v1/graphql`
+**Action Type:** `query`
 
-**GraphQL Body**:
+**Permissions:** `user-admin`, `guest`
 
-```graphql
-query getConfig {
-  getConfig {
-    res
-    success
-  }
-}
-```
+### Input Parameters
 
-**Params**:
-
-```json
-{}
-```
-
----
-
-## `Get Circulating Supply`
-
-**HTTP Method**: POST
-
-**Endpoint**: `{{BASE_URL}}/v1/graphql`
-
-**GraphQL Body**:
-
-```graphql
-query v1GetCirculatingSupply($global: CirculatingSupplyInput) {
-  v1GetCirculatingSupply(global: $global) {
-    res
-    success
-  }
-}
-```
-
-**Params**:
+**global** (`CirculatingSupplyInput`)
 
 ```json
 {
   "global": {
-    "networks": ["{{NETWORK_BASE}}"]
+    "networks": [
+      "string"
+    ]
   }
+}
+```
+
+### Response
+
+**Type:** `DataOutput`
+
+```json
+{
+  "res": "value",
+  "success": false
 }
 ```

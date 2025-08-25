@@ -15,7 +15,7 @@ You can find the source code for this repository in [github.com/defactor-com/sdk
 
 - Support for cjs, es, and esm modules.
 - Developed using TypeScript for enhanced type safety and clarity.
-- Seamless integration with [`ERC20CollateralPool`](/docs/pools/back-end/sdk/collateral-pool) and [`Pools`](/docs/pools/back-end/sdk/counterparty-pool).
+- Seamless integration with [`ERC20CollateralPool`](/docs/pools/sdk/collateral-pool).
 - Well-defined interfaces that accurately model the Defactor contracts for easy interaction and integration.
 
 This library is built on top of [`ether@6.x.x`](https://docs.ethers.org/v6/api/contract/) to provide a simple and easy to use interface to interact with the Defactor contracts.

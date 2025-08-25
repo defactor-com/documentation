@@ -1,0 +1,11 @@
+{
+  "label": "REST API",
+  "position": 2,
+  "collapsible": true,
+  "collapsed": false,
+  "link": {
+    "type": "generated-index",
+    "title": "Pools REST API",
+    "description": "RESTful API endpoints for Defactor Pools backend services including ERC20CollateralToken operations"
+  }
+}

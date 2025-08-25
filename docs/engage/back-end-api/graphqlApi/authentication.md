@@ -1,7 +1,7 @@
 ---
 id: graphql-api-authentication
 title: Authentication
-sidebar_position: 1
+sidebar_position: 2
 ---
 
 ## Security Details
@@ -18,145 +18,70 @@ Upon receiving a request, Hasura decodes and validates the JWT, which contains u
 
 ---
 
-## `Login`
+# Authentication Actions
 
-Retrieve an access token with the role of the user and a refresh token to regenerate a new access token.
+## v1Login
 
-**HTTP Method**: POST
+**Handler URL:** `{{BASE_RESTFUL_URL}}/login`
 
-**Roles**: Guest
+**Action Type:** `mutation`
 
-**Endpoint**: `{{BASE_URL}}/v1/login`
+**Permissions:** `guest`
 
-**GraphQL Body**:
+### Input Parameters
 
-```graphql
-mutation v1Login($session: LoginInput!) {
-  v1Login(session: $session) {
-    res
-    success
-  }
-}
-```
-
-**Params**:
+**session** (`LoginInput!`)
 
 ```json
 {
   "session": {
-    "message": "https://localhost:3000 wants you to sign in with your Ethereum account: 0xa8983Fe59b2F08F9F1B3E833c5D47B256F7FE0d5  Sign in with Ethereum to the app.  URI: https://localhost:3000 Version: 1 Chain ID: 1 Nonce: V4953jdM8Y5ljtOvZ Issued At: 2024-09-14T20:44:31.764Z Expiration Time: 2024-09-14T20:49:31.761Z",
-    "signature": "0x81596c2af98457f7621455ca947db35cad201cb96ced9b34a4b2403fea35c01431f7bca6db5fc5ffdb92b42c3cd0ae0c5b21cc24099ce6e630f0966e3fa544701c"
+    "message": "string",
+    "signature": "string"
   }
 }
 ```
 
-**Response**
+### Response
+
+**Type:** `DataOutput`
 
 ```json
 {
-  "v1Login": {
-    "res": {
-      "accessToken": "",
-      "refreshToken": ""
-    },
-    "success": true
-  }
+  "res": "value",
+  "success": false
 }
 ```
 
 ---
 
-## `Restore Session`
+## v1RestoreSession
 
-Retrieve a new access token with the role of the user and a refresh token to regenerate a new access token.
+**Handler URL:** `{{BASE_RESTFUL_URL}}/restore-session`
 
-**HTTP Method**: POST
+**Action Type:** `mutation`
 
-**Roles**: Guest
+**Permissions:** `guest`
 
-**Endpoint**: `{{BASE_URL}}/v1/graphql`
+### Input Parameters
 
-**GraphQL Body**:
-
-```graphql
-mutation v1RestoreSession($session: RestoreSessionInput!) {
-  v1RestoreSession(session: $session) {
-    res
-    success
-  }
-}
-```
-
-**Params**:
+**session** (`RestoreSessionInput!`)
 
 ```json
 {
   "session": {
-    "refreshToken": "d1789988-2406-4937-bc3d-2f9e039e7e1b"
+    "refreshToken": "string"
   }
 }
 ```
 
-**Response**
+### Response
+
+**Type:** `DataOutput`
 
 ```json
 {
-  "v1RestoreSession": {
-    "res": {
-      "accessToken": "",
-      "refreshToken": ""
-    },
-    "success": true
-  }
+  "res": "value",
+  "success": false
 }
 ```
-
----
-
-## `Update Account`
-
-Update the metadata of an existing account in multiple networks using the address.
-
-**HTTP Method**: POST
-
-**Roles**: User Admin
-
-**Endpoint**: `{{BASE_URL}}/v1/graphql`
-
-**GraphQL Body**:
-
-```graphql
-mutation v1UpdateAccount($account: UpdateAccountInput!) {
-  v1UpdateAccount(account: $account) {
-    res
-    success
-  }
-}
-```
-
-**Params**:
-
-```json
-{
-  "account": {
-    "data": {
-      "networks": ["{{NETWORK_ETHEREUM}}", "{{NETWORK_POLYGON}}"],
-      "name": "name.eth",
-      "address": "0xa8983Fe59b2F08F9F1B3E833c5D47B256F7FE0d5"
-    }
-  }
-}
-```
-
-**Response**
-
-```json
-{
-  "v1UpdateAccount": {
-    "res": {
-      "updatedIn": ["ethereum"]
-    },
-    "success": true
-  }
-}
 ```
