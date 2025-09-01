@@ -1,169 +1,89 @@
 ---
-id: restfull-api-utilities
+id: rest-api-utilities
 title: Utilities
-sidebar_position: 10
+sidebar_position: 9
+description: REST API endpoints for utility operations in Defactor Engage platform
+keywords: [utilities, rest, api, engage, backend, config, supply, price]
+tags: [utilities, engage, backend, rest]
 ---
 
-## Token
+# Utilities API
 
-### `Update Global Token Metadata`
+## getConfig
 
-Update the metadata of the contract token.
+**Handler URL:** `{{BASE_RESTFUL_URL}}/config`
 
-**HTTP Method**: POST
+**Action Type:** `query`
 
-**Roles**: User Admin
+**Permissions:** `guest`
 
-**Endpoint**: `{{BASE_RESTFUL_URL}}/v1/update-global-token-metadata`
+### Response
 
-**Params**:
-
-```json
-{
-  "token": {
-    "data": {
-      "metadata": {
-        "logo": "https://assets.coingecko.com/coins/images/19201/standard/jFLSu4U9_400x400.png?1696518648",
-        "price": 0.02
-      },
-      "token": {
-        "tokenId": "57d31729-85f9-461f-b748-fb83dee71671"
-      }
-    }
-  }
-}
-```
-
-**Response**
+**Type:** `DataOutput`
 
 ```json
 {
-  "v1UpdateGlobalPlanMetadata": {
-    "res": {
-      "id": "f8f6925d-f20a-40a6-bb57-40bed4de188e"
-    },
-    "success": true
-  }
-}
-```
-
-### `Get Token Price`
-
-Get the current instance configuration.
-
-**HTTP Method**: GET
-
-**Roles**: Guest
-
-**Endpoint**: `{{BASE_RESTFUL_URL}}/v1/get-token-price`
-
-**Params**:
-
-```json
-{
-  "symbol": "FACTR"
-}
-```
-
-**Response**
-
-```json
-{
-    "token_price": [
-        "price": 0.02,
-        "symbol": "FACTR",
-        "date": "2025-03-07T00:00:00.000Z"
-     ]
+  "res": "value",
+  "success": false
 }
 ```
 
 ---
 
-## `Config`
+## v1GetCirculatingSupply
 
-Get the current instance configuration.
+**Handler URL:** `{{BASE_RESTFUL_URL}}/v1/get-circulating-supply`
 
-**HTTP Method**: GET
+**Action Type:** `query`
 
-**Roles**: Guest
+**Permissions:** `guest`
 
-**Endpoint**: `{{BASE_RESTFUL_URL}}/config`
+### Input Parameters
 
-**Params**:
-
-```json
-{}
-```
-
-**Response**
+**global** (`CirculatingSupplyInput`)
 
 ```json
 {
-    "getConfig": {
-      "res": {
-        "inactiveNetworks": [
-          "polygon",
-          "base",
-          "bsc"
-        ],
-        "networks": [
-          {
-            "contracts": [
-              {
-                "abi": [...],
-                "address": "0x",
-                "name": "STAKING",
-                "params": {
-                  "fromBlock": 0,
-                  "nextBlock": 1000,
-"lastHistoricalValueLockedUpdate": "2024-01-01T00:00:00.000Z",
-                  "nextTimeTokenPrice": "2024-01-01T100:00:00.000Z"
-                }
-              }
-            ],
-            "inactiveContracts": [],
-            "name": "ethereum",
-            "providerHttps": "provider",
-            "services": [
-              "LISTENER"
-            ],
-            "tokensInfo": [
-              {
-                "isCoingeckoEnabled": true,
-                "name": "defactor",
-                "symbol": "FACTR"
-              }
-            ],
-            "workers": [
-              "BLOCK CATCHER",
-              "TOKEN PRICE FETCHER",
-              "EVENT MATURITY",
-              "HISTORICAL VALUE LOCKED UPDATER"
-            ]
-          }
-        ]
-      },
-      "success": true
-    }
-  }
+  "networks": [
+    "string"
+  ]
+}
+```
+
+### Response
+
+**Type:** `DataOutput`
+
+```json
+{
+  "res": "value",
+  "success": false
+}
 ```
 
 ---
 
-## `v1 Get Circulating Supply`
+## v1GetTokenPrice
 
-Makes an HTTP GET request to retrieve the circulating supply. The request does not include a request body.
+**Handler URL:** `{{BASE_RESTFUL_URL}}/v1/get-token-price`
 
-**HTTP Method**: GET
+**Action Type:** `query`
 
-**Endpoint**: `{{BASE_RESTFUL_URL}}/v1-get-circulating-supply`
+**Permissions:** `guest`
 
-**Params**:
+### Input Parameters
+
+**symbol** (`String!`)
+
+### Response
+
+**Type:** `DataOutput`
 
 ```json
 {
-  "global": {
-    "networks": ["{{NETWORK_BASE}}"]
-  }
+  "res": "value",
+  "success": false
 }
 ```
+
+---
