@@ -16,18 +16,23 @@ The GraphQL API is best suited for applications requiring flexible querying and 
 
 Use GraphQL to:
 
-- Fetch staking plans, user positions, and rewards in real-time
-- View vesting schedules and token unlocks
-- Retrieve governance proposals, votes, and participation data
-- Authenticate users and sessions for frontend interactions
+- Perform administrative tasks like managing accounts, token metadata, and ecosystem wallets
+- Authenticate users and manage sessions for secure frontend interactions
+- Access governance data including proposals, votes, voting power, and space management
+- Retrieve comprehensive staking information including positions, rewards, TVL, and dynamic APR calculations
+- Monitor vesting schedules, historical emissions, and token distribution statistics
+- Query buyback data and ecosystem wallet configurations
+- Access system utilities like configuration and circulating supply data
 
 Available modules:
 
-- [Staking v1](graphqlApi/graphql-api-staking-v1)
-- [Staking v2](graphqlApi/graphql-api-staking-v2)
-- [Vesting](graphqlApi/graphql-api-vesting)
-- [Authentication](graphqlApi/graphql-api-authentication)
-- [Utilities](graphqlApi/graphql-api-utilities)
+- [Admin](graphqlApi/admin) - Administrative operations for accounts, token metadata, plans, and ecosystem wallets
+- [Authentication](graphqlApi/authentication) - User login and session management
+- [Buybacks](graphqlApi/buybacks) - Token buyback operations and ecosystem wallet management
+- [Governance](graphqlApi/governance) - Proposal creation, voting, and governance space management
+- [Staking](graphqlApi/staking) - Staking v1 and v2 operations, rewards, and position management
+- [Vesting](graphqlApi/vesting) - Token vesting schedules and historical emissions
+- [Utilities](graphqlApi/utilities) - Configuration, circulating supply, and general utilities
 
 ---
 
@@ -37,34 +42,33 @@ The RESTful API is designed for backend systems and structured workflows. It is 
 
 Use RESTful API to:
 
-- Start and verify KYC processes for wallet addresses
-- Access governance proposal creation and voting endpoints
-- Monitor and configure token buybacks
-- Retrieve static platform settings and user token metadata
+- Manage administrative operations like account updates and metadata configuration
+- Authenticate users through wallet signature verification
+- Access comprehensive staking operations including plan creation, position management, and rewards tracking
+- Create and monitor token vesting schedules and historical emissions
+- Configure token buybacks and retrieve ecosystem wallet data
+- Access system utilities like configuration, token pricing, and supply metrics
 
 Available endpoints:
 
-- [Start KYC](restfullApi/restfull-api-start-kyc)
-- [Get KYC](restfullApi/restfull-api-get-kyc)
-- [Add KYC Wallet](restfullApi/restfull-api-add-kyc)
-- [Governance](restfullApi/restfull-api-governance)
-- [Buyback](restfullApi/restfull-api-buyback)
-- [Staking v1](restfullApi/restfull-api-staking-v1)
-- [Staking v2](restfullApi/restfull-api-staking-v2)
-- [Vesting](restfullApi/restfull-api-vesting)
-- [Authentication](restfullApi/restfull-api-authentication)
-- [Utilities](restfullApi/restfull-api-utilities)
+- [Admin](restfullApi/admin) - Account management, token metadata, plan metadata, and ecosystem wallet operations
+- [Authentication](restfullApi/authentication) - Login endpoints with wallet signature authentication
+- [Buybacks](restfullApi/buybacks) - Token buyback aggregate data and statistics
+- [Staking](restfullApi/staking) - Complete staking v1 and v2 operations including plan management, position tracking, rewards, and TVL analytics
+- [Vesting](restfullApi/vesting) - Vesting schedule creation, user statistics, and historical emissions tracking
+- [Utilities](restfullApi/utilities) - System configuration, token pricing, and circulating supply data
 
 ---
 
 ## Key Capabilities
 
-- Launch and manage flexible staking programs
-- Register and verify wallets through KYC workflows
-- Implement decentralized governance with proposal creation and voting
-- Track token vesting and distribution across users and teams
-- Monitor and configure token buyback activities
-- Enable secure user authentication and metadata access
+- **Administrative Control**: Manage user accounts, update token metadata, configure staking plans, and handle ecosystem wallet operations
+- **Authentication & Security**: Secure wallet-based authentication using signature verification and JWT token management
+- **Comprehensive Staking**: Launch flexible staking programs with v1 and v2 support, dynamic APR calculations, position management, and detailed reward tracking
+- **Governance Integration**: Access decentralized governance features including proposal management, voting mechanisms, voting power calculations, and governance space administration
+- **Vesting Management**: Create and track token vesting schedules, monitor historical emissions, and manage beneficiary distributions
+- **Buyback Operations**: Configure and monitor token buyback activities with ecosystem wallet management
+- **Data Analytics**: Access comprehensive statistics including TVL, rewards, emissions, and supply metrics across multiple networks
 
 ---
 
@@ -72,6 +76,6 @@ Available endpoints:
 
 Before integrating with any modules, it's essential to ensure your client is authenticated. This includes access to the `/engage` module, which requires a valid token.
 
-1. Choose your API type: [GraphQL](graphqlApi/graphql-api-staking-v1) or [RESTful](restfullApi/restfull-api-staking-v1)
-2. Authenticate and initialize your environment
-3. Begin integrating your governance, staking, or compliance flows
+1. Choose your API type: [GraphQL](graphqlApi/authentication) or [RESTful](restfullApi/authentication)
+2. Authenticate and initialize your environment using wallet signature verification
+3. Begin integrating with the specific modules you need: admin operations, staking, governance, vesting, buybacks, or utilities
