@@ -1,11 +1,11 @@
 {
-  "label": "REST API",
+  "label": "RESTful API Endpoints",
   "position": 2,
   "collapsible": true,
   "collapsed": false,
   "link": {
     "type": "generated-index",
-    "title": "Pools REST API",
+    "title": "Pools RESTful API Endpoints",
     "description": "RESTful API endpoints for Defactor Pools backend services including ERC20CollateralToken operations"
   }
 }

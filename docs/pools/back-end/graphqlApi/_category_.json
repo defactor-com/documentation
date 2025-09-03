@@ -1,11 +1,11 @@
 {
-  "label": "GraphQL API",
+  "label": "GraphQL API Endpoints",
   "position": 1,
   "collapsible": true,
   "collapsed": false,
   "link": {
     "type": "generated-index",
-    "title": "Pools GraphQL API",
+    "title": "Pools GraphQL API Endpoints",
     "description": "GraphQL API endpoints for Defactor Pools backend services"
   }
 }
