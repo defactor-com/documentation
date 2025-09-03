@@ -101,6 +101,11 @@ const config = {
             position: 'left',
           },
           {
+            href: '/docs/category/cp-pools',
+            label: 'CP Pools',
+            position: 'left',
+          },
+          {
             href: '/docs/blockchain-and-web3',
             label: 'Blockchain and Web3',
             position: 'left',

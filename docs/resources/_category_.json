@@ -1,9 +1,8 @@
 {
-    "label": "Resources",
-    "position": 9,
-    "link": {
-      "type": "generated-index",
-      "description": "Resources and Further Reading"
-    }
+  "label": "Resources",
+  "position": 8,
+  "link": {
+    "type": "generated-index",
+    "description": "Resources and Further Reading"
   }
-  
+}

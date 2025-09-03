@@ -42,7 +42,7 @@ const FeatureList = [
   },
   {
     title: "Counterparty Pools",
-    link: "docs/category/cpPools/",
+    link: "docs/category/cp-pools/",
     Svg: require("@site/static/img/cppools.svg").default,
     description: (
       <>
