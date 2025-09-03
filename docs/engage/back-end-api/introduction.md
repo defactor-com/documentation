@@ -51,12 +51,12 @@ Use RESTful API to:
 
 Available endpoints:
 
-- [Admin](restfullApi/admin) - Account management, token metadata, plan metadata, and ecosystem wallet operations
-- [Authentication](restfullApi/authentication) - Login endpoints with wallet signature authentication
-- [Buybacks](restfullApi/buybacks) - Token buyback aggregate data and statistics
-- [Staking](restfullApi/staking) - Complete staking v1 and v2 operations including plan management, position tracking, rewards, and TVL analytics
-- [Vesting](restfullApi/vesting) - Vesting schedule creation, user statistics, and historical emissions tracking
-- [Utilities](restfullApi/utilities) - System configuration, token pricing, and circulating supply data
+- [Admin](restfulApi/admin) - Account management, token metadata, plan metadata, and ecosystem wallet operations
+- [Authentication](restfulApi/authentication) - Login endpoints with wallet signature authentication
+- [Buybacks](restfulApi/buybacks) - Token buyback aggregate data and statistics
+- [Staking](restfulApi/staking) - Complete staking v1 and v2 operations including plan management, position tracking, rewards, and TVL analytics
+- [Vesting](restfulApi/vesting) - Vesting schedule creation, user statistics, and historical emissions tracking
+- [Utilities](restfulApi/utilities) - System configuration, token pricing, and circulating supply data
 
 ---
 
@@ -76,6 +76,6 @@ Available endpoints:
 
 Before integrating with any modules, it's essential to ensure your client is authenticated. This includes access to the `/engage` module, which requires a valid token.
 
-1. Choose your API type: [GraphQL](graphqlApi/authentication) or [RESTful](restfullApi/authentication)
+1. Choose your API type: [GraphQL](graphqlApi/authentication) or [RESTful](restfulApi/authentication)
 2. Authenticate and initialize your environment using wallet signature verification
 3. Begin integrating with the specific modules you need: admin operations, staking, governance, vesting, buybacks, or utilities
