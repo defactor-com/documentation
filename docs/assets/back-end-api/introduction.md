@@ -35,23 +35,75 @@ The Assets API exposes endpoints grouped by function, allowing seamless coordina
 
 Available modules:
 
-- [**Authentication**](API-Endpoints/api-authentication)  
-  Token-based access control for platforms and users.
+### GraphQL API Endpoints
 
-- [**Form API**](API-Endpoints/api-form)  
-  Process structured submissions used in onboarding and verification.
+- [**Authentication**](graphqlApi/authentication)  
+  Token-based access control and nonce generation.
 
-- [**IPFS Integration**](API-Endpoints/api-ipfs)  
-  Upload and link off-chain metadata/documents on IPFS.
+- [**Asset Management**](graphqlApi/asset-management)  
+  Asset creation, updates, and dynamic data management.
 
-- [**Mailing API**](API-Endpoints/api-mailing)  
-  Trigger automated emails for onboarding and platform events.
+- [**File Management**](graphqlApi/file-management)  
+  IPFS integration for file upload and retrieval.
 
-- [**Stats API**](API-Endpoints/api-sats)  
-  Query analytics and operational metrics from the platform.
+- [**Identity Management**](graphqlApi/identity-management)  
+  Identity verification and token-based checks.
 
-- [**Transactions API**](API-Endpoints/api-transactions)  
-  View historical transaction data between smart contracts and wallets.
+- [**Mixer Operations**](graphqlApi/mixer-operations)  
+  Privacy-focused transaction operations and mixer functionality.
+
+- [**Notifications**](graphqlApi/notifications)  
+  Webhook processing and notification management.
+
+- [**Statistics**](graphqlApi/statistics)  
+  Analytics and operational metrics from the platform.
+
+- [**Token Operations**](graphqlApi/token-operations)  
+  Token approval, transfer, and management operations.
+
+- [**Transactions**](graphqlApi/transactions)  
+  Transaction building, sending, and management.
+
+### RESTful API Endpoints
+
+- [**Authentication**](restfulApi/authentication)  
+  RESTful authentication endpoints and token management.
+
+- [**Asset Management**](restfulApi/asset-management)  
+  RESTful asset creation and management operations.
+
+- [**Contact Management**](restfulApi/contact-management)  
+  Contact information and communication management.
+
+- [**File Management**](restfulApi/file-management)  
+  File upload, storage, and retrieval services.
+
+- [**Identity Management**](restfulApi/identity-management)  
+  Identity verification and compliance checks.
+
+- [**Metadata Management**](restfulApi/metadata-management)  
+  Asset metadata creation and management.
+
+- [**Mixer Operations**](restfulApi/mixer-operations)  
+  Privacy-focused transaction operations.
+
+- [**Notifications**](restfulApi/notifications)  
+  Email notifications and communication triggers.
+
+- [**Statistics**](restfulApi/statistics)  
+  Platform analytics and metrics via RESTful endpoints.
+
+- [**Token Operations**](restfulApi/token-operations)  
+  Token management and operations.
+
+- [**Transaction Building**](restfulApi/transaction-building)  
+  Transaction construction and preparation.
+
+- [**Transaction Operations**](restfulApi/transaction-operations)  
+  Transaction execution and management.
+
+- [**User Management**](restfulApi/user-management)  
+  User account creation and management.
 
 ---
 
