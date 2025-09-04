@@ -33,7 +33,7 @@ Accessible via the [Engage Platform Demo](https://sharingblock-engage.defactor.d
 
 The ecosystem dashboard gives a clear summary of the user's ecosystem progress:
 
-![Ecosystem Dashboard](../../../static/img/front-end/ecosystem-dashboard.png)
+![Ecosystem Dashboard](../../../static/img/front-end/ecosystem-dash.png)
 
 - **Dynamic Time Frames** – Toggle between 1D, 7D, 1M, and 1Y for TVL and rewards data.
 - **Chain Filters** – View statistics across supported EVM-compatible chains.
