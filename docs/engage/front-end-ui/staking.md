@@ -37,7 +37,7 @@ A live example of this staking module in production is available at the [Engage 
 
 To initiate a new staking position:
 
-![Open Staking Position](../../../static/img/front-end/staking-open-position.png)
+![Open Staking Position](../../../static/img/front-end/staking-open-position-modal.png)
 
 - Select the **chain**, **collateral token**, and **reward token**.
 - Configure your staking duration and confirm the transaction.
