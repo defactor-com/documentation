@@ -45,7 +45,7 @@ The buyback dashboard gives a clear summary of the user's buyback progress:
 
 To enhance individual user transparency, the "My Buybacks" section allows users to view a history of their contributions. This feature helps track personal engagement and locked tokens.
 
-![My Buybacks](../../../static/img/front-end/buyback-myBuybacks.png)
+![My Buybacks](../../../static/img/front-end/buyback-my-buybacks.png)
 
 Here, users can:
 
