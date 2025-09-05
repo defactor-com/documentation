@@ -59,7 +59,7 @@ Stakeholders can view active and completed staking positions via the **Positions
 
 The **My Stats** dashboard provides a real-time overview of your ecosystem contribution:
 
-![Staking Dashboard](../../../static/img/front-end/staking-dashboard.png)
+![Staking Dashboard](../../../static/img/front-end/staking-dash.png)
 
 - **Available** – Tokens earned and ready to be claimed.
 - **Received** – Historical record of claimed tokens.

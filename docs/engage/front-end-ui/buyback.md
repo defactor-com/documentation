@@ -32,7 +32,7 @@ The module supports any ERC-20 token and can be customized to align with project
 
 The buyback dashboard gives a clear summary of the user's buyback progress:
 
-![BuyBack Dashboard](../../../static/img/front-end/buyback-dashboard.png)
+![BuyBack Dashboard](../../../static/img/front-end/buyback-dash.png)
 
 - **Total Bought Back** – Cumulative amount of tokens repurchased.
 - **Latest Buybacks** – Time-stamped records of recent buybacks.

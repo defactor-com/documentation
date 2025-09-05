@@ -51,7 +51,7 @@ Vesting is structured into three event categories:
 
 The main vesting dashboard gives a clear summary of the user's vesting progress:
 
-![Vesting Dashboard](../../../static/img/front-end/vesting-dashboard.png)
+![Vesting Dashboard](../../../static/img/front-end/vesting-dash.png)
 
 - **My Vesting** – Personal breakdown of allocations and events
 - **Claimable Amount** – Tokens ready for withdrawal
