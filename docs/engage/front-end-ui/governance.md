@@ -45,7 +45,7 @@ An example instance of the governance interface is available at the [Engage Plat
 
 ## Example Proposal Detail
 
-![Governance proposal detail](../../../static/img/front-end/governance-proposal.png)
+![Governance proposal detail](../../../static/img/front-end/governance-proposal-main.png)
 
 This example displays a **rejected proposal** that aimed to modify staking rates. The metadata section includes:
 
