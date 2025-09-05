@@ -16,7 +16,7 @@ An example instance of the governance interface is available at the [Engage Plat
 
 ## Core Functionality
 
-![Governance proposals lists](../../../static/img/front-end/governance-proposals-lists.png)
+![Governance proposals lists](../../../static/img/front-end/governance-proposals-dash.png)
 
 - **Submit proposals** for new initiatives or upgrades.
 - **Vote on proposals** using token weight.
