@@ -48,7 +48,7 @@ To initiate a new staking position:
 
 Stakeholders can view active and completed staking positions via the **Positions** section:
 
-![Staking Positions List](../../../static/img/front-end/staking-positions-lists.png)
+![Staking Positions List](../../../static/img/front-end/staking-positions-tables.png)
 
 - **Open Positions** – Currently staked pools, with data on APR, lockup time, and chain.
 - **Completed Pools** – Historical data on claimed and expired pools.
