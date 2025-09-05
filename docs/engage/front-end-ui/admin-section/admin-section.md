@@ -45,7 +45,7 @@ Only wallets designated as Admins can:
 4. Admin privileges will automatically unlock advanced configuration options if your wallet is whitelisted
 5. You will see the admin section in the main navigation bar
 
-![sidebar menu](../../../../static/img/front-end/sidebar-menu-admin-section.png)
+![sidebar menu](../../../../static/img/front-end/sidebar-menu-admin.png)
 
 ---
 
