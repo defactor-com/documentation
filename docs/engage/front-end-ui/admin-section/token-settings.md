@@ -22,6 +22,8 @@ This section ensures that all staking, governance, and buyback activities refere
 
 ## Managing Tokens  
 
+![Manage Tokens Table](../../../../static/img/front-end/admin-token-manage-tokens-table.png)
+
 The **Manage Tokens** table displays all registered tokens with key details:  
 - **Name**: Full token name (e.g., "Defactor: FACTR Token").  
 - **Symbol**: The short symbol identifier (e.g., FACTR, USDC, WETH).  
@@ -39,6 +41,8 @@ From this view, administrators can:
 ---
 
 ## Adding a Token  
+
+![Add Token Modal](../../../../static/img/front-end/admin-token-add-token.png)
 
 When adding a new token, admins configure several parameters:  
 
