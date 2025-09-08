@@ -23,6 +23,8 @@ This ensures long-term token distribution is transparent, predictable, and align
 
 ## Vesting Schedules List  
 
+![Vesting Schedules List](../../../../static/img/front-end/admin-vesting-schedules.png)
+
 The schedules table provides a snapshot of all configured vesting batches:  
 
 - **Batch Name** — Human-readable label for the allocation (e.g., *Team & Marketing Allocation 2025*).  

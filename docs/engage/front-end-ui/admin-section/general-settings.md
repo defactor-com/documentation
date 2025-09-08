@@ -13,13 +13,9 @@ This section provides core functionalities for monitoring, managing, and ensurin
 The **General** section acts as the operational cockpit for project administrators, giving a bird’s eye view of:
 
 - Token supply and distribution
-
 - Ecosystem wallet activity
-
 - Staking metrics
-
 - Governance participation
-
 - Buyback activities
 
 This section ensures administrators can track, audit, and optimize all token-related operations from a single dashboard.
