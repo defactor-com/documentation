@@ -22,6 +22,8 @@ This ensures that token buybacks remain transparent, structured, and aligned wit
 
 ## Buyback Wallets Table  
 
+![BuyBack Wallets](../../../../static/img/front-end/admin-buyback-wallets.png)
+
 The **Buyback Wallets** list displays:  
 - **ID** — Internal identifier for the wallet entry.  
 - **Icon** — Visual representation of the wallet purpose.  
@@ -35,6 +37,8 @@ From this view, admins can:
 ---
 
 ## Editing a Buyback Wallet  
+
+![BuyBack Wallets Editing](../../../../static/img/front-end/admin-buyback-wallets-edit.png)
 
 When editing an existing wallet:  
 - **Address Label*** — Enter or update the descriptive name for the wallet.  
