@@ -44,6 +44,8 @@ From the list, admins can:
 
 ## Creating a Vesting Batch  
 
+![Creating a Vesting Batch](../../../../static/img/front-end/admin-vesting-create-batch.png)
+
 To create a new vesting batch:  
 
 ### 1. Basic Details  
