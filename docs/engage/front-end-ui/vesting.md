@@ -22,7 +22,7 @@ A live example of the module in action can be accessed via the [Engage Platform 
 
 Vesting is structured into three event categories:
 
-![Vesting Events Tab](../../../static/img/front-end/vesting-events.png)
+![Vesting Events Tab](../../../static/img/front-end/vesting-events-ongoing.png)
 
 - **Ongoing Events** – Active vesting periods in progress.
 - **Upcoming Events** – Future scheduled releases.
