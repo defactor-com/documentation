@@ -4,64 +4,77 @@ title: Staking Module
 sidebar_position: 3
 ---
 
-The staking module enables the creation and management of on-chain incentive programs designed to promote long-term token holding and community participation. As part of the Engage platform, it allows tokens to be locked into configurable pools, rewarding participants based on duration, pool parameters, and overall network engagement.
+The **Staking Module** allows users to lock tokens into configurable pools and earn rewards based on pool parameters. It provides a clear interface to track your total value locked, ecosystem contribution, expected rewards, and staking history.  
 
-Staking is a key mechanism for reinforcing token utility, enhancing governance participation, and driving alignment between ecosystem stakeholders. The module is designed for flexibility, supporting various staking strategies including fixed lockup periods, tiered reward structures, and multi-token implementations.
-
-The system is token-agnostic, compatible with any ERC-20 asset that meets basic liquidity and composability standards. This makes it suitable for a wide range of DeFi, RWA, and DAO applications seeking to implement sustainable incentive models.
-
-A live example of this staking module in production is available at the [Engage Platform Demo](https://sharingblock-engage.defactor.dev/staking), showcasing real-time reward tracking and multiple pool configurations.
+Staking is central to reinforcing token utility, governance participation, and long-term alignment between community members. Engage supports flexible staking strategies such as different lockup durations, varied APRs, and multiple pools.
 
 ---
 
-## Key Features
-
-- **Multiple staking pools** with varying lockup periods and reward rates.
-- **Real-time reward tracking** through the Engage dashboard.
-- **Claim functionality** available during or after lockup ends.
-- **Seamless wallet integration** for MetaMask, Trust Wallet, and WalletConnect.
-
----
-
-## How Staking Works
-
-1. **Connect Wallet** – Ensure your wallet is connected to the correct chain (Ethereum, Polygon, etc.).
-2. **Select Pool** – Choose a staking pool that matches your desired duration and yield.
-3. **Stake Tokens** – Enter the number of tokens and confirm the transaction.
-4. **Earn Rewards** – View accrued rewards in real time.
-5. **Claim or Unstake** – Once the lockup period ends, click 'Unstake & Claim' or 'Claim' to receive rewards.
-
----
-
-## Opening a Staking Position
-
-To initiate a new staking position:
-
-![Open Staking Position](../../../static/img/front-end/staking-open-position-modal.png)
-
-- Select the **chain**, **collateral token**, and **reward token**.
-- Configure your staking duration and confirm the transaction.
-
----
-
-## Viewing and Managing Positions
-
-Stakeholders can view active and completed staking positions via the **Positions** section:
-
-![Staking Positions List](../../../static/img/front-end/staking-positions-tables.png)
-
-- **Open Positions** – Currently staked pools, with data on APR, lockup time, and chain.
-- **Completed Pools** – Historical data on claimed and expired pools.
-
----
-
-## Dashboard Elements
-
-The **My Stats** dashboard provides a real-time overview of your ecosystem contribution:
+## Dashboard Overview  
 
 ![Staking Dashboard](../../../static/img/front-end/staking-dash.png)
 
-- **Available** – Tokens earned and ready to be claimed.
-- **Received** – Historical record of claimed tokens.
-- **Locked** – Tokens currently staked in a pool.
-- **APY** – Annual yield offered by the selected pool.
+The main staking dashboard includes:  
+- **My Total Value Locked (TVL)** – Total value of tokens you have staked.  
+- **My Contribution to the Ecosystem** – Displays your percentage share of the ecosystem’s staked tokens.  
+- **Rewards Panel** – Breakdown of rewards received, expected rewards, and claimable tokens.  
+- **Claim Now** – Button to withdraw currently unlocked rewards.  
+
+---
+
+## Staking Pools  
+
+![Staking Pools Table](../../../static/img/front-end/staking-pools.png)
+
+The **Staking Pools** section lists all available pools with details such as:  
+- **Pool Name** – Identifier of the staking pool.  
+- **Chain(s)** – Blockchain network hosting the pool.  
+- **Collateral / Reward Token** – Token deposited and token rewarded.  
+- **APR / Unlocked APR** – Annual percentage rates (locked vs. unlocked).  
+- **Duration** – Lockup period (e.g., 30, 90, 180, 365 days).  
+- **Rewards End Time** – Final date when rewards stop.  
+- **New Position** – Button to join the pool.  
+
+---
+
+## Opening a Staking Position  
+
+![Open Staking Position](../../../static/img/front-end/staking-open-position.png)
+
+To open a new staking position:  
+1. Choose a pool from the **Staking Pools** table.  
+2. Click **New Position**.  
+3. Enter the amount of tokens to stake.  
+4. Confirm the transaction in your wallet.  
+
+---
+
+## Positions  
+
+![Staking Positions](../../../static/img/front-end/staking-positions.png)
+
+The **Positions** section shows both open and completed pools:  
+
+- **Completed Pools** – Pools where the lock period ended; tokens and rewards can be restaked or have already been claimed. 
+- **Open Positions** – Active stakes with details like pool mode, amount staked, APR, conversion rate, remaining time, and claimable rewards.   
+- **Archive Tab** – Historical record of older completed positions.  
+
+---
+
+## Claiming Rewards  
+
+Rewards can be claimed directly from the dashboard:  
+- **Claim Now** – Appears on the Rewards panel if tokens are unlocked.  
+- **Claim (per pool)** – Button within Open Positions to withdraw rewards from a specific pool.  
+- **Restake** – Available for completed pools to re-enter with previously staked tokens.  
+
+---
+
+## Key Features  
+
+- **Multiple staking pools** with different APRs and lockup durations.  
+- **Real-time rewards** displayed in the dashboard and pools list.  
+- **Wallet integration** with MetaMask, Trust Wallet, and WalletConnect.  
+- **Flexible management** – Users can open, close, claim, or restake positions as needed.  
+
+---
