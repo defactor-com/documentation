@@ -1,7 +1,7 @@
---- 
-id: staking-settings 
-title: Staking Settings 
-sidebar_position: 3 
+---
+id: staking-settings
+title: Staking Settings
+sidebar_position: 3
 ---
 
 This section allows administrators to configure, launch, and manage staking pools across supported blockchains. It provides fine-grained controls for APR rates, staking limits, lock durations, and reward token distributions.  
@@ -26,6 +26,9 @@ By using this section, administrators ensure that staking mechanics align with t
 When creating a pool, administrators go through **two configuration steps**:  
 
 ### 1. Token Settings  
+
+![Staking Pool - Token Settings](../../../../static/img/front-end/admin-staking-token-settings.png)
+
 Define the base chain and tokens used in the pool:  
 - **Chain**: Select the blockchain network (e.g., Ethereum, Base Sepolia, Polygon).  
 - **Staking Token**: The token that users will deposit into the pool.  
@@ -34,6 +37,9 @@ Define the base chain and tokens used in the pool:
 > Tip: Staking and reward tokens may be the same (self-rewarding pool) or different (cross-token incentives).  
 
 ### 2. Pool Details  
+
+![Staking Pool - Pool Details](../../../../static/img/front-end/admin-staking-pool-details.png)
+
 Configure the operational parameters of the staking pool:  
 - **Pool Name**: Assign a unique, descriptive name for easy tracking.  
 - **APR Rates**:  
@@ -53,6 +59,8 @@ Configure the operational parameters of the staking pool:
 ---
 
 ## Managing Staking Pools  
+
+![Staking Pools Table](../../../../static/img/front-end/admin-staking-pools-table.png)
 
 Once pools are created, the **Admin Section** provides an overview table with live details:  
 - **Name**: Pool name for quick reference.  
