@@ -51,27 +51,50 @@ Alternatively, you can navigate directly to the **My Templates** section from th
 
 The Templates section provides an organized, step-by-step approach that guides you through the entire asset configuration process, whether you're starting fresh, using existing templates, or customizing pre-built options to fit your requirements.
 
+### Understanding Asset Data Types
+
+Before proceeding with asset creation, it's important to understand the two main categories of asset data:
+
+**Static Data:**
+- Information that remains **constant** throughout the asset's lifecycle
+- Examples: Asset name, commodity ID, legal documentation, initial valuation
+- Set once during creation and typically doesn't change
+- Forms the foundation of your asset's identity and legal structure
+
+**Dynamic Data:**
+- Information that **changes over time** and requires regular updates
+- Examples: Current market price, inventory levels, performance metrics, location data
+- Updated periodically through data feeds, manual input, or automated systems
+- Reflects the real-time status and value of your underlying asset
+
+Understanding this distinction helps you choose the right template and configure your asset properly. Static data templates are ideal for assets with fixed characteristics, while dynamic data templates suit assets requiring ongoing data updates and real-time tracking.
+
+The Templates section provides an organized, step-by-step approach that guides you through the entire asset configuration process, whether you're starting fresh, using existing templates, or customizing pre-built options to fit your requirements.
+
 ## Step 2: Configure Basic Asset Information
+
+### Select and Use Template
+
+Once you've accessed the My Templates section, browse through the available templates and click the **"Use Template"** button for the template that best matches your asset requirements. This will launch the asset creation form with pre-configured settings based on your selected template.
 
 <!-- ![Asset Basic Information](../../../../static/img/front-end/admin-asset-basic-info.png) -->
 
 ### Essential Asset Details
 
+After selecting your template, you'll need to fill out the core asset information in the **Fill Data** section:
+
+**Required Fields:**
 - **Asset Name**: Enter a clear, descriptive name for your asset (e.g., "Real Estate Portfolio Token")
-- **Asset Symbol**: Define a short identifier (e.g., REPT, PROP, BLDG)
-- **Description**: Provide a comprehensive description of the asset's purpose and backing
-- **Category**: Select the appropriate asset category:
-  - Real Estate
-  - Equipment & Machinery
-  - Commodities
-  - Financial Instruments
-  - Other
+- **Asset Ticker**: Create a unique ticker symbol for your asset (typically 3-6 characters)
+- **Asset Category**: Select the appropriate category from the dropdown menu that best describes your asset type
 
-### Asset Documentation
+The form uses a step-by-step workflow on the left sidebar, allowing you to progress through:
+1. **Fill Data** - Complete all asset information
+2. **Tokenization settings** - Configure token parameters  
+3. **Verification (optional)** - Submit for verification if required
+4. **Minting** - Generate the final token
 
-- **Whitepaper**: Upload or link to detailed asset documentation
-- **Legal Documents**: Attach relevant legal agreements and compliance documents
-- **Audit Reports**: Include any third-party audit or verification reports
+Complete all required fields marked with red asterisks (*) before proceeding to the next step in the asset creation process.
 
 ---
 
