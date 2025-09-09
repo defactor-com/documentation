@@ -1,5 +1,5 @@
 ---
-id: my-templates
+id: assets-frontend-my-templates
 title: My Templates
 sidebar_position: 5
 ---

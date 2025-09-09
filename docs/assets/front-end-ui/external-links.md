@@ -8,6 +8,8 @@ sidebar_position: 7
 
 The External Links section provides direct access to other Defactor ecosystem applications that complement the tokenization platform. These integrated tools offer additional functionality for asset management, liquidity provision, and community engagement.
 
+![External Links](../../../static/img/front-end/external-links.png)  
+
 ---
 
 ## Defactor Ecosystem Overview

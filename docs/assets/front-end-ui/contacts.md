@@ -1,5 +1,5 @@
 ---
-id: contacts
+id: assets-frontend-contacts
 title: Contacts
 sidebar_position: 6
 ---

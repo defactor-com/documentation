@@ -1,6 +1,7 @@
 ---
 id: assets-frontend-overview
 title: Assets Frontend UI Overview
+sidebar_position: 1
 ---
 
 ## Frontend UI overview

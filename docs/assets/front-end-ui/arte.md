@@ -1,5 +1,5 @@
 ---
-id: arte
+id: assets-frontend-arte
 title: ARTe
 sidebar_position: 4
 ---

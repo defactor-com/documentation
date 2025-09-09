@@ -1,5 +1,5 @@
 ---
-id: my-wallet
+id: assets-frontend-my-wallet
 title: My Wallet
 sidebar_position: 3
 ---
