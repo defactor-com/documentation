@@ -20,23 +20,37 @@ Before creating an asset, ensure you have:
 
 ---
 
-## Step 1: Access Asset Creation
+## Step 1: Access Asset Creation  
 
-There are two convenient ways to access the asset creation workflow:
+There are two convenient ways to access the asset creation workflow:  
 
-**Option A: Dashboard Access**
+**Option A: Dashboard Access**  
 
-![Asset Creation Dashboard](../../../../documentation/static/img/front-end/access-asset-creation-dashboard-create-asset.png)
+![Asset Creation Dashboard](../../../../documentation/static/img/front-end/access-asset-creation-dashboard-create-asset.png)  
 
-Navigate to your **Assets** dashboard and locate the **"+ Create Assets"** button prominently displayed on the interface. Clicking this button will seamlessly redirect you to the **My Templates** section where the asset creation process begins.
+Navigate to your **Assets** dashboard and locate the **"+ Create Assets"** button prominently displayed on the interface. Clicking this button will seamlessly redirect you to the **My Templates** section where the asset creation process begins.  
 
-**Option B: Direct Navigation**
+**Option B: Direct Navigation**  
 
-![My Templates Navigation](../../../../documentation/static/img/front-end/access-asset-creation-dashboard-my-templates.png)
+![My Templates Navigation](../../../../documentation/static/img/front-end/access-asset-creation-dashboard-my-templates.png)  
 
-Alternatively, you can navigate directly to the **My Templates** section from the main menu. This approach is ideal when you already know you want to work with templates or have bookmarked this section for quick access.
+Alternatively, you can navigate directly to the **My Templates** section from the main menu. This approach is ideal when you already know you want to work with templates or have bookmarked this section for quick access.  
 
-**Both paths converge at My Templates**, which serves as your central hub for asset creation. Here you can choose to start with a pre-built template that matches your asset type, or create a completely custom asset from scratch. The Templates section provides an organized, step-by-step approach that guides you through the entire asset configuration process.
+**Both paths converge at My Templates**, which serves as your central hub for asset creation. Here you have several options for creating assets:
+
+- **Start with a pre-built template** that matches your asset type
+- **Create a completely custom asset** from scratch  
+- **Edit existing templates** by copying a template and then clicking on the **actions menu** to access the edit functionality
+
+**Template Customization Workflow:**
+
+1. Browse available pre-built templates in the My Templates section
+2. Select "Copy Template" for the template you want to modify
+3. Click the actions menu (⋯) next to your copied template
+4. Choose "Edit" to customize the template according to your specific needs
+
+The Templates section provides an organized, step-by-step approach that guides you through the entire asset configuration process, whether you're starting fresh, using existing templates, or customizing pre-built options to fit your requirements.
+
 ## Step 2: Configure Basic Asset Information
 
 <!-- ![Asset Basic Information](../../../../static/img/front-end/admin-asset-basic-info.png) -->
