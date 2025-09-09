@@ -1,6 +1,6 @@
 ---
 id: asset-creation
-title: How to Create an Asset Step by Step
+title: How to Create an Asset
 sidebar_position: 5
 ---
 
@@ -71,201 +71,236 @@ Understanding this distinction helps you choose the right template and configure
 
 The Templates section provides an organized, step-by-step approach that guides you through the entire asset configuration process, whether you're starting fresh, using existing templates, or customizing pre-built options to fit your requirements.
 
-## Step 2: Configure Basic Asset Information
+## Step 2: Asset Creation Workflow
 
-### Select and Use Template
-
+### Select and Use Template  
 Once you've accessed the My Templates section, browse through the available templates and click the **"Use Template"** button for the template that best matches your asset requirements. This will launch the asset creation form with pre-configured settings based on your selected template.
 
-<!-- ![Asset Basic Information](../../../../static/img/front-end/admin-asset-basic-info.png) -->
+The form uses a step-by-step workflow on the left sidebar, allowing you to progress through: 
+1. **Fill Data** - Complete all asset information 
+2. **Tokenization settings** - Configure token parameters   
+3. **Verification (optional)** - Submit for verification if required 
+4. **Minting** - Generate the final token
 
-### Essential Asset Details
+---
 
-After selecting your template, you'll need to fill out the core asset information in the **Fill Data** section:
+### Fill Data Settings
+
+#### Essential Asset Details
+After selecting your template, you'll need to complete the core asset information in the **Fill Data** section:
 
 **Required Fields:**
 - **Asset Name**: Enter a clear, descriptive name for your asset (e.g., "Real Estate Portfolio Token")
 - **Asset Ticker**: Create a unique ticker symbol for your asset (typically 3-6 characters)
 - **Asset Category**: Select the appropriate category from the dropdown menu that best describes your asset type
 
-The form uses a step-by-step workflow on the left sidebar, allowing you to progress through:
-1. **Fill Data** - Complete all asset information
-2. **Tokenization settings** - Configure token parameters  
-3. **Verification (optional)** - Submit for verification if required
-4. **Minting** - Generate the final token
+#### Asset Description
+- **Detailed Description**: Provide a comprehensive overview of your asset
+  - Explain the underlying asset, its value proposition, and key characteristics
+  - Include relevant details about location, condition, income potential, or other value drivers
+  - Describe the investment opportunity and target market
+  - This information helps potential investors understand your offering
+
+#### Supporting Documentation
+- **Upload Documents**: Attach relevant files that support your asset
+  - Legal documents, appraisals, financial statements
+  - Property reports, certificates, or compliance documentation
+  - Supported formats: PDF, DOC, DOCX, PNG, JPG (up to 50MB per file)
+
+Complete all required fields marked with red asterisks (*) before proceeding to the tokenization settings.
+
+---
+
+### Tokenization Settings
+
+Once you've completed the basic asset information, proceed to the **Tokenization settings** section to configure the technical parameters of your token:
+
+#### Token Visual Identity
+Configure the visual representation of your token to ensure professional presentation across all platforms.
+
+- **Token Icon**: Upload a visual representation of your token   
+  - Supported formats: PNG, JPG, JPEG, PDF, SVG (up to 20MB)   
+  - Recommended size: 512x512 pixels for optimal display across platforms   
+  - Use clear, professional imagery that represents your asset
+  - Ensure readability at small sizes and avoid overly complex designs
+  - Use the drag-and-drop area or click "Upload a file"
+
+#### Token Metadata
+Enhance your token with additional reference materials and external resources.
+
+- **Link**: Add external links related to your asset (optional)   
+  - Can include project websites, documentation, or relevant resources
+  - Technical documentation or whitepapers
+  - Legal documents or regulatory filings
+  - Market analysis or third-party reports   
+  - Click "Add Link" to include multiple URLs with custom descriptions
+
+#### Asset Type Selection
+Choose the appropriate blockchain standard for your token. You'll typically see two main options:
+
+**Ethereum (ERC-20)**
+- **Purpose**: Enables fungible tokens for RWAs, ensuring broad compatibility and liquidity across DeFi platforms
+- **Best for**: Assets such as real estate, commodities, and securities
+- **Benefits**:
+  - Easily tradeable across exchanges and DeFi protocols
+  - Integrates with various wallets and apps for better market access
+  - Can be upgraded with smart contracts for compliance and governance
+  - Maximum liquidity and established infrastructure
+
+**Ethereum (ERC-3643)**
+- **Purpose**: A permissioned token standard designed for RWAs, focusing on regulatory compliance
+- **Best for**: Real-world assets requiring integrated identity, governance, and transaction controls
+- **Benefits**:
+  - Integrated KYC/AML and identity verification for secure RWA tokenization
+  - Allows regulators to monitor, pause, or reverse transactions
+  - Tailored for real-world assets with strong compliance and automated validation
+  - Enhanced security for institutional-grade assets
+
+#### Token Economics
+Define the financial structure and distribution model for your tokenized asset.
+
+- **Price**: Set the initial price per token (displayed in USDC)   
+  - This represents the value of each individual token unit   
+  - Consider the total asset value and desired token supply when setting price
+  - Factor in transaction costs and minimum investment thresholds
+
+- **Supply**: Define the total number of tokens to be minted   
+  - Shows "PRICE PER TOKEN" calculation based on your price and supply settings   
+  - Higher supply = lower price per token (for the same total asset value)   
+  - Consider liquidity needs and target investor demographics
+  - Balance between accessibility and token value
+
+#### Description
+- **Asset Description**: Provide a comprehensive description of your asset   
+  - Explain the underlying asset, its value proposition, and key characteristics   
+  - Include relevant details about location, condition, income potential, or other value drivers   
+  - This information helps potential investors understand your offering  
 
 Complete all required fields marked with red asterisks (*) before proceeding to the next step in the asset creation process.
 
 ---
 
-## Step 3: Set Token Configuration
+### Verification Settings (Optional)
 
-<!-- ![Asset Token Configuration](../../../../static/img/front-end/admin-asset-token-config.png) -->
+The verification process adds credibility and regulatory compliance to your tokenized asset, enhancing investor confidence and market acceptance.
 
-### Blockchain Configuration
+#### Verification Benefits
+- **Enhanced Credibility**: Third-party validation increases investor trust
+- **Regulatory Compliance**: Meets requirements for certain jurisdictions
+- **Market Access**: Verified assets may access premium trading platforms
+- **Institutional Appeal**: Attracts larger, institutional investors
 
-- **Primary Chain**: Select the main blockchain for your asset (e.g., Ethereum, Base, Polygon)
-- **Contract Address**: Enter the deployed asset token contract address
-- **Token Standard**: Confirm token standard (typically ERC-20 or ERC-1155)
+#### Verification Types
 
-### Pricing Configuration
+**Basic Verification**
+- **Asset Documentation Review**: Verification of ownership and legal standing
+- **Financial Validation**: Confirmation of asset valuation and financial data
+- **Timeline**: 3-5 business days
+- **Cost**: Standard verification fee applies
 
-Choose your pricing methodology:
+**Enhanced Verification**
+- **Comprehensive Audit**: Deep dive into asset quality and legal structure
+- **Regulatory Compliance Check**: Full regulatory framework assessment
+- **Third-party Appraisal**: Independent valuation verification
+- **Timeline**: 7-14 business days
+- **Cost**: Premium verification fee applies
 
-**Option A: Fixed Pricing**
-- **Fixed Price**: Set a static price per token
-- **Currency**: Define the pricing currency (USD, ETH, etc.)
+#### Required Documentation for Verification
 
-**Option B: Dynamic Pricing**
-- **Oracle Integration**: Link to price feed oracles
-- **Update Frequency**: Set how often prices refresh
-- **Price Bounds**: Define minimum and maximum price limits
+**Legal Documents**
+- **Proof of Ownership**: Legal title, deed, or ownership certificates
+- **Corporate Structure**: Entity formation documents if applicable
+- **Compliance Records**: Any existing regulatory filings or approvals
 
----
+**Financial Documentation**
+- **Independent Appraisal**: Recent professional valuation (within 12 months)
+- **Financial Statements**: Asset-related income statements and cash flows
+- **Insurance Documentation**: Proof of adequate insurance coverage
 
-## Step 4: Configure Asset Parameters
+**Identity Verification**
+- **Personal Identification**: Government-issued ID for individual asset owners
+- **Corporate Verification**: Business registration and authorized signatory documentation
+- **Background Checks**: May be required for certain asset types or jurisdictions
 
-<!-- ![Asset Parameters](../../../../static/img/front-end/admin-asset-parameters.png) -->
+#### Verification Process Steps
+1. **Submit Documentation**: Upload all required documents through the secure portal
+2. **Initial Review**: Preliminary assessment within 24-48 hours
+3. **Due Diligence**: Comprehensive review by verification team
+4. **Third-party Validation**: External expert review if required
+5. **Final Approval**: Verification status update and certification
 
-### Supply Configuration
-
-- **Total Supply**: Set the maximum number of tokens to be issued
-- **Initial Supply**: Define tokens available at launch
-- **Minting Rights**: Configure who can mint additional tokens
-- **Burning Mechanism**: Set up token burning rules if applicable
-
-### Trading Parameters
-
-- **Minimum Investment**: Set the smallest investment amount allowed
-- **Maximum Investment**: Define investment caps per user (if any)
-- **Trading Restrictions**: Configure any transfer or trading limitations
-- **Vesting Schedule**: Set up token release schedules if applicable
-
----
-
-## Step 5: Set Compliance and Governance
-
-<!-- ![Asset Compliance](../../../../static/img/front-end/admin-asset-compliance.png) -->
-
-### Regulatory Compliance
-
-- **Jurisdiction**: Specify the primary legal jurisdiction
-- **Compliance Framework**: Select applicable regulations (e.g., Securities regulations)
-- **KYC Requirements**: Define know-your-customer verification levels
-- **AML Policies**: Configure anti-money laundering checks
-
-### Governance Rights
-
-- **Voting Rights**: Enable token holder governance participation
-- **Proposal Threshold**: Set minimum tokens needed to create proposals
-- **Voting Period**: Define how long governance votes remain open
-- **Execution Delay**: Set delay before approved proposals take effect
+**Note**: Verification is optional but strongly recommended for assets seeking institutional investment or regulatory compliance.
 
 ---
 
-## Step 6: Configure Asset Backing and Reserves
- 
-<!-- ![Asset Backing](../../../../static/img/front-end/admin-asset-backing.png) -->
+### Minting Configuration
 
-### Collateral Configuration
+Before initiating the minting process, ensure all previous steps are complete and accurate.
 
-- **Backing Asset Type**: Define what backs your token (physical assets, cash, other tokens)
-- **Collateral Ratio**: Set the backing ratio (e.g., 100% backed, 150% over-collateralized)
-- **Reserve Management**: Configure how reserves are managed and audited
-- **Liquidation Procedures**: Define what happens if collateral falls below thresholds
+#### Pre-Minting Checklist
+- ✅ **Fill Data**: All asset information fields completed
+- ✅ **Tokenization Settings**: Token parameters configured and validated
+- ✅ **Verification**: Submitted if required (optional but recommended)
+- ✅ **Final Review**: All information reviewed for accuracy
 
-### Yield and Returns
+#### Smart Contract Deployment
+Your token will be deployed using battle-tested smart contract templates:
 
-- **Yield Source**: Specify how returns are generated (rent, dividends, appreciation)
-- **Distribution Frequency**: Set how often yields are distributed
-- **Reinvestment Options**: Configure automatic reinvestment capabilities
+**For ERC-20 Tokens**
+- **Standard Compliance**: Full ERC-20 compatibility ensuring broad platform support
+- **Security Features**: Built-in safeguards against common vulnerabilities
+- **Upgrade Capability**: Optional upgrade mechanisms for future enhancements
+- **Governance Integration**: Built-in voting and governance capabilities if required
 
----
+**For ERC-3643 Tokens**
+- **Compliance Framework**: Integrated regulatory compliance and identity management
+- **Permissioned Transfers**: Transaction controls based on KYC/AML status
+- **Regulatory Tools**: Built-in capabilities for regulatory oversight and intervention
+- **Identity Registry**: Secure storage and validation of investor credentials
 
-## Step 7: Set Up Monitoring and Reporting
+#### Minting Execution
 
-<!-- ![Asset Monitoring](../../../../static/img/front-end/admin-asset-monitoring.png) -->
+**Transaction Details**
+- **Minting Cost**: Final cost breakdown including:
+  - Platform service fees
+  - Blockchain network gas fees
+  - Verification fees (if applicable)
+  - Smart contract deployment costs
 
-### Performance Metrics
+**Payment Methods**
+- **USDC Payment**: Primary payment method for all fees
+- **Wallet Integration**: Connect your Web3 wallet for seamless payment
+- **Transaction Security**: Multi-signature requirements for high-value assets
 
-- **Key Performance Indicators**: Define metrics to track asset performance
-- **Reporting Schedule**: Set frequency of performance reports
-- **Transparency Level**: Configure what information is publicly available
+#### Minting Process Steps
+1. **Final Confirmation**: Review all asset and token parameters
+2. **Payment Authorization**: Approve payment for minting and associated fees
+3. **Smart Contract Deployment**: Automated deployment to selected blockchain
+4. **Token Generation**: Minting of specified token supply to your wallet
+5. **Verification**: On-chain verification of successful token creation
+6. **Completion Notification**: Email confirmation with token contract details
 
-### Risk Management
+#### Post-Minting Actions
 
-- **Risk Monitoring**: Set up automated risk assessment tools
-- **Alert Thresholds**: Define when administrators receive notifications
-- **Emergency Procedures**: Configure emergency pause or modification procedures
+**Token Management**
+- **Token Distribution**: Tokens are minted to your connected wallet address
+- **Transfer Capability**: Immediate ability to transfer tokens to investors or exchanges
+- **Smart Contract Verification**: Automatic verification on blockchain explorers
 
----
+**Documentation Package**
+Upon successful minting, you'll receive:
+- **Smart Contract Address**: Unique blockchain identifier for your token
+- **Token Metadata**: Complete technical specifications and parameters
+- **Legal Documentation**: Updated legal structure reflecting tokenization
+- **Investor Package**: Professional materials for marketing to potential investors
 
-## Step 8: Review and Deploy
+**Next Steps Recommendations**
+- **Exchange Listings**: Information about listing your token on DEXs or CEXs
+- **Investor Outreach**: Templates and strategies for investor engagement
+- **Compliance Monitoring**: Ongoing compliance requirements and reporting
+- **Asset Management**: Tools and best practices for ongoing asset management
 
-<!-- ![Asset Review](../../../../static/img/front-end/admin-asset-review.png) -->
-
-### Pre-Deployment Checklist
-
-- [ ] All asset information is accurate and complete
-- [ ] Token contract is deployed and verified
-- [ ] Pricing mechanisms are properly configured
-- [ ] Compliance requirements are met
-- [ ] Governance parameters are set correctly
-- [ ] Backing assets are properly secured
-- [ ] Monitoring systems are active
-
-### Deployment Process
-
-1. **Final Review**: Carefully review all configurations
-2. **Test Deployment**: Deploy to testnet first for validation
-3. **Security Audit**: Conduct final security review
-4. **Mainnet Deployment**: Deploy to production network
-5. **Verification**: Verify all systems are functioning correctly
-
----
-
-## Step 9: Post-Deployment Management
-
-<!-- ![Asset Management](../../../../static/img/front-end/admin-asset-management.png) -->
-
-### Ongoing Responsibilities
-
-- **Performance Monitoring**: Regularly review asset performance metrics
-- **Compliance Maintenance**: Ensure ongoing regulatory compliance
-- **Community Communication**: Keep token holders informed of developments
-- **Reserve Management**: Monitor and manage backing assets
-- **Governance Participation**: Facilitate community governance processes
-
-### Maintenance Tasks
-
-- **Price Updates**: Ensure pricing mechanisms remain accurate
-- **Documentation Updates**: Keep asset documentation current
-- **Security Monitoring**: Watch for security issues or anomalies
-- **Liquidity Management**: Monitor and support trading liquidity
-
----
-
-## Example Asset Configuration
-
-### Sample Real Estate Asset
-
-```json
-{
-  "name": "Prime Office Building REIT",
-  "symbol": "POBR",
-  "category": "Real Estate",
-  "totalSupply": "1000000",
-  "priceSource": "fixed",
-  "fixedPrice": "100.00",
-  "currency": "USD",
-  "backingType": "Physical Real Estate",
-  "collateralRatio": "100%",
-  "yieldSource": "Rental Income",
-  "distributionFrequency": "Quarterly"
-}
-```
-
----
+**Important**: Once minting is complete, your tokenized asset is live on the blockchain and ready for trading and investment.
 
 ## Best Practices
 
