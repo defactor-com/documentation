@@ -58,7 +58,7 @@ Before proceeding with asset creation, it's important to understand the two main
 **Static Data:**
 - Information that remains **constant** throughout the asset's lifecycle
 - Examples: Asset name, commodity ID, legal documentation, initial valuation
-- Set once during creation and typically doesn't change
+- Cannot be changed after the asset is created
 - Forms the foundation of your asset's identity and legal structure
 
 **Dynamic Data:**
