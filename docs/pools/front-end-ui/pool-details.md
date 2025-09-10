@@ -79,16 +79,19 @@ The Pool Details page provides comprehensive information about a specific lendin
 
 ### Supply/Borrow Tabs
 
-**Supply Tab (Active)**
-- Primary interface for lending to the pool
+![External Links](../../../static/img/front-end/pools/pools-pool-details-core-supply-or-borrow.png)
+
+**Supply Tab**
+- Interface for lending to the pool
 - Amount input with Min/Max buttons
 - Balance verification and limits display
-- Green "Supply" button for transaction execution
+- "Supply" button for transaction execution
 
 **Borrow Tab**
 - Interface for borrowing from the pool
+- Amount input with Min/Max buttons
 - Collateral requirements and calculations
-- Risk assessment and liquidation warnings
+- "Borrow" button for transaction execution
 
 ### Supply Configuration
 
@@ -103,107 +106,17 @@ The Pool Details page provides comprehensive information about a specific lendin
 - Limit enforcement
 - Fee calculation and display
 
----
+### Borrow Configuration
 
-## User Position Management
+**Amount Input**
+- USDC denomination with numerical input
+- Min/Max quick selection buttons
+- Minimum and maximum limits display
+- Available borrowing capacity verification
 
-### My Supplies Section
-
-**Supply Position Table**
-- **Pool Name**: Identity with logo/branding
-- **Initial Amount**: Original supply contribution
-- **Outstanding Amount**: Current position value
-- **Rewarded**: Earned interest/rewards
-- **Start Time**: Position creation timestamp
-- **End Time**: Position maturity date
-- **Status**: Current position state ("In Progress")
-
-**Management Actions**
-- **Withdraw All**: Bulk withdrawal option
-- **Withdraw**: Individual position withdrawal
-- Position-specific action buttons
-
-### My Borrows Section (if applicable)
-- Similar table structure for borrowing positions
-- Collateral tracking and health monitoring
-- Repayment options and liquidation warnings
+**Transaction Validation**
+- Real-time collateral checking
+- Limit enforcement
+- Fee calculation and display
 
 ---
-
-## Transaction History and Analytics
-
-### Position Tracking
-- Chronological transaction history
-- Supply and withdrawal records
-- Interest accrual tracking
-- Performance analytics over time
-
-### Risk Management
-- Collateralization ratio monitoring
-- Liquidation threshold alerts
-- Health score indicators
-- Market condition impacts
-
----
-
-## Pool Risk and Compliance
-
-### Security Features
-- **Smart Contract Verification**: Contract address display
-- **Audit Information**: Security audit status
-- **Insurance Coverage**: Protection mechanisms
-- **Regulatory Compliance**: Legal framework adherence
-
-### Risk Disclosures
-- **Liquidation Risks**: Collateral liquidation scenarios
-- **Market Risks**: Price volatility impacts
-- **Smart Contract Risks**: Technical risk factors
-- **Regulatory Risks**: Legal and compliance considerations
-
----
-
-## User Experience Features
-
-### Interface Design
-- **Responsive Layout**: Optimized for various screen sizes
-- **Real-time Updates**: Live data refresh and synchronization
-- **Visual Feedback**: Clear status indicators and progress tracking
-- **Accessibility**: Screen reader support and keyboard navigation
-
-### Navigation and Controls
-- **Tab-based Interface**: Supply/Borrow mode switching
-- **Quick Actions**: Min/Max buttons for common amounts
-- **Batch Operations**: Withdraw All functionality
-- **History Access**: Complete transaction record viewing
-
----
-
-## Integration Features
-
-### Wallet Connectivity
-- **Multi-wallet Support**: Various wallet integrations
-- **Balance Verification**: Real-time balance checking
-- **Transaction Signing**: Secure transaction approval
-- **Network Switching**: Automatic network detection
-
-### DeFi Ecosystem
-- **Cross-protocol Integration**: Compatibility with other DeFi protocols
-- **Token Standards**: ERC20 and other standard support
-- **Oracle Integration**: Price feed connectivity
-- **Governance Participation**: Pool governance voting rights
-
----
-
-## Pool Management Tools
-
-### For Liquidity Providers
-- **Yield Optimization**: APR tracking and comparison
-- **Risk Assessment**: Pool health monitoring
-- **Portfolio Management**: Multi-pool position tracking
-- **Reward Claiming**: Interest and incentive collection
-
-### For Borrowers
-- **Collateral Management**: Collateral ratio optimization
-- **Loan Management**: Repayment scheduling and tracking
-- **Risk Monitoring**: Liquidation prevention tools
-- **Cost Analysis**: Interest rate and fee tracking
