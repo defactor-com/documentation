@@ -1,5 +1,5 @@
 ---
-id: pools-frontend-overview
+id: pools-frontend
 title: Pools Frontend UI Overview
 sidebar_position: 1
 ---
