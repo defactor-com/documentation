@@ -1,6 +1,6 @@
 ---
-id: engage-staking-module
-title: Staking Module
+id: engage-frontend-overview-staking
+title: Staking
 sidebar_position: 3
 ---
 

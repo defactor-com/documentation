@@ -1,6 +1,6 @@
 ---
-id: engage-vesting-module
-title: Vesting Module
+id: engage-frontend-overview-vesting
+title: Vesting
 sidebar_position: 6
 ---
 

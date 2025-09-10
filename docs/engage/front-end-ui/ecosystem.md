@@ -1,6 +1,6 @@
 ---
-id: engage-ecosystem-module
-title: Ecosystem Module
+id: engage-frontend-overview-ecosystem
+title: Ecosystem
 sidebar_position: 2
 ---
 

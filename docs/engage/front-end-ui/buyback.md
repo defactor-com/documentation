@@ -1,6 +1,6 @@
 ---
-id: engage-buyback-module
-title: BuyBack Module
+id: engage-frontend-overview-buyback
+title: BuyBack
 sidebar_position: 5
 ---
 

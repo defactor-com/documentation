@@ -1,6 +1,6 @@
 ---
-id: engage-governance-module
-title: Governance Module
+id: engage-frontend-overview-governance
+title: Governance
 sidebar_position: 4
 ---
 
