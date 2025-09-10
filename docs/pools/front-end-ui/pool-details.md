@@ -14,12 +14,7 @@ The Pool Details page provides comprehensive information about a specific lendin
 
 ### Pool Identity and Status
 
-<div className="bordered-image">
-
 ![External Links](../../../static/img/front-end/pools/pools-pool-details-header.png)
-
-</div>
-
 
 **Pool Branding**
 - Pool name with logo/icon (e.g., "Sharingblock")
@@ -33,12 +28,14 @@ The Pool Details page provides comprehensive information about a specific lendin
 
 ### Core Pool Parameters
 
-**Timeline Information**
+![External Links](../../../static/img/front-end/pools/pools-pool-details-core-parameters.png)
+
+#### Timeline Information
+- **Chain**: Blockchain network specification
 - **Start Date**: Pool launch date
 - **End Date**: Pool closure/maturity date
-- **Chain**: Blockchain network specification
 
-**Financial Metrics**
+#### Financial Metrics
 - **LTV Ratio**: Loan-to-Value percentage
 - **APR**: Annual Percentage Rate
 - **Max Pool Capacity**: Maximum pool size in USDC
@@ -46,11 +43,37 @@ The Pool Details page provides comprehensive information about a specific lendin
 ### Pool Description
 
 **Functionality Overview**
-- "Pools allow borrowing and lending with ease"
 - Detailed explanation of pool mechanics for both borrowers and lenders
 - Risk and reward structure explanation
 
 ---
+
+## Pool Statistics Dashboard
+
+### Visual Performance Chart
+
+![External Links](../../../static/img/front-end/pools/pools-pool-details-stats.png)
+
+**Supply vs Borrowed Visualization**
+- Bar chart showing pool utilization
+- Green bars for supplied amounts
+- Blue bars for borrowed amounts
+- Y-axis scaling with dollar amounts
+
+### Key Performance Metrics
+
+![External Links](../../../static/img/front-end/pools/pools-pool-details-key-metrics.png)
+
+- **Total USDC Borrowed Historically**: Cumulative borrowing activity
+- **Available to Borrow**: Current liquidity available
+- **Active Supplied Value**: Current lending positions
+- **Total Repaid**: Historical repayment amounts
+- **Active Collateral Value**: Current collateral backing
+- **Disbursement Percentage**: Pool utilization ratio
+
+
+---
+
 
 ## Pool Interaction Interface
 
@@ -79,33 +102,6 @@ The Pool Details page provides comprehensive information about a specific lendin
 - Real-time balance checking
 - Limit enforcement
 - Fee calculation and display
-
----
-
-## Pool Statistics Dashboard
-
-### Visual Performance Chart
-
-**Supply vs Borrowed Visualization**
-- Bar chart showing pool utilization
-- Green bars for supplied amounts
-- Blue bars for borrowed amounts
-- Y-axis scaling with dollar amounts
-
-### Key Performance Metrics
-
-**Financial Overview (6 Key Metrics)**
-- **Total USDC Borrowed Historically**: Cumulative borrowing activity
-- **Available to Borrow**: Current liquidity available
-- **Active Supplied Value**: Current lending positions
-- **Total Repaid**: Historical repayment amounts
-- **Active Collateral Value**: Current collateral backing
-- **Disbursement Percentage**: Pool utilization ratio
-
-**Real-time Values**
-- All metrics displayed in USDC or relevant token amounts
-- Percentage calculations for ratios and utilization
-- Historical vs current value comparisons
 
 ---
 
