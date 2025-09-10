@@ -1,5 +1,5 @@
 ---
-id: engage-frontend-overview
+id: engage-frontend
 title: Platform Overview
 sidebar_position: 1
 ---

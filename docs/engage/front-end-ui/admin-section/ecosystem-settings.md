@@ -1,5 +1,5 @@
 ---
-id: ecosystem-settings
+id: engage-frontend-admin-section-ecosystem-settings
 title: Ecosystem Settings
 sidebar_position: 3
 ---

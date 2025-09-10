@@ -1,5 +1,5 @@
 ---
-id: staking-settings
+id: engage-frontend-admin-section-staking-settings
 title: Staking Settings
 sidebar_position: 3
 ---

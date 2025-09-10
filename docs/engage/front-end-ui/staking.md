@@ -1,5 +1,5 @@
 ---
-id: engage-frontend-overview-staking
+id: engage-frontend-staking
 title: Staking
 sidebar_position: 3
 ---

@@ -1,5 +1,5 @@
 ---
-id: buyback-settings
+id: engage-frontend-admin-section-buyback-settings
 title: Buyback Settings
 sidebar_position: 7
 ---

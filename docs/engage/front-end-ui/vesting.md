@@ -1,5 +1,5 @@
 ---
-id: engage-frontend-overview-vesting
+id: engage-frontend-vesting
 title: Vesting
 sidebar_position: 6
 ---

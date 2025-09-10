@@ -1,5 +1,5 @@
 ---
-id: vesting-settings
+id: engage-frontend-admin-section-vesting-settings
 title: Vesting Settings
 sidebar_position: 6
 ---

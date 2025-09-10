@@ -1,8 +1,8 @@
 {
-    "label": "Engage Admin UI",
-    "position": 7,
-    "link": {
-      "type": "doc",
-      "id": "admin-section"
-    }
+  "label": "Engage Admin UI",
+  "position": 7,
+  "link": {
+    "type": "doc",
+    "id": "engage-frontend-admin-section"
   }
+}

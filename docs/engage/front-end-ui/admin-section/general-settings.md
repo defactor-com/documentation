@@ -1,5 +1,5 @@
 ---
-id: general-settings
+id: engage-frontend-admin-section-general-settings
 title: General Settings
 sidebar_position: 2
 ---

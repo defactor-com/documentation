@@ -1,5 +1,5 @@
 ---
-id: engage-frontend-overview-governance
+id: engage-frontend-governance
 title: Governance
 sidebar_position: 4
 ---

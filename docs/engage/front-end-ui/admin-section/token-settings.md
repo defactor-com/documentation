@@ -1,5 +1,5 @@
 ---
-id: token-settings
+id: engage-frontend-admin-section-token-settings
 title: Token Settings
 sidebar_position: 4
 ---

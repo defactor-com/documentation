@@ -1,6 +1,6 @@
 ---
-id: admin-section
-title: Admin Section
+id: engage-frontend-admin-section
+title: Admin Section Overview
 sidebar_position: 1
 ---
 
