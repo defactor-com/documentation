@@ -6,6 +6,8 @@ sidebar_position: 2
 
 The Pools Dashboard provides a comprehensive overview of your lending and borrowing activities on the Defactor platform. It serves as your main control center for DeFi pool management, displaying key financial metrics and providing quick access to supply and borrow functions.
 
+![External Links](../../../static/img/front-end/pools/pools-dash.png)  
+
 ---
 
 ## Key Metrics Overview
@@ -77,60 +79,38 @@ The Pools Dashboard provides a comprehensive overview of your lending and borrow
 
 ## Pools Management Section
 
-### Pool Status Categories
-
-**Status Tabs**
-- **Active** - Currently operational pools (currently selected)
+### Status Tabs
+- **Active** - Currently operational pools
 - **Closed** - Inactive or completed pools
 
 ### Active Pools Table
 
-**Column Structure**
+![External Links](../../../static/img/front-end/pools/pools-table-active-pools.png)  
+
+**Column Structure:**
 - **Pool Name** - Pool identifier and branding
-- **Collateral** - Accepted collateral types ($ symbol indicating USD-based)
+- **Collateral** - Accepted collateral types
 - **Chain** - Blockchain network (showing various chain icons)
 - **APR** ↓ - Annual Percentage Rate (sortable column)
 - **Available** ↓ - Available liquidity for borrowing (sortable column)
 - **Completion** - Pool timeline and progress
-- **Actions** - Available user actions
-
-**Pool Entry Example**
-- **Collateral**: USD-based assets ($)
-- **Chain**: Multi-chain support (various blockchain icons)
-- **APR**: **10%** annual return rate
-- **Available**: Available for borrowing
-- **Completion**: x days remaining with progress bar
-- **Action Button**: **Supply / Borrow** - Primary interaction point
+- **Actions** - Available user actions (Supply/Borrow)
 
 ## Pool Interaction Workflow
 
-### Primary Actions
+![External Links](../../../static/img/front-end/pools/pools-open-position.png)  
 
 **Supply Process**
-1. Click "Supply / Borrow" button
-2. Choose supply amount
-3. Confirm transaction
-4. Earn yield on supplied assets
+1. Click the “Supply / Borrow” button.
+2. Select the Supply option.
+3. Enter the desired supply amount (within the allowed limits).
+4. Confirm transaction.
 
 **Borrow Process**
-1. Ensure adequate collateral
-2. Select borrowing amount
-3. Monitor collateralization ratio
-4. Confirm borrowing transaction
-
-### Risk Management Features
-
-**Collateralization Monitoring**
-- Real-time ratio tracking 
-- Visual indicators for healthy ratios
-- Alerts for approaching liquidation thresholds
-
-**Pool Completion Tracking**
-- Days remaining display
-- Progress bars for pool timelines
-- Planning tools for position management
-
----
+1. Click the “Supply / Borrow” button.
+2. Select the Borrow option.
+3. Enter the desired borrow amount (within the allowed limits).
+4. Confirm transaction.
 
 ## Dashboard Benefits
 
