@@ -4,52 +4,98 @@ title: Governance
 sidebar_position: 4
 ---
 
-The governance module enables decentralized decision-making by allowing token holders to vote on proposals that influence the strategic and operational direction of a project. Integrated within the Engage platform, it provides a structured and transparent mechanism to facilitate protocol evolution, parameter updates, treasury actions, and other community-driven changes.
+The **Governance Module** enables decentralized decision-making by allowing token holders to participate in proposal creation, voting, and community governance. This module provides transparency and democratic control over protocol changes, parameter adjustments, and strategic initiatives.
 
-Governance functionality relies on token-weighted voting, with voting power determined through a snapshot mechanism. This approach captures token balances at a specific block height to ensure fairness and prevent manipulation. Proposals include detailed metadata such as voting thresholds, durations, and quorum requirements, allowing for consistent and auditable decision-making processes.
-
-Designed for flexibility, the governance module is compatible with any ERC-20 governance-enabled token. It can be integrated across a wide range of DeFi, DAO, or real-world asset ecosystems where decentralized coordination is essential.
-
-An example instance of the governance interface is available at the [Engage Platform Demo](https://sharingblock-engage.defactor.dev/governance), which illustrates real-time voting, proposal tracking, and snapshot-based logic in action.
+Token holders can view active and past proposals, participate in voting, and track their governance participation through an intuitive dashboard interface.
 
 ---
 
-## Core Functionality
+## Dashboard Overview
 
 ![Governance proposals lists](../../../static/img/front-end/governance-proposals-dash.png)
 
-- **Submit proposals** for new initiatives or upgrades.
-- **Vote on proposals** using token weight.
-- **View voting history** and proposal details.
-- **Snapshot-based system** to calculate voting power.
+The governance dashboard provides two main views:
 
----
+### Active Proposals 
+Currently open proposals accepting votes, including:
 
-## How Governance Works
+  - **Active proposals** open to all users and
+  - **My Staked Proposals**: Personalized view showing user's participation and voting power.
 
-1. **Proposal Creation** – Community or admin users submit proposals with descriptions, thresholds, and timelines.
-2. **Voting Period** – Token holders vote during the open window.
-3. **Snapshot Date** – Determines voting power based on wallet holdings.
-4. **Result Tally** – After the end date, results are finalized.
+### Past Proposals
+Historical proposals with final outcomes and voting results.
 
----
+Users can seamlessly switch between these views to monitor ongoing governance activity, review decision history, and track their personal involvement in the governance process.
 
-## Voting Metadata
-
-- **Title** – Summary of the proposal topic
-- **Description** – Full explanation, criteria, and rationale
-- **Snapshot Date** – Timestamp when wallet balances are captured
-- **End Date** – Last day to cast votes
-
----
-
-## Example Proposal Detail
+## Proposal Detail View
 
 ![Governance proposal detail](../../../static/img/front-end/governance-proposal-main.png)
 
-This example displays a **rejected proposal** that aimed to modify staking rates. The metadata section includes:
+Each proposal provides detailed information for informed decision-making:
 
-- **Start & End Dates**
-- **Voting Outcome & Stake Power**
-- **On-chain Discussion Link**
-- **Wallet Voting Breakdown**
+### Proposal Information
+- **Proposal Title** – Clear, descriptive name (e.g., "Adjust Staking Rate for Yield & Stability")
+- **Proposed By** – Wallet address of the proposal creator
+- **Timeline** – Start date and end date for the voting period
+- **Discussion Link** – External link to community discussion forum
+
+### Proposal Content
+- **Objective Statement** – Clear explanation of what the proposal aims to modify
+- **Key Goals** – Numbered list of specific outcomes:
+  1. Encourage Longer-Term Staking
+  2. Enhance Yield Competitiveness  
+  3. Improve Overall Network Stability
+
+### Additional Benefits
+- **Community Alignment** – How the proposal reflects stakeholder vision
+- **Ecosystem Growth** – Impact on developer and partner participation
+- **Long-Term Sustainability** – Balance between incentives and economic design
+
+### Voting Interface
+- **Real-time Results** – Live vote tallies showing "Yes" and "No" counts
+- **Vote Distribution** – Visual progress bars showing current percentages
+- **User's Voting Power** – Display of personal stake and voting influence
+- **Vote Buttons** – Clear "Yes" and "No" options for casting votes
+
+### Vote Tracking Table
+- **Wallet Address** – Individual voter identification
+- **Chain** – Blockchain network where the vote was cast
+- **Decision** – Vote choice (Yes/No) with colored indicators
+- **Vote Weight** – Number of tokens used in the vote
+
+## Voting Process
+
+### How to Vote
+
+1. **Review Proposal** – Read the full proposal details and discussion
+2. **Check Eligibility** – Ensure tokens are properly staked for governance
+3. **Cast Vote** – Select "For" or "Against" the proposal
+4. **Confirm Transaction** – Sign the blockchain transaction to record your vote
+5. **Track Progress** – Monitor real-time voting results
+
+### Voting Requirements
+
+- **Minimum Stake** – Tokens must be staked to participate in governance
+- **Lock Period** – Staked tokens may have lock-up requirements during voting
+- **One Vote Per Proposal** – Each staking position gets one vote per proposal
+
+## Proposal Lifecycle
+
+### Active Phase
+- **Proposal Submission** – Community or team submits governance proposal
+- **Voting Period** – Token holders cast votes over specified timeframe
+- **Real-time Tracking** – Vote counts and participation rates update live
+
+### Resolution Phase
+- **Vote Tallying** – Final count determines proposal outcome
+- **Execution** – Passed proposals trigger protocol changes or actions
+- **Documentation** – Results are recorded in Past Proposals for transparency
+
+
+## Core Benefits
+
+- **Democratic Control** – Token holders direct protocol evolution
+- **Transparency** – All votes and outcomes are publicly visible
+- **Participation Rewards** – Incentives for active governance engagement
+- **Historical Record** – Complete archive of all governance decisions
+- **Real-time Updates** – Live voting progress and participation metrics
