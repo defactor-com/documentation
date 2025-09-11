@@ -136,10 +136,10 @@ The Custom Buyback option provides advanced users with flexible recipient specif
 
 When first accessing Custom Buyback, the interface displays:
 
-- **Network Selection** – Choose the blockchain network (e.g., Base Sepolia)
+- **Network Selection** – Choose the blockchain network
 - **Empty Recipients State** – "No recipients added yet" message with guidance
 - **Add Recipient Button** – Primary action to begin configuring custom recipients
-- **Amount Tracking** – Shows Total Amount (0.00 USDC) and Minimum Amount requirements
+- **Amount Tracking** – Shows Total Amount and Minimum Amount requirements
 
 #### Adding Recipients
 
