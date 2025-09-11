@@ -26,13 +26,13 @@ There are two convenient ways to access the asset creation workflow:
 
 **Option A: Dashboard Access**  
 
-![Asset Creation Dashboard](../../../../documentation/static/img/front-end/access-asset-creation-dashboard-create-asset.png)  
+![Asset Creation Dashboard](../../../../documentation/static/img/front-end/assets/access-asset-creation-dashboard-create-asset.png)  
 
 Navigate to your **Assets** dashboard and locate the **"+ Create Assets"** button prominently displayed on the interface. Clicking this button will seamlessly redirect you to the **My Templates** section where the asset creation process begins.  
 
 **Option B: Direct Navigation**  
 
-![My Templates Navigation](../../../../documentation/static/img/front-end/access-asset-creation-dashboard-my-templates.png)  
+![My Templates Navigation](../../../../documentation/static/img/front-end/assets/access-asset-creation-dashboard-my-templates.png)  
 
 Alternatively, you can navigate directly to the **My Templates** section from the main menu. This approach is ideal when you already know you want to work with templates or have bookmarked this section for quick access.  
 

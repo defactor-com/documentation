@@ -27,7 +27,7 @@ When creating a pool, administrators go through **two configuration steps**:
 
 ### 1. Token Settings  
 
-![Staking Pool - Token Settings](../../../../static/img/front-end/admin-staking-token-settings.png)
+![Staking Pool - Token Settings](../../../../static/img/front-end/engage/admin-staking-token-settings.png)
 
 Define the base chain and tokens used in the pool:  
 - **Chain**: Select the blockchain network (e.g., Ethereum, Base Sepolia, Polygon).  
@@ -38,7 +38,7 @@ Define the base chain and tokens used in the pool:
 
 ### 2. Pool Details  
 
-![Staking Pool - Pool Details](../../../../static/img/front-end/admin-staking-pool-details.png)
+![Staking Pool - Pool Details](../../../../static/img/front-end/engage/admin-staking-pool-details.png)
 
 Configure the operational parameters of the staking pool:  
 - **Pool Name**: Assign a unique, descriptive name for easy tracking.  
@@ -60,7 +60,7 @@ Configure the operational parameters of the staking pool:
 
 ## Managing Staking Pools  
 
-![Staking Pools Table](../../../../static/img/front-end/admin-staking-pools-table.png)
+![Staking Pools Table](../../../../static/img/front-end/engage/admin-staking-pools-table.png)
 
 Once pools are created, the **Admin Section** provides an overview table with live details:  
 - **Name**: Pool name for quick reference.  

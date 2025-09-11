@@ -23,7 +23,7 @@ This helps maintain visibility and control over how project tokens are distribut
 
 ## Allocation Summary  
 
-![Ecosystem Allocation Summary](../../../../static/img/front-end/admin-ecosystem-allocation.png)
+![Ecosystem Allocation Summary](../../../../static/img/front-end/engage/admin-ecosystem-allocation.png)
 
 The left-hand allocation chart shows:  
 - **Total Allocated** — The total tokens distributed across ecosystem wallets.  
@@ -33,7 +33,7 @@ The left-hand allocation chart shows:
 
 ## Ecosystem Addresses Table  
 
-![Ecosystem Addresses Table](../../../../static/img/front-end/admin-ecosystem-addresses.png)
+![Ecosystem Addresses Table](../../../../static/img/front-end/engage/admin-ecosystem-addresses.png)
 
 The table lists all ecosystem wallets with:  
 - **Address Label** — Descriptive name of the wallet (e.g., Team, Governance, Foundation).  
@@ -47,7 +47,7 @@ The table lists all ecosystem wallets with:
 
 ## Adding an Ecosystem Wallet  
 
-![Add Ecosystem Wallet](../../../../static/img/front-end/admin-ecosystem-add-wallet.png)
+![Add Ecosystem Wallet](../../../../static/img/front-end/engage/admin-ecosystem-add-wallet.png)
 
 To add a new wallet:  
 
@@ -63,7 +63,7 @@ To add a new wallet:
 
 ## Allocating Tokens  
 
-![Ecosystem Allocation Step](../../../../static/img/front-end/admin-ecosystem-allocation-step.png)
+![Ecosystem Allocation Step](../../../../static/img/front-end/engage/admin-ecosystem-allocation-step.png)
 
 In the **Allocation** step:  
 - Enter the amount of tokens to allocate to the wallet.  

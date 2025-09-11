@@ -22,7 +22,7 @@ From the Admin Section, authorized team members can:
 
 This module ensures that project operations remain transparent, auditable, and aligned with governance processes.  
 
-![Admin Section Tabs](../../../../static/img/front-end/sidebar-menu-admin.png)
+![Admin Section Tabs](../../../../static/img/front-end/engage/sidebar-menu-admin.png)
 
 ---
 

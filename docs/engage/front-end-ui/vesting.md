@@ -22,7 +22,7 @@ A live example of the module in action can be accessed via the [Engage Platform 
 
 Vesting is structured into three event categories:
 
-![Vesting Events Tab](../../../static/img/front-end/vesting-events-ongoing.png)
+![Vesting Events Tab](../../../static/img/front-end/engage/vesting-events-ongoing.png)
 
 - **Ongoing Events** – Active vesting periods in progress.
 - **Upcoming Events** – Future scheduled releases.
@@ -51,7 +51,7 @@ Vesting is structured into three event categories:
 
 The main vesting dashboard gives a clear summary of the user's vesting progress:
 
-![Vesting Dashboard](../../../static/img/front-end/vesting-dash.png)
+![Vesting Dashboard](../../../static/img/front-end/engage/vesting-dash.png)
 
 - **My Vesting** – Personal breakdown of allocations and events
 - **Claimable Amount** – Tokens ready for withdrawal

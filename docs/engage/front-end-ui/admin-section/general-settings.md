@@ -22,7 +22,7 @@ This ensures secure and transparent control over platform operations.
 
 ## Admin Accounts Table  
 
-![Admin Accounts Table](../../../../static/img/front-end/admin-general-admin-accounts.png)
+![Admin Accounts Table](../../../../static/img/front-end/engage/admin-general-admin-accounts.png)
 
 The list displays all configured admin accounts with the following details:  
 
@@ -36,7 +36,7 @@ The list displays all configured admin accounts with the following details:
 
 ## Adding an Admin  
 
-![Admin Add Accounts](../../../../static/img/front-end/admin-general-add-admin-account.png)
+![Admin Add Accounts](../../../../static/img/front-end/engage/admin-general-add-admin-account.png)
 
 To add a new admin account:  
 

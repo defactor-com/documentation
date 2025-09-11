@@ -22,7 +22,7 @@ This section ensures that all staking, governance, and buyback activities refere
 
 ## Managing Tokens  
 
-![Manage Tokens Table](../../../../static/img/front-end/admin-token-manage-tokens-table.png)
+![Manage Tokens Table](../../../../static/img/front-end/engage/admin-token-manage-tokens-table.png)
 
 The **Manage Tokens** table displays all registered tokens with key details:  
 - **Name**: Full token name (e.g., "Defactor: FACTR Token").  
@@ -42,7 +42,7 @@ From this view, administrators can:
 
 ## Adding a Token  
 
-![Add Token Modal](../../../../static/img/front-end/admin-token-add-token.png)
+![Add Token Modal](../../../../static/img/front-end/engage/admin-token-add-token.png)
 
 When adding a new token, admins configure several parameters:  
 

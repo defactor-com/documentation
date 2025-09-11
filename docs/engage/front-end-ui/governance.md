@@ -12,7 +12,7 @@ Token holders can view active and past proposals, participate in voting, and tra
 
 ## Dashboard Overview
 
-![Governance proposals lists](../../../static/img/front-end/governance-proposals-dash.png)
+![Governance proposals lists](../../../static/img/front-end/engage/governance-proposals-dash.png)
 
 The governance dashboard provides two main views:
 
@@ -29,7 +29,7 @@ Users can seamlessly switch between these views to monitor ongoing governance ac
 
 ## Proposal Detail View
 
-![Governance proposal detail](../../../static/img/front-end/governance-proposal-main.png)
+![Governance proposal detail](../../../static/img/front-end/engage/governance-proposal-main.png)
 
 Each proposal provides detailed information for informed decision-making:
 

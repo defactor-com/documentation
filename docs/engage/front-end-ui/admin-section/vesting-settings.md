@@ -23,7 +23,7 @@ This ensures long-term token distribution is transparent, predictable, and align
 
 ## Vesting Schedules List  
 
-![Vesting Schedules List](../../../../static/img/front-end/admin-vesting-schedules.png)
+![Vesting Schedules List](../../../../static/img/front-end/engage/admin-vesting-schedules.png)
 
 The schedules table provides a snapshot of all configured vesting batches:  
 
@@ -44,7 +44,7 @@ From the list, admins can:
 
 ## Creating a Vesting Batch  
 
-![Creating a Vesting Batch](../../../../static/img/front-end/admin-vesting-create-batch.png)
+![Creating a Vesting Batch](../../../../static/img/front-end/engage/admin-vesting-create-batch.png)
 
 To create a new vesting batch:  
 
