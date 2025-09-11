@@ -68,113 +68,115 @@ The Latest Buybacks section shows real-time ecosystem activity:
 
 ![My Buybacks](../../../static/img/front-end/engage/buyback-my-buybacks.png)
 
-The My Buybacks section provides personalized tracking:
+The My Buybacks table contains seven columns that track your buyback activity:
 
-### Personal Transaction History
-- **User-Specific Transactions** – Only displays buybacks initiated by the connected wallet
-- **Withdrawal Status** – Shows when tokens become available for withdrawal
-- **Transaction Details** – Complete record of personal buyback activity
+- **Transaction Date** – Date when the buyback was executed
+- **Bought** – Amount of tokens purchased (shown in REAL tokens)
+- **Spent** – USDC amount used for the purchase
+- **Chain** – Blockchain network where the transaction occurred
+- **Recipient** – Number of wallets that received the purchased tokens
+- **Time Remaining** – Lock period status or days until withdrawal eligibility
+- **Action** – Current transaction status and available withdrawal options
 
-### Transaction Management
-- **Withdraw Function** – Claim purchased tokens when lock period expires
-- **Time Tracking** – Monitor remaining days until withdrawal eligibility
-- **Action Buttons** – Intuitive interface for managing buyback positions
+You're right, the heading hierarchy needs to be fixed. Here's the corrected formatting:
+
+You're absolutely right! Here's the corrected formatting with proper heading hierarchy:
 
 ## Initiating a Buyback
 
-### Regular Buyback Process
+![Buyback Button](../../../static/img/front-end/engage/buyback-button.png)
 
-Users can execute standard buybacks through a streamlined interface:
+Users can initiate buyback transactions by clicking the **+ Buyback** button, which opens the buyback configuration modal.
 
-1. **Select Buyback Type** – Choose between Regular or Custom Buyback
-2. **Network Selection** – Pick target blockchain (e.g., Base Testnet)
-3. **Configure Parameters** – Set amount and allocation preferences
+### Buyback Types
+
+![Buyback Modal](../../../static/img/front-end/engage/buyback-modal.png)
+
+The buyback interface offers two main options:
+
+- **Regular Buyback** – Simplified buyback with predefined allocation across ecosystem categories
+- **Custom Buyback** – Advanced option allowing custom recipient specification and flexible allocation
+
+### Network Selection
+
+Before configuring buyback parameters, users must select the blockchain network where the transaction will be executed. The interface displays available networks with their corresponding icons and names.
 
 ### Regular Buyback Configuration
 
-**Amount Settings:**
-- **Spending Amount** – Enter USDC amount to spend
-- **Balance Display** – Shows available wallet balance
-- **Min/Max Limits** – Optimal amount suggestions (100.00 USDC minimum)
+![Regular Buyback](../../../static/img/front-end/engage/buyback-regular.png)
 
-**Buyback Allocation:**
-- **Contributors** – 25%
-- **Foundation** – 25%
-- **Liquidity & Growth** – 25%
-- **Staking** – 25%
+The Regular Buyback option provides a streamlined interface for executing buybacks with predefined allocation settings.
 
-### Custom Buyback Options
+#### Amount Configuration
 
-For advanced users requiring specific allocation:
+**Spending Parameters:**
 
-**Recipient Management:**
-- **Add Recipients** – Specify custom wallet addresses
-- **Amount Allocation** – Set individual buyback amounts per recipient
-- **Wallet Verification** – Ensure valid recipient addresses
+- **Amount Field** – Enter the USDC amount you want to spend on the buyback
+- **Balance Display** – Shows your current wallet balance for reference
+- **Min/Max Options** – Quick selection buttons for minimum or maximum amounts
+- **Optimal Amount** – System-suggested optimal buyback amount
+- **Minimum Amount** – Required minimum spend threshold
+- **Total Amount** – Final calculated amount to be spent
 
-**Custom Configuration:**
-- **Recipient Details** – Label recipients (e.g., "Marketing Budget Wallet")
-- **Amount Distribution** – Flexible allocation across multiple wallets
-- **Total Amount Tracking** – Real-time calculation of total buyback cost
+#### Buyback Allocation
 
-## Transaction Lifecycle
+Regular buybacks automatically distribute purchased tokens across predefined ecosystem categories with equal allocation.
 
-### Execution Phase
-- **Parameter Setting** – Configure buyback amount and recipients
-- **Transaction Submission** – Sign blockchain transaction to execute buyback
-- **Market Purchase** – Tokens are bought from available liquidity
+#### Execution
 
-### Lock Period
-- **Time Lock** – Purchased tokens enter a lock period (typically 300+ days)
-- **Progress Tracking** – Daily countdown until withdrawal eligibility
-- **Status Monitoring** – Real-time updates on lock status
+Once the amount is configured and allocation is reviewed, users can proceed by clicking **Initiate BuyBack** to execute the transaction with the standard distribution model.
 
-### Withdrawal Phase
-- **Eligibility Check** – Verify lock period completion
-- **Withdrawal Action** – Claim purchased tokens to wallet
-- **Transaction Completion** – Tokens become fully available for use
+### Custom Buyback Configuration
 
-## Core Benefits
+The Custom Buyback option provides advanced users with flexible recipient specification and allocation control.
 
-- **Token Scarcity** – Reduces circulating supply through market repurchases
-- **Price Support** – Buyback activity can positively impact token price
-- **Ecosystem Health** – Demonstrates protocol commitment to token value
-- **Transparency** – All buyback activity is publicly visible and auditable
-- **Flexible Allocation** – Support both automated and custom distribution models
+#### Initial Setup
 
-## Buyback Categories
+![Custom Buyback Empty](../../../static/img/front-end/engage/buyback-custom-empty.png)
 
-### Regular Buybacks
-- **Automated Distribution** – Equal allocation across ecosystem categories
-- **Simplified Process** – One-click execution with preset parameters
-- **Ecosystem Balance** – Maintains proportional token distribution
+When first accessing Custom Buyback, the interface displays:
 
-### Custom Buybacks
-- **Targeted Recipients** – Specify exact wallet addresses
-- **Variable Allocation** – Custom amount distribution
-- **Strategic Purchasing** – Support specific initiatives or wallets
+- **Network Selection** – Choose the blockchain network (e.g., Base Sepolia)
+- **Empty Recipients State** – "No recipients added yet" message with guidance
+- **Add Recipient Button** – Primary action to begin configuring custom recipients
+- **Amount Tracking** – Shows Total Amount (0.00 USDC) and Minimum Amount requirements
 
-## Example Use Cases
+#### Adding Recipients
 
-- **Protocol Treasury** – Execute buybacks to reduce token supply and support price
-- **Reward Programs** – Buy tokens for distribution to active participants
-- **Liquidity Management** – Repurchase tokens to rebalance ecosystem allocations
-- **Strategic Initiatives** – Fund specific programs through targeted buybacks
-- **Market Stabilization** – Counter selling pressure during market volatility
+![Custom Buyback Add Recipient](../../../static/img/front-end/engage/buyback-custom-add-recipient.png)
 
-## Best Practices
+The recipient addition process includes:
 
-### Before Executing Buybacks
-- **Check Market Conditions** – Consider current token price and liquidity
-- **Verify Recipients** – Ensure all wallet addresses are correct
-- **Plan Distribution** – Decide on allocation strategy for purchased tokens
+**Recipient Configuration:**
+- **Wallet Address Field** – Enter the recipient's wallet address
+- **Amount Field** – Specify USDC amount to allocate to this recipient
+- **Balance Display** – Shows your current wallet balance for reference
+- **Min/Max Options** – Quick selection buttons for amount setting
 
-### During Buyback Process
-- **Monitor Gas Fees** – Account for transaction costs on chosen network
-- **Confirm Parameters** – Double-check amounts and recipient details
-- **Track Progress** – Monitor transaction confirmation and execution
+**Navigation:**
+- **Back Button** – Return to recipients list
+- **Add Recipient Button** – Confirm and add the configured recipient
 
-### After Buyback Completion
-- **Track Lock Periods** – Monitor time remaining until withdrawal eligibility
-- **Plan Withdrawals** – Prepare for token distribution when locks expire
-- **Analyze Impact** – Review buyback effects on token metrics and ecosystem health
+#### Recipients Summary
+
+![Custom Buyback With Recipients](../../../static/img/front-end/engage/buyback-custom-with-recipients.png)
+
+Once recipients are added, the interface displays:
+
+**Recipient Details:**
+- **Custom Label** – Shows recipient identifier or custom name
+- **Wallet Address** – Truncated address display
+- **Allocated Amount** – USDC amount assigned to each recipient
+- **Add Recipient Option** – Ability to add additional recipients
+
+**Execution Controls:**
+- **Total Amount Calculation** – Automatically calculates total across all recipients
+- **Minimum Amount Validation** – Ensures requirements are met
+- **Initiate BuyBack Button** – Execute the custom buyback transaction
+
+#### Key Features
+
+- **Multiple Recipients** – Add multiple wallet addresses with individual allocations
+- **Flexible Amounts** – Set custom USDC amounts for each recipient
+- **Real-time Totals** – Automatic calculation of total buyback cost
+- **Validation** – Ensures minimum amounts and wallet address formats are correct
