@@ -12,7 +12,9 @@ Users can monitor their vesting progress, view emission charts, track claimable 
 
 ## Dashboard Overview
 
-The vesting dashboard displays comprehensive vesting metrics and provides three main event views:
+![Vesting Dashboard](../../../static/img/front-end/engage/vesting-dash.png)
+
+The vesting dashboard displays **comprehensive vesting metrics** and provides three main event views:
 
 - **Ongoing Events** – Currently active vesting schedules
 - **Upcoming Events** – Future vesting batches yet to begin
@@ -25,21 +27,32 @@ Users can seamlessly switch between these views to monitor active vesting progre
 
 The dashboard displays comprehensive vesting statistics and personal tracking information.
 
-### Overall Vesting Progress
+### Vesting Progress Overview
 
+![Vesting Progress Overview](../../../static/img/front-end/engage/vesting-progress-overview.png)
 
-- **Total Vested Amount** – Shows aggregate tokens distributed across all vesting schedules
-- **Vesting Percentage** – Progress indicator showing percentage of total amount vested
-- **USD Equivalent** – Current value of vested tokens in USDC
+The vesting progress section displays:
+
+- **Current Vested Amount** – Shows tokens currently vested out of total allocation (e.g., 2.84K /16.48M)
+- **Progress Percentage** – Indicates the percentage of total allocation that has been vested to date
+- **Lock Icon** – Visual indicator showing that tokens are part of a controlled vesting schedule
+
+This section provides a quick overview of overall vesting progress across all active schedules.
 
 ### Key Vesting Statistics
 
-**System-Wide Metrics:**
+#### System-Wide Metrics:
+
+![Vesting System Metrics](../../../static/img/front-end/engage/vesting-system-metrics.png)
+
 - **Total Vested** – Aggregate tokens released across all participants
 - **Current Locked Amount** – Tokens currently locked in active vesting schedules  
 - **Pending to be Claimed** – Vested tokens available for withdrawal
 
-**Personal Tracking:**
+#### Personal Tracking:
+
+![Vesting Personal Tracking](../../../static/img/front-end/engage/vesting-personal-tracking.png)
+
 - **My Vested Amount** – Tokens you have received from vesting
 - **My Locked Amount** – Your tokens currently in vesting schedules
 - **My Claimable Amount** – Tokens ready for you to claim
