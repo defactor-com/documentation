@@ -20,8 +20,6 @@ The main staking dashboard includes:
 - **Rewards Panel** – Breakdown of rewards received, expected rewards, and claimable tokens.  
 - **Claim Now** – Button to withdraw currently unlocked rewards.  
 
----
-
 ## Staking Pools  
 
 ![Staking Pools Table](../../../static/img/front-end/staking-pools.png)
@@ -35,8 +33,6 @@ The **Staking Pools** section lists all available pools with details such as:
 - **Rewards End Time** – Final date when rewards stop.  
 - **New Position** – Button to join the pool.  
 
----
-
 ## Opening a Staking Position  
 
 ![Open Staking Position](../../../static/img/front-end/staking-open-position.png)
@@ -46,8 +42,6 @@ To open a new staking position:
 2. Click **New Position**.  
 3. Enter the amount of tokens to stake.  
 4. Confirm the transaction in your wallet.  
-
----
 
 ## Positions  
 
@@ -59,8 +53,6 @@ The **Positions** section shows both open and completed pools:
 - **Open Positions** – Active stakes with details like pool mode, amount staked, APR, conversion rate, remaining time, and claimable rewards.   
 - **Archive Tab** – Historical record of older completed positions.  
 
----
-
 ## Claiming Rewards  
 
 Rewards can be claimed directly from the dashboard:  
@@ -68,13 +60,10 @@ Rewards can be claimed directly from the dashboard:
 - **Claim (per pool)** – Button within Open Positions to withdraw rewards from a specific pool.  
 - **Restake** – Available for completed pools to re-enter with previously staked tokens.  
 
----
 
 ## Key Features  
 
 - **Multiple staking pools** with different APRs and lockup durations.  
 - **Real-time rewards** displayed in the dashboard and pools list.  
-- **Wallet integration** with MetaMask, Trust Wallet, and WalletConnect.  
+- **Wallet integration** with MetaMask, Rainbow Wallet, WalletConnect and more.  
 - **Flexible management** – Users can open, close, claim, or restake positions as needed.  
-
----
