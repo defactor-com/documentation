@@ -22,16 +22,12 @@ The ecosystem dashboard displays:
 - **Auto Buybacks** – Shows tokens already repurchased from the market.  
 - **Chain Filters** – Toggle between supported chains (e.g., Base, Ethereum, Polygon).  
 
----
-
 ## Token Metrics  
 
 ![Ecosystem Token Metrics](../../../static/img/front-end/ecosystem-token-metrics.png)
 
 - **Market Cap** – Calculated based on circulating supply × token price.  
 - **Current Token Price** – Fetched from Coingecko or defined as fixed in Admin → Token Settings.  
-
----
 
 ## Ecosystem Addresses  
 
@@ -46,28 +42,16 @@ The **Ecosystem Addresses** table shows how tokens are allocated across differen
 
 Admins configure these wallets and allocations in **Admin → Ecosystem Settings**.  
 
----
-
 ## Key Modules Integrated  
 
 - **Staking** – Lock tokens in customizable pools to incentivize long-term holding and participation.  
 - **Vesting** – Distribute tokens over time to contributors, team members, or investors.  
 - **Buybacks** – Track and display auto buybacks executed by the protocol, supporting token scarcity and reinforcing long-term value.  
 
----
-
 ## Core Benefits  
 
 - **User-friendly dashboard** – Easily monitor circulating supply, staking, rewards, and buybacks.  
-- **Cross-chain visibility** – View metrics across Base, Ethereum, Polygon, and other supported networks.  
+- **Cross-chain visibility** – View metrics across supported networks.  
 - **Transparent allocations** – Track how tokens are distributed across ecosystem wallets.  
 - **Auditable on-chain data** – All displayed metrics come directly from audited smart contracts.  
 
----
-
-## Example Use Cases  
-
-- **DAOs** – Track ecosystem rewards and ensure treasury transparency.  
-- **DeFi Projects** – Monitor staking, vesting, and buybacks to assess protocol health.  
-- **RWA Platforms** – Showcase token allocations for investors in real-world asset projects.  
-- **Web3 Communities** – Provide members with transparent views of token activity and reward flows.  
