@@ -12,7 +12,7 @@ Staking is central to reinforcing token utility, governance participation, and l
 
 ## Dashboard Overview  
 
-![Staking Dashboard](../../../static/img/front-end/staking-dash.png)
+![Staking Dashboard](../../../static/img/front-end/engage/staking-dash.png)
 
 The main staking dashboard includes:  
 - **My Total Value Locked (TVL)** – Total value of tokens you have staked.  
@@ -22,7 +22,7 @@ The main staking dashboard includes:
 
 ## Staking Pools  
 
-![Staking Pools Table](../../../static/img/front-end/staking-pools.png)
+![Staking Pools Table](../../../static/img/front-end/engage/staking-pools.png)
 
 The **Staking Pools** section lists all available pools with details such as:  
 - **Pool Name** – Identifier of the staking pool.  
@@ -35,7 +35,7 @@ The **Staking Pools** section lists all available pools with details such as:
 
 ## Opening a Staking Position  
 
-![Open Staking Position](../../../static/img/front-end/staking-open-position.png)
+![Open Staking Position](../../../static/img/front-end/engage/staking-open-position.png)
 
 To open a new staking position:  
 1. Choose a pool from the **Staking Pools** table.  
@@ -45,7 +45,7 @@ To open a new staking position:
 
 ## Positions  
 
-![Staking Positions](../../../static/img/front-end/staking-positions.png)
+![Staking Positions](../../../static/img/front-end/engage/staking-positions.png)
 
 The **Positions** section shows both open and completed pools:  
 

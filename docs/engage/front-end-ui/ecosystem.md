@@ -12,7 +12,7 @@ This module ensures transparency by showing both system-wide token metrics and d
 
 ## Dashboard Overview  
 
-![Ecosystem Dashboard](../../../static/img/front-end/ecosystem-dash.png)
+![Ecosystem Dashboard](../../../static/img/front-end/engage/ecosystem-dash.png)
 
 The ecosystem dashboard displays:  
 - **Circulating Supply** – Current tokens in circulation relative to total supply.  
@@ -24,14 +24,14 @@ The ecosystem dashboard displays:
 
 ## Token Metrics  
 
-![Ecosystem Token Metrics](../../../static/img/front-end/ecosystem-token-metrics.png)
+![Ecosystem Token Metrics](../../../static/img/front-end/engage/ecosystem-token-metrics.png)
 
 - **Market Cap** – Calculated based on circulating supply × token price.  
 - **Current Token Price** – Fetched from Coingecko or defined as fixed in Admin → Token Settings.  
 
 ## Ecosystem Addresses  
 
-![Ecosystem Addresses Table](../../../static/img/front-end/ecosystem-addresses.png)
+![Ecosystem Addresses Table](../../../static/img/front-end/engage/ecosystem-addresses.png)
 
 The **Ecosystem Addresses** table shows how tokens are allocated across different categories:  
 
