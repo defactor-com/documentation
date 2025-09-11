@@ -2,7 +2,7 @@
   "label": "CP Pools Front End UI",
   "position": 3,
   "link": {
-    "type": "doc",
-    "id": "pools-frontend-overview"
+    "type": "generated-index",
+    "description": "Credit pool infrastructure for institutional lending with advanced risk management, automated liquidation, and enterprise-grade DeFi solutions."
   }
 }

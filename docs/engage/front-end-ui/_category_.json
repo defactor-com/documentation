@@ -2,7 +2,7 @@
   "label": "Engage Front End UI",
   "position": 3,
   "link": {
-    "type": "doc",
-    "id": "engage-frontend-overview"
+    "type": "generated-index",
+    "description": "DeFi governance toolkit featuring staking, voting, buybacks, and vesting modules for community-driven token utility and decentralized decision making."
   }
 }

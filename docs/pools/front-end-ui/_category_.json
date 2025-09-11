@@ -2,7 +2,7 @@
   "label": "Pools Front End UI",
   "position": 3,
   "link": {
-    "type": "doc",
-    "id": "pools-frontend-overview"
+    "type": "generated-index",
+    "description": "Collateral-based lending platform enabling users to supply liquidity, borrow against assets, and participate in decentralized finance protocols."
   }
 }
