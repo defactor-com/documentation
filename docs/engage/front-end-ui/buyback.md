@@ -10,30 +10,44 @@ Users can initiate buybacks, monitor their transaction history, and view ecosyst
 
 ## Dashboard Overview
 
-The buyback dashboard provides two main views:
+![BuyBack Dashboard](../../../static/img/front-end/engage/buyback-dash.png)
+
+The buyback dashboard displays **Buyback Metrics** at the top, followed by two main table views:
 
 - **Latest Buybacks** – Recent buyback transactions across the ecosystem
 - **My Buybacks** – Personal buyback history and user-initiated transactions
 
-Users can seamlessly switch between these views to monitor ecosystem-wide buyback activity and track their personal contribution to token repurchasing programs.
+Users can seamlessly switch between the Latest and My Buybacks tables to monitor ecosystem-wide buyback activity and track their personal contribution to token repurchasing programs. The buyback metrics section provides an overview of total tokens bought back and their allocation across different ecosystem categories.
 
 ## Buyback Metrics
-
-![BuyBack Dashboard](../../../static/img/front-end/engage/buyback-metrics.png)
 
 The dashboard displays comprehensive buyback statistics:
 
 ### Total Sharing Bought Back
-- **15.37K Sharing** – Total tokens repurchased from the market
-- **15.37K USDC** – USD equivalent value of buybacks executed
-- **Chain Distribution** – Shows buyback activity across supported networks (Base Sepolia: 100%)
+
+![BuyBack Dashboard](../../../static/img/front-end/engage/buyback-metrics-bought-back.png)
+
+- **Total tokens repurchased** – Shows the aggregate amount of Sharing tokens bought back from the market
+- **USD equivalent value** – Displays the total USDC spent on all buyback operations
+- **Chain Distribution** – Breakdown of buyback activity across supported blockchain networks with percentage allocation
+
+You're absolutely right. Here's the revised version with a clear indication that these are examples:
 
 ### Ecosystem Allocation Breakdown
-- **Contributors** – 4.00K Sharing (26.0%)
-- **Foundation** – 2.79K Sharing (18.2%)
-- **Liquidity** – 2.79K Sharing (18.2%)
-- **Staking Rewards** – 2.79K Sharing (18.2%)
-- **Other** – 3.00K Sharing (19.5%)
+
+![BuyBack Dashboard](../../../static/img/front-end/engage/buyback-metrics-allocation-breakdown.png)
+
+The buyback metrics show how repurchased tokens are distributed across different ecosystem categories. These categories are configured and managed by administrators in the **Admin Section → Buyback** settings.
+
+**Example categories may include:**
+
+- **Contributors** – Tokens allocated to project contributors and team members
+- **Foundation** – Tokens designated for foundation operations and governance  
+- **Liquidity** – Tokens reserved for liquidity provision and market making
+- **Staking Rewards** – Tokens allocated for staking reward distribution
+- **Other** – Tokens assigned to miscellaneous ecosystem needs and future initiatives
+
+Each category is defined with a specific icon and label that can be customized through the admin interface. Administrators can modify these categories, add new ones, or adjust their designations to match the project's evolving needs.
 
 ## Latest Buybacks
 
