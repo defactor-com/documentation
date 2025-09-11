@@ -25,7 +25,7 @@ The dashboard displays comprehensive buyback statistics:
 
 ### Total Sharing Bought Back
 
-![BuyBack Dashboard](../../../static/img/front-end/engage/buyback-metrics-bought-back.png)
+![BuyBack Metrics Bought Back](../../../static/img/front-end/engage/buyback-metrics-bought-back.png)
 
 - **Total tokens repurchased** – Shows the aggregate amount of Sharing tokens bought back from the market
 - **USD equivalent value** – Displays the total USDC spent on all buyback operations
@@ -35,7 +35,7 @@ You're absolutely right. Here's the revised version with a clear indication that
 
 ### Ecosystem Allocation Breakdown
 
-![BuyBack Dashboard](../../../static/img/front-end/engage/buyback-metrics-allocation-breakdown.png)
+![BuyBack Metrics Allocation Breakdown](../../../static/img/front-end/engage/buyback-metrics-allocation-breakdown.png)
 
 The buyback metrics show how repurchased tokens are distributed across different ecosystem categories. These categories are configured and managed by administrators in the **Admin Section → Buyback** settings.
 
@@ -51,22 +51,18 @@ Each category is defined with a specific icon and label that can be customized t
 
 ## Latest Buybacks
 
+![BuyBack Latest Buybacks](../../../static/img/front-end/engage/buyback-latest-buybacks.png)
+
 The Latest Buybacks section shows real-time ecosystem activity:
 
 ### Transaction Details
 - **Transaction Date** – When the buyback was executed
-- **Bought** – Amount of Sharing tokens purchased (with $ indicator)
+- **Bought** – Amount of tokens purchased
 - **Spent** – USDC amount used for the buyback
 - **Chain** – Blockchain network where transaction occurred
 - **Recipient** – Number of recipients receiving the bought tokens
 - **Time Remaining** – Days until tokens become available/unlocked
 - **Action** – Available actions (Withdraw when eligible)
-
-### Example Transactions
-Recent buyback activity shows consistent market participation:
-- 880.87 Sharing bought for 1000 USDC (Sep 5, 2025)
-- 4.51K Sharing bought for 5000 USDC (Aug 21, 2025)
-- 1.15K Sharing bought for 1200 USDC (Aug 14, 2025)
 
 ## My Buybacks
 
