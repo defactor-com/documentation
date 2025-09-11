@@ -60,19 +60,21 @@ This section provides a quick overview of overall vesting progress across all ac
 
 ## Emissions Chart
 
-The emissions chart provides visual tracking of token release over time:
+![Vesting Emissions Chart](../../../static/img/front-end/engage/vesting-emissions-chart.png)
+
+The emissions chart provides visual tracking of token release over time with an interactive timeline display.
 
 ### Chart Features
-- **Timeline View** – Historical and projected token releases over months
-- **Cumulative Display** – Shows total accumulated emissions
-- **Time Filters** – Toggle between 1D, 7D, 1M, and 1Y views for different perspectives
-- **Real-time Updates** – Chart updates as new tokens are released
+- **Timeline View** – Historical token releases displayed over months with cumulative growth
+- **Time Filters** – Toggle between 1D, 7D, 1M, and 1Y views in the top-right corner
+- **Interactive Tooltip** – Hover over data points to see specific emission details, timestamps, total emissions amount, and percentage changes
+- **Cumulative Display** – Shows total accumulated emissions as a rising line chart over the selected time period
 
-### Data Insights
-- **Release Patterns** – Visualize how tokens are distributed over time
-- **Cliff Events** – Identify periods of accelerated token release
-- **Future Projections** – Preview expected emission schedules
-
+### Tooltip Information
+When hovering over chart data points, the tooltip displays:
+- **Date and Time** – Specific timestamp for the data point
+- **Total Emissions** – Cumulative token amount released up to that point
+- **Percentage Change** – Growth percentage showing emission changes from baseline
 
 ## My Vesting
 
