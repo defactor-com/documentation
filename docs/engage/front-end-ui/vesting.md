@@ -4,55 +4,98 @@ title: Vesting
 sidebar_position: 6
 ---
 
-The Vesting module enables time-based, structured distribution of tokens according to predefined schedules. It is typically used to manage allocations for contributors, investors, core team members, and ecosystem participants, ensuring long-term alignment with project objectives and token supply discipline.
+The **Vesting Module** enables controlled token distribution over time to contributors, team members, investors, and other stakeholders. This module provides transparency and predictability for token releases while maintaining ecosystem stability through gradual emission schedules.
 
-By enforcing lock-up periods and gradual token release, the vesting mechanism helps mitigate premature sell-offs, build trust with stakeholders, and enhance transparency across token allocations. Vesting plans can vary in complexity and duration and are fully trackable through the Engage platform.
-
-The module is compatible with any ERC-20 token and supports a wide range of vesting scenarios, including linear, cliff-based, or milestone-driven schedules.
-
-A live example of the module in action can be accessed via the [Engage Platform Demo](https://sharingblock-engage.defactor.dev/vesting).
+Users can monitor their vesting progress, view emission charts, track claimable amounts, and manage their vesting events through an intuitive dashboard interface.
 
 ---
 
-## Core Functionality
+## Dashboard Overview
 
-- Visualize your vesting timeline and upcoming unlocks
-- Claim unlocked tokens directly from the interface
-- Review all past and future vesting events in real time
+The vesting dashboard displays comprehensive vesting metrics and provides three main event views:
 
-Vesting is structured into three event categories:
+- **Ongoing Events** – Currently active vesting schedules
+- **Upcoming Events** – Future vesting batches yet to begin
+- **Completed Events** – Finished vesting schedules
 
-![Vesting Events Tab](../../../static/img/front-end/engage/vesting-events-ongoing.png)
+Users can seamlessly switch between these views to monitor active vesting progress, preview upcoming distributions, and review completed vesting history.
 
-- **Ongoing Events** – Active vesting periods in progress.
-- **Upcoming Events** – Future scheduled releases.
-- **Completed Events** – Finalized distributions and fully vested tokens.
 
----
+## Vesting Metrics
 
-## Vesting Details
+The dashboard displays comprehensive vesting statistics and personal tracking information.
 
-- Tokens are locked and released based on predefined schedules
-- Users see their **Allocated**, **Claimed**, and **Remaining** balances
-- Vesting events are categorized into **Ongoing**, **Upcoming**, and **Completed**
+### Overall Vesting Progress
 
----
 
-## How to Claim
+- **Total Vested Amount** – Shows aggregate tokens distributed across all vesting schedules
+- **Vesting Percentage** – Progress indicator showing percentage of total amount vested
+- **USD Equivalent** – Current value of vested tokens in USDC
 
-1. Navigate to the Vesting tab in Engage
-2. Connect your wallet and select the vesting plan
-3. If tokens are unlocked, click **Claim**
-4. Confirm the transaction in your wallet
+### Key Vesting Statistics
 
----
+**System-Wide Metrics:**
+- **Total Vested** – Aggregate tokens released across all participants
+- **Current Locked Amount** – Tokens currently locked in active vesting schedules  
+- **Pending to be Claimed** – Vested tokens available for withdrawal
 
-## Dashboard Elements
+**Personal Tracking:**
+- **My Vested Amount** – Tokens you have received from vesting
+- **My Locked Amount** – Your tokens currently in vesting schedules
+- **My Claimable Amount** – Tokens ready for you to claim
 
-The main vesting dashboard gives a clear summary of the user's vesting progress:
 
-![Vesting Dashboard](../../../static/img/front-end/engage/vesting-dash.png)
+## Emissions Chart
 
-- **My Vesting** – Personal breakdown of allocations and events
-- **Claimable Amount** – Tokens ready for withdrawal
-- **Event Graph** – Visual timeline of release schedule
+The emissions chart provides visual tracking of token release over time:
+
+### Chart Features
+- **Timeline View** – Historical and projected token releases over months
+- **Cumulative Display** – Shows total accumulated emissions
+- **Time Filters** – Toggle between 1D, 7D, 1M, and 1Y views for different perspectives
+- **Real-time Updates** – Chart updates as new tokens are released
+
+### Data Insights
+- **Release Patterns** – Visualize how tokens are distributed over time
+- **Cliff Events** – Identify periods of accelerated token release
+- **Future Projections** – Preview expected emission schedules
+
+
+## My Vesting
+
+The My Vesting section provides personalized vesting information:
+
+### Personal Metrics
+- **My Vested Amount** – Total tokens you've received with USD value
+- **My Locked Amount** – Your tokens currently locked in vesting
+- **My Claimable Amount** – Tokens ready for immediate withdrawal
+
+### Claim Functionality
+- **Claim All Button** – One-click claiming of all available vested tokens
+- **Real-time Updates** – Amounts update as vesting schedules progress
+- **Transaction History** – Track your claiming activity over time
+
+
+## Vesting Events
+
+The vesting events table displays detailed information about all vesting schedules:
+
+### Event Categories
+
+**Ongoing Events** – Active vesting schedules currently distributing tokens
+**Upcoming Events** – Future vesting batches scheduled to begin  
+**Completed Events** – Finished vesting schedules with full distribution
+
+### Event Details
+
+Each vesting event shows:
+
+- **Batch Name** – Descriptive identifier for the vesting schedule
+- **Vesting Period** – Duration of the token release schedule
+- **Chain** – Blockchain network where vesting occurs
+- **Recipients** – Number of participants in the vesting batch
+- **Cliff Length** – Initial lock period before any tokens are released
+- **Total Amount** – Total tokens allocated to the vesting schedule
+- **Status** – Current state and time remaining
+
+
