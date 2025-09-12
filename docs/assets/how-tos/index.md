@@ -278,3 +278,43 @@ Once minted, your asset appears in the dashboard under **Minted** status and inc
 - Real-time token supply and ownership data
 
 The minting process finalizes your asset's transformation from a physical or digital asset into blockchain-based tokens, making them ready for trading, fractional ownership, or other DeFi activities.
+
+### Saving Work in Progress
+
+At any point during the asset creation process, you can save your work as a draft to continue later.
+
+![Save as Draft Button](../../../../documentation/static/img/front-end/assets/how-tos/assets-how-tos-save-as-draft.png)
+
+**Save as Draft Feature:**
+- Click **"Save as draft"** button available in the top-right corner of any phase
+- Your progress is automatically saved and can be resumed later
+- Drafted assets appear in your dashboard under the **Drafts** section for easy access
+
+![Drafts Dashboard](../../../../documentation/static/img/front-end/assets/how-tos/assets-how-tos-save-drafts-dashboard.png)
+
+**Managing Draft Assets:**
+- Access saved drafts from your main dashboard under **Drafts** tab
+- Each draft shows the asset name, token details, total price, and current status
+
+![Draft Edit Options](../../../../documentation/static/img/front-end/assets/how-tos/assets-how-tos-save-drafts-dashboard-edit.png)
+
+This flexibility allows you to work on complex assets over multiple sessions, collaborate with team members for review, or pause the process while gathering additional information or approvals.
+
+### Delete Assets
+
+Assets can be deleted at certain stages of the creation process, with important restrictions based on their current status.
+
+**How to Delete:**
+
+1. Use the action menu (⋯) and Edit informations in the dashboard to delete draft assets
+
+![Edit Assets](../../../../documentation/static/img/front-end/assets/how-tos/assets-how-tos-save-drafts-dashboard-edit.png)
+
+2. Click the **Delete** button in the top-right corner of the asset creation interface
+
+![Delete Assets](../../../../documentation/static/img/front-end/assets/how-tos/assets-how-tos-delete-assets.png)
+
+**Deletion Availability:**
+- **Draft Assets, Pre-Verification**:  Assets can be deleted during these phases
+- **In Verification**: Once an asset is submitted for verification, it **cannot be deleted**
+- **Verified and Minted**: Assets in these final stages cannot be deleted
