@@ -113,3 +113,57 @@ When enabled, allows you to add explanatory text that appears when users hover o
 - **Add Input**: Saves the field configuration and adds it to your template
 
 This form allows you to create customized data fields that will be presented to users when they create assets using your template.
+
+## Step 3: Creating Assets from Templates
+
+Once your template is configured and saved, you can use it to create actual assets.
+
+![Asstes Use Template Example](../../../../documentation/static/img/front-end/assets/how-tos/assets-how-tos-template-use-example.png)
+
+### Asset Creation Workflow
+
+The asset creation process follows a structured 4-phase workflow visible in the left sidebar:
+
+1. **Fill Data** - Complete all asset-specific information
+2. **Tokenization settings** - Configure blockchain parameters
+3. **Verification (optional)** - Submit for third-party verification
+4. **Minting** - Deploy the asset as tokens on the blockchain
+
+### Data Phase 1: Fill Data Phase
+
+In this phase, you'll complete both the core asset information and the template-specific fields you configured:
+
+**Core Asset Information:**
+- **Asset Name**: Enter a unique identifier for this specific asset
+- **Asset Ticker**: Create a short symbol (like a stock ticker) for the asset
+- **Asset Category**: Select from the dropdown menu to categorize your asset type
+
+**Dynamic Data Fields:**
+These are the customizable fields you defined in your template. In our Real Estate example:
+- **Property Address**: Enter the full street address of the property (required field with tooltip guidance)
+- **Monthly Rental Income**: Enter the monthly rental amount in USD (required field)
+
+**Static Data Fields:**
+These fields display the pre-filled information from your template and cannot be modified:
+- **Investment Value**: Shows the fixed value (e.g., $2,850,000 USD)
+- **Building Type**: Displays the pre-set building type (e.g., "Commercial Office")
+
+### Data Phase2: add
+add
+
+### Data Phase 3: add
+add
+
+### Data Phase 4: add
+
+add
+
+### Field Validation
+
+The system enforces the field requirements you configured:
+- Required fields display a red asterisk (*) and must be completed
+- Fields with tooltips show an info icon with helpful guidance
+- Currency fields automatically format with the specified suffix (USD)
+- Data type validation ensures proper formatting (numbers, text, etc.)
+
+Once all required fields are completed, you can proceed to the next phase in the asset creation workflow.
