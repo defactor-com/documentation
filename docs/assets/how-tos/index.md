@@ -230,16 +230,51 @@ After review, assets move from "In verification" to **Verified (1)** in your das
 
 Once verification is complete, the asset is ready for the final minting phase to deploy on the blockchain.
 
-### Data Phase 4: add
+You're right, I need to match the images with their actual content based on the filenames. Here's the corrected Data Phase 4:
 
-add
+### Data Phase 4: Minting
 
-### Field Validation
+The final phase in the asset creation workflow deploys your verified asset as tokens on the blockchain through a structured 4-step process:
 
-The system enforces the field requirements you configured:
-- Required fields display a red asterisk (*) and must be completed
-- Fields with tooltips show an info icon with helpful guidance
-- Currency fields automatically format with the specified suffix (USD)
-- Data type validation ensures proper formatting (numbers, text, etc.)
+![Minting Page Overview](../../../../documentation/static/img/front-end/assets/how-tos/assets-how-tos-minting-review.png)
 
-Once all required fields are completed, you can proceed to the next phase in the asset creation workflow.
+**Minting Workflow Steps:**
+
+**Step 1: Review Info**
+- Final review of all asset information including price, supply, and creation date
+- Displays asset summary with token details (e.g., 25,000,000 total price, 250,000 supply)
+- **Confirm** button to proceed to next step
+
+**Step 2: Upload Info**
+- Upload all media assets and metadata to decentralized storage
+- **Upload** button initiates the process of storing asset files and information
+- Ensures asset data is permanently accessible on the blockchain
+
+**Step 3: Deploy ERC20 Contract**
+- Build and deploy the smart contract transaction to the blockchain
+- **Deploy** button executes the contract deployment
+- Creates the underlying token infrastructure on the selected blockchain network
+
+**Step 4: Complete and Minted**
+- Send the final transaction to mint the tokens
+- **Mint** button completes the tokenization process
+- Transforms your asset into tradeable digital tokens
+
+![Minting Success](../../../../documentation/static/img/front-end/assets/how-tos/assets-how-tos-mint-success-modal.png)
+
+**Successful Completion:**
+Upon successful minting, you receive a confirmation modal stating "Congrats! Assets Successfully Tokenized!" with options to view **Token Details** or **Go to dashboard**.
+
+![Token Success Details](../../../../documentation/static/img/front-end/assets/how-tos/assets-how-tos-mint-token-success.png)
+
+**Post-Minting Asset Management:**
+
+![Minted Assets Dashboard](../../../../documentation/static/img/front-end/assets/how-tos/assets-how-tos-mint-dashboard.png)
+
+Once minted, your asset appears in the dashboard under **Minted** status and includes:
+- Complete token information and contract addresses
+- Transaction history showing deployment events
+- Management options like token transfers, pool creation, and asset verification
+- Real-time token supply and ownership data
+
+The minting process finalizes your asset's transformation from a physical or digital asset into blockchain-based tokens, making them ready for trading, fractional ownership, or other DeFi activities.
