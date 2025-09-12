@@ -8,18 +8,6 @@ This comprehensive guide walks administrators through the process of creating as
 
 ---
 
-## Prerequisites
-
-Before creating an asset, ensure you have:
-
-- Administrative access to the Assets platform
-- Token configurations set up in [Token Settings](token-settings)
-- Smart contract addresses for your asset tokens
-- Asset metadata and documentation ready
-- Pricing strategy defined (fixed or market-based)
-
----
-
 ## Step 1: Access Asset Creation  
 
 There are two convenient ways to access the asset creation workflow:  
@@ -34,7 +22,11 @@ Navigate to your **Assets** dashboard and locate the **"+ Create Assets"** butto
 
 ![My Templates Navigation](../../../../documentation/static/img/front-end/assets/access-asset-creation-dashboard-my-templates.png)  
 
-Alternatively, you can navigate directly to the **My Templates** section from the main menu. This approach is ideal when you already know you want to work with templates or have bookmarked this section for quick access.  
+Alternatively, you can navigate directly to the **My Templates** section from the main menu.
+
+### My Templates
+
+![Assets My Templates](../../../../documentation/static/img/front-end/assets/how-tos/assets-how-tos-my-templates.png)  
 
 **Both paths converge at My Templates**, which serves as your central hub for asset creation. Here you have several options for creating assets:
 
