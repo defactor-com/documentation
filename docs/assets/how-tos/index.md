@@ -152,7 +152,7 @@ These fields display the pre-filled information from your template and cannot be
 
 In the Tokenization Settings phase, you configure the blockchain parameters that will govern how your asset operates as digital tokens:
 
-![Tokenization Settings Interface](../../../../documentation/static/img/front-end/assets/how-tos/assets-how-tos-template-tokenization-settings.png)
+![Asstes Tokenization Settings Interface](../../../../documentation/static/img/front-end/assets/how-tos/assets-how-tos-template-tokenization-settings.png)
 
 **Asset Representation:**
 - **Asset Icon**: Upload or select a visual representation for your tokenized asset
@@ -175,8 +175,60 @@ Provide a comprehensive description of the tokenized asset, including investment
 
 The interface displays the specific benefits of each token standard to help you select the most appropriate option for your asset type and regulatory requirements. Each standard offers different capabilities for trading, compliance, and governance.
 
-### Data Phase 3: add
-add
+### Data Phase 3: Verification (Optional)
+
+The Verification phase is an optional step that allows you to submit your asset for third-party validation to enhance credibility and investor confidence.
+
+![Asstes Verification Interface](../../../../documentation/static/img/front-end/assets/how-tos/assets-how-tos-template-empty-verification-step.png)
+
+**Asset Summary Review:**
+Before proceeding with verification, the system displays a summary of your asset data for final review.
+
+**Verification Process:**
+- **Verifying Company**: Enter the email address of your chosen third-party verification provider
+- **Send**: Submit your asset information to the verification company for review
+
+![Asstes Verification Modal](../../../../documentation/static/img/front-end/assets/how-tos/assets-how-tos-template-verification-modal.png)
+
+**Dashboard Tracking:**
+Once submitted, your asset appears in the dashboard under **In verification** status, allowing you to monitor the verification progress.
+
+![Assets Dashboard Verification Status](../../../../documentation/static/img/front-end/assets/how-tos/assets-how-tos-in-verification-dashboard.png)
+
+**Verification Notification:**
+The verification company receives an automated email notification with the subject "Request for audit" containing:
+- Complete asset information summary
+- All dynamic and static data fields
+- Asset files and documentation
+- A "Continue" button to access the detailed audit interface
+
+![Assets Verification Email](../../../../documentation/static/img/front-end/assets/how-tos/assets-how-tos-verification-mail.png)
+
+**Verifier Review Interface:**
+The verification company accesses a dedicated audit interface showing:
+- Complete asset details including creator wallet address
+- Asset type and token standard (e.g., ERC-20)
+- All financial information and details
+- Uploaded files and reference links
+- **Verify** or **Reject** action buttons
+
+![Assets Verification Review Page](../../../../documentation/static/img/front-end/assets/how-tos/assets-how-tos-verification-mail-verify-page.png)
+
+**Verification Results:**
+After review, assets move from "In verification" to **Verified (1)** in your dashboard:
+- **Verified**: Assets that have passed verification
+- Status shows as "Verified" with green indicator
+- Verified assets gain enhanced credibility in the marketplace
+
+![Assets Verification Dashboard](../../../../documentation/static/img/front-end/assets/how-tos/assets-how-tos-verified-dashboard.png)
+
+**Purpose of Verification:**
+- Provides independent validation of asset information and valuation
+- Enhances investor trust and confidence in the tokenized asset
+- May be required for certain regulatory compliance requirements
+- Adds credibility to your asset offering in the marketplace
+
+Once verification is complete, the asset is ready for the final minting phase to deploy on the blockchain.
 
 ### Data Phase 4: add
 
