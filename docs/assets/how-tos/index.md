@@ -148,8 +148,32 @@ These fields display the pre-filled information from your template and cannot be
 - **Investment Value**: Shows the fixed value (e.g., $2,850,000 USD)
 - **Building Type**: Displays the pre-set building type (e.g., "Commercial Office")
 
-### Data Phase2: add
-add
+### Data Phase 2: Tokenization Settings
+
+In the Tokenization Settings phase, you configure the blockchain parameters that will govern how your asset operates as digital tokens:
+
+![Tokenization Settings Interface](../../../../documentation/static/img/front-end/assets/how-tos/assets-how-tos-template-tokenization-settings.png)
+
+**Asset Representation:**
+- **Asset Icon**: Upload or select a visual representation for your tokenized asset
+- **Link**: Add a reference URL that provides additional context or discussion about the asset
+
+**Token Standard Selection:**
+Choose between available Ethereum token standards:
+
+- **Ethereum (ERC-20)**: Standard fungible tokens that enable broad compatibility and liquidity across DeFi platforms. Suitable for assets such as real estate, commodities, and securities.
+
+- **Ethereum (ERC-3643)**: Permissioned token standard designed for Real World Assets (RWAs) with integrated identity verification, governance features, and transaction controls for regulatory compliance.
+
+**Token Economics Configuration:**
+- **Price**: Set the total asset valuation in USDC
+- **Supply**: Define the total number of tokens to be minted
+- **Price per Token**: Automatically calculated based on total price divided by supply
+
+**Asset Description:**
+Provide a comprehensive description of the tokenized asset, including investment highlights, key features, and value proposition for potential token holders.
+
+The interface displays the specific benefits of each token standard to help you select the most appropriate option for your asset type and regulatory requirements. Each standard offers different capabilities for trading, compliance, and governance.
 
 ### Data Phase 3: add
 add
