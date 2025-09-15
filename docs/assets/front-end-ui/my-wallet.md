@@ -38,3 +38,14 @@ Three-dot menu (⋯) providing access to wallet management functions for each as
 
 ![Assets My Wallet Table Actions](../../../../documentation/static/img/front-end/assets/assets-my-wallet-table-actions.png)
 
+**Make a Pool**
+Create a liquidity pool for your held tokens to enable trading and provide liquidity to other users.
+
+**Transfer Tokens**
+Send tokens from your wallet to other addresses or users on the same blockchain network.
+
+**Update Dynamic Data**
+Refresh or modify dynamic data fields for assets you have management rights over.
+
+**Burn Assets**
+Permanently remove tokens from circulation, reducing both your holdings and the total token supply.
