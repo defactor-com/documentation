@@ -111,13 +111,3 @@ Destination wallet address for transfer events, or relevant address for other tr
 
 **Amount**
 Number of tokens involved in the transaction, providing transparency about token movements.
-
-### Navigation Controls
-
-**Pagination**
-Browse through multiple pages of transaction history using numbered page controls.
-
-**Results Display**
-Customize the number of transactions shown per page with the dropdown selector.
-
-This transaction history ensures complete transparency and auditability for all asset-related blockchain activities, providing users with confidence in the tokenization process and ongoing asset management.
