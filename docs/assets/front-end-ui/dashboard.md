@@ -1,142 +1,66 @@
 ---
-id: assets-frontend-dashboard
-title: Dashboard
+id: assets-dashboard
+title: Assets Dashboard Overview
 sidebar_position: 2
 ---
 
-The Dashboard provides a comprehensive overview of your asset creation and management activities on the Defactor platform. It serves as your main control center, displaying key statistics and providing quick access to asset creation and management functions.
+TODO
+This guide provides a comprehensive overview of the Assets Dashboard interface, focusing on understanding your asset portfolio statistics and performance metrics.
 
 ---
 
-## Dashboard Layout
+## Dashboard Overview
 
-### Statistics View Selection
+![Assets Dashboard](../../../../documentation/static/img/front-end/assets/assets-dashboard.png)
 
-The dashboard offers two main statistical perspectives:
+TODO
+The Assets Dashboard serves as your central command center for monitoring and managing your tokenized asset portfolio. The interface is divided into two main sections: **My Stats** and **Global Stats**, providing both personal portfolio insights and platform-wide statistics.
 
-**My Stats**
-- Displays your personal asset portfolio and performance metrics
-- Shows assets you've created, minted, and verified
-- Provides individual account insights and progress tracking
+## My Stats Section
 
-**Global Stats**
-- Platform-wide statistics across all users
-- Market activity and aggregate platform performance
-- Time-series charts showing platform growth trends
+![Assets Dashboard My Stats](../../../../documentation/static/img/front-end/assets/assets-dashboard-my-stats.png)
 
----
+The **My Stats** section provides a comprehensive overview of your personal asset creation and tokenization activities on the Defactor platform.
 
-## My Stats Overview
+### Assets Created Overview
 
-### Assets Created Section
+![Assets Dashboard My Stats Assets Created](../../../../documentation/static/img/front-end/assets/assets-dashboard-my-stats-assets-created.png)
 
-**Primary Metric Display**
-- Large numerical display showing total assets created
-- Central position emphasizes this key performance indicator
+The central **Assets Created** widget displays your total asset creation activity with a visual breakdown:
 
-**Asset Status Breakdown**
-The status indicators provide immediate insight into your asset pipeline:
-- **x minted** - Assets successfully deployed with tokens created
-- **x verified** - Assets that have completed platform verification
-- **x in verification** - Assets currently under review
+**Total Assets Created**
+- **X minted** - Assets successfully deployed on the blockchain
+- **X verified** - Assets that have completed third-party verification  
+- **X in verification** - Assets currently undergoing verification review
 
-**Quick Action**
-- **+ Create Asset** button provides immediate access to asset creation workflow
+The circular chart provides an at-a-glance view of your asset portfolio distribution across different stages of the tokenization process.
 
-### Performance Statistics Panel
+### Key Performance Statistics
 
-**Key Metrics Overview**
-Four essential metrics displayed in a clean grid layout:
+![Assets Dashboard Key Preformance Statistics](../../../../documentation/static/img/front-end/assets/assets-dashboard-my-stats-key-performance-statistics.png)
 
-**Minted Tokens**
-- Current count
-- Total tokens successfully created across all assets
+The Stats panel on the right side displays four critical metrics that summarize your tokenization performance:
 
-**Est. Total Price (estimated)**
-- Current value
-- Estimated total portfolio value based on current asset valuations
+#### Minted Tokens
 
-**My Wallet Tokens**
-- Current count
-- Number of tokens held in your connected wallet
+This metric displays the total number of tokens that have been minted or generated from your assets.
 
-**Avg. Token Price (estimated)**
-- Current price
-- Average value per token across your portfolio
+This represents the aggregate token supply across all your successfully minted assets, providing insight into the scale of your tokenization activities.
 
----
+#### Estimated Total Price
 
-## Global Stats Overview
+Shows the estimated total value of all your minted tokens based on their current market price.
 
-### Platform-Wide Metrics
+This figure represents the combined market valuation of your entire tokenized asset portfolio.
 
-**Global Assets Created**
-- Total platform assets: **x**
-- Shows overall platform adoption and activity
+#### My Wallet Tokens
 
-**Time Series Visualization**
-- Interactive chart displaying asset creation trends over time
-- Date range: x - y
-- Y-axis scale: 0 to x assets
-- Time period filters: **1D**, **1W**, **1M**, **1Y**
+Displays the total number of tokens currently held in your wallet. 
 
-**Key Statistics Panel**
-- **Global Assets**: 34 total assets on platform
-- **Global Assets in Creation**: 170 assets currently being developed
-- **Minted in the last Day**: 0 new tokens minted recently
-- **Transferred in the last day**: 0 recent token transfers
+This metric shows your personal token holdings across all your created assets, which may be less than the total minted if you've sold or transferred some tokens.
 
-### Chart Legend
-- **Global Assets** (green line with checkmark)
-- **Global Assets in Creation** (yellow line)
-- **Minted in the Last Day** (blue line)
-- **Transferred in the last day** (gray line)
+#### Average Token Price
 
----
+Indicates the average price per token, calculated from the total value and the number of tokens.
 
-## Asset Management Section
-
-### My Assets vs Global Assets
-
-**Tab Navigation**
-Switch between personal and platform-wide asset views:
-- **My Assets** - Your personal asset portfolio
-- **Global Assets** - All platform assets (currently selected in Global Stats view)
-
-### Asset Status Categories
-
-**Status Tabs with Counts**
-- **Minted (x)** - Successfully deployed assets with active tokens
-- **Verified (x)** - Assets that completed verification process
-- **In verification (x)** - Assets currently under review
-- **Pending (x)** - Assets awaiting next steps
-- **Drafts (x)** - Saved but incomplete asset configurations
-
-### Asset Table Structure
-
-**Column Headers**
-- **Asset** - Asset name and identifier
-- **Token** - Token symbol and details  
-- **Chain** - Blockchain network (shows ERC-20 tokens)
-- **Total Price** - Asset valuation
-- **Supply** - Token supply amount
-- **Status** - Current asset state
-
----
-
-## Navigation and Actions
-
-### Primary Actions
-- **+ Create Asset** - Available in both main dashboard and asset management sections
-- Provides consistent access to asset creation workflow regardless of current view
-
-### View Switching
-- Seamless navigation between **My Stats** and **Global Stats**
-- Real-time updates of metrics and charts
-- Persistent user interface state across view changes
-
-### Dashboard Benefits
-- **Real-time insights** into personal and platform performance
-- **Visual trend analysis** through interactive charts
-- **Quick asset creation access** from any dashboard view
-- **Comprehensive status tracking** for all asset stages
+This metric helps you understand the average valuation density of your token portfolio.
