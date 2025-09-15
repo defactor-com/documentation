@@ -10,13 +10,13 @@ This guide provides a comprehensive overview of the Asset Details Page interface
 
 ## Asset Details Page Overview
 
-<!-- ![Asset Details Page](../../../../documentation/static/img/front-end/assets/asset-details-page.png) -->
+![Asset Details Page](../../../../documentation/static/img/front-end/assets/assets-details-page.png)
 
 When you click on any asset row in the dashboard tables, you're taken to a comprehensive asset details page that provides complete information about the specific tokenized asset. This interface serves as the central hub for understanding and managing individual assets in your portfolio.
 
 ## Asset Header Information
 
-<!--  ![Asset Details Header](../../../../documentation/static/img/front-end/assets/asset-details-header.png) -->
+![Asset Details Header](../../../../documentation/static/img/front-end/assets/assets-details-page-header.png)
 
 The header section displays essential asset identification information:
 
@@ -29,7 +29,7 @@ The full name of the tokenized asset displayed prominently at the top of the pag
 
 ## Key Metrics Dashboard
 
-<!--  ![Asset Details Metrics](../../../../documentation/static/img/front-end/assets/asset-details-metrics.png) -->
+![Asset Details Metrics](../../../../documentation/static/img/front-end/assets/assets-details-page-metrics.png)
 
 Four key performance indicators provide essential asset information at a glance:
 
@@ -47,7 +47,7 @@ Number of tokens you currently hold for this asset, displaying your personal sta
 
 ## Asset Description
 
-<!--  ![Asset Details Description](../../../../documentation/static/img/front-end/assets/asset-details-description.png) -->
+![Asset Details Description](../../../../documentation/static/img/front-end/assets/assets-details-page-desc.png)
 
 The detailed description section provides comprehensive information about the tokenized asset, including:
 
@@ -62,7 +62,7 @@ This section helps investors understand the underlying value and structure of th
 
 ## Available Actions
 
-<!--  ![Asset Details Actions](../../../../documentation/static/img/front-end/assets/asset-details-actions.png) -->
+![Asset Details Actions](../../../../documentation/static/img/front-end/assets/assets-details-page-actions.png)
 
 The right sidebar provides quick access to asset management functions:
 
@@ -88,7 +88,7 @@ The available actions may vary depending on your ownership rights and the curren
 
 ## Transaction History
 
-<!--  ![Asset Details History](../../../../documentation/static/img/front-end/assets/asset-details-history.png) --> 
+![Asset Details History](../../../../documentation/static/img/front-end/assets/assets-details-page-history.png)
 
 The History section provides complete transparency by tracking all blockchain events related to this asset:
 
