@@ -64,3 +64,53 @@ This metric shows your personal token holdings across all your created assets, w
 Indicates the average price per token, calculated from the total value and the number of tokens.
 
 This metric helps you understand the average valuation density of your token portfolio.
+
+## Global Stats Section
+
+![Assets Dashboard Global Stats](../../../../documentation/static/img/front-end/assets/assets-dashboard-global-stats.png)
+
+The **Global Stats** section provides platform-wide statistics and insights into the overall Defactor ecosystem activity, helping you understand market trends and compare your performance against the broader platform.
+
+### Global Assets Created Overview
+
+![Assets Dashboard Global Stats Assets Created](../../../../documentation/static/img/front-end/assets/assets-dashboard-global-stats-assets-created.png)
+
+The **Global Assets Created** widget displays the total number of assets created across the entire Defactor platform with a time-series chart showing activity trends.
+
+**Time Period Selection:**
+- **1D** - One-day view of asset creation activity
+- **1W** - One-week view 
+- **1M** - One-month view of platform activity
+- **1Y** - One-year historical view
+
+The line chart tracks multiple metrics over time with different colored indicators providing insight into platform activity and ecosystem health.
+
+### Platform-Wide Performance Statistics
+
+![Assets Dashboard Global Stats Performance Statistics](../../../../documentation/static/img/front-end/assets/assets-dashboard-global-stats-performance-statistics.png)
+
+The Stats panel displays four key metrics that reflect platform-wide activity and ecosystem health:
+
+#### Global Assets
+
+Displays the total number of assets that have been tokenized on the Defactor platform.
+
+This metric represents the cumulative asset creation activity across all users, providing insight into platform adoption and growth.
+
+#### Global Assets in Creation
+
+Shows the number of assets currently being created or tokenized on the Defactor platform.
+
+This indicates the current pipeline of assets in various stages of the tokenization process, reflecting ongoing platform activity and user engagement.
+
+#### Minted in the last Day
+
+Indicates the total number of tokens minted within the last 24 hours.
+
+This metric provides insight into recent platform activity and token creation velocity, helping gauge current ecosystem momentum.
+
+#### Transferred in the last day
+
+Shows the total number of tokens transferred between wallets in the last 24 hours.
+
+This metric reflects secondary market activity and token liquidity, indicating how actively users are trading and transferring tokenized assets.
