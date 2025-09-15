@@ -4,112 +4,115 @@ title: ARTe
 sidebar_position: 4
 ---
 
-# ARTe Assets
-
-The ARTe section provides a comprehensive platform for creating, managing, and tracking tokenized real-world assets. This interface allows users to transform physical assets into blockchain-based tokens, enabling fractional ownership, improved liquidity, and transparent asset management.
+This guide provides a comprehensive overview of the ARTe (Asset Representation Token) interface, focusing on creating and managing liquidity units that combine multiple tokenized assets into tradeable bundles.
 
 ---
 
-## Overview
+## ARTe Overview
 
-ARTe (Asset Real-world Tokenization engine) enables the conversion of real-world assets into digital tokens on blockchain networks. Users can create new tokenized assets, manage existing ones, and track their portfolio performance through an intuitive interface.
+![ARTe Overview](../../../../documentation/static/img/front-end/assets/arte-dash.png)
 
-### Key Features
+The **ARTe** section enables you to create Asset Representation Tokens, which are liquidity units that bundle multiple tokenized assets together. ARTe tokens provide a way to create diversified asset portfolios and enhance trading liquidity by combining different assets into a single tradeable token.
 
-- **Asset Tokenization** - Convert real-world assets into blockchain tokens
-- **Multi-chain Support** - Deploy tokens across different blockchain networks
-- **Portfolio Management** - Track and manage all tokenized assets in one place
-- **Fractional Ownership** - Enable multiple investors to own portions of assets
+## Creating ARTe Tokens
 
----
+![ARTe Create Button](../../../../documentation/static/img/front-end/assets/arte-create-button.png)
 
-## Getting Started
-
-### Empty State
-
-When no ARTe assets are available in your portfolio, the interface displays:
-
-- **No ARTe assets found** message
-- Informational text: "There are currently no ARTe assets available"
-- **Create ARTe** button to begin tokenizing your first asset
-
-### Creating Your First ARTe Asset
-
-Click the "Create ARTe" button or use the "Create" button in the top navigation to begin the tokenization process.
-
----
-
-## Asset Creation Process
-
-The ARTe creation workflow consists of three main steps:
+To create a new ARTe token, click the **"+ Create"** button in the top-right corner. This opens the ARTe creation workflow with a three-step process.
 
 ### Step 1: Information
 
-Configure the basic details of your tokenized asset:
+![ARTe Create Information](../../../../documentation/static/img/front-end/assets/arte-create-information-empty.png)
 
-**Token Icon** *(Optional)*
-- Upload a visual representation of your asset
-- Supported formats: PNG, JPG (up to 10MB)
-- Drag and drop or click to upload
+The first step requires basic token configuration:
 
-**Token Name** *(Required)*
-- Enter a descriptive name for your tokenized asset
-- This will be the display name for your token
+**Token Icon**
+Upload an image file to represent your ARTe token visually. Supports PNG, JPG formats up to 10MB.
 
-**Token Symbol** *(Required)*
-- Create a short symbol/ticker for your token (e.g., "PROP" for property)
-- Used for trading and identification purposes
+**Token Name**
+Enter a descriptive name for your ARTe token that clearly identifies the bundled assets.
 
-**Chain Selection** *(Required)*
-- Choose the blockchain network for token deployment
-- Select from available supported networks
-- This determines transaction fees and network compatibility
+**Token Symbol**
+Create a short symbol (ticker) for your ARTe token for easy identification in trading interfaces.
+
+**Chain**
+Select the blockchain network where your ARTe token will be deployed from the dropdown menu.
 
 ### Step 2: Assets
 
-Configure the underlying real-world assets that will be tokenized (details to be added based on next step requirements).
+<!-- ![ARTe Create Assets](../../../../documentation/static/img/front-end/assets/arte-create-assets.png) -->
+
+The second step allows you to select which tokenized assets to include in your ARTe bundle:
+
+**Select Assets**
+Choose from your available tokenized assets by checking the boxes next to each asset you want to include. The interface displays:
+- Asset icons for visual identification
+- Asset ticker symbols
+- Checkbox selection for inclusion in the bundle
+
+Selected assets will be combined into your ARTe token according to the allocation percentages you set in the next step.
 
 ### Step 3: Allocation
 
-Set up the tokenization parameters and distribution settings (details to be added based on final step requirements).
+![ARTe Create Allocation](../../../../documentation/static/img/front-end/assets/arte-create-allocation-filled.png)
 
----
+The final step defines how the selected assets are weighted within your ARTe token:
 
-## Navigation Controls
+**Asset Allocation**
+For each selected asset, specify the percentage allocation:
+- Enter percentage values in the allocation fields
+- The **Total Allocation** must equal 100%
+- The interface shows real-time calculation of your total allocation
 
-**Continue Button**
-- Proceeds to the next step in the creation process
-- Only available when all required fields are completed
+**Allocation Controls**
+- Each asset displays its name and allocation input field
+- Percentage symbol (%) is automatically included
+- Total allocation tracker ensures proper distribution
 
-**Close Button**
-- Exits the creation process
-- Returns to the main ARTe dashboard
+Once allocations total 100%, click **"Finish"** to create your ARTe token.
 
----
+## ARTe Creation Success
 
-## Best Practices
+![ARTe Creation Success](../../../../documentation/static/img/front-end/assets/arte-creation-success.png)
 
-### Token Naming
-- Use clear, descriptive names that identify the underlying asset
-- Avoid special characters or excessive length
-- Consider regulatory compliance for your jurisdiction
+Upon successful creation, you'll see a confirmation message: **"Successfully created ARTe token!"**
 
-### Symbol Selection
-- Keep symbols short (3-5 characters typically)
-- Ensure symbols are unique and not already in use
-- Use memorable abbreviations related to the asset
+## ARTe Management Table
 
-### Chain Selection
-- Consider transaction costs and network activity
-- Evaluate the target audience's preferred networks
-- Factor in regulatory requirements for different chains
+![ARTe Management Table](../../../../documentation/static/img/front-end/assets/arte-management-table.png)
 
----
+After creation, your ARTe tokens appear in the management table with the following information:
 
-## Next Steps
+### Table Columns
 
-After creating an ARTe asset, you can:
-- Monitor asset performance in your wallet
-- Manage token distribution and transfers
-- Update asset information and dynamic data
-- Create liquidity pools for trading
+**Name**
+The name of your ARTe token with its associated icon.
+
+**No. Assets**
+The number of individual tokenized assets bundled within this ARTe token.
+
+**Chain**
+The blockchain network where the ARTe token is deployed.
+
+### ARTe Details View
+
+![ARTe Details View](../../../../documentation/static/img/front-end/assets/arte-details-view.png)
+
+Click on any ARTe token to view detailed information including:
+
+**Token Information**
+- Token name, symbol, and balance
+- Contract address on the blockchain
+- Current token holdings
+
+**Asset Composition**
+A detailed breakdown of the underlying assets:
+- **Token**: Name and icon of each bundled asset
+- **Contract Address**: Blockchain address of each underlying asset
+- **Ratio**: Percentage allocation of each asset within the ARTe token
+- **Ticker**: Symbol for each underlying asset
+
+**Registration Status**
+Monitor the registration status of your ARTe token and access the **Register** function when needed.
+
+ARTe tokens provide an efficient way to create diversified asset portfolios, enhance liquidity, and simplify trading of multiple tokenized assets through a single token interface.
