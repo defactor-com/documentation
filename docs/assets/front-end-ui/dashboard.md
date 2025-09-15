@@ -1,6 +1,6 @@
 ---
 id: assets-dashboard
-title: Assets Dashboard Overview
+title: Dashboard
 sidebar_position: 2
 ---
 
@@ -210,3 +210,5 @@ Analyze successful asset types, pricing trends, and token supply patterns to inf
 
 **Ecosystem Activity**
 Monitor overall platform health and user engagement through asset creation and status distribution metrics.
+
+For complete asset information including transaction history, metrics, and detailed descriptions, click on any asset row to access the [Asset Details Page](asset-details-page.md).

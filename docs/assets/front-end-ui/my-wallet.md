@@ -49,3 +49,6 @@ Refresh or modify dynamic data fields for assets you have management rights over
 
 **Burn Assets**
 Permanently remove tokens from circulation, reducing both your holdings and the total token supply.
+
+For complete asset information including transaction history, metrics, and detailed descriptions, click on any asset row to access the [Asset Details Page](asset-details-page.md).
+
