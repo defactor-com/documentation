@@ -151,17 +151,38 @@ Current stage of the asset with color-coded indicators for quick status recognit
 
 #### Table Controls
 
-**Create Asset Button**
+##### Create Asset Button
 Located in the top-right corner for quick access to start creating new assets.
 
-**Pagination Controls**
+##### Pagination Controls
 Navigate through multiple pages of assets with page numbers and navigation arrows.
 
-**Results Display**
+##### Results Display
 Shows the number of assets displayed per page with dropdown selection for customizing view.
 
-**Actions Menu**
+##### Actions Menu
 Three-dot menu (⋯) for each asset providing additional management options.
+
+![Assets Dashboard Actions Menu](../../../../documentation/static/img/front-end/assets/assets-dashboard-actions-menu.png)
+
+The three-dot menu (⋯) for each asset provides access to various management and operational functions:
+
+**Make a Pool**
+Create a liquidity pool for your tokenized asset to enable trading and price discovery.
+
+**Transfer Tokens**
+Send tokens from your wallet to other addresses or users.
+
+**Edit Information**
+Modify asset details, descriptions, and other editable metadata (available for assets not yet minted).
+
+**Update Dynamic Data**
+Refresh or modify the dynamic data fields that were configured during template creation.
+
+**Burn Assets**
+Permanently remove tokens from circulation, reducing the total supply of the asset.
+
+The available actions may vary depending on the current status of your asset, with some options only accessible for assets in specific stages of the tokenization process.
 
 ### Global Assets Table
 
