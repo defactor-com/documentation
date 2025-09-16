@@ -122,7 +122,7 @@ Each vesting event shows todo
 ![Vesting Table Ongoing Events](../../../static/img/front-end/engage/vesting-table-upcoming.png)
 
 - **Batch Name** – Descriptive identifier for the vesting schedule
-- **Vesting Period** – Duration until vesting begins
+- **Vesting Period** – Duration of the token release schedule (displayed as clickable link)
 - **Chain** – Blockchain network where vesting will occur (indicated by network logo)
 - **Recipients** – Number of participants in the vesting batch (clickable to view recipient details)
 - **Cliff Length** – Initial lock period before vesting starts (shows "No Cliff" if none configured)
