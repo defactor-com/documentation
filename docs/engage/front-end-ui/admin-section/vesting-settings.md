@@ -85,7 +85,7 @@ When adding manually, each recipient requires:
 
    **Vesting Start Options:**
    - **Cliff Time** — Vesting starts only after cliff period ends, only initial amount available at cliff completion
-      - **Start Date** — Vesting begins immediately, tokens accumulate during cliff period and become claimable when cliff ends
+   - **Start Date** — Vesting begins immediately, tokens accumulate during cliff period and become claimable when cliff ends
 
 ## Managing Batches
 
@@ -119,12 +119,3 @@ The interface displays different status indicators:
 - **Upcoming** — Vesting schedule not yet started
 - **Ongoing** — Currently active vesting distribution  
 - **Disabled** — Batch marked as invalid or paused
-- **Completed** — All tokens have been distributed
-
-## Best Practices  
-
-- **Use CSV for large allocations** — Speeds up adding many recipients.  
-- **Set cliffs for long-term commitments** — Helps align incentives with project milestones.  
-- **Keep labels clear** — Useful when auditing team, advisor, and marketing allocations.  
-- **Review before publishing** — Vesting schedules cannot be easily altered once deployed.  
-- **Monitor claim activity** — Ensure distributions occur on time and revoke if misconfigured.  
