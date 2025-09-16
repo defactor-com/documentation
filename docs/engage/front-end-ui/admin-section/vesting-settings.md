@@ -96,6 +96,9 @@ Actions available above the vesting schedules table:
 - **Sample CSV** — Download a template for bulk recipient setup
 - **Add Batch** — Create a new vesting schedule
 - **Request Withdraw** — Initiate a withdrawal request for the contract
+
+![Admin Vesting Request Withdraw](../../../../static/img/front-end/engage/admin-vesting-request-withdraw.png)
+
 - **Withdraw** — Recover funds from the contract
 - **Pause Contract** — Temporarily halt vesting activity
 
