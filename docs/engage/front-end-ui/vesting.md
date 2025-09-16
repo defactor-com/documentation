@@ -55,7 +55,7 @@ The **My Vesting** section provides personalized vesting information.
 
 ![My Vesting](../../../static/img/front-end/engage/vesting-my-vesting.png)
 
-##### Personal Metrics
+##### Metrics
 - **My Vested Amount** – Total tokens you've received with USD value
 - **My Locked Amount** – Your tokens currently locked in vesting
 - **My Claimable Amount** – Tokens ready for immediate withdrawal
@@ -96,7 +96,7 @@ The vesting events table displays detailed information about all vesting schedul
 
 ### Event Details
 
-Each vesting event shows todo
+Each vesting event displays detailed information depending on its lifecycle stage.
 
 **Ongoing Events:**
 
