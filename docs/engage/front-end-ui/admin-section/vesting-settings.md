@@ -68,30 +68,58 @@ Admins can add recipients in three ways:
 ![Admin Vesting Form Recipients Add Recipient](../../../../static/img/front-end/engage/admin-vesting-form-recipients-add-recipient.png)
 
 When adding manually, each recipient requires:  
-- **Wallet Address*** — EVM-compatible address.  
-- **Wallet Label** (optional) — Human-readable identifier.  
-- **Total Amount*** — Overall allocation.  
-- **Initial Amount** — Tokens unlocked immediately (if any).  
-- **Start Date / End Date*** — Defines vesting duration.  
-- **Distribution Frequency*** — Interval of token release.
+1. **Wallet Address** — EVM-compatible address.  
+2. **Wallet Label** — Human-readable identifier.  
+3. **Total Amount** — Overall allocation.  
+4. **Initial Amount** — Tokens unlocked immediately (if any).  
+5. **Start Date / End Date** — Defines vesting duration.  
+6. **Distribution Frequency** — Interval of token release.
 
 ![Admin Vesting Form Recipients Add Recipient Distribution Frequency](../../../../static/img/front-end/engage/admin-vesting-form-recipients-add-recipient-distribution.png)
 
-- **Cliff Period (optional)** — Locks tokens until the cliff ends before vesting begins.  
-TODO EXPLAIN
+7. **Cliff Period (optional)** — Initial lock period that prevents token access until a specified date.
 
-![Admin Vesting Form Recipients Add Recipient Distribution Frequency](../../../../static/img/front-end/engage/admin-vesting-form-recipients-add-recipient-cliff-period.png)
+![Admin Vesting Form Recipients Add Recipient Cliff Period](../../../../static/img/front-end/engage/admin-vesting-form-recipients-add-recipient-cliff-period.png)
 
-## Managing Batches  
+   - **Cliff Time** — Choose when the cliff period ends
 
-Each batch has lifecycle controls available from the action menu:  
+   **Vesting Start Options:**
+   - **Cliff Time** — Vesting starts only after cliff period ends, only initial amount available at cliff completion
+      - **Start Date** — Vesting begins immediately, tokens accumulate during cliff period and become claimable when cliff ends
 
-- **Release** — Trigger distribution of claimable tokens.  
-- **Revoke Schedule** — Cancel remaining allocations for a batch.  
-- **Set Invalid Batch** — Mark a batch as invalid for audit purposes.  
-- **Pause Contract** — Temporarily halt vesting activity.  
-- **Withdraw** — Recover funds from the contract (admin-only).  
-- **Request Withdraw** — Initiate a withdrawal request.  
+## Managing Batches
+
+### Contract-Level Actions
+
+![Admin Vesting Actions](../../../../static/img/front-end/engage/admin-vesting-actions.png)
+
+Actions available above the vesting schedules table:
+
+- **Sample CSV** — Download a template for bulk recipient setup
+- **Add Batch** — Create a new vesting schedule
+- **Request Withdraw** — Initiate a withdrawal request for the contract
+- **Withdraw** — Recover funds from the contract
+- **Pause Contract** — Temporarily halt vesting activity
+
+### Individual Batch Actions
+
+![Admin Vesting Table Row Actions](../../../../static/img/front-end/engage/admin-vesting-table-row-actions.png)
+
+Each batch has lifecycle controls available from the row action menu:
+
+- **Set Invalid Batch** — Mark a batch as invalid for audit purposes
+- **Revoke Schedule** — Cancel remaining allocations for a batch  
+- **Release** — Trigger distribution of claimable tokens
+- **Pause Contract** — Temporarily halt vesting activity
+- **Withdraw** — Recover funds from the contract
+
+### Batch Status Types
+
+The interface displays different status indicators:
+- **Upcoming** — Vesting schedule not yet started
+- **Ongoing** — Currently active vesting distribution  
+- **Disabled** — Batch marked as invalid or paused
+- **Completed** — All tokens have been distributed
 
 ## Best Practices  
 
