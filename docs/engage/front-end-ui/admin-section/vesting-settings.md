@@ -8,16 +8,19 @@ The **Vesting Settings** section allows administrators to create, manage, and mo
 
 ---
 
-## Overview of the Vesting Section  
+## Overview of the Vesting Settings
 
 Administrators can:  
-- Create vesting batches with defined recipients and token allocations.  
-- Set vesting periods, start and end dates, and distribution frequency.  
-- Apply optional cliff periods before vesting begins.  
-- Track progress of each batch (upcoming, ongoing, disabled, completed).  
-- Manage schedules, revoke allocations, and release vested tokens.  
+- Create vesting batches with defined recipients and custom token allocations
+- Set vesting periods, start and end dates, and distribution frequencies
+- Apply optional cliff periods with flexible timing options
+- Add recipients individually or import bulk allocations via CSV
+- Deploy vesting contracts across multiple blockchain networks
+- Track progress of each batch
+- Manage schedules with contract-level and individual batch actions
+- Execute emergency controls including withdrawals, revocations, and contract pauses
 
-This ensures long-term token distribution is transparent, predictable, and aligned with ecosystem growth.
+This ensures long-term token distribution is transparent, predictable, and aligned with ecosystem growth while providing administrative flexibility for changing project requirements.
 
 ## Vesting Schedules List  
 
