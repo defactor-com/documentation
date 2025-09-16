@@ -114,7 +114,7 @@ Each vesting event displays detailed information depending on its lifecycle stag
 
 - **Cliff Length** – Initial lock period before vesting starts (shows "No Cliff" if none configured)
 - **Total Amount** – Total tokens allocated with claimed/unclaimed breakdown
-- **Status** – Current state showing time remaining until next vesting milestone
+- **Status** – Shows the time remaining until the vesting schedule is completed
 - **Claim Button** – Appears only for ongoing events, showing claimable amount
 
 **Upcoming Events:**
