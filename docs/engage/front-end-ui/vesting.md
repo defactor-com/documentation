@@ -148,3 +148,8 @@ Each vesting event shows todo
 - **Cliff Length** – Initial lock period before vesting starts (shows "No Cliff" if none configured)
 - **Total Amount** – Total tokens that were distributed
 
+## Related Documentation
+
+## Related Documentation
+
+- **[Vesting Settings (Admin)](/docs/engage/front-end-ui/admin-section/engage-frontend-admin-section-vesting-settings#)** – Administrative interface for creating and managing vesting schedules
