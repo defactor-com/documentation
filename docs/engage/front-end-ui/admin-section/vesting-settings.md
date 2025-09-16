@@ -15,7 +15,6 @@ Administrators can:
 - Set vesting periods, start and end dates, and distribution frequencies
 - Apply optional cliff periods with flexible timing options
 - Add recipients individually or import bulk allocations via CSV
-- Deploy vesting contracts across multiple blockchain networks
 - Track progress of each batch
 - Manage schedules with contract-level and individual batch actions
 - Execute emergency controls including withdrawals, revocations, and contract pauses
