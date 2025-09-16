@@ -95,7 +95,7 @@ Actions available above the vesting schedules table:
 
 - **Sample CSV** — Download a template for bulk recipient setup
 - **Add Batch** — Create a new vesting schedule
-- **Request Withdraw** — Initiates a withdrawal request for the contract. This blockchain transaction starts the withdrawal process and sets a mandatory 30-day waiting period before funds can be released. The 30-day delay is designed as a safeguard for emergency situations.
+- **Request Withdraw** — Initiates a withdrawal request for the contract. This blockchain transaction starts the withdrawal process and sets a mandatory 30-day waiting period before funds can be released. The 30-day delay ensures a safeguard in emergency situations.
 
 ![Admin Vesting Request Withdraw](../../../../static/img/front-end/engage/admin-vesting-request-withdraw.png)
 
