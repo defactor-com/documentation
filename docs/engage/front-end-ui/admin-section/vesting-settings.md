@@ -31,7 +31,7 @@ The schedules table provides a snapshot of all configured vesting batches.
 ![Admin Vesting Table Row](../../../../static/img/front-end/engage/admin-vesting-table-row.png)
 
 - **Batch Name** — Human-readable label for the allocation.  
-- **Vesting Period** — Duration of the vesting.
+- **Vesting Period** —  Duration of the token release schedule (displayed as clickable link).
 
 ![Admin Vesting Table Row Period](../../../../static/img/front-end/engage/admin-vesting-table-row-period.png)
 
