@@ -68,7 +68,7 @@ When adding manually, each recipient requires:
 1. **Wallet Address** — EVM-compatible address.  
 2. **Wallet Label** — Human-readable identifier.  
 3. **Total Amount** — Overall allocation.  
-4. **Initial Amount** — Tokens unlocked immediately (if any).  
+4. **Initial Amount** — Tokens that become available at the vesting start date. These are released upfront (if any), before the remaining allocation follows the vesting schedule.
 5. **Start Date / End Date** — Defines vesting duration.  
 6. **Distribution Frequency** — Interval of token release.
 
