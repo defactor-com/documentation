@@ -99,7 +99,7 @@ Actions available above the vesting schedules table:
 
 ![Admin Vesting Request Withdraw](../../../../static/img/front-end/engage/admin-vesting-request-withdraw.png)
 
-- **Withdraw** — Recover funds from the contract
+- **Withdraw** — Completes the withdrawal process by actually transferring the requested funds from the vesting contract. This action finalizes the release of funds after a request has been made.
 - **Pause Contract** — Temporarily halt vesting activity
 
 ### Individual Batch Actions
