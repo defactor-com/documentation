@@ -49,6 +49,20 @@ This section provides a quick overview of overall vesting progress across all ac
 - **Current Locked Amount** – Tokens currently locked in active vesting schedules  
 - **Pending to be Claimed** – Vested tokens available for withdrawal
 
+#### Personal Metrics:
+
+The **My Vesting** section provides personalized vesting information.
+
+![My Vesting](../../../static/img/front-end/engage/vesting-my-vesting.png)
+
+##### Personal Metrics
+- **My Vested Amount** – Total tokens you've received with USD value
+- **My Locked Amount** – Your tokens currently locked in vesting
+- **My Claimable Amount** – Tokens ready for immediate withdrawal
+
+##### Claim Functionality
+- **Claim All Button** – One-click claiming of all available vested tokens
+
 ## Emissions Chart
 
 ![Vesting Emissions Chart](../../../static/img/front-end/engage/vesting-emissions-chart.png)
@@ -69,20 +83,6 @@ When hovering over chart data points, the tooltip displays:
 - **Date and Time** – Specific timestamp for the data point
 - **Total Emissions** – Cumulative token amount released up to that point
 - **Percentage Change** – Growth percentage showing emission changes from baseline
-
-## My Vesting
-
-The My Vesting section provides personalized vesting information.
-
-![My Vesting](../../../static/img/front-end/engage/vesting-my-vesting.png)
-
-### Personal Metrics
-- **My Vested Amount** – Total tokens you've received with USD value
-- **My Locked Amount** – Your tokens currently locked in vesting
-- **My Claimable Amount** – Tokens ready for immediate withdrawal
-
-### Claim Functionality
-- **Claim All Button** – One-click claiming of all available vested tokens
 
 ## Vesting Events
 
