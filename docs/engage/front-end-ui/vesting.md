@@ -55,7 +55,6 @@ The **My Vesting** section provides personalized vesting information.
 
 ![My Vesting](../../../static/img/front-end/engage/vesting-my-vesting.png)
 
-##### Metrics
 - **My Vested Amount** – Total tokens you've received with USD value
 - **My Locked Amount** – Your tokens currently locked in vesting
 - **My Claimable Amount** – Tokens ready for immediate withdrawal
