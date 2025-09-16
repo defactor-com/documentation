@@ -38,7 +38,7 @@ The schedules table provides a snapshot of all configured vesting batches.
 - **Chain** —  Blockchain network where vesting occurs (indicated by network logo).  
 - **Recipients** — Number of participants in the vesting batch (clickable to view recipient details).  
 - **Cliff Length** — Initial lock period before vesting starts (shows "No Cliff" if none configured).  
-- **Total Amount** — Total allocated tokens, plus claimed amounts.  
+- **Total Amount** — otal tokens allocated, with claimed and unclaimed amounts indicated.  
 - **Status** — Indicates lifecycle state (*Upcoming*, *Ongoing*, *Disabled*).  
 
 ## Creating a Vesting Batch  
