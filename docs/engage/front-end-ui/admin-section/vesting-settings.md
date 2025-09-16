@@ -19,19 +19,22 @@ Administrators can:
 
 This ensures long-term token distribution is transparent, predictable, and aligned with ecosystem growth.
 
----
-
 ## Vesting Schedules List  
 
 ![Vesting Schedules List](../../../../static/img/front-end/engage/admin-vesting-schedules.png)
 
-The schedules table provides a snapshot of all configured vesting batches:  
+The schedules table provides a snapshot of all configured vesting batches.
 
-- **Batch Name** — Human-readable label for the allocation (e.g., *Team & Marketing Allocation 2025*).  
-- **Vesting Period** — Duration of the vesting (days, months, or custom).  
-- **Chain** — Network where the contract resides.  
-- **Recipients** — Number of addresses receiving vesting allocations.  
-- **Cliff Length** — Duration before vesting starts (if configured).  
+![Admin Vesting Table Row](../../../../static/img/front-end/engage/admin-vesting-table-row.png)
+
+- **Batch Name** — Human-readable label for the allocation.  
+- **Vesting Period** — Duration of the vesting.
+
+![Admin Vesting Table Row Period](../../../../static/img/front-end/engage/admin-vesting-table-row-period.png)
+
+- **Chain** —  Blockchain network where vesting occurs (indicated by network logo).  
+- **Recipients** — Number of participants in the vesting batch (clickable to view recipient details).  
+- **Cliff Length** — Initial lock period before vesting starts (shows "No Cliff" if none configured).  
 - **Total Amount** — Total allocated tokens, plus claimed amounts.  
 - **Status** — Indicates lifecycle state (*Upcoming*, *Ongoing*, *Disabled*, *Completed*).  
 
@@ -39,8 +42,6 @@ From the list, admins can:
 - Review status of ongoing and upcoming schedules.  
 - Open batch details for recipients and amounts.  
 - Manage schedules with contextual actions (Revoke, Release, Disable, Pause contract).  
-
----
 
 ## Creating a Vesting Batch  
 
@@ -51,27 +52,35 @@ To create a new vesting batch:
 ### 1. Basic Details  
 - **Batch Name*** — Descriptive label for the allocation.  
 - **Chain*** — Select the blockchain (e.g., Base Sepolia).  
-- **Token Address*** — Smart contract address of the token being distributed.  
+- **Token Address*** —  Smart contract address of the token being distributed (pre-configured by project administrators during vesting setup).
 
 ### 2. Recipients  
+
+![Admin Vesting Form Recipients](../../../../static/img/front-end/engage/admin-vesting-form-recipients.png)
+
 Admins can add recipients in three ways:  
 - **Import CSV** — Upload bulk allocations via CSV file.  
-- **Sample CSV** — Download a template for quick setup.  
 - **Add Recipient** — Manually input recipient details.  
+- **Sample CSV** — Download a template for quick setup.  
 
 ### 3. Add Recipient Fields  
+
+![Admin Vesting Form Recipients Add Recipient](../../../../static/img/front-end/engage/admin-vesting-form-recipients-add-recipient.png)
+
 When adding manually, each recipient requires:  
 - **Wallet Address*** — EVM-compatible address.  
 - **Wallet Label** (optional) — Human-readable identifier.  
 - **Total Amount*** — Overall allocation.  
 - **Initial Amount** — Tokens unlocked immediately (if any).  
 - **Start Date / End Date*** — Defines vesting duration.  
-- **Distribution Frequency*** — Interval of token release (e.g., monthly, quarterly).  
+- **Distribution Frequency*** — Interval of token release.
+
+![Admin Vesting Form Recipients Add Recipient Distribution Frequency](../../../../static/img/front-end/engage/admin-vesting-form-recipients-add-recipient-distribution.png)
+
 - **Cliff Period (optional)** — Locks tokens until the cliff ends before vesting begins.  
+TODO EXPLAIN
 
-> Recipients can be cloned for faster configuration with similar parameters.
-
----
+![Admin Vesting Form Recipients Add Recipient Distribution Frequency](../../../../static/img/front-end/engage/admin-vesting-form-recipients-add-recipient-cliff-period.png)
 
 ## Managing Batches  
 
@@ -84,8 +93,6 @@ Each batch has lifecycle controls available from the action menu:
 - **Withdraw** — Recover funds from the contract (admin-only).  
 - **Request Withdraw** — Initiate a withdrawal request.  
 
----
-
 ## Best Practices  
 
 - **Use CSV for large allocations** — Speeds up adding many recipients.  
@@ -93,5 +100,3 @@ Each batch has lifecycle controls available from the action menu:
 - **Keep labels clear** — Useful when auditing team, advisor, and marketing allocations.  
 - **Review before publishing** — Vesting schedules cannot be easily altered once deployed.  
 - **Monitor claim activity** — Ensure distributions occur on time and revoke if misconfigured.  
-
----

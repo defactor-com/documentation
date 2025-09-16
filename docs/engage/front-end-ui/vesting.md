@@ -121,7 +121,7 @@ Each vesting event shows todo
 
 ![Vesting Table Recipients](../../../static/img/front-end/engage/vesting-table-recipients.png)
 
-- **Cliff Length** – Initial lock period before any tokens are released (shows "No Cliff" if none applied)
+- **Cliff Length** – Initial lock period before vesting starts (shows "No Cliff" if none configured)
 - **Total Amount** – Total tokens allocated with claimed/unclaimed breakdown
 - **Status** – Current state showing time remaining until next vesting milestone
 - **Claim Button** – Appears only for ongoing events, showing claimable amount
@@ -134,7 +134,7 @@ Each vesting event shows todo
 - **Vesting Period** – Duration until vesting begins
 - **Chain** – Blockchain network where vesting will occur (indicated by network logo)
 - **Recipients** – Number of participants in the vesting batch (clickable to view recipient details)
-- **Cliff Length** – Initial lock period before any tokens are released (shows "No Cliff" if none applied)
+- **Cliff Length** – Initial lock period before vesting starts (shows "No Cliff" if none configured)
 - **Total Amount** – Total tokens allocated to the vesting schedule
 
 **Completed Events:**
@@ -145,6 +145,6 @@ Each vesting event shows todo
 - **Vesting Period** – Original duration of the token release schedule
 - **Chain** – Blockchain network where vesting occurred (indicated by network logo)
 - **Recipients** – Number of participants who received tokens (clickable to view recipient details)
-- **Cliff Length** – Initial lock period that was applied (shows "No Cliff" if none applied)
+- **Cliff Length** – Initial lock period before vesting starts (shows "No Cliff" if none configured)
 - **Total Amount** – Total tokens that were distributed
 
