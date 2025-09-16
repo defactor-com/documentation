@@ -39,12 +39,7 @@ The schedules table provides a snapshot of all configured vesting batches.
 - **Recipients** — Number of participants in the vesting batch (clickable to view recipient details).  
 - **Cliff Length** — Initial lock period before vesting starts (shows "No Cliff" if none configured).  
 - **Total Amount** — Total allocated tokens, plus claimed amounts.  
-- **Status** — Indicates lifecycle state (*Upcoming*, *Ongoing*, *Disabled*, *Completed*).  
-
-From the list, admins can:  
-- Review status of ongoing and upcoming schedules.  
-- Open batch details for recipients and amounts.  
-- Manage schedules with contextual actions (Revoke, Release, Disable, Pause contract).  
+- **Status** — Indicates lifecycle state (*Upcoming*, *Ongoing*, *Disabled*).  
 
 ## Creating a Vesting Batch  
 
@@ -53,9 +48,9 @@ From the list, admins can:
 To create a new vesting batch:  
 
 ### 1. Basic Details  
-- **Batch Name*** — Descriptive label for the allocation.  
-- **Chain*** — Select the blockchain (e.g., Base Sepolia).  
-- **Token Address*** —  Smart contract address of the token being distributed (pre-configured by project administrators during vesting setup).
+- **Batch Name** — Descriptive label for the allocation.  
+- **Chain** — Select the blockchain (e.g., Base Sepolia).  
+- **Token Address** —  Smart contract address of the token being distributed (pre-configured by project administrators during vesting setup).
 
 ### 2. Recipients  
 
@@ -113,8 +108,6 @@ Each batch has lifecycle controls available from the row action menu:
 - **Set Invalid Batch** — Mark a batch as invalid for audit purposes
 - **Revoke Schedule** — Cancel remaining allocations for a batch  
 - **Release** — Trigger distribution of claimable tokens
-- **Pause Contract** — Temporarily halt vesting activity
-- **Withdraw** — Recover funds from the contract
 
 ### Batch Status Types
 
