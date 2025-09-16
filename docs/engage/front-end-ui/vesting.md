@@ -49,15 +49,6 @@ This section provides a quick overview of overall vesting progress across all ac
 - **Current Locked Amount** – Tokens currently locked in active vesting schedules  
 - **Pending to be Claimed** – Vested tokens available for withdrawal
 
-#### Personal Tracking:
-
-![Vesting Personal Tracking](../../../static/img/front-end/engage/vesting-personal-tracking.png)
-
-- **My Vested Amount** – Tokens you have received from vesting
-- **My Locked Amount** – Your tokens currently in vesting schedules
-- **My Claimable Amount** – Tokens ready for you to claim
-
-
 ## Emissions Chart
 
 ![Vesting Emissions Chart](../../../static/img/front-end/engage/vesting-emissions-chart.png)
@@ -147,8 +138,6 @@ Each vesting event shows todo
 - **Recipients** – Number of participants who received tokens (clickable to view recipient details)
 - **Cliff Length** – Initial lock period before vesting starts (shows "No Cliff" if none configured)
 - **Total Amount** – Total tokens that were distributed
-
-## Related Documentation
 
 ## Related Documentation
 
