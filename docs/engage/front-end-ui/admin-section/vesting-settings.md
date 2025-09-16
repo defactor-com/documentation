@@ -109,7 +109,7 @@ Each batch has lifecycle controls available from the row action menu:
 
 - **Set Invalid Batch** — Mark a whole batch as invalid so that no further amounts can be released. The batch can be validated again later if needed.
 
-- **Revoke Schedule** — Cancel remaining allocations for a batch  
+- **Revoke Schedule** — Cancel a specific vesting schedule so that no further amounts can be released. This action is permanent and cannot be undone.
 
 ![Admin Vesting Table Row Actions Revoke](../../../../static/img/front-end/engage/admin-vesting-revoke.png)
 
