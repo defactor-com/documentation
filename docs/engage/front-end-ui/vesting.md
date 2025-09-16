@@ -71,6 +71,9 @@ The emissions chart provides visual tracking of token release over time with an 
 - **Cumulative Display** – Shows total accumulated emissions as a rising line chart over the selected time period
 
 ### Tooltip Information
+
+![Vesting Tooltip](../../../static/img/front-end/engage/vesting-tooltip.png)
+
 When hovering over chart data points, the tooltip displays:
 - **Date and Time** – Specific timestamp for the data point
 - **Total Emissions** – Cumulative token amount released up to that point
@@ -78,7 +81,9 @@ When hovering over chart data points, the tooltip displays:
 
 ## My Vesting
 
-The My Vesting section provides personalized vesting information:
+The My Vesting section provides personalized vesting information.
+
+![My Vesting](../../../static/img/front-end/engage/vesting-my-vesting.png)
 
 ### Personal Metrics
 - **My Vested Amount** – Total tokens you've received with USD value
@@ -87,30 +92,59 @@ The My Vesting section provides personalized vesting information:
 
 ### Claim Functionality
 - **Claim All Button** – One-click claiming of all available vested tokens
-- **Real-time Updates** – Amounts update as vesting schedules progress
-- **Transaction History** – Track your claiming activity over time
-
 
 ## Vesting Events
 
-The vesting events table displays detailed information about all vesting schedules:
+The vesting events table displays detailed information about all vesting schedules.
 
 ### Event Categories
 
-**Ongoing Events** – Active vesting schedules currently distributing tokens
-**Upcoming Events** – Future vesting batches scheduled to begin  
-**Completed Events** – Finished vesting schedules with full distribution
+1. **Ongoing Events** – Active vesting schedules currently distributing tokens
+2. **Upcoming Events** – Future vesting batches scheduled to begin  
+3. **Completed Events** – Finished vesting schedules
 
 ### Event Details
 
-Each vesting event shows:
+Each vesting event shows todo
+
+**Ongoing Events:**
+
+![Vesting Table Ongoing Events](../../../static/img/front-end/engage/vesting-table-ongoing.png)
 
 - **Batch Name** – Descriptive identifier for the vesting schedule
-- **Vesting Period** – Duration of the token release schedule
-- **Chain** – Blockchain network where vesting occurs
-- **Recipients** – Number of participants in the vesting batch
-- **Cliff Length** – Initial lock period before any tokens are released
-- **Total Amount** – Total tokens allocated to the vesting schedule
-- **Status** – Current state and time remaining
+- **Vesting Period** – Duration of the token release schedule (displayed as clickable link)
 
+![Vesting Table Period](../../../static/img/front-end/engage/vesting-table-vesting-period.png)
+
+- **Chain** – Blockchain network where vesting occurs (indicated by network logo)
+- **Recipients** – Number of participants in the vesting batch (clickable to view recipient details)
+
+![Vesting Table Recipients](../../../static/img/front-end/engage/vesting-table-recipients.png)
+
+- **Cliff Length** – Initial lock period before any tokens are released (shows "No Cliff" if none applied)
+- **Total Amount** – Total tokens allocated with claimed/unclaimed breakdown
+- **Status** – Current state showing time remaining until next vesting milestone
+- **Claim Button** – Appears only for ongoing events, showing claimable amount
+
+**Upcoming Events:**
+
+![Vesting Table Ongoing Events](../../../static/img/front-end/engage/vesting-table-upcoming.png)
+
+- **Batch Name** – Descriptive identifier for the vesting schedule
+- **Vesting Period** – Duration until vesting begins
+- **Chain** – Blockchain network where vesting will occur (indicated by network logo)
+- **Recipients** – Number of participants in the vesting batch (clickable to view recipient details)
+- **Cliff Length** – Initial lock period before any tokens are released (shows "No Cliff" if none applied)
+- **Total Amount** – Total tokens allocated to the vesting schedule
+
+**Completed Events:**
+
+![Vesting Table Ongoing Events](../../../static/img/front-end/engage/vesting-table-completed.png)
+
+- **Batch Name** – Descriptive identifier for the vesting schedule
+- **Vesting Period** – Original duration of the token release schedule
+- **Chain** – Blockchain network where vesting occurred (indicated by network logo)
+- **Recipients** – Number of participants who received tokens (clickable to view recipient details)
+- **Cliff Length** – Initial lock period that was applied (shows "No Cliff" if none applied)
+- **Total Amount** – Total tokens that were distributed
 
