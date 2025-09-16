@@ -107,7 +107,12 @@ Each batch has lifecycle controls available from the row action menu:
 
 - **Set Invalid Batch** — Mark a batch as invalid for audit purposes
 - **Revoke Schedule** — Cancel remaining allocations for a batch  
+
+![Admin Vesting Table Row Actions Revoke](../../../../static/img/front-end/engage/admin-vesting-revoke.png)
+
 - **Release** — Trigger distribution of claimable tokens
+
+![Admin Vesting Table Row Actions Revoke](../../../../static/img/front-end/engage/admin-vesting-release.png)
 
 ### Batch Status Types
 
