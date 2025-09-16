@@ -103,7 +103,8 @@ Each vesting event displays detailed information depending on its lifecycle stag
 ![Vesting Table Ongoing Events](../../../static/img/front-end/engage/vesting-table-ongoing.png)
 
 - **Batch Name** – Descriptive identifier for the vesting schedule
-- **Vesting Period** – Duration of the token release schedule (displayed as clickable link)
+- **Vesting Period** – Duration of the token release schedule (displayed as clickable link)  
+  *The format (seconds, days, weeks, or months) depends on the chosen distribution frequency when the batch is created.*
 
 ![Vesting Table Period](../../../static/img/front-end/engage/vesting-table-vesting-period.png)
 
@@ -122,7 +123,8 @@ Each vesting event displays detailed information depending on its lifecycle stag
 ![Vesting Table Ongoing Events](../../../static/img/front-end/engage/vesting-table-upcoming.png)
 
 - **Batch Name** – Descriptive identifier for the vesting schedule
-- **Vesting Period** – Duration of the token release schedule (displayed as clickable link)
+- **Vesting Period** – Duration of the token release schedule (displayed as clickable link)  
+  *The format (seconds, days, weeks, or months) depends on the chosen distribution frequency when the batch is created.*
 - **Chain** – Blockchain network where vesting will occur (indicated by network logo)
 - **Recipients** – Number of participants in the vesting batch (clickable to view recipient details)
 - **Cliff Length** – Initial lock period before vesting starts (shows "No Cliff" if none configured)
@@ -133,7 +135,8 @@ Each vesting event displays detailed information depending on its lifecycle stag
 ![Vesting Table Ongoing Events](../../../static/img/front-end/engage/vesting-table-completed.png)
 
 - **Batch Name** – Descriptive identifier for the vesting schedule
-- **Vesting Period** – Duration of the token release schedule (displayed as clickable link)
+- **Vesting Period** – Duration of the token release schedule (displayed as clickable link)  
+  *The format (seconds, days, weeks, or months) depends on the chosen distribution frequency when the batch is created.*
 - **Chain** – Blockchain network where vesting occurred (indicated by network logo)
 - **Recipients** – Number of participants who received tokens (clickable to view recipient details)
 - **Cliff Length** – Initial lock period before vesting starts (shows "No Cliff" if none configured)
