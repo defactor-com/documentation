@@ -6,7 +6,7 @@ sidebar_position: 2
 
 The **Ecosystem Module** provides a real-time dashboard for monitoring the health and activity of the Engage token economy. It aggregates metrics like circulating supply, total staked value, liquidity allocations, buybacks, and expected rewards.  
 
-This module ensures transparency by showing both system-wide token metrics and detailed ecosystem wallet distributions. It is accessible to all users, while Admins configure wallets and allocations via the **Admin Section**.
+This module ensures transparency by showing both system-wide token metrics and detailed ecosystem wallet distributions. It is accessible to all users, while Admins configure wallets and allocations via the **[Admin → Ecosystem Settings](/docs/engage/front-end-ui/admin-section/engage-frontend-admin-section-ecosystem-settings#)**.
 
 ---
 
@@ -54,4 +54,3 @@ Admins configure these wallets and allocations in **Admin → Ecosystem Settings
 - **Cross-chain visibility** – View metrics across supported networks.  
 - **Transparent allocations** – Track how tokens are distributed across ecosystem wallets.  
 - **Auditable on-chain data** – All displayed metrics come directly from audited smart contracts.  
-
