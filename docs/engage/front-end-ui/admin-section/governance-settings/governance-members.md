@@ -15,7 +15,7 @@ Admins can assign or remove members, ensuring proper control over governance act
 View all governance participants along with their roles.  
 
 - **Admin**: Full permissions to manage proposals and members  
-- **Author**: Can create and edit proposals  
+- **Author**: Can create proposals  
 
 ![Governance Members](../../../../../static/img/front-end/engage/governance-members.png)
 
