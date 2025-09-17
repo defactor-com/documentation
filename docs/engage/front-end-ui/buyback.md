@@ -31,8 +31,6 @@ The dashboard displays comprehensive buyback statistics:
 - **USD equivalent value** – Displays the total USDC spent on all buyback operations
 - **Chain Distribution** – Breakdown of buyback activity across supported blockchain networks with percentage allocation
 
-You're absolutely right. Here's the revised version with a clear indication that these are examples:
-
 ### Ecosystem Allocation Breakdown
 
 ![BuyBack Metrics Allocation Breakdown](../../../static/img/front-end/engage/buyback-metrics-allocation-breakdown.png)
