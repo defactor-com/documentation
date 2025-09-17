@@ -16,20 +16,22 @@ This module ensures transparency by showing both system-wide token metrics and d
 
 The ecosystem dashboard displays:  
 - **Circulating Supply** – Current tokens in circulation relative to total supply.  
+- **Chain Filters** – Toggle between supported chains (e.g., Base, Ethereum, Polygon).
 - **Total Staked Value** – USD equivalent of tokens staked across all pools.  
 - **TVL Graph** – Historical Total Value Locked, filterable by 1D, 7D, 1M, and 1Y.  
 - **Expected Rewards** – Forecast of rewards accrued within the selected time frame.  
 - **Auto Buybacks** – Shows tokens already repurchased from the market.  
-- **Chain Filters** – Toggle between supported chains (e.g., Base, Ethereum, Polygon).  
+- **Token Metrics** – Key indicators such as market capitalization and current token price.
+- **Ecosystem Addresses Table** – Overview of token allocations across labeled ecosystem wallets.
 
-## Token Metrics  
+### Token Metrics  
 
 ![Ecosystem Token Metrics](../../../static/img/front-end/engage/ecosystem-token-metrics.png)
 
 - **Market Cap** – Calculated based on circulating supply × token price.  
-- **Current Token Price** – Fetched from Coingecko or defined as fixed in Admin → Token Settings.  
+- **Current Token Price** – Fetched from Coingecko or defined as fixed in **[Admin → Token Settings](/docs/engage/front-end-ui/admin-section/engage-frontend-admin-section-token-settings#)**.  
 
-## Ecosystem Addresses  
+### Ecosystem Addresses  
 
 ![Ecosystem Addresses Table](../../../static/img/front-end/engage/ecosystem-addresses.png)
 
@@ -40,17 +42,5 @@ The **Ecosystem Addresses** table shows how tokens are allocated across differen
 - **Balance** – Remaining tokens available in that wallet.  
 - **% Liquid** – Percentage of tokens unlocked and usable.  
 
-Admins configure these wallets and allocations in **Admin → Ecosystem Settings**.  
-
-## Key Modules Integrated  
-
-- **Staking** – Lock tokens in customizable pools to incentivize long-term holding and participation.  
-- **Vesting** – Distribute tokens over time to contributors, team members, or investors.  
-- **Buybacks** – Track and display auto buybacks executed by the protocol, supporting token scarcity and reinforcing long-term value.  
-
-## Core Benefits  
-
-- **User-friendly dashboard** – Easily monitor circulating supply, staking, rewards, and buybacks.  
-- **Cross-chain visibility** – View metrics across supported networks.  
-- **Transparent allocations** – Track how tokens are distributed across ecosystem wallets.  
-- **Auditable on-chain data** – All displayed metrics come directly from audited smart contracts.  
+Admins configure these wallets and allocations in **[Admin → Ecosystem Settings](/docs/engage/front-end-ui/admin-section/engage-frontend-admin-section-ecosystem-settings#)**.  
+  
