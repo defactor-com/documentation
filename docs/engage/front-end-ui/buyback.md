@@ -47,11 +47,13 @@ The buyback metrics show how repurchased tokens are distributed across different
 
 Each category is defined with a specific icon and label that can be customized through the admin interface. Administrators can modify these categories, add new ones, or adjust their designations to match the project's evolving needs.
 
-## Latest Buybacks
+## Buybacks Tables
 
-![BuyBack Latest Buybacks](../../../static/img/front-end/engage/buyback-latest-buybacks.png)
+![Latest Buybacks Table](../../../static/img/front-end/engage/buyback-latest-buybacks.png)
 
-The Latest Buybacks section shows real-time ecosystem activity:
+![My Buybacks Table](../../../static/img/front-end/engage/buyback-my-buybacks.png)
+
+The buyback tables (Latest Buybacks and My Buybacks) display transaction details with the following columns:
 
 ### Transaction Details
 - **Transaction Date** – When the buyback was executed
@@ -65,23 +67,7 @@ The Latest Buybacks section shows real-time ecosystem activity:
 - **Time Remaining** – Days until tokens become available/unlocked
 - **Action** – Available actions (Withdraw when eligible)
 
-## My Buybacks
-
-![My Buybacks](../../../static/img/front-end/engage/buyback-my-buybacks.png)
-
-The My Buybacks table contains seven columns that track your buyback activity:
-
-- **Transaction Date** – Date when the buyback was executed
-- **Bought** – Amount of tokens purchased (shown in REAL tokens)
-- **Spent** – USDC amount used for the purchase
-- **Chain** – Blockchain network where the transaction occurred
-- **Recipient** – Number of wallets that received the purchased tokens
-- **Time Remaining** – Lock period status or days until withdrawal eligibility
-- **Action** – Current transaction status and available withdrawal options
-
-You're right, the heading hierarchy needs to be fixed. Here's the corrected formatting:
-
-You're absolutely right! Here's the corrected formatting with proper heading hierarchy:
+![BuyBack Action](../../../static/img/front-end/engage/buyback-table-action.png)
 
 ## Initiating a Buyback
 
