@@ -16,13 +16,46 @@ This module ensures transparency by showing both system-wide token metrics and d
 
 The ecosystem dashboard displays:  
 - **Circulating Supply** – Current tokens in circulation relative to total supply.  
-- **Chain Filters** – Toggle between supported chains (e.g., Base, Ethereum, Polygon).
+- **Chain Filters** – Switch seamlessly between supported networks with full multi-chain support (e.g., Base, Ethereum, Polygon).
 - **Total Staked Value** – USD equivalent of tokens staked across all pools.  
 - **TVL Graph** – Historical Total Value Locked, filterable by 1D, 7D, 1M, and 1Y.  
 - **Expected Rewards** – Forecast of rewards accrued within the selected time frame.  
 - **Auto Buybacks** – Shows tokens already repurchased from the market.  
 - **Token Metrics** – Key indicators such as market capitalization and current token price.
 - **Ecosystem Addresses Table** – Overview of token allocations across labeled ecosystem wallets.
+
+### Circulating Supply  
+
+Displays the current number of tokens in circulation compared to the total supply.  
+> This metric helps users track inflation/deflation of the token and monitor how much of the total supply is actively available in the market.
+
+### Chain Filters  
+
+Toggle between supported chains such as Base, Ethereum, and Polygon.  
+> Engage supports **multi-chain compatibility**, allowing users to view metrics across all integrated networks without switching applications.  
+
+### Total Staked Value  
+
+Shows the USD equivalent of all tokens currently staked across pools.  
+> This value reflects community participation and helps measure ecosystem security and engagement through staking.  
+
+### TVL Graph  
+
+Provides a historical chart of **Total Value Locked** (TVL), filterable by 1D, 7D, 1M, and 1Y.  
+> Tracking TVL over time gives insights into growth trends, liquidity inflows, and long-term holder confidence.  
+
+### Expected Rewards  
+
+Displays projected rewards to be earned by stakers and participants over a chosen time period.  
+> This forecast helps users estimate returns based on staking activity and pool performance.  
+
+### Auto BuyBacks
+
+Displays the total number of tokens repurchased from the market and returned to the ecosystem.  
+
+  > The metric shows both the absolute buyback amount, the current circulating supply, and the percentage of supply repurchased.  
+
+![Ecosystem Auto Buybacks](../../../static/img/front-end/engage/ecosystem-auto-buybacks.png)
 
 ### Token Metrics  
 
