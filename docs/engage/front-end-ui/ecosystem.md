@@ -16,7 +16,7 @@ This module ensures transparency by showing both system-wide token metrics and d
 
 The ecosystem dashboard displays:  
 - **Circulating Supply** – Current tokens in circulation relative to total supply.  
-- **Chain Filters** – Switch seamlessly between supported networks with full multi-chain support (e.g., Base, Ethereum, Polygon).
+- **Chain(s) Selector** – Switch seamlessly between supported networks with full multi-chain support (e.g., Base, Ethereum, Polygon).
 - **Total Staked Value** – USD equivalent of tokens staked across all pools.  
 - **TVL Graph** – Historical Total Value Locked, filterable by 1D, 7D, 1M, and 1Y.  
 - **Expected Rewards** – Forecast of rewards accrued within the selected time frame.  
@@ -26,25 +26,43 @@ The ecosystem dashboard displays:
 
 ### Circulating Supply  
 
+![Ecosystem Circulating Supply](../../../static/img/front-end/engage/ecosystem-circulating-supply.png)
+
 Displays the current number of tokens in circulation compared to the total supply.  
 > This metric helps users track inflation/deflation of the token and monitor how much of the total supply is actively available in the market.
 
-### Chain Filters  
+<!-- TODO: ADD BASGE % CHAIN AND CHECK AND EXPLAIN -->
+
+### Chain(s) Selector  
+
+![Ecosystem Chain Selector](../../../static/img/front-end/engage/ecosystem-chain-selector.png)
 
 Toggle between supported chains such as Base, Ethereum, and Polygon.  
 > Engage supports **multi-chain compatibility**, allowing users to view metrics across all integrated networks without switching applications.  
 
-### Total Staked Value  
+### Total Staked Value 
+
+![Ecosystem Total Staked Value](../../../static/img/front-end/engage/ecosystem-total-staked.png)
 
 Shows the USD equivalent of all tokens currently staked across pools.  
 > This value reflects community participation and helps measure ecosystem security and engagement through staking.  
 
+The tooltip displays the breakdown of the staked value by network.
+
+![Ecosystem Total Staked Value](../../../static/img/front-end/engage/ecosystem-total-staked-tooltip.png)
+
+<!-- TODO: CHECK AND EXPLAIN -->
+
 ### TVL Graph  
+
+![Ecosystem TVL](../../../static/img/front-end/engage/ecosystem-tvl.png)
 
 Provides a historical chart of **Total Value Locked** (TVL), filterable by 1D, 7D, 1M, and 1Y.  
 > Tracking TVL over time gives insights into growth trends, liquidity inflows, and long-term holder confidence.  
 
 ### Expected Rewards  
+
+![Ecosystem Expected Rewards](../../../static/img/front-end/engage/ecosystem-rewards.png)
 
 Displays projected rewards to be earned by stakers and participants over a chosen time period.  
 > This forecast helps users estimate returns based on staking activity and pool performance.  
