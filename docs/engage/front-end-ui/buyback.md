@@ -19,21 +19,21 @@ You can switch between these two tables to monitor overall ecosystem activity an
 
 ## Buyback Metrics
 
-The dashboard displays comprehensive buyback statistics:
+The dashboard displays comprehensive statistics on all buyback activity.
 
 ### Total Tokens Bought Back
 
 ![BuyBack Metrics Bought Back](../../../static/img/front-end/engage/buyback-metrics-bought-back.png)
 
-- **Total tokens repurchased** – Shows the aggregate amount of tokens bought back from the market
-- **USD equivalent value** – Displays the total USDC spent on all buyback operations
-- **Chain Distribution** – Breakdown of buyback activity across supported blockchain networks with percentage allocation
+- **Total tokens repurchased** – The aggregate number of tokens repurchased from the market to date
+- **USD equivalent value** – The total amount of USDC spent on all buyback operations
+- **Chain Distribution** – Shows the proportion of buyback activity on each supported blockchain (e.g., Ethereum, Base, Polygon), expressed as a percentage of the total
 
 ### Ecosystem Allocation Breakdown
 
 ![BuyBack Metrics Allocation Breakdown](../../../static/img/front-end/engage/buyback-metrics-allocation-breakdown.png)
 
-The buyback metrics show how repurchased tokens are distributed across different ecosystem categories. These categories are configured and managed by administrators in the **[Admin -> Buyback Settings](/docs/engage/front-end-ui/admin-section/engage-frontend-admin-section-buyback-settings#)**.
+The metrics also show how repurchased tokens are distributed across ecosystem categories. These allocations are configured and managed by administrators in **[Admin -> Buyback Settings](/docs/engage/front-end-ui/admin-section/engage-frontend-admin-section-buyback-settings#)**.
 
 **Example categories may include:**
 
@@ -43,7 +43,7 @@ The buyback metrics show how repurchased tokens are distributed across different
 - **Staking Rewards** – Tokens allocated for staking reward distribution
 - **Other** – Tokens assigned to miscellaneous ecosystem needs and future initiatives
 
-Each category is defined with a specific icon and label that can be customized through the admin interface. Administrators can modify these categories, add new ones, or adjust their designations to match the project's evolving needs.
+Each category is defined with a specific icon and label that can be customized in the admin interface. Administrators can edit categories to match evolving project requirements.
 
 ## Buybacks Tables
 
@@ -62,10 +62,15 @@ The buyback tables (Latest Buybacks and My Buybacks) display transaction details
 
 ![BuyBack Recipient](../../../static/img/front-end/engage/buyback-table-recipient-click.png)
 
-- **Time Remaining** – Days until tokens become available/unlocked
+- **Time Remaining** – Time until tokens become available/unlocked
+
+> Once this reaches zero, the buyback becomes eligible for withdrawal.
+
 - **Action** – Available actions (Withdraw when eligible)
 
 ![BuyBack Action](../../../static/img/front-end/engage/buyback-table-action.png)
+
+> For your own buybacks, a Withdraw button will appear once the lock period has ended. Clicking it triggers an on-chain transaction that releases the locked tokens to their configured recipients.
 
 ## Initiating a Buyback
 
