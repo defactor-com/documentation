@@ -61,3 +61,24 @@ Once signed, you’ll see a confirmation message:
 After submission, the proposal will be visible in the **Manage Proposals** list with live voting progress updates.
 
 ![Admin Governance Proposals](../../../../../static/img/front-end/engage/governance-manage-proposals.png)
+
+## Proposal Details Page
+
+When you click on a proposal row in the **Manage Proposals** table, you will be redirected to the detailed view.  
+
+![Admin Governance Proposals Details Page](../../../../../static/img/front-end/engage/governance-manage-proposals-details-page.png)
+
+This page shows:
+
+- **Proposal status**: *Passed* or *Rejected* (once voting has ended)
+
+![Admin Governance Proposals Details Page Status](../../../../../static/img/front-end/engage/governance-manage-proposals-details-page-status.png)
+
+- **Proposal metadata**: title, proposer, start/end date, discussion link  
+
+![Admin Governance Proposals Details Page Metadata](../../../../../static/img/front-end/engage/governance-manage-proposals-details-page-metadata.png)
+
+- **Full proposal content**: executive summary, problem statement, proposed solution, implementation timeline, and budget  
+- **Voting breakdown**: votes per wallet, decision (Yes/No), and voting power 
+
+![Admin Governance Proposals Details Page Voting](../../../../../static/img/front-end/engage/governance-manage-proposals-details-page-voting.png)
