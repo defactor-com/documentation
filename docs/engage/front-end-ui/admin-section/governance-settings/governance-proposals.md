@@ -5,87 +5,59 @@ sidebar_position: 1
 slug: /admin-section/governance/proposals
 ---
 
-The **Proposals** tab is where administrators (and authors) create, preview, and publish governance items for community voting. It supports a clear, guided flow: **Proposal details → Editor → Voting system → Overview**.
+The **Proposals** section allows you to create, edit, and vote on governance proposals.  
+Admins and authorized members can launch proposals, while community members participate in voting.
 
 ---
 
-## Proposal List
+## Manage Proposals
 
-Each proposal row shows:
-- **Proposal** — Title of the proposal.
-- **Voting Progress** — Token-weighted vote bars and counts per option.
-- **Status** — *In Progress* or *Finished* (based on the configured voting window).
+On the main **Manage Proposals** page, you can see:
 
-Use the list to monitor live participation and to review outcomes after the voting window closes.
+- A list of active and past proposals  
+- Voting progress (including weighted voting power)  
+- Proposal status: *In Progress* or *Finished*  
 
----
+![Manage Proposals](../../../../../static/img/front-end/engage/governance-manage-proposals.png)
 
-## Create Proposal (4-Step Flow)
+## Creating a Proposal
 
-### 1) Proposal details
-- **Name*** — Title of the proposal shown in the list.
-- **Start Date*** / **End Date*** — Voting window (inclusive start, exclusive end).
-- **Discussion (optional)** — Link to a forum/thread/doc for community debate.
+Click **+ Create Proposal** to start the process.  
 
-> Tip: Set the start date slightly in the future if you want to circulate the discussion link before voting opens.
+1. **Proposal Details**  
+   Enter the name, duration, and optional discussion link.  
 
----
+   ![Proposal Details](../../../../../static/img/front-end/engage/governance-manage-proposals-for-create-proposal-details.png)
 
-### 2) Editor
-- Rich-text editor for the proposal body.
-- Supports headings, bold/italic, lists, links, and code.
-- Use this to describe **context**, **options trade-offs**, and **implementation plan**.
+2. **Editor**  
+   Write a clear description of your proposal including an executive summary, problem statement, and solution.  
+   Rich text formatting is supported.  
 
-**Recommended structure:**
-1. Summary
-2. Motivation
-3. Specification / Options
-4. Risk & Impact
-5. Timeline
+   ![Proposal Editor](../../../../../static/img/front-end/engage/governance-manage-proposals-for-create-proposal-editor.png)
 
----
+3. **Voting System**  
+   Select how votes will be cast. Example: *Single choice voting* with Yes/No options.  
 
-### 3) Voting system
-- **Select voting system***:
-  - **Single choice voting** — Binary decisions like *Yes / No*.
-  - **Multiple choice voting** — More than two mutually exclusive options.
-- **Choices*** — Define the available options (e.g., *Yes*, *No*).
-- Choices appear as labeled rows with icons and can be reordered/edited before publishing.
+   ![Voting System](../../../../../static/img/front-end/engage/governance-manage-proposals-for-create-proposal-voting.png)
 
-> Token weighting and eligibility are enforced by the governance backend; this UI configures options and window only.
+4. **Overview**  
+   Review all proposal details before submitting.  
 
----
+   ![Proposal Overview](../../../../../static/img/front-end/engage/governance-manage-proposals-for-create-proposal-overview.png)
 
-### 4) Overview (Publish)
-- Read-only summary of all inputs:
-  - Title, Duration, Discussion link
-  - Voting system
-  - Choices
-- **Create Proposal** — Publishes the proposal and moves it to the list with status **In Progress** (until end date).
+## Signing & Submission
 
----
+After confirming, a MetaMask popup appears to sign the proposal request.  
+This ensures the proposal is securely registered on-chain.  
 
-## Status & Outcomes
+![Signature Request](../../../../../static/img/front-end/engage/governance-manage-proposals-for-create-proposal-signature.png)
 
-- **In Progress** — Current time is within the configured voting window.
-- **Finished** — Voting window has elapsed; results are final and locked for auditability.
+Once signed, you’ll see a confirmation message:  
 
-> Results are displayed as absolute votes and percentages per option for transparency.
+![Success Message](../../../../../static/img/front-end/engage/governance-manage-proposals-for-create-proposal-success.png)
 
----
+## Proposal Tracking
 
-## Best Practices
+After submission, the proposal will be visible in the **Manage Proposals** list with live voting progress updates.
 
-- **Name clearly** — Short, action-oriented titles (e.g., “Adjust Staking Rate for Yield & Stability”).
-- **Link discussions** — Add a forum/topic URL in *Discussion* to boost participation.
-- **Limit choices** — Keep options minimal and well-differentiated.
-- **Set realistic windows** — Ensure global time zones get at least 5–7 days for high-impact votes.
-- **Document outcomes** — Edit the discussion thread with the final decision and next steps.
-
----
-
-## Example Proposals
-
-- **Enable Cross-Chain Staking Participation** — *Single choice*, Yes/No.
-- **Create a New Vesting Batch** — *Multiple choice*, several vesting schedules.
-- **Community Fund Allocation** — *Multiple choice*, predefined grant amounts.
+![Admin Governance Proposals](../../../../../static/img/front-end/engage/governance-manage-proposals.png)
