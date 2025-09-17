@@ -7,7 +7,7 @@ sidebar_position: 4
 The **Governance Module** enables decentralized decision-making by allowing token holders to participate in proposal voting and community governance.  
 This ensures transparency, accountability, and community-driven control over protocol development, parameter changes, and strategic initiatives.
 
-Token holders can view active and past proposals, cast votes, and track their participation directly in the governance dashboard.
+Token holders can view active and past proposals, cast votes, and track their participation directly in the governance dashboard.  
 
 ---
 
@@ -47,6 +47,9 @@ Each proposal provides detailed information for informed decision-making:
 - **Proposed By** – Wallet address of the proposal creator  
 - **Timeline** – Start date and end date for the voting period  
 - **Discussion Link** – External link to community discussion  
+
+> New proposals can be created, managed, or updated via  
+> **[Admin → Governance Settings Manage Proposals](/docs/engage/front-end-ui/admin-section/governance-proposals#)**.
 
 ### Proposal Content
 
@@ -113,3 +116,5 @@ Includes structured sections such as:
 - **Accountability** – Every decision has a recorded history  
 - **Engagement** – Encourages active participation in governance  
 - **Sustainability** – Builds a decentralized and resilient ecosystem  
+
+> For administrators, governance rules and controls — such as managing proposals or maintaining member permissions — can be configured in **[Admin → Governance Settings](/docs/engage/front-end-ui/admin-section/governance-settings#)**.
