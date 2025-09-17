@@ -8,7 +8,7 @@ The **Buyback Settings** section provides administrators with control over walle
 
 ---
 
-## Overview of the Buyback Section  
+## Overview of the Buyback Settings 
 
 Administrators can:  
 - View all registered buyback wallets.  
@@ -17,8 +17,6 @@ Administrators can:
 - Edit wallet details as strategies evolve.  
 
 This ensures that token buybacks remain transparent, structured, and aligned with governance and ecosystem needs.  
-
----
 
 ## Buyback Wallets Table  
 
@@ -34,20 +32,16 @@ From this view, admins can:
 - Ensure buyback reserves are properly categorized.  
 - Edit wallet metadata when strategies or labels change.  
 
----
-
 ## Editing a Buyback Wallet  
 
 ![BuyBack Wallets Editing](../../../../static/img/front-end/engage/admin-buyback-wallets-edit.png)
 
 When editing an existing wallet:  
-- **Address Label*** — Enter or update the descriptive name for the wallet.  
-- **Icon*** — Choose an icon that reflects the wallet’s role.  
+- **Address Label** — Enter or update the descriptive name for the wallet.  
+- **Icon** — Choose an icon that reflects the wallet’s role.  
 - **Save Changes** — Confirm updates to reflect immediately in the Buyback Wallets table.  
 
 > Wallets themselves remain controlled by the protocol; editing settings here only changes the label and icon for administrative clarity.  
-
----
 
 ## Best Practices  
 
@@ -56,13 +50,9 @@ When editing an existing wallet:
 - **Review quarterly** — Ensure wallets reflect the current tokenomics and buyback strategy.  
 - **Limit edits** — Keep labels stable to maintain transparency in reporting and auditing.  
 
----
-
 ## Example Buyback Wallets  
 
 1. **Contributors** — Funds allocated to reward active community and team contributors.  
 2. **Foundation** — Treasury wallet for foundation operations.  
 3. **Liquidity** — Dedicated wallet to support market liquidity.  
 4. **Staking Rewards** — Wallet supplying tokens for staking pool reward programs.  
-
----

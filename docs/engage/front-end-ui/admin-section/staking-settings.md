@@ -8,7 +8,7 @@ This section allows administrators to configure, launch, and manage staking pool
 
 ---
 
-## Overview of the Staking Section  
+## Overview of the Staking Settings  
 
 The **Staking Settings** panel empowers project administrators to:  
 - Create and configure new staking pools.  

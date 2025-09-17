@@ -8,7 +8,7 @@ The **General Settings** section provides administrators with tools to manage **
 
 ---
 
-## Overview of the General Section  
+## Overview of the General Settings
 
 From here, project owners and managers can:  
 - Add new admin accounts.  

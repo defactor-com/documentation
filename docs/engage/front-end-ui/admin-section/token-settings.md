@@ -8,7 +8,7 @@ This section provides administrators with full control over the tokens that can 
 
 ---
 
-## Overview of the Token Section  
+## Overview of the Token Settings  
 
 The **Token Settings** panel enables project administrators to:  
 - Add, edit, and manage tokens available within the ecosystem.  

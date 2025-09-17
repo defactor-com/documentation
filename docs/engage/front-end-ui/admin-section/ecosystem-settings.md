@@ -8,7 +8,7 @@ The **Ecosystem Settings** section provides administrators with tools to manage 
 
 ---
 
-## Overview of the Ecosystem Section  
+## Overview of the Ecosystem Settings 
 
 From here, administrators can:  
 - View the total allocated and unallocated tokens.  
