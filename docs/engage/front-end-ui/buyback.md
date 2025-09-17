@@ -23,11 +23,11 @@ Users can seamlessly switch between the Latest and My Buybacks tables to monitor
 
 The dashboard displays comprehensive buyback statistics:
 
-### Total Sharing Bought Back
+### Total Tokens Bought Back
 
 ![BuyBack Metrics Bought Back](../../../static/img/front-end/engage/buyback-metrics-bought-back.png)
 
-- **Total tokens repurchased** – Shows the aggregate amount of Sharing tokens bought back from the market
+- **Total tokens repurchased** – Shows the aggregate amount of tokens bought back from the market
 - **USD equivalent value** – Displays the total USDC spent on all buyback operations
 - **Chain Distribution** – Breakdown of buyback activity across supported blockchain networks with percentage allocation
 
