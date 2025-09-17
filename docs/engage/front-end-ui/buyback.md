@@ -90,9 +90,9 @@ Before configuring buyback parameters, users must select the blockchain network 
 
 ### Regular Buyback Configuration
 
-![Regular Buyback](../../../static/img/front-end/engage/buyback-regular.png)
-
 The Regular Buyback option provides a streamlined interface for executing buybacks with predefined allocation settings.
+
+![Regular Buyback](../../../static/img/front-end/engage/buyback-regular.png)
 
 #### Amount Configuration
 
