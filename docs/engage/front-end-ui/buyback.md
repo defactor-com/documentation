@@ -176,6 +176,8 @@ When you click **Initiate BuyBack**, your wallet shows transaction details inclu
 
 After successful execution, the system shows the completed transaction with network confirmation and prevents additional buybacks until the cooldown period expires.
 
+> All tokens bought back are locked for a defined period (e.g., 12 months) before they can be withdrawn to recipients.
+
 #### Key Features
 
 - **Multiple Recipients** – Add multiple wallet addresses with individual allocations
