@@ -58,7 +58,10 @@ The Latest Buybacks section shows real-time ecosystem activity:
 - **Bought** – Amount of tokens purchased
 - **Spent** – USDC amount used for the buyback
 - **Chain** – Blockchain network where transaction occurred
-- **Recipient** – Number of recipients receiving the bought tokens
+- **Recipient** – Shows number of recipients in summary view; click to expand and view detailed wallet addresses and token amounts for each recipient
+
+![BuyBack Recipient](../../../static/img/front-end/engage/buyback-table-recipient-click.png)
+
 - **Time Remaining** – Days until tokens become available/unlocked
 - **Action** – Available actions (Withdraw when eligible)
 
