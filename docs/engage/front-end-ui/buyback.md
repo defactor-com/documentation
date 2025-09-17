@@ -4,9 +4,7 @@ title: BuyBack
 sidebar_position: 5
 ---
 
-The **BuyBack Module** enables token holders and ecosystem participants to repurchase tokens from the market, supporting token scarcity and long-term value. This module provides tools for executing both regular and custom buyback programs while tracking all buyback activity transparently.
-
-Users can initiate buybacks, monitor their transaction history, and view ecosystem-wide buyback metrics that contribute to token economics and protocol sustainability.
+The **BuyBack Module**  allows you to repurchase tokens from the open market to support token scarcity and long-term value. It provides tools for both regular and custom buyback programs, tracking all activity transparently. You can initiate new buybacks, monitor your history, and view ecosystem-wide buyback metrics that contribute to the token economy’s sustainability.
 
 ## Dashboard Overview
 
@@ -14,10 +12,10 @@ Users can initiate buybacks, monitor their transaction history, and view ecosyst
 
 The buyback dashboard displays **Buyback Metrics** at the top, followed by two main table views:
 
-- **Latest Buybacks** – Recent buyback transactions across the ecosystem
-- **My Buybacks** – Personal buyback history and user-initiated transactions
+- **Latest Buybacks** – Recent buyback transactions across the entire ecosystem, including buybacks initiated by other participants or the platform itself.
+- **My Buybacks** – Your personal buyback history, showing transactions you initiated. This view requires your web3 wallet to be connected; only then will your contributions appear here.
 
-Users can seamlessly switch between the Latest and My Buybacks tables to monitor ecosystem-wide buyback activity and track their personal contribution to token repurchasing programs. The buyback metrics section provides an overview of total tokens bought back and their allocation across different ecosystem categories.
+You can switch between these two tables to monitor overall ecosystem activity and track your own participation in buyback programs. The metrics section provides an overview of the total tokens bought back and their allocation across different ecosystem categories.
 
 ## Buyback Metrics
 
