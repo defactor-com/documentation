@@ -161,6 +161,18 @@ Once recipients are added, the interface displays:
 - **Minimum Amount Validation** – Ensures requirements are met
 - **Initiate BuyBack Button** – Execute the custom buyback transaction
 
+## Transaction Execution
+
+### Wallet Integration
+
+When you click **Initiate BuyBack**, your wallet shows transaction details including spending amount, network fees, and contract address.
+
+### Success Confirmation
+
+![Custom Buyback Success Confirmation](../../../static/img/front-end/engage/buyback-custom-buyback-initiate-success.png)
+
+After successful execution, the system shows the completed transaction with network confirmation and prevents additional buybacks until the cooldown period expires.
+
 #### Key Features
 
 - **Multiple Recipients** – Add multiple wallet addresses with individual allocations
