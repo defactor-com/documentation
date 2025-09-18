@@ -18,8 +18,6 @@ The **Token Settings** panel enables project administrators to:
 
 This section ensures that all staking, governance, and buyback activities reference validated token configurations.  
 
----
-
 ## Managing Tokens  
 
 ![Manage Tokens Table](../../../../static/img/front-end/engage/admin-token-manage-tokens-table.png)
@@ -37,8 +35,6 @@ From this view, administrators can:
 - Verify token details before pool creation.  
 - Edit token entries to adjust pricing or contract details.  
 - Ensure consistent token metadata across the platform.  
-
----
 
 ## Adding a Token  
 
@@ -58,8 +54,6 @@ When adding a new token, admins configure several parameters:
 
 > Tip: Using Coingecko ensures pricing stays in sync with market conditions, while **Fixed** is useful for stablecoins or testing environments.  
 
----
-
 ## Example Token Configurations  
 
 1. **FACTR Token (Native Project Token)**  
@@ -78,13 +72,9 @@ When adding a new token, admins configure several parameters:
    - Symbol: WETH  
    - Source: Coingecko  
 
----
-
 ## Best Practices for Token Management  
 
 - **Validate Contract Addresses**: Ensure tokens are added from verified contracts to prevent errors.    
 - **Choose Price Source Wisely**: Use **Fixed** for stable assets and **Coingecko** for volatile assets.  
 - **Update Logos for Clarity**: A visual token reference improves user experience in staking and governance UIs.  
 - **Review Market Data**: Ensure pricing sources align with ecosystem reporting and staking calculations.  
-
----
