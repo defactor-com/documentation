@@ -18,8 +18,6 @@ From here, project owners and managers can:
 
 This ensures secure and transparent control over platform operations.  
 
----
-
 ## Admin Accounts Table  
 
 ![Admin Accounts Table](../../../../static/img/front-end/engage/admin-general-admin-accounts.png)
@@ -31,8 +29,6 @@ The list displays all configured admin accounts with the following details:
 - **Chain(s)** — Networks where the admin is authorized.  
 - **Contract(s)** — Smart contracts the admin can manage (e.g., Staking, Vesting).  
 - **Actions** — Delete an admin account if permissions should be revoked.  
-
----
 
 ## Adding an Admin  
 
@@ -50,13 +46,9 @@ To add a new admin account:
 
 The new admin will appear in the table with their assigned permissions.  
 
----
-
 ## Best Practices  
 
 - **Grant least privilege** — Only give admins access to the contracts and chains they actually need.  
 - **Audit regularly** — Review the list of admins periodically and remove inactive or unneeded accounts.  
 - **Use unique accounts** — Assign separate wallets for admin duties instead of personal wallets.  
 - **Rotate access** — Update admin accounts if team members change roles or leave the project.  
-
----
