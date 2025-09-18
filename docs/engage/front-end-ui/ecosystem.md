@@ -177,3 +177,13 @@ The **Burn Events** table tracks all token burn transactions, providing transpar
 - **Date** – When the burn transaction was executed
 
 > Token burns permanently reduce the total supply, creating deflationary pressure that can increase scarcity and potentially benefit remaining token holders by making their tokens more valuable.
+
+
+## App Types
+
+Some features in this dashboard differ depending on your application’s configuration:
+
+- **App Type 1** – Deployments that include the staking module. These dashboards display features like *Expected Rewards*, *Auto Buybacks*, and an *Ecosystem Addresses* table.  
+- **App Type 2** – Deployments that focus on buyback and burn mechanisms. These dashboards display features like *Total Buyback Amount*, a *Staking Banner*, and a *Burn Events* table.  
+
+Throughout this documentation, references to “App Type 1” and “App Type 2” indicate which feature set applies to your deployment.
