@@ -20,10 +20,10 @@ The ecosystem dashboard displays:
 - **Chain Selector** – Multi-chain dropdown menu for selecting supported networks
 - **Total Staked Value Chart** – Circular visualization of USD equivalent tokens staked across networks
 - **TVL Historical Graph** – Time-series chart of Total Value Locked with 1D, 7D, 1M, and 1Y filters
-- **Expected Rewards** – Projected earnings forecast for stakers over selected time periods
-- **Auto Buybacks** – Tokens repurchased from market and returned to ecosystem
+- **Expected Rewards** (App Type 1) - Projected earnings forecast for stakers over selected time periods / **Total Buyback Amount** (App Type 2) – Shows tokens repurchased from market and returned to ecosystem
+- **Auto Buybacks** – (App Type 1) Tokens repurchased from market and returned to ecosystem / **Staking banner** (App Type 2) – Promotional banner for staking functionality
 - **Token Metrics** – Market capitalization and current token price indicators
-- **Ecosystem Addresses Table** – Token allocation breakdown across ecosystem addresses
+- **Ecosystem Addresses Table** (App Type 1) / **Burn Events Table** (App Type 2) – Token allocation or burn transaction details
 
 ### Circulating Supply  
 
@@ -39,7 +39,6 @@ Displays the current number of tokens in circulation compared to the total suppl
 The badges section displays the distribution of your token supply across different blockchain networks. Each badge represents a specific network where your tokens are deployed.
 
 #### Network Badge Details
-
 
 Each badge contains:
 - **Network Name** - The blockchain network (e.g., Base Testnet, Ethereum, Polygon)
@@ -90,20 +89,28 @@ The tooltip provides granular visibility into how staking is distributed across 
 Provides a historical chart of **Total Value Locked** (TVL), filterable by 1D, 7D, 1M, and 1Y.  
 > Tracking TVL over time gives insights into growth trends, liquidity inflows, and long-term holder confidence.  
 
-### Expected Rewards  
+### Expected Rewards (App Type 1)
 
 ![Ecosystem Expected Rewards](../../../static/img/front-end/engage/ecosystem-rewards.png)
 
 Displays projected rewards to be earned by stakers and participants over a chosen time period.  
-> This forecast helps users estimate returns based on staking activity and pool performance.  
+> This forecast helps users estimate returns based on staking activity and pool performance. 
 
-### Auto BuyBacks
+### Total Buyback Amount (App Type 2)
+
+todo
+
+### Auto BuyBacks (App Type 1)
 
 Displays the total number of tokens repurchased from the market and returned to the ecosystem.  
 
   > The metric shows both the absolute buyback amount, the current circulating supply, and the percentage of supply repurchased.  
 
 ![Ecosystem Auto Buybacks](../../../static/img/front-end/engage/ecosystem-auto-buybacks.png)
+
+### Staking Banner (App Type 2)
+
+todo
 
 ### Token Metrics  
 
@@ -112,7 +119,7 @@ Displays the total number of tokens repurchased from the market and returned to 
 - **Market Cap** – Calculated based on circulating supply × token price.  
 - **Current Token Price** – Fetched from Coingecko or defined as fixed in **[Admin → Token Settings](/docs/engage/front-end-ui/admin-section/engage-frontend-admin-section-token-settings#)**.  
 
-### Ecosystem Addresses  
+### Ecosystem Addresses (App Type 1)  
 
 ![Ecosystem Addresses Table](../../../static/img/front-end/engage/ecosystem-addresses.png)
 
@@ -131,3 +138,8 @@ The **Ecosystem Addresses** table displays token allocation details for each tra
 #### Configuration
 
 Admins configure these wallet addresses and their allocations through **[Admin → Ecosystem Settings](/docs/engage/front-end-ui/admin-section/engage-frontend-admin-section-ecosystem-settings#)**.
+
+
+### Burn Events Table (App Type 2) 
+
+todo
