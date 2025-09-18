@@ -163,6 +163,17 @@ The **Ecosystem Addresses** table displays token allocation details for each tra
 Admins configure these wallet addresses and their allocations through **[Admin → Ecosystem Settings](/docs/engage/front-end-ui/admin-section/engage-frontend-admin-section-ecosystem-settings#)**.
 
 
-### Burn Events Table (App Type 2) 
+### Burn Events Table (App Type 2)
 
-todo
+![Burn Events Table](../../../static/img/front-end/engage/ecosystem-table-burn-events.png)
+
+The **Burn Events** table tracks all token burn transactions, providing transparency into supply reduction activities that permanently remove tokens from circulation.
+
+#### Table Columns
+
+- **Transaction Hash** – Blockchain transaction identifier for the burn event
+- **Chain** – The blockchain network where the burn occurred (displayed with network icon)
+- **Amount** – Number of tokens permanently removed from circulation
+- **Date** – When the burn transaction was executed
+
+> Token burns permanently reduce the total supply, creating deflationary pressure that can increase scarcity and potentially benefit remaining token holders by making their tokens more valuable.
