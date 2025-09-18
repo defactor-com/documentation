@@ -18,14 +18,13 @@ From here, administrators can:
 - Track balances, liquid percentages, and allocations.  
 
 This helps maintain visibility and control over how project tokens are distributed across categories such as **team**, **governance**, **foundation**, **liquidity**, and **staking rewards**.
+<!-- TODO REWRITE IN THE END OF IMPROVEMENTS-->
 
----
-
-## Allocation Overview
+## Allocation Section
 
 ![Ecosystem Allocation Summary](../../../../static/img/front-end/engage/admin-ecosystem-allocation-with-toolptip.png)
 
-The **Allocation Overview** provides a comprehensive view of token distribution across networks, displaying both allocated and unallocated token amounts. This pie chart visualization helps administrators understand the current allocation status and available tokens for distribution.
+The **Allocation Section** provides a comprehensive view of token distribution across networks, displaying both allocated and unallocated token amounts. This pie chart visualization helps administrators understand the current allocation status and available tokens for distribution.
 
 #### Chart Components
 
@@ -63,21 +62,21 @@ The **Ecosystem Addresses** table provides administrative control over wallet tr
 
 ## Adding an Ecosystem Wallet  
 
+### Ecosystem Address
+
 ![Add Ecosystem Wallet](../../../../static/img/front-end/engage/admin-ecosystem-add-wallet.png)
 
 To add a new wallet:  
 
 1. Click **Add Wallet**.  
 2. Enter the wallet details:  
-   - **Address Label*** — Descriptive label (e.g., *Staking Rewards*).  
-   - **Icon*** — Choose an icon to represent the wallet’s category.  
-   - **Wallet Address*** — The blockchain address.  
-   - **Chain(s)*** — Select the blockchain (e.g., Base Sepolia).  
+   - **Address Label** — Descriptive label (e.g., *Staking Rewards*).  
+   - **Icon** — Choose an icon to represent the wallet’s category.  
+   - **Wallet Address** — The blockchain address.  
+   - **Chain(s)** — Select the blockchain.
 3. Click **Next** to proceed to allocation.  
 
----
-
-## Allocating Tokens  
+### Allocating Tokens  
 
 ![Ecosystem Allocation Step](../../../../static/img/front-end/engage/admin-ecosystem-allocation-step.png)
 
@@ -88,8 +87,6 @@ In the **Allocation** step:
 
 The new wallet and its allocation will appear in the Ecosystem Addresses table.
 
----
-
 ## Best Practices  
 
 - **Use clear labels** — Ensure wallet names make their purpose obvious (e.g., *Liquidity Support*, *Community Incentives*).  
@@ -97,5 +94,3 @@ The new wallet and its allocation will appear in the Ecosystem Addresses table.
 - **Balance liquidity** — Ensure a healthy % liquid to cover operational costs while maintaining vesting/locked tokens.  
 - **Audit regularly** — Verify ecosystem wallet balances align with project goals and reports.  
 - **Revoke unused wallets** — Delete entries for inactive or obsolete wallets to keep the list clean.  
-
----
