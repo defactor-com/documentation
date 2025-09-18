@@ -14,27 +14,32 @@ The **Token Settings** panel enables project administrators to:
 - Add, edit, and manage tokens available within the ecosystem.  
 - Define chain-specific contract addresses for tokens.  
 - Set price sources (fixed values or Coingecko integration).  
-- Maintain token metadata such as names, symbols, and logos.  
+- Maintain token metadata such as logos and pricing details.  
+  - *Note: names, symbols, and decimals (precision) are automatically fetched from the token contract and cannot be changed manually.*  
 
 This ensures that all staking, governance, and buyback activities reference validated token configurations.  
+
+---
 
 ## Managing Tokens
 
 ![Manage Tokens Table](../../../../static/img/front-end/engage/admin-token-manage-tokens-table.png)
 
 The **Manage Tokens** table displays all registered tokens with key details:  
-- **Name**: Full token name.  
-- **Symbol**: Short symbol identifier.  
+- **Name**: Full token name (fetched from the contract).  
+- **Symbol**: Short symbol identifier (fetched from the contract).  
 - **Chain(s)**: Blockchain(s) where the token contract exists.  
-- **Precision**: Number of decimals supported by the token.  
+- **Precision**: Number of decimals supported by the token (fetched from the contract).  
 - **Source**: Determines pricing reference:  
   - **Fixed**: Price is manually set and remains constant.  
   - **Coingecko**: Live market price fetched using the Coingecko API.  
 
 From this view, administrators can:  
 - Verify token details before pool creation.  
-- Edit token entries to adjust pricing or contract details.  
+- Edit token entries to adjust pricing, contract addresses, or logos.  
 - Ensure consistent token metadata across the platform.  
+
+---
 
 ## Adding a Token
 
@@ -44,7 +49,7 @@ When adding a new token, admins configure several parameters:
 
 - **Chain(s)**: Select the blockchain network.  
 - **Contract Address**: Enter the token’s smart contract address for the selected chain.  
-- **Logo**: Optional upload or reference for the token’s logo icon.  
+- **Logo**: Provide a link (URL) to the token’s logo image. 
 - **Price Source**: Choose between:  
   - **Fixed**: Manually enter a static token price.  
     - **Price**: Current value of the token (manual entry).  
@@ -54,6 +59,8 @@ When adding a new token, admins configure several parameters:
 
 > Tip: Using Coingecko ensures pricing stays in sync with market conditions, while **Fixed** is useful for stable assets or testing environments.  
 
+---
+
 ## Editing a Token
 
 ![Edit Token Modal](../../../../static/img/front-end/engage/admin-token-edit-token.png)
@@ -62,6 +69,8 @@ Existing tokens can be edited to update metadata or change the price source:
 - Adjust the **Contract Address**, **Logo**, or **Source** settings.  
 - Switch between **Fixed** and **Coingecko** pricing as needed.  
 - Confirm the update to apply changes across the platform.  
+
+---
 
 ## Best Practices for Token Management
 
