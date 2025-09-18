@@ -116,7 +116,7 @@ Two circular icons allow users to switch between viewing USD value spent and tok
 
 Displays the total number of tokens repurchased from the market and returned to the ecosystem.  
 
-  > The metric shows both the absolute buyback amount, the current circulating supply, and the percentage of supply repurchased.  
+  > The metric shows the absolute buyback amount, the current circulating supply, and the percentage of supply repurchased. 
 
 ![Ecosystem Auto Buybacks](../../../static/img/front-end/engage/ecosystem-auto-buybacks.png)
 
