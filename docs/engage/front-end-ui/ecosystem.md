@@ -122,7 +122,18 @@ Displays the total number of tokens repurchased from the market and returned to 
 
 ### Staking Banner (App Type 2)
 
-todo
+![Staking Banner](../../../static/img/front-end/engage/ecosystem-staking-banner.png)
+
+Promotional banner encouraging users to stake their tokens for rewards. Displays current APR rates and provides direct access to staking functionality.
+
+#### Banner Content
+
+- **Call-to-Action** – "Stake your [TOKEN] liquidity, to receive up to [X]% APR!"
+- **Dynamic APR** – Shows maximum available APR from active staking plans
+- **Navigation** – Clicking navigates to staking section
+- **Coming Soon State** – Shows preview message when staking is disabled
+
+> Replaces Auto Buybacks section in App Type 2, focusing users on staking opportunities.
 
 ### Token Metrics  
 
