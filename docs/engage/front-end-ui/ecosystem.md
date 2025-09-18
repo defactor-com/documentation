@@ -44,7 +44,7 @@ Each badge contains:
 - **Network Name** - The blockchain network (e.g., Base Testnet, Ethereum, Polygon)
 - **Network Logo** - Visual identifier for the blockchain
 - **Percentage** - Proportion of your total token supply on this network
-- **Visual Indicator** - The colored circle surrounding each network logo also provides a visual representation of the distribution percentage, making it easy to quickly compare allocations across networks at a glance
+- **Visual Indicator (Circle)** - The colored circle surrounding each network logo also provides a visual representation of the distribution percentage, making it easy to quickly compare allocations across networks at a glance
 
 #### Distribution Calculation
 
@@ -57,18 +57,30 @@ The **percentage (%)** shown in each badge indicates **what portion of your tota
 Toggle between supported chains such as Base, Ethereum, and Polygon.  
 > Engage supports **multi-chain compatibility**, allowing users to view metrics across all integrated networks without switching applications.  
 
-### Total Staked Value 
+### Total Staked Value Chart
 
-![Ecosystem Total Staked Value](../../../static/img/front-end/engage/ecosystem-total-staked.png)
+![Ecosystem Total Staked Value Chart](../../../static/img/front-end/engage/ecosystem-total-staked.png)
 
-Shows the USD equivalent of all tokens currently staked across pools.  
-> This value reflects community participation and helps measure ecosystem security and engagement through staking.  
+Shows the USD equivalent of all tokens currently staked across networks. The display features a circular progress indicator that visualizes the staking distribution.
 
-The tooltip displays the breakdown of the staked value by network.
+> This value reflects community participation and helps measure ecosystem security and engagement through staking.
+
+#### Chart Elements
+
+The Total Staked Value display includes:
+- **USD Amount** - The total dollar value of all staked tokens across networks
+- **Visual Indicator (Circle)** - Colored circular progress ring showing staking distribution across networks, with segments representing each network's proportion of the total staked value
+
+#### Details Tooltip
 
 ![Ecosystem Total Staked Value](../../../static/img/front-end/engage/ecosystem-total-staked-tooltip.png)
 
-<!-- TODO: CHECK AND EXPLAIN -->
+When hovering over a specific colored segment of the chart circle, a tooltip appears displaying:
+- **Network Name** - The specific blockchain
+- **Staked Amount** - USD value staked on that network
+- **Percentage Distribution** - Proportion of total staking on each network
+
+The tooltip provides granular visibility into how staking is distributed across your supported blockchain networks, helping users understand which networks have the highest staking participation.
 
 ### TVL Graph  
 
