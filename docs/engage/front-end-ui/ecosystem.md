@@ -98,7 +98,19 @@ Displays projected rewards to be earned by stakers and participants over a chose
 
 ### Total Buyback Amount (App Type 2)
 
-todo
+Displays the total value of tokens repurchased from the market through buyback programs. This component shows both USD value spent and token amounts acquired through buyback operations.
+
+Two circular icons allow users to switch between viewing USD value spent and token amounts repurchased:
+
+- **USD View** – Shows total dollar amount spent on buybacks, representing the USD value invested in token repurchases from the market
+
+![Total Buyback Amount USD View](../../../static/img/front-end/engage/ecosystem-total-buyback-amount-usd.png)
+
+- **Token View** – Displays total tokens acquired through buybacks, showing the actual token quantity repurchased and returned to the ecosystem
+
+![Total Buyback Amount Token View](../../../static/img/front-end/engage/ecosystem-total-buyback-amount-token.png)
+
+> Buyback programs help reduce circulating supply and demonstrate the project's commitment to token value preservation, potentially creating deflationary pressure that benefits existing token holders.
 
 ### Auto BuyBacks (App Type 1)
 
