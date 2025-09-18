@@ -116,12 +116,18 @@ Displays the total number of tokens repurchased from the market and returned to 
 
 ![Ecosystem Addresses Table](../../../static/img/front-end/engage/ecosystem-addresses.png)
 
-The **Ecosystem Addresses** table shows how tokens are allocated across different categories:  
+The **Ecosystem Addresses** table displays token allocation details for each tracked wallet within the ecosystem, providing transparency into how tokens are distributed across different organizational functions.
 
-- **Address Label** – e.g., *Token Sales, Foundation, Team, Ecosystem & Partners, Staking Rewards, Governance*.  
-- **Allocated** – Total assigned tokens.  
-- **Balance** – Remaining tokens available in that wallet.  
-- **% Liquid** – Percentage of tokens unlocked and usable.  
+#### Ecosystem Address Details
 
-Admins configure these wallets and allocations in **[Admin → Ecosystem Settings](/docs/engage/front-end-ui/admin-section/engage-frontend-admin-section-ecosystem-settings#)**.  
-  
+- **Address Label** – Descriptive name for the wallet's purpose (e.g., Token Sales, Foundation, Team, Ecosystem & Partners, Staking Rewards, Governance)
+- **Wallet Address** – The blockchain address of the ecosystem wallet
+- **Allocated** – Total tokens originally assigned to this address
+- **Balance** – Current token balance remaining in the wallet
+- **% Liquid** – Percentage of tokens that are unlocked and available for use
+
+> This table helps stakeholders understand token distribution patterns and track how allocated funds are being utilized across different ecosystem functions.
+
+#### Configuration
+
+Admins configure these wallet addresses and their allocations through **[Admin → Ecosystem Settings](/docs/engage/front-end-ui/admin-section/engage-frontend-admin-section-ecosystem-settings#)**.
