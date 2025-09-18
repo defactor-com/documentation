@@ -31,7 +31,24 @@ The ecosystem dashboard displays:
 Displays the current number of tokens in circulation compared to the total supply.  
 > This metric helps users track inflation/deflation of the token and monitor how much of the total supply is actively available in the market.
 
-<!-- TODO: ADD BASGE % CHAIN AND CHECK AND EXPLAIN -->
+### Badges (Network Distribution)
+
+![Ecosystem Badges](../../../static/img/front-end/engage/ecosystem-badges.png)
+
+The badges section displays the distribution of your token supply across different blockchain networks. Each badge represents a specific network where your tokens are deployed.
+
+#### Network Badge Details
+
+
+Each badge contains:
+- **Network Name** - The blockchain network (e.g., Base Testnet, Ethereum, Polygon)
+- **Network Logo** - Visual identifier for the blockchain
+- **Percentage** - Proportion of your total token supply on this network
+- **Visual Indicator** - The colored circle surrounding each network logo also provides a visual representation of the distribution percentage, making it easy to quickly compare allocations across networks at a glance
+
+#### Distribution Calculation
+
+The **percentage (%)** shown in each badge indicates **what portion of your total token supply exists on that specific blockchain network**.
 
 ### Chain(s) Selector  
 
