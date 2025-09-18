@@ -8,17 +8,19 @@ The **Ecosystem Settings** section provides administrators with tools to manage 
 
 ---
 
-## Overview of the Ecosystem Settings 
+## Overview of the Ecosystem Settings
 
-From here, administrators can:  
-- View the total allocated and unallocated tokens.  
-- Manage ecosystem wallets with descriptive labels and icons.  
-- Assign wallet addresses to specific chains.  
-- Allocate tokens to wallets based on project needs.  
-- Track balances, liquid percentages, and allocations.  
+The **Ecosystem Settings** section empowers administrators with comprehensive token management capabilities, ensuring transparent tracking and strategic allocation of project resources across the blockchain ecosystem.
 
-This helps maintain visibility and control over how project tokens are distributed across categories such as **team**, **governance**, **foundation**, **liquidity**, and **staking rewards**.
-<!-- TODO REWRITE IN THE END OF IMPROVEMENTS-->
+### Administrative Capabilities
+
+From this interface, administrators can:
+
+- **Monitor Token Distribution** – View real-time allocation status and available token balances across all networks
+- **Manage Wallet Registry** – Create and maintain ecosystem wallets with descriptive labels and visual identifiers
+- **Configure Multi-Chain Support** – Assign wallet addresses to specific blockchain networks for cross-chain token management
+- **Execute Strategic Allocations** – Distribute tokens to wallets based on project roadmap requirements and operational needs
+- **Track Financial Health** – Monitor current balances, liquidity percentages, and allocation utilization rates
 
 ## Allocation Section
 
