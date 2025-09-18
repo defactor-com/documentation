@@ -89,6 +89,6 @@ The new wallet and its allocation will appear in the Ecosystem Addresses table.
 
 - **Use clear labels** — Ensure wallet names make their purpose obvious (e.g., *Liquidity Support*, *Community Incentives*).  
 - **Track unallocated tokens** — Always leave sufficient tokens unallocated for flexibility in future initiatives.  
-- **Balance liquidity** — Ensure a a healthy percentage of liquid tokens to cover operational costs while maintaining vesting/locked tokens.  
+- **Balance liquidity** — Ensure a healthy percentage of liquid tokens to cover operational costs while maintaining vesting/locked tokens.  
 - **Audit regularly** — Verify ecosystem wallet balances align with project goals and reports.  
 - **Revoke unused wallets** — Delete entries for inactive or obsolete wallets to keep the list clean.  
