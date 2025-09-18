@@ -44,7 +44,7 @@ Each badge contains:
 - **Network Name** - The blockchain network (e.g., Base Testnet, Ethereum, Polygon)
 - **Network Logo** - Visual identifier for the blockchain
 - **Percentage** - Proportion of your total token supply on this network
-- **Visual Indicator (Circle)** - The colored circle surrounding each network logo also provides a visual representation of the distribution percentage, making it easy to quickly compare allocations across networks at a glance
+- **Visual Indicator (Circle)** - The colored circle surrounding each network logo provides a visual representation of the distribution percentage, making it easy to quickly compare allocations across networks.
 
 #### Distribution Calculation
 

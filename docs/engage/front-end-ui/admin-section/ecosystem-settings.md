@@ -42,7 +42,7 @@ When hovering over a network segment, the tooltip displays:
 - **Allocated Amount** – Total tokens allocated to this network
 - **Percentage** – Proportion of total allocation on this network
 
-> This overview enables administrators to quickly assess allocation distribution across networks and identify available tokens for future distribution, ensuring optimal resource management across the ecosystem.
+> This overview enables administrators to assess allocation distribution across networks and identify available tokens for future distribution. This helps ensure optimal resource management across the ecosystem.
 
 This dashboard integrates with the Ecosystem Addresses table to provide complete visibility into how tokens are distributed both by network allocation and by specific wallet addresses.
 
@@ -93,6 +93,6 @@ The new wallet and its allocation will appear in the Ecosystem Addresses table.
 
 - **Use clear labels** — Ensure wallet names make their purpose obvious (e.g., *Liquidity Support*, *Community Incentives*).  
 - **Track unallocated tokens** — Always leave sufficient tokens unallocated for flexibility in future initiatives.  
-- **Balance liquidity** — Ensure a healthy % liquid to cover operational costs while maintaining vesting/locked tokens.  
+- **Balance liquidity** — Ensure a a healthy percentage of liquid tokens to cover operational costs while maintaining vesting/locked tokens.  
 - **Audit regularly** — Verify ecosystem wallet balances align with project goals and reports.  
 - **Revoke unused wallets** — Delete entries for inactive or obsolete wallets to keep the list clean.  
