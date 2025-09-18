@@ -21,15 +21,29 @@ This helps maintain visibility and control over how project tokens are distribut
 
 ---
 
-## Allocation Summary  
+## Allocation Overview
 
-![Ecosystem Allocation Summary](../../../../static/img/front-end/engage/admin-ecosystem-allocation.png)
+![Ecosystem Allocation Summary](../../../../static/img/front-end/engage/admin-ecosystem-allocation-with-toolptip.png)
 
-The left-hand allocation chart shows:  
-- **Total Allocated** — The total tokens distributed across ecosystem wallets.  
-- **Unallocated** — The remaining tokens available for future allocation.  
+The **Allocation Overview** provides a comprehensive view of token distribution across networks, displaying both allocated and unallocated token amounts. This pie chart visualization helps administrators understand the current allocation status and available tokens for distribution.
 
-Looking at this admin interface screenshot, I can see the actual table structure. Here's the improved documentation based on what's actually displayed:
+#### Chart Components
+
+- **Total Allocated** – Central display showing the total amount of tokens currently allocated across all networks
+- **Network Segments** – Colored pie chart sections representing each network's share of the total allocation
+- **Total Unallocated Balance** – Overall remaining tokens available for distribution across all networks
+- **Unallocated Balance by Network** – Detailed breakdown of remaining tokens available for allocation on each specific network
+
+#### Tooltip Details
+
+When hovering over a network segment, the tooltip displays:
+- **Network Name** – The specific blockchain network
+- **Allocated Amount** – Total tokens allocated to this network
+- **Percentage** – Proportion of total allocation on this network
+
+> This overview enables administrators to quickly assess allocation distribution across networks and identify available tokens for future distribution, ensuring optimal resource management across the ecosystem.
+
+This dashboard integrates with the Ecosystem Addresses table to provide complete visibility into how tokens are distributed both by network allocation and by specific wallet addresses.
 
 ## Ecosystem Addresses Table  
 
