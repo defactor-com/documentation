@@ -4,15 +4,11 @@ title: Ecosystem Settings
 sidebar_position: 3
 ---
 
-The **Ecosystem Settings** section provides administrators with tools to manage and allocate tokens across ecosystem wallets. This ensures proper tracking of distributed funds, transparency for stakeholders, and accountability in token usage.
+The **Ecosystem Settings** section provides administrators with comprehensive tools to manage and allocate tokens across ecosystem wallets. This ensures transparent tracking, accountability in token usage, and strategic allocation of project resources across the blockchain ecosystem.
 
 ---
 
-## Overview of the Ecosystem Settings
-
-The **Ecosystem Settings** section empowers administrators with comprehensive token management capabilities, ensuring transparent tracking and strategic allocation of project resources across the blockchain ecosystem.
-
-### Administrative Capabilities
+## Administrative Capabilities
 
 From this interface, administrators can:
 
