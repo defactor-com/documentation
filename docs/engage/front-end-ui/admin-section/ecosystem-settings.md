@@ -29,21 +29,23 @@ The left-hand allocation chart shows:
 - **Total Allocated** — The total tokens distributed across ecosystem wallets.  
 - **Unallocated** — The remaining tokens available for future allocation.  
 
----
+Looking at this admin interface screenshot, I can see the actual table structure. Here's the improved documentation based on what's actually displayed:
 
 ## Ecosystem Addresses Table  
 
 ![Ecosystem Addresses Table](../../../../static/img/front-end/engage/admin-ecosystem-addresses.png)
 
-The table lists all ecosystem wallets with:  
-- **Address Label** — Descriptive name of the wallet (e.g., Team, Governance, Foundation).  
-- **Wallet Address** — The unique blockchain address for the wallet.  
-- **Amount** — Total allocated tokens.  
-- **Balance** — Current available tokens.  
-- **% Liquid** — Percentage of tokens available for use.  
-- **Actions** — Delete a wallet entry if it’s no longer valid.  
+The **Ecosystem Addresses** table provides administrative control over wallet tracking and token allocation monitoring within the ecosystem. This interface allows admins to manage which wallets are monitored for transparency reporting.
 
----
+#### Ecosystem Address Details
+
+- **Address** – Shows the descriptive label (e.g., Team, Governance, Foundation) with the actual wallet address displayed underneath in parentheses
+- **Amounts** – Total tokens originally allocated to this address 
+- **Balance** – Current token balance remaining in the wallet
+- **% Liquid** – Visual progress bar and percentage showing tokens that are currently unlocked and available for use
+- **Actions** – Delete button (trash icon) to remove wallet entries that are no longer valid
+
+> This table enables transparent tracking of token distribution across key ecosystem functions, with visual indicators showing liquidity status at a glance.
 
 ## Adding an Ecosystem Wallet  
 
