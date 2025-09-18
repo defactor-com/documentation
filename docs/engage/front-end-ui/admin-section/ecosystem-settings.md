@@ -24,7 +24,7 @@ From this interface, administrators can:
 
 ## Allocation Section
 
-![Ecosystem Allocation Summary](../../../../static/img/front-end/engage/admin-ecosystem-allocation-with-toolptip.png)
+![Ecosystem Allocation Section With Tooltip](../../../../static/img/front-end/engage/admin-ecosystem-allocation-with-toolptip.png)
 
 The **Allocation Section** provides a comprehensive view of token distribution across networks, displaying both allocated and unallocated token amounts. This pie chart visualization helps administrators understand the current allocation status and available tokens for distribution.
 
