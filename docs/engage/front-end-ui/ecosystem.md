@@ -14,15 +14,16 @@ This module ensures transparency by showing both system-wide token metrics and d
 
 ![Ecosystem Dashboard](../../../static/img/front-end/engage/ecosystem-dash.png)
 
-The ecosystem dashboard displays:  
-- **Circulating Supply** – Current tokens in circulation relative to total supply.  
-- **Chain(s) Selector** – Switch seamlessly between supported networks with full multi-chain support (e.g., Base, Ethereum, Polygon).
-- **Total Staked Value** – USD equivalent of tokens staked across all pools.  
-- **TVL Graph** – Historical Total Value Locked, filterable by 1D, 7D, 1M, and 1Y.  
-- **Expected Rewards** – Forecast of rewards accrued within the selected time frame.  
-- **Auto Buybacks** – Shows tokens already repurchased from the market.  
-- **Token Metrics** – Key indicators such as market capitalization and current token price.
-- **Ecosystem Addresses Table** – Overview of token allocations across labeled ecosystem wallets.
+The ecosystem dashboard displays:
+- **Circulating Supply** – Current tokens in circulation compared to total supply
+- **Network Distribution Badges** – Visual indicators showing token allocation across different blockchain networks  
+- **Chain Selector** – Multi-chain dropdown menu for selecting supported networks
+- **Total Staked Value Chart** – Circular visualization of USD equivalent tokens staked across networks
+- **TVL Historical Graph** – Time-series chart of Total Value Locked with 1D, 7D, 1M, and 1Y filters
+- **Expected Rewards** – Projected earnings forecast for stakers over selected time periods
+- **Auto Buybacks** – Tokens repurchased from market and returned to ecosystem
+- **Token Metrics** – Market capitalization and current token price indicators
+- **Ecosystem Addresses Table** – Token allocation breakdown across ecosystem addresses
 
 ### Circulating Supply  
 
@@ -73,7 +74,7 @@ The Total Staked Value display includes:
 
 #### Details Tooltip
 
-![Ecosystem Total Staked Value](../../../static/img/front-end/engage/ecosystem-total-staked-tooltip.png)
+![Ecosystem Total Staked Value Details Tooltip](../../../static/img/front-end/engage/ecosystem-total-staked-tooltip.png)
 
 When hovering over a specific colored segment of the chart circle, a tooltip appears displaying:
 - **Network Name** - The specific blockchain
