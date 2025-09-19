@@ -3,6 +3,6 @@
   "position": 3,
   "link": {
     "type": "generated-index",
-    "description": "The Engage Frontend provides a modular and responsive user interface for decentralized finance (DeFi) applications, enabling seamless interaction with key modules such as staking, governance, buybacks, and vesting. It is designed to support tokenization and management of real-world assets (RWA), with integrated wallet connectivity (MetaMask, Trust Wallet, WalletConnect) and a clean Material UI experience. Built with React, Material UI, and ethers.js for smart contract interaction, the Engage UI delivers an intuitive gateway to decentralized financial operations and governance."
+    "description": "Documentation for the Engage Front End UI, covering user-facing modules including Ecosystem, Staking, Governance, BuyBack, and Vesting. These modules provide real-time dashboards, staking and reward management, decentralized governance participation, token buyback tracking, and vesting schedule transparency."
   }
 }
