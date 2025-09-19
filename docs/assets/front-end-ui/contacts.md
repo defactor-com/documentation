@@ -4,101 +4,56 @@ title: Contacts
 sidebar_position: 6
 ---
 
-# Contacts
+The **Contacts Module** in the Assets frontend provides a convenient way to manage frequently used wallet addresses.  
+Instead of manually pasting long wallet strings for every transaction, users can save labeled contacts for quick and reliable access.
 
-The Contacts section provides a centralized address book for managing wallet addresses and contact information within the tokenization platform. This feature streamlines asset transfers, distribution management, and collaboration by maintaining a organized list of frequently used addresses.
+This improves efficiency, prevents errors, and provides clear context for wallet interactions across the platform.
 
----
+## Dashboard Overview  
 
-## Overview
+![Contacts Dashboard](../../../static/img/front-end/assets/assets-contacts-dashboard.png)
 
-The Contacts system allows users to store and manage wallet addresses with friendly names, making it easier to identify recipients for token transfers, asset distributions, and other blockchain transactions. This eliminates the need to manually enter long wallet addresses and reduces the risk of transfer errors.
+The **Contacts Dashboard** displays all saved contacts, including their labels and wallet addresses.  
+Users can add or remove contacts as needed.  
 
-### Key Features
+- **Name** – Human-readable label (e.g., Treasury Wallet, Partner Wallet)  
+- **Wallet** – The saved blockchain address  
+- **Actions** – Delete icon for removing contacts  
 
-- **Address Book Management** - Store and organize wallet addresses with descriptive names
-- **Quick Access** - Easily select contacts for transfers and transactions
-- **Error Prevention** - Reduce mistakes by using saved, verified addresses
-- **Contact Organization** - Maintain organized records of business partners, investors, and collaborators
+## Empty State  
 
----
+![Contacts Dashboard Empty](../../../static/img/front-end/assets/assets-contacts-dash-empty.png)
 
-## Contact Management
+When no contacts are added, the dashboard shows an **Empty State** with the option to add your first contact.  
+Clicking **+ Add Contact** opens the add contact modal.  
 
-### Viewing Contacts
+## Adding a Contact  
 
-The Contacts interface displays your saved contacts in a clean table format:
+![Add Contact Modal Empty](../../../static/img/front-end/assets/assets-contacts-modal-add-constact-empty.png)
 
-**Table Columns:**
-- **Name** - Contact's display name or identifier
-- **Wallet** - Associated blockchain wallet address
-- **Actions** - Management options (delete contact)
+To add a new contact:  
 
-**Sample Contact Display:**
-- Name: John Doe
-- Wallet: 0xa5AF486F08a336725336b119D5E282Fd30C68870
+1. Click **+ Add Contact**  
+2. Enter:  
+   - **Name** – e.g., *Treasury Wallet*  
+   - **Wallet** – The blockchain address (EVM-compatible)  
+3. Click **Add Contact** to save  
 
-### Adding New Contacts
+### Example Contact  
 
-Click the "Add Contact" button to create a new contact entry.
+![Add Contact Modal Filled](../../../static/img/front-end/assets/assets-contacts-modal-add-constact-filled.png)
 
-#### Add Contact Form
+For example, you might add a **Treasury Wallet** as the first contact:  
+- **Name** – Treasury Wallet  
+- **Wallet** – `0xa5AF486F08a336725336b119D5E282Fd30C6887O`  
 
-**Name Field** *(Required)*
-- Enter a descriptive name for the contact
-- Use clear, identifiable names (e.g., "John Doe", "ABC Investment Fund")
-- Helps distinguish between different contacts and wallet addresses
+Once saved, this contact appears in the dashboard for quick access.
 
-**Wallet Field** *(Required)*
-- Enter the complete blockchain wallet address
-- Supports standard wallet address formats (e.g., 0x...)
-- Ensure accuracy as incorrect addresses may result in lost transactions
+## Best Practices  
 
-**Add Contact Button**
-- Saves the contact information to your address book
-- Validates wallet address format before saving
-- Returns to main contacts view upon successful creation
+- **Use Clear Labels** – Choose descriptive names (e.g., Foundation Wallet, Staking Rewards) so contacts are easily recognizable.  
+- **Verify Addresses** – Always double-check wallet addresses before saving to prevent sending tokens to the wrong account.  
+- **Keep It Clean** – Remove outdated or unused contacts to maintain an organized list.  
+- **Add Key Wallets First** – Treasury, liquidity, and partner wallets are strong candidates for initial contacts.  
 
-### Contact Actions
-
-**Delete Contact**
-- Remove contacts that are no longer needed
-- Accessed via the trash/delete icon in the Actions column
-- Permanent action - deleted contacts must be re-added if needed again
-
----
-
-## Best Practices
-
-### Contact Naming
-- Use clear, descriptive names that help identify the contact
-- Include company or role information when relevant (e.g., "John Smith - Legal Counsel")
-- Maintain consistent naming conventions across your contact list
-
-### Address Verification
-- Double-check wallet addresses before saving contacts
-- Test with small transactions before large transfers
-- Verify addresses through multiple channels when possible
-
-### Contact Organization
-- Regularly review and update your contact list
-- Remove outdated or unused contacts to maintain clarity
-- Group similar contacts using consistent naming patterns
-
-### Security Considerations
-- Only add trusted and verified wallet addresses
-- Be cautious of similar-looking addresses (address spoofing)
-- Verify contact details through secure communication channels
-
----
-
-## Getting Started
-
-1. **Access Contacts** - Navigate to the Contacts section
-2. **Add First Contact** - Click "Add Contact" to create your first entry
-3. **Enter Details** - Provide contact name and wallet address
-4. **Save Contact** - Complete the form to add to your address book
-5. **Manage Contacts** - Delete contacts and create new ones as needed
-6. **Use in Transactions** - Select contacts when making transfers or distributions
-
-The Contacts feature serves as a foundation for efficient asset management and transaction processing, providing a secure and organized way to maintain important wallet address information.
+> The Contacts module ensures frequent interactions are fast, accurate, and traceable by using clear labels instead of raw wallet addresses.
