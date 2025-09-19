@@ -35,14 +35,26 @@ The **My Stats** section provides users with a personalized overview of their st
 
 ![Staking My Stats](../../../static/img/front-end/engage/staking-dash-my-stats.png)
 
-### Total Value Locked (TVL)  
+### My Total Value Locked (My TVL)  
 
 ![My TVL](../../../static/img/front-end/engage/staking-dash-metrics-my-tvl.png)
 
-Displays the total value of tokens staked, shown both in USD and token units.  
-- **Token Badge** – Identifies the collateral type used (e.g., Sharing, WETH, FACTR, USDC)  
-- **Value** – Shows total staked amount in token and USD equivalents  
-- **Percentage** – Proportion of user stake relative to their overall portfolio  
+Displays the **total value of tokens the user has staked**, shown in USD equivalent.  
+> This metric gives users a quick overview of the overall value they have locked across all staking pools.
+
+#### TVL Badge Details  
+
+![My TVL Badge](../../../static/img/front-end/engage/staking-dash-metrics-badges.png)
+
+Each badge contains:  
+- **Token Name** – The staking token (e.g., Sharing, WETH, FACTR, USDC)  
+- **Token Logo** – Visual identifier for the staked token  
+- **Staked Amount** – The number of tokens currently locked in staking  
+- **USD Value** – Dollar equivalent of the staked tokens  
+- **Percentage** – Proportion of this token compared to the user’s overall staked value  
+- **Visual Indicator (Circle)** – The surrounding circle provides a visual cue of the distribution percentage, making it easy to compare how much of the user’s total staked value is allocated per token type  
+
+> When only one token is staked, the badge will display **100% allocation**. In multi-token scenarios, the badge set provides a clear snapshot of portfolio diversification across different staked assets.
 
 ### Contribution to Ecosystem  
 
