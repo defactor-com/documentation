@@ -4,9 +4,9 @@ title: Staking
 sidebar_position: 3
 ---
 
-The **Staking Module** allows users to lock tokens into configurable pools and earn rewards based on pool parameters. It provides a clear interface to track your total value locked, ecosystem contribution, expected rewards, and staking history.  
+The **Staking Module** enables users to lock tokens into pools and earn rewards over time. It provides a transparent view of total staked value, contribution to the ecosystem, active and completed positions, and claimable rewards.  
 
-Staking is central to reinforcing token utility, governance participation, and long-term alignment between community members. Engage supports flexible staking strategies such as different lockup durations, varied APRs, and multiple pools.
+This module ensures accessibility for all users while Admins manage staking pools, reward rates, and token configurations via the **[Admin → Staking Settings](/docs/engage/front-end-ui/admin-section/engage-frontend-admin-section-staking-settings#)**.
 
 ---
 
@@ -14,56 +14,121 @@ Staking is central to reinforcing token utility, governance participation, and l
 
 ![Staking Dashboard](../../../static/img/front-end/engage/staking-dash.png)
 
-The main staking dashboard includes:  
-- **My Total Value Locked (TVL)** – Total value of tokens you have staked.  
-- **My Contribution to the Ecosystem** – Displays your percentage share of the ecosystem’s staked tokens.  
-- **Rewards Panel** – Breakdown of rewards received, expected rewards, and claimable tokens.  
-- **Claim Now** – Button to withdraw currently unlocked rewards.  
+The staking dashboard displays:
+- **Chain Selector** – Dropdown for switching between supported networks  
+- **My Stats** – User overview with TVL, contribution percentage, and rewards  
+- **Staking Pools Table** – Available pools with APR, duration, and reward details  
+- **Positions Table** – Lists both open and completed positions  
+- **Archive** – Records of past staking activity  
+
+## Chain Selector  
+
+![Chain Selector](../../../static/img/front-end/engage/staking-dash-title-and-multi-chain-selector.png)
+
+Users can toggle between supported networks using the **multi-chain selector**.  
+
+> Engage supports **multi-chain staking**, allowing participants to manage and view stakes across all integrated blockchains from a single dashboard.
+
+## My Stats  
+
+The **My Stats** section provides users with a personalized overview of their staking performance and contributions within the ecosystem.  
+
+![Staking My Stats](../../../static/img/front-end/engage/staking-dash-my-stats.png)
+
+### Total Value Locked (TVL)  
+
+![My TVL](../../../static/img/front-end/engage/staking-dash-metrics-my-tvl.png)
+
+Displays the total value of tokens staked, shown both in USD and token units.  
+- **Token Badge** – Identifies the collateral type used (e.g., Sharing, WETH, FACTR, USDC)  
+- **Value** – Shows total staked amount in token and USD equivalents  
+- **Percentage** – Proportion of user stake relative to their overall portfolio  
+
+### Contribution to Ecosystem  
+
+![Contribution Chart](../../../static/img/front-end/engage/staking-dash-metrics-char.png)
+
+Represents the user’s share of the ecosystem staking pool.  
+
+- **Circular Contribution Chart** – Displays the percentage of the pool owned by the user  
+- **Tooltip (My Contribution)** – Shows exact token amount and user percentage  
+  ![Contribution Tooltip - My](../../../static/img/front-end/engage/staking-dash-metrics-chart-with-tooltip-my-contribution.png)  
+- **Tooltip (Others)** – Displays aggregated token value and percentage for all other participants  
+  ![Contribution Tooltip - Others](../../../static/img/front-end/engage/staking-dash-metrics-chart-with-tooltip-others.png)  
+
+### Rewards  
+
+![Rewards Panel](../../../static/img/front-end/engage/staking-dash-metrics-rewards.png)
+
+Provides a detailed breakdown of staking rewards:  
+- **Rewards Received** – Tokens already earned and available for claim  
+- **Expected Rewards** – Projected returns filterable by 1D, 7D, 1M, or 1Y  
+- **Claimable Balance** – Tokens available for immediate withdrawal  
+
+#### Claim Button  
+
+![Claim Now](../../../static/img/front-end/engage/staking-dash-metrics-rewards-claim.png)
+
+Users can collect accumulated rewards with the **Claim Now** button.  
+
+### Reward Token Selector  
+
+![Reward Token Selector](../../../static/img/front-end/engage/staking-dash-metrics-rewards-token-selector.png)
+
+Allows switching between supported collateral/reward tokens such as Sharing, WETH, FACTR, or USDC.  
+
+> This feature ensures users can view and claim rewards specific to the token type they staked.
 
 ## Staking Pools  
 
-![Staking Pools Table](../../../static/img/front-end/engage/staking-pools.png)
+![Staking Pools Table](../../../static/img/front-end/engage/staking-dash-table-staking-pools.png)
 
-The **Staking Pools** section lists all available pools with details such as:  
-- **Pool Name** – Identifier of the staking pool.  
-- **Chain(s)** – Blockchain network hosting the pool.  
-- **Collateral / Reward Token** – Token deposited and token rewarded.  
-- **APR / Unlocked APR** – Annual percentage rates (locked vs. unlocked).  
-- **Duration** – Lockup period (e.g., 30, 90, 180, 365 days).  
-- **Rewards End Time** – Final date when rewards stop.  
-- **New Position** – Button to join the pool.  
-
-## Opening a Staking Position  
-
-![Open Staking Position](../../../static/img/front-end/engage/staking-open-position.png)
-
-To open a new staking position:  
-1. Choose a pool from the **Staking Pools** table.  
-2. Click **New Position**.  
-3. Enter the amount of tokens to stake.  
-4. Confirm the transaction in your wallet.  
+The **Staking Pools** table lists all available pools and their parameters:  
+- **Pool Name** – Pool identifier (e.g., Network Growth Pool, Yield Pool, Evergreen Staking)  
+- **Chain(s)** – Supported networks  
+- **Collateral** – Token required for participation  
+- **Reward Token** – Token distributed as rewards  
+- **APR / Unlocked APR** – Rates for locked vs unlocked staking  
+- **Duration** – Length of staking period (e.g., 90d, 180d, 365d)  
+- **Rewards End Time** – Pool’s expiration date  
+- **New Position** – Action to start staking in the pool  
 
 ## Positions  
 
-![Staking Positions](../../../static/img/front-end/engage/staking-positions.png)
+![Staking Positions](../../../static/img/front-end/engage/staking-dash-table-positions.png)
 
-The **Positions** section shows both open and completed pools:  
+The **Positions** section shows all current and past user stakes. It is divided into **Completed Pools** and **Open Positions**.
 
-- **Completed Pools** – Pools where the lock period ended; tokens and rewards can be restaked or have already been claimed. 
-- **Open Positions** – Active stakes with details like pool mode, amount staked, APR, conversion rate, remaining time, and claimable rewards.   
-- **Archive Tab** – Historical record of older completed positions.  
+### Completed Pools  
 
-## Claiming Rewards  
+![Completed Pools](../../../static/img/front-end/engage/staking-dash-table-positions-completed-pools.png)
 
-Rewards can be claimed directly from the dashboard:  
-- **Claim Now** – Appears on the Rewards panel if tokens are unlocked.  
-- **Claim (per pool)** – Button within Open Positions to withdraw rewards from a specific pool.  
-- **Restake** – Available for completed pools to re-enter with previously staked tokens.  
+- **Pool Name** – Pool staked in  
+- **Pool Mode** – Lock duration chosen  
+- **Amount Staked** – Tokens previously locked  
+- **Chain** – Network used  
+- **APR & Unlocked APR** – Applied reward rates  
+- **Claimed** – Rewards already withdrawn  
+- **Restake** – Option to reinvest tokens into a new pool cycle  
 
+### Open Positions  
 
-## Key Features  
+![Open Positions](../../../static/img/front-end/engage/staking-dash-table-positions-open-positions.png)
 
-- **Multiple staking pools** with different APRs and lockup durations.  
-- **Real-time rewards** displayed in the dashboard and pools list.  
-- **Wallet integration** with MetaMask, Rainbow Wallet, WalletConnect and more.  
-- **Flexible management** – Users can open, close, claim, or restake positions as needed.  
+- **Pool Name** – Current active pool  
+- **Pool Mode** – Lock duration selected  
+- **Amount Staked** – Tokens actively locked  
+- **APR & Conversion Rate** – Returns and staking-to-reward ratio  
+- **Remaining Time** – Days left in staking cycle  
+- **Claimed** – Rewards earned so far  
+- **Claim Button** – Allows partial reward claims before the pool finishes  
+
+## Archive  
+
+![Staking Archive](../../../static/img/front-end/engage/staking-dash-table-archive.png)
+
+The **Archive** tab provides a historical record of all completed staking positions:  
+- Shows pool details, durations, amounts staked, and claimed rewards  
+- Provides a **Restake** option for re-activating previous positions  
+
+> Archive ensures transparency and enables long-term tracking of staking activity.
