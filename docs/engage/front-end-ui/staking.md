@@ -155,13 +155,29 @@ The **Positions** section shows all current and past user stakes. It is divided 
 
 ![Completed Pools](../../../static/img/front-end/engage/staking-dash-table-positions-completed-pools.png)
 
-- **Pool Name** – Pool staked in  
-- **Pool Mode** – Lock duration chosen  
-- **Amount Staked** – Tokens previously locked  
-- **Chain** – Network used  
-- **APR & Unlocked APR** – Applied reward rates  
-- **Claimed** – Rewards already withdrawn  
-- **Restake** – Option to reinvest tokens into a new pool cycle  
+The **Completed Pools** table shows all staking positions that have finished their lock duration. It provides a summary of the original stake and options for reusing those tokens.  
+
+Each row contains:  
+- **Pool Name** – The pool in which the stake was originally placed  
+- **Pool Mode** – The lock duration chosen  
+- **Amount Staked** – Number of tokens previously locked in the pool  
+- **Chain** – The blockchain network where the pool was active  
+- **APR & Unlocked APR** – Applied reward rates during the staking period  
+- **Claimed** – Rewards already withdrawn from the position  
+- **Restake** – A quick action to reinvest the matured tokens into a new staking cycle  
+
+#### Restake Button  
+
+![Restake Button](../../../static/img/front-end/engage/staking-dash-table-positions-completed-pools-restake-button.png)
+
+The **Restake** button allows users to instantly roll over their matured stake into a new pool without manually withdrawing and re-staking.  
+
+When selected:  
+- The system calculates the eligible restake amount (original staked tokens + any accrued rewards).  
+- Users confirm the restake transaction in their wallet (e.g., MetaMask).  
+- Tokens are redeployed into the same or updated pool configuration depending on availability.  
+
+> This feature simplifies the reinvestment process, enabling continuous staking participation with minimal effort.
 
 ### Open Positions  
 
