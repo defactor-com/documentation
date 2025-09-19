@@ -113,7 +113,7 @@ The **Staking Pools** table lists all available pools and their parameters:
 - **Collateral** – Token required for participation  
 - **Reward Token** – Token distributed as rewards  
 - **APR / Unlocked APR** – Rates for locked vs unlocked staking  
-- **Duration** – Length of staking period (e.g., 90d, 180d, 365d)  
+- **Duration** – Length of staking period
 - **Rewards End Time** – Pool’s expiration date  
 - **New Position** – Action to start staking in the pool  
 
