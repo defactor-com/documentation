@@ -20,7 +20,7 @@ The **Manage Staking Pools** table displays all existing pools, including both a
 - **Collateral** – Token required to stake  
 - **APR & Unlocked APR** – Annual reward rate (locked vs. unlocked)  
 - **Token Ratio** – Staking-to-reward conversion rate  
-- **Lock** – Duration of the staking period (days)  
+- **Lock** – Duration of the staking period
 - **Closing** – Pool closing date/time  
 - **Rewards Until** – Date when reward distribution ends  
 - **Reward Token** – Token used for rewards  
@@ -128,6 +128,6 @@ To ensure staking pools are configured properly, the system enforces the followi
 - **APR / APR After Unlock** – Cannot exceed 100%. `APR After Unlock` must not be greater than base APR.  
 - **Staking Limits** – `Max Staked Amount` must be greater than `Min Staked Amount`.  
 - **Reward End Time** – Must be later than `Staking End Time + Lock Duration`.  
-- **Token Ratio** – Must be a valid number between 0% and 100% (cannot be 0).  
+- **Token Ratio** – Must be a valid number between 0% and 100%.  
 
 > If validation rules are not met, Admins cannot proceed with creating or editing a pool until corrections are made.
