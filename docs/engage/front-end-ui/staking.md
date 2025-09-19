@@ -107,15 +107,43 @@ Users can collect accumulated rewards with the **Claim Now** button.
 
 ![Staking Pools Table](../../../static/img/front-end/engage/staking-dash-table-staking-pools.png)
 
-The **Staking Pools** table lists all available pools and their parameters:  
+The **Staking Pools** table lists all available staking opportunities. Each row provides essential parameters for comparing pools and deciding where to stake:  
 - **Pool Name** – Pool identifier (e.g., Network Growth Pool, Yield Pool, Evergreen Staking)  
-- **Chain(s)** – Supported networks  
+- **Chain(s)** – Networks where the pool is active  
 - **Collateral** – Token required for participation  
-- **Reward Token** – Token distributed as rewards  
-- **APR / Unlocked APR** – Rates for locked vs unlocked staking  
-- **Duration** – Length of staking period
-- **Rewards End Time** – Pool’s expiration date  
-- **New Position** – Action to start staking in the pool  
+- **Reward Token** – Token distributed as staking rewards  
+- **APR / Unlocked APR** – Annual reward rate, showing locked vs unlocked percentages  
+- **Duration** – Length of the staking period
+- **Rewards End Time** – When the pool finishes distributing rewards  
+- **New Position** – Action button that opens the **Open Position modal** to begin staking  
+
+### Open Position Modal  
+
+Opening a new position is a **guided, two-step process** designed to help users configure and confirm their stake.  
+
+#### Step 1: General Details  
+
+![Open Position - General Details](../../../static/img/front-end/engage/staking-dash-table-staking-pools-modal-open-position-general-details.png)
+
+In this step, users must:  
+- **Select Chain** – Choose the blockchain network to stake on  
+- **Select Collateral** – Pick the token they wish to stake  
+- **Select Reward Token** – Choose which token they want to earn as rewards  
+
+Validation ensures that all three fields are selected before continuing.  
+> If no eligible pools exist for the chosen combination, the system displays a message "There are no pools available with this configuration." informing the user.  
+
+#### Step 2: Position Details  
+
+![Open Position - Position Details](../../../static/img/front-end/engage/staking-dash-table-staking-pools-modal-open-position-position-details.png)
+
+In this step, users define their stake:  
+- **Amount** – Enter the number of tokens to lock  
+- **Min/Max Buttons** – Quick actions to set the minimum or maximum allowable amount  
+- **Validation** – Real-time error handling prevents over-staking or invalid inputs  
+- **Pool Info** – Displays key details such as APR, duration, and remaining capacity  
+
+> Once confirmed, the transaction is executed on-chain. If approval is needed (first-time staking with a token), the system automatically prompts the user to approve token spending.  
 
 ## Positions  
 
