@@ -86,22 +86,22 @@ If the user is the only participant, the chart will show **100% contribution**. 
 
 Provides a detailed breakdown of staking rewards:  
 - **Rewards Received** – Tokens already earned and available for claim  
-- **Expected Rewards** – Projected returns filterable by 1D, 7D, 1M, or 1Y  
+- **Expected Rewards** – A forward-looking estimate of potential earnings
 - **Claimable Balance** – Tokens available for immediate withdrawal  
 
-#### Claim Button  
-
-![Claim Now](../../../static/img/front-end/engage/staking-dash-metrics-rewards-claim.png)
-
-Users can collect accumulated rewards with the **Claim Now** button.  
-
-### Reward Token Selector  
+#### Rewards Token Selector  
 
 ![Reward Token Selector](../../../static/img/front-end/engage/staking-dash-metrics-rewards-token-selector.png)
 
 Allows switching between supported collateral/reward tokens such as Sharing, WETH, FACTR, or USDC.  
 
 > This feature ensures users can view and claim rewards specific to the token type they staked.
+
+#### Rewards Claim Button  
+
+![Claim Now](../../../static/img/front-end/engage/staking-dash-metrics-rewards-claim.png)
+
+Users can collect accumulated rewards with the **Claim Now** button.  
 
 ## Staking Pools  
 
