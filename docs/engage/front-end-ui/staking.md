@@ -44,6 +44,8 @@ Displays the **total value of tokens the user has staked**, shown in USD equival
 
 #### TVL Badge Details  
 
+The badges section breaks down how a user’s staked value is distributed across tokens.
+
 ![My TVL Badge](../../../static/img/front-end/engage/staking-dash-metrics-badges.png)
 
 Each badge contains:  
@@ -60,13 +62,23 @@ Each badge contains:
 
 ![Contribution Chart](../../../static/img/front-end/engage/staking-dash-metrics-char.png)
 
-Represents the user’s share of the ecosystem staking pool.  
+The **Contribution to Ecosystem** chart visualizes the user’s share of the total staking pool for a selected token. It calculates how much of the staked collateral belongs to the user versus other participants.
 
-- **Circular Contribution Chart** – Displays the percentage of the pool owned by the user  
-- **Tooltip (My Contribution)** – Shows exact token amount and user percentage  
+#### Chart Details  
+
+- **Circular Contribution Chart** – Displays the user’s percentage contribution relative to the total staked collateral for the selected token.  
+- **Tooltip (My Contribution)** – Shows the exact token amount staked by the user along with their percentage share.  
   ![Contribution Tooltip - My](../../../static/img/front-end/engage/staking-dash-metrics-chart-with-tooltip-my-contribution.png)  
-- **Tooltip (Others)** – Displays aggregated token value and percentage for all other participants  
+- **Tooltip (Others)** – Displays the aggregated token amount and percentage contributed by all other stakers in the pool.  
   ![Contribution Tooltip - Others](../../../static/img/front-end/engage/staking-dash-metrics-chart-with-tooltip-others.png)  
+
+#### Distribution Calculation  
+
+If the user is the only participant, the chart will show **100% contribution**. Otherwise, the chart splits into two slices:  
+- **My Contribution** – User’s staked amount  
+- **Others** – Remaining pool amount  
+
+> This visualization provides clear insight into the user’s weight within the ecosystem and highlights how much influence their stake carries compared to the rest of the participants.
 
 ### Rewards  
 
