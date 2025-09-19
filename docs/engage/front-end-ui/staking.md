@@ -183,13 +183,29 @@ When selected:
 
 ![Open Positions](../../../static/img/front-end/engage/staking-dash-table-positions-open-positions.png)
 
-- **Pool Name** – Current active pool  
-- **Pool Mode** – Lock duration selected  
-- **Amount Staked** – Tokens actively locked  
-- **APR & Conversion Rate** – Returns and staking-to-reward ratio  
-- **Remaining Time** – Days left in staking cycle  
-- **Claimed** – Rewards earned so far  
-- **Claim Button** – Allows partial reward claims before the pool finishes  
+The **Open Positions** table displays all currently active stakes that are still within their lock duration. This view helps users monitor ongoing commitments and claim partial rewards before completion.  
+
+Each row contains:  
+- **Pool Name** – The active pool where tokens are staked  
+- **Pool Mode** – Lock duration selected (e.g., 90d, 180d, 365d)  
+- **Amount Staked** – Tokens actively locked in the pool  
+- **APR & Conversion Rate** – Annual reward rate and the staking-to-reward ratio  
+- **Remaining Time** – Number of days left until the stake matures  
+- **Claimed** – Rewards already collected so far  
+- **Claim Button** – Quick action to withdraw claimable rewards before the pool finishes  
+
+#### Claim Button  
+
+![Claim Button](../../../static/img/front-end/engage/staking-dash-table-positions-open-positions-claim-button.png)
+
+The **Claim** button allows users to collect earned rewards while their position is still active.  
+
+When selected:  
+- The system calculates the amount available to claim.  
+- A transaction request is triggered in the user’s connected wallet (e.g., MetaMask).  
+- Once confirmed, the claimed rewards are transferred to the user’s wallet while the principal stake remains locked until maturity.  
+
+> This feature provides flexibility by allowing users to realize part of their earnings during the staking cycle without closing their entire position.
 
 ## Archive  
 
