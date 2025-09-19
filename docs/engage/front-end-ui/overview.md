@@ -30,4 +30,4 @@ The frontend is organized into several main modules, each focusing on a key area
 
 ## Related Documentation  
 
-- **[Admin Section Overview](/docs/engage/front-end-ui/admin-section/engage-frontend-admin-section-overview#)** – Administrative interface for configuring pools, wallets, vesting schedules, governance, tokens, and buyback settings.
+- **[Engage Admin Section](/docs/engage/front-end-ui/admin-section/engage-frontend-admin-section-overview#)** – Administrative interface for configuring pools, wallets, vesting schedules, governance, tokens, and buyback settings.
