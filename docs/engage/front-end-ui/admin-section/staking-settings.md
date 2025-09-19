@@ -4,109 +4,130 @@ title: Staking Settings
 sidebar_position: 3
 ---
 
-This section allows administrators to configure, launch, and manage staking pools across supported blockchains. It provides fine-grained controls for APR rates, staking limits, lock durations, and reward token distributions.  
+The **Staking Settings** section allows Admins to create, configure, and manage staking pools.  
+From here, Admins can define APR rates, lock durations, reward tokens, and staking limits. They can also pause/unpause the staking contract for emergency or maintenance needs.
 
 ---
 
-## Overview of the Staking Settings  
+## Manage Staking Pools  
 
-The **Staking Settings** panel empowers project administrators to:  
-- Create and configure new staking pools.  
-- Manage active and closed pools.  
-- Adjust reward tokenomics through APR rates and token conversion ratios.  
-- Set lock durations, staking limits, and reward distribution end dates.  
-- Monitor pool status and reward progress.  
+![Manage Staking Pools](../../../../static/img/front-end/engage/admin-staking-manage-staking-pools.png)
 
-By using this section, administrators ensure that staking mechanics align with the project’s ecosystem growth, governance incentives, and liquidity strategies.  
+The **Manage Staking Pools** table displays all existing pools, including both active and closed ones. Each row shows:
 
----
+- **Name** – Pool identifier (e.g., Evergreen Staking, Yield Pool)  
+- **Chain** – The blockchain network where the pool is deployed  
+- **Collateral** – Token required to stake  
+- **APR & Unlocked APR** – Annual reward rate (locked vs. unlocked)  
+- **Token Ratio** – Staking-to-reward conversion rate  
+- **Lock** – Duration of the staking period (days)  
+- **Closing** – Pool closing date/time  
+- **Rewards Until** – Date when reward distribution ends  
+- **Reward Token** – Token used for rewards  
+- **Actions** – Options to edit or configure the pool  
 
-## Creating a Staking Pool  
+## Add Pool  
 
-When creating a pool, administrators go through **two configuration steps**:  
+![Add Pool Button](../../../../static/img/front-end/engage/admin-staking-manage-staking-pools-add-pool-button.png)
 
-### 1. Token Settings  
+Admins can create new staking pools by clicking **Add Pool**.  
 
-![Staking Pool - Token Settings](../../../../static/img/front-end/engage/admin-staking-token-settings.png)
+### Step 1: Token Settings  
 
-Define the base chain and tokens used in the pool:  
-- **Chain**: Select the blockchain network (e.g., Ethereum, Base Sepolia, Polygon).  
-- **Staking Token**: The token that users will deposit into the pool.  
-- **Reward Token**: The token distributed as staking rewards.  
+![Add Pool Modal – Token Settings](../../../../static/img/front-end/engage/admin-staking-manage-staking-pools-add-pool-modal-token-settings.png)
 
-> Tip: Staking and reward tokens may be the same (self-rewarding pool) or different (cross-token incentives).  
+In this step, Admins define the blockchain and token parameters:  
+- **Chain** – Select the blockchain network  
+- **Staking Token** – Token users will lock into the pool  
+- **Reward Token** – Token distributed as staking rewards  
 
-### 2. Pool Details  
+Admins can choose from available tokens via the dropdown menu:  
 
-![Staking Pool - Pool Details](../../../../static/img/front-end/engage/admin-staking-pool-details.png)
+![Token Selector Dropdown](../../../../static/img/front-end/engage/admin-staking-manage-staking-pools-add-pool-modal-token-settings-open-dropdown.png)
 
-Configure the operational parameters of the staking pool:  
-- **Pool Name**: Assign a unique, descriptive name for easy tracking.  
-- **APR Rates**:  
-  - **APR**: Base annual percentage rate for staked assets.  
-  - **APR After Unlock**: Optional adjusted APR for unlocked staking phases.  
-  - **Conversion Rate**: Defines reward distribution ratio (e.g., `1 Token A = 100 Token B`).  
-- **Staking Limits**:  
-  - **Max Staked Amount (per pool)**: Caps the total stakable tokens in the pool.  
-  - **Min Staked Amount (per position)**: Ensures a minimum user participation threshold.  
-- **Time Configuration**:  
-  - **Staking End Time**: Deadline for users to enter the pool.  
-  - **Reward End Time**: Date when rewards stop accruing.  
-  - **Lock Duration**: Fixed lock period per stake (e.g., 30, 90, 365 days).  
+### Step 2: Pool Details  
 
-> Admins must configure all required fields before continuing. Unfilled or invalid fields disable the **Continue** button.  
+![Add Pool Modal – Pool Details](../../../../static/img/front-end/engage/admin-staking-manage-staking-pools-add-pool-modal-pool-details.png)
 
----
+Admins configure pool parameters such as:  
+- **Pool Name** – Custom name for the pool  
+- **APR Rates** – Define base APR and APR after unlock  
+- **Conversion Rate** – Token staking-to-reward conversion ratio  
+- **Staking Limits** – Minimum and maximum staking amounts (per pool / per position)  
+- **Time Configuration** –  
+  - *Staking End Time* – When new positions can no longer be opened  
+  - *Reward End Time* – Final date for reward distribution  
+  - *Lock Duration* – Number of days tokens remain locked  
 
-## Managing Staking Pools  
+Once filled, Admins can continue and preview the pool before final confirmation.
 
-![Staking Pools Table](../../../../static/img/front-end/engage/admin-staking-pools-table.png)
+## Pool Actions  
 
-Once pools are created, the **Admin Section** provides an overview table with live details:  
-- **Name**: Pool name for quick reference.  
-- **Chain**: Blockchain on which the pool operates.  
-- **Collateral**: Token used for staking.  
-- **APR / Unlocked APR**: Reward rates applied.  
-- **Token Ratio**: Conversion rate between staked and reward tokens.  
-- **Lock**: Lock duration in days.  
-- **Closing**: Time left until staking closes (or "Closed").  
-- **Rewards Until**: Date rewards will be distributed until.  
-- **Reward Token**: The token used to pay out rewards.  
+![Pool Actions](../../../../static/img/front-end/engage/admin-staking-manage-staking-pools-table-actions.png)
 
-From this panel, administrators can:  
-- Review active and expired pools.  
-- Validate APR settings and conversion ratios.  
-- Ensure lock durations and end dates align with project incentives.  
+From the **Actions menu**, Admins can configure existing pools with two options:  
 
----
+- **Edit Staking Pool** – Update pool parameters such as APR, lock duration, staking limits, or pool name.  
+- **Set Token Ratio** – Adjust the staking-to-reward conversion ratio for a specific pool.  
 
-## Best Practices for Staking Configuration  
+### Edit Staking Pool  
 
-- **Balance APR and Token Supply**: Avoid setting overly high APRs that may dilute token value.  
-- **Use Lock Durations Strategically**: Longer locks (180–365 days) encourage commitment, while shorter locks (30–90 days) boost liquidity.  
-- **Diversify Reward Tokens**: Consider rewarding with governance tokens, stablecoins, or ecosystem assets.  
-- **Monitor Closing Dates**: Plan new pools ahead of time so users always have staking opportunities available.  
-- **Audit Limits**: Ensure maximum and minimum staking limits are realistic for community participation.  
+![Edit Pool Action](../../../../static/img/front-end/engage/admin-staking-manage-staking-pools-table-actions-edit-staking-pool.png)  
+![Edit Staking Pool Modal](../../../../static/img/front-end/engage/admin-staking-manage-staking-pools-table-actions-edit-staking-pool-modal.png)
 
----
+Admins can modify details of an active pool through the **Edit Staking Pool modal**:  
+- **Chain & Tokens** – View and confirm the network, staking token, and reward token (not editable once deployed).  
+- **Pool Name** – Update the name of the pool for better identification.  
+- **APR & APR After Unlock** – Adjust reward rates. Validation ensures APR values do not exceed 100% and `APR After Unlock` cannot be higher than base APR.  
+- **Staking Limits** – Update maximum staked amount per pool and minimum staked amount per position. The system prevents saving if `Max < Min`.  
+- **Time Configuration** – Change staking end time, reward end time, and lock duration. Validation ensures reward end time is later than staking end + lock duration.  
 
-## Example Use Cases  
+> **Note:** Some updates (like APR, staking amounts, and reward timelines) trigger on-chain transactions, while others (like pool name) may only update metadata.  
 
-1. **Liquidity Incentive Pool**:  
-   - APR: 10%  
-   - Lock: 90 Days  
-   - Reward Token: Governance Token  
+### Set Token Ratio  
 
-2. **Stablecoin Yield Pool**:  
-   - APR: 5%  
-   - Lock: 30 Days  
-   - Reward Token: USDC  
+![Set Token Ratio Action](../../../../static/img/front-end/engage/admin-staking-manage-staking-pools-table-actions-set-token-ratio.png)  
+![Set Token Ratio Modal](../../../../static/img/front-end/engage/admin-staking-manage-staking-pools-table-actions-set-token-ratio-modal.png)
 
-3. **Evergreen Long-Term Pool**:  
-   - APR: 2% (Unlocked APR 1%)  
-   - Lock: 365 Days  
-   - Reward Token: Native Token  
+The **Set Token Ratio modal** allows Admins to adjust conversion between staked tokens and reward tokens:  
+- **Current Token Ratio** – Displays the most recent ratio applied to the pool.  
+- **Chain Selector** – Choose the blockchain network plan to update.  
+- **New Token Ratio** – Enter the updated percentage. Validation rules include:  
+  - Must be greater than 0%  
+  - Cannot exceed 100%  
+  - Must be a valid number  
 
-> These configurations can be mixed and tailored depending on ecosystem priorities (growth, governance, liquidity, or stability).  
+Once confirmed, the update triggers a blockchain transaction to apply the new ratio.  
 
----
+> Adjusting the token ratio can be used to fine-tune reward distribution without altering APR values or pool durations.  
+
+## Contract Controls  
+
+![Settings Button](../../../../static/img/front-end/engage/admin-staking-manage-staking-pools-settings-button.png)  
+![Settings Menu](../../../../static/img/front-end/engage/admin-staking-manage-staking-pools-settings-open.png)
+
+The **Settings button** opens administrative options, including:  
+- **Pause Contract** – Temporarily pause all staking actions (e.g., during upgrades or incidents)  
+- **Unpause Contract** – Resume staking operations  
+
+When paused, a banner appears in the UI with the option to **Unpause Contract**.  
+
+## Pools Table  
+
+![Pools Table](../../../../static/img/front-end/engage/admin-staking-manage-staking-pools-table.png)
+
+The pools table is the central management view. It provides filtering, pagination, and visibility into both active and closed staking pools.  
+
+> Admins must ensure that reward timelines, APR values, and staking limits are configured correctly before deploying a new pool, as these settings directly impact user experience and smart contract interactions.  
+
+## Validation Rules Summary  
+
+To ensure staking pools are configured properly, the system enforces the following validation rules:  
+
+- **Pool Name** – Must be between 3 and 30 characters.  
+- **APR / APR After Unlock** – Cannot exceed 100%. `APR After Unlock` must not be greater than base APR.  
+- **Staking Limits** – `Max Staked Amount` must be greater than `Min Staked Amount`.  
+- **Reward End Time** – Must be later than `Staking End Time + Lock Duration`.  
+- **Token Ratio** – Must be a valid number between 0% and 100% (cannot be 0).  
+
+> If validation rules are not met, Admins cannot proceed with creating or editing a pool until corrections are made.
