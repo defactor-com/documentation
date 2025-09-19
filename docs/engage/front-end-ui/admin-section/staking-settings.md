@@ -82,7 +82,7 @@ Admins can modify details of an active pool through the **Edit Staking Pool moda
 - **Staking Limits** – Update maximum staked amount per pool and minimum staked amount per position. The system prevents saving if `Max < Min`.  
 - **Time Configuration** – Change staking end time, reward end time, and lock duration. Validation ensures reward end time is later than staking end + lock duration.  
 
-> **Note:** Some updates (like APR, staking amounts, and reward timelines) trigger on-chain transactions, while others (like pool name) may only update metadata.  
+> **Note:** APR, staking limits, and reward timelines require on-chain transactions. Metadata-only changes (like pool name) update instantly without a transaction.  
 
 ### Set Token Ratio  
 
