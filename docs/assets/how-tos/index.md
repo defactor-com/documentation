@@ -161,9 +161,20 @@ In the Tokenization Settings phase, you configure the blockchain parameters that
 **Token Standard Selection:**
 Choose between available Ethereum token standards:
 
-- **Ethereum (ERC-20)**: Standard fungible tokens that enable broad compatibility and liquidity across DeFi platforms. Suitable for assets such as real estate, commodities, and securities.
+When creating assets, you can choose between **ERC-20** (fungible tokens) and **ERC-3643** (permissioned security tokens).  
 
-- **Ethereum (ERC-3643)**: Permissioned token standard designed for Real World Assets (RWAs) with integrated identity verification, governance features, and transaction controls for regulatory compliance.
+| Feature | **ERC-20** | **ERC-3643** |
+|---------|------------|--------------|
+| **Type** | Fungible token standard | Permissioned security token standard |
+| **Use Case** | General utility tokens, stablecoins, fungible asset representations | Regulated financial instruments, tokenized securities |
+| **Access Control** | Open — anyone can hold and transfer | Permissioned — requires KYC/AML checks before holding or transferring |
+| **Compliance** | No built-in compliance layer | Built-in compliance to support securities regulations |
+| **Flexibility** | Simple, widely adopted | Advanced, designed for compliant tokenization |
+| **Best For** | Liquidity, payments, rewards, basic fungible assets | Regulated assets, investor compliance, security tokens |
+
+> **Tip:**  
+> - Use **ERC-20** when you need broad accessibility and simplicity.  
+> - Use **ERC-3643** when compliance with financial regulations is required.  
 
 **Token Economics Configuration:**
 - **Price**: Set the total asset valuation in USDC
@@ -230,8 +241,6 @@ After review, assets move from "In verification" to **Verified (1)** in your das
 
 Once verification is complete, the asset is ready for the final minting phase to deploy on the blockchain.
 
-You're right, I need to match the images with their actual content based on the filenames. Here's the corrected Data Phase 4:
-
 ### Data Phase 4: Minting
 
 The final phase in the asset creation workflow deploys your verified asset as tokens on the blockchain through a structured 4-step process:
@@ -275,7 +284,6 @@ Once minted, your asset appears in the dashboard under **Minted** status and inc
 - Complete token information and contract addresses
 - Transaction history showing deployment events
 - Management options like token transfers, pool creation, and asset verification
-- Real-time token supply and ownership data
 
 The minting process finalizes your asset's transformation from a physical or digital asset into blockchain-based tokens, making them ready for trading, fractional ownership, or other DeFi activities.
 
@@ -286,7 +294,7 @@ At any point during the asset creation process, you can save your work as a draf
 ![Save as Draft Button](../../../../documentation/static/img/front-end/assets/how-tos/assets-how-tos-save-as-draft.png)
 
 **Save as Draft Feature:**
-- Click **"Save as draft"** button available in the top-right corner of any phase
+- Click **"Save as Draft"** button available in the top-right corner of any phase
 - Your progress is automatically saved and can be resumed later
 - Drafted assets appear in your dashboard under the **Drafts** section for easy access
 
@@ -306,7 +314,7 @@ Assets can be deleted at certain stages of the creation process, with important 
 
 **How to Delete:**
 
-1. Use the action menu (⋯) and Edit informations in the dashboard to delete draft assets
+1. Use the action menu (⋯) and Edit information in the dashboard to delete draft assets
 
 ![Edit Assets](../../../../documentation/static/img/front-end/assets/how-tos/assets-how-tos-save-drafts-dashboard-edit.png)
 
