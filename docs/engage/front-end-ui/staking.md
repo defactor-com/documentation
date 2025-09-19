@@ -211,8 +211,21 @@ When selected:
 
 ![Staking Archive](../../../static/img/front-end/engage/staking-dash-table-archive.png)
 
-The **Archive** tab provides a historical record of all completed staking positions:  
-- Shows pool details, durations, amounts staked, and claimed rewards  
-- Provides a **Restake** option for re-activating previous positions  
+The **Archive** tab provides a historical record of all staking positions that have fully completed their cycle. It acts as a permanent log of past activity, including pool details, durations, amounts staked, and rewards claimed.  
 
-> Archive ensures transparency and enables long-term tracking of staking activity.
+- **Pool Name** – The pool where tokens were originally staked  
+- **Pool Mode** – Duration of the staking period
+- **Amount Staked** – Number of tokens originally locked in the pool  
+- **Chain** – The blockchain network where the stake took place  
+- **APR** – Reward rate applied during the staking period  
+- **Completed** – Date when the stake reached maturity  
+- **Claimed** – Rewards already collected from that position  
+- **Restake (Disabled)** – Displayed as inactive in the Archive view, since archived positions cannot be reinvested  
+
+
+> ℹ️ **Note:** Once a position has been completed or **unstaked**, the smart contract marks it as **closed**.  
+> Such positions cannot be restaked.
+> For continued staking, users must open a **new position** in one of the currently active pools.  
+
+Archive ensures transparency and enables long-term tracking of staking activity.
+
