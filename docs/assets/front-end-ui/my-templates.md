@@ -77,45 +77,35 @@ Make a copy of an existing template and adjust it to fit your needs.
 
 Each template can contain two types of fields:  
 
-- **Dynamic Data** – Fields that must be filled **each time** a new asset is created.  
-- **Static Data** – Fields that are filled **once** when the template is created and remain fixed across all assets using that template.  
+- **Static Data**: Fixed at the template level, unchangeable later. 
+ – Fields that are filled **once** when the template is created and remain fixed across all assets using that template.  
+  - These values cannot be modified. 
+
+- **Dynamic Data**: Flexible, editable per asset, and even updatable after minting.
+  - After an asset is minted, **Dynamic Data can still be updated** (for example, adjusting rental income, occupancy rates, or other changing metrics).  
+  - The platform provides an **Update Dynamic Data** action to edit these values post-mint while keeping the asset’s token contract intact.  
+
+![Update Dynamic Data Details Page](../../../static/img/front-end/assets/assets-update-dynamic-data-details-page.png)
+![Update Dynamic Data](../../../static/img/front-end/assets/assets-update-dynamic-data.png) 
+
 
 ## Configuring Data Fields  
 
 When creating or editing a template, click **Add Input** under either **Dynamic Data** or **Static Data**.  
 
-<!-- ![Add Input Modal](../../../../static/img/front-end/assets/how-tos/assets-how-tos-add-input-dynamic-data.png) -->
+![Add Input Modal](../../../static/img/front-end/assets/assets-create-template-add-input-dynamic.png)
 
 ### Field Configuration Options  
-- **Field Name** – Display label for the field. *(Required)*  
-- **Field Type** – Select from supported data types (text, number, date, etc.).  
-- **Suffix** – Optional suffix (e.g., USD, %).  
+- **Field Name** – Display label for the field.
+- **Field Type** – Select from supported data types.
+
+![Add Input Field Types](../../../static/img/front-end/assets/assets-create-template-add-input-field-types.png)
+
+- **Suffix** – Optional suffix (USD, USDC).  
 - **Field Size** – Choose *Half-Width* or *Full-Width* layout.  
 - **Placeholder** – Example text shown until the field is filled.  
 - **Required Field** – Make the field mandatory or optional.  
 - **Tooltip** – Add a short help text shown on hover.  
-
-## Example Template  
-
-Here is a simple **Rental Property Template** using both static and dynamic data:  
-
-**Template Details**  
-- Template Name: *Rental Property Template*  
-- Template Description: *Basic template for tokenizing rental properties*  
-- Asset Name: *Rental Property*  
-- Asset Category: *Real Estate*  
-
-**Dynamic Data (entered every time an asset is created):**  
-1. **Property Address** – Text field, required  
-2. **Monthly Rent (USD)** – Number field with USD suffix, required  
-
-**Static Data (defined once at template creation):**  
-1. **Building Type** – Residential  
-2. **Country** – USA  
-
-With this setup:  
-- Each new asset created requires a unique address and rent amount.  
-- All assets share the same static values (Residential, USA).  
 
 ## Template Lifecycle  
 
