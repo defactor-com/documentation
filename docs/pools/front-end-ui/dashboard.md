@@ -4,119 +4,94 @@ title: Dashboard
 sidebar_position: 2
 ---
 
-The Pools Dashboard provides a comprehensive overview of your lending and borrowing activities on the Defactor platform. It serves as your main control center for DeFi pool management, displaying key financial metrics and providing quick access to supply and borrow functions.
-
-![External Links](../../../static/img/front-end/pools/pools-dash.png)  
+The **Pools Dashboard** is your main control center for managing lending and borrowing on the Defactor platform. It brings together key metrics, liquidity insights, and quick actions so you can easily track pool activity and manage your positions.
 
 ---
 
-## Key Metrics Overview
+## Dashboard Overview  
 
-### Total Value Locked (TVL)
+![Pools Dashboard](../../../static/img/front-end/pools/pools-dash.png)
 
-**Primary Metric Display**
-- Large numerical display showing total value locked
-- Central position emphasizes this key performance indicator
-- Reflects the total value of assets you have supplied to pools
+The dashboard provides:  
+- **Total Value Locked (TVL)** – Overall assets supplied across pools  
+- **Pool Utilization Chart** – Interactive chart tracking supply, borrow, and available liquidity over time  
+- **Pool Activity Summary** – High-level metrics for available liquidity, historically borrowed, and historically supplied assets  
+- **Personal Performance Metrics** – Track borrowing, lending, and collateral safety (also visible in the sidebar on the main dashboard screen)  
+- **Active Pools Table** – Manage live pool positions with supply/borrow actions  
 
-### Pool Utilization Chart
+## Key Metrics Overview  
 
-**Interactive Time Series Visualization**
-- Multi-line chart showing pool utilization trends over time
-- Time period filters: **1D**, **1W**, **1M**, **1Y**
+### Total Value Locked (TVL)  
 
-**Chart Legend**
-- **Supplied** (green line) - Assets you've provided to pools
-- **Borrowed** (red/pink line) - Assets borrowed from pools  
-- **Available** (blue line) - Available liquidity in pools
+Large numerical display showing **total value locked**, placed centrally to highlight its importance.  
+> Reflects the total value of assets you have supplied to pools.  
 
-### Pool Activity Summary
+### Pool Utilization Chart  
 
-**Three Key Metrics Panel**
+**Interactive Time Series Visualization**  
+- Multi-line chart with filters: **1D**, **1W**, **1M**, **1Y**  
 
-**Available**
-- Current amount
-- Represents liquidity available for borrowing
-- Green indicator for healthy availability
+**Chart Legend**  
+- **Supplied** – Assets you’ve provided to pools (green line)  
+- **Borrowed** – Assets borrowed from pools (red/pink line)  
+- **Available** – Available liquidity in pools (blue line)  
 
-**Historically Borrowed**
-- Total amount
-- Shows cumulative borrowing activity
-- Red indicator reflecting borrowed positions
+### Pool Activity Summary  
 
-**Historically Supplied**
-- Total amount
-- Shows total supplied assets over time
-- Blue indicator for supply activity
+Three key metrics displayed in a dedicated panel:  
+- **Available** – Current liquidity available for borrowing (green indicator)  
+- **Historically Borrowed** – Cumulative borrowed amount (red indicator)  
+- **Historically Supplied** – Total assets supplied over time (blue indicator)  
 
----
+## Statistics Panel  
 
-## Statistics Panel
+### Personal Performance Metrics  
 
-### Personal Performance Metrics
+- **Active Borrows** – Number of active borrowing positions  
+- **Positions Repaid** – Historical total of completed loan positions  
+- **Interest Earned** – Real-time earnings from supplied assets  
+- **Collateralization Ratio** – Current ratio measuring safety of borrowed positions  
 
-**Active Borrows**
-- Current count
-- Shows number of active borrowing positions
-- Quick reference for portfolio complexity
+> These metrics are also visible in the dashboard sidebar for quick reference.  
 
-**Positions Repaid**
-- Total count
-- Historical view of completed loan positions
-- Indicates borrowing experience and activity
+## Pools Management Section  
 
-**Interest Earned**
-- Current amount
-- Real-time earnings from supplied assets
-- Reflects lending yield performance
+### Status Tabs  
+- **Active** – Currently operational pools  
+- **Closed** – Completed or inactive pools  
 
-**Collateralization Ratio**
-- Current ratio
-- Critical metric for borrowing safety
-- Shows health of collateral backing borrowed assets
+### Active Pools Table  
 
----
+![Active Pools Table](../../../static/img/front-end/pools/pools-table-active-pools.png)
 
-## Pools Management Section
+**Column Structure:**  
+- **Pool Name** – Identifier and branding  
+- **Collateral** – Accepted collateral types  
+- **Chain** – Blockchain network (chain icons shown)  
+- **APR** – Annual Percentage Rate (sortable)  
+- **Available** – Liquidity available for borrowing (sortable)  
+- **Completion** – Timeline and progress  
+- **Actions** – Supply / Borrow options  
 
-### Status Tabs
-- **Active** - Currently operational pools
-- **Closed** - Inactive or completed pools
+> This table helps you compare pool conditions and take action directly from the dashboard.  
 
-### Active Pools Table
+## Pool Interaction Workflow  
 
-![External Links](../../../static/img/front-end/pools/pools-table-active-pools.png)  
+![Open Position](../../../static/img/front-end/pools/pools-open-position.png)
 
-**Column Structure:**
-- **Pool Name** - Pool identifier and branding
-- **Collateral** - Accepted collateral types
-- **Chain** - Blockchain network (showing various chain icons)
-- **APR** ↓ - Annual Percentage Rate (sortable column)
-- **Available** ↓ - Available liquidity for borrowing (sortable column)
-- **Completion** - Pool timeline and progress
-- **Actions** - Available user actions (Supply/Borrow)
+Both **Supply** and **Borrow** actions follow the same process:  
+1. Click **Supply / Borrow**  
+2. Select the desired action (**Supply** or **Borrow**)  
+3. Enter the amount (within limits)  
+4. Confirm the transaction  
 
-## Pool Interaction Workflow
+> A unified workflow makes it easy to manage both supplying and borrowing through a consistent interface.  
 
-![External Links](../../../static/img/front-end/pools/pools-open-position.png)  
+## Dashboard Benefits  
 
-**Supply Process**
-1. Click the “Supply / Borrow” button.
-2. Select the Supply option.
-3. Enter the desired supply amount (within the allowed limits).
-4. Confirm transaction.
-
-**Borrow Process**
-1. Click the “Supply / Borrow” button.
-2. Select the Borrow option.
-3. Enter the desired borrow amount (within the allowed limits).
-4. Confirm transaction.
-
-## Dashboard Benefits
-
-- **Comprehensive Portfolio View** - All positions visible at a glance
-- **Risk Assessment Tools** - Collateralization ratio and health monitoring
-- **Yield Optimization** - APR comparison across pools
-- **Historical Analysis** - Track performance over time through charts
-- **Multi-pool Management** - Manage multiple positions from single interface
-- **Real-time Liquidity** - Instant visibility of available borrowing capacity
+- **Comprehensive Portfolio View** – All positions visible at a glance, helping you understand your exposure quickly.  
+- **Risk Assessment Tools** – Monitor collateralization ratios to avoid liquidation and maintain healthy positions.  
+- **Yield Optimization** – Compare APRs across pools to identify the most profitable opportunities.  
+- **Historical Analysis** – Track pool growth, supply, and borrowing trends over time for better decision-making.  
+- **Multi-pool Management** – Manage multiple positions from one interface without switching screens.  
+- **Real-time Liquidity** – Instantly see available borrowing capacity so you can act on opportunities immediately.  
