@@ -4,240 +4,155 @@ title: Borrowed
 sidebar_position: 4
 ---
 
-The Borrowed page provides a comprehensive view of all your borrowing positions across pools on the Defactor platform. It serves as your debt management hub for tracking borrowed assets, collateral positions, and managing loan repayments.
+The **Borrowed** page provides a comprehensive view of all your borrowing positions across pools on the Defactor platform. It serves as your debt management hub for tracking borrowed assets, collateral positions, and managing loan repayments.
 
-![External Links](../../../static/img/front-end/pools/pools-borrowed.png)
+## Dashboard Overview  
 
----
+![Borrowed Dashboard Overview](../../../static/img/front-end/pools/pools-borrowed.png)
+
+The dashboard provides:  
+- **Total Borrowed** – Aggregate value of all assets currently borrowed across pools  
+- **Borrowed vs Repaid by Pools** – Bar chart comparing borrowed amounts against repayments per pool  
+- **My Positions by Status** – Circular chart showing the health of borrowing positions (healthy vs warning)  
+- **Borrow Stats Panel** – Key performance metrics including active borrows, liquidated positions, repaid positions, and repayment values  
+- **My Borrows Table** – Detailed view of each borrow position with sortable columns and management actions  
 
 ## Overview Metrics
 
-### Total Borrowed
+### Total Borrowed  
 
-**Primary Metric Display**
-- Large numerical display showing total borrowed amount
-- Denominated in USDC
-- Represents aggregate debt across all pool positions
+![Total Borrowed](../../../static/img/front-end/pools/pools-borrowed-total-borrowed.png)
 
-### Borrowed vs Repaid by Pools
+**Primary Metric Display**  
+- Large numerical display showing total borrowed amount  
+- Denominated in USDC  
+- Represents aggregate debt across all pool positions  
 
-**Horizontal Bar Chart**
-- Visual comparison of borrowed amounts versus repaid amounts
-- Pool-by-pool breakdown showing repayment progress
-- Two-color visualization:
-  - **Borrowed** (green bar) - Principal amount borrowed from each pool
-  - **Repaid** (blue bar) - Amount already repaid to each pool
+### Borrowed vs Repaid by Pools  
 
-**Chart Scale**
-- X-axis showing dollar amounts from $0.00 to maximum values
-- Easy comparison across different pools and repayment status
+The **Borrowed vs Repaid** chart compares the total borrowed amounts to the repaid amounts for each pool.  
 
----
+![Borrowed vs Repaid by Pools](../../../static/img/front-end/pools/pools-borrowed-bar-chart-with-tooltip.png)
 
-## Position Health Overview
+**Horizontal Bar Chart**  
+- Provides a side-by-side view of **borrowed amounts** versus **repaid amounts**  
+- Breaks down repayment progress **pool by pool**  
+- Uses a two-color visualization:  
+  - **Borrowed** (green bar) – Principal amount borrowed from each pool  
+  - **Repaid** (blue bar) – Amount already repaid to each pool  
 
-### My Positions by Status
+**Tooltip Details**  
+When hovering over a pool, the tooltip displays:  
+- **Borrowed** – The total amount borrowed from the pool  
+- **Repaid** – The total amount already repaid to that pool  
+
+> This chart makes it easy to track repayment progress and evaluate how much debt is still outstanding in each pool.  
+
+
+### My Positions by Status  
+
+![My Positions by Status](../../../static/img/front-end/pools/pools-borrowed-my-positions-by-status-with-tooltip.png)
+
+The **My Positions by Status** chart provides a quick snapshot of the health of all your borrowing positions.  
 
 **Circular Progress Chart**  
-- Visual representation of overall position health.  
+- Displays the proportion of positions by status (e.g., Healthy, Warning)  
+- Each status is represented by a **distinct color** for clarity  
 
-**Possible States**  
-- **100% Healthy (green)** – All positions are in good standing.  
-- **Mixed Status (green/orange split)** – Combination of healthy and warning positions.  
-- **100% Warning/Unhealthy (orange/red)** – All positions are at risk or near liquidation.  
+**Tooltip Details**  
+When hovering over the chart, tooltips display the exact counts:  
+- **Healthy** – Positions with adequate collateralization  
+- **Warning** – Positions nearing liquidation thresholds  
 
-**Status Indicators**  
-- **Healthy (green)** – Positions with adequate collateralization.  
-- **Warning (orange/red)** – Positions approaching liquidation thresholds.  
+> This chart provides an at-a-glance health check of your borrowing portfolio, highlighting whether positions are safe or require immediate attention.  
 
----
+### Borrow Stats Panel  
 
-## Borrow Stats Panel
+![Borrow Stats Panel](../../../static/img/front-end/pools/pools-borrowed-borrow-stats.png)  
 
-![External Links](../../../static/img/front-end/pools/pools-borrow-stats.png)
+The **Borrow Stats Panel** provides a quick snapshot of your borrowing activity. Each metric comes with a clear explanation for better understanding:  
 
-### Key Performance Metrics
+- **Active Borrows** – Number of open borrow positions that are **currently accruing interest**.  
+- **Liquidated Positions** – Borrow positions that have been **fully or partially liquidated**.  
+- **Repaid Positions** – Borrow positions that have been **fully repaid**.  
+- **Value Repaid** – The **total amount repaid** (principal + interest), shown in USDC.  
+- **Value Liquidated** – The **total amount recovered through liquidation** (principal + interest), shown in USDC.  
 
-**Active Borrows**
-- Current count of active borrowing positions
-- Quick reference for portfolio complexity
+> These tooltips ensure users immediately understand whether a metric refers to open debt, repaid debt, or amounts lost to liquidation. Together, they give a clear overview of borrowing performance, repayment progress, and risk exposure.  
 
-**Liquidated Positions**
-- Total number of liquidated positions
-- Risk management indicator (showing 0 for healthy management)
+## My Borrows Management  
 
-**Repaid Positions**
-- Total number of fully repaid loan positions
-- Historical repayment track record
+### Borrow from Pool
 
-**Value Repaid**
-- Total USDC amount repaid across all positions
-- Cumulative repayment history
+#### Action Button
 
-**Value Liquidated**
-- Total USDC value lost to liquidations
-- Risk assessment metric (showing 0.00 for good management)
+![Borrow Button](../../../static/img/front-end/pools/pools-borrowed-button-borrow.png)  
 
----
+Opens the modal to create a new borrowing position.  
 
-## My Borrows Management
+####  Modal  
 
-### Action Buttons
+![Borrow from Pool Modal](../../../static/img/front-end/pools/pools-borrow-from-pool-modal.png)
 
-**Borrow**
-- Quick access to create new borrowing position
-- Direct path to obtaining liquidity from pools
+The **Borrow from Pool** modal lets you configure and confirm a new borrowing position.  
 
-### Borrow Positions Table
+**Pool Selection**  
+- **Chain Selector** – Dropdown for blockchain network 
+- **Pool Selector** – Dropdown for available pools  
 
-![External Links](../../../static/img/front-end/pools/pools-borrow-table.png)
+**Pool Information**  
+- **APR** – Annual percentage rate for borrowing costs  
+- **Collateral** – Required collateral type  
+- **End Date** – Pool closure or maturity date  
+- **Wallet** – Connected wallet address (truncated)  
 
-**Column Structure**
-- **Pool Name** - Pool identifier with logo/branding
-- **Collateral Given** ↓ - Amount of collateral provided (sortable)
-- **Initial Amount** ↓ - Original borrow amount (sortable)
-- **Outstanding Amount** ↓ - Current debt balance (sortable)
-- **Repaid Amount** ↓ - Amount already repaid (sortable)
-- **Interest** - Accrued interest charges
-- **Status** - Current position health with percentage
-- **Actions** - Available position management options
+**Borrow Amount Configuration**  
+- **Amount Input** – Field for entering borrow amount, with Min/Max buttons  
+- **Collateral Required** – Calculated requirement for requested amount  
+- **My Collateral Balance** – Available collateral balance in wallet  
+- Real-time validation of collateral sufficiency  
 
-**Position Status Examples**
+**Borrow** Button – Confirms and executes the borrowing transaction after validation.  
 
-**Warning Position**
-- **Status**: "Warning x%" with orange indicator
-- **Collateral**: Lower collateral ratio approaching danger zone
-- **Action**: "Pay Back" button for immediate repayment
+### My Borrows Table  
 
-**Healthy Position**
-- **Status**: "Healthy y%" with green indicator
-- **Collateral**: Adequate collateral backing the loan
-- **Actions**: "Pay Back" button and "Update Collateral Amount" option
+![My Borrows Table](../../../static/img/front-end/pools/pools-borrowed-table-my-borrows.png)
 
-### Advanced Position Management
+The **My Borrows Table** lists all borrowing positions, showing collateral, debt, repayments, and health status.  
 
-![External Links](../../../static/img/front-end/pools/pools-borrow-table-actions.png)
+**Column Structure**  
+- **Pool Name** – Pool identifier with logo/branding  
+- **Collateral Given** – Amount of collateral provided (sortable)  
+- **Initial Amount** – Original borrowed amount (sortable)  
+- **Outstanding Amount** – Current debt balance (sortable)  
+- **Repaid Amount** – Total repaid value in USDC (sortable)  
+- **Interest** – Accrued interest charges  
+- **Status** – Health of the position (Healthy %, Warning %)  
+- **Actions** – Available actions such as **Pay Back** or **Update Collateral Amount**  
 
-**Update Collateral Amount**
-- Allows adjustment of collateral to improve position health
+![Table Actions](../../../static/img/front-end/pools/pools-borrowed-table-actions.png)  
 
-![External Links](../../../static/img/front-end/pools/pools-borrow-update-amount-modal.png)
 
----
+> The table provides a complete view of each borrow position, combining repayment progress, health indicators, and direct management actions.  
 
-## Borrow from Pool Modal
 
-### Pool Selection
+### Advanced Position Management  
 
-**Chain Selection**
-- Dropdown for blockchain network selection
-- Currently showing available chains (e.g., Base Testnet)
+**Update Collateral Amount** – Opens a modal to adjust collateral for an active position, helping to restore or improve health.  
 
-**Pool Selection**
-- Dropdown for available pools on selected chain
-- Pool-specific borrowing parameters
+![Update Collateral Modal](../../../static/img/front-end/pools/pools-borrowed-table-actions-update-collateral-modal.png)
 
-![External Links](../../../static/img/front-end/pools/pools-borrow-from-pool-modal.png)
+The **Update Collateral Amount Modal** includes:  
+- Pool and network details  
+- Current outstanding amount  
+- Current collateral token amount and loan-to-value (LTV) ratio  
+- Input field for **New Collateral Token Amount** with Min/Max validation  
+- New LTV ratio calculation in real time  
+- **Save Changes** button to confirm update  
 
-### Pool Information Display
+> This feature allows proactive management of collateralization ratios, reducing the risk of liquidation.  
 
-**Key Metrics**
-- **APR**: Annual percentage rate for borrowing costs
-- **Collateral**: Required collateral type (e.g., Sharing tokens)
-- **End Date**: Pool closure/maturity date
-- **Wallet**: Connected wallet address (truncated)
 
-### Borrow Amount Configuration
 
-**Amount Input**
-- Numerical input field for borrow amount
-- Min/Max buttons for quick selection
-- Minimum borrowing limit and available liquidity display
-
-**Collateral Requirements**
-- **Collateral Required**: Calculated collateral needed for requested amount
-- **My Collateral Balance**: Available collateral in wallet
-- Real-time validation of collateral sufficiency
-
-**Borrow Button**
-- Confirmation action to execute borrowing
-- Validates collateral and borrowing limits
-
----
-
-## Position Management Table
-
-<!-- ![External Links](../../../static/img/front-end/pools/pools-borrowed-table.png) -->
-
-### Enhanced Table View
-
-**Detailed Position Information**
-- Complete borrowing history per position
-- Real-time status updates with health percentages
-- Sortable columns for efficient position management
-
-**Action Dropdown Menu**
-- Three-dot menu (⋯) revealing additional options
-- Context-sensitive actions based on position status
-- Quick access to position management functions
-
-### Status Health Indicators
-
-**Color-Coded Status System**
-- **Green**: Healthy positions
-- **Orange/Red**: Warning positions 
-
-**Percentage Indicators**
-- Real-time collateralization ratios
-- Visual health assessment for quick decision making
-
----
-
-## Risk Management Features
-
-### Liquidation Prevention
-
-**Warning System**
-- Early alerts for positions approaching liquidation
-- Color-coded status indicators for immediate recognition
-- Percentage thresholds showing proximity to liquidation
-
-**Collateral Management**
-- "Update Collateral Amount" functionality
-- Ability to add more collateral to improve position health
-- Real-time collateral ratio calculations
-
-### Repayment Options
-
-**Flexible Repayment**
-- "Pay Back" buttons for immediate debt reduction
-
----
-
-## Key Features
-
-### Portfolio Overview
-- **Comprehensive Debt Management**: All borrowing positions in single view
-- **Health Monitoring**: Visual status indicators with percentage ratios
-- **Repayment Tracking**: Historical and current repayment progress
-
-### Risk Assessment
-- **Liquidation Alerts**: Early warning system for at-risk positions
-- **Collateral Monitoring**: Real-time collateralization ratio tracking
-- **Interest Tracking**: Accumulating interest charges display
-
-### User Experience
-- **Sortable Tables**: Organize positions by any metric
-- **Quick Actions**: Fast access to borrow and repayment functions
-- **Modal Interfaces**: Streamlined transaction flows
-- **Status Visualization**: Immediate health assessment through charts
-
----
-
-## Workflow Benefits
-
-- **Centralized Debt Management**: All borrowing activities in one dashboard
-- **Proactive Risk Management**: Early warning systems prevent liquidations  
-- **Flexible Position Control**: Adjust collateral and make payments as needed
-- **Historical Tracking**: Complete borrowing and repayment history
-- **Multi-Pool Support**: Manage positions across different pools simultaneously
+![Pay Back Button](../../../static/img/front-end/pools/pools-borrowed-button-pay-back.png)  
+**Pay Back** – Available on active positions, showing the outstanding repayable amount in USDC.  
