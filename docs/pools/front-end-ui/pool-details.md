@@ -4,119 +4,54 @@ title: Pool Details
 sidebar_position: 5
 ---
 
-The Pool Details page provides comprehensive information about a specific lending/borrowing pool, including pool parameters, supply/borrow functionality, performance statistics, and transaction history. This page is accessed by clicking on any pool row from the main pools dashboard.
-
-![External Links](../../../static/img/front-end/pools/pools-pool-details.png)
+The **Pool Details** page provides comprehensive information about a specific lending or borrowing pool, including pool parameters, supply/borrow functionality, performance statistics, and transaction history. This page is accessed by clicking on any pool row from the main Pools Dashboard.
 
 ---
 
-## Pool Header Information
+## Dashboard Overview  
 
-### Pool Identity and Status
+![Pool Details Dashboard](../../../static/img/front-end/pools/pools-pool-details-page-overview.png)
 
-![External Links](../../../static/img/front-end/pools/pools-pool-details-header.png)
-
-**Pool Branding**
-- Pool name with logo/icon (e.g., "Sharingblock")
-- Dropdown selector for pool navigation: Dropdown navigation allows quick switching between pools on different chains without returning to the main list
-- Status indicators: Active, Sharing, SHARINGBLOCK
-
-**Network and Social Links**
-- Chain identifier with network icon
-- Social media links (X/Twitter integration)
-- External link indicators for verification
-
-### Core Pool Parameters
-
-![External Links](../../../static/img/front-end/pools/pools-pool-details-core-parameters.png)
-
-#### Timeline Information
-- **Chain**: Blockchain network specification
-- **Start Date**: Pool launch date
-- **End Date**: Pool closure/maturity date
-
-#### Financial Metrics
-- **LTV Ratio**: Loan-to-Value percentage
-- **APR**: Annual Percentage Rate
-- **Max Pool Capacity**: Maximum pool size in USDC
-
-### Pool Description
-
-**Functionality Overview**
-- Detailed explanation of pool mechanics for both borrowers and lenders
-- Risk and reward structure explanation
+The pool details dashboard provides:  
+- **Pool Information Header** – Displays chain, start date, end date, LTV ratio, APR, and max pool capacity  
+- **Description Box** – Explains how to borrow USDC using collateral, with reminders about repayment deadlines and liquidation rules. Also explains how to supply USDC to earn rewards, including reward payouts and return of supplied assets.  
+- **Key Metrics Bar** – Shows historical and current performance metrics such as:  
+  - **Total USDC Borrowed Historically** – Aggregate borrowing activity from the pool  
+  - **Available to Borrow** – Liquidity remaining for new borrowing  
+  - **Active Supplied Value** – Total amount currently supplied by lenders  
+  - **Total Repaid** – Amount of USDC already repaid into the pool  
+  - **Active Collateral Value** – Value of collateral currently securing outstanding loans  
+  - **Disbursement Percentage** – Percentage of total pool liquidity that has been disbursed  
+- **Supply/Borrow Panel** – Side panel for entering supply or borrow amounts, with Min/Max shortcuts and wallet balance display  
+- **My Supplies / My Borrows Table** – Tabs for switching between supplied and borrowed positions, with sortable tables and management actions  
 
 ---
 
-## Pool Statistics Dashboard
+## Dashboard Components 
 
-### Visual Performance Chart
+### Pool Information Header  
 
-![External Links](../../../static/img/front-end/pools/pools-pool-details-stats.png)
+![Pool Information Header Part 1](../../../static/img/front-end/pools/pools-pool-details-header.png) 
+![Pool Information Header Part 2](../../../static/img/front-end/pools/pools-pool-details-core-parameters.png)   
+Displays pool identity, status, chain, and quick navigation between pools.  
 
-**Supply vs Borrowed Visualization**
-- Bar chart showing pool utilization
-- Green bars for supplied amounts
-- Blue bars for borrowed amounts
-- Y-axis scaling with dollar amounts
+### Description Box  
 
-### Key Performance Metrics
+![Pool Description Box](../../../static/img/front-end/pools/pools-pool-details-description-boc.png) 
 
-![External Links](../../../static/img/front-end/pools/pools-pool-details-key-metrics.png)
+Provides rules and guidance for **borrowers** (collateral requirements, deadlines, liquidation risks) and **lenders** (supply process, rewards, and repayment at maturity).  
 
-- **Total USDC Borrowed Historically**: Cumulative borrowing activity
-- **Available to Borrow**: Current liquidity available
-- **Active Supplied Value**: Current lending positions
-- **Total Repaid**: Historical repayment amounts
-- **Active Collateral Value**: Current collateral backing
-- **Disbursement Percentage**: Pool utilization ratio
+### Key Metrics Bar  
 
+![Key Metrics Bar](../../../static/img/front-end/pools/pools-pool-details-key-metrics.png)  
+Summarizes real-time pool activity including borrowing history, available liquidity, active supply, total repaid, collateral value, and disbursement percentage.  
 
----
+### Supply/Borrow Panel  
 
+![Supply or Borrow Panel](../../../static/img/front-end/pools/pools-pool-details-core-supply-or-borrow.png)  
+Side panel for creating new positions, with tabs for **Supply** (amount input, wallet balance, Min/Max shortcuts) and **Borrow** (amount input, required collateral, validation).  
 
-## Pool Interaction Interface
+### My Supplies / My Borrows Table  
 
-### Supply/Borrow Tabs
-
-![External Links](../../../static/img/front-end/pools/pools-pool-details-core-supply-or-borrow.png)
-
-**Supply Tab**
-- Interface for lending to the pool
-- Amount input with Min/Max buttons
-- Balance verification and limits display
-- "Supply" button for transaction execution
-
-**Borrow Tab**
-- Interface for borrowing from the pool
-- Amount input with Min/Max buttons
-- Collateral requirements and calculations
-- "Borrow" button for transaction execution
-
-### Supply Configuration
-
-**Amount Input**
-- USDC denomination with numerical input
-- Min/Max quick selection buttons
-- Minimum and maximum limits display
-- Current wallet balance verification
-
-**Transaction Validation**
-- Real-time balance checking
-- Limit enforcement
-- Fee calculation and display
-
-### Borrow Configuration
-
-**Amount Input**
-- USDC denomination with numerical input
-- Min/Max quick selection buttons
-- Minimum and maximum limits display
-- Available borrowing capacity verification
-
-**Transaction Validation**
-- Real-time collateral checking
-- Limit enforcement
-- Fee calculation and display
-
----
+![My Supplies and My Borrows Table](../../../static/img/front-end/pools/pools-supplied-table.png)  
+Shows personal supply and borrow positions with sortable columns, health indicators, and direct management actions (Withdraw, Pay Back, Update Collateral).  
