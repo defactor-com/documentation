@@ -105,12 +105,3 @@ Both **Supply** and **Borrow** actions follow the same process:
 4. Confirm the transaction  
 
 > A unified workflow makes it easy to manage both supplying and borrowing through a consistent interface.  
-
-## Dashboard Benefits  
-
-- **Comprehensive Portfolio View** – All positions visible at a glance, helping you understand your exposure quickly.  
-- **Risk Assessment Tools** – Monitor collateralization ratios to avoid liquidation and maintain healthy positions.  
-- **Yield Optimization** – Compare APRs across pools to identify the most profitable opportunities.  
-- **Historical Analysis** – Track pool growth, supply, and borrowing trends over time for better decision-making.  
-- **Multi-pool Management** – Manage multiple positions from one interface without switching screens.  
-- **Real-time Liquidity** – Instantly see available borrowing capacity so you can act on opportunities immediately.  
