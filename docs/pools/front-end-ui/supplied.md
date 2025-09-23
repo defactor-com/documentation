@@ -6,11 +6,20 @@ sidebar_position: 3
 
 The Supplied page provides a comprehensive view of all your lending positions across pools on the Defactor platform. It serves as your portfolio management hub for tracking supplied assets, earned rewards, and managing supply positions.
 
-![External Links](../../../static/img/front-end/pools/pools-supplied.png)
-
 ---
 
-## Overview Metrics
+## Dashboard Overview  
+
+![Pools Dashboard Overview](../../../static/img/front-end/pools/pools-supplied.png)
+
+The dashboard provides:  
+- **Total Supplied** – Aggregate value of all assets currently supplied across pools  
+- **Supply vs Rewards by Pools** – Bar chart comparing supplied amounts against rewards earned for each pool  
+- **My Positions by Status** – Circular chart showing the health and activity of your supply positions  
+- **Supply Stats Panel** – Key performance metrics including active supplies, claimed supplies, liquidation alerts, and total rewards earned  
+- **My Supplies Table** – Detailed view of each supply position with sortable columns and management actions  
+
+## Overview Metrics  
 
 ### Total Supplied
 
@@ -32,10 +41,6 @@ The Supplied page provides a comprehensive view of all your lending positions ac
 - X-axis showing dollar amounts from $0.00 to maximum values
 - Easy comparison across different pools and reward levels
 
----
-
-## Position Status Overview
-
 ### My Positions by Status
 
 **Circular Progress Chart**
@@ -44,9 +49,6 @@ The Supplied page provides a comprehensive view of all your lending positions ac
 - **Active** status with green indicator
 - Clean, easy-to-read status overview
 
----
-
-## Supply Stats Panel
 
 ### Key Performance Metrics
 
@@ -65,8 +67,6 @@ The Supplied page provides a comprehensive view of all your lending positions ac
 **Total Rewards Earned**
 - Cumulative rewards in USDC
 - Real-time earnings from all supply positions
-
----
 
 ## My Supplies Management
 
@@ -109,8 +109,6 @@ The Supplied page provides a comprehensive view of all your lending positions ac
 - Configurable rows per page display
 - Page indicators and navigation arrows
 
----
-
 ## Supply Pool Modal
 
 <!--  ![External Links](../../../static/img/front-end/pools/pools-supply-modal.png) -->
@@ -148,8 +146,6 @@ The Supplied page provides a comprehensive view of all your lending positions ac
 - Confirmation action to execute supply
 - Validates amount and wallet balance
 
----
-
 ## Withdraw Modal
 
 <!-- ![External Links](../../../static/img/front-end/pools/pools-withdraw-modal.png) -->
@@ -178,8 +174,6 @@ The Supplied page provides a comprehensive view of all your lending positions ac
 - **Cancel**: Close modal without action
 - **Withdraw**: Execute withdrawal transaction
 
----
-
 ## Key Features
 
 ### Portfolio Management
@@ -197,8 +191,6 @@ The Supplied page provides a comprehensive view of all your lending positions ac
 - **Quick Actions**: Fast access to supply and withdraw functions
 - **Modal Interfaces**: Streamlined transaction flows
 - **Real-time Updates**: Live data reflecting current position states
-
----
 
 ## Workflow Benefits
 
