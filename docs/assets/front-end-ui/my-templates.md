@@ -4,100 +4,131 @@ title: My Templates
 sidebar_position: 5
 ---
 
-This guide provides a comprehensive overview of the My Templates interface, focusing on creating, managing, and using asset templates to streamline the tokenization process.
+The **My Templates** section provides users and administrators with the ability to create and manage reusable templates for asset tokenization.  
+Templates define the structure of assets by specifying required fields, static details, and dynamic inputs that must be provided when creating new assets.  
+
+This ensures consistency across similar assets while giving flexibility for customization where needed.
 
 ---
 
-## My Templates Overview
+## Dashboard Overview  
 
-<!-- ![My Templates Overview](../../../../documentation/static/img/front-end/assets/my-templates-overview.png) -->
+![My Templates Dashboard](../../../static/img/front-end/assets/assets-my-templates-dashboard.png)
 
-The **My Templates** section serves as your template management center where you can create custom asset templates and access pre-built community templates. Templates streamline the asset creation process by providing structured frameworks with predefined data fields and configurations.
+The **My Templates Dashboard** displays a list of all templates available to the user.  
+From here you can:  
+- **Create a new template** from scratch  
+- **Use** an existing template as-is  
+- **Copy & Customize** an existing template  
+- **Edit** your own templates  
+- **Delete** templates you no longer need  
 
-## Template Creation Options
+## Creating Templates  
 
-### Create Custom Template
+There are three methods for creating a new template:
 
-<!-- ![Create Template](../../../../documentation/static/img/front-end/assets/create-template.png) -->
+### Method 1: Create Template from Scratch  
 
-The **Create Template** option allows you to build a custom template from scratch:
+![Create Template from Scratch](../../../static/img/front-end/assets/assets-create-template-from-scratch-empty-form.png)
 
-**Create Template Card**
-Click the **"+" button** to start building a custom template for easy asset creation. This provides maximum flexibility and control over your template configuration.
+Start with a blank configuration when you want maximum flexibility.  
 
-**Custom Template Benefits:**
-- Complete control over data fields and structure
-- Tailored to your specific asset types and requirements
-- Reusable across multiple similar assets
-- Customizable validation and input types
+**Workflow:**  
+1. Click **+** in the My Templates section.  
 
-### My Custom Templates
+![Create Template from Scratch CTA](../../../static/img/front-end/assets/assets-create-template-from-scratch-cta.png)
 
-<!-- ![My Custom Templates](../../../../documentation/static/img/front-end/assets/my-custom-templates.png) -->
+2. Enter **Template Name** and **Template Description**.  
+3. Define **Dynamic Data** and **Static Data** fields.  
 
-Your created templates appear in the My Templates section, displaying:
+![Create Template from Scratch Add Input](../../../static/img/front-end/assets/assets-create-template-add-input-dynamic.png)
 
-**Template Information:**
-- Template name and description
-- Asset category and type
-- Template preview with key details
-- Usage and modification options
+4. **Save the template to make it available for asset creation.**  
 
-**Template Management:**
-Each template includes options to use, edit, copy, or delete based on your needs.
+![Created Template](../../../static/img/front-end/assets/assets-created-template-with-actions.png)
 
-## Community Templates
+### Method 2: Use an Existing Template  
 
-<!-- ![Community Templates](../../../../documentation/static/img/front-end/assets/community-templates.png) -->
+![Use Existing Template](../../../static/img/front-end/assets/assets-use-template.png)
 
-The **Community Templates** section provides access to pre-built templates across various asset categories:
+Select a pre-built template that already fits your use case.  
 
-### Available Template Categories
+**Workflow:**  
+1. Browse available templates.  
+2. Click **Use Template** to proceed directly to asset creation.  
+3. Fill in the dynamic data required for the specific asset.  
 
-**Invoices/Receivables**
-Claims for delivered goods or services yet to be paid, suitable for trade finance and working capital tokenization.
+### Method 3: Copy & Customize  
 
-**Bonds/Fixed Income**
-Debt instruments offering regular interest payments and repayment of principal at maturity, ideal for income-generating assets.
+![Copy Template](../../../static/img/front-end/assets/assets-copy-template.png)
 
-**Equities**
-Shares of company ownership, offering potential for capital gains and dividends through equity tokenization.
+Make a copy of an existing template and adjust it to fit your needs.  
 
-**Commodities & Metals**
-Raw materials or primary agricultural products that can be bought and sold, perfect for commodity-backed tokens.
+**Workflow:**  
+1. Find a template similar to what you need.  
+2. Click **Copy Template**.  
+3. Open the **actions menu (⋯)** on the copied template. 
 
-**Real Estate**
-Real estate is a form of real property used for residential, commercial, or industrial purposes, enabling property tokenization.
+![Edit Template](../../../static/img/front-end/assets/assets-copy-template-edit.png)
 
-**Luxury Goods**
-Luxury goods are items for which demand increases more than proportionally as income rises, suitable for high-value asset tokenization.
+4. Select **Edit** and adjust fields as required.  
 
-**Trade Finance and Inventory Finance**
-Financial tools that support international trade by reducing risk and providing liquidity to importers and exporters.
+## Understanding Data Types  
 
-### Using Community Templates
+Each template can contain two types of fields:  
 
-**Template Selection:**
-Browse through categorized templates to find one that matches your asset type and requirements.
+- **Dynamic Data** – Fields that must be filled **each time** a new asset is created.  
+- **Static Data** – Fields that are filled **once** when the template is created and remain fixed across all assets using that template.  
 
-**Template Customization:**
-- Use templates as-is for quick asset creation
-- Copy and modify templates to suit specific needs
-- Build upon existing structures while maintaining proven frameworks
+## Configuring Data Fields  
 
-**Template Benefits:**
-- Industry-standard data fields and structures
-- Proven configurations for common asset types
-- Reduced setup time and development effort
-- Best practices built into template design
+When creating or editing a template, click **Add Input** under either **Dynamic Data** or **Static Data**.  
 
-## Template Workflow Integration
+<!-- ![Add Input Modal](../../../../static/img/front-end/assets/how-tos/assets-how-tos-add-input-dynamic-data.png) -->
 
-Templates integrate seamlessly with the asset creation process, leading to the structured workflow that includes:
+### Field Configuration Options  
+- **Field Name** – Display label for the field. *(Required)*  
+- **Field Type** – Select from supported data types (text, number, date, etc.).  
+- **Suffix** – Optional suffix (e.g., USD, %).  
+- **Field Size** – Choose *Half-Width* or *Full-Width* layout.  
+- **Placeholder** – Example text shown until the field is filled.  
+- **Required Field** – Make the field mandatory or optional.  
+- **Tooltip** – Add a short help text shown on hover.  
 
-1. **Template Selection** - Choose from custom or community templates
-2. **Data Configuration** - Customize dynamic and static data fields
-3. **Asset Creation** - Use templates in the Fill Data phase
-4. **Tokenization** - Apply template structure through minting process
+## Example Template  
 
-The My Templates interface provides the foundation for efficient, standardized asset tokenization across diverse asset classes and use cases.
+Here is a simple **Rental Property Template** using both static and dynamic data:  
+
+**Template Details**  
+- Template Name: *Rental Property Template*  
+- Template Description: *Basic template for tokenizing rental properties*  
+- Asset Name: *Rental Property*  
+- Asset Category: *Real Estate*  
+
+**Dynamic Data (entered every time an asset is created):**  
+1. **Property Address** – Text field, required  
+2. **Monthly Rent (USD)** – Number field with USD suffix, required  
+
+**Static Data (defined once at template creation):**  
+1. **Building Type** – Residential  
+2. **Country** – USA  
+
+With this setup:  
+- Each new asset created requires a unique address and rent amount.  
+- All assets share the same static values (Residential, USA).  
+
+## Template Lifecycle  
+
+- **Create** – Build from scratch, copy, or use an existing template.  
+- **Edit** – Update template fields as needed.  
+- **Use** – Select a template to start creating an asset.  
+- **Delete** – Remove unused or outdated templates.  
+
+## Best Practices  
+
+- **Keep templates focused** – Avoid adding unnecessary fields.  
+- **Use clear names** – Make field labels easy to understand.  
+- **Balance static vs dynamic data** – Keep static fields for consistency, dynamic fields for uniqueness.  
+- **Leverage copies** – Start from a similar template to save time.  
+
+> The **My Templates** section streamlines asset creation by providing a structured starting point, ensuring every asset follows a consistent design while leaving room for flexibility.
