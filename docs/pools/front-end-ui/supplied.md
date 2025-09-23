@@ -23,32 +23,50 @@ The dashboard provides:
 
 ### Total Supplied
 
+![Pools Total Supplied](../../../static/img/front-end/pools/pools-supplied-metrics-total-supplied.png)
+
 **Primary Metric Display**
 - Large numerical display showing total supplied amount
 - Denominated in USDC
 - Represents aggregate value across all pool positions
 
-### Supply vs Rewards by Pools
+### Supply vs Rewards by Pools  
 
-**Horizontal Bar Chart**
-- Visual comparison of supplied amounts versus rewards earned
-- Pool-by-pool breakdown showing performance
-- Two-color visualization:
-  - **Supply** (green bar) - Principal amount supplied to each pool
-  - **Rewarded** (blue bar) - Rewards earned from each pool
+![Pools Bar Chart](../../../static/img/front-end/pools/pools-supplied-metrics-bar-chart.png)
 
-**Chart Scale**
-- X-axis showing dollar amounts from $0.00 to maximum values
-- Easy comparison across different pools and reward levels
+The **Supply vs Rewards** chart compares the amount of assets you’ve supplied to each pool against the rewards those supplies have generated.  
 
-### My Positions by Status
+**Horizontal Bar Chart**  
+- Provides a side-by-side view of **supply amounts** versus **rewards earned**  
+- Breaks down performance **pool by pool**  
+- Uses a two-color visualization:  
+  - **Supply** (green bar) – Principal amount supplied into each pool  
+  - **Rewarded** (blue bar) – Rewards earned from that supply  
 
-**Circular Progress Chart**
-- Visual representation of position health
-- **100%** indicating all positions are active
-- **Active** status with green indicator
-- Clean, easy-to-read status overview
+**Tooltip Details**  
 
+When hovering over a pool, the tooltip displays:  
+- **Supply** – The exact USDC amount currently supplied
+- **Rewarded** – The rewards earned from that supply
+
+> This chart makes it easy to evaluate the effectiveness of your supplies by comparing how much you’ve committed to each pool against the rewards it has generated.  
+
+### My Positions by Status  
+
+The **My Positions by Status** chart gives a snapshot of the overall state of your supply positions. It shows how many are currently active and how many have been withdrawn or closed.  
+
+![My Positions by Status](../../../static/img/front-end/pools/pools-supplied-metrics-my-positions-by-status.png)
+
+**Circular Progress Chart**  
+- Displays the proportion of positions by status (e.g., Active, Withdrawn)  
+- Each status is represented by a **distinct color** for easy differentiation  
+
+**Tooltip Details**  
+When hovering over the chart, tooltips display the exact counts:  
+- **Active** – Number of positions currently open and earning rewards  
+- **Withdrawn** – Number of positions that have been closed or exited  
+
+> This chart provides a quick health check of your portfolio, letting you see at a glance whether most of your supplies are still active or if a portion has already been withdrawn.
 
 ### Key Performance Metrics
 
