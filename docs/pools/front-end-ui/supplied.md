@@ -120,121 +120,20 @@ The **Supply to Pool** modal lets you configure and confirm a new supply positio
 > These action buttons streamline portfolio management, letting you either add new supplies or quickly withdraw from all positions in one step.  
 
 
-### Supply Positions Table
+### My Supplies Table  
 
-**Column Structure**
-- **Pool Name** - Pool identifier with logo/branding
-- **Initial Amount** ↓ - Original supply amount (sortable)
-- **Outstanding Amount** ↓ - Current position value (sortable)
-- **Rewarded** ↓ - Earned rewards amount (sortable)
-- **Start Time** ↓ - Position creation timestamp (sortable)
-- **End Time** ↓ - Position maturity date (sortable)
-- **Status** - Current position state
-- **Actions** - Available position actions
+![My Supplies Table](../../../static/img/front-end/pools/pools-supplied-table.png)
 
-**Position Entry Example**
-- **Pool**: Pool identifier with logo
-- **Initial Amount**: Original USDC supplied
-- **Outstanding Amount**: Current USDC value
-- **Rewarded**: Earned USDC rewards
-- **Start Time**: Position creation date and time
-- **End Time**: Position end date (if applicable)
-- **Status**: "In Progress" with progress indicator
-- **Action**: "Withdraw" button for position management
+The **My Supplies Table** provides a detailed breakdown of all your supply positions, showing amounts, rewards, timelines, and current status.  
 
-### Table Controls
+**Column Structure**  
+- **Pool Name** – Pool identifier with logo/branding  
+- **Initial Amount** – Original amount supplied in USDC (sortable)  
+- **Outstanding Amount** – Remaining position value still active (sortable)  
+- **Rewarded** – Rewards earned from the position in USDC (sortable)  
+- **Start Time** – Date and time the position was created (sortable)  
+- **End Time** – Maturity or closure date/time of the position (sortable)  
+- **Status** – Current state of the position (*In Progress* or *Withdrawn*)  
+- **Actions** – Available actions, such as **Withdraw** for active positions  
 
-**Pagination**
-- Navigation for multiple positions
-- Configurable rows per page display
-- Page indicators and navigation arrows
-
-## Supply Pool Modal
-
-<!--  ![External Links](../../../static/img/front-end/pools/pools-supply-modal.png) -->
-
-### Pool Selection
-
-**Chain Selection**
-- Dropdown for blockchain network selection
-- Currently showing available chains (e.g., Base Testnet)
-
-**Pool Selection**
-- Dropdown for available pools on selected chain
-- Pool-specific information display
-
-### Pool Information Display
-
-**Key Metrics**
-- **APR**: Annual percentage rate for rewards
-- **End Date**: Pool maturity/closure date
-- **Wallet**: Connected wallet address (truncated)
-
-### Supply Amount Configuration
-
-**Amount Input**
-- Numerical input field for supply amount
-- Min/Max buttons for quick selection
-- Minimum and maximum limits display
-- Current wallet balance display
-
-**Transaction Details**
-- Real-time calculation of supply parameters
-- Balance verification before transaction
-
-**Supply Button**
-- Confirmation action to execute supply
-- Validates amount and wallet balance
-
-## Withdraw Modal
-
-<!-- ![External Links](../../../static/img/front-end/pools/pools-withdraw-modal.png) -->
-
-### Position Information
-
-**Pool Details**
-- Pool name and chain information
-- Current position amount display
-
-### Withdrawal Configuration
-
-**Amount to Withdraw**
-- Input field for withdrawal amount
-- Half/Max buttons for quick selection
-- Available balance display
-
-### Transaction Summary
-
-**Financial Breakdown**
-- **Amount to Withdraw**: Principal withdrawal amount
-- **Rewards**: Earned rewards to be claimed
-- **Remaining Balance**: Position balance after withdrawal
-
-**Action Buttons**
-- **Cancel**: Close modal without action
-- **Withdraw**: Execute withdrawal transaction
-
-## Key Features
-
-### Portfolio Management
-- **Comprehensive Overview**: All supply positions in single view
-- **Performance Tracking**: Visual charts showing supply vs rewards
-- **Status Monitoring**: Real-time position health indicators
-
-### Risk Management
-- **Position Liquidation Alerts**: Early warning system
-- **Outstanding Amount Tracking**: Monitor position values
-- **Reward Accumulation**: Track earnings across all positions
-
-### User Experience
-- **Sortable Tables**: Organize positions by any metric
-- **Quick Actions**: Fast access to supply and withdraw functions
-- **Modal Interfaces**: Streamlined transaction flows
-- **Real-time Updates**: Live data reflecting current position states
-
-## Workflow Benefits
-
-- **Single Dashboard**: All supply activities centralized
-- **Reward Optimization**: Compare performance across pools
-- **Flexible Management**: Partial or full withdrawals available
-- **Historical Tracking**: Complete
+> This table allows you to track the lifecycle of every supply position, from creation to withdrawal, while providing direct controls to manage active supplies.  
