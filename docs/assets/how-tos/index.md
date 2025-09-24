@@ -177,9 +177,10 @@ When creating assets, you can choose between **ERC-20** (fungible tokens) and **
 > - Use **ERC-3643** when compliance with financial regulations is required.  
 
 **Token Economic Configuration:**
-- **FDV**: Fully Diluted Valuation in USDC. This represents the total value of the asset if all tokens were in circulation.
-- **Supply**: The total number of tokens that will ever exist.
-- **Price per Token**: Automatically calculated as FDV ÷ Supply.
+- **FDV**: Fully Diluted Valuation in USDC. FDV is calculated as token price × total supply and represents the total value of the asset if all tokens were in circulation.  
+- **Supply**: The total number of tokens that will ever exist. The price per token is automatically calculated as FDV ÷ Supply.  
+- **Price per Token**: Automatically calculated and displayed in the UI as FDV ÷ Supply. This value updates dynamically as FDV or Supply changes.
+
 
 **Asset Description:**
 Provide a comprehensive description of the tokenized asset, including investment highlights, key features, and value proposition for potential token holders.
@@ -302,7 +303,7 @@ At any point during the asset creation process, you can save your work as a draf
 
 **Managing Draft Assets:**
 - Access saved drafts from your main dashboard under **Drafts** tab
-- Each draft shows the asset name, token details, FDV, supply, and current status.
+- Each draft shows the asset name, token details, FDV, supply, price per token and current status.
 
 ![Draft Edit Options](../../../../documentation/static/img/front-end/assets/how-tos/assets-how-tos-save-drafts-dashboard-edit.png)
 
