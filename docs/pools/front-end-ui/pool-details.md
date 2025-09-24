@@ -14,16 +14,12 @@ The **Pool Details** page provides comprehensive information about a specific le
 
 The pool details dashboard provides:  
 - **Pool Information Header** – Displays chain, start date, end date, LTV ratio, APR, and max pool capacity  
-- **Description Box** – A free-text section where pool creators or administrators can describe the pool. This may include information such as borrowing rules, supply opportunities, repayment conditions, or general notes about the pool. The content is flexible and can be tailored to highlight any important details for users.
-- **Key Metrics Bar** – Shows historical and current performance metrics such as:  
-  - **Total USDC Borrowed Historically** – Aggregate borrowing activity from the pool  
-  - **Available to Borrow** – Liquidity remaining for new borrowing  
-  - **Active Supplied Value** – Total amount currently supplied by lenders  
-  - **Total Repaid** – Amount of USDC already repaid into the pool  
-  - **Active Collateral Value** – Value of collateral currently securing outstanding loans  
-  - **Disbursement Percentage** – Percentage of total pool liquidity that has been disbursed  
+- **Description Box** – A free-text section where pool creators or administrators can describe the pool. This may include information such as borrowing rules, supply opportunities, repayment conditions, or general notes about the pool. The content is flexible and can be tailored to highlight any important details for users.  
 - **Supply/Borrow Panel** – Side panel for entering supply or borrow amounts, with Min/Max shortcuts and wallet balance display  
+- **Stats** – Visual performance charts showing pool utilization (supplied vs borrowed)  
+- **Key Metrics** – Summaries of borrowing, supply, liquidity, collateral, and repayment values  
 - **My Supplies / My Borrows Table** – Tabs for switching between supplied and borrowed positions, with sortable tables and management actions  
+- **Actions & Modals** – Contextual controls for managing supplies and borrows (Withdraw, Pay Back, Update Collateral, etc.)  
 
 ## Dashboard Components  
 
@@ -50,21 +46,7 @@ Possible uses include:
 - **Borrowers** – Explaining collateral requirements, repayment deadlines, and potential liquidation risks.  
 - **Lenders** – Outlining how to supply assets, expected APR, reward distribution, and how/when funds are returned.  
 
-Because this section is flexible, the exact content will vary depending on the pool’s goals and configuration.   
-
-### Key Metrics Bar  
-
-![Key Metrics Bar](../../../static/img/front-end/pools/pools-pool-details-page-stats.png)  
-
-Summarizes live and historical performance metrics:  
-- **Total USDC Borrowed Historically** – Cumulative borrowing activity  
-- **Available to Borrow** – Remaining liquidity  
-- **Active Supplied Value** – Total actively supplied USDC  
-- **Total Repaid** – Aggregate repayments  
-- **Active Collateral Value** – Collateral backing active loans  
-- **Disbursement Percentage** – Ratio of borrowed to total pool capacity  
-
-Tooltips display breakdowns such as **Supplied** vs **Borrowed** at specific points in time.  
+Because this section is flexible, the exact content will vary depending on the pool’s goals and configuration.  
 
 ### Supply/Borrow Panel  
 
@@ -86,6 +68,26 @@ Tooltips display breakdowns such as **Supplied** vs **Borrowed** at specific poi
 - **My Collateral Balance** – Shows collateral available in your wallet  
 - **Borrow Button** – Executes borrowing transaction after validation  
 
+### Stats  
+
+![Stats](../../../static/img/front-end/pools/pools-pool-details-page-stats.png)  
+
+Visual bar chart of pool utilization:  
+- **Supplied** – Total assets supplied (green)  
+- **Borrowed** – Total assets borrowed (blue)  
+- Tooltips provide breakdowns for exact amounts at specific points.  
+
+### Key Metrics  
+
+![Key Metrics Bar](../../../static/img/front-end/pools/pools-pool-details-key-metrics.png)  
+
+- **Total USDC Borrowed Historically** – Cumulative borrowing activity  
+- **Available to Borrow** – Remaining liquidity  
+- **Active Supplied Value** – Total actively supplied USDC  
+- **Total Repaid** – Aggregate repayments  
+- **Active Collateral Value** – Collateral backing active loans  
+- **Disbursement Percentage** – Ratio of borrowed to total pool capacity  
+
 ### My Supplies / My Borrows Table  
 
 #### My Supplies  
@@ -96,40 +98,62 @@ Displays all supply positions:
 - **Columns** – Pool name, initial amount, outstanding, rewarded, start/end time, status, actions  
 - **Actions** – Withdraw from active positions or view completed ones  
 
-**Withdraw Modal**  
-
-![Withdraw Modal](../../../static/img/front-end/pools/pools-pool-details-page-modal-withdraw.png)  
-
-Lets you withdraw part or all of an active position, showing amount, rewards, and updated balance.  
-
-**Withdraw All Button**  
-
-![Withdraw All Button](../../../static/img/front-end/pools/pools-pool-details-page-button-withdraw-all.png)  
-
-**Withdraw All Modal**  
-
-![Withdraw All Modal](../../../static/img/front-end/pools/pools-pool-details-page-modal-withdraw-all.png)  
-
-Enables bulk withdrawal of all positions and rewards in one step.  
-
 #### My Borrows  
 
 ![My Borrows Table](../../../static/img/front-end/pools/pools-pool-details-page-table-my-borrows.png)  
 
 Displays borrowing positions with collateral, outstanding debt, repayments, and health indicators:  
-- **Healthy Position** – Sufficient collateral (e.g., 41%)  
-- **Warning Position** – At-risk collateral ratio (e.g., 65%)  
+- **Healthy Position** – Sufficient collateral 
+- **Warning Position** – At-risk collateral ratio 
 - **Actions** – Includes **Pay Back** or **Update Collateral Amount**  
+
+
+### Actions & Modals  
+
+The **Actions & Modals** section contains all interactive dialogs and quick actions you can use to manage your supply and borrow positions. These modals ensure that you can perform portfolio management tasks directly within the Pool Details page without navigating elsewhere.  
+
+**Withdraw Modal**  
+
+![Withdraw Modal](../../../static/img/front-end/pools/pools-pool-details-page-modal-withdraw.png)  
+
+Allows you to withdraw a specific amount from an active supply position.  
+- **Amount to Withdraw** – Field to enter the desired amount (with Half/Max shortcuts).  
+- **Rewards** – Displays earned rewards being claimed.  
+- **Remaining Balance** – Shows how much will remain in the position after withdrawal.  
+
+**Withdraw All**  
+
+![Withdraw All Button](../../../static/img/front-end/pools/pools-pool-details-page-button-withdraw-all.png)  
+![Withdraw All Modal](../../../static/img/front-end/pools/pools-pool-details-page-modal-withdraw-all.png)  
+
+Provides a **bulk withdrawal** option across all active supply positions.  
+- **Chain & Pool Selectors** – Show which chain/pool the withdrawal is being made from.  
+- **Withdrawable Amounts** – Displays both principal and expected rewards.  
+- **Select All / Clear All** – Quick toggles to choose positions.  
+- **Withdraw All Button** – Executes the transaction in one step.  
 
 **Pay Position Modal**  
 
 ![Pay Position Modal](../../../static/img/front-end/pools/pools-pool-details-page-modal-pay-position.png)  
 
-Allows repayment of borrowed amounts with transaction summary (principal, interest, remaining balance).  
+Used to repay borrowed funds and reduce outstanding debt.  
+- **Amount to Pay** – User can input a custom amount (with Half/Max shortcuts).  
+- **Interest to Pay** – Shows the accrued interest being covered.  
+- **Remaining Balance** – Displays the new outstanding loan balance after repayment.  
+
+This helps manage debt levels and avoid liquidation.  
 
 **Update Collateral Action**  
 
 ![Update Collateral Action](../../../static/img/front-end/pools/pools-pool-details-page-table-actions.png)  
 
-Enables adding collateral to strengthen LTV ratio and reduce liquidation risk.  
+Allows adding more collateral to an existing borrow position.  
+- **New Collateral Amount** – Field to enter additional collateral.  
+- **LTV Ratio** – Updated in real time as collateral is added.  
+- **Save Changes** – Confirms the collateral update.  
+
+This is a **risk management tool**, helping users strengthen their positions and prevent liquidation by improving their loan-to-value ratio.  
+
+
+> Together, these actions and modals give users **full control** over supply and borrowing activities: from partial withdrawals and repayments to bulk exits and collateral management.  
 
