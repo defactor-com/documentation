@@ -176,10 +176,10 @@ When creating assets, you can choose between **ERC-20** (fungible tokens) and **
 > - Use **ERC-20** when you need broad accessibility and simplicity.  
 > - Use **ERC-3643** when compliance with financial regulations is required.  
 
-**Token Economics Configuration:**
-- **Price**: Set the total asset valuation in USDC
-- **Supply**: Define the total number of tokens to be minted
-- **Price per Token**: Automatically calculated based on total price divided by supply
+**Token Economic Configuration:**
+- **FDV**: Fully Diluted Valuation in USDC. This represents the total value of the asset if all tokens were in circulation.
+- **Supply**: The total number of tokens that will ever exist.
+- **Price per Token**: Automatically calculated as FDV ÷ Supply.
 
 **Asset Description:**
 Provide a comprehensive description of the tokenized asset, including investment highlights, key features, and value proposition for potential token holders.
@@ -250,8 +250,8 @@ The final phase in the asset creation workflow deploys your verified asset as to
 **Minting Workflow Steps:**
 
 **Step 1: Review Info**
-- Final review of all asset information including price, supply, and creation date
-- Displays asset summary with token details (e.g., 25,000,000 total price, 250,000 supply)
+- Final review of all asset information including FDV, supply, and creation date
+- Displays asset summary with token details
 - **Confirm** button to proceed to next step
 
 **Step 2: Upload Info**
@@ -302,7 +302,7 @@ At any point during the asset creation process, you can save your work as a draf
 
 **Managing Draft Assets:**
 - Access saved drafts from your main dashboard under **Drafts** tab
-- Each draft shows the asset name, token details, total price, and current status
+- Each draft shows the asset name, token details, FDV, supply, and current status.
 
 ![Draft Edit Options](../../../../documentation/static/img/front-end/assets/how-tos/assets-how-tos-save-drafts-dashboard-edit.png)
 
