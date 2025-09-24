@@ -64,7 +64,7 @@ Provides fields for descriptive and branding updates:
 - **Pool Name** – Display name of the pool.  
 - **Pool Logo URL** – Link to pool logo.  
 - **Description** – Free-text field for borrower/lender instructions or notes.  
-- **Off-chain Visibility** – Controls pool visibility (e.g., Public).  
+- **Off-chain Visibility** – Controls pool visibility (e.g., Public, Comming Soon, Hidden).  
 - **Terms & Conditions** – Add labels and URLs for compliance.  
 
 #### Clone Pool  
