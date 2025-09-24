@@ -14,7 +14,7 @@ todo
 
 ## Manage Pools Table 
 
-![Manage Pools Table](../../../../static/img/front-end/engage/admin-...png)
+<!-- ![Manage Pools Table](../../../../static/img/front-end/pools/admin-...png) -->
 
 todo
 
