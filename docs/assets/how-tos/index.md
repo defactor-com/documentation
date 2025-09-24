@@ -177,6 +177,9 @@ When creating assets, you can choose between **ERC-20** (fungible tokens) and **
 > - Use **ERC-3643** when compliance with financial regulations is required.  
 
 **Token Economic Configuration:**
+
+![Token Economic Configuration](../../../../documentation/static/img/front-end/assets/how-tos/assets-tokenization-fdv.png)
+
 - **FDV**: Fully Diluted Valuation in USDC. FDV is calculated as token price × total supply and represents the total value of the asset if all tokens were in circulation.  
 - **Supply**: The total number of tokens that will ever exist. The price per token is automatically calculated as FDV ÷ Supply.  
 - **Price per Token**: Automatically calculated and displayed in the UI as FDV ÷ Supply. This value updates dynamically as FDV or Supply changes.
