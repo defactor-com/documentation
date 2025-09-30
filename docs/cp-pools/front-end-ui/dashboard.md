@@ -67,10 +67,12 @@ Hovering over the chart provides context on pool composition:
 The rewards panel tracks both historical and projected incentives for participants:  
 
 - **Total Rewards Paid Out**  
+  - The total amount of rewards that have already been distributed to participants.
   - Cumulative rewards distributed platform-wide.  
   - Reflects the earnings already allocated to users.  
 
 - **Expected Rewards**  
+  - The projected rewards expected to be distributed across all participants.
   - Future rewards projected to be distributed.  
   - Indicates forward-looking incentive potential.  
 
@@ -115,8 +117,8 @@ This view highlights **liquidity you provided** to pools created by others.
 
 ![Supplied Rewards](../../../static/img/front-end/cp-pools/cp-pools-dash-my-stats-supplied-rewards.png)
 
-- **Total Rewards Received** → Rewards already distributed to your supplied positions.  
-- **Expected Rewards** → Future rewards based on active liquidity.  
+- **Total Rewards Received** → Rewards already distributed to your supplied positions (The total amount of rewards you have already received from your supplied liquidity).
+- **Expected Rewards** → Future rewards based on active liquidity (The projected rewards you are expected to receive from your supplied liquidity).  
 
 ### My Pools
 
@@ -141,5 +143,5 @@ This view highlights **Total Locked In My Pools** and provides insight into the 
 
 ![My Pools Rewards](../../../static/img/front-end/cp-pools/cp-pools-dash-my-stats-my-pools-rewards.png)
 
-- **Total Rewards Paid Out** → Rewards already distributed from your created pools.  
-- **Expected Payouts** → Projected future rewards.  
+- **Total Rewards Paid Out** → Rewards already distributed from your created pools (The total amount of rewards that participants have already earned from your created pools).  
+- **Expected Payouts** → Projected future rewards (The projected rewards that participants are expected to earn from your created pools).  
