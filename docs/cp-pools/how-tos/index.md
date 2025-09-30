@@ -15,115 +15,72 @@ There are multiple ways to access the CP Pool creation interface:
 ![CP Pool Dashboard](../../../../documentation/static/img/front-end/cp-pools/how-tos/cp-pools-how-tos-dashboard.png)
 
 **Option A: Dashboard Access**
-- Navigate to the **CP Pools** dashboard from the main menu
-- Click the **"Create Pool"** or **"Create a new pool"** button prominently displayed
-- Or use the **"Create a new pool"** button in the Top Pools section
 
-**Option B: Direct Creation**
+![CP Pool Create a new pool Button](../../../../documentation/static/img/front-end/cp-pools/how-tos/cp-pools-how-tos-create-a-new-pool-button.png)
+
+- Navigate to the **CP Pools** dashboard from the main menu
+- Click the  **"Create a new pool"** button
+
+**Option B: Create a New Pool from the Empty Table**
+
+![CP Pool Create a new pool in Empty Table](../../../../documentation/static/img/front-end/cp-pools/how-tos/cp-pools-how-tos-create-a-new-pool-empty-table.png)
+
 - Access via the **"Create a new pool"** button when no pools exist
 - Follow the guided message: "You can create a new pool by clicking on 'Create a new pool' button and following the next steps"
 
-## Step 2: Configure Pool Basic Information
+---
 
-### Pool Identity Settings
+## Step 2: Enter Pool Details
 
-**Pool Name** *(Required)*
-Enter a descriptive name for your counterparty pool that clearly identifies its purpose.
+![Create Pool Form](../../../../documentation/static/img/front-end/cp-pools/how-tos/cp-pools-how-tos-create-pool-form.png)
 
-**Description**
-Provide detailed information about the pool's terms, conditions, and intended use case.
+In this step, you define the **basic details** of your counterparty pool. These fields establish the pool’s identity, funding parameters, collateral, and presentation.
 
-### Pool Capacity Configuration
+1. **Pool Name** *(Required)*  
+   Enter a descriptive name for your counterparty pool that clearly identifies its purpose.  
 
-**Pool Soft Cap** *(Required)*
-Set the target funding amount for your pool. This represents the desired liquidity level.
+   ![Pool Name](../../../../documentation/static/img/front-end/cp-pools/how-tos/cp-pools-how-tos-create-pool-form-name.png)
 
-**Pool Hard Cap** *(Required)*  
-Define the maximum funding limit. Once reached, the pool will stop accepting new deposits.
+2. **Description**  
+   Provide additional context about your pool, such as its objectives, investment focus, or any specific conditions.  
 
-### Timeline Settings
+   ![Pool Description](../../../../documentation/static/img/front-end/cp-pools/how-tos/cp-pools-how-tos-create-pool-form-description.png)
 
-**Deadline** *(Required)*
-Set the funding deadline when the pool will close for new participants.
+3. **Pool Soft Cap** *(Required)* and **Pool Hard Cap** *(Required)*  
+   - **Soft Cap** → Minimum target funding amount.  
+   - **Hard Cap** → Maximum allowed funding amount.  
 
-**Liquidation Deadline** *(Required)*
-Define when assets can be liquidated if loan terms are not met.
+   ![Capacity Settings](../../../../documentation/static/img/front-end/cp-pools/how-tos/cp-pools-how-tos-create-pool-form-capacity.png)
 
-### Social & Web Presence
+4. **Deadline** and **Liquidation Deadline** *(Required)*  
+   - **Deadline** → Final date for funding the pool.  
+   - **Liquidation Deadline** → Final date by which repayment/liquidation must occur.  
 
-**Website**
-Add your project's website URL for additional credibility and information.
+   ![Deadline](../../../../documentation/static/img/front-end/cp-pools/how-tos/cp-pools-how-tos-create-pool-form-deadline.png)
 
-**Twitter Handle**
-Enter your Twitter handle for social verification (includes "Verify" functionality).
+5. **Expected APR** *(Required)*, **Minimum APR** *(Required)*, and **Expected Term** *(Required)*  
+   - **Expected APR** → The anticipated annualized return.  
+   - **Minimum APR** → The lowest acceptable rate for participants.  
+   - **Expected Term** → The planned duration of the pool (e.g., 12 months).  
 
-### Financial Parameters
+   ![Timeline](../../../../documentation/static/img/front-end/cp-pools/how-tos/cp-pools-how-tos-create-pool-form-timeline.png)
 
-**Expected APR** *(Required)*
-Set the expected Annual Percentage Rate that lenders can anticipate.
+6. **Website**  
+   Add a link to your official project or company website for more information.  
 
-**Minimum APR** *(Required)*
-Define the minimum acceptable return rate for the pool.
+   ![Website](../../../../documentation/static/img/front-end/cp-pools/how-tos/cp-pools-how-tos-create-pool-form-website.png)
 
-**Expected Term** *(Required)*
-Specify the loan duration or investment period.
+7. **X (Twitter) Handle**  
+   Provide your verified X handle to build trust.  
 
-**Photo**
-Upload a representative image for your pool (PNG, JPG, SVG up to 10MB).
+   ![Social Media](../../../../documentation/static/img/front-end/cp-pools/how-tos/cp-pools-how-tos-create-pool-form-social-media.png)
 
-## Step 3: Add Collateral Assets
+8. **Photo** *(Required)*  
+   Upload an image (PNG, JPG, SVG up to 10MB) that visually represents your pool.  
 
-### Collateral Selection Process
+   ![Pool Photo](../../../../documentation/static/img/front-end/cp-pools/how-tos/cp-pools-how-tos-create-pool-form-photo.png)
 
-**Available Assets**
-The system displays all available tokenized assets that can be used as collateral, including:
-- Asset name and symbol
-- Token ID and type (ERC20)
-- Current balance available
-- Token details
+9. **Collateral**  
+   Specify the tokens or assets that will serve as collateral for the pool. Use the **+ Add** button to select them.  
 
-**Adding Collateral**
-1. Browse the list of available tokenized assets
-2. Select desired assets by checking the boxes
-3. Click **"Add Collateral"** to include selected assets in your pool
-
-### Collateral Management
-
-**Amount Configuration**
-- Set the specific amount of each collateral asset
-- Use "Max" button to utilize full available balance
-- Adjust amounts based on pool requirements and risk management
-
-**Collateral Overview**
-Each added collateral displays:
-- Name and symbol
-- Token ID and type
-- Current balance
-- Amount allocated to the pool
-- Action options (delete if needed)
-
-## Step 4: Pool Creation Fee and Deployment
-
-### Important Fee Information
-**Pool Creation Fee: 200 USDC**
-- Non-refundable fee applicable to all pool creation requests
-- Requires USDC spending approval before pool creation
-- Fee helps maintain platform operations and pool infrastructure
-
-### Blockchain Approval Process
-
-**USDC Spending Approval**
-1. System requests permission to withdraw tokens from your account
-2. Approve the spending cap (200 USDC for pool creation)
-3. Confirm the transaction in your wallet
-4. Wait for blockchain confirmation
-
-### Final Pool Creation
-
-**Create Pool**
-- Review all configuration settings
-- Ensure collateral assets are properly configured
-- Click **"Create Pool"** to deploy on blockchain
-- Confirm transaction and wait for deployment completion
-
-The pool creation process combines traditional DeFi lending mechanics with tokenized real-world assets, creating new opportunities for asset-backed lending and borrowing in the decentralized finance ecosystem.
+   ![Collateral Section](../../../../documentation/static/img/front-end/cp-pools/how-tos/cp-pools-how-tos-create-pool-form-collateral.png)
