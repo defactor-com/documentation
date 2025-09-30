@@ -24,7 +24,7 @@ The pool summary section provides an at-a-glance view of the key parameters:
 
 These details confirm that the pool conditions have been satisfied and that funds can now be collected by the owner.
 
-## Step 1: Collect Funds
+## Collecting Funds (Pool Owner)
 
 Once the pool has successfully reached its target, the **Collect** button becomes active for the pool owner.
 
@@ -43,3 +43,35 @@ After confirming, the button changes state to indicate that funds are being coll
 ![Collecting Loading](../../../../documentation/static/img/front-end/cp-pools/how-tos/cp-pool-collect-and-distribute-collecting-loading.png)
 
 At this stage, the transaction is processing on-chain. Once confirmed, the funds are transferred to the pool owner’s wallet for further distribution.
+
+## After Collect (Investor View)
+
+Once the pool owner has collected the committed funds, investors will see the updated pool status in their interface.
+
+![Investor View After Collect](../../../../documentation/static/img/front-end/cp-pools/how-tos/cp-pool-collect-and-distribute-after-collect-user-view.png)
+
+From the **investor perspective**:  
+- The pool is now marked as **Active**.  
+- The **Total Rewards** field still shows `0 USDC`, because the pool owner has not yet deposited rewards for distribution.  
+- On the right-hand side, the **Claim** section indicates:  
+  - **Available: 0 USDC** → no rewards are ready to claim yet.  
+  - **Claimed: 0 USDC** → the investor has not received any rewards yet.  
+- The **History** section confirms that the pool has moved into the *Collected* state, showing the transaction where the owner retrieved the pool’s committed funds.  
+
+At this stage, investors must wait for the pool owner to **deposit rewards**, which will then become available for claiming.
+
+## After Collect (Pool Owner View)
+
+After collecting the pool funds, the **pool owner** sees an updated view that includes the option to deposit rewards.
+
+![Pool Owner After Collect](../../../../documentation/static/img/front-end/cp-pools/how-tos/cp-pool-collect-and-distribute-after-collect-admin-of-pool-view.png)
+
+From the **owner perspective**:  
+- The pool status is shown as **Active**.  
+- The **Total Rewards** field is still `0 USDC` because rewards have not yet been deposited.  
+- A new input field and button appear on the right-hand side, allowing the owner to **deposit rewards** into the pool.
+
+![Deposit Rewards](../../../../documentation/static/img/front-end/cp-pools/how-tos/cp-pool-collect-and-distribute-after-collect-admin-of-pool-view-deposit-rewards.png)
+
+Here, the owner specifies the **reward amount** to be distributed among investors and confirms the transaction on-chain.  
+Once rewards are deposited, they become visible to investors under the **Available** balance in the Claim section.
