@@ -23,3 +23,23 @@ The pool summary section provides an at-a-glance view of the key parameters:
 - **APR and Term** → Expected APR, minimum APR accepted, and the agreed duration of the pool.  
 
 These details confirm that the pool conditions have been satisfied and that funds can now be collected by the owner.
+
+## Step 1: Collect Funds
+
+Once the pool has successfully reached its target, the **Collect** button becomes active for the pool owner.
+
+![Collect Button](../../../../documentation/static/img/front-end/cp-pools/how-tos/cp-pool-collect-and-distribute-collect-button.png)
+
+Clicking the button opens a wallet confirmation request. In this case, the transaction is initiated via MetaMask:
+
+![Collect Transaction](../../../../documentation/static/img/front-end/cp-pools/how-tos/cp-pool-collect-and-distribute-collect-transaction.png)
+
+- Verify the transaction details.  
+- Confirm the network fee (gas cost).  
+- Approve the transaction to proceed with collection.  
+
+After confirming, the button changes state to indicate that funds are being collected:
+
+![Collecting Loading](../../../../documentation/static/img/front-end/cp-pools/how-tos/cp-pool-collect-and-distribute-collecting-loading.png)
+
+At this stage, the transaction is processing on-chain. Once confirmed, the funds are transferred to the pool owner’s wallet for further distribution.
