@@ -6,6 +6,8 @@ sidebar_position: 7
 
 WIP!! 
 
+<!-- waiting for bug fixes https://github.com/defactor-com/cp-pools-webapp/issues/241 -->
+
 
 This guide explains what happens when a **CP Pool does not reach the minimum funding target** by its deadline.  
 In this case, the pool is considered **Failed**, and investors are refunded their contributions.  
