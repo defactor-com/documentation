@@ -10,6 +10,93 @@ The Supplied page displays all pools that you have committed funds to on the CP 
 
 ---
 
+## Pool Table Overview
+
+The Supplied page displays your committed pools in a comprehensive table format, providing key metrics and actionable controls for each investment.
+
+![CP Pools Supplied Overview](../../../static/img/front-end/cp-pools/cp-pools-dash-supplied-overview.png)
+
+### Table Columns
+
+**Name**
+- Pool identifier with associated icon/logo
+
+**Verified**
+- Blue checkmark icon indicates verified pools
+- Verification status for pool authenticity
+
+**APR (Annual Percentage Rate)**
+- Expected return rate for the pool
+- Displayed as percentage 
+
+**Utilization Rate**
+- Current pool usage expressed as fraction
+- Format: `[used]/[total] USDC`
+
+**Committed**
+- Amount you have invested in the pool
+- Displayed in USDC
+
+**Claimed**
+- Amount you have withdrawn from the pool
+- Displayed in USDC
+- Can show partial amounts
+- Shows "0 USDC" if nothing has been claimed yet
+
+**Status**
+- Visual badge indicating pool state:
+  - **Created** (green) - Pool exists but not yet active
+  - **Active** (blue) - Pool is currently operational
+  - **Closed** (red/pink) - Pool has ended or been terminated
+
+**Actions**
+- **Withdraw** button - Available for pools in "Created" status
+- **Claim** button - Available when funds can be withdrawn (shows "Claim 0 USDC" if no claimable amount)
+- **Three-dot menu** (⋮) - Additional options dropdown
+
+### Actions Dropdown
+
+![Actions Dropdown Menu](../../../static/img/front-end/cp-pools/cp-pools-supplied-table-view-actions.png)
+
+The three-dot menu provides quick access to pool-specific actions:
+
+**Available Actions**
+- **View Details** (eye icon) - Opens detailed pool information
+- **Deposit** (plus icon) - Add more funds to the pool
+- **Withdraw** (arrow icon) - Remove committed funds
+- **Claim** (checkmark icon) - Withdraw earned returns
+
+**Action Availability**
+- Menu options may be disabled based on pool status
+- Grayed-out options indicate unavailable actions for current pool state
+
+### Table Footer
+
+**Pagination Controls**
+- Shows current page and total elements
+- Navigation arrows for multi-page results
+- Page number selector
+
+**Display Options**
+- "Show" dropdown to adjust items per page
+
+### Pool Status States
+
+**Created**
+- Pool has been initialized
+- Withdraw action available
+- Investments can be recalled before pool activation
+
+**Active**
+- Pool is operational and accepting investments
+- Claim button available for withdrawing returns
+- Real-time utilization tracking
+
+**Closed**
+- Pool has reached end of term or been terminated
+- Final claim available for remaining funds
+- No new deposits accepted
+
 ## Empty State Display
 
 ### No Pools to Display
@@ -95,14 +182,11 @@ All fields are validated, and the pool can be deployed on-chain.
 3. Approve USDC fee  
 4. Create pool
 
----
-
 ## Pool States and Lifecycle
 
 ### Pre-Creation State
 - Empty state with creation encouragement
 - Direct path to pool creation workflow
-- Educational messaging about pool display
 
 ### Creation Process
 - Comprehensive form with all required parameters
@@ -113,41 +197,3 @@ All fields are validated, and the pool can be deployed on-chain.
 - Portfolio view of committed pools
 - Investment tracking and performance monitoring
 - Pool status and participation details
-
----
-
-## User Experience Features
-
-### Guidance and Onboarding
-- **Empty State Messaging** - Clear explanation of page purpose
-- **Form Validation** - Required field indicators and tooltips
-- **Progressive Disclosure** - Step-by-step pool creation process
-
-### Risk Management
-- **Collateral Requirements** - Mandatory collateral configuration
-- **Fee Transparency** - Clear creation cost disclosure
-- **Timeline Validation** - Logical deadline sequencing
-
-### Accessibility
-- **Multiple Entry Points** - Various paths to pool creation
-- **Visual Feedback** - Icons and status indicators
-- **Clear Actions** - Prominent buttons with descriptive labels
-
----
-
-## Workflow Benefits
-
-### For Pool Creators
-- **Streamlined Creation** - Guided form with all necessary fields
-- **Flexible Configuration** - Customizable parameters and timelines
-- **Collateral Management** - Comprehensive token selection options
-
-### For Investors
-- **Portfolio Overview** - Clear view of all committed pools
-- **Investment Tracking** - Monitor participation across pools
-- **Easy Access** - Quick path to create additional pools
-
-### Platform Features
-- **Fee Structure** - Transparent pricing model
-- **Token Integration** - Support for various collateral types
-- **Social Verification** - Twitter handle verification system
