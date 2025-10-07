@@ -4,7 +4,7 @@ title: Dashboard
 sidebar_position: 2
 ---
 
-The CP Pools Dashboard provides a comprehensive overview of pool creation and management activities on the Defactor platform. It serves as your main control center for creating new pools, managing existing pools, and monitoring global pool statistics and performance.
+The CP Pools Dashboard provides a comprehensive overview of pool creation and management activities on the Defactor platform. It serves as your main control center for creating new cp pools, managing existing cp pools, and monitoring global cp pool statistics and performance.
 
 ![Dashboard Overview](../../../static/img/front-end/cp-pools/cp-pools-dashboard.png)
 

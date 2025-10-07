@@ -6,13 +6,15 @@ sidebar_position: 3
 
 The Supplied page displays all pools that you have committed funds to on the CP Pools platform. It serves as your investment portfolio view, showing your participation in various crowd-pooled investment opportunities.
 
-<!-- ![External Links](../../../static/img/front-end/cp-pools/cp-pools-supplied-empty.png) -->
+![CP Pools Supplied Overview](../../../static/img/front-end/cp-pools/cp-pools-dash-supplied-overview.png)
 
 ---
 
 ## Empty State Display
 
 ### No Pools to Display
+
+![CP Pools Supplied Empty State](../../../static/img/front-end/cp-pools/cp-pools-dash-supplied-empty.png)
 
 **Visual Indicator**
 - Database icon with checkmark indicating data readiness
@@ -31,97 +33,67 @@ The Supplied page displays all pools that you have committed funds to on the CP 
 - **Create a new pool** button also available in top navigation
 - Multiple access points for pool creation functionality
 
----
-
 ## Pool Creation Interface
-
-<!-- ![External Links](../../../static/img/front-end/cp-pools/cp-pools-create-form.png) -->
 
 ### Create Pool Form
 
-**Basic Information**
-- **Pool Name** - Required field for pool identification
-- **Description** - Multi-line text area for detailed pool explanation
+![Create Pool Form Filled](../../../static/img/front-end/cp-pools/cp-pools-create-a-pool-form-filled.png)
 
-**Financial Parameters**
+The **Create Pool** form allows users to configure a new investment pool by entering basic details, funding limits, deadlines, and expected returns.
 
-**Funding Thresholds**
-- **Pool Soft Cap** - Minimum funding threshold with info tooltip
-- **Pool Hard Cap** - Maximum funding limit with info tooltip
+**Main Sections**
+- **Basic Info:** Pool name and description  
+- **Funding:** Soft and hard cap with tooltips  
+- **Timeline:** Deadline and liquidation deadline with date pickers  
+- **Links:** Website and Twitter handle verification  
+- **Returns:** Expected APR, Minimum APR, Expected Term  
+- **Visuals:** Upload pool image (PNG, JPG, SVG up to 10MB)
 
-**Timeline Configuration**
-- **Deadline** - Pool funding deadline with date picker (10/10/2025)
-- **Liquidation Deadline** - Pool closure date with date picker (11/10/2025)
+**Collateral**
+- Initially empty with an “Add” button to select tokens  
+- Required before pool creation can proceed  
 
-**Online Presence**
-- **Website** - URL field for pool website
-- **Twitter handle** - Social media verification field with "Verify" button
+**Fees**
+- A non-refundable **200 USDC** creation fee  
+- Requires **USDC approval** before submission
 
-**Return Parameters**
-- **Expected APR** - Projected annual return rate
-- **Minimum APR** - Guaranteed minimum return rate
-- **Expected Term** - Duration of pool operation
+### Collateral Selection Modal
 
-**Visual Assets**
-- **Photo Upload** - Drag and drop interface
-- File support: PNG, JPG, SVG up to 10MB
-- Visual branding for pool presentation
+![Choose Collateral Modal](../../../static/img/front-end/cp-pools/cp-pools-create-a-pool-form-choose-collateral.png)
 
-### Collateral Management
+The **Choose Collateral** modal lists available tokens for selection.
 
-**Collateral Warning**
-- "No collateral tokens selected yet" alert message
-- Required step before pool creation completion
+**Columns**
+- Checkbox, Name, Symbol, Token ID, Type, Balance  
 
-**Collateral Section**
-- Dedicated collateral configuration area
-- **Add** button to configure collateral requirements
+**Actions**
+- Select multiple tokens  
+- Click **Add Collateral** to confirm or **Cancel** to exit
 
-### Transaction Requirements
+### Create Pool – Empty State
 
-**Pool Creation Fee**
-- **200 USDC** non-refundable creation fee
-- USDC spending approval required first
-- Fee applicable to all pool creation requests
+![Empty Create Pool Form](../../../static/img/front-end/cp-pools/cp-pools-create-a-pool-form-empty.png)
 
-**Action Buttons**
-- **Close** - Cancel pool creation process
-- **Approve USDC** - Required for fee payment
+Displays an empty form with disabled submission and alerts:
+- “No collateral tokens selected yet”  
+- Reminder about 200 USDC creation fee
 
----
+Buttons:
+- **Close**  
+- **Approve USDC**
 
-## Collateral Selection Modal
+### Create Pool – After Collateral Approval
 
-<!-- ![External Links](../../../static/img/front-end/cp-pools/cp-pools-collateral-selection.png) -->
+![Approved Collateral Form](../../../static/img/front-end/cp-pools/cp-pools-create-a-pool-form-after-approved-collateral.png)
 
-### Choose Collateral Interface
+After approving collateral, the **Create Pool** button becomes active.  
+All fields are validated, and the pool can be deployed on-chain.
 
-**Token Selection Table**
-
-**Column Structure**
-- **Checkbox** - Selection indicator for each token
-- **Name** - Full token name
-- **Symbol** - Token ticker symbol
-- **Token ID** - Contract identifier
-- **Type** - Token standard (ERC20)
-- **Balance** - Available token amount
-
-**Available Collateral Options**
-- **USDC** - USD Coin stablecoin
-- **Defactor: FACTR Token** - Platform native token
-- **sdvsv** - Custom token option
-- **USD Coin** - Alternative USDC listing
-- **Sharing Utility Token** - Platform utility token
-- **Defactor** - REAL token option
-
-**Selection Process**
-- Multiple token selection supported
-- Balance verification for selected tokens
-- Token type validation (ERC20 standard)
-
-**Modal Actions**
-- **Cancel** - Close without selecting collateral
-- **Add Collateral** - Confirm selected tokens
+**Workflow Summary**
+1. Fill out pool details  
+2. Add and approve collateral  
+3. Approve USDC fee  
+4. Create pool
 
 ---
 
