@@ -1,7 +1,7 @@
 ---
 id: cp-pools-frontend-my-pools
 title: My Pools
-sidebar_position: 4
+sidebar_position: 3
 ---
 
 The My Pools page displays all pools that you have created on the CP Pools platform. It serves as your pool management dashboard, allowing you to monitor and manage the investment pools you've established for other users to participate in.

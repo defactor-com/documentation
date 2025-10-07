@@ -1,7 +1,7 @@
 ---
 id: cp-pools-frontend-pool-details
 title: Pool Details
-sidebar_position: 5
+sidebar_position: 4
 ---
 
 The **Pool Details** page provides comprehensive information about a specific CP pool, including pool parameters, deposit and withdrawal functionality, performance statistics, collaterals, and transaction history. This page is accessed by clicking on any pool row.
