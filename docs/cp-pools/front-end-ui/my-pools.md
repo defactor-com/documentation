@@ -1,182 +1,205 @@
 ---
 id: cp-pools-frontend-my-pools
 title: My Pools
-sidebar_position: 3
+sidebar_position: 2
 ---
 
-The My Pools page displays all pools that you have created on the CP Pools platform. It serves as your pool management dashboard, allowing you to monitor and manage the investment pools you've established for other users to participate in.
+The My Pools page displays all pools that you have created on the CP Pools platform. It serves as your pool management dashboard, showing all investment opportunities you've launched for crowd-pooled funding.
 
-<!-- ![External Links](../../../static/img/front-end/cp-pools/cp-pools-my-pools-empty.png) -->
+![CP Pools My Pools Overview](../../../static/img/front-end/cp-pools/cp-pools-my-pools-overview.png)
 
 ---
+
+## Pool Table Overview
+
+The My Pools page displays your created pools in a comprehensive table format, providing key metrics and actionable controls for each pool you manage.
+
+![CP Pools My Pools Overview](../../../static/img/front-end/cp-pools/cp-pools-my-pools-overview.png)
+
+### Table Columns
+
+**Name**
+- Pool identifier with associated icon/logo
+
+**Verified**
+- Blue checkmark icon indicates verified pools
+- Verification status for pool authenticity
+
+**APR (Annual Percentage Rate)**
+- Expected return rate for the pool
+- Displayed as percentage 
+
+**Utilization Rate**
+- Current pool usage expressed as fraction
+- Format: `[used]/[total] USDC`
+
+**Total Rewards**
+- Total rewards distributed or available
+- Displayed in USDC
+- Shows "0 USDC" if no rewards have been distributed yet
+
+**Status**
+- Visual badge indicating pool state:
+  - **Created** (green) - Pool exists but not yet active
+  - **Active** (blue) - Pool is currently operational
+  - **Closed** (red/pink) - Pool has ended or been terminated
+
+**Actions**
+- **Three-dot menu** (⋮) - Pool management options dropdown
+
+### Actions Dropdown
+
+![Actions Dropdown Menu](../../../static/img/front-end/cp-pools/cp-pools-my-pools-table-actions.png)
+
+The three-dot menu provides access to pool management actions:
+
+**Available Actions**
+- **View Details** (eye icon) - Opens detailed pool information
+- **Collect Pool** (refresh icon) - Gather funds from the pool
+- **Pay Suppliers** (user icon) - Distribute payments to investors
+- **Close Pool** (x icon) - Terminate the pool
+- **Archive Pool** (archive icon) - Move pool to archived status
+
+**Action Availability**
+- Menu options may be disabled based on pool status
+- Grayed-out options indicate unavailable actions for current pool state
+
+### Table Footer
+
+**Pagination Controls**
+- Shows current page and total elements
+- Navigation arrows for multi-page results
+- Page number selector
+
+**Display Options**
+- "Show" dropdown to adjust items per page
+
+### Pool Status States
+
+**Created**
+- Pool has been initialized
+- Awaiting activation
+- Management actions available
+
+**Active**
+- Pool is operational and accepting investments
+- Real-time utilization tracking
+- Full management capabilities enabled
+
+**Closed**
+- Pool has reached end of term or been terminated
+- No new deposits accepted
+- Final settlements in progress
+
+**Liquidated**
+- Pool has been fully settled and paid out
+
+**Archived**
+- Pool has been moved to archive status
 
 ## Empty State Display
 
 ### No Pools to Display
 
+![CP Pools My Pools Empty State](../../../static/img/front-end/cp-pools/cp-pools-my-pools-empty-state.png)
+
 **Visual Indicator**
-- Database icon with checkmark indicating system readiness
-- Clean, minimalist design focusing user attention on pool creation
+- Database icon with checkmark indicating data readiness
+- Clean, minimalist design focusing user attention on next steps
 
 **Primary Message**
 - "No pools to display" - Clear status communication
 - Explanatory text: "Pools that you have created will be shown here"
 
 **Call to Action**
-- **Create a new pool** button prominently displayed in center
-- Alternative **Create a new pool** button in top navigation
-- Multiple access points encouraging pool creation
+- **Create a new pool** button prominently displayed
+- Direct entry point to pool creation workflow
+- Encourages user to launch first investment opportunity
 
----
+**Navigation Consistency**
+- **Create a new pool** button also available in top navigation
+- Multiple access points for pool creation functionality
 
 ## Pool Creation Interface
 
-<!-- ![External Links](../../../static/img/front-end/cp-pools/cp-pools-create-form-detailed.png) -->
+### Create Pool Form
 
-### Comprehensive Create Pool Form
+![Create Pool Form Filled](../../../static/img/front-end/cp-pools/cp-pools-create-a-pool-form-filled.png)
 
-**Basic Pool Information**
-- **Pool Name** - Required field for pool identification
-- **Description** - Multi-line text area for detailed pool explanation and investment thesis
+The **Create Pool** form allows users to configure a new investment pool by entering basic details, funding limits, deadlines, and expected returns.
 
-**Financial Configuration**
+**Main Sections**
+- **Basic Info:** Pool name and description  
+- **Funding:** Soft and hard cap with tooltips  
+- **Timeline:** Deadline and liquidation deadline with date pickers  
+- **Links:** Website and Twitter handle verification  
+- **Returns:** Expected APR, Minimum APR, Expected Term  
+- **Visuals:** Upload pool image (PNG, JPG, SVG up to 10MB)
 
-**Funding Parameters**
-- **Pool Soft Cap** - Minimum funding threshold with info tooltip
-- **Pool Hard Cap** - Maximum funding capacity with info tooltip
+**Collateral**
+- Initially empty with an "Add" button to select tokens  
+- Required before pool creation can proceed  
 
-**Timeline Management**
-- **Deadline** - Pool funding deadline with date picker interface
-- **Liquidation Deadline** - Pool closure/exit date with date picker
+**Fees**
+- A non-refundable **200 USDC** creation fee  
+- Requires **USDC approval** before submission
 
-**Online Presence and Verification**
-- **Website** - URL field for pool's official website
-- **Twitter handle** - Social media account with "Verify" button for authentication
+### Collateral Selection Modal
 
-**Return Structure**
-- **Expected APR** - Projected annual percentage return for investors
-- **Minimum APR** - Guaranteed minimum return commitment
-- **Expected Term** - Duration of pool operation in specified time units
+![Choose Collateral Modal](../../../static/img/front-end/cp-pools/cp-pools-create-a-pool-form-choose-collateral.png)
 
-**Visual Branding**
-- **Photo Upload** - Drag and drop file upload interface
-- Supported formats: PNG, JPG, SVG up to 10MB
-- Visual representation for pool marketing and identification
+The **Choose Collateral** modal lists available tokens for selection.
 
-### Risk Management Requirements
+**Columns**
+- Checkbox, Name, Symbol, Token ID, Type, Balance  
 
-**Collateral Configuration**
-- "No collateral tokens selected yet" warning indicator
-- **Collateral** section with **Add** button
-- Mandatory collateral selection before pool finalization
+**Actions**
+- Select multiple tokens  
+- Click **Add Collateral** to confirm or **Cancel** to exit
 
----
+### Create Pool – Empty State
 
-## Collateral Selection System
+![Empty Create Pool Form](../../../static/img/front-end/cp-pools/cp-pools-create-a-pool-form-empty.png)
 
-<!-- ![External Links](../../../static/img/front-end/cp-pools/cp-pools-collateral-modal.png) -->
+Displays an empty form with disabled submission and alerts:
+- "No collateral tokens selected yet"  
+- Reminder about 200 USDC creation fee
 
-### Choose Collateral Modal
+Buttons:
+- **Close**  
+- **Approve USDC**
 
-**Token Selection Interface**
+### Create Pool – After Collateral Approval
 
-**Available Token Options**
-- **USDC** - USD Coin stablecoin (ERC20)
-- **Defactor: FACTR Token** - Platform native governance token
-- **sdvsv** - Custom token with symbol "grdsfr"
-- **USD Coin** - Alternative USDC implementation
-- **Sharing Utility Token** - Platform utility token
-- **Defactor** - REAL token for asset backing
+![Approved Collateral Form](../../../static/img/front-end/cp-pools/cp-pools-create-a-pool-form-after-approved-collateral.png)
 
-**Token Information Display**
-- **Name** - Full token name
-- **Symbol** - Trading ticker symbol
-- **Token ID** - Contract address identifier
-- **Type** - Token standard (all ERC20)
-- **Balance** - Available token amount in wallet
+After approving collateral, the **Create Pool** button becomes active.  
+All fields are validated, and the pool can be deployed on-chain.
 
-**Selection Process**
-- Checkbox selection for multiple tokens
-- Balance verification for selected collateral
-- Real-time availability checking
+**Workflow Summary**
+1. Fill out pool details  
+2. Add and approve collateral  
+3. Approve USDC fee  
+4. Create pool
 
-**Modal Actions**
-- **Cancel** - Close without selecting collateral
-- **Add Collateral** - Confirm selected tokens and proceed
+## Pool States and Lifecycle
 
----
+### Pre-Creation State
+- Empty state with creation encouragement
+- Direct path to pool creation workflow
 
-## Pool Creation Transaction Flow
+### Creation Process
+- Comprehensive form with all required parameters
+- Collateral selection and configuration
+- Fee payment and approval process
 
-### Fee Structure and Payment
+### Post-Creation Display
+- Management view of created pools
+- Pool performance monitoring
+- Access to management and payment actions
 
-**Pool Creation Fee**
-- **200 USDC** non-refundable creation fee
-- Transparent fee disclosure with warning notice
-- USDC spending approval required first
-
-**Transaction Steps**
-1. Complete pool configuration form
-2. Select and configure collateral tokens
-3. Approve USDC spending for fee payment
-4. Submit pool creation transaction
-
-**Action Buttons**
-- **Close** - Cancel pool creation process
-- **Approve USDC** - Required fee payment authorization
-
----
-
-## Post-Creation Pool Management
-
-### Pool Portfolio View
-- List display of all created pools
-- Pool status indicators and progress tracking
-- Performance metrics and participation statistics
-
-### Management Functions
-- Edit pool parameters (where applicable)
-- Monitor funding progress and participant activity
-- Access detailed analytics and reporting
-- Manage pool lifecycle and closure processes
-
----
-
-## Creator Benefits and Features
-
-### Pool Creation Tools
-- **Comprehensive Configuration** - All necessary parameters in single form
-- **Risk Management** - Mandatory collateral requirements
-- **Verification System** - Social media authentication options
-- **Visual Branding** - Custom photo upload for pool identity
-
-### Management Dashboard
-- **Portfolio Overview** - All created pools in centralized view
-- **Performance Tracking** - Monitor pool success and participant engagement
-- **Financial Control** - Set and manage return parameters
-- **Timeline Management** - Control funding and liquidation schedules
-
-### Platform Integration
-- **Fee Transparency** - Clear cost structure disclosure
-- **Token Support** - Multiple collateral token options
-- **Verification Features** - Twitter handle authentication
-- **User Experience** - Guided creation process with validation
-
----
-
-## User Experience Features
-
-### Onboarding and Guidance
-- **Empty State Education** - Clear explanation of page purpose
-- **Progressive Forms** - Step-by-step pool creation process
-- **Validation Feedback** - Real-time form validation and error prevention
-
-### Risk and Compliance
-- **Collateral Requirements** - Mandatory risk management through token backing
-- **Fee Structure** - Transparent pricing with upfront disclosure
-- **Timeline Validation** - Logical deadline sequencing and validation
-
-### Accessibility and Usability
-- **Multiple Entry Points** - Various paths to pool creation
-- **Visual Indicators** - Clear status messages and progress tracking
-- **Responsive Actions** - Prominent buttons with descriptive labels
+### Pool Management
+- View detailed pool metrics
+- Collect funds from active pools
+- Pay suppliers (investors)
+- Close or archive pools as needed
