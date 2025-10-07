@@ -97,6 +97,12 @@ The three-dot menu provides quick access to pool-specific actions:
 - Final claim available for remaining funds
 - No new deposits accepted
 
+**Liquidated**
+- Pool has been fully settled and paid out
+
+**Archived**
+- Pool has been moved to archive status
+
 ## Empty State Display
 
 ### No Pools to Display
