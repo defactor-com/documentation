@@ -4,9 +4,6 @@ title: Managing a Defaulted CP Pool (Owner Fails to Repay)
 sidebar_position: 9
 ---
 
-WIP!! 
-
-
 This guide explains what happens when a **CP Pool reaches its funding target** and the owner successfully collects the funds, but later **fails to repay the principal and rewards**.  
 
 This represents a **default scenario**, where investors are exposed to the underlying risk of the pool owner not returning capital.
@@ -48,8 +45,6 @@ They must wait until the owner deposits rewards.
 
 ### 2.2 When Owner Fails to Repay
 - After the **Liquidation Deadline**, if no deposit is made:  
-  - Pool status changes to **Defaulted**.  
-  - Claim panel remains at **0 USDC** (no rewards to claim).  
   - Investors are exposed to a **loss of principal** unless collateral exists.  
 
 ### 2.3 Collateral Handling
