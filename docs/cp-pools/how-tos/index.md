@@ -1,5 +1,5 @@
 ---
-id: cp-pool-creation
+id: cp-pool-how-tos-overview
 title: How tos Overview
 sidebar_position: 5
 ---
