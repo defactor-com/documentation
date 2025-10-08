@@ -1,6 +1,6 @@
 ---
 id: cp-pool-creation
-title: How to Create a CP Pool
+title: How tos Overview
 sidebar_position: 5
 ---
 
