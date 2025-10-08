@@ -1,7 +1,7 @@
 ---
 id: cp-pool-default-flow
 title: Managing a Defaulted CP Pool (Owner Fails to Repay)
-sidebar_position: 7
+sidebar_position: 9
 ---
 
 WIP!! 

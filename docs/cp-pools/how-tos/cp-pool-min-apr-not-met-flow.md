@@ -1,7 +1,7 @@
 ---
 id: cp-pool-min-apr-not-met-flow
 title: Managing a CP Pool - Principal Returned, No Rewards (Liquidation)
-sidebar_position: 8
+sidebar_position: 10
 ---
 
 This guide explains what happens when a CP Pool reaches its funding target, the owner collects funds, but returns only the principal without rewards. Since the Minimum APR is not met, the collateral enters liquidation and a voting process begins.

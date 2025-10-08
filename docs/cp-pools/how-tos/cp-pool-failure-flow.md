@@ -1,7 +1,7 @@
 ---
 id: cp-pool-failure-flow
 title: Managing a Failed CP Pool (Funding Not Reached)
-sidebar_position: 7
+sidebar_position: 8
 ---
 
 WIP!! 
