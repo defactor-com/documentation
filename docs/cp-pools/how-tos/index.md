@@ -1,86 +1,146 @@
 ---
 id: cp-pool-how-tos-overview
-title: How tos Overview
+title: How-to Guides Overview
 sidebar_position: 5
 ---
 
-This comprehensive guide walks users through the process of creating Counterparty (CP) Pools on the Defactor platform, enabling decentralized lending and borrowing with tokenized asset collateral.
+This section provides step-by-step guides for all essential operations in the CP Pools platform, covering both pool owner and investor workflows from creation through completion or default scenarios.
 
 ---
 
-## Step 1: Access CP Pool Creation
+## For Pool Owners
 
-There are multiple ways to access the CP Pool creation interface:
+### Creating and Managing Pools
 
-![CP Pool Dashboard](../../../../documentation/static/img/front-end/cp-pools/how-tos/cp-pools-how-tos-dashboard.png)
+**[How to Create a CP Pool](cp-pool-creation.md)**  
+Complete walkthrough of the pool creation process, including:
+- Configuring funding parameters (soft cap, hard cap)
+- Setting timelines and return rates (APR, terms, deadlines)
+- Adding collateral tokens for investor protection
+- Paying the 200 USDC creation fee
+- Deploying your pool on-chain
 
-**Option A: Dashboard Access**
+**[Managing a Successful CP Pool](cp-pool-success-flow.md)**  
+Learn how to manage a pool that reaches its funding target:
+- Collecting committed funds from investors
+- Calculating and depositing principal + rewards
+- Understanding platform fees
+- Completing the pool lifecycle successfully
 
-![CP Pool Create a new pool Button](../../../../documentation/static/img/front-end/cp-pools/how-tos/cp-pools-how-tos-create-a-new-pool-button.png)
+### Handling Edge Cases
 
-- Navigate to the **CP Pools** dashboard from the main menu
-- Click the  **"Create a new pool"** button
+**[Managing a Failed CP Pool](cp-pool-failure-flow.md)**  
+What happens when funding doesn't reach the minimum threshold:
+- Why pools fail (below soft cap by deadline)
+- How investors get full refunds
+- Owner limitations when pools fail
+- Transparency and audit trails
 
-**Option B: Create a New Pool from the Empty Table**
+**[Managing a Defaulted CP Pool](cp-pool-default-flow.md)**  
+Understanding the default scenario when owners fail to repay:
+- What triggers a default (missing liquidation deadline)
+- How collateral liquidation works
+- Investor voting process for liquidators
+- Responsibilities of designated liquidators
 
-![CP Pool Create a new pool in Empty Table](../../../../documentation/static/img/front-end/cp-pools/how-tos/cp-pools-how-tos-create-a-new-pool-empty-table.png)
-
-- Access via the **"Create a new pool"** button when no pools exist
-- Follow the guided message: "You can create a new pool by clicking on 'Create a new pool' button and following the next steps"
+**[Principal Returned, No Rewards (Liquidation)](cp-pool-min-apr-not-met-flow.md)**  
+Handling the case when only principal is returned:
+- What happens when minimum APR isn't met
+- How the system detects APR shortfalls
+- Collateral liquidation triggering automatically
+- Voting and executing liquidation for partial defaults
 
 ---
 
-## Step 2: Enter Pool Details
+## For Investors
 
-![Create Pool Form](../../../../documentation/static/img/front-end/cp-pools/how-tos/cp-pools-how-tos-create-pool-form.png)
+### Participating in Pools
 
-In this step, you define the **basic details** of your counterparty pool. These fields establish the pool’s identity, funding parameters, collateral, and presentation.
+**[Managing a Successful CP Pool](cp-pool-success-flow.md)**  
+How to participate in and claim returns from successful pools:
+- Understanding the investor dashboard
+- Monitoring pool status and available rewards
+- Claiming your proportional share of principal + rewards
+- Viewing transaction history
 
-1. **Pool Name** *(Required)*  
-   Enter a descriptive name for your counterparty pool that clearly identifies its purpose.  
+### Understanding Your Rights
 
-   ![Pool Name](../../../../documentation/static/img/front-end/cp-pools/how-tos/cp-pools-how-tos-create-pool-form-name.png)
+**[Managing a Failed CP Pool](cp-pool-failure-flow.md)**  
+Your rights when pools don't reach funding targets:
+- How to withdraw your full deposit
+- Step-by-step refund process
+- No penalties or loss of principal
+- Complete transparency through history logs
 
-2. **Description**  
-   Provide additional context about your pool, such as its objectives, investment focus, or any specific conditions.  
+**[Managing a Defaulted CP Pool](cp-pool-default-flow.md)**  
+Protecting your investment when owners default:
+- Understanding collateral protection
+- Voting for liquidators (proportional to investment)
+- How liquidation proceeds are distributed
+- Your role in the recovery process
 
-   ![Pool Description](../../../../documentation/static/img/front-end/cp-pools/how-tos/cp-pools-how-tos-create-pool-form-description.png)
+**[Principal Returned, No Rewards](cp-pool-min-apr-not-met-flow.md)**  
+What to do when minimum returns aren't met:
+- Claiming your principal portion
+- Participating in liquidation voting
+- Understanding APR shortfall calculations
+- Expected outcomes from collateral liquidation
 
-3. **Pool Soft Cap** *(Required)* and **Pool Hard Cap** *(Required)*  
-   - **Soft Cap** → Minimum target funding amount.  
-   - **Hard Cap** → Maximum allowed funding amount.  
+---
 
-   ![Capacity Settings](../../../../documentation/static/img/front-end/cp-pools/how-tos/cp-pools-how-tos-create-pool-form-capacity.png)
+## Pool Lifecycle States
 
-4. **Deadline** and **Liquidation Deadline** *(Required)*  
-   - **Deadline** → Final date for funding the pool.  
-   - **Liquidation Deadline** → Final date by which repayment/liquidation must occur.  
+Understanding the different states your pool can be in:
 
-   ![Deadline](../../../../documentation/static/img/front-end/cp-pools/how-tos/cp-pools-how-tos-create-pool-form-deadline.png)
+| Status | Description | Owner Actions | Investor Actions |
+|--------|-------------|---------------|------------------|
+| **Created** | Pool is open for deposits | Monitor funding progress | Deposit USDC |
+| **Active** | Funding collected, awaiting repayment | Deposit principal + rewards | Wait for rewards deposit |
+| **Closed** | Successfully completed with full repayment | None (completed) | Claim rewards |
+| **Failed** | Didn't reach soft cap by deadline | None (cannot collect) | Withdraw full deposit |
+| **Liquidated** | Default or minimum APR not met | None (in default) | Vote and claim from liquidation |
+| **Archived** | Pool manually archived by owner | None (archived) | View historical data only | Retry |
 
-5. **Expected APR** *(Required)*, **Minimum APR** *(Required)*, and **Expected Term** *(Required)*  
-   - **Expected APR** → The anticipated annualized return.  
-   - **Minimum APR** → The lowest acceptable rate for participants.  
-   - **Expected Term** → The planned duration of the pool (e.g., 12 months).  
+---
 
-   ![Timeline](../../../../documentation/static/img/front-end/cp-pools/how-tos/cp-pools-how-tos-create-pool-form-timeline.png)
+## Key Concepts
 
-6. **Website**  
-   Add a link to your official project or company website for more information.  
+### For Pool Owners
 
-   ![Website](../../../../documentation/static/img/front-end/cp-pools/how-tos/cp-pools-how-tos-create-pool-form-website.png)
+- **Soft Cap**: Minimum funding needed for pool to activate
+- **Hard Cap**: Maximum funding the pool can accept
+- **Expected APR**: Target return rate you plan to deliver
+- **Minimum APR**: Threshold below which collateral liquidates
+- **Liquidation Deadline**: Final date to repay principal + minimum rewards
+- **Platform Fee**: 200 USDC to create pool + percentage of collected funds
 
-7. **X (Twitter) Handle**  
-   Provide your verified X handle to build trust.  
+### For Investors
 
-   ![Social Media](../../../../documentation/static/img/front-end/cp-pools/how-tos/cp-pools-how-tos-create-pool-form-social-media.png)
+- **Commitment**: USDC you deposit into a pool
+- **Available**: Rewards ready to claim
+- **Claimed**: Total you've already withdrawn
+- **Voting Power**: Your claim percentage based on contribution size
+- **Liquidator**: Trusted party voted to distribute collateral proceeds
 
-8. **Photo** *(Required)*  
-   Upload an image (PNG, JPG, SVG up to 10MB) that visually represents your pool.  
+---
 
-   ![Pool Photo](../../../../documentation/static/img/front-end/cp-pools/how-tos/cp-pools-how-tos-create-pool-form-photo.png)
+## Quick Navigation
 
-9. **Collateral**  
-   Specify the tokens or assets that will serve as collateral for the pool. Use the **+ Add** button to select them.  
+- **New to CP Pools?** Start with [How to Create a CP Pool](cp-pool-creation.md)
+- **Pool reached target?** See [Managing a Successful CP Pool](cp-pool-success-flow.md)
+- **Deadline passed without funding?** Check [Managing a Failed CP Pool](cp-pool-failure-flow.md)
+- **Owner missed repayment?** Review [Managing a Defaulted CP Pool](cp-pool-default-flow.md)
+- **Only principal returned?** Read [Principal Returned, No Rewards](cp-pool-min-apr-not-met-flow.md)
 
-   ![Collateral Section](../../../../documentation/static/img/front-end/cp-pools/how-tos/cp-pools-how-tos-create-pool-form-collateral.png)
+---
+
+## Need Help?
+
+Each guide includes:
+- ✅ Step-by-step instructions with screenshots
+- ✅ Real-world examples and calculations
+- ✅ Wallet transaction confirmations
+- ✅ Expected outcomes and next steps
+- ✅ Complete transparency through history logs
+
+All operations are recorded on-chain, ensuring full transparency and auditability of every action taken within the CP Pools ecosystem.
