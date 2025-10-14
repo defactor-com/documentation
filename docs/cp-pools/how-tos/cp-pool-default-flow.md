@@ -4,7 +4,7 @@ title: Managing a Defaulted CP Pool (Owner Fails to Repay)
 sidebar_position: 9
 ---
 
-This guide explains what happens when a **CP Pool reaches its funding target** and the owner successfully collects the funds, but later **fails to repay the principal and rewards**.  
+This guide explains what happens when a **CP Pool reaches its funding target** and the owner successfully collects the funds, but later **fails to repay the principal and rewards**.
 
 This represents a **default scenario**, where investors are exposed to the underlying risk of the pool owner not returning capital.
 
@@ -13,61 +13,88 @@ This represents a **default scenario**, where investors are exposed to the under
 ## 1. Owner Flow (Default Case)
 
 ### 1.1 Collection of Funds
-- Pool reaches funding target (e.g., 50 USDC).  
-- Owner performs **Collect** transaction.  
-- Funds (minus platform fee) are transferred to the owner’s wallet.  
 
-At this stage, the pool status becomes **Active**, and investors await repayment.
+When the pool reaches its funding target (e.g., 50 USDC):
+
+- Owner performs **Collect** transaction
+- Funds (minus platform fee) are transferred to the owner's wallet
+- Pool status changes from **Created** to **Active**
+
+![Owner view after collecting funds](../../../static/img/front-end/cp-pools/how-tos/cp-pools-default-owner-collection-of-founds.png)
+*Owner view showing the "Deposit Rewards" panel after successfully collecting funds. Pool status is now "Active".*
+
+At this stage, investors await repayment before the liquidation deadline.
 
 ### 1.2 Expected Repayment
-- Owner is required to deposit back:  
-  - **Principal** = total committed funds (e.g., 50 USDC).  
-  - **Rewards** = interest based on APR and term (e.g., 0.76 USDC).  
-- Deposit must occur **before the liquidation deadline**.  
 
-### 1.3 Failure to Repay
-If the owner **does not deposit the required funds** by the liquidation deadline:  
-- Pool status transitions to **Defaulted / Failed**.  
-- Investors cannot claim rewards, since nothing has been deposited.  
-- Collateral (if provided by the owner) may be seized and redistributed to investors.
+The owner is required to deposit back:
+- **Principal** = total committed funds (e.g., 50 USDC)
+- **Rewards** = interest based on APR and term (e.g., 0.76 USDC for 12.5% APR over 1 month)
+
+This deposit must occur **before the liquidation deadline** (Oct 8th, 2025 10:17 in the example).
+
+![Deposit rewards panel for owner](../../../static/img/front-end/cp-pools/how-tos/cp-pools-default-owner-collection-of-founds.png)
+*Owner can input the amount and click "Deposit Rewards" to repay investors.*
 
 ---
 
 ## 2. Investor Flow (Default Case)
 
-### 2.1 After Collect
-- Investors see pool status as **Active**.  
-- Claim panel shows:  
-  - **Available = 0**  
-  - **Claimed = 0**  
+### 2.1 After Collection
 
-They must wait until the owner deposits rewards.
+Once the owner collects funds:
+- Investors see pool status as **Active**
+- Claim panel shows:
+  - **Available = 0 USDC**
+  - **Claimed = 0 USDC**
+- Investors must wait until the owner deposits principal + rewards
+
+![Investor view during active period](../../../static/img/front-end/cp-pools/how-tos/cp-pools-default-investor-after-collect.png)
+*Investor view showing Active pool with 0 USDC available to claim while waiting for owner to repay.*
 
 ### 2.2 When Owner Fails to Repay
-- After the **Liquidation Deadline**, if no deposit is made:  
-  - Investors are exposed to a **loss of principal** unless collateral exists.  
 
-### 2.3 Collateral Handling
-- If collateral was specified during pool creation, it is transferred to investors proportionally.  
-- If no collateral was provided, investors suffer a complete loss of their investment.  
+If the **Liquidation Deadline** passes without the owner depositing rewards:
+- Pool status changes to **Liquidated**
+- Investors face potential **loss of principal** unless collateral exists
+- The liquidation process is triggered automatically
+
+### 2.3 Collateral Liquidation Process
+
+When a pool defaults, investors can vote on who should liquidate the collateral:
+
+#### Voting for Liquidator
+
+Investors vote to designate a liquidator based on their voting power (proportional to their investment):
+
+![Vote for liquidator interface](../../../static/img/front-end/cp-pools/how-tos/cp-pools-default-collateral-handling-vote.png)
+*Voting interface where investors select a liquidator address. Voting power shown as percentage (60% in this example).*
+
+#### Liquidation Votes Table
+
+The system tracks all liquidation votes:
+
+![Liquidation votes table](../../../static/img/front-end/cp-pools/how-tos/cp-pools-default-collateral-handling-votes.png)
+*Liquidation Votes section showing suppliers who voted, their chosen liquidators, and voting power percentages.*
+
+#### Executing Liquidation
+
+Once voting determines the liquidator, they can execute the liquidation:
+
+![Liquidate button interface](../../../static/img/front-end/cp-pools/how-tos/cp-pools-default-collateral-handling-liquidate.png)
+
+**After liquidation:**
+- Collateral (e.g., 33 REAL tokens) is transferred to the designated liquidator
+- The liquidator is **trusted and expected** to sell the collateral and distribute proceeds proportionally to investors
+- This process relies on the liquidator's integrity to fairly distribute recovered funds
 
 ---
 
-## 3. Transparency
+## 3. Transparency and Audit Trail
 
-The **History section** logs the entire sequence:
-- Deposits by investors  
-- Collection by the owner  
-- (Missing) Deposit of rewards  
-- Default flag after liquidation deadline  
+The **History section** logs the entire sequence of events:
 
-This ensures that even in a default case, all transactions and failures are **auditable on-chain**.
-
----
-
-## 4. Summary
-
-- **Successful funding** does not guarantee repayment.  
-- If the **owner defaults**, investors can lose part or all of their funds.  
-- **Collateral** is the only safeguard in such scenarios.  
-- Transparency in the UI and history log helps investors understand what went wrong.
+- ✅ **Deposited** - Initial investor deposits
+- ✅ **Collected** - Owner collected funds 
+- ❌ **Missing Deposit** - No "Deposited" event for rewards before deadline
+- 🚨 **Liquidated** status triggered after deadline
