@@ -1,0 +1,8 @@
+{
+  "label": "CP Pools Front End UI",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "Counterparty (CP) Pools platform for decentralized investment opportunities with tokenized asset collateral. Create and manage crowd-pooled investments, participate as an investor, track performance metrics, and handle all pool lifecycle states from creation through completion, failure, or liquidation scenarios."
+  }
+}

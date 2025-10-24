@@ -1,0 +1,11 @@
+{
+  "label": "How-Tos",
+  "position": 3,
+  "collapsible": true,
+  "collapsed": false,
+  "link": {
+    "type": "generated-index",
+    "title": "CP Pools How-To Guides",
+    "description": "Complete guide to Counterparty (CP) Pools on the Defactor platform. Learn how to create decentralized investment pools with tokenized asset collateral, manage funding cycles, and participate as an investor. Covers all pool lifecycle states from creation through completion, failure, or default scenarios."
+  }
+}

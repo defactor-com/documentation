@@ -1,58 +1,146 @@
 ---
-id: engage-vesting-module
-title: Vesting Module
+id: engage-frontend-vesting
+title: Vesting
 sidebar_position: 6
 ---
 
-The Vesting module enables time-based, structured distribution of tokens according to predefined schedules. It is typically used to manage allocations for contributors, investors, core team members, and ecosystem participants, ensuring long-term alignment with project objectives and token supply discipline.
+The **Vesting Module** enables controlled token distribution over time to contributors, team members, investors, and other stakeholders. This module provides transparency and predictability for token releases while maintaining ecosystem stability through gradual emission schedules.
 
-By enforcing lock-up periods and gradual token release, the vesting mechanism helps mitigate premature sell-offs, build trust with stakeholders, and enhance transparency across token allocations. Vesting plans can vary in complexity and duration and are fully trackable through the Engage platform.
-
-The module is compatible with any ERC-20 token and supports a wide range of vesting scenarios, including linear, cliff-based, or milestone-driven schedules.
-
-A live example of the module in action can be accessed via the [Engage Platform Demo](https://sharingblock-engage.defactor.dev/vesting).
+Users can monitor their vesting progress, view emission charts, track claimable amounts, and manage their vesting events through an intuitive dashboard interface.
 
 ---
 
-## Core Functionality
+## Dashboard Overview
 
-- Visualize your vesting timeline and upcoming unlocks
-- Claim unlocked tokens directly from the interface
-- Review all past and future vesting events in real time
+![Vesting Dashboard](../../../static/img/front-end/engage/vesting-dash.png)
 
-Vesting is structured into three event categories:
+The vesting dashboard displays **comprehensive vesting metrics** and provides three main event views:
 
-![Vesting Events Tab](../../../static/img/front-end/vesting-events.png)
+- **Ongoing Events** – Currently active vesting schedules
+- **Upcoming Events** – Future vesting batches yet to begin
+- **Completed Events** – Finished vesting schedules
 
-- **Ongoing Events** – Active vesting periods in progress.
-- **Upcoming Events** – Future scheduled releases.
-- **Completed Events** – Finalized distributions and fully vested tokens.
+Users can seamlessly switch between these views to monitor active vesting progress, preview upcoming distributions, and review completed vesting history.
 
----
 
-## Vesting Details
+## Vesting Metrics
 
-- Tokens are locked and released based on predefined schedules
-- Users see their **Allocated**, **Claimed**, and **Remaining** balances
-- Vesting events are categorized into **Ongoing**, **Upcoming**, and **Completed**
+The dashboard displays comprehensive vesting statistics and personal tracking information.
 
----
+### Vesting Progress Overview
 
-## How to Claim
+![Vesting Progress Overview](../../../static/img/front-end/engage/vesting-progress-overview.png)
 
-1. Navigate to the Vesting tab in Engage
-2. Connect your wallet and select the vesting plan
-3. If tokens are unlocked, click **Claim**
-4. Confirm the transaction in your wallet
+The vesting progress section displays:
 
----
+- **Current Vested Amount** – Shows tokens currently vested out of total allocation (e.g., 2.84K /16.48M)
+- **Progress Percentage** – Indicates the percentage of total allocation that has been vested to date
+- **Lock Icon** – Visual indicator showing that tokens are part of a controlled vesting schedule
 
-## Dashboard Elements
+This section provides a quick overview of overall vesting progress across all active schedules.
 
-The main vesting dashboard gives a clear summary of the user's vesting progress:
+### Key Vesting Statistics
 
-![Vesting Dashboard](../../../static/img/front-end/vesting-dashboard.png)
+#### System-Wide Metrics:
 
-- **My Vesting** – Personal breakdown of allocations and events
-- **Claimable Amount** – Tokens ready for withdrawal
-- **Event Graph** – Visual timeline of release schedule
+![Vesting System Metrics](../../../static/img/front-end/engage/vesting-system-metrics.png)
+
+- **Total Vested** – Aggregate tokens released across all participants
+- **Current Locked Amount** – Tokens currently locked in active vesting schedules  
+- **Pending to be Claimed** – Vested tokens available for withdrawal
+
+#### Personal Metrics:
+
+The **My Vesting** section provides personalized vesting information.
+
+![My Vesting](../../../static/img/front-end/engage/vesting-my-vesting.png)
+
+- **My Vested Amount** – Total tokens you've received with USD value
+- **My Locked Amount** – Your tokens currently locked in vesting
+- **My Claimable Amount** – Tokens ready for immediate withdrawal
+
+##### Claim Functionality
+- **Claim All Button** – One-click claiming of all available vested tokens
+
+## Emissions Chart
+
+![Vesting Emissions Chart](../../../static/img/front-end/engage/vesting-emissions-chart.png)
+
+The emissions chart provides visual tracking of token release over time with an interactive timeline display.
+
+### Chart Features
+- **Timeline View** – Historical token releases displayed over months with cumulative growth
+- **Time Filters** – Toggle between 1D, 7D, 1M, and 1Y views in the top-right corner
+- **Interactive Tooltip** – Hover over data points to see specific emission details, timestamps, total emissions amount, and percentage changes
+- **Cumulative Display** – Shows total accumulated emissions as a rising line chart over the selected time period
+
+### Tooltip Information
+
+![Vesting Tooltip](../../../static/img/front-end/engage/vesting-tooltip.png)
+
+When hovering over chart data points, the tooltip displays:
+- **Date and Time** – Specific timestamp for the data point
+- **Total Emissions** – Cumulative token amount released up to that point
+- **Percentage Change** – Growth percentage showing emission changes from baseline
+
+## Vesting Events
+
+The vesting events table displays detailed information about all vesting schedules.
+
+### Event Categories
+
+1. **Ongoing Events** – Active vesting schedules currently distributing tokens
+2. **Upcoming Events** – Future vesting batches scheduled to begin  
+3. **Completed Events** – Finished vesting schedules
+
+### Event Details
+
+Each vesting event displays detailed information depending on its lifecycle stage.
+
+**Ongoing Events:**
+
+![Vesting Table Ongoing Events](../../../static/img/front-end/engage/vesting-table-ongoing.png)
+
+- **Batch Name** – Descriptive identifier for the vesting schedule
+- **Vesting Period** – Duration of the token release schedule (shown as a clickable link)  
+  *The format (seconds, days, weeks, or months) depends on the chosen distribution frequency when the batch is created.*
+
+![Vesting Table Period](../../../static/img/front-end/engage/vesting-table-vesting-period.png)
+
+- **Chain** – Blockchain network where vesting occurs (indicated by network logo)
+- **Recipients** – Number of participants in the vesting batch (clickable to view recipient details)
+
+![Vesting Table Recipients](../../../static/img/front-end/engage/vesting-table-recipients.png)
+
+- **Cliff Length** – Initial lock period before vesting starts (shows "No Cliff" if none configured)
+- **Total Amount** – Total tokens allocated with claimed/unclaimed breakdown
+- **Status** – Shows the time remaining until the vesting schedule is completed
+- **Claim Button** – Appears only for ongoing events, showing claimable amount
+
+**Upcoming Events:**
+
+![Vesting Table Ongoing Events](../../../static/img/front-end/engage/vesting-table-upcoming.png)
+
+- **Batch Name** – Descriptive identifier for the vesting schedule
+- **Vesting Period** – Duration of the token release schedule (shown as a clickable link)  
+  *The format (seconds, days, weeks, or months) depends on the chosen distribution frequency when the batch is created.*
+- **Chain** – Blockchain network where vesting will occur (indicated by network logo)
+- **Recipients** – Number of participants in the vesting batch (clickable to view recipient details)
+- **Cliff Length** – Initial lock period before vesting starts (shows "No Cliff" if none configured)
+- **Total Amount** – Total tokens allocated to the vesting schedule
+
+**Completed Events:**
+
+![Vesting Table Ongoing Events](../../../static/img/front-end/engage/vesting-table-completed.png)
+
+- **Batch Name** – Descriptive identifier for the vesting schedule
+- **Vesting Period** – Duration of the token release schedule (shown as a clickable link)  
+  *The format (seconds, days, weeks, or months) depends on the chosen distribution frequency when the batch is created.*
+- **Chain** – Blockchain network where vesting occurred (indicated by network logo)
+- **Recipients** – Number of participants who received tokens (clickable to view recipient details)
+- **Cliff Length** – Initial lock period before vesting starts (shows "No Cliff" if none configured)
+- **Total Amount** – Total tokens that were distributed
+
+## Related Documentation
+
+- **[Vesting Settings (Admin)](/docs/engage/front-end-ui/admin-section/engage-frontend-admin-section-vesting-settings#)** – Administrative interface for creating and managing vesting schedules

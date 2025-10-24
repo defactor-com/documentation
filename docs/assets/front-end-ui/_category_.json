@@ -1,11 +1,8 @@
 {
-    "label": "Front End UI",
+    "label": "Asets Front End UI",
     "position": 2,
-    "collapsible": true,
-    "collapsed": false,
     "link": {
         "type": "generated-index",
-        "title": "Assets Front End UI",
-        "description": "User interface components and implementation guides for Defactor Assets platform"
+        "description": "Asset tokenization platform for creating, managing, and trading real-world assets on blockchain with comprehensive lifecycle management tools."
     }
 }
