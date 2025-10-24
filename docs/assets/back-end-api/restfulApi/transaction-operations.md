@@ -1,5 +1,4 @@
 ---
-id: restful-api-transaction-operations
 title: Transaction Operations
 sidebar_position: 12
 ---

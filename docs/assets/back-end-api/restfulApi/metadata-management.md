@@ -1,5 +1,4 @@
 ---
-id: restful-api-metadata-management
 title: Metadata Management
 sidebar_position: 6
 ---

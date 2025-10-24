@@ -1,5 +1,4 @@
 ---
-id: rest-api-lend
 title: Lend
 sidebar_position: 3
 description: REST API endpoints for lending operations in Defactor Pools platform

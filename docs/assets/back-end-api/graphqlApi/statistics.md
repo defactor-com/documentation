@@ -1,5 +1,4 @@
 ---
-id: graphql-api-statistics
 title: Statistics
 sidebar_position: 8
 ---

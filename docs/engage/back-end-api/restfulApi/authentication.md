@@ -1,5 +1,4 @@
 ---
-id: rest-api-authentication
 title: Authentication
 sidebar_position: 2
 description: REST API endpoints for authentication operations in Defactor Engage platform

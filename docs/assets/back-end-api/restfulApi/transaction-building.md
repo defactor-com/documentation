@@ -1,5 +1,4 @@
 ---
-id: restful-api-transaction-building
 title: Transaction Building
 sidebar_position: 11
 ---

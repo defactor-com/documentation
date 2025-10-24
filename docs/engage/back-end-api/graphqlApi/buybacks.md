@@ -1,5 +1,4 @@
 ---
-id: graphql-api-buybacks
 title: Buybacks
 sidebar_position: 3
 ---

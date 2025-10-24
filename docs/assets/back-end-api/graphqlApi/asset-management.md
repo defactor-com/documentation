@@ -1,5 +1,4 @@
 ---
-id: graphql-api-asset-management
 title: Asset Management
 sidebar_position: 3
 ---

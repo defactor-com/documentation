@@ -1,5 +1,4 @@
 ---
-id: graphql-api-utilities
 title: Utilities
 sidebar_position: 6
 ---

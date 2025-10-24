@@ -1,5 +1,4 @@
 ---
-id: restful-api-identity-management
 title: Identity Management
 sidebar_position: 5
 ---

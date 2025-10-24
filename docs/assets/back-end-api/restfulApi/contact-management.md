@@ -1,5 +1,4 @@
 ---
-id: restful-api-contact-management
 title: Contact Management
 sidebar_position: 3
 ---

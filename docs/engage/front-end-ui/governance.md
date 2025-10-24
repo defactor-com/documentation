@@ -48,8 +48,8 @@ Each proposal provides detailed information for informed decision-making:
 - **Timeline** – Start date and end date for the voting period  
 - **Discussion Link** – External link to community discussion  
 
-> New proposals can be created, managed, or updated via  
-> **[Admin → Governance Settings Manage Proposals](/docs/engage/front-end-ui/admin-section/governance-proposals#)**.
+> New proposals can be created, managed, or updated via
+> **[Admin → Governance Settings Manage Proposals](/docs/admin-section/governance/proposals)**.
 
 ### Proposal Content
 

@@ -1,5 +1,4 @@
 ---
-id: graphql-api-mixer-operations
 title: Mixer Operations
 sidebar_position: 6
 ---

@@ -1,5 +1,4 @@
 ---
-id: rest-api-vesting
 title: Vesting
 sidebar_position: 8
 description: REST API endpoints for vesting operations in Defactor Engage platform

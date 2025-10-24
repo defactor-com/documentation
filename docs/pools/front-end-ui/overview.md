@@ -14,10 +14,10 @@ This section of the documentation covers all user-facing components, from the hi
 
 The Pools UI is organized into the following sections:  
 
-- **[Dashboard](./pools-frontend-dashboard.md)** – The central overview for all pools. Displays TVL, utilization charts, activity summaries, and active/closed pool tables.  
-- **[Supplied](./pools-frontend-supplied.md)** – Focused view of all supply positions. Includes supply vs rewards charts, position health status, stats panels, and management tools.  
-- **[Borrowed](./pools-frontend-borrowed.md)** – Focused view of all borrowing positions. Provides repayment tracking, health indicators, collateral management, and borrowing stats.  
-- **[Pool Details](./pools-frontend-pool-details.md)** – In-depth page for a specific pool, showing its parameters, supply/borrow panel, utilization stats, and personal supply/borrow positions with management modals.  
+- **[Dashboard](./dashboard.md)** – The central overview for all pools. Displays TVL, utilization charts, activity summaries, and active/closed pool tables.
+- **[Supplied](./supplied.md)** – Focused view of all supply positions. Includes supply vs rewards charts, position health status, stats panels, and management tools.
+- **[Borrowed](./borrowed.md)** – Focused view of all borrowing positions. Provides repayment tracking, health indicators, collateral management, and borrowing stats.
+- **[Pool Details](./pool-details.md)** – In-depth page for a specific pool, showing its parameters, supply/borrow panel, utilization stats, and personal supply/borrow positions with management modals.  
 
 ## Key Features  
 

@@ -1,5 +1,4 @@
 ---
-id: graphql-api-file-management
 title: File Management
 sidebar_position: 4
 ---

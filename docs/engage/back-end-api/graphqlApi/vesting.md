@@ -1,5 +1,4 @@
 ---
-id: graphql-api-vesting
 title: Vesting
 sidebar_position: 7
 ---

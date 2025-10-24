@@ -1,5 +1,4 @@
 ---
-id: rest-api-admin
 title: Admin
 sidebar_position: 6
 description: REST API endpoints for admin operations in Defactor Engage platform

@@ -1,5 +1,4 @@
 ---
-id: graphql-api-utils
 title: Utilities
 sidebar_position: 5
 description: GraphQL API utility endpoints for Defactor Pools platform including configuration and helper functions
