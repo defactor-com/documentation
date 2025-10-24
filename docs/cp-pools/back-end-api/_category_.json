@@ -1,0 +1,11 @@
+{
+  "label": "Back-end API",
+  "position": 1,
+  "collapsible": true,
+  "collapsed": false,
+  "link": {
+    "type": "generated-index",
+    "title": "CP Pools Back-end API",
+    "description": "API documentation for CP Pools backend services"
+  }
+}

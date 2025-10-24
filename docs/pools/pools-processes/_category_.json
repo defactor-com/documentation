@@ -1,9 +1,8 @@
 {
-    "label": "Pools Processes",
-    "position": 4,
-    "link": {
-      "type": "doc",
-      "id": "processes-overview"
-    }
+  "label": "Pools Processes",
+  "position": 5,
+  "link": {
+    "type": "doc",
+    "id": "processes-overview"
   }
-  
+}

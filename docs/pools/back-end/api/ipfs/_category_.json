@@ -1,9 +1,0 @@
-{
-    "label": "IPFS",
-    "position": 3,
-    "link": {
-      "type": "generated-index",
-      "description": "Endpoints required to interact with the InterPlanetary File System (IPFS) private node."
-    }
-  }
-  

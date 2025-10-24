@@ -2,7 +2,7 @@
   "label": "Engage Front End UI",
   "position": 3,
   "link": {
-    "type": "doc",
-    "id": "engage-frontend-overview"
+    "type": "generated-index",
+    "description": "Documentation for the Engage Front End UI, covering user-facing modules including Ecosystem, Staking, Governance, BuyBack, and Vesting. These modules provide real-time dashboards, staking and reward management, decentralized governance participation, token buyback tracking, and vesting schedule transparency."
   }
 }

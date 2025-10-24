@@ -1,8 +1,8 @@
 {
-    "label": "Engage Admin UI",
-    "position": 7,
-    "link": {
-      "type": "doc",
-      "id": "admin-section"
-    }
+  "label": "Engage Admin UI",
+  "position": 7,
+  "link": {
+    "type": "generated-index",
+    "description": "Documentation for the Engage Admin UI, covering all administrative modules including General Settings, Ecosystem Settings, Staking Settings, Token Settings, Vesting Settings, Governance Settings, and Buyback Settings."
   }
+}

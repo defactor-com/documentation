@@ -1,0 +1,11 @@
+{
+  "label": "GraphQL API Endpoints",
+  "position": 1,
+  "collapsible": true,
+  "collapsed": false,
+  "link": {
+    "type": "generated-index",
+    "title": "CP Pools GraphQL API Endpoints",
+    "description": "GraphQL API endpoints for CP Pools backend services"
+  }
+}

@@ -69,3 +69,6 @@ yarn-error.log*
 #Python
 Development_Weekly_Updates_*
 Development_Sprint_*
+
+# Claude
+.claude

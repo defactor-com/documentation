@@ -1,8 +1,0 @@
-{
-  "label": "API Endpoints",
-  "position": 2,
-  "link": {
-    "type": "generated-index",
-    "description": "Technical documentation for backend services needed for Defactor pools implementations."
-  }
-}

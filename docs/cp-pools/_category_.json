@@ -1,0 +1,8 @@
+{
+  "label": "CP Pools",
+  "position": 5,
+  "link": {
+    "type": "generated-index",
+    "description": "Comprehensive guide to the CP Pools user interface. Explore the Dashboard for global and personal statistics, manage your created pools in My Pools, track investments in Supplied, and view detailed pool information including metrics, collateral, and transaction history. Complete reference for navigating and using all frontend components."
+  }
+}
