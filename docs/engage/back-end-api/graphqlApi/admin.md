@@ -1,5 +1,4 @@
 ---
-id: engage-graphql-api-admin
 title: Admin
 sidebar_position: 1
 description: GraphQL API endpoints for administrative operations in Defactor Engage platform

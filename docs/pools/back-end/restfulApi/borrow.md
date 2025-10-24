@@ -1,5 +1,4 @@
 ---
-id: rest-api-borrow
 title: Borrow
 sidebar_position: 4
 description: REST API endpoints for borrowing operations in Defactor Pools platform

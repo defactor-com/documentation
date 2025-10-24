@@ -1,5 +1,4 @@
 ---
-id: graphql-api-borrow
 title: Borrow
 sidebar_position: 3
 description: GraphQL API endpoints for borrowing operations in Defactor Pools platform

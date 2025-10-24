@@ -1,5 +1,4 @@
 ---
-id: rest-api-utilities
 title: Utilities
 sidebar_position: 9
 description: REST API endpoints for utility operations in Defactor Engage platform

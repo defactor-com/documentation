@@ -4,18 +4,6 @@ title: Assets Backend API Overview
 sidebar_position: 1
 ---
 
-<div style={{ display: 'flex', flexWrap: 'wrap', color: '#eb9f00', gap: '1rem' }}>
-  <div style={{
-    flex: '1 1 280px',
-    display: 'flex',
-    flexDirection: 'column',
-    rowGap: '1rem',
-    alignItems: 'flex-start',
-    textDecoration: 'underline',
-  }}>
-    <a href="API-Endpoints/api-authentication" className="pagination-nav__label">ERC-20</a>
-  </div>
-</div>
 
 ---
 
@@ -122,7 +110,7 @@ Available modules:
 
 Before integrating with any modules, it's essential to ensure your client is authenticated. This includes access to the `/assets` module, which requires a valid token.
 
-1. [Authenticate your client](API-Endpoints/api-authentication)
+1. Authenticate your client using the [Authentication endpoints](restfulApi/authentication)
 2. Start integrating with relevant modules (e.g., IPFS, stats, transactions)
 3. Use `/form` and `/mailing` to automate user onboarding and communication
 4. Query `/stats` and `/transactions` for operational insights and transparency

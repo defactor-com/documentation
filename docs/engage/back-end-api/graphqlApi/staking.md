@@ -1,5 +1,4 @@
 ---
-id: graphql-api-staking
 title: Staking
 sidebar_position: 5
 description: GraphQL API endpoints for staking operations in Defactor Engage platform

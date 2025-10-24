@@ -1,5 +1,4 @@
 ---
-id: rest-api-buybacks
 title: Buybacks
 sidebar_position: 7
 description: REST API endpoints for buyback operations in Defactor Engage platform

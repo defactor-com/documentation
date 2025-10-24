@@ -1,5 +1,4 @@
 ---
-id: graphql-api-transactions
 title: Transactions
 sidebar_position: 10
 ---

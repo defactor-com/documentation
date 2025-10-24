@@ -1,5 +1,4 @@
 ---
-id: rest-api-admin
 title: Admin
 sidebar_position: 1
 description: REST API endpoints for administrative operations in Defactor Pools platform

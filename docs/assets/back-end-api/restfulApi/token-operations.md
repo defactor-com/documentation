@@ -1,5 +1,4 @@
 ---
-id: restful-api-token-operations
 title: Token Operations
 sidebar_position: 10
 ---

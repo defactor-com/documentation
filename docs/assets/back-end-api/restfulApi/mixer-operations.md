@@ -1,5 +1,4 @@
 ---
-id: restful-api-mixer-operations
 title: Mixer Operations
 sidebar_position: 7
 ---

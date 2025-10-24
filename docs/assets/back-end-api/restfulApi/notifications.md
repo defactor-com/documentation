@@ -1,5 +1,4 @@
 ---
-id: restful-api-notifications
 title: Notifications
 sidebar_position: 8
 ---

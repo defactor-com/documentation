@@ -23,9 +23,8 @@ Use APIs to:
 
 Explore available endpoints:
 
-- [Collateral Pool API](api/erc20CollateralToken/restful.md)
-- [Counterparty Pool API](api/counterpartyPools/restful.md)
-- [IPFS Integration](api/ipfs/restful.md)
+- [RESTful API Documentation](restfulApi/authentication)
+- [GraphQL API Documentation](graphqlApi/authentication)
 
 These APIs are suitable for teams building custom interfaces, automations, or analytics solutions on top of Pools.
 
@@ -43,8 +42,7 @@ Use SDKs to:
 
 Available modules:
 
-- [**Collateral Pool SDK**](sdk/collateral-pool.md): Manage ERC-20 token collateralization, borrowing, and repayment.
-- [**Counterparty Pool SDK**](sdk/counterparty-pool.md): Handle permissioned supply flows, lender matching, and custom loan terms.
+- [**Collateral Pool SDK**](../sdk/collateral-pool): Manage ERC-20 token collateralization, borrowing, and repayment.
 
 SDKs are ideal for developers looking to integrate directly into web apps and smart contract frontends.
 
@@ -62,6 +60,6 @@ SDKs are ideal for developers looking to integrate directly into web apps and sm
 
 ## Get Started
 
-1. Choose your integration type: [API](api/counterpartyPools/restful.md) or [SDK](sdk/counterparty-pool.md)
+1. Choose your integration type: [RESTful API](restfulApi/authentication), [GraphQL API](graphqlApi/authentication), or [SDK](../sdk/collateral-pool)
 2. Connect your Web3 wallet or backend provider
 3. Start building supply, borrow, and liquidation flows

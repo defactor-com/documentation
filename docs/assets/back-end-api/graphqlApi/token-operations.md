@@ -1,5 +1,4 @@
 ---
-id: graphql-api-token-operations
 title: Token Operations
 sidebar_position: 9
 ---

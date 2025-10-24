@@ -1,5 +1,4 @@
 ---
-id: rest-api-utils
 title: Utilities
 sidebar_position: 5
 description: REST API endpoints for utility operations in Defactor Pools platform

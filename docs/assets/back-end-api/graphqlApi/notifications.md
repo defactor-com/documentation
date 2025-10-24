@@ -1,5 +1,4 @@
 ---
-id: graphql-api-notifications
 title: Notifications
 sidebar_position: 7
 ---
